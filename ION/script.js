@@ -1,24 +1,25 @@
 /* [최종 수정] 깃허브 절대 주소를 사용하여 쇼피파이에서도 이미지를 찾게 함 */
 
 // 1. 깃허브 주소 변수 (이게 있어야 쇼피파이가 사진 위치를 알아요!)
+// (맨 뒤에 슬래시 / 가 있는지 꼭 확인하세요)
 var baseURL = "https://RobinChoi00.github.io/Product/ION/";
 
 var slideData = [
     {
-        // 0번: All
+        // 0번: All (파일명/확장자 확인: png)
         chair: baseURL + "images/0.ion_color_both.png", 
         btnNormal: baseURL + "images/7.ion_swatch_all.png",
         btnSelected: baseURL + "images/10.ion_swatch_all_selected.png"
     },
     {
-        // 1번: Black
-        chair: baseURL + "images/3.ion_color_black.png", 
+        // 1번: Black (파일명/확장자 확인: jpg)
+        chair: baseURL + "images/3.ion_color_black.jpg", 
         btnNormal: baseURL + "images/8.ion_swatch_black.png",
         btnSelected: baseURL + "images/11.ion_swatch_black_selected.png"
     },
     {
-        // 2번: Brown
-        chair: baseURL + "images/2.ion_color_brown.png", 
+        // 2번: Brown (파일명/확장자 확인: jpg)
+        chair: baseURL + "images/2.ion_color_brown.jpg", 
         btnNormal: baseURL + "images/9.ion_swatch_brown.png",
         btnSelected: baseURL + "images/12.ion_swatch_brown_selected.png"
     }
@@ -31,6 +32,7 @@ function updateDisplay() {
     var imgEl = document.getElementById("current-chair");
     var btnImages = document.querySelectorAll(".color-btn");
 
+    // 메인 의자 이미지 변경
     if(imgEl) {
         imgEl.style.opacity = 0.5;
         setTimeout(function() {
@@ -40,6 +42,7 @@ function updateDisplay() {
         }, 150);
     }
 
+    // 버튼 이미지 변경
     if(btnImages) {
         btnImages.forEach(function(btn, index) {
             if (index === currentIndex) {
@@ -66,5 +69,6 @@ window.changeColor = function(index) {
     updateDisplay();
 };
 
-// 4. 초기화 실행 (로드 되자마자 실행)
+// 4. 초기화 실행
+// (페이지가 뜨자마자 버튼 상태를 맞추기 위해 실행)
 updateDisplay();
