@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan ION 4D Detail Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero-full-banner">
+        <img src="images/1.ion_product_main.png" alt="Osaki Titan ION 4D Main banner">
+    </section>
+
+    <section class="intro-text-section">
+        <div class="container text-center">
+            <p class="intro-desc">
+                The 4D Ion is built around one idea: reclaiming your energy. Its 4D mechanism mimics<br>
+                human-like precision, delivering deep, targeted relief that recharges you from the<br>
+                inside out. With every session, the 4D Ion transforms stress into power, restoring<br>
+                balance and leaving you ready to take on whatever's next.
+            </p>
+            <div class="chair-slider-wrapper">
+                
+                <div class="slider-main">
+                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/4.ion_left_arrow.png" alt="Previous">
+                    </button>
+
+                    <img id="current-chair" src="images/0.ion_color_both.png" alt="Titan ION 4D Massage Chair">
+
+                    <button class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/5.ion_right_arrow.png" alt="Next">
+                    </button>
+                </div>
+
+                <div class="swatch-control-panel">
+                    
+                    <img src="images/6.ion_swatches_bar.png" class="bar-bg" alt="Color Bar">
+
+                    <div class="buttons-wrapper">
+                        <img src="images/7.ion_swatch_all.png" class="color-btn active" onclick="changeColor(0)" alt="All Colors">
+                        
+                        <img src="images/8.ion_swatch_black.png" class="color-btn" onclick="changeColor(1)" alt="Black">
+                        
+                        <img src="images/9.ion_swatch_brown.png" class="color-btn" onclick="changeColor(2)" alt="Brown">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="light-features">
+        <div class="container">
+            
+            <div class="feature-row">
+                <div class="f-img"><img src="images/14.ion_voice_control.png" alt="Voice Control"></div>
+                <div class="f-txt">
+                    <div class="icon-wrap">
+                        <img src="images/13.ion_icon_mic.png" alt="Mic Icon">
+                    </div>
+                    <h3><span class="blue">INTELLIGENT</span><br>VOICE CONTROL</h3>
+                    <p>The 4D Ion offers smart voice control,<br>
+                        allowing you to operate the chair
+                        <strong>entirely<br> hands-free.</strong> Just say the phrase
+                        "Switch to<br> Voice Mode" to begin your massage with<br> a simple
+                        voice command.</p>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="f-img"><img src="images/15.ion_rocking_massage.png" alt="Rocking Position"></div>
+                <div class="f-txt">
+                    <h3><span class="blue">ROCKING MASSAGING </span><br>POSITION</h3>
+                    <p>The rocking motion gently sways the<br> body in a smooth, cradle-like rhythm,<br>creating a 
+                        <strong>soothing sense of<br> weightlessness</strong>. This movement<br> helps calm the nervous
+                        system,<br> reduce tension, and deepen overall<br> relaxation during the massage.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="f-img"><img src="images/16.ion_deep_calf-kneading.png" alt="Calf Kneading"></div>
+                <div class="f-txt">
+                    <h3>DEEP <br><span class="blue">CALF KNEADING</span></h3>
+                    <p>The 4D Ion goes beyond standard<br> massage chairs, targeting the calves with<br>
+                        deep kneading to relieve tension, enhance<br> circulation, and aid muscle recovery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="f-img"><img src="images/17.ion_calf-bumper.png" alt="Calf Bumpers"></div>
+                <div class="f-txt">
+                    <h3><span class="blue">CALF</span><br>BUMPERS</h3>
+                    <p>The 4D Ion features massage rollers<br> and bumpers in the calfrest to deliver<br>
+                        a comprehensive calf kneading<br> massage. The rollers rollers on its<br> own,
+                        while the bumpers move along<br> with the calf kneading.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="dark-features">
+        <div class="container">
+            <div class="feature-row">
+                <div class="f-img"><img src="images/18.ion_4D_massager.png" alt="4D Mechanism"></div>
+                <div class="f-txt">
+                    <h3><span class="blue">4D MASSAGE</span> <br>MECHANISM</h3>
+                    <p>The 4D massage mechanism delivers a<br> realistic, human-like massage by<br> 
+                    <strong>adjusting speed, pressure, depth, and<br> rhythm </strong> with every stroke. This lets the<br>
+                    rollers work with greater precision, easing<br> muscle tension more effectively and<br>
+                    promoting deeper relaxation.</p>
+                </div>
+            </div>
+            <div class="feature-row reverse">
+                <div class="f-img"><img src="images/19.ion_body_scan.png" alt="Body Scan"></div>
+                <div class="f-txt">
+                    <h3><span class="blue">BODY SCAN</span> <br>TECHNOLOGY</h3>
+                    <p>The automatic body scan maps your<br> unique shape and contours,<br>
+                    positioning the rollers with precision<br> to deliver <strong>a customized massage</strong> <br>
+                    that feels both highly effective and<br> naturally comfortable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="zero-gravity-section">
+        <div class="container text-center">
+            <h3><span class="blue">2-STAGE</span> <br>ZERO GRAVITY RECLINING</h3>
+            
+            <p class="center-p">
+                Experience <strong>weightless relaxation</strong> with the 4D Ion's Zero Gravity Technology
+                in two stages. As the chair reclines, your weight is evenly distributed,
+                <strong>reducing pressure on your back</strong> and enhancing overall comfort.
+            </p>
+            
+            <div class="wide-img">
+                <img src="images/20.ion_ZG.png" alt="Zero Gravity">
+            </div>
+        </div>
+    </section>
+
+    <section class="dual-grid-section">
+        <div class="container grid-2">
+            
+            <div class="grid-box">
+                <div class="icon-wrap2">
+                    <img src="images/21.ion_icon_SL.png" alt="SL Track Icon">
+                </div>
+                
+                <div class="g-txt">
+                    <h4><span class="blue">SL-TRACK</span> <br>SYSTEM</h4>
+                    <p>The SL-track is designed to follow<br> the natural curve of your spine,<br>
+                        reaching from <strong>your neck to your<br> upper glutes</strong> for complete,<br>
+                        full-back relaxation.
+                    </p>
+                </div>
+                <img src="images/22.ion_SL.png" alt="SL Track Image" class="product-img">
+            </div>
+
+            <div class="grid-box">
+                <div class="icon-wrap2">
+                    <img src="images/23.ion_icon_space-saving.png" alt="Footrest Icon"> 
+                </div>
+
+                <div class="g-txt">
+                    <h4><span class="blue">SPACE-SAVING</span><br>TECHNOLOGY</h4>
+                    <p>Engineered for <strong>space efficiency, </strong><br>the chair moves forward as it<br>
+                        reclines, enabling a full recline<br> even with just <strong>8 inches of space </strong><br>
+                        from the wall.
+                    </p>
+                </div>
+                <img src="images/24.ion_space-saving.png" alt="Footrest Image" class="product-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="air-massage-section">
+        <div class="container text-center">
+            <h3><span class="blue">24-CELL</span><br>AIR COMPRESSION<br>MASSAGE</h3>
+            <p class="center-p">Equipped with 24 thoughtfully positioned air<br> cells, the 4D Ion delivers
+                <strong>gentle, targeted<br> compression </strong>to melt away tension, deepen<br> relaxation, and
+                enhance overall well-being.
+            </p>
+            <div class="wide-img">
+                <img src="images/25.ion_air-cells.png" alt="Air Massage">
+            </div>
+        </div>
+    </section>
+
+    <section class="heat-section">
+        <div class="container feature-row">
+            <div class="f-img"><img src="images/27.ion_heating.png" alt="Heat Therapy"></div>
+            <div class="f-txt">
+                
+                <div class="icon-wrap">
+                    <img src="images/26.ion_icon_heating.png" alt="Heat Icon">
+                </div>
+
+                <h3><span class="red">LUMBER </span><br>HEAT THERAPY</h3>
+                <p>The 4D Ion offers soothing heat in the lower<br> back, warming the area to
+                    <strong>release tension<br> and elevate overall relaxation.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-auto">
+        <div class="container text-center">
+            
+            <h3><span class="blue">22 AUTO MASSAGE PROGRAMS</span></h3>
+            
+            <div class="programs-grid-22">
+                
+                <div class="program-item">
+                    <img src="images/28.ion_icon_womens-relief.png" alt="Women's Relief">
+                    <p class="p-name">WOMEN'S<br>RELIEF</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/29.ion_icon_mens-relief.png" alt="Men's Relief">
+                    <p class="p-name">MEN'S<br>RELIEF</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/30.ion_icon_senior-care.png" alt="Senior Care">
+                    <p class="p-name">SENIOR<br>CARE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/31.ion_icon_neck&shoulder.png" alt="Neck & Shoulder">
+                    <p class="p-name">NECK &<br>SHOULDER</p>
+                </div>
+
+                <div class="program-item">
+                    <img src="images/32.ion_icon_back&spine.png" alt="Back & Spine">
+                    <p class="p-name">BACK<br>& SPINE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/33.ion_icon_waist&hip.png" alt="Waist & Hip">
+                    <p class="p-name">WAIST<br>& HIP</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/34.ion_icon_gamers_mode.png" alt="Gamer's Mode">
+                    <p class="p-name">GAMER'S<br>MODE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/35.ion_icon_refresh_mode.png" alt="Refresh Mode">
+                    <p class="p-name">REFRESH<br>MODE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/36.ion_icon_nap_mode.png" alt="Nap Mode">
+                    <p class="p-name">NAP<br>MODE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/37.ion_icon_airbag-kneading.png" alt="Airbag Kneading">
+                    <p class="p-name">AIRBAG<br>KNEADING</p>
+                </div>
+
+                <div class="program-item">
+                    <img src="images/38.ion_icon_airbag_pulsing.png" alt="Airbag Pulsing">
+                    <p class="p-name">AIRBAG<br>PULSING</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/39.ion_icon_airbag_alternating.png" alt="Airbag Alternating">
+                    <p class="p-name">AIRBAG<br>ALTERNATING</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/40.ion_icon_airbag_recovery_mode.png" alt="Recovery Mode">
+                    <p class="p-name">RECOVERY<br>MODE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/41.ion_icon_sports_mode.png" alt="Sports Mode">
+                    <p class="p-name">SPORTS<br>MODE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/42.ion_icon_gentle_mode.png" alt="Gentle Mode">
+                    <p class="p-name">GENTLE<br>MODE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/43.ion_icon_head_relief.png" alt="Head Relief">
+                    <p class="p-name">HEAD<br>RELIEF</p>
+                </div>
+
+                <div class="program-item">
+                    <img src="images/44.ion_icon_neck_massage.png" alt="Neck Massage">
+                    <p class="p-name">NECK<br>MASSAGE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/45.ion_icon_shoulder_massage.png" alt="Shoulder Massage">
+                    <p class="p-name">SHOULDER<br>MASSAGE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/46.ion_icon_back_massage.png" alt="Back Massage">
+                    <p class="p-name">BACK<br>MASSAGE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/47.ion_icon_waist_massage.png" alt="Waist Massage">
+                    <p class="p-name">WAIST<br>MASSAGE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/48.ion_icon_hip_massage.png" alt="Hip Massage">
+                    <p class="p-name">HIP<br>MASSAGE</p>
+                </div>
+                <div class="program-item">
+                    <img src="images/49.ion_icon_leg_massage.png" alt="Leg Massage">
+                    <p class="p-name">LEG<br>MASSAGE</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-manual">
+        <div class="container text-center">
+            
+            <h3><span class="blue">6 MANUAL MODES</span></h3>
+            
+            <div class="manual-grid">
+                
+                <div class="manual-item">
+                    <img src="images/50.ion_icon_kneading.png" alt="Kneading">
+                    <p class="m-name">KNEADING</p>
+                </div>
+
+                <div class="manual-item">
+                    <img src="images/51.ion_icon_sync.png" alt="Tapping">
+                    <p class="m-name">TAPPING</p>
+                </div>
+
+                <div class="manual-item">
+                    <img src="images/52.ion_icon_tapping.png" alt="Knead & Tap">
+                    <p class="m-name">KNEAD & TAP</p>
+                </div>
+
+                <div class="manual-item">
+                    <img src="images/53.ion_icon_rubbing.png" alt="Shiatsu">
+                    <p class="m-name">SHIATSU</p>
+                </div>
+
+                <div class="manual-item">
+                    <img src="images/54.ion_icon_knocking.png" alt="Shoulder Lifting">
+                    <p class="m-name">SHOULDER<br>LIFTING</p>
+                </div>
+
+                <div class="manual-item">
+                    <img src="images/55.ion_icon_shiatsu.png" alt="3D Mode">
+                    <p class="m-name">3D</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="foot-rollers-section">
+        <div class="container text-center">
+            <div class="icon-center-wrap">
+                <img src="images/56.ion_icon_foot.png" alt="Foot Icon">
+            </div>
+            <h3><span class="blue">SPECIALIZED</span><br>FOOT ROLLERS</h3>
+            
+            <p class="center-p">
+                The footrest rollers press into key acupressure points using<br>
+                <strong>precision-shaped reflexology redges,</strong> rotating to deliver a<br>
+                deep, therapeutic massage that promotes overall foot wellness.
+            </p>
+            <div class="wide-img">
+                <img src="images/57.ion_foot-rollers.png" alt="Specialized Foot Rollers">
+            </div>
+        </div>
+    </section>
+
+    <section class="detailed-features">
+        <div class="container">
+            <div class="feature-row">
+                <div class="f-img"><img src="images/59.ion_foot-extension.png" alt="Spring Footrest"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/58.ion_icon_extension.png"></div>
+                    <h3><span class="blue">SPRING-LOADED</span><br>EXTENDABLE<br>FOOTREST</h3>
+                    <p><strong>Accommodating users of different <br>heights</strong>
+                        and builds, the 4D Ion comes<br>
+                        with a spring-loaded footrest that<br>
+                        extends up to<strong>5.5 inches</strong>for<br>
+                        personalized comfort.
+                    </p>
+                </div>
+            </div>
+            <div class="feature-row reverse">
+                <div class="f-img"><img src="images/61.ion_stop_button.png" alt="Emergency Stop"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/60.ion_icon_emergency.png"></div>
+                    <h3>EMERGENCY <br>STOP BUTTON</h3>
+                    <p>The emergency stop button instantly<br>
+                        halts all massage functions, providing<br>
+                        a quick and reliable safety measure<br>
+                        whenever needed.
+                    </p>
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="f-img"><img src="images/63.ion_touchscreen.png" alt="Touchscreen"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/62.ion_icon_hand.png"></div>
+                    <h3>VERTICAL 7.5" <br>TOUCHSCREEN</h3>
+                    <p>The $D Ion features a brand new touchscreen controller, which is
+                        <strong>vertical <br>and stands 7.5" tall</strong>. This new design<br>
+                        provides <strong>seamless and intuitive<br>control</strong>
+                        directly at your fingertips.
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="feature-row reverse">
+                <div class="f-img"><img src="images/65.ion_speakers.png" alt="Bluetooth"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/64.ion_icon_bluetooth.png"></div>
+                    <h3>QUALITY BLUETOOTH <br>SPEAKERS</h3>
+                    <p>Built-in Bluetooth speakers deliver rich,<br>
+                        immersive sound, <strong> elevating your<br>relaxation</strong>
+                        as you listen to your favorite<br>
+                        music or audio.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doorway-section">
+        <div class="container">
+            
+            <h3 class="section-title">MINIMUM DOORWAY & PACKAGING</h3>
+
+            <div class="doorway-layout">
+                
+                <div class="doorway-left">
+                    <img src="images/66.ion_min.doorway.png" alt="Minimum Doorway Size">
+                </div>
+
+                <div class="doorway-right">
+                    <div class="box-img">
+                        <img src="images/67.ion_packaging.png" alt="Packaging Box">
+                    </div>
+                    
+                    <div class="measuring-guide">
+                        <h4><strong>Measuring Guide</strong></h4>
+                        <ul>
+                            <li>Calculate the doorway width by subtracting 1 inch from<br> the smallest inner width of the door frame. (1/2 inch from each side)</li>
+                            <li>Please use a standard measuring tape to measure the doorway.</li>
+                            <li>If the door cannot be fully opened, open it as much as possible<br> and measure the width from the edge of the door hinge.</li>
+                            <li>If there is a rounded curve on the wall, calculate the inner width<br> based on the most protruding point of the wall.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="dimensions-section">
+        <div class="container text-center">
+            <h3>DIMENSIONS</h3>
+            
+            <div class="dimensions-row">
+                <img src="images/68.ion_dimensions1.png" alt="Front Dimensions">
+                
+                <img src="images/69.ion_dimensions2.png" alt="Side Dimensions">
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="spec-section">
+        <div class="container">
+            <h3>Specification</h3>
+            
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Titan ION</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="#" class="red-link">Download</a>
+                        <a href="#" class="red-link youtube-link">
+                            <span class="play-icon">▶</span> Linked In
+                        </a>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Upright</strong>
+                            <span>31" x 58.5" x 45"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>31.5" x 72.0" x 42.0"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">166.5 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>24.5"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>20"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">31"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Maximum Weight</div>
+                    <div class="spec-value">270 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>30.3" x 71.3" x 34.77"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border"> <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>202.8 lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="2nd chair script.js"></script>
+</body>
+</html>
