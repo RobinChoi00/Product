@@ -1679,3 +1679,85 @@ p, .f-txt p, .center-p {
         margin: 0 auto !important; 
     }
 }
+
+/* =========================================
+   [긴급 수정] Heat Therapy 모바일 전용 (사진 삐져나감 & 여백 해결)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 사진이 화면 밖으로 나가는 것 방지 */
+    .heat-section .f-img img {
+        width: 100% !important;      /* 110% -> 100%로 축소 */
+        max-width: 100% !important;  /* 화면 너비를 넘지 않게 제한 */
+        margin: 0 auto 30px !important; /* 가운데 정렬 및 아래 글자와 간격 */
+    }
+
+    /* 2. 글자와 아이콘이 왼쪽 벽에 딱 붙는 것 방지 */
+    .heat-section .f-txt {
+        /* 양옆에 20px씩 안전거리를 줍니다 */
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+        
+        box-sizing: border-box; /* 여백 줘도 박스 안 깨지게 함 */
+        width: 100% !important;
+    }
+}
+
+/* =========================================
+   [최종 수정] 아이콘과 제목 사이 간격 최소화 (바짝 붙이기)
+   ========================================= */
+
+/* 모든 섹션의 아이콘 박스 선택 */
+.icon-wrap, 
+.icon-wrap2, 
+.icon-blue, 
+.icon-center-wrap {
+    /* 기존 20px -> 5px로 대폭 축소 */
+    margin-bottom: 5px !important; 
+    
+    /* 혹시 모를 내부 여백도 제거 */
+    padding-bottom: 0 !important;
+}
+
+/* 모바일 환경에서도 똑같이 적용 */
+@media (max-width: 768px) {
+    .icon-wrap, 
+    .icon-wrap2, 
+    .icon-blue, 
+    .icon-center-wrap {
+        margin-bottom: 5px !important;
+    }
+}
+
+/* =========================================
+   [추가 수정] 프로그램/매뉴얼 모드는 '가운데 정렬' 유지
+   (모바일 강제 왼쪽 정렬에서 제외시킴)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. 프로그램 아이콘 박스들 가운데 정렬 */
+    .program-item, 
+    .manual-item {
+        text-align: center !important;
+        align-items: center !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 2. 텍스트(이름) 가운데 정렬 */
+    .p-name, 
+    .m-name,
+    .programs-auto p, 
+    .programs-manual p {
+        text-align: center !important; /* 왼쪽 정렬 강제 취소 */
+        padding-left: 0 !important;
+        margin: 0 auto !important;     /* 가운데 위치 */
+        width: 100% !important;
+    }
+    
+    /* 3. 아이콘 이미지도 가운데 정렬 */
+    .program-item img, 
+    .manual-item img {
+        margin: 0 auto 15px !important; /* 좌우 마진 auto로 중앙 정렬 */
+    }
+}
