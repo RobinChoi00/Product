@@ -1580,7 +1580,7 @@ p, .f-txt p, .center-p {
 .icon-blue, 
 .icon-center-wrap {
     /* 기존 20px -> 10px로 줄임 (더 좁게 원하면 5px로 하세요) */
-    margin-bottom: 7px !important; 
+    margin-bottom: 5px !important; 
 }
 
 /* (혹시 모를) 모바일 듀얼 그리드 섹션도 확실하게 적용 */
