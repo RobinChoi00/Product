@@ -1495,3 +1495,77 @@ p, .f-txt p, .center-p {
         gap: 40px !important;
     }
 }
+
+/* [추가 4] 모바일 전용 수정 (반드시 맨 아래에 위치) */
+@media (max-width: 768px) {
+    /* 슬라이더 높이 모바일용으로 줄임 */
+    .slider-main { height: 350px !important; }
+    
+    /* 모든 섹션 세로 배치 */
+    .feature-row, .feature-row.reverse, .grid-2, .doorway-layout, .dimensions-row, .spec-row, .split-col {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 40px !important;
+    }
+
+    /* [핵심] 모바일에서 글자 쏠림 해결 (왼쪽 여백 제거) */
+    p, .f-txt, .g-txt, .doorway-right, .detailed-features .f-txt, .heat-section .f-txt {
+        text-align: center !important; /* 모바일은 가운데 정렬 */
+        padding-left: 0 !important;    /* 오른쪽 쏠림 원인 제거 */
+        width: 100% !important;
+    }
+
+    /* [핵심] 아이콘 겹침 해결 */
+    .icon-wrap, .icon-blue, .icon-wrap2 {
+        display: flex;
+        justify-content: center !important;
+        margin: 0 auto 20px !important;
+    }
+
+    /* [핵심] 이미지 겹침 방지 (마이너스 마진 해제) */
+    img[src*="14.ion_voice_control.png"],
+    img[src*="16.ion_deep_calf-kneading.png"],
+    img[src*="17.ion_calf-bumper.png"] {
+        margin-top: 0 !important;
+        margin-bottom: 30px !important;
+        width: 100% !important;
+    }
+
+    /* 그리드 및 간격 조정 */
+    .programs-grid-22, .manual-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .program-item:first-child, .program-item:nth-child(5) { grid-column-start: auto; }
+    .dimensions-row img, .box-img img, .dual-grid-section .grid-box img { max-width: 90%; margin: 0 auto; }
+}
+
+/* =========================================
+   [추가 수정] 모바일 SL-Track & Space Saving 정렬 수정
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 박스 내부 정렬: 왼쪽 기준 */
+    .dual-grid-section .grid-box {
+        align-items: flex-start !important; /* 아이콘, 이미지 등 왼쪽 정렬 */
+        text-align: left !important;        /* 글자 왼쪽 정렬 */
+        padding: 40px 30px !important;      /* 박스 안쪽 여백 적절히 줌 */
+    }
+
+    /* 2. 글자 쏠림 해결 (오른쪽으로 밀었던 것 취소) */
+    .dual-grid-section .g-txt {
+        padding-left: 0 !important;  /* 강제 여백 제거 (오른쪽 쏠림 해결) */
+        text-align: left !important; /* 글자 왼쪽 정렬 */
+    }
+
+    /* 3. 아이콘 쏠림 해결 및 위치 조정 */
+    .dual-grid-section .icon-wrap2 {
+        margin-left: 0 !important;   /* 강제 여백 제거 (오른쪽 쏠림 해결) */
+        display: flex;
+        justify-content: flex-start !important; /* 아이콘 왼쪽 정렬 */
+        margin-bottom: 20px !important;
+    }
+
+    /* 4. 이미지(의자 부품 등)는 가운데가 예쁘다면 유지, 왼쪽을 원하면 아래 주석 해제 */
+    .dual-grid-section .grid-box img.product-img {
+        align-self: center !important; /* 이미지는 박스 중앙에 위치 (보기 좋음) */
+        /* align-self: flex-start !important; */ /* 이미지도 왼쪽으로 보내려면 이걸 쓰세요 */
+    }
+}
