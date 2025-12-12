@@ -2227,3 +2227,80 @@ p, .f-txt p, .center-p {
         text-align: left !important; /* 왼쪽 정렬 유지 */
     }
 }
+
+/* =========================================================
+   [최종 완결] 1. 간격 초밀착 다이어트 & 2. 아이콘 착붙 모드
+   ========================================================= */
+
+/* --- 1. 섹션(Section) 위아래 여백 대폭 축소 --- */
+/* 기존 100px -> PC 50px / 모바일 30px로 줄임 */
+section, 
+.intro-text-section, .light-features, .dark-features, 
+.zero-gravity-section, .dual-grid-section, .air-massage-section, 
+.heat-section, .programs-auto, .programs-manual, .foot-rollers-section, 
+.detailed-features, .doorway-section, .dimensions-section, .spec-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+/* --- 2. 박스(Row) 사이 간격 축소 --- */
+/* 기존 80px -> 40px로 줄임 */
+.feature-row {
+    margin-bottom: 40px !important;
+    gap: 30px !important; /* 사진과 글자 사이도 좁힘 */
+}
+
+/* --- 3. [핵심] 아이콘과 글자 사이 '착붙' (5px) --- */
+.icon-wrap, .icon-wrap2, .icon-blue, .icon-center-wrap {
+    margin-bottom: 5px !important; /* 아주 가깝게 */
+    padding-bottom: 0 !important;
+}
+
+/* 제목(h3, h4) 위쪽 여백 제거 (아이콘과 더 붙게) */
+h3, h4, .f-txt h3, .g-txt h4 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important; /* 제목과 본문 사이도 좁힘 */
+}
+
+
+/* =========================================================
+   [모바일 전용] 더 촘촘하게 (스크롤 최소화)
+   ========================================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 섹션 여백 극도로 줄임 (30px) */
+    section, 
+    .light-features, .dark-features, 
+    .zero-gravity-section, .spec-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* 2. 요소끼리 간격도 좁힘 (20px) */
+    .feature-row, .grid-2, .doorway-layout, .dimensions-row {
+        gap: 20px !important;
+    }
+    
+    /* 박스 아래 간격 */
+    .light-features .feature-row,
+    .dark-features .feature-row {
+        margin-bottom: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* 3. 이미지와 글자 사이 간격 최소화 */
+    .f-img img, .grid-box img, img[src*="ion"] {
+        margin-bottom: 15px !important;
+    }
+
+    /* 4. 아이콘은 글자 바로 위에 (2px) */
+    .icon-wrap, .icon-blue, .icon-wrap2 {
+        margin-bottom: 2px !important;
+    }
+    
+    /* 5. 프로그램 아이콘 그리드 간격 좁힘 */
+    .programs-grid-22, .manual-grid {
+        gap: 10px !important;
+        margin-top: 20px !important;
+    }
+}
