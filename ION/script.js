@@ -12,14 +12,14 @@ var slideData = [
         btnSelected: baseURL + "images/10.ion_swatch_all_selected.png"
     },
     {
-        // 1번: Black (파일명/확장자 확인: jpg)
-        chair: baseURL + "images/3.ion_color_black.jpg", 
+        // 1번: Black (파일명/확장자 확인: png)
+        chair: baseURL + "images/3.ion_color_black.png", 
         btnNormal: baseURL + "images/8.ion_swatch_black.png",
         btnSelected: baseURL + "images/11.ion_swatch_black_selected.png"
     },
     {
-        // 2번: Brown (파일명/확장자 확인: jpg)
-        chair: baseURL + "images/2.ion_color_brown.jpg", 
+        // 2번: Brown (파일명/확장자 확인: png)
+        chair: baseURL + "images/2.ion_color_brown.png", 
         btnNormal: baseURL + "images/9.ion_swatch_brown.png",
         btnSelected: baseURL + "images/12.ion_swatch_brown_selected.png"
     }
