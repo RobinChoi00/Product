@@ -1382,3 +1382,43 @@ img[src*="17.ion_calf-bumper.png"] {
     }
 }
 
+/* =========================================
+   [최종 수정] 텍스트 계층 구조 (일반 vs 강조 구분)
+   ========================================= */
+
+/* 1. 검은 배경 섹션의 '일반 본문' -> 밝은 회색 (#b0b0b0) */
+/* 흰색(#fff)보다 어둡게 해서 눈이 편안하고, 강조 글자와 대비를 줍니다 */
+.dark-features p, .dark-features h3, .dark-features span,
+.zero-gravity-section p, .zero-gravity-section h3,
+.dual-grid-section p, .dual-grid-section h4,
+.air-massage-section p, .air-massage-section h3,
+.heat-section p, .heat-section h3,
+.dark-features .f-txt p {
+    color: #b0b0b0 !important; /* 옅은 회색 (Silver) */
+    opacity: 1 !important;
+    font-weight: 400 !important; /* 글자 두께 보통 */
+}
+
+/* 2. '강조된 글자(Strong)' -> 완전 흰색 (#ffffff) */
+/* 이게 일반 글자보다 훨씬 밝아서 눈에 확 들어옵니다 */
+.dark-features strong, 
+.zero-gravity-section strong, 
+.dual-grid-section strong, 
+.air-massage-section strong, 
+.heat-section strong {
+    color: #ffffff !important; /* 쨍한 흰색 */
+    font-weight: 700 !important; /* 두껍게 */
+}
+
+/* 3. 파란색/빨간색 포인트 컬러 유지 (최우선 순위) */
+.dark-features .blue, 
+.zero-gravity-section .blue, 
+.dual-grid-section .blue, 
+.air-massage-section .blue, 
+.heat-section .blue {
+    color: #3454D1 !important; /* 파란색 */
+}
+
+.heat-section .red {
+    color: #E63946 !important; /* 빨간색 */
+}
