@@ -2167,3 +2167,63 @@ p, .f-txt p, .center-p {
         background-color: #f7f7f7 !important;
     }
 }
+
+/* =========================================================
+   [모바일 최종] 회색 박스 vs 검은색 박스 완벽 통일
+   (둘 다 화면 꽉 차게, 글자 여백 동일하게)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. 두 섹션의 '그릇(Container)' 여백을 완전히 없앰 */
+    /* 이렇게 해야 박스가 화면 끝까지 닿습니다 */
+    .light-features .container,
+    .dark-features .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* 2. 박스(Row) 자체 설정 통일 */
+    .light-features .feature-row,
+    .dark-features .feature-row {
+        width: 100% !important;
+        padding: 0 !important; /* 이미지 꽉 채우기 위해 0 */
+        margin: 0 0 40px 0 !important; /* 아래 간격만 유지 */
+        background-color: transparent !important; /* 배경색 이슈 제거 */
+    }
+    
+    /* 회색 박스 배경색 복구 (위에서 transparent로 날렸으므로) */
+    .light-features .feature-row {
+        background-color: #f7f7f7 !important;
+        padding-bottom: 30px !important; /* 글자 아래 여백 */
+    }
+    /* 검은 박스 배경색 복구 */
+    .dark-features .feature-row {
+        background-color: #04090E !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* 3. 이미지 크기 100%로 통일 (화면 꽉 차게) */
+    .light-features .f-img img,
+    .dark-features .f-img img {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 20px 0 !important; /* 사진 밑 여백 */
+        border-radius: 0 !important;   /* 직각 */
+        
+        /* 아까 120% 확대했던 설정들 초기화 (통일성을 위해) */
+        margin-left: 0 !important;
+        transform: none !important;
+    }
+
+    /* 4. 텍스트 여백 통일 (화면 끝에 안 붙게) */
+    .light-features .f-txt,
+    .dark-features .f-txt {
+        padding: 0 25px !important; /* 양옆 25px 안전 여백 */
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: left !important; /* 왼쪽 정렬 유지 */
+    }
+}
