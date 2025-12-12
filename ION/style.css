@@ -1431,8 +1431,6 @@ p, .f-txt p, .doorway-col p {
 /* 1. 모든 섹션(Section)의 위아래 여백을 100px로 통일 */
 /* 이제 어떤 섹션이든 이전/다음 섹션과 똑같은 거리를 유지합니다 */
 section, 
-.intro-text-section, 
-.light-features, 
 .dark-features, 
 .zero-gravity-section, 
 .dual-grid-section, 
@@ -1587,5 +1585,97 @@ p, .f-txt p, .center-p {
 @media (max-width: 768px) {
     .dual-grid-section .icon-wrap2 {
         margin-bottom: 10px !important;
+    }
+}
+
+/* =========================================
+   [추가 수정] Intro Section 간격 좁히기 & 배너 바짝 붙이기
+   ========================================= */
+
+/* 1. 섹션 위아래 여백 줄이기 (기존 100px -> 50px) */
+.intro-text-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+/* 2. 설명글(Text)과 의자(Slider) 사이 간격 줄이기 */
+.intro-text-section .intro-desc {
+    margin-bottom: 10px !important; /* 기존 40px -> 10px로 대폭 축소 */
+}
+
+/* 3. [핵심] 의자(Slider) 아래 여백 제거 */
+.slider-main {
+    margin-bottom: 0 !important; /* 공간 제거 */
+}
+
+/* 4. [핵심] 색상 배너를 의자 쪽으로 끌어올리기 */
+.swatch-control-panel {
+    /* 마이너스(-) 마진을 써서 위로 강제로 끌어올립니다 */
+    /* 의자 사진의 빈 여백을 뚫고 올라갑니다. 숫자를 조절해보세요 (-30px ~ -50px 추천) */
+    margin-top: -100px !important; 
+    
+    /* 혹시 이미지가 가려지지 않게 우선순위 높임 */
+    position: relative; 
+    z-index: 20; 
+}
+
+/* 모바일에서는 너무 올라가면 겹칠 수 있으니 살짝만 올림 */
+@media (max-width: 768px) {
+    .swatch-control-panel {
+        margin-top: -20px !important;
+    }
+}
+
+/* =========================================
+   [최종 수정] 모바일 전용: 왼쪽 정렬 강제 적용
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. 모든 글자 왼쪽 정렬 */
+    body, p, h1, h2, h3, h4, 
+    .section-title, .intro-desc, .center-p,
+    .f-txt, .g-txt, .doorway-right, 
+    .detailed-features .f-txt, 
+    .heat-section .f-txt,
+    .dual-grid-section .g-txt,
+    .zero-gravity-section p, 
+    .foot-rollers-section p {
+        text-align: left !important; /* 무조건 왼쪽! */
+        
+        /* 오른쪽으로 밀려있던 여백들 제거 (왼쪽에 딱 붙게) */
+        padding-left: 0 !important; 
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* 2. 아이콘들도 왼쪽으로 정렬 */
+    /* 아이콘이 들어있는 박스(Flex)의 정렬 기준을 바꿉니다 */
+    .icon-wrap, 
+    .icon-blue, 
+    .icon-wrap2,
+    .dual-grid-section .icon-wrap2,
+    .icon-center-wrap {
+        display: flex;
+        justify-content: flex-start !important; /* 왼쪽 시작 */
+        margin: 0 0 15px 0 !important;          /* 가운데 마진 제거 */
+    }
+
+    /* 3. 텍스트 박스 내부 정렬 */
+    .f-txt, .g-txt, .grid-box {
+        align-items: flex-start !important; /* 세로 정렬 기준도 왼쪽(앞쪽)으로 */
+    }
+
+    /* 4. (선택사항) 만약 이미지는 가운데가 좋다면 유지, 이미지도 왼쪽이 좋다면 아래 주석 해제 */
+    /*
+    .f-img, .grid-box img {
+        display: flex;
+        justify-content: flex-start !important;
+    }
+    */
+    
+    /* 5. Dimensions나 Doorway 이미지 같은 건 모바일에서 너무 커지면 안되니 중앙 유지 추천 */
+    .dimensions-row img, .box-img img {
+        margin: 0 auto !important; 
     }
 }
