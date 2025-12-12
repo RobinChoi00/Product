@@ -2304,3 +2304,34 @@ h3, h4, .f-txt h3, .g-txt h4 {
         margin-top: 20px !important;
     }
 }
+
+/* =========================================================
+   [PC 수정] 이미지 크기 적절히 줄이기 (너무 거대함 방지)
+   ========================================================= */
+@media (min-width: 769px) {
+
+    /* 1. 회색/검은색 박스 안의 이미지 크기 제한 */
+    .light-features .f-img img,
+    .dark-features .f-img img,
+    .heat-section .f-img img,
+    .air-massage-section .f-img img {
+        width: auto !important;       /* 무조건 꽉 채우기(100%) 취소 */
+        max-width: 450px !important;  /* 최대 너비를 450px로 제한 (원하면 숫자 조절) */
+        max-height: 450px !important; /* 높이도 너무 길어지지 않게 제한 */
+        margin: 0 auto !important;    /* 공간 남으면 가운데 정렬 */
+    }
+
+    /* 2. (혹시 모를) 이미지가 너무 작아지는 것 방지 */
+    .f-img {
+        display: flex !important;
+        justify-content: center !important; /* 플렉스 박스 안에서 중앙 정렬 */
+        align-items: center !important;
+    }
+    
+    /* 3. Heat Therapy 등 특수 섹션도 동일하게 적용 */
+    .heat-section .f-img img,
+    .air-massage-section .f-img img {
+        width: auto !important;
+        max-width: 450px !important;
+    }
+}
