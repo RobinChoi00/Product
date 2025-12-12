@@ -1883,3 +1883,76 @@ p, .f-txt p, .center-p {
         font-size: 1.1rem !important; /* 글자 크기 살짝 키움 */
     }
 }
+
+/* =========================================================
+   [모바일 긴급 수정] 1. 인트로 간격 & 화살표 / 2. 회색박스 꽉 차게 / 3. 검은박스 확대
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* --- 1. 인트로 섹션 (간격 다이어트 & 화살표 구출) --- */
+    
+    /* 섹션 전체 위아래 여백을 확 줄임 (기존 50px -> 20px) */
+    .intro-text-section {
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* 설명글과 슬라이더 사이 간격 최소화 */
+    .intro-desc {
+        margin-bottom: 10px !important;
+    }
+
+    /* [핵심] 화살표가 이미지 가리지 않게 '이미지 안쪽 여백'을 왕창 줌 */
+    #current-chair {
+        padding: 0 70px !important; /* 양옆 70px 공간 확보 (화살표 자리) */
+        max-height: 350px !important; /* 높이 적절히 고정 */
+    }
+
+    /* 화살표 위치를 화면 양 끝으로 확실하게 밀어버림 */
+    .prev-btn { left: 0 !important; }
+    .next-btn { right: 0 !important; }
+
+
+    /* --- 2. 회색 박스 (이미지 꽉 차게 & 상단 배치) --- */
+
+    .light-features .feature-row {
+        padding: 0 !important; /* 박스 내부 여백 제거 (이미지가 끝까지 닿게) */
+        padding-bottom: 30px !important; /* 글자 아래 여백은 조금 줌 */
+        gap: 20px !important; /* 사진과 글자 사이 간격 좁힘 */
+    }
+
+    /* 이미지 스타일: 박스 뚫고 나갈 기세로 꽉 채움 */
+    .light-features .f-img img {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important; /* 글자와의 간격 */
+        border-radius: 0 !important; /* 직각 유지 */
+    }
+
+    /* 글자는 화면 끝에 붙으면 안 되니까 살짝 여백 줌 */
+    .light-features .f-txt {
+        padding: 0 20px !important; 
+    }
+
+
+    /* --- 3. 검은 박스 (내용물 펑퍼짐하게 & 사진 확대) --- */
+
+    /* 박스 자체의 패딩을 줄여서 공간 확보 */
+    .dark-features .feature-row {
+        padding: 40px 10px !important; /* 좌우 여백을 10px로 줄임 (글자 퍼지게) */
+    }
+
+    /* 사진을 훨씬 더 키움 (120% 확대해서 시원하게) */
+    .dark-features .f-img img {
+        width: 120% !important;      /* 박스보다 더 크게 */
+        max-width: none !important;  /* 제한 해제 */
+        margin-left: -10% !important; /* 중앙 정렬 보정 */
+        margin-bottom: 30px !important;
+    }
+
+    /* 글자 박스 너비 최대화 */
+    .dark-features .f-txt {
+        width: 100% !important;
+        padding: 0 5px !important; /* 거의 끝까지 퍼지게 */
+    }
+}
