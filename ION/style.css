@@ -1761,3 +1761,125 @@ p, .f-txt p, .center-p {
         margin: 0 auto 15px !important; /* 좌우 마진 auto로 중앙 정렬 */
     }
 }
+
+/* =========================================
+   [최종 디자인 변경] 배경색 통일 & 직각 모서리
+   ========================================= */
+
+/* 1. 모든 검은색/어두운 배경 -> #04090E로 통일 */
+.dark-features, 
+.zero-gravity-section, 
+.dual-grid-section, 
+.air-massage-section, 
+.heat-section,
+.dual-grid-section .grid-2, /* 기존 그라데이션 덮어쓰기 */
+.dark-features .feature-row, /* 기존 검은 박스 덮어쓰기 */
+.grid-box {
+    background: #04090E !important;
+    background-color: #04090E !important;
+}
+
+/* 2. 모든 박스와 이미지의 둥근 모서리 제거 (완전한 직각) */
+.feature-row,
+.grid-2,
+.grid-box,
+.hero-full-banner img,
+.f-img img,
+.grid-box img,
+.wide-img img,
+.product-img {
+    border-radius: 0 !important;
+}
+
+/* =========================================================
+   [최종 완성] 모바일 가독성 & 레이아웃 최적화
+   (기존 모바일 코드를 이걸로 교체하세요)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. [핵심] 화면 양옆 안전 여백 확보 (글자 잘림 방지) */
+    .container, 
+    .intro-text-section,
+    .light-features .feature-row, 
+    .dark-features .feature-row,
+    .grid-box,
+    .f-txt, 
+    .g-txt,
+    .doorway-right {
+        padding-left: 25px !important;  /* 왼쪽 여백 확보 */
+        padding-right: 25px !important; /* 오른쪽 여백 확보 */
+        width: 100% !important;         /* 폭 맞춤 */
+        box-sizing: border-box !important;
+    }
+
+    /* 2. [핵심] 텍스트 강제 왼쪽 정렬 (가독성 UP) */
+    body, p, h1, h2, h3, h4, 
+    .section-title, .intro-desc, .center-p,
+    .f-txt, .g-txt, .doorway-right, 
+    .detailed-features .f-txt, 
+    .heat-section .f-txt,
+    .dual-grid-section .g-txt,
+    .zero-gravity-section p, 
+    .foot-rollers-section p,
+    .spec-label, .spec-value {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* 3. 아이콘도 왼쪽 정렬 (글자와 라인 맞춤) */
+    .icon-wrap, 
+    .icon-blue, 
+    .icon-wrap2,
+    .dual-grid-section .icon-wrap2,
+    .icon-center-wrap {
+        display: flex;
+        justify-content: flex-start !important; /* 왼쪽 시작 */
+        margin: 0 0 10px 0 !important;          /* 아래 간격만 유지 */
+        padding-left: 0 !important;             /* 이중 패딩 방지 */
+    }
+
+    /* 4. 이미지 겹침 방지 및 간격 조정 */
+    img[src*="14.ion_voice_control.png"],
+    img[src*="16.ion_deep_calf-kneading.png"],
+    img[src*="17.ion_calf-bumper.png"],
+    .heat-section .f-img img {
+        margin-top: 0 !important;
+        margin-bottom: 30px !important; /* 사진과 글자 사이 시원하게 띄움 */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 5. 섹션 배치 세로로 변경 */
+    .feature-row, .feature-row.reverse, .grid-2, .doorway-layout, .dimensions-row, .spec-row, .split-col {
+        flex-direction: column !important;
+        gap: 40px !important;
+        padding-left: 0 !important; /* 컨테이너 패딩과 중복 방지 */
+        padding-right: 0 !important;
+    }
+
+    /* 6. 슬라이더 높이 최적화 */
+    .slider-main { height: 350px !important; }
+    #current-chair { padding: 0 20px !important; }
+
+    /* 7. 프로그램 아이콘 그리드 (2열) */
+    .programs-grid-22, .manual-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+        padding: 0 20px !important; /* 그리드 전체 여백 */
+    }
+    
+    /* 프로그램 이름만 예외적으로 가운데 정렬 (아이콘 밑이니까) */
+    .program-item, .manual-item, .p-name, .m-name {
+        text-align: center !important;
+    }
+    .program-item img, .manual-item img {
+        margin: 0 auto 10px !important;
+    }
+
+    /* 8. 줄간격 넓히기 (모바일에서 읽기 편하게) */
+    p {
+        line-height: 1.7 !important;
+        font-size: 1.1rem !important; /* 글자 크기 살짝 키움 */
+    }
+}
