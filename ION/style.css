@@ -1885,6 +1885,40 @@ p, .f-txt p, .center-p {
 }
 
 /* =========================================================
+   [PC 최종 수정] 회색 박스 & 검은색 박스 크기 완벽 통일
+   ========================================================= */
+
+/* 1. 두 박스의 크기, 여백, 정렬을 강제로 일치시킴 */
+.light-features .feature-row,
+.dark-features .feature-row {
+    width: 100% !important;
+    max-width: 1100px !important;   /* 컨테이너 가로폭에 꽉 차게 */
+    padding: 60px 50px !important;  /* 내부 여백을 50px로 똑같이 맞춤 */
+    margin: 0 auto 80px !important; /* 중앙 정렬 & 아래 간격 통일 */
+    box-sizing: border-box !important;
+    
+    /* 플렉스 설정 통일 */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 60px !important; /* 사진과 글자 사이 간격 통일 */
+}
+
+/* 2. 내부 이미지와 글자 비율도 5:5로 똑같이 맞춤 */
+.light-features .f-img, .light-features .f-txt,
+.dark-features .f-img, .dark-features .f-txt {
+    flex: 1 !important; /* 정확히 반반 차지 */
+    width: auto !important; /* 혹시 모를 고정 너비 해제 */
+}
+
+/* 3. (선택사항) 검은 박스 이미지만 너무 커 보이는 경우 살짝 조절 */
+/* 비율을 맞췄는데도 검은 박스 이미지가 너무 크다면 이 코드를 쓰세요 */
+.dark-features .f-img img {
+    max-width: 550px !important; /* 회색 박스 이미지랑 비슷한 크기로 제한 */
+    margin-left: 0 !important;   /* 위치 쏠림 초기화 */
+}
+
+/* =========================================================
    [모바일 긴급 수정] 1. 인트로 간격 & 화살표 / 2. 회색박스 꽉 차게 / 3. 검은박스 확대
    ========================================================= */
 @media (max-width: 768px) {
