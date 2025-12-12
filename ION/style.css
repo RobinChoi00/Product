@@ -2091,3 +2091,79 @@ p, .f-txt p, .center-p {
         padding-right: 10% !important;
     }
 }
+
+/* =========================================================
+   [최종 확정] 1. 색상 배너 축소 / 2. 회색&검은 박스 100% 통일
+   ========================================================= */
+
+/* --- 1. 색상 선택 배너 작게 만들기 --- */
+
+/* 배너 전체 틀 축소 */
+.swatch-control-panel {
+    width: 160px !important;  /* 가로폭 축소 */
+    height: 50px !important;  /* 높이 축소 */
+    margin-top: -30px !important; /* 위치 조정 */
+}
+
+/* 동그라미 버튼 축소 */
+.color-btn {
+    width: 30px !important;   /* 버튼 크기 축소 */
+    height: 30px !important;
+}
+
+
+/* --- 2. 회색 박스 & 검은색 박스 '화면 꽉 차게' 통일 (PC 전용) --- */
+@media (min-width: 769px) {
+
+    /* (1) 두 섹션의 그릇(Container) 제한을 풉니다 */
+    .light-features .container,
+    .dark-features .container {
+        width: 100% !important;
+        max-width: 100% !important; /* 1100px 제한 해제 */
+        padding: 0 !important;      /* 양옆 여백 제거 */
+        margin: 0 !important;
+    }
+
+    /* (2) 박스(Row) 자체를 화면 끝까지 늘립니다 */
+    .light-features .feature-row,
+    .dark-features .feature-row {
+        width: 100% !important;
+        max-width: none !important;
+        
+        /* 모양 잡기 */
+        margin: 0 0 80px 0 !important; 
+        border-radius: 0 !important;   /* 직각 */
+        padding: 0 !important;         /* 내부 여백 제거 (사진을 끝에 붙이기 위해) */
+        
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* (3) 이미지 영역: 화면 끝에 딱 붙임 */
+    .light-features .f-img,
+    .dark-features .f-img {
+        flex: 1 !important; /* 반반 차지 */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 이미지 자체도 꽉 차게 */
+    .light-features .f-img img,
+    .dark-features .f-img img {
+        width: 100% !important;
+        max-width: none !important;
+        display: block;
+    }
+
+    /* (4) 텍스트 영역: 너무 가장자리에 붙지 않게 여백 줌 */
+    .light-features .f-txt,
+    .dark-features .f-txt {
+        flex: 1 !important;
+        padding: 0 5% !important; /* 글자는 5% 정도 띄움 */
+    }
+    
+    /* (5) 회색 박스 배경색 확실하게 지정 */
+    .light-features .feature-row {
+        background-color: #f7f7f7 !important;
+    }
+}
