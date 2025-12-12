@@ -2080,7 +2080,7 @@ p, .f-txt p, .center-p {
 
     /* 2. 회색 박스(Feature Row)를 화면 가로폭에 꽉 채웁니다 */
     .light-features .feature-row {
-        max-width: none !important; /* 너비 제한 없음 */
+        max-width: 100% !important; /* 너비 제한 없음 */
         width: 100% !important;     /* 화면 끝까지 */
         border-radius: 0 !important; /* 직각 모서리 (꽉 채우기 위해) */
         margin-left: 0 !important;
@@ -2128,7 +2128,7 @@ p, .f-txt p, .center-p {
     .light-features .feature-row,
     .dark-features .feature-row {
         width: 100% !important;
-        max-width: none !important;
+        max-width: 100% !important;
         
         /* 모양 잡기 */
         margin: 0 0 80px 0 !important; 
