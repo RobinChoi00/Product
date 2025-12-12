@@ -1978,8 +1978,8 @@ p, .f-txt p, .center-p {
 
     /* 사진을 훨씬 더 키움 (120% 확대해서 시원하게) */
     .dark-features .f-img img {
-        width: 110% !important;      /* 박스보다 더 크게 */
-        max-width: none !important;  /* 제한 해제 */
+        width: 100% !important;      /* 박스보다 더 크게 */
+        max-width: 100% !important;  /* 제한 해제 */
         margin-left: -10% !important; /* 중앙 정렬 보정 */
         margin-bottom: 30px !important;
     }
@@ -2064,5 +2064,30 @@ p, .f-txt p, .center-p {
     .dark-features .f-img img {
         max-width: 550px !important;
         width: 100% !important;
+    }
+}
+
+/* =========================================================
+   [PC 수정] 회색 박스 너비 확장 (검은색 박스만큼 크게)
+   ========================================================= */
+@media (min-width: 769px) {
+    
+    /* 1. 회색 박스를 감싸는 컨테이너의 제한을 풉니다 */
+    .light-features .container {
+        max-width: 100% !important; /* 1100px 제한 해제 */
+        padding: 0 !important;      /* 양옆 여백 제거 */
+    }
+
+    /* 2. 회색 박스(Feature Row)를 화면 가로폭에 꽉 채웁니다 */
+    .light-features .feature-row {
+        max-width: none !important; /* 너비 제한 없음 */
+        width: 100% !important;     /* 화면 끝까지 */
+        border-radius: 0 !important; /* 직각 모서리 (꽉 채우기 위해) */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+        /* 내용물(글자/사진)이 너무 퍼지지 않게 중앙으로 모으기 */
+        padding-left: 10% !important; 
+        padding-right: 10% !important;
     }
 }
