@@ -169,14 +169,79 @@ h1, h2, h3, h4, .section-title {
     position: relative;
 }
 
+/* [최종 수정] 1번 사진 기준 '고정 틀' 방식 */
+
+/* 1. 슬라이더 틀 (여기가 기준이 됩니다) */
 .slider-main {
+    position: relative; 
+    
+    /* [핵심] 너비를 1번 사진 크기만큼 강제로 넓혀서 고정합니다 */
+    width: 100%;
+    max-width: 850px !important; /* 이 값으로 화살표 간격을 조절하세요 (넓히려면 숫자를 키우세요) */
+    
+    height: 450px; /* 높이 고정 */
+    margin: 0 auto 20px; /* 화면 중앙 정렬 */
+    
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
+/* 2. 화살표 (액자 틀에 고정) */
+.nav-btn {
+    position: absolute; /* 틀을 기준으로 절대 위치 고정 */
+    top: 50%;
+    transform: translateY(-50%); /* 수직 중앙 */
+    z-index: 10;
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* 왼쪽 화살표: 틀의 왼쪽 벽에 붙임 */
+.prev-btn {
+    left: 0; 
+}
+
+/* 오른쪽 화살표: 틀의 오른쪽 벽에 붙임 */
+.next-btn {
+    right: 0; 
+}
+
+/* 화살표 이미지 크기 */
+.nav-btn img {
+    width: 25px !important;
+    height: auto;
+    display: block;
+}
+
+/* 3. 의자 이미지 (틀 안에서 비율 유지) */
+#current-chair {
+    /* 이미지는 틀 안에서 자유롭게 크기 조절 */
+    width: 100%;
+    height: 100%; 
+    
+    /* 틀보다 작으면 가운데 예쁘게 위치하고, 크면 틀에 맞춤 */
+    object-fit: contain; 
+    
+    /* 화살표와 겹치지 않게 이미지에만 살짝 여백을 줌 */
+    padding: 0 40px; 
+    
+    transition: opacity 0.3s ease;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .slider-main {
+        height: 300px; /* 모바일 높이 줄임 */
+        max-width: 100%; /* 모바일에서는 화면 꽉 차게 */
+    }
+    #current-chair {
+        padding: 0 30px; /* 모바일 여백 조정 */
+    }
+}
 /* 의자 이미지 */
 #current-chair {
     width: 100%;
@@ -195,9 +260,6 @@ h1, h2, h3, h4, .section-title {
     z-index: 10;
 }
 
-.nav-btn:hover {
-    transform: scale(1.1); /* 마우스 올리면 커짐 */
-}
 
 .nav-btn img {
     width: 40px; /* 화살표 크기 조절 */
@@ -305,7 +367,7 @@ h1, h2, h3, h4, .section-title {
 
 .f-img img {
     width: 100%;      /* 반응형 */
-    max-width: 400px; /* 이미지가 너무 무식하게 커지지 않도록 제한 */
+    max-width: 550px; /* 이미지가 너무 무식하게 커지지 않도록 제한 */
     height: auto;
     object-fit: contain;
     /* (선택사항) 이미지에 그림자를 주어 입체감 살리기 */
@@ -1187,3 +1249,136 @@ p, .f-txt p, .intro-desc, .center-p, .doorway-col p {
     justify-content: center !important; /* 이미 중앙 정렬되어 있지만 확실하게 적용 */
     gap: 50px !important;
 }
+
+.zero-gravity-section .wide-img img,
+.foot-rollers-section .wide-img img {
+    width: 100%;
+    max-width: 600px !important;
+    margin: auto;
+    display: block;
+    
+}
+
+/* 검은 배경 섹션들의 본문 글자 밝게 */
+.dark-features p, 
+.zero-gravity-section p, 
+.dual-grid-section p, 
+.air-massage-section p, 
+.heat-section p,
+.dark-features .f-txt p {
+    /* ▼ 기존 어두운 색 -> 아주 밝은 회색(#f0f0f0)으로 변경 */
+    color: #c7c5c5 !important; 
+    opacity: 0.95 !important;
+}
+
+/* 굵은 글씨(strong)는 완전 흰색으로 */
+.dark-features strong, 
+.zero-gravity-section strong, 
+.dual-grid-section strong, 
+.air-massage-section strong, 
+.heat-section strong {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* 상세 기능 섹션(Detailed Features) 왼쪽 정렬 강제 적용 */
+.detailed-features .f-txt {
+    text-align: left !important;     /* 글자 왼쪽 정렬 */
+    align-items: flex-start !important; /* 플렉스 아이템 왼쪽 정렬 */
+    padding-left: 0 !important;
+}
+
+/* 파란 아이콘 박스도 왼쪽 정렬 */
+.detailed-features .icon-blue {
+    display: flex;
+    justify-content: flex-start !important; /* 왼쪽 시작 */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* [최종 수정] 중앙 정렬 유지하면서 글자 공간 확보하기 */
+
+/* 1. 박스 내부 여백을 줄여서 공간을 확보합니다 (기존 좌우 80px -> 40px) */
+/* 이렇게 하면 글자가 쓸 수 있는 공간이 양쪽으로 80px이나 늘어납니다! */
+.light-features .feature-row, 
+.dark-features .feature-row {
+    padding: 60px 40px !important; 
+    gap: 40px !important; /* 사이 간격도 살짝 조절 */
+}
+
+/* 2. 비율은 1:1 (50% 대 50%)로 원상복구하여 '정중앙'을 맞춥니다 */
+.light-features .f-txt, 
+.light-features .f-img {
+    flex: 1 !important; 
+}
+
+/* 3. (선택사항) Voice Control 부분만 텍스트를 아주 살짝 더 넓게 쓰고 싶다면 */
+/* 필요한 경우에만 아래 주석을 풀고 쓰세요. (보통 1, 2번만으로 해결됩니다) */
+/*
+.light-features .feature-row:first-child .f-txt { flex: 1.2 !important; }
+.light-features .feature-row:first-child .f-img { flex: 0.8 !important; }
+*/
+
+/* =========================================
+   [피드백 반영] 특정 이미지 크기 개별 튜닝
+   ========================================= */
+
+/* 1. Rocking Massage (15번 사진) - 조금 더 키우기 */
+img[src*="15.ion_rocking_massage.png"] {
+    max-width: 650px !important; /* 너비 제한을 650px까지 품 */
+    transform: scale(1.1);       /* 1.1배(10%) 확대 */
+}
+
+/* 2. Deep Calf Kneading (16번 사진) - 위아래 꽉 차게 */
+img[src*="16.ion_deep_calf-kneading.png"] {
+    max-width: none !important;  /* 너비 제한 완전히 해제 */
+    width: 115% !important;      /* 박스보다 더 크게 설정해서 꽉 채움 */
+    
+    /* 박스 안쪽 여백(Padding)을 무시하고 위아래로 뻗어나가게 함 */
+    margin-top: -60px; 
+    margin-bottom: -60px;
+}
+
+img[src*="14.ion_voice_control.png"] {
+    max-width: none !important;  /* 너비 제한 완전히 해제 */
+    width: 115% !important;   
+    margin-top: -60px; 
+    margin-bottom: -60px;
+}
+
+/* 3. Calf Bumpers (17번 사진) - 위아래 꽉 차게 확대 */
+img[src*="17.ion_calf-bumper.png"] {
+    max-width: none !important;  /* 너비 제한 해제 */
+    width: 115% !important;      /* 박스보다 더 넓게 키움 */
+    
+    /* 박스 안쪽 여백(Padding)을 뚫고 위아래로 뻗어나가게 함 */
+    margin-top: -40px; 
+    margin-bottom: -40px;
+    
+    /* (선택사항) 위치 미세 조정: 사진이 너무 위로 갔다면 margin-top 숫자를 조절하세요 */
+}
+
+/* [수정됨] 의자 이미지 크기 고정 및 비율 유지 */
+#current-chair {
+    width: 100%;
+    
+    /* 1. 높이를 강제로 고정합니다 (이게 핵심!) */
+    /* 400px ~ 500px 사이에서 원하시는 크기로 조절해보세요 */
+    height: 450px !important; 
+    
+    /* 2. 너비 제한도 조금 풀어줍니다 */
+    max-width: 700px !important; 
+    
+    /* 3. 사진 비율을 유지하면서 틀 안에 쏙 들어가게 함 (잘림 없음) */
+    object-fit: contain; 
+    
+    transition: opacity 0.3s ease;
+}
+
+/* (참고) 모바일에서는 높이를 조금 줄여주는 게 좋습니다 */
+@media (max-width: 768px) {
+    #current-chair {
+        height: 300px !important; /* 모바일용 높이 */
+    }
+}
+

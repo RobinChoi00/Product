@@ -1,0 +1,72 @@
+<ul class="feature-section">
+    <li style="font-weight: bold;">AI Health Technology</li>
+    <li>Intelligent Voice Control</li>
+    <li style="font-weight: bold;">4D Massage Mechanism</li>
+    <li>Body Scan Technology</li>
+    <li>2-Stage Zero Gravity Reclining</li>
+    <li style="font-weight: bold;">SL-Track System</li>
+    <li>Space-Saving Technology</li>
+    <li>24-Cell Full Body Air Massage</li>
+    <li>Lumbar &amp; Feet Heating Therapy</li>
+    <li>22 Auto Massage Programs</li>
+    <li>6 Manual Modes</li>
+    <li style="font-weight: bold;">Specialized Foot Rollers</li>
+    <li style="font-weight: bold;">Spring-Loaded Extendable Footrest</li>
+    <li>7.5" Touchscreen Controller</li>
+    <li>Bluetooth Speakers</li>
+</ul>
+
+<!-- more -->
+<div id="ion-content-anchor" style="min-height: 100px;">
+    <p style="text-align: center; color: #999; padding: 50px;">Loading Product Detail...</p>
+</div>
+<p>
+    <script crossorigin="anonymous" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        (function () {
+            var baseURL = "https://RobinChoi00.github.io/Product/ION/";
+            var v = new Date().getTime();
+
+            // 1) CSS 연결
+            $('head').append(`<link rel="stylesheet" href="${baseURL}style.css?v=${v}" type="text/css" />`);
+            $('head').append(`<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">`);
+
+            // 2) HTML 가져오기
+            $.ajax({
+                url: baseURL + "index.html",
+                data: { v: v },
+                dataType: "html",
+                success: function (data) {
+                    // HTML 파싱
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(data, "text/html");
+                    var $content = $(doc.body).contents();
+
+                    // 3) 이미지 경로 수리
+                    $content.find('img').each(function () {
+                        var src = $(this).attr('src');
+                        if (src && !src.startsWith('http')) {
+                            $(this).attr('src', baseURL + src);
+                        }
+                    });
+
+                    // 4) 기존 스크립트 태그 청소
+                    $content.find('script').remove();
+
+                    // 5) [중요] 아까 꽂아둔 깃발(#ion-content-anchor)에 내용 집어넣기
+                    // 기존 방식($('script').last().after)은 이제 안 씁니다.
+                    $('#ion-content-anchor').empty().append($content);
+
+                    // 6) JS 실행
+                    var script = document.createElement("script");
+                    script.src = baseURL + "script.js?v=" + v;
+                    script.defer = true;
+                    document.body.appendChild(script);
+                },
+                error: function () {
+                    $('#ion-content-anchor').html('<p style="color:red; text-align:center;">Failed to load content.</p>');
+                }
+            });
+        })();
+    </script>
+</p>
