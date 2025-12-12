@@ -1978,7 +1978,7 @@ p, .f-txt p, .center-p {
 
     /* 사진을 훨씬 더 키움 (120% 확대해서 시원하게) */
     .dark-features .f-img img {
-        width: 120% !important;      /* 박스보다 더 크게 */
+        width: 110% !important;      /* 박스보다 더 크게 */
         max-width: none !important;  /* 제한 해제 */
         margin-left: -10% !important; /* 중앙 정렬 보정 */
         margin-bottom: 30px !important;
@@ -2017,5 +2017,52 @@ p, .f-txt p, .center-p {
     .swatch-control-panel {
         /* 모바일에서는 의자 바로 밑에 붙도록 마이너스 마진 조절 */
         margin-top: -20px !important; 
+    }
+}
+
+/* =========================================================
+   [PC 전용] 회색 박스 vs 검은색 박스 크기/비율 완벽 통일
+   ========================================================= */
+@media (min-width: 769px) {
+    
+    /* 1. 두 박스의 겉모습(크기, 여백)을 강제로 일치시킴 */
+    .light-features .feature-row,
+    .dark-features .feature-row {
+        /* 너비 꽉 채우기 */
+        width: 100% !important;
+        max-width: 1100px !important;
+        
+        /* 가운데 정렬 */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+        /* [핵심] 내부 여백을 똑같이 맞춰서 크기를 통일함 */
+        padding: 60px 50px !important; 
+        
+        /* 모양 잡기 */
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 60px !important; /* 사진과 글자 사이 간격 통일 */
+    }
+
+    /* 2. 내부 이미지와 글자 비율도 5:5로 똑같이 맞춤 */
+    .light-features .f-img, 
+    .light-features .f-txt,
+    .dark-features .f-img, 
+    .dark-features .f-txt {
+        flex: 1 !important; /* 정확히 반반 차지 */
+    }
+
+    /* 3. (혹시 모를) 텍스트 쏠림 방지 */
+    .light-features .f-txt {
+        padding-left: 0 !important; /* 회색 박스 글자 밀림 초기화 */
+    }
+    
+    /* 4. 박스 높이 균형을 위해 이미지 크기 제한 통일 */
+    .light-features .f-img img,
+    .dark-features .f-img img {
+        max-width: 550px !important;
+        width: 100% !important;
     }
 }
