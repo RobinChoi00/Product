@@ -8,6 +8,7 @@ body {
     color: #333;
     line-height: 1.6;
     background: #fff;
+    text-align: left;
 }
 
 /* 2. 모든 제목 (h1 ~ h4) -> Poppins Semibold */
@@ -105,68 +106,35 @@ h1, h2, h3, h4, .section-title {
 /* =========================================
    MOBILE RESPONSIVE
    ========================================= */
+/* 모바일 전용 스타일 (기존 맨 아래 코드를 이걸로 교체) */
 @media (max-width: 768px) {
-    .hero-layout, .feature-row, .feature-row.reverse, .grid-2 {
-        flex-direction: column;
-        text-align: center;
+    /* 1. 슬라이더 높이 모바일용으로 줄임 */
+    .slider-main { height: 350px !important; }
+    
+    /* 2. 모든 섹션 세로 배치 */
+    .feature-row, .feature-row.reverse, .grid-2, .doorway-layout, .dimensions-row, .spec-row, .split-col {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 40px !important;
     }
-    .hero-text h1 { font-size: 3.5rem; }
-    .grid-2 { gap: 20px; }
-}
 
-/* [수정됨] 하단 섹션 스타일링 */
+    /* 3. [핵심] 모바일에서 글자 쏠림 해결 (padding-left 제거) */
+    p, .f-txt, .g-txt, .doorway-right, .detailed-features .f-txt {
+        text-align: center !important; /* 모바일은 가운데 정렬이 보기 좋음 */
+        padding-left: 0 !important;    /* 오른쪽 쏠림 원인 제거 */
+    }
 
-.foot-rollers-section {
-    padding: 80px 0;
-    background: #fff; /* 흰색 배경 */
-}
+    /* 4. [핵심] 아이콘 겹침 해결 */
+    .icon-wrap, .icon-blue, .icon-wrap2 {
+        display: flex;
+        justify-content: center !important;
+        margin: 0 auto 20px !important; /* 마진 초기화 및 아래 간격 확보 */
+    }
 
-.detailed-features {
-    padding: 60px 0;
-    background: #fdfdfd; /* 아주 연한 회색으로 구분 */
-}
-
-/* 아이콘 스타일 (이미지 위에 파란 아이콘 있는 경우) */
-.icon-blue {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #3454D1;
-}
-
-.icon-top {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    display: inline-block;
-    color: #3454D1;
-}
-
-/* Doorway & Dimensions 섹션 */
-.doorway-section, .dimensions-section {
-    padding: 80px 0;
-    background: #fff;
-    border-top: 1px solid #eee;
-}
-
-.doorway-section h3, .dimensions-section h3 {
-    margin-bottom: 40px;
-    font-size: 2.2rem;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* 이미지 크기 최적화 */
-.wide-img img {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* [추가] 슬라이더 스타일 */
-.chair-slider-wrapper {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    text-align: center;
-    position: relative;
+    /* 5. 기타 그리드 및 이미지 조정 */
+    .programs-grid-22, .manual-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .program-item:first-child, .program-item:nth-child(5) { grid-column-start: auto; }
+    .dimensions-row img, .box-img img, .dual-grid-section .grid-box img { max-width: 90%; }
 }
 
 /* [최종 수정] 1번 사진 기준 '고정 틀' 방식 */
@@ -179,7 +147,7 @@ h1, h2, h3, h4, .section-title {
     width: 100%;
     max-width: 850px !important; /* 이 값으로 화살표 간격을 조절하세요 (넓히려면 숫자를 키우세요) */
     
-    height: 450px; /* 높이 고정 */
+    height: 680px; /* 높이 고정 */
     margin: 0 auto 20px; /* 화면 중앙 정렬 */
     
     display: flex;
@@ -227,7 +195,7 @@ h1, h2, h3, h4, .section-title {
     object-fit: contain; 
     
     /* 화살표와 겹치지 않게 이미지에만 살짝 여백을 줌 */
-    padding: 0 40px; 
+    padding: 0 60px; 
     
     transition: opacity 0.3s ease;
 }
@@ -1421,4 +1389,109 @@ img[src*="17.ion_calf-bumper.png"] {
 
 .heat-section .red {
     color: #E63946 !important; /* 빨간색 */
+}
+
+/* Heat Therapy 섹션 전용 수정 */
+.heat-section .feature-row {
+    gap: 100px !important; /* 사진과 글자 사이 간격을 100px로 넓힘 */
+}
+
+.heat-section .f-img img {
+    max-width: none !important; /* 이미지 크기 제한 해제 */
+    width: 110%; /* 박스보다 10% 더 크게 키움 */
+}
+
+.heat-section .f-txt {
+    padding-left: 40px !important; /* 글자 덩어리를 오른쪽으로 조금 더 밈 */
+}
+
+/* p, .f-txt p 등을 찾아서 수정 (또는 맨 아래 추가) */
+p, .f-txt p, .doorway-col p {
+    text-align: left !important; /* 강제 왼쪽 정렬 */
+}
+
+/* 단, 섹션 제목(h3)이나 인트로 설명은 가운데가 예쁘니 유지 */
+.section-title, .intro-desc, .center-p {
+    text-align: center !important;
+}
+
+/* [피드백 반영] Zero Gravity 섹션의 설명글 박스 넓히기 */
+.zero-gravity-section .center-p {
+    /* 기존 700px 제한을 풀고 1000px까지 넓힙니다 */
+    max-width: 750px !important; 
+    
+    /* (선택사항) 만약 글자가 너무 퍼져 보이면 900px 정도로 줄이셔도 됩니다 */
+    width: 90%; /* 모바일에서 꽉 차지 않게 여백 조금 줌 */
+}
+
+/* =========================================
+   [최종] 모든 간격(Spacing) 강제 통일
+   ========================================= */
+
+/* 1. 모든 섹션(Section)의 위아래 여백을 100px로 통일 */
+/* 이제 어떤 섹션이든 이전/다음 섹션과 똑같은 거리를 유지합니다 */
+section, 
+.intro-text-section, 
+.light-features, 
+.dark-features, 
+.zero-gravity-section, 
+.dual-grid-section, 
+.air-massage-section, 
+.heat-section, 
+.programs-auto, 
+.programs-manual, 
+.foot-rollers-section, 
+.detailed-features, 
+.doorway-section, 
+.dimensions-section, 
+.spec-section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+/* 2. 섹션 내부의 박스(Row) 간격 통일 */
+/* 사진+글자 덩어리끼리의 간격을 80px로 고정 */
+.feature-row {
+    margin-bottom: 80px !important;
+    gap: 60px !important; /* 사진과 글자 사이 간격도 통일 */
+}
+
+/* 마지막 덩어리는 아래 여백 제거 (섹션 패딩과 겹치지 않게) */
+.feature-row:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 3. 제목(h3)과 본문(p) 사이의 간격 통일 */
+/* 모든 제목 밑에는 무조건 30px의 공간을 둠 */
+h3, .section-title, .f-txt h3, .g-txt h4 {
+    margin-bottom: 30px !important;
+}
+
+/* 4. 본문 글자(p) 줄간격 통일 */
+p, .f-txt p, .center-p {
+    margin-bottom: 0 !important; /* 불필요한 마진 제거 */
+    line-height: 1.8 !important; /* 줄간격 통일 */
+}
+
+/* 5. 아이콘과 제목 사이 간격 통일 */
+.icon-wrap, .icon-wrap2, .icon-blue, .icon-center-wrap {
+    margin-bottom: 20px !important;
+}
+
+/* 6. 모바일에서는 간격을 조금 좁게 통일 (너무 넓으면 스크롤 힘듦) */
+@media (max-width: 768px) {
+    section, 
+    .light-features, 
+    .dark-features, 
+    .zero-gravity-section, 
+    /* ...위의 모든 클래스들... */ 
+    .spec-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    
+    .feature-row {
+        margin-bottom: 50px !important;
+        gap: 40px !important;
+    }
 }
