@@ -1569,3 +1569,23 @@ p, .f-txt p, .center-p {
         /* align-self: flex-start !important; */ /* 이미지도 왼쪽으로 보내려면 이걸 쓰세요 */
     }
 }
+
+/* =========================================
+   [추가 수정] 아이콘과 제목 사이 간격 좁히기
+   ========================================= */
+
+/* 모든 섹션의 아이콘 박스 선택 */
+.icon-wrap, 
+.icon-wrap2, 
+.icon-blue, 
+.icon-center-wrap {
+    /* 기존 20px -> 10px로 줄임 (더 좁게 원하면 5px로 하세요) */
+    margin-bottom: 10px !important; 
+}
+
+/* (혹시 모를) 모바일 듀얼 그리드 섹션도 확실하게 적용 */
+@media (max-width: 768px) {
+    .dual-grid-section .icon-wrap2 {
+        margin-bottom: 10px !important;
+    }
+}
