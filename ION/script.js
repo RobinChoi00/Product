@@ -1,6 +1,6 @@
-/* [최종 수정] HTML onclick 없이 JS에서 직접 클릭 이벤트를 연결하는 방식 */
+/* [최종 수정] HTML onclick이 찾을 수 있도록 window 객체에 함수 등록 */
 
-// 1. 깃허브 주소 설정
+// 1. 깃허브 주소 (슬래시 확인)
 var baseURL = "https://RobinChoi00.github.io/Product/ION/";
 
 var slideData = [
@@ -52,41 +52,21 @@ function updateDisplay() {
     }
 }
 
-// 3. 슬라이드 이동 함수
-function moveSlide(direction) {
+// 3. [핵심] HTML onclick이 찾을 수 있게 window에 등록!
+// (이 부분이 없으면 ReferenceError가 뜹니다)
+window.moveSlide = function(direction) {
     currentIndex += direction;
     if (currentIndex >= slideData.length) currentIndex = 0;
     if (currentIndex < 0) currentIndex = slideData.length - 1;
     updateDisplay();
-}
+};
 
-// 4. 색상 변경 함수
-function changeColor(index) {
+window.changeColor = function(index) {
     currentIndex = index;
     updateDisplay();
-}
+};
 
-// 5. [핵심] 버튼에 클릭 이벤트 강제 연결 (이 부분이 onclick 문제를 해결함)
-// 페이지에 있는 버튼들을 직접 찾아서 연결합니다.
-var prevBtn = document.querySelector('.prev-btn');
-var nextBtn = document.querySelector('.next-btn');
-var colorBtns = document.querySelectorAll('.color-btn');
-
-// 화살표 버튼 연결
-if(prevBtn) {
-    prevBtn.onclick = function() { moveSlide(-1); };
-}
-if(nextBtn) {
-    nextBtn.onclick = function() { moveSlide(1); };
-}
-
-// 색상 버튼 연결
-if(colorBtns) {
-    colorBtns.forEach(function(btn, index) {
-        btn.onclick = function() { changeColor(index); };
-    });
-}
-
-// 6. 초기화 실행
+// 4. 초기화 실행
 updateDisplay();
-console.log("✅ ION Script Loaded & Events Attached");
+
+console.log("✅ Script Loaded: moveSlide & changeColor are now Global!");
