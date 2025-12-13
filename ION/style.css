@@ -2408,3 +2408,69 @@ h3, h4, .f-txt h3, .g-txt h4 {
         padding-top: 10px !important;
     }
 }
+
+/* =========================================================
+   [최종 수정] 인트로 간격 "극한 축소" & 배너 위치 상향
+   ========================================================= */
+
+/* 1. 섹션 전체 위아래 여백 거의 제거 */
+.intro-text-section {
+    padding-top: 10px !important;    /* 20px -> 10px */
+    padding-bottom: 10px !important;
+}
+
+/* 2. 맨 위 Hero 배너와 설명글 사이 간격 제거 */
+.hero-full-banner {
+    margin-bottom: 0 !important; /* 딱 붙임 */
+}
+
+/* 3. 설명글과 의자 슬라이더 사이 간격 제거 */
+.intro-desc {
+    margin-bottom: 0 !important; /* 딱 붙임 */
+}
+
+/* 4. 의자 슬라이더 높이 최적화 & 위로 당기기 */
+.slider-main {
+    margin-top: -10px !important; /* 설명글 쪽으로 10px 당김 */
+    margin-bottom: 0 !important;
+    height: 480px !important; /* PC 높이 */
+}
+
+/* 5. [핵심] 색상 배너 위치 대폭 상향 (의자와 겹치게) */
+.swatch-control-panel {
+    /* 기존 -60px -> -100px (과감하게 올림) */
+    /* 숫자가 클수록 더 위로 올라갑니다. 의자 발을 가린다면 -90px로 줄이세요 */
+    margin-top: -100px !important; 
+    
+    position: relative;
+    z-index: 50; /* 의자보다 위에 뜨게 함 */
+    
+    /* 중앙 정렬 유지 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 160px !important;
+    height: 50px !important;
+}
+
+/* ---------------------------------------------------------
+   [모바일 전용] 모바일에서도 바짝 붙이기
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    .intro-text-section {
+        padding-top: 0 !important; /* 모바일은 아예 0 */
+        padding-bottom: 0 !important;
+    }
+    
+    /* 모바일 슬라이더 높이 */
+    .slider-main {
+        height: 300px !important;
+        margin-top: 0 !important;
+    }
+    
+    /* 모바일에서 배너 위로 올리기 */
+    .swatch-control-panel {
+        /* 모바일은 이미지가 작으므로 -100px 하면 너무 올라감. -60px 정도가 적당 */
+        margin-top: -60px !important; 
+    }
+}
