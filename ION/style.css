@@ -2474,3 +2474,79 @@ h3, h4, .f-txt h3, .g-txt h4 {
         margin-top: -60px !important; 
     }
 }
+
+/* =========================================================
+   [긴급 수정] 1. 텍스트 넓게 / 2. 의자 확대 / 3. 배너 상향
+   ========================================================= */
+
+/* --- 1. 설명글(Intro Text) 양옆으로 넓게 벌리기 --- */
+.intro-desc {
+    /* 기존 800px 제한을 풀고, 아래 박스들과 똑같이 1100px로 맞춤 */
+    max-width: 1100px !important; 
+    width: 100% !important;
+    
+    /* 중앙 정렬 유지 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* 불필요한 여백 제거해서 넓게 쓰기 */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+/* --- 2. 의자 이미지 다시 키우기 --- */
+
+/* 슬라이더 틀 높이 키우기 */
+.slider-main {
+    /* 아까 줄였던 높이를 다시 키워서 의자가 커질 공간 확보 */
+    height: 650px !important; 
+    margin-top: 0 !important;
+}
+
+/* 의자 이미지 크기 제한 해제 */
+#current-chair {
+    height: 100% !important; /* 틀 높이(650px)만큼 꽉 차게 */
+    max-width: 1000px !important; /* 너비 제한도 넉넉하게 품 */
+    object-fit: contain;
+    padding: 0 !important; /* 양옆 여백 제거 (더 커 보이게) */
+}
+
+
+/* --- 3. 색상 배너(Swatch) 더 위로 올리기 --- */
+.swatch-control-panel {
+    /* 의자가 커졌으므로, 배너도 더 많이 위로 올려야 겹침 */
+    /* -100px -> -140px로 변경 (숫자가 클수록 위로 올라감) */
+    margin-top: -140px !important; 
+    
+    position: relative;
+    z-index: 100; /* 무조건 제일 위에 보이게 */
+}
+
+
+/* ---------------------------------------------------------
+   [모바일 대응] 모바일에서도 비율 맞춰주기
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* 텍스트는 모바일에서 화면 꽉 차게 */
+    .intro-desc {
+        width: 100% !important;
+        padding: 0 20px !important; /* 모바일 안전 여백만 남김 */
+        text-align: left !important;
+    }
+
+    /* 모바일 의자 크기 */
+    .slider-main {
+        height: 400px !important; /* 모바일에서도 좀 더 시원하게 */
+    }
+    
+    #current-chair {
+        padding: 0 40px !important; /* 화살표 공간 살짝 확보 */
+    }
+
+    /* 모바일 배너 위치 */
+    .swatch-control-panel {
+        margin-top: -80px !important; /* 모바일 비율에 맞춰 조정 */
+    }
+}
