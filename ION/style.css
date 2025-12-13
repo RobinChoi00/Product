@@ -2335,3 +2335,76 @@ h3, h4, .f-txt h3, .g-txt h4 {
         max-width: 450px !important;
     }
 }
+
+/* =========================================================
+   [최종 수정] Intro Section 간격 최소화 & 배너 위치 교정
+   ========================================================= */
+
+/* 1. 전체 섹션 크기 줄이기 (위아래 여백 다이어트) */
+.intro-text-section {
+    padding-top: 20px !important;    /* 기존 80px -> 20px (확 줄임) */
+    padding-bottom: 20px !important; /* 아래쪽도 줄임 */
+}
+
+/* 2. 맨 위 배너(Hero)와 소개 글 사이 간격 줄이기 */
+/* (Hero 이미지 자체의 아래 여백도 없앰) */
+.hero-full-banner {
+    margin-bottom: 10px !important;  /* 기존 40px -> 10px */
+}
+
+/* 3. 소개 글(Text)과 의자(Slider) 사이 간격 줄이기 */
+.intro-desc {
+    margin-bottom: 10px !important;  /* 기존 40~50px -> 10px */
+}
+
+/* 4. 의자 슬라이더 영역 높이 최적화 (불필요한 공백 제거) */
+/* PC 버전 */
+.slider-main {
+    height: 500px !important; /* 높이를 살짝 줄여서 오밀조밀하게 */
+    margin-bottom: 0 !important;
+}
+
+/* 5. [핵심] 색상 배너(회색바+버튼) 위로 올리기 & 중앙 정렬 */
+.swatch-control-panel {
+    /* (1) 위치를 위로 끌어올림 (의자 쪽으로) */
+    margin-top: -60px !important; 
+    
+    /* (2) 화면 정중앙 배치 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* (3) 다른 요소와 겹칠 때 제일 위에 보이게 */
+    position: relative;
+    z-index: 50; 
+    
+    /* (4) 크기 설정 (아까 줄인 크기 유지) */
+    width: 160px !important;
+    height: 50px !important;
+}
+
+/* 배너 안의 버튼들도 정확히 가운데 오도록 */
+.buttons-wrapper {
+    justify-content: space-between !important; /* 간격 균등 */
+    width: 80% !important; /* 바 안쪽에 예쁘게 배치 */
+    margin: 0 auto !important; /* 중앙 정렬 */
+}
+
+/* =========================================
+   [모바일 전용] 인트로 섹션 추가 최적화
+   ========================================= */
+@media (max-width: 768px) {
+    /* 모바일에서는 슬라이더 높이를 더 줄임 */
+    .slider-main {
+        height: 300px !important;
+    }
+
+    /* 배너 위치 미세 조정 (모바일은 의자가 작으니까 덜 올려도 됨) */
+    .swatch-control-panel {
+        margin-top: -40px !important;
+    }
+    
+    /* 맨 위 간격 더 좁게 */
+    .intro-text-section {
+        padding-top: 10px !important;
+    }
+}
