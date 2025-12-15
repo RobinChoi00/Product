@@ -2756,3 +2756,34 @@ h3, h4, .f-txt h3, .g-txt h4 {
         max-width: 100% !important;
     }
 }
+
+/* =========================================================
+   [모바일 전용] Zero Gravity 섹션 순서 변경 (제목 -> 사진 -> 글자)
+   ========================================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 컨테이너를 플렉스 박스로 만들어서 순서 조절 가능하게 함 */
+    .zero-gravity-section .container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 2. 제목 (순서 1번) */
+    .zero-gravity-section h3 {
+        order: 1 !important;
+        margin-bottom: 20px !important; /* 사진과의 간격 */
+    }
+
+    /* 3. 사진 (순서 2번 - 위로 올림) */
+    .zero-gravity-section .wide-img {
+        order: 2 !important;
+        margin-bottom: 20px !important; /* 글자와의 간격 */
+        width: 100% !important;
+    }
+
+    /* 4. 글자 (순서 3번 - 아래로 내림) */
+    .zero-gravity-section .center-p {
+        order: 3 !important;
+        margin-bottom: 0 !important;
+    }
+}
