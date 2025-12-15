@@ -2550,3 +2550,36 @@ h3, h4, .f-txt h3, .g-txt h4 {
         margin-top: -80px !important; /* 모바일 비율에 맞춰 조정 */
     }
 }
+
+/* =========================================================
+   [PC 수정] 색상 배너와 의자 이미지 '겹침 해결' 및 분리
+   ========================================================= */
+@media (min-width: 769px) {
+    
+    .swatch-control-panel {
+        /* 1. 위로 끌어올렸던 마이너스 마진을 제거하고, 아래로 내립니다 */
+        /* 0px은 딱 붙는 것이고, 30px 정도면 적당히 떨어집니다 */
+        margin-top: 30px !important; 
+        
+        /* 2. 중앙 정렬 유지 */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 0 !important;
+        
+        /* 3. 위치 속성 초기화 */
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    /* 4. (선택사항) 의자 슬라이더 높이가 너무 크면 여백이 너무 넓어 보일 수 있으니 조절 */
+    /* 이미지가 잘리지 않는 선에서 높이를 살짝 줄여줍니다 */
+    .slider-main {
+        height: 600px !important; 
+        margin-bottom: 0 !important;
+    }
+    
+    /* 5. 인트로 섹션의 아래 여백을 살짝 늘려줍니다 (배너가 내려왔으므로) */
+    .intro-text-section {
+        padding-bottom: 40px !important;
+    }
+}
