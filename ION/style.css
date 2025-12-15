@@ -2860,7 +2860,7 @@ h3, h4, .f-txt h3, .g-txt h4 {
     
     /* [핵심] 버튼들 사이에 10px 간격을 줍니다 */
     /* 숫자를 키울수록 더 많이 벌어집니다 (예: 15px, 20px) */
-    gap: 10px !important;
+    gap: 30px !important;
     
     margin: 0 !important;
     padding: 0 !important;
