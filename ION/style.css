@@ -2722,3 +2722,37 @@ h3, h4, .f-txt h3, .g-txt h4 {
         transform: translateY(8px) !important; /* 모바일에서도 8px 내림 */
     }
 }
+
+/* =========================================================
+   [모바일 최종] 에어 마사지 섹션 글자 넓게 (화면 꽉 채우기)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. 에어 마사지 섹션의 '그릇(Container)' 제한 해제 */
+    .air-massage-section .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;   /* 컨테이너 여백 제거 */
+        padding-right: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 2. 텍스트 박스(.f-txt)를 화면 끝까지 늘림 */
+    .air-massage-section .f-txt {
+        width: 100% !important;
+        max-width: none !important;
+        
+        /* 글자가 화면에 딱 붙지 않게 최소한의 안전 여백(20px)만 줌 */
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+        
+        box-sizing: border-box !important;
+        text-align: left !important;
+    }
+    
+    /* (혹시 모를) 이미지도 꽉 차게 */
+    .air-massage-section .f-img img {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
