@@ -2810,3 +2810,66 @@ h3, h4, .f-txt h3, .g-txt h4 {
     /* 기존 gap: 15px 을 덮어씌워서 8px로 줄입니다 */
     gap: 5px !important; 
 }
+
+/* =========================================================
+   [22가지 프로그램] 아이콘과 글자 중앙 정렬 스타일
+   ========================================================= */
+
+/* 1. 전체 섹션: 제목 가운데 정렬 */
+.programs-auto {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.programs-auto h3 {
+    margin-bottom: 40px; /* 제목과 아이콘들 사이 간격 */
+    font-weight: bold;
+}
+
+/* 2. 아이콘들을 감싸는 큰 틀 (그리드) */
+.programs-grid-22 {
+    display: flex;
+    flex-wrap: wrap;        /* 공간 부족하면 다음 줄로 넘김 */
+    justify-content: center; /* 전체 덩어리를 화면 중앙에 배치 */
+    gap: 20px;              /* 아이콘끼리 상하좌우 간격 */
+    max-width: 1200px;      /* 너무 퍼지지 않게 폭 제한 */
+    margin: 0 auto;         /* 중앙 정렬 */
+}
+
+/* 3. 개별 아이콘 박스 (이미지 + 글자) */
+.program-item {
+    display: flex;
+    flex-direction: column; /* 이미지 위, 글자 아래로 배치 */
+    align-items: center;    /* [핵심] 수직 기준 가운데 정렬 */
+    text-align: center;     /* [핵심] 글자 가운데 정렬 */
+    
+    width: 140px;           /* 박스 너비 고정 (그래야 줄이 예쁘게 맞음) */
+    margin-bottom: 20px;
+}
+
+/* 4. 아이콘 이미지 크기 제한 */
+.program-item img {
+    max-width: 60px;        /* 이미지 크기 조절 (필요에 따라 수정) */
+    height: auto;
+    margin-bottom: 10px;    /* 이미지와 글자 사이 간격 */
+    display: block;         /* 이미지 하단 여백 제거 */
+}
+
+/* 5. 프로그램 이름 글자 스타일 */
+.p-name {
+    font-size: 14px;        /* 글자 크기 */
+    line-height: 1.3;       /* 줄 간격 (두 줄일 때 보기 좋게) */
+    color: #333;            /* 글자 색상 */
+    font-weight: 500;       /* 글자 굵기 */
+    margin: 0;              /* 불필요한 여백 제거 */
+}
+
+/* --- 모바일 최적화 (화면 작을 때) --- */
+@media (max-width: 768px) {
+    .program-item {
+        width: 30%; /* 모바일에서는 한 줄에 3개 정도 나오게 */
+    }
+    .p-name {
+        font-size: 12px; /* 모바일 글자 크기 살짝 작게 */
+    }
+}
