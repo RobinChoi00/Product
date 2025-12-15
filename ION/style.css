@@ -2616,3 +2616,87 @@ h3, h4, .f-txt h3, .g-txt h4 {
         box-sizing: border-box !important;
     }
 }
+
+/* =========================================================
+   [모바일 최종 완결] 1. 인트로 초밀착 / 2. 배너 완벽 조립
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. 설명글과 의자 사이 간격 "초밀착" */
+    .intro-desc {
+        margin-bottom: 0 !important;    /* 글자 아래 여백 0 */
+        padding-bottom: 0 !important;
+    }
+
+    .slider-main {
+        /* 의자를 위로 20px 더 당겨 올림 (글자에 바짝 붙게) */
+        margin-top: -20px !important; 
+        
+        /* 의자 높이 미세 조정 (비율 유지) */
+        height: 380px !important; 
+    }
+    
+    #current-chair {
+        /* 의자가 너무 커서 글자를 찌르지 않게 살짝 여유 */
+        padding-top: 10px !important; 
+    }
+
+
+    /* 2. 색상 배너(6번)와 버튼(7,8,9번) "완벽 조립" */
+    
+    /* (1) 배너 전체 틀: 위치와 크기 고정 */
+    .swatch-control-panel {
+        /* 의자 발목 위로 위치 조정 (-60px -> -50px 등 상황에 맞춰 미세조절) */
+        /* 의자가 위로 올라갔으니 배너도 따라 올라갑니다 */
+        margin-top: -50px !important; 
+        
+        /* 크기 고정 (회색 막대 이미지 비율에 맞춤) */
+        width: 150px !important;
+        height: 45px !important;
+        
+        /* 내부 정렬 필수 설정 */
+        position: relative !important;
+        display: flex !important;
+        justify-content: center !important; /* 가로 중앙 */
+        align-items: center !important;     /* 세로 중앙 */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        z-index: 50 !important;
+    }
+
+    /* (2) 배경 이미지(6번: 회색 막대): 틀에 꽉 채우기 */
+    .bar-bg {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* 비율 유지하며 꽉 채움 */
+        z-index: 1 !important; /* 맨 뒤로 */
+    }
+
+    /* (3) 버튼 그룹(7,8,9번): 배경 위에 예쁘게 얹기 */
+    .buttons-wrapper {
+        position: relative !important;
+        z-index: 2 !important; /* 배경보다 앞으로 */
+        
+        width: 80% !important; /* 막대기 안쪽 80% 공간만 사용 (여백 확보) */
+        height: 100% !important;
+        
+        display: flex !important;
+        justify-content: space-between !important; /* 버튼끼리 간격 균등 */
+        align-items: center !important; /* 세로 중앙 정렬 */
+    }
+
+    /* (4) 개별 버튼 크기 최적화 */
+    .color-btn {
+        width: 28px !important;  /* 버튼 크기를 틀에 맞게 살짝 줄임 */
+        height: 28px !important;
+        border: 2px solid transparent !important; /* 기본 테두리 */
+    }
+    
+    .color-btn.active {
+        border-color: #fff !important; /* 선택된 버튼 테두리 */
+        box-shadow: 0 0 2px rgba(0,0,0,0.5) !important;
+    }
+}
