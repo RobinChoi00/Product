@@ -2606,8 +2606,8 @@ h3, h4, .f-txt h3, .g-txt h4 {
         max-width: none !important;
         
         /* 다른 글자들(.f-txt)과 똑같은 여백(20px)만 남기고 꽉 채움 */
-        padding-left: 20px !important; 
-        padding-right: 20px !important;
+        padding-left: 10px !important; 
+        padding-right: 10px !important;
         
         /* 글자 정렬도 왼쪽으로 통일 (꽉 차 보이게) */
         text-align: left !important;
