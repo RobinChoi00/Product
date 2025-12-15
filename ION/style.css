@@ -2583,3 +2583,36 @@ h3, h4, .f-txt h3, .g-txt h4 {
         padding-bottom: 40px !important;
     }
 }
+
+/* =========================================================
+   [모바일 최종] 인트로 글자 너비 확장 (화면 꽉 채우기)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. 인트로 섹션의 '그릇(Container)' 여백을 억지로 풉니다 */
+    /* 기존 컨테이너가 글자를 가운데로 모으고 있어서 이걸 해제해야 합니다 */
+    .intro-text-section .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;  /* 컨테이너 여백 제거 */
+        padding-right: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 2. 설명글(Text) 자체를 화면 끝까지 늘립니다 */
+    .intro-desc {
+        /* 너비 제한 완전 해제 */
+        width: 100% !important;
+        max-width: none !important;
+        
+        /* 다른 글자들(.f-txt)과 똑같은 여백(20px)만 남기고 꽉 채움 */
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+        
+        /* 글자 정렬도 왼쪽으로 통일 (꽉 차 보이게) */
+        text-align: left !important;
+        
+        /* 박스 계산 방식 고정 */
+        box-sizing: border-box !important;
+    }
+}
