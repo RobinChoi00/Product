@@ -2787,3 +2787,44 @@ h3, h4, .f-txt h3, .g-txt h4 {
         margin-bottom: 0 !important;
     }
 }
+
+/* =========================================================
+   [최종 해결] 사이트 상관없이 버튼 위치 '절대 고정'
+   ========================================================= */
+
+/* 1. 기준점 잡기 (회색 바 이미지를 감싸는 틀) */
+.swatch-control-panel {
+    position: relative !important; /* 자식 요소들의 기준점이 됨 */
+    display: inline-block !important; /* 이미지 크기에 딱 맞게 줄어듦 */
+    line-height: 0 !important; /* 불필요한 줄간격 제거 */
+}
+
+/* 2. 배경 이미지 (회색 바) */
+.swatch-control-panel .bar-bg {
+    display: block !important; /* 이미지 하단 미세한 공백 제거 */
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+/* 3. 버튼 뭉치 (강제 중앙 정렬) */
+.buttons-wrapper {
+    /* (1) 흐름에서 떼어내서 공중에 띄움 */
+    position: absolute !important; 
+    
+    /* (2) 부모 박스의 정중앙(50%) 지점으로 보냄 */
+    top: 50% !important;
+    left: 50% !important;
+    
+    /* (3) 자신의 크기 반만큼 되돌려서 '진짜 중앙' 맞춤 */
+    transform: translate(-50%, -50%) !important;
+    
+    /* (4) 기타 간섭 제거 */
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important; /* 너비 확보 */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 10 !important;
+}
