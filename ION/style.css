@@ -2839,5 +2839,35 @@ h3, h4, .f-txt h3, .g-txt h4 {
     
     /* ▲▼ 만약 눈으로 보기에 위아래가 안 맞으면 아래 숫자만 고치세요 */
     /* 양수(+)면 아래로, 음수(-)면 위로 움직입니다. */
-    transform: translateY(0px) !important; 
+    transform: translateY(7px) !important; 
+}
+
+/* =========================================================
+   [최종 수정] 색상 버튼들 사이 간격 벌리기
+   ========================================================= */
+
+.buttons-wrapper {
+    /* 기존의 중앙 정렬 코드는 유지합니다 */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* [핵심] 버튼들 사이에 10px 간격을 줍니다 */
+    /* 숫자를 키울수록 더 많이 벌어집니다 (예: 15px, 20px) */
+    gap: 10px !important;
+    
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5 !important;
+}
+
+/* (선택사항) 만약 개별 버튼에 마진이 있었다면 초기화 */
+.buttons-wrapper .color-btn {
+    margin: 0 !important; /* gap으로 간격을 주므로 마진은 없앱니다 */
 }
