@@ -2795,9 +2795,18 @@ h3, h4, .f-txt h3, .g-txt h4 {
 .buttons-wrapper .color-btn {
     /* Y축(위아래)으로 이동: 마이너스(-)는 위로, 플러스(+)는 아래로 */
     /* 현재 -3px 만큼 위로 올립니다. */
-    transform: translateY(-5px) !important; 
+    transform: translateY(-7px) !important; 
     
     /* 혹시 모를 마진 초기화 */
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+}
+
+/* =========================================================
+   [최종_수정] 버튼 간격 좁히기 (15px -> 8px)
+   ========================================================= */
+
+.buttons-wrapper {
+    /* 기존 gap: 15px 을 덮어씌워서 8px로 줄입니다 */
+    gap: 8px !important; 
 }
