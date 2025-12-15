@@ -2630,7 +2630,7 @@ h3, h4, .f-txt h3, .g-txt h4 {
 
     .slider-main {
         /* 의자를 위로 20px 더 당겨 올림 (글자에 바짝 붙게) */
-        margin-top: -20px !important; 
+        margin-top: -50px !important; 
         
         /* 의자 높이 미세 조정 (비율 유지) */
         height: 380px !important; 
@@ -2648,7 +2648,7 @@ h3, h4, .f-txt h3, .g-txt h4 {
     .swatch-control-panel {
         /* 의자 발목 위로 위치 조정 (-60px -> -50px 등 상황에 맞춰 미세조절) */
         /* 의자가 위로 올라갔으니 배너도 따라 올라갑니다 */
-        margin-top: -50px !important; 
+        margin-top: -90px !important; 
         
         /* 크기 고정 (회색 막대 이미지 비율에 맞춤) */
         width: 150px !important;
