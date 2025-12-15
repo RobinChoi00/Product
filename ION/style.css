@@ -2700,3 +2700,25 @@ h3, h4, .f-txt h3, .g-txt h4 {
         box-shadow: 0 0 2px rgba(0,0,0,0.5) !important;
     }
 }
+
+/* =========================================================
+   [미세 조정] 색상 버튼들 아래로 내리기 (중앙 맞춤)
+   ========================================================= */
+
+.buttons-wrapper {
+    /* 1. Y축(위아래)으로 이동시킵니다. */
+    /* 양수(+)를 주면 아래로 내려갑니다. */
+    /* 5px ~ 10px 사이에서 숫자를 조절해서 딱 맞는 위치를 찾으세요 */
+    transform: translateY(8px) !important; 
+    
+    /* 혹시 모를 정렬 간섭 방지 */
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 모바일에서도 똑같이 적용 */
+@media (max-width: 768px) {
+    .buttons-wrapper {
+        transform: translateY(8px) !important; /* 모바일에서도 8px 내림 */
+    }
+}
