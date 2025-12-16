@@ -1,72 +1,71 @@
-/* [최종 수정] HTML onclick이 찾을 수 있도록 window 객체에 함수 등록 */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // [최종 수정] 실제 파일 확장자에 맞춰서 정확하게 입력했습니다.
+    const slideData = [
+        {
+            
+            chair: "images/0.ion_color_both.png", 
+            btnNormal: "images/7.ion_swatch_all.png",
+            btnSelected: "images/10.ion_swatch_all_selected.png"
+        },
+        {
+            
+            chair: "images/3.ion_color_black.png", 
+            btnNormal: "images/8.ion_swatch_black.png",
+            btnSelected: "images/11.ion_swatch_black_selected.png"
+        },
+        {
+            
+            chair: "images/2.ion_color_brown.png", 
+            btnNormal: "images/9.ion_swatch_brown.png",
+            btnSelected: "images/12.ion_swatch_brown_selected.png"
+        }
+    ];
 
-// 1. 깃허브 주소 (슬래시 확인)
-var baseURL = "https://RobinChoi00.github.io/Product/ION/";
+    let currentIndex = 0; // 시작은 0번 (All)
 
-var slideData = [
-    {
-        // 0번: All (png)
-        chair: baseURL + "images/0.ion_color_both.png", 
-        btnNormal: baseURL + "images/7.ion_swatch_all.png",
-        btnSelected: baseURL + "images/10.ion_swatch_all_selected.png"
-    },
-    {
-        // 1번: Black (⚠️중요: 실제 파일이 jpg라면 .jpg로 고치세요!)
-        chair: baseURL + "images/3.ion_color_black.png", 
-        btnNormal: baseURL + "images/8.ion_swatch_black.png",
-        btnSelected: baseURL + "images/11.ion_swatch_black_selected.png"
-    },
-    {
-        // 2번: Brown (⚠️중요: 실제 파일이 jpg라면 .jpg로 고치세요!)
-        chair: baseURL + "images/2.ion_color_brown.png", 
-        btnNormal: baseURL + "images/9.ion_swatch_brown.png",
-        btnSelected: baseURL + "images/12.ion_swatch_brown_selected.png"
+    // 1. 화면 업데이트 함수
+    function updateDisplay() {
+        const imgEl = document.getElementById("current-chair");
+        const btnImages = document.querySelectorAll(".color-btn");
+
+        // 메인 의자 이미지 변경
+        if(imgEl) {
+            imgEl.style.opacity = 0.5; // 깜빡임 효과
+            setTimeout(() => {
+                // 여기서 .chair를 가져와서 주소를 넣습니다
+                imgEl.src = slideData[currentIndex].chair;
+                imgEl.style.opacity = 1;
+            }, 150);
+        }
+
+        // 버튼 이미지 변경 (선택된 것 / 안 된 것 교체)
+        if(btnImages) {
+            btnImages.forEach((btn, index) => {
+                if (index === currentIndex) {
+                    btn.src = slideData[index].btnSelected;
+                    btn.classList.add("active");
+                } else {
+                    btn.src = slideData[index].btnNormal;
+                    btn.classList.remove("active");
+                }
+            });
+        }
     }
-];
 
-var currentIndex = 0; 
+    // 2. 전역 함수 등록 (HTML onclick에서 실행할 수 있도록 window에 붙임)
+    window.moveSlide = function(direction) {
+        currentIndex += direction;
+        
+        // 순환 로직 (끝에 가면 처음으로)
+        if (currentIndex >= slideData.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = slideData.length - 1;
+        
+        updateDisplay();
+    };
 
-// 2. 화면 업데이트 함수
-function updateDisplay() {
-    var imgEl = document.getElementById("current-chair");
-    var btnImages = document.querySelectorAll(".color-btn");
-
-    if(imgEl) {
-        imgEl.style.opacity = 0.5;
-        setTimeout(function() {
-            imgEl.src = slideData[currentIndex].chair; 
-            imgEl.style.opacity = 1;
-        }, 150);
-    }
-
-    if(btnImages) {
-        btnImages.forEach(function(btn, index) {
-            if (index === currentIndex) {
-                btn.src = slideData[index].btnSelected;
-                btn.classList.add("active");
-            } else {
-                btn.src = slideData[index].btnNormal;
-                btn.classList.remove("active");
-            }
-        });
-    }
-}
-
-// 3. [핵심] HTML onclick이 찾을 수 있게 window에 등록!
-// (이 부분이 없으면 ReferenceError가 뜹니다)
-window.moveSlide = function(direction) {
-    currentIndex += direction;
-    if (currentIndex >= slideData.length) currentIndex = 0;
-    if (currentIndex < 0) currentIndex = slideData.length - 1;
-    updateDisplay();
-};
-
-window.changeColor = function(index) {
-    currentIndex = index;
-    updateDisplay();
-};
-
-// 4. 초기화 실행
-updateDisplay();
-
-console.log("✅ Script Loaded: moveSlide & changeColor are now Global!");
+    window.changeColor = function(index) {
+        currentIndex = index;
+        updateDisplay();
+    };
+});
