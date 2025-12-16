@@ -75,7 +75,7 @@ a {
 
 /* Intro Description 스타일 */
 .intro-desc {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 21pt;
     color: #8e8e8e;
@@ -2488,5 +2488,86 @@ a {
         margin-bottom: 30px !important;
         height: auto !important;
         line-height: 1.2 !important;
+    }
+
+    /* ============================================================
+       [모바일] 22 Auto & 6 Manual 제외 "모두 왼쪽 정렬" 오버라이드
+       ============================================================ */
+
+    /* 1. 텍스트 컨테이너 및 본문 왼쪽 정렬 */
+    .intro-desc,
+    .f-txt,
+    .g-txt,
+    .center-p,
+    .doorway-right,
+    .measuring-guide,
+    .spec-table {
+        text-align: left !important;       /* 텍스트 왼쪽 */
+        align-items: flex-start !important; /* Flex 아이템 왼쪽 */
+        margin-left: 0 !important;          /* 불필요한 왼쪽 여백 제거 */
+        width: 100% !important;             /* 너비 꽉 채우기 */
+        max-width: 100% !important;
+    }
+
+    /* 2. 아이콘 박스 왼쪽 정렬 */
+    .icon-wrap,
+    .icon-wrap2,
+    .icon-blue,
+    .icon-center-wrap {
+        justify-content: flex-start !important; /* 아이콘 왼쪽 배치 */
+        display: flex !important;
+        margin-left: 0 !important;
+    }
+
+    /* 3. 각 섹션 제목(Title) 왼쪽 정렬 및 여백 초기화 */
+    /* (Auto, Manual 섹션은 제외하고 타겟팅) */
+    
+    /* Intro */
+    .intro-text-section .text-center { text-align: left !important; }
+
+    /* Zero Gravity, Foot Rollers, Dimensions 제목 */
+    .zero-gravity-section .text-center,
+    .foot-rollers-section .text-center,
+    .dimensions-section .text-center {
+        text-align: left !important;
+    }
+
+    /* 제목 박스 세부 설정 (가운데 정렬 해제) */
+    .zero-gravity-section .text-center > div:first-child,
+    .foot-rollers-section .text-center > div:nth-child(2),
+    .dimensions-section .text-center > div:first-child,
+    .spec-section .container > div:first-child,
+    .doorway-section .section-title {
+        text-align: left !important;
+        margin-left: 0 !important; /* 왼쪽 벽에 붙임 */
+        width: 100% !important;    /* 박스 너비 풀기 */
+        white-space: normal !important; /* 줄바꿈 허용 */
+    }
+
+    /* 4. Detailed Features 제목/본문 왼쪽 정렬 */
+    .detailed-features .f-txt {
+        align-items: flex-start !important;
+    }
+    .detailed-features .f-txt > div:nth-child(2), /* 제목 */
+    .detailed-features .f-txt > div:last-child {  /* 본문 */
+        text-align: left !important;
+    }
+
+    /* 5. Dual Grid (SL-Track 등) 왼쪽 정렬 */
+    .dual-grid-section .g-txt {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    .dual-grid-section .g-txt > div:first-child { /* 제목 */
+        text-align: left !important;
+    }
+
+    /* 6. Dimensions & Spec 이미지/테이블 정렬 */
+    .dimensions-row {
+        justify-content: flex-start !important; /* 이미지들도 왼쪽부터 쌓임 (선택사항) */
+    }
+    
+    .spec-label {
+        text-align: left !important;
     }
 }
