@@ -76,7 +76,7 @@ a {
 /* Intro Description 스타일 */
 .intro-desc {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 21pt;
     color: #8e8e8e;
     
@@ -196,9 +196,11 @@ a {
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 30px;
+    font-weight: 300;
 }
 .feature-row.reverse {
     flex-direction: row-reverse; /* 이미지 오른쪽, 글 왼쪽 */
+    font-weight: 300;
 }
 .f-img { width: 50%; }
 .f-txt { width: 45%; }
