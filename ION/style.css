@@ -86,7 +86,7 @@ a {
     max-width: 1300px;
     margin: 10px auto 150px; /* 위 80px, 아래 60px 여백 */
     letter-spacing: 0.3;
-    width: 108%;
+    width: 100%;
 }
 
 /* =========================================
