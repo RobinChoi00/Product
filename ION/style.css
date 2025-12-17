@@ -3037,7 +3037,7 @@ a {
         height: auto !important;
         
         /* [핵심] 불필요한 공백 제거 */
-        margin-top: 20px !important;      /* 위쪽 공백 제거 */
+        margin-top: -30px !important;      /* 위쪽 공백 제거 */
         margin-bottom: 10px !important; /* 제목과 사이 간격 좁힘 */
     }
     
@@ -3062,7 +3062,7 @@ a {
 
     /* 2. [추가된 기능] 텍스트만 더 위로 당겨서 이모티콘에 붙이기 */
     .detailed-features .feature-row:nth-child(4) .f-txt {
-        margin-top: -20px !important;  /* [조절] 숫자가 클수록 아이콘과 겹칠 정도로 붙음 */
+        margin-top: -10px !important;  /* [조절] 숫자가 클수록 아이콘과 겹칠 정도로 붙음 */
         padding-top: 0 !important;
     }
 
