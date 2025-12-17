@@ -2277,7 +2277,7 @@ a {
     /* [1] 인트로 섹션 (왼쪽 정렬, 폰트 축소, 간격 줄이기) */
     .intro-desc {
         text-align: left !important;   /* 왼쪽 정렬 */
-        font-size: 14px !important;    /* 텍스트 크기 축소 */
+        font-size: 16px !important;    /* 텍스트 크기 축소 */
         line-height: 1.6 !important;
         width: 100% !important;
         margin: 20px auto 10px !important; /* 의자와의 간격 줄임 (아래 여백 10px) */
@@ -2330,10 +2330,11 @@ a {
         display: flex !important;
         justify-content: flex-start !important; /* 왼쪽 정렬 */
         margin-bottom: 10px !important;
+        width: 35px;
     }
     /* 본문 폰트 사이즈 줄이기 */
     .light-features .f-desc {
-        font-size: 14px !important; /* 축소 */
+        font-size: 16px !important; /* 축소 */
     }
 
     /* [4] 4D Mechanism & Body Scan (텍스트 박스 확장, 왼쪽 정렬) */
@@ -2361,7 +2362,7 @@ a {
         max-width: 100% !important;
     }
     .dark-features .f-desc {
-        font-size: 14px !important; /* 폰트 조절 */
+        font-size: 16px !important; /* 폰트 조절 */
     }
 
     /* [5] SL-Track & Space-Saving (이미지 비율 유지) */
@@ -2389,6 +2390,7 @@ a {
         width: 100% !important;
         height: auto !important;
         margin: 0 !important;
+        font-size: 16px;
     }
 
     /* [6] 24-Cell Air (텍스트 잘림 해결, 이미지 확대) */
@@ -2406,6 +2408,7 @@ a {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
+        font-size: 16px;
     }
     /* 이미지 확대 */
     .air-massage-section .f-img img {
@@ -2436,8 +2439,9 @@ a {
     .heat-section .f-txt {
         order: 2 !important;
         width: 100% !important;
-        padding: 0 20px !important;
+        padding: 0 10px !important;
         text-align: left !important;
+        font-size: 16px;
     }
 
     /* [8] 22 Auto Programs (오와열 맞추기) */
@@ -2720,6 +2724,7 @@ a {
         width: 100% !important;
         max-width: 350px !important;
         margin: 0 !important;
+        text-align: center
     }
     /* Dimensions 간격 줄이기 */
     .dimensions-section .text-center > div:first-child {
@@ -2782,7 +2787,7 @@ a {
     }
 
     /* 가이드 텍스트도 화면에 맞춤 */
-    .measuring-guide {
+    .measuring-guide {  
         width: 100% !important;
         padding: 0 10px !important;
     }
@@ -2800,5 +2805,255 @@ a {
         max-width: none !important;  /* 350px 제한 해제 -> 더 커짐 */
         height: auto !important;
         margin: 0 0 40px 0 !important; /* 이미지 사이 위아래 간격 */
+    }
+}
+/* ========================================================
+   [긴급 수정] MINIMUM DOORWAY 화면 잘림 및 정렬 해결
+   ======================================================== */
+@media (max-width: 844px) {
+
+    /* 1. 섹션 전체가 화면을 넘어가지 않도록 잠금 */
+    .doorway-section {
+        width: 100% !important;
+        overflow-x: hidden !important; /* 가로 스크롤 방지 */
+        padding: 40px 0 !important;
+    }
+
+    .doorway-section .container {
+        width: 100% !important;
+        padding: 0 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* 내부 요소 중앙 정렬 */
+    }
+
+    /* 2. 제목: 폰트 줄이고, 화면에 맞춰 줄바꿈 허용 */
+    .doorway-section .section-title {
+        font-size: 32px !important;   /* 폰트 크기 대폭 축소 (기존 50px -> 22px) */
+        width: 100% !important;       /* 고정 너비 해제 */
+        height: auto !important;
+        white-space: normal !important; /* [핵심] 줄바꿈 허용 */
+        text-align: center !important;  /* 중앙 정렬 */
+        margin: 0 auto 30px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* 3. 레이아웃: 세로 배치 및 중앙 정렬 */
+    .doorway-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 40px !important;
+    }
+
+    /* 4. 왼쪽/오른쪽 패널 강제 위치 초기화 */
+    .doorway-left, 
+    .doorway-right {
+        width: 100% !important;
+        left: 0 !important;     /* PC용 위치 이동 제거 */
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* 이미지/텍스트 중앙 정렬 */
+    }
+
+    /* 5. 이미지: 화면 꽉 차게 하되 비율 유지 */
+    .doorway-left img,
+    .doorway-right .box-img img {
+        width: 100% !important;
+        max-width: 350px !important; /* 너무 커지지 않게 제한 */
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto 20px !important;
+    }
+
+    /* 6. 가이드 텍스트: 중앙 정렬 */
+    .measuring-guide {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: left !important; /* 글자는 읽기 편하게 왼쪽 정렬 */
+        padding: 0 10px !important;
+    }
+}
+/* ========================================================
+   [긴급 수정] MEASURING GUIDE 글자 잘림 & 겹침 해결
+   ======================================================== */
+@media (max-width: 844px) {
+
+    /* 1. 텍스트 박스 높이 제한 해제 (가장 중요) */
+    .measuring-guide {
+        height: auto !important;       /* 220px 고정 해제 -> 글자만큼 늘어남 */
+        min-height: auto !important;
+        
+        /* 내용이 잘리지 않도록 설정 */
+        overflow: visible !important; 
+        
+        /* 아래 섹션(DIMENSIONS)과 겹치지 않게 여백 추가 */
+        margin-bottom: 50px !important; 
+        padding-bottom: 20px !important;
+    }
+
+    /* 2. 부모 박스들도 덩달아 늘어나도록 설정 */
+    .doorway-right, 
+    .doorway-layout,
+    .doorway-section {
+        height: auto !important;       /* 고정 높이 해제 */
+        overflow: visible !important;  /* 내용 넘쳐도 보이게 */
+    }
+
+    /* 3. Measuring Guide 내부 리스트 간격 정리 */
+    .guide-list > div {
+        margin-bottom: 10px !important;
+        line-height: 1.5 !important;
+    }
+}
+/* ========================================================
+   [수정] DIMENSIONS 제목 중앙 정렬 & 이미지 간격 축소
+   ======================================================== */
+@media (max-width: 844px) {
+
+    /* 1. 제목 중앙 정렬 (너비 제한 풀기) */
+    .dimensions-section .text-center > div:first-child {
+        text-align: center !important;
+        width: 100% !important;        /* 300px 고정 해제 -> 화면 전체 너비 사용 */
+        margin: 0 auto 5px !important; /* 중앙 정렬 + 아래 이미지와 간격 10px */
+        white-space: normal !important; /* 줄바꿈 허용 */
+    }
+
+    /* 2. 이미지 사이 간격 좁히기 */
+    .dimensions-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        
+        /* [핵심] 이미지 사이의 간격을 10px로 줄임 (원하는 만큼 숫자를 더 줄여도 됩니다) */
+        gap: 0px !important; 
+    }
+
+    /* 3. 이미지 자체의 불필요한 여백 제거 */
+    .dimensions-row img {
+        margin: 0 !important; /* 위아래 마진 제거 (gap으로만 간격 조절) */
+        width: 100% !important;
+        max-width: 350px !important;
+    }
+}
+/* ========================================================
+   [긴급 수정] 22번, 24번 이미지 크기 강제 조절 (강력한 선택자 사용)
+   ======================================================== */
+@media (max-width: 844px) {
+
+    /* 1. 이미지 이름을 콕 집어서(nth-child) PC 설정을 이기게 만듦 */
+    .dual-grid-section .grid-box:nth-child(1) .product-img, /* 22번 이미지 (SL-Track) */
+    .dual-grid-section .grid-box:nth-child(2) .product-img  /* 24번 이미지 (Space-Saving) */ 
+    {
+        /* [핵심] 여기서 원하는 크기로 조절하세요 */
+        width: 300px !important;       
+        
+        max-width: 100% !important;
+        height: auto !important;       /* 비율 유지 */
+        
+        /* 위치 중앙 정렬 및 PC 설정 초기화 */
+        margin: 20px auto !important;  
+        left: 0 !important;
+        top: 0 !important;
+        position: relative !important; /* 글자랑 겹치지 않게 */
+        display: block !important;
+    }
+
+    /* 2. 혹시 이미지가 잘리지 않도록 박스 높이 유연하게 */
+    .dual-grid-section .grid-box {
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+/* ========================================================
+   [긴급 수정] 25번 이미지 (Air Massage) 강제 확대
+   ======================================================== */
+@media (max-width: 844px) {
+
+    /* 1. 이미지를 감싸는 '박스'부터 강제로 100%로 늘림 */
+    .air-massage-section .feature-row .f-img {
+        width: 100% !important;       /* 50% 제한 해제 */
+        max-width: none !important;
+        flex: 0 0 100% !important;    /* Flex 비율 무시 */
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 2. 이미지 자체를 화면 너비보다 넓게 설정 (컨테이너 여백 무시) */
+    .air-massage-section .f-img img {
+        /* [핵심] 화면 양옆 여백(20px씩)을 덮어버릴 만큼 키움 */
+        width: calc(100% + 40px) !important; 
+        max-width: none !important;
+        
+        /* 왼쪽으로 20px 당겨서 화면 끝에 딱 맞춤 */
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        
+        height: auto !important;
+        display: block !important;
+        margin-bottom: -70px !important;
+    }
+}
+
+
+/* ========================================================
+   [통합 수정] 섹션 간격(40px) & 폰트 사이즈(32px/18px) 통일
+   ======================================================== */
+@media (max-width: 844px) {
+    
+    /* 1. 섹션 간격 통일 */
+    .intro-text-section, 
+    .light-features, .dark-features, 
+    .zero-gravity-section, .dual-grid-section, 
+    .air-massage-section, .heat-section, 
+    .programs-auto, .programs-manual, 
+    .foot-rollers-section, .detailed-features, 
+    .doorway-section, .dimensions-section, .spec-section {
+        margin-top: 0 !important;
+        margin-bottom: 40px !important; /* 요청하신 간격 */
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* 2. 제목 폰트 사이즈 통일 (32px) */
+    .f-title,                       /* Light/Dark Feature 제목 */
+    .section-title,                 /* Doorway 제목 */
+    .g-txt > div:first-child,       /* Dual Grid 제목 */
+    .text-center > div:first-child, /* 공통 중앙 제목 (Zero Gravity, Programs, Dimensions 등) */
+    .f-txt > div:nth-child(2),      /* 아이콘이 있는 상세 섹션 제목 (Detailed, Heat 등) */
+    .air-massage-section .f-txt > div:first-child, /* 아이콘 없는 섹션 제목 */
+    .foot-rollers-section .text-center > div:nth-child(2) /* Foot Roller (아이콘 다음) */
+    {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important; /* 제목은 굵게 */
+    }
+
+    /* 3. 본문 폰트 사이즈 통일 (18px) */
+    .intro-desc,                    /* 인트로 설명 */
+    .f-desc,                        /* Light/Dark Feature 설명 */
+    .center-p,                      /* 중앙 정렬 설명 */
+    .g-txt > div:last-child,        /* Dual Grid 설명 */
+    .f-txt > div:last-child,        /* 상세 섹션 설명 박스 */
+    .measuring-guide                /* Doorway 가이드 */
+    {
+        font-size: 18px !important;
+        line-height: 1.6 !important; /* 가독성을 위한 줄간격 */
+        font-weight: 300 !important; /* 본문은 얇게 (기존 스타일 유지) */
+    }
+}
+/* ========================================================
+   [최종 수정] 인트로 설명글 폰트 강제 축소 (14px)
+   이 코드를 파일 가장 맨 아래에 두세요!
+   ======================================================== */
+@media (max-width: 844px) {
+    
+    /* div를 붙여서 이름을 더 길고 강력하게 만듦 -> 무조건 적용됨 */
+    div.intro-text-section .intro-desc {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 30px !important; /* 아래 간격도 살짝 조절 */
     }
 }
