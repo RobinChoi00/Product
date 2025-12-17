@@ -83,9 +83,9 @@ a {
     text-align: center;
     line-height: 1.6;
     
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 10px auto 150px; /* 위 80px, 아래 60px 여백 */
-    letter-spacing: 0.3px;
+    letter-spacing: 0.3;
     width: 105%;
 }
 
