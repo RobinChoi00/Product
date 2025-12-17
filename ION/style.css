@@ -2293,6 +2293,18 @@ a {
     /* 화살표 버튼 위치 조정 */
     .prev-btn { left: 10px; }
     .next-btn { right: 10px; }
+    .swatch-control-panel {
+    position: relative;     /* 버튼 배치의 기준점 */
+    
+    /* 6번 이미지 크기 */
+    width: 176px;
+    height: 62px;
+    
+    margin: -20px auto 0;    /* 위 40px, 좌우 자동(중앙) */
+    display: flex;          /* 내부 내용물 중앙 정렬용 */
+    justify-content: center;
+    align-items: center;
+    }
 
     /* 4. 특징 섹션 (Feature Row) - 세로 배치로 변경 */
     /* Light/Dark/Detailed 모두 공통 적용 */
