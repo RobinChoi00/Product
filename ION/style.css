@@ -76,16 +76,19 @@ a {
 /* Intro Description 스타일 */
 .intro-desc {
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 21pt;
-    color: #8e8e8e;
+    font-weight: 300;       /* 얇은 굵기 */
     
-    text-align: center;
-    line-height: 1.6;
+    /* [핵심 수정] 21pt -> 18px로 변경 */
+    font-size: 18px;        
     
-    max-width: 1300px;
-    margin: 10px auto 150px; /* 위 80px, 아래 60px 여백 */
-    letter-spacing: 0.3;
+    color: #8e8e8e;         /* 회색 */
+    text-align: center;     /* 가운데 정렬 */
+    line-height: 1.6;       /* 줄간격 여유 있게 */
+    
+    /* [추천 수정] 글이 너무 옆으로 퍼지지 않게 폭 제한 */
+    max-width: 1200px;       
+    margin: 40px auto 100px; 
+    letter-spacing: 0.3px;
     width: 100%;
 }
 
@@ -2279,10 +2282,11 @@ a {
     /* [1] 인트로 섹션 (왼쪽 정렬, 폰트 축소, 간격 줄이기) */
     .intro-desc {
         text-align: left !important;   /* 왼쪽 정렬 */
-        font-size: 16px !important;    /* 텍스트 크기 축소 */
+        font-size: 14px !important;    /* 텍스트 크기 축소 */
         line-height: 1.6 !important;
         width: 100% !important;
         margin: 20px auto 10px !important; /* 의자와의 간격 줄임 (아래 여백 10px) */
+        font-weight: 300;
     }
 
     /* [2] 의자 슬라이더 & 스와치 (중앙 정렬) */
@@ -3100,7 +3104,6 @@ a {
 @media (max-width: 844px) {
     
     /* 1. 섹션 간격 통일 */
-    .intro-text-section, 
     .light-features, .dark-features, 
     .zero-gravity-section, .dual-grid-section, 
     .air-massage-section, .heat-section, 
@@ -3128,7 +3131,6 @@ a {
     }
 
     /* 3. 본문 폰트 사이즈 통일 (18px) */
-    .intro-desc,                    /* 인트로 설명 */
     .f-desc,                        /* Light/Dark Feature 설명 */
     .center-p,                      /* 중앙 정렬 설명 */
     .g-txt > div:last-child,        /* Dual Grid 설명 */
@@ -3140,25 +3142,11 @@ a {
         font-weight: 300 !important; /* 본문은 얇게 (기존 스타일 유지) */
     }
 }
-/* ========================================================
-   [최종 수정] 인트로 설명글 폰트 강제 축소 (14px)
-   이 코드를 파일 가장 맨 아래에 두세요!
-   ======================================================== */
-@media (max-width: 844px) {
-    
-    /* div를 붙여서 이름을 더 길고 강력하게 만듦 -> 무조건 적용됨 */
-    div.intro-text-section .intro-desc {
-        font-size: 18px !important;
-        line-height: 1.6 !important;
-        margin-bottom: 30px !important; /* 아래 간격도 살짝 조절 */
-    }
-}
 
 /* ========================================================
    [전체 적용] PC & 모바일 공통: 본문 폰트 얇게 (Weight 300)
    (미디어 쿼리 없이 작성하여 모든 화면에서 작동합니다)
    ======================================================== */
-.intro-desc,                    /* 인트로 설명 */
 .f-desc,                        /* 특징 설명 */
 .center-p,                      /* 중앙 정렬 설명 */
 .measuring-guide,               /* 가이드 텍스트 */
@@ -3172,4 +3160,126 @@ a {
 .programs-manual div            /* 매뉴얼 프로그램 텍스트 */
 {
     font-weight: 300 !important;  /* 얇게 설정 */
+}
+
+/* ========================================================
+   [전체 적용] Auto & Manual: 제목과 아이콘 목록 사이 간격 확대
+   (PC/모바일 공통)
+   ======================================================== */
+.programs-auto .text-center, 
+.programs-manual .text-center {
+    margin-bottom: 60px !important; /* 제목 아래 여백을 60px로 설정 */
+    padding-bottom: 0 !important;
+}
+/* ========================================================
+   [최종 수정] 제목(22 AUTO...)과 아이콘 목록 사이 간격 확대
+   ======================================================== */
+/* PC/모바일 공통 적용 */
+
+.programs-auto .text-center,   /* 22 Auto 섹션의 제목 박스 */
+.programs-manual .text-center { /* 6 Manual 섹션의 제목 박스 */
+    
+    /* [핵심] 이 숫자가 클수록 제목과 아이콘 사이가 멀어집니다 */
+    margin-bottom: 80px !important; 
+    
+    padding-bottom: 0 !important;
+}
+
+/* 혹시 제목 박스(div)가 아니라 span에 직접 여백이 필요한 경우를 대비한 보험 코드 */
+.programs-auto span.blue,
+.programs-manual span.blue {
+    display: inline-block !important;
+    padding-bottom: 80px !important; /* 텍스트 자체의 약간의 여유 */
+}
+
+/* ========================================================
+   [수정] Foot Rollers 섹션만 아래로 내리기 (여백 추가)
+   ======================================================== */
+/* PC/모바일 공통 적용 */
+.foot-rollers-section {
+    /* [핵심] 이 숫자가 클수록 더 밑으로 내려갑니다 */
+    margin-top: 150px !important; 
+    
+    padding-top: 0 !important;
+}
+
+/* ========================================================
+   [PC 전용] 폰트 사이즈 대통합 (제목 32px / 본문 18px)
+   (모바일 설정은 건드리지 않고, PC에서만 적용됩니다)
+   ======================================================== */
+@media (min-width: 845px) {
+    
+    /* 1. PC 버전 제목 통일 (32px) */
+    .f-title,                       /* 특징 제목 */
+    .section-title,                 /* 섹션 제목 */
+    .g-txt > div:first-child,       /* 듀얼 그리드 제목 */
+    .text-center > div:first-child, /* 중앙 정렬 제목 (Zero Gravity 등) */
+    .programs-auto .text-center,    /* 프로그램 섹션 제목 */
+    .programs-manual .text-center,
+    .foot-rollers-section .text-center > div:nth-child(2), /* 풋롤러 제목 */
+    .f-txt > div:first-child,       /* 상세 특징 제목 */
+    .spec-section .text-center      /* 스펙 제목 */
+    {
+        font-size: 40px !important;  /* 요청하신 32px (32pt는 웹에서 너무 커서 px로 맞춤) */
+        line-height: 1.3 !important;
+        font-weight: 600 !important; /* 제목은 굵게 */
+    }
+
+    /* 2. PC 버전 본문/설명글 통일 (18px) */
+    .f-desc,                        /* 특징 설명 */
+    .center-p,                      /* 중앙 정렬 설명 */
+    .measuring-guide,               /* 가이드 텍스트 */
+    .g-txt > div:last-child,        /* 듀얼 그리드 설명 */
+    .f-txt > div:last-child,        /* 상세 특징 설명 */
+    .spec-box > div,                /* 스펙 내용 */
+    .programs-auto div,             /* 프로그램 이름 */
+    .programs-manual div 
+    {
+        font-size: 24px !important;   /* 요청하신 18px */
+        line-height: 1.6 !important;  /* 줄간격 시원하게 */
+        font-weight: 300 !important;  /* 얇은 폰트 유지 */
+    }
+}
+
+/* ========================================================
+   [수정] Bluetooth 섹션 위치 이동 (Transform 대신 Margin 사용)
+   이유: Transform은 빈 공간을 남기지만, Margin은 공간 자체를 줄여줍니다.
+   ======================================================== */
+@media (max-width: 844px) {
+
+    /* 1. 아이콘과 텍스트를 위로 당기기 */
+    .detailed-features .feature-row:nth-child(4) .icon-blue,
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        /* transform: translateY(-40px) !important;  <-- 이거 지우고 */
+        margin-top: -40px !important;             /* <-- 이걸로 변경 */
+        
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    /* 2. 텍스트 추가 보정 (기존 코드 유지하되 transform 충돌 방지) */
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        /* 기존의 margin-top: -20px과 합쳐져서 더 많이 올라갈 수 있으니 */
+        /* 여기서 최종 위치를 조절하세요. (예: -60px) */
+        margin-top: -60px !important; 
+    }
+}
+
+/* ========================================================
+   [초강력 적용] 인트로 설명글 (PC버전)
+   html body를 붙여서 점수를 최대로 높였습니다.
+   ======================================================== */
+@media (min-width: 845px) {
+    html body .intro-desc {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 300 !important;   /* 얇게 */
+        font-size: 18px !important;    /* 작게 (원하는 크기 입력) */
+        
+        line-height: 1.8 !important;   /* 줄간격 */
+        color: #8e8e8e !important;     /* 회색 */
+        
+        max-width: 800px !important;   /* 폭 좁히기 */
+        margin: 40px auto 100px !important; /* 중앙 정렬 */
+        width: 100% !important;
+    }
 }
