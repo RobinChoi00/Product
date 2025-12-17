@@ -3037,7 +3037,7 @@ a {
         height: auto !important;
         
         /* [핵심] 불필요한 공백 제거 */
-        margin-top: -50px !important;      /* 위쪽 공백 제거 */
+        margin-top: 20px !important;      /* 위쪽 공백 제거 */
         margin-bottom: 10px !important; /* 제목과 사이 간격 좁힘 */
     }
     
@@ -3251,7 +3251,7 @@ a {
     .detailed-features .feature-row:nth-child(4) .icon-blue,
     .detailed-features .feature-row:nth-child(4) .f-txt {
         /* transform: translateY(-40px) !important;  <-- 이거 지우고 */
-        margin-top: -40px !important;             /* <-- 이걸로 변경 */
+        margin-top: -20px !important;             /* <-- 이걸로 변경 */
         
         position: relative !important;
         z-index: 10 !important;
@@ -3261,7 +3261,7 @@ a {
     .detailed-features .feature-row:nth-child(4) .f-txt {
         /* 기존의 margin-top: -20px과 합쳐져서 더 많이 올라갈 수 있으니 */
         /* 여기서 최종 위치를 조절하세요. (예: -60px) */
-        margin-top: -60px !important; 
+        margin-top: -30px !important; 
     }
 }
 
