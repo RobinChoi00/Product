@@ -3153,3 +3153,23 @@ a {
         margin-bottom: 30px !important; /* 아래 간격도 살짝 조절 */
     }
 }
+
+/* ========================================================
+   [전체 적용] PC & 모바일 공통: 본문 폰트 얇게 (Weight 300)
+   (미디어 쿼리 없이 작성하여 모든 화면에서 작동합니다)
+   ======================================================== */
+.intro-desc,                    /* 인트로 설명 */
+.f-desc,                        /* 특징 설명 */
+.center-p,                      /* 중앙 정렬 설명 */
+.measuring-guide,               /* 가이드 텍스트 */
+
+/* 복합 구조 내의 설명글 (제목 아래에 있는 텍스트들) */
+.g-txt > div:last-child,        /* Dual Grid 설명 */
+.f-txt > div:last-child,        /* 상세 특징 설명 */
+.text-center > div:last-child,  /* 각종 중앙 섹션 설명 */
+.spec-box > div,                /* 스펙 표 내용 */
+.programs-auto div,             /* 오토 프로그램 텍스트 */
+.programs-manual div            /* 매뉴얼 프로그램 텍스트 */
+{
+    font-weight: 300 !important;  /* 얇게 설정 */
+}
