@@ -2256,354 +2256,367 @@ a {
 
 
 
-/* =========================================
-   [MOBILE OPTIMIZED] 390px x 844px 맞춤형 (꽉 찬 화면)
-   ========================================= */
+/* =================================================================
+   [FINAL MOBILE FIX] 390px ~ 844px 완벽 대응 (모든 피드백 통합)
+   ================================================================= */
 @media (max-width: 844px) {
 
-    /* 1. 기본 초기화 및 컨테이너 리셋 */
-    body {
-        min-width: auto;
-        overflow-x: hidden;
+    /* [핵심] PC의 1200px 고정 강제 해제 (모바일 화면에 맞춤) */
+    body, html {
+        min-width: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
     }
 
     .container {
-        width: 100%;
-        /* [수정] 좌우 여백을 20px에서 15px로 줄여서 내용을 더 넓게 씀 */
-        padding: 0 15px; 
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 20px !important;
     }
 
-    /* 섹션 간 간격 줄이기 (60px -> 40px로 밀착) */
+    /* 전체 박스 모델링 초기화 */
+    * { box-sizing: border-box !important; }
+
+    /* 섹션 간 간격 전체 조정 (너무 벌어지지 않게) */
     .intro-text-section, .light-features, .dark-features, 
     .zero-gravity-section, .dual-grid-section, .air-massage-section, 
     .heat-section, .programs-auto, .programs-manual, 
     .foot-rollers-section, .detailed-features, .doorway-section, 
     .dimensions-section, .spec-section {
+        margin-bottom: 50px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        margin-top: 0 !important;
+    }
+
+    /* =================================================
+       [1] 의자 슬라이더 & 화살표 고정
+       ================================================= */
+    .chair-slider-wrapper {
+        margin-top: 0 !important;
         margin-bottom: 40px !important;
     }
 
-    /* 2. 인트로 텍스트 */
-    .intro-desc {
-        font-size: 15px; 
-        line-height: 1.6;
-        margin: 30px auto;
-        text-align: left !important; /* 왼쪽 정렬 */
-    }
-
-    /* 3. 의자 슬라이더 (Chair Slider) */
-    .chair-slider-wrapper {
-        margin-top: 0;
-        margin-bottom: 30px; /* 간격 줄임 */
-    }
+    /* 슬라이더 높이를 고정해서 이미지가 바뀔 때 화살표 점프 방지 */
     .slider-main {
-        width: 100%;
-        height: auto;
-    }
-    #current-chair {
-        /* [수정] 의자 이미지를 좀 더 키움 (80% -> 90%) */
-        width: 90%; 
-        height: auto;
-    }
-    .prev-btn { left: 5px; }  /* 버튼을 화면 끝으로 */
-    .next-btn { right: 5px; }
-
-    .swatch-control-panel {
-        position: relative;
-        width: 176px;
-        height: 62px;
-        margin: -10px auto 0; /* 의자와 간격 좁힘 */
+        width: 100% !important;
+        height: 350px !important; /* 높이 고정 */
         display: flex;
-        justify-content: center;
         align-items: center;
-        transform: scale(0.9); /* 컨트롤 패널 살짝 축소 */
+        justify-content: center;
     }
 
-    /* 4. 특징 섹션 (이미지 꽉 차게 + 세로 배치) */
-    .light-features .feature-row,
-    .dark-features .feature-row,
-    .detailed-features .feature-row,
-    .heat-section .feature-row,
-    .air-massage-section .feature-row {
-        flex-direction: column !important;
-        height: auto;
-        gap: 20px; /* 간격 좁힘 */
-    }
-
-    /* [중요] 이미지/텍스트 박스 여백 제거하여 꽉 차게 만듦 */
-    .f-img, .f-txt,
-    .light-features .f-img, .light-features .f-txt,
-    .dark-features .dark-mode .f-img, .dark-features .dark-mode .f-txt {
-        width: 100% !important;
-        flex: none;
-        padding: 0 !important; /* 내부 패딩 제거 (꽉 차게) */
-        margin: 0 !important;
-    }
-
-    /* 이미지 크기 제한 해제 */
-    .f-img img, 
-    .light-features .f-img img,
-    .dark-features .f-img img {
-        width: 100% !important;
-        height: auto !important;
-        max-width: none !important; /* 400px 제한 해제 */
-        margin: 0 auto 15px !important; /* 이미지 아래 간격 살짝 */
-    }
-
-    /* 텍스트 왼쪽 정렬 강제 */
-    .f-title, 
-    .light-features .f-title,
-    .dark-features .dark-mode .f-title,
-    .detailed-features .f-txt > div:nth-child(2) {
-        font-size: 26px !important; /* 제목 크기 최적화 */
-        margin-left: 0 !important;
-        text-align: left !important;
-        line-height: 1.3;
-    }
-    
-    .f-desc,
-    .light-features .f-desc,
-    .dark-features .dark-mode .f-desc,
-    .detailed-features .f-txt > div:last-child {
-        font-size: 15px !important;
-        margin-left: 0 !important;
-        text-align: left !important;
-        max-width: 100% !important;
-    }
-    
-    /* 아이콘 왼쪽 정렬 */
-    .icon-wrap, .icon-blue {
-        justify-content: flex-start !important;
-        display: flex;
-        width: 100%;
-        margin-left: 0 !important;
-        margin-bottom: 10px !important;
-    }
-
-    /* 5. Dual Grid Section (SL-Track & Space Saving) */
-    .dual-grid-section .grid-2 {
-        flex-direction: column;
-        /* [수정] 내부 여백 줄여서 꽉 차게 */
-        padding: 30px 15px; 
-        gap: 40px;
-        height: auto;
-    }
-
-    .dual-grid-section .grid-box {
-        width: 100%;
-        margin: 0 !important;
-    }
-
-    .dual-grid-section .g-txt {
-        width: 100%;
-        height: auto;
-        align-items: flex-start !important; /* 왼쪽 정렬 */
-        text-align: left !important;
-        margin: 0 0 15px 0 !important;
-    }
-    
-    .dual-grid-section .icon-wrap2 {
-        justify-content: flex-start !important; /* 왼쪽 정렬 */
-        margin-left: 0 !important;
-        margin-bottom: 10px !important;
-    }
-
-    .dual-grid-section .product-img {
-        width: 100% !important;
-        /* [수정] 이미지 꽉 차게 */
-        max-width: 100% !important; 
+    #current-chair {
+        width: auto !important;
+        max-width: 85% !important;
+        max-height: 300px !important;
         margin: 0 auto !important;
-        left: 0 !important;
     }
     
-    /* SL-Track 제목 왼쪽 정렬 */
-    .dual-grid-section .g-txt > div:first-child,
-    .dual-grid-section .blue {
-        font-size: 26px !important;
+    .nav-btn img {
+        height: 30px !important; /* 화살표 크기 축소 */
+    }
+
+    /* 스와치 컨트롤 (색상 버튼) - 의자와 겹침 해결 */
+    .swatch-control-panel {
+        transform: scale(0.8) !important;
+        margin-top: 10px !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 70px !important;
+        display: flex !important;
+        justify-content: center !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    /* =================================================
+       [2] 회색 박스 섹션 (Light Features) - 꽉 채우기
+       ================================================= */
+    .light-features { padding-top: 0 !important; }
+    
+    .light-features .feature-row {
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* 이미지: 여백 없이 꽉 채우기 */
+    .light-features .f-img {
+        width: 100% !important;
+        padding: 0 !important;
+        background-color: #e5e5e5;
+    }
+    
+    .light-features .f-img img {
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+        display: block;
+        margin: 0 !important;
+    }
+
+    /* 텍스트: 왼쪽 정렬 */
+    .light-features .f-txt {
+        width: 100% !important;
+        padding: 30px 20px !important;
+        align-items: flex-start !important;
         text-align: left !important;
     }
 
-    /* 6. 프로그램 그리드 (Grid) - [수정] 2열로 변경하여 꽉 차게 */
-    .programs-grid-22,
-    .manual-grid {
-        /* 390px에서는 3열이 좁으므로 2열로 변경 */
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 15px; /* 간격 조절 */
+    /* 아이콘 크기 줄이기 */
+    .light-features .icon-wrap img {
+        width: 50px !important;
+        height: auto !important;
+    }
+
+    /* 제목, 본문 왼쪽 정렬 */
+    .f-title, .f-desc, .light-features .f-txt > div {
+        text-align: left !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    .f-title { font-size: 26px !important; line-height: 1.3 !important; }
+
+    /* =================================================
+       [3] Rocking, Deep Calf, Bumpers (간격 및 정렬)
+       ================================================= */
+    .light-features .custom-rocking .f-title,
+    .light-features .custom-calf .f-title,
+    .light-features .custom-bumper .f-title {
+        margin-bottom: 10px !important;
+        margin-left: 0 !important;
     }
     
-    .programs-grid-22 .program-item:first-child,
-    .programs-grid-22 .program-item:nth-child(5) {
-        grid-column-start: auto;
-    }
-
-    /* Auto/Manual 제목은 가운데 정렬 유지 (요청사항) */
-    .programs-auto .text-center > div:first-child,
-    .programs-manual .text-center > div:first-child {
-        font-size: 28px !important;
-        width: 100% !important;
-        white-space: normal !important;
-        height: auto !important;
-        margin-top: 0 !important;
-        text-align: center !important;
-    }
-
-    /* 7. Detailed Features 리셋 */
-    .detailed-features .feature-row .f-txt {
-        width: 100% !important;
+    .custom-rocking .f-desc, .custom-calf .f-desc, .custom-bumper .f-desc {
         max-width: 100% !important;
-        margin: 0 !important;
-    }
-    .detailed-features .feature-row .f-img img {
-        margin: 0 auto 15px !important;
+        margin-left: 0 !important;
     }
 
-    /* 8. Doorway, Dimensions, Specs (왼쪽 정렬) */
-    .doorway-layout,
-    .dimensions-row,
-    .spec-row {
-        flex-direction: column;
-        align-items: flex-start !important; /* 왼쪽 정렬 */
-        left: 0 !important;
-        gap: 30px;
+    /* =================================================
+       [4] Dark Features (4D Mechanism, Body Scan)
+       ================================================= */
+    .dark-features .feature-row {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    .dark-features .f-img { width: 100% !important; padding: 0 !important; }
+    .dark-features .f-img img { width: 100% !important; margin: 0 !important; }
+    
+    .dark-features .f-txt {
+        padding: 30px 20px !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    .dark-features .dark-mode .f-title,
+    .dark-features .dark-mode .f-desc {
+        margin-left: 0 !important;
     }
 
-    /* 이미지 꽉 차게 */
-    .doorway-left img, .box-img img, 
-    .dimensions-row img:nth-child(1),
-    .dimensions-row img:nth-child(2) {
+    /* =================================================
+       [5] Zero Gravity (제목 -> 이미지 -> 본문 순서)
+       ================================================= */
+    .zero-gravity-section .container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .zero-gravity-section .text-center {
+        order: 1 !important;
+        text-align: left !important;
         width: 100% !important;
-        max-width: none !important; /* 제한 해제 */
+    }
+    .zero-gravity-section .text-center > div:first-child {
+        width: 100% !important;
         height: auto !important;
+        margin-bottom: 20px !important;
+        text-align: left !important;
+        font-size: 28px !important;
+    }
+    
+    .zero-gravity-section .wide-img {
+        order: 2 !important;
         margin: 0 0 20px 0 !important;
     }
-    
-    .doorway-right {
-        left: 0 !important;
+    .zero-gravity-section .wide-img img {
         width: 100% !important;
+        height: auto !important;
     }
     
-    .measuring-guide {
-        width: 100%;
-        height: auto;
+    .zero-gravity-section .center-p {
+        order: 3 !important;
         text-align: left !important;
-    }
-    
-    /* 스펙 테이블 */
-    .spec-label {
-        width: 100%;
-        margin-bottom: 5px;
-        background: #f9f9f9;
-        padding: 8px; /* 패딩 살짝 키움 */
-        text-align: left !important;
-        font-weight: 600;
-    }
-    
-    .spec-value.split-col {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .spec-table, .spec-row {
         width: 100% !important;
-        align-items: flex-start !important;
-    }
-
-    /* ============================================================
-       [공통 오버라이드] Auto/Manual 제외 모두 왼쪽 정렬 재확인
-       ============================================================ */
-
-    /* 텍스트 왼쪽 정렬 */
-    .intro-desc, .f-txt, .g-txt, .center-p, 
-    .doorway-right, .measuring-guide, .spec-table, .spec-value {
-        text-align: left !important;
-        align-items: flex-start !important;
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
-
-    /* 아이콘 왼쪽 정렬 */
-    .icon-wrap, .icon-wrap2, .icon-blue, .icon-center-wrap {
-        justify-content: flex-start !important;
-        display: flex !important;
-        margin-left: 0 !important;
-    }
-
-    /* 섹션 제목 왼쪽 정렬 (Auto/Manual 제외) */
-    .intro-text-section .text-center,
-    .zero-gravity-section .text-center,
-    .foot-rollers-section .text-center,
-    .dimensions-section .text-center {
-        text-align: left !important;
-    }
-
-    /* 제목 박스 왼쪽 정렬 */
-    .zero-gravity-section .text-center > div:first-child,
-    .foot-rollers-section .text-center > div:nth-child(2),
-    .dimensions-section .text-center > div:first-child,
-    .spec-section .container > div:first-child,
-    .doorway-section .section-title {
-        text-align: left !important;
-        margin-left: 0 !important;
-        width: 100% !important;
-        white-space: normal !important;
-        font-size: 28px !important; /* 제목 크기 통일 */
-    }
-}
-
-/* =========================================================
-   [긴급 수정] 433px 이하 깨짐 방지 & 강제 100% 맞춤
-   모든 고정 너비를 해제하고 화면 폭에 강제로 맞춥니다.
-   ========================================================= */
-@media (max-width: 480px) {
-
-    /* 1. 박스 사이즈 계산법 통일 (가장 중요) */
-    /* 패딩이나 테두리가 너비를 넓히지 않도록 함 */
-    * {
-        box-sizing: border-box !important;
-    }
-
-    /* 2. 화면 밖으로 나가는 녀석들 강제 숨김 */
-    html, body {
         max-width: 100% !important;
-        overflow-x: hidden !important; /* 가로 스크롤 완전 차단 */
-    }
-
-    /* 3. 컨테이너: 좌우 여백을 최소화해서 공간 확보 */
-    .container {
-        width: 100% !important;
-        min-width: 0 !important; /* 최소 너비 제한 해제 */
-        padding: 0 10px !important; /* 여백 10px */
         margin: 0 !important;
     }
 
-    /* 4. [범인 검거] 고정 너비를 가진 녀석들 강제 해제 */
-    /* 이미지, 비디오, 텍스트 박스, 슬라이더 등 */
-    div, img, section, ul, li, p, h1, h2, span,
-    .slider-main, .chair-slider-wrapper, .swatch-control-panel {
-        max-width: 100% !important; /* 부모보다 커질 수 없음 */
-        width: auto !important;     /* 고정 px 무시하고 자동 조절 */
+    /* =================================================
+       [6] Dual Grid (SL-Track, Space Saving)
+       ================================================= */
+    .dual-grid-section .grid-2 {
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+        gap: 50px !important;
+        background: linear-gradient(180deg, #151922 0%, #050505 100%) !important;
+        border-radius: 20px !important;
     }
     
-    /* 5. 이미지는 너비 100%로 꽉 채움 */
-    img {
+    .dual-grid-section .grid-box {
+        width: 100% !important;
+        margin: 0 !important;
+        background: none !important;
+    }
+    
+    /* 이미지 줄이기 */
+    .dual-grid-section .product-img {
+        width: 90% !important;
+        max-width: 280px !important;
+        margin: 20px auto 0 !important;
+        left: 0 !important;
+    }
+    
+    /* 텍스트 왼쪽 정렬 */
+    .dual-grid-section .g-txt {
+        width: 100% !important;
+        height: auto !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+        margin-left: 0 !important;
+    }
+    .dual-grid-section .icon-wrap2 {
+        justify-content: flex-start !important;
+        margin-left: 0 !important;
+    }
+
+    /* =================================================
+       [7] Air Massage & Heat & Foot Rollers
+       ================================================= */
+    .air-massage-section .f-txt, 
+    .heat-section .f-txt {
+        width: 100% !important;
+        padding: 20px 0 !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    
+    .air-massage-section .f-txt > div:last-child,
+    .heat-section .f-txt > div:last-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .air-massage-section .f-img img { margin-bottom: 15px !important; }
+    
+    .icon-center-wrap img, .icon-blue img, .heat-section .icon-wrap img {
+        width: 40px !important;
+        height: auto !important;
+    }
+    .foot-rollers-section .icon-center-wrap { justify-content: flex-start !important; }
+    .foot-rollers-section .text-center > div:nth-child(2),
+    .foot-rollers-section .center-p {
+        text-align: left !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .foot-rollers-section .wide-img img {
         width: 100% !important;
         height: auto !important;
     }
 
-    /* 6. 특정 요소 예외 처리 (너비 100%가 필요한 것들) */
-    .f-txt, .f-img, .header, .footer, 
-    .programs-grid-22, .manual-grid {
-        width: 100% !important;
-    }
-
-    /* 7. Flex나 Grid 안에서 안 줄어드는 녀석들 혼내기 */
-    .feature-row, .grid-2, .doorway-layout {
-        display: flex !important;
-        flex-direction: column !important; /* 무조건 세로 배치 */
-        width: 100% !important;
+    /* =================================================
+       [8] Detailed Features (Spring, Emergency, Touch, BT)
+       ================================================= */
+    .detailed-features .feature-row {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 50px !important;
     }
     
-    /* 플렉스 아이템들이 삐져나가지 않게 수축 허용 */
-    .flex-item, div {
-        flex-shrink: 1 !important; 
+    .detailed-features .f-txt {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    
+    .detailed-features .f-img img {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto 20px !important;
+    }
+
+    /* Touchscreen, Bluetooth 위치 */
+    .detailed-features .feature-row:nth-child(3) { margin-top: -20px !important; }
+    .detailed-features .feature-row:nth-child(4) { margin-top: -20px !important; }
+    
+    .detailed-features .icon-blue { margin-bottom: 10px !important; }
+
+    /* =================================================
+       [9] Doorway & Dimensions & Spec
+       ================================================= */
+    .doorway-section .section-title {
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 26px !important;
+        height: auto !important;
+        margin-bottom: 30px !important;
+    }
+    .doorway-layout { flex-direction: column !important; gap: 30px !important; }
+    .doorway-right { left: 0 !important; width: 100% !important; align-items: flex-start !important; }
+    .measuring-guide { width: 100% !important; text-align: left !important; }
+    .doorway-left img, .box-img img { width: 100% !important; height: auto !important; margin: 0 !important; }
+
+    .dimensions-section .text-center > div:first-child {
+        text-align: center !important;
+        margin: 0 auto 20px !important;
+        width: 100% !important;
+        height: auto !important;
+        line-height: 1.2 !important;
+    }
+    .dimensions-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        left: 0 !important;
+        gap: 30px !important;
+    }
+    .dimensions-row img {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 !important;
+    }
+
+    .spec-section .container > div:first-child {
+        text-align: left !important;
+        font-size: 28px !important;
+    }
+    .spec-row {
+        flex-direction: column !important;
+        gap: 5px !important;
+        text-align: left !important;
+    }
+    .spec-label { width: 100% !important; margin-bottom: 5px !important; }
+    
+    /* =================================================
+       [10] Programs Grid (2열)
+       ================================================= */
+    .programs-grid-22, .manual-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    .programs-auto .text-center > div:first-child,
+    .programs-manual .text-center > div:first-child {
+        width: 100% !important;
+        white-space: normal !important;
+        height: auto !important;
+        font-size: 28px !important;
+        margin-top: 0 !important;
+        text-align: center !important;
+        justify-content: center !important;
     }
 }
