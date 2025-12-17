@@ -3266,20 +3266,15 @@ a {
 }
 
 /* ========================================================
-   [초강력 적용] 인트로 설명글 (PC버전)
-   html body를 붙여서 점수를 최대로 높였습니다.
+   [최종 강제 적용] 모든 특징 설명글(f-desc) 얇게 만들기
    ======================================================== */
-@media (min-width: 845px) {
-    html body .intro-desc {
-        font-family: 'Poppins', sans-serif !important;
-        font-weight: 300 !important;   /* 얇게 */
-        font-size: 18px !important;    /* 작게 (원하는 크기 입력) */
-        
-        line-height: 1.8 !important;   /* 줄간격 */
-        color: #8e8e8e !important;     /* 회색 */
-        
-        max-width: 800px !important;   /* 폭 좁히기 */
-        margin: 40px auto 100px !important; /* 중앙 정렬 */
-        width: 100% !important;
-    }
+.f-desc {
+    font-family: 'Poppins', sans-serif !important; /* 폰트 재확인 */
+    font-weight: 300 !important;   /* 300 (Light) 강제 적용 */
+    color: #8e8e8e !important;     /* 회색 색상 고정 */
+    line-height: 1.6 !important;   /* 줄간격 */
+    opacity: 1 !important;         /* 흐릿함 방지 */
 }
+
+/* 혹시 strong 태그(굵은 강조)까지 얇게 하고 싶다면 아래 주석을 해제하세요 */
+/* .f-desc strong { font-weight: 400 !important; } */
