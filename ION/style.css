@@ -3387,3 +3387,98 @@ a {
 .detailed-features .feature-row:nth-child(4) .icon-blue img {
     margin-bottom: -10px !important; /* 마이너스를 주면 파고듭니다 */
 }
+
+/* ========================================================
+   [최종 해결] Bluetooth 섹션 완전 초기화 & 간격 정상화
+   목표: 겹침 현상 제거 및 다른 섹션과 동일한 레이아웃 적용
+   ======================================================== */
+
+/* 1. PC/모바일 공통: 강제 이동 설정 전부 제거 */
+.detailed-features .feature-row:nth-child(4) .f-txt,
+.detailed-features .feature-row:nth-child(4) .icon-blue,
+.detailed-features .feature-row:nth-child(4) .icon-blue img,
+.detailed-features .feature-row:nth-child(4) .f-img img {
+    transform: none !important;      /* 위치 이동 제거 */
+    position: static !important;     /* 좌표 고정 제거 */
+    margin-top: 0 !important;        /* 마이너스 여백 제거 */
+    margin-bottom: 0 !important;     /* 마이너스 여백 제거 */
+}
+
+/* 2. 아이콘(이모티콘) 간격 설정 (다른 섹션과 통일) */
+.detailed-features .feature-row:nth-child(4) .icon-blue {
+    display: block !important;
+    margin-bottom: 20px !important;  /* 제목과 20px 거리둠 */
+}
+
+.detailed-features .feature-row:nth-child(4) .icon-blue img {
+    width: 60px !important;          /* 크기 통일 */
+    height: auto !important;
+    margin: 0 !important;            /* 불필요한 여백 제거 */
+}
+
+/* 3. 텍스트 박스 정렬 (세로로 나란히) */
+.detailed-features .feature-row:nth-child(4) .f-txt {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important; /* 왼쪽 정렬 */
+}
+
+/* 4. 제목 스타일 교정 */
+.detailed-features .feature-row:nth-child(4) .f-txt > div:nth-child(2) {
+    margin-bottom: 15px !important;  /* 본문과 간격 */
+    line-height: 1.2 !important;
+}
+
+
+/* ========================================================
+   [모바일 전용 수정] 844px 이하에서 이미지 겹침 방지
+   ======================================================== */
+@media (max-width: 844px) {
+    
+    /* 1. 전체 구조: 세로 배치 (이미지 위, 텍스트 아래) */
+    .detailed-features .feature-row:nth-child(4) {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;        /* 이미지와 텍스트 사이 30px 띄움 */
+        margin-bottom: 50px !important;
+    }
+
+    /* 2. 텍스트 박스 너비 정상화 */
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        width: 100% !important;      /* 꽉 차게 */
+        margin: 0 !important;        /* 이상한 여백 제거 */
+        padding: 0 10px !important;
+    }
+
+    /* 3. 이미지 정상화 */
+    .detailed-features .feature-row:nth-child(4) .f-img img {
+        margin: 0 auto !important;   /* 중앙 정렬 */
+        max-width: 100% !important;  /* 화면 안 넘어가게 */
+    }
+}
+
+
+/* ========================================================
+   [PC 전용 수정] 845px 이상에서 배치 정상화
+   ======================================================== */
+@media (min-width: 845px) {
+    
+    /* 1. 가로 배치 (텍스트 왼쪽, 이미지 오른쪽) */
+    .detailed-features .feature-row:nth-child(4) {
+        flex-direction: row-reverse !important; /* 이미지 오른쪽 */
+        gap: 80px !important;        /* 둘 사이 간격 */
+    }
+
+    /* 2. 텍스트 박스 위치 잡기 */
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 500px !important;
+    }
+
+    /* 3. 이미지 위치 잡기 */
+    .detailed-features .feature-row:nth-child(4) .f-img img {
+        margin: 0 !important;
+    }
+}
