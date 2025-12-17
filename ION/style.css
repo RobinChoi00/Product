@@ -3279,3 +3279,33 @@ a {
 /* 혹시 strong 태그(굵은 강조)까지 얇게 하고 싶다면 아래 주석을 해제하세요 */
 /* .f-desc strong { font-weight: 400 !important; } */
 
+/* ========================================================
+   [최종 수정] SL-TRACK / SPACE-SAVING 섹션
+   1. 화면 밖 삐짐 방지 (반응형 너비)
+   2. 요청하신 은은한 그라데이션 적용
+   ======================================================== */
+@media (min-width: 845px) {
+    .dual-grid-section .grid-2 {
+        /* [1] 화면 삐짐 방지 코드 */
+        width: 100% !important;          /* 고정 px 대신 % 사용 */
+        max-width: 1200px !important;    /* 최대 1200px까지만 커짐 */
+        margin-left: auto !important;    /* 중앙 정렬 */
+        margin-right: auto !important;
+        box-sizing: border-box !important; /* 테두리 포함 크기 계산 */
+        
+        /* [2] 요청하신 그라데이션 적용 */
+        /* 위쪽은 은은한 파란빛(10%), 중간은 진한 회색(50%), 아래는 투명하게 */
+        background: linear-gradient(
+            180deg, 
+            rgba(174, 202, 255, 0.1) 0%, 
+            rgba(22, 22, 22, 0.5) 20%, 
+            rgba(22, 22, 22, 0) 100%
+        ) !important;
+        
+        /* 그라데이션 뒤에 깔릴 기본 배경색 (검은색) */
+        background-color: #000000 !important; 
+        
+        /* 모서리 둥글게 유지 */
+        border-radius: 40px !important;
+    }
+}
