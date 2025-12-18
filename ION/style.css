@@ -3482,3 +3482,25 @@ a {
         margin: 0 !important;
     }
 }
+
+/* ========================================================
+   [태블릿 전용 수정] 430px ~ 800px 구간 이미지 크기 조절
+   대상: 25번(Air Massage), 59번(Spring Footrest)
+   ======================================================== */
+@media (min-width: 430px) and (max-width: 800px) {
+
+    /* 1. 25번 이미지 (Air Massage) 줄이기 */
+    .air-massage-section .f-img img {
+        width: 70% !important;          /* 100%에서 70%로 축소 */
+        max-width: 400px !important;    /* 너무 커지지 않게 제한 */
+        margin: 0 auto 30px !important; /* 중앙 정렬 */
+    }
+
+    /* 2. 59번 이미지 (Spring Footrest) 줄이기 */
+    /* 상세 특징 섹션의 첫 번째 이미지 */
+    .detailed-features .feature-row:nth-child(1) .f-img img {
+        width: 60% !important;          /* 100%에서 60%로 축소 */
+        max-width: 350px !important;    /* 최대 크기 제한 */
+        margin: 0 auto 30px !important; /* 중앙 정렬 */
+    }
+}
