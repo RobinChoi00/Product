@@ -3825,3 +3825,48 @@ a {
         font-weight: 600 !important; /* 모바일에서도 굵게 유지 */
     }
 }
+
+/* ========================================================
+   1. [844px 이하] Auto & Manual 간격 수정 (기존 유지)
+   ======================================================== */
+@media (max-width: 844px) {
+    .programs-auto .text-center,
+    .programs-manual .text-center {
+        margin-bottom: 40px !important;
+        padding-bottom: 0 !important;
+    }
+    .programs-auto .text-center > div:first-child,
+    .programs-manual .text-center > div:first-child {
+        margin-bottom: 0 !important; 
+    }
+}
+
+/* ========================================================
+   2. [430px 이하] Bluetooth 섹션 초밀착 수정 (요청사항 반영)
+   * 아이폰 Pro Max 너비(430px) 이하에서만 적용됨
+   ======================================================== */
+@media (max-width: 430px) {
+
+    /* Bluetooth 섹션 (4번째 줄) */
+    .detailed-features .feature-row:nth-child(4) {
+        /* 틈을 10px로 아주 좁게 설정 */
+        gap: 10px !important; 
+    }
+
+    /* 텍스트 박스 위로 당기기 */
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        margin-top: 0 !important; 
+        padding-top: 0 !important;
+    }
+
+    /* 이모티콘 여백 제거 */
+    .detailed-features .feature-row:nth-child(4) .icon-blue {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important; 
+    }
+    
+    /* 이미지 아래 여백 제거 */
+    .detailed-features .feature-row:nth-child(4) .f-img img {
+        margin-bottom: 0 !important;
+    }
+}
