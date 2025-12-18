@@ -3595,7 +3595,7 @@ a {
 .p-name, 
 .m-name {
     /* [수정] 폰트 크기 줄이기 (13px -> 11px) */
-    font-size: 13px !important;    
+    font-size: 18px !important;    
     
     font-weight: 500 !important;
     
