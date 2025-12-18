@@ -3125,7 +3125,7 @@ a {
     .air-massage-section .f-txt > div:first-child, /* 아이콘 없는 섹션 제목 */
     .foot-rollers-section .text-center > div:nth-child(2) /* Foot Roller (아이콘 다음) */
     {
-        font-size: 32px !important;
+        font-size: 40px !important;
         line-height: 1.2 !important;
         font-weight: 600 !important; /* 제목은 굵게 */
     }
