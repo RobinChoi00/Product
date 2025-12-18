@@ -3546,7 +3546,27 @@ a {
         width: 100% !important;          
         max-width: 400px !important;    
         
-        margin: 0 auto 30px !important; 
+        margin: 0 auto 30px !important;
+         
     }
     /* ... 아래 59번 이미지 코드는 그대로 둠 ... */
+}
+/* ========================================================
+   [수정] 태블릿 구간 (430px~800px) 24-CELL 섹션 간격 좁히기
+   ======================================================== */
+@media (min-width: 430px) and (max-width: 800px) {
+
+    /* 1. 이미지 아래쪽 여백 제거 (기존 30px -> 0px) */
+    .air-massage-section .f-img img {
+        margin-bottom: 0px !important; 
+    }
+
+    /* 2. 텍스트 박스 위쪽 여백 제거 (기존 20~40px -> 10px) */
+    /* 너무 딱 붙으면 답답할 수 있어 10px 정도 여유를 둡니다 */
+    .air-massage-section .f-txt {
+        padding-top: 10px !important; 
+        
+        /* 혹시 텍스트가 잘린다면 아래 코드 주석 해제 */
+        /* margin-top: 0 !important; */
+    }
 }
