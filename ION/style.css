@@ -3523,3 +3523,17 @@ a {
     /* 혹시 글자가 너무 퍼지는 게 싫으면 900px 정도로 조절하세요 */
     width: 100% !important; 
 }
+
+/* ========================================================
+   [최종 완성] 모든 본문 자간(Letter Spacing) 0으로 통일
+   이유: 섹션마다 0.3px, 0.8px 등으로 달랐던 것을 싹 초기화
+   ======================================================== */
+.intro-desc,                    /* 인트로 설명 */
+.f-desc,                        /* 특징 설명 (Light/Dark) */
+.center-p,                      /* 중앙 정렬 설명 (Zero Gravity 등) */
+.g-txt > div:last-child,        /* Dual Grid 설명 */
+.f-txt > div:last-child,        /* 상세 특징 설명 (Air, Heat, Detailed) */
+.measuring-guide                /* 도어웨이 가이드 */
+{
+    letter-spacing: 0px !important; /* 강제로 0으로 통일 */
+}
