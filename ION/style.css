@@ -3537,3 +3537,16 @@ a {
 {
     letter-spacing: 0px !important; /* 강제로 0으로 통일 */
 }
+/* [태블릿 전용 수정] 430px ~ 800px 구간 이미지 크기 조절 */
+@media (min-width: 430px) and (max-width: 800px) {
+
+    /* 1. 25번 이미지 (Air Massage) 줄이기 */
+    .air-massage-section .f-img img {
+        /* ▼▼▼ 이 부분의 숫자를 키워야 합니다 ▼▼▼ */
+        width: 70% !important;          
+        max-width: 400px !important;    
+        
+        margin: 0 auto 30px !important; 
+    }
+    /* ... 아래 59번 이미지 코드는 그대로 둠 ... */
+}
