@@ -3570,3 +3570,55 @@ a {
         /* margin-top: 0 !important; */
     }
 }
+/* ========================================================
+   [긴급 수정] Auto & Manual 섹션 디자인 변경
+   1. 제목: Poppins SemiBold (600)
+   2. 아이콘: 100px x 100px로 확대
+   3. 설명글: 작게 축소
+   ======================================================== */
+
+/* 1. 제목 스타일 변경 (Poppins SemiBold 600) */
+.programs-auto .text-center > div:first-child,
+.programs-manual .text-center > div:first-child {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important; /* SemiBold */
+    /* 크기는 기존 설정(PC 40px, 모바일 32px) 유지 */
+}
+
+/* 2. 아이콘(이모티콘) 크기 확대 (100px) */
+/* PC/모바일 공통 적용 */
+.program-item img, 
+.manual-item img {
+    width: 100px !important;       /* 너비 100px */
+    height: 100px !important;      /* 높이 100px */
+    max-width: none !important;    /* 크기 제한 해제 */
+    object-fit: contain !important;
+    
+    /* 아이콘이 커졌으니 글자와 간격을 좀 더 줍니다 */
+    margin-bottom: 20px !important; 
+}
+
+/* 3. 설명글(프로그램 이름) 크기 축소 */
+.p-name, 
+.m-name {
+    /* 기존 14~16px -> 13px로 축소 (원하시면 12px로 수정 가능) */
+    font-size: 13px !important;    
+    font-weight: 500 !important;   /* 두께는 적당히 유지 */
+    line-height: 1.4 !important;
+    color: #6d6d6d !important;
+}
+
+/* [모바일 전용 미세 조정] */
+@media (max-width: 844px) {
+    /* 모바일에서는 글자를 더 작게 해야 균형이 맞을 수 있음 */
+    .p-name, 
+    .m-name {
+        font-size: 12px !important; 
+    }
+    
+    /* 아이콘이 너무 커서 2열 배열이 좁다면 간격 조절 */
+    .programs-grid-22, 
+    .manual-grid {
+        gap: 30px 10px !important; /* 위아래 간격 늘림 */
+    }
+}
