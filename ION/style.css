@@ -3572,7 +3572,7 @@ a {
     font-family: 'Poppins', sans-serif !important;
     
     /* [수정] HTML 수정을 했다면 이제 900이 적용됩니다 (가장 두꺼움) */
-    font-weight: 900 !important; 
+    font-weight: 800 !important; 
     
     font-size: 50px !important;
     line-height: 1.2 !important;
