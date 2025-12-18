@@ -3574,7 +3574,7 @@ a {
     /* [수정] HTML 수정을 했다면 이제 900이 적용됩니다 (가장 두꺼움) */
     font-weight: 900 !important; 
     
-    font-size: 50px !important;
+    font-size: 40px !important;
     line-height: 1.2 !important;
     margin-bottom: 80px !important; 
 }
@@ -3725,5 +3725,38 @@ a {
     }
     .heat-section .red {
         font-size: 36px !important;
+    }
+}
+
+/* ========================================================
+   [최종 PC 레이아웃 수정]
+   1. 4D Massage: 텍스트 왼쪽으로 당기기
+   2. Zero Gravity: 본문 폭 줄이기
+   3. Bluetooth: 텍스트 박스 축소
+   ======================================================== */
+@media (min-width: 845px) {
+
+    /* 1. 4D MASSAGE MECHANISM 텍스트 왼쪽으로 이동 */
+    .dark-features .feature-row:nth-child(1) .f-txt {
+        /* 왼쪽 패딩을 40px -> 0으로 줄여서 이미지 쪽으로 붙임 */
+        padding-left: 0 !important; 
+        
+        /* 필요하다면 마이너스 여백으로 더 당길 수도 있음 */
+        /* margin-left: -20px !important; */
+    }
+
+    /* 2. 2-STAGE ZERO GRAVITY 본문 박스 폭 줄이기 */
+    .zero-gravity-section .center-p {
+        /* 기존 900px -> 650px로 축소 (더 좁게 원하시면 600px) */
+        max-width: 650px !important; 
+    }
+
+    /* 3. Quality Bluetooth speakers 텍스트 박스 축소 */
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        /* 기존 500px -> 400px로 축소 */
+        width: 400px !important; 
+        
+        /* 박스가 작아졌으니 오른쪽 여백을 늘려 균형 맞춤 */
+        margin-right: 80px !important; 
     }
 }
