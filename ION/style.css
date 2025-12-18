@@ -3585,10 +3585,10 @@ a {
     font-family: 'Poppins', sans-serif !important;
     
     /* [수정] 600 -> 700 (Bold)으로 변경하여 더 두껍게 */
-    font-weight: 700 !important; 
+    font-weight: 800 !important; 
     
     /* [수정] 크기를 50px로 대폭 키움 (기존 40px) */
-    font-size: 50px !important;
+    font-size: 40px !important;
     
     line-height: 1.2 !important;
     
@@ -3613,9 +3613,9 @@ a {
 .p-name, 
 .m-name {
     /* 기존 14~16px -> 13px로 축소 */
-    font-size: 13px !important;    
+    font-size: 10px !important;    
     font-weight: 500 !important;   /* 두께는 적당히 유지 */
-    line-height: 1.4 !important;
+    line-height: 1.0 !important;
     color: #6d6d6d !important;
 }
 
