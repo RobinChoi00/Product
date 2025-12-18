@@ -3570,19 +3570,30 @@ a {
         /* margin-top: 0 !important; */
     }
 }
+
+
 /* ========================================================
-   [긴급 수정] Auto & Manual 섹션 디자인 변경
-   1. 제목: Poppins SemiBold (600)
+   [최종 수정] Auto & Manual 섹션 디자인 (Bold & Big Title)
+   1. 제목: Poppins Bold (700) + 크기 50px로 확대
    2. 아이콘: 100px x 100px로 확대
-   3. 설명글: 작게 축소
+   3. 설명글: 13px로 축소
    ======================================================== */
 
-/* 1. 제목 스타일 변경 (Poppins SemiBold 600) */
+/* 1. 제목 스타일 변경 (Bold 700 & 50px) */
 .programs-auto .text-center > div:first-child,
 .programs-manual .text-center > div:first-child {
     font-family: 'Poppins', sans-serif !important;
-    font-weight: 600 !important; /* SemiBold */
-    /* 크기는 기존 설정(PC 40px, 모바일 32px) 유지 */
+    
+    /* [수정] 600 -> 700 (Bold)으로 변경하여 더 두껍게 */
+    font-weight: 700 !important; 
+    
+    /* [수정] 크기를 50px로 대폭 키움 (기존 40px) */
+    font-size: 50px !important;
+    
+    line-height: 1.2 !important;
+    
+    /* 글자가 커졌으니 아이콘과의 간격도 조금 더 확보 */
+    margin-bottom: 80px !important; 
 }
 
 /* 2. 아이콘(이모티콘) 크기 확대 (100px) */
@@ -3601,7 +3612,7 @@ a {
 /* 3. 설명글(프로그램 이름) 크기 축소 */
 .p-name, 
 .m-name {
-    /* 기존 14~16px -> 13px로 축소 (원하시면 12px로 수정 가능) */
+    /* 기존 14~16px -> 13px로 축소 */
     font-size: 13px !important;    
     font-weight: 500 !important;   /* 두께는 적당히 유지 */
     line-height: 1.4 !important;
@@ -3610,7 +3621,13 @@ a {
 
 /* [모바일 전용 미세 조정] */
 @media (max-width: 844px) {
-    /* 모바일에서는 글자를 더 작게 해야 균형이 맞을 수 있음 */
+    /* 모바일에서는 제목이 너무 크면 줄바꿈 되므로 살짝 조절 (36px) */
+    .programs-auto .text-center > div:first-child,
+    .programs-manual .text-center > div:first-child {
+        font-size: 36px !important;
+    }
+
+    /* 설명글 더 작게 */
     .p-name, 
     .m-name {
         font-size: 12px !important; 
@@ -3619,6 +3636,6 @@ a {
     /* 아이콘이 너무 커서 2열 배열이 좁다면 간격 조절 */
     .programs-grid-22, 
     .manual-grid {
-        gap: 30px 10px !important; /* 위아래 간격 늘림 */
+        gap: 30px 10px !important; 
     }
 }
