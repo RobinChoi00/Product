@@ -1348,7 +1348,7 @@ a {
     font-family: 'Poppins', sans-serif;
     
     /* [수정] 굵기를 SemiBold(600)에서 Medium(500)으로 줄임 */
-    font-weight: 500;      
+    font-weight: 700;      
     font-size: 40px;       /* 45pt */
     line-height: 1.0;
     
@@ -1368,7 +1368,7 @@ a {
 .programs-auto .blue {
     color: #4658d3;
     /* 파란색은 포인트니까 조금 더 굵게 유지하거나 원하면 500으로 낮추세요 */
-    font-weight: 500; 
+    font-weight: 700; 
 }
 
 /* 3. 그리드 레이아웃 (가져오신 예전 코드 로직 적용) */
