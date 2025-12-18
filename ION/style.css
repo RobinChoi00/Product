@@ -3137,7 +3137,7 @@ a {
     .f-txt > div:last-child,        /* 상세 섹션 설명 박스 */
     .measuring-guide                /* Doorway 가이드 */
     {
-        font-size: 18px !important;
+        font-size: 16px !important;
         line-height: 1.6 !important; /* 가독성을 위한 줄간격 */
         font-weight: 300 !important; /* 본문은 얇게 (기존 스타일 유지) */
     }
@@ -3225,20 +3225,7 @@ a {
         font-weight: 600 !important; /* 제목은 굵게 */
     }
 
-    /* 2. PC 버전 본문/설명글 통일 (18px) */
-    .f-desc,                        /* 특징 설명 */
-    .center-p,                      /* 중앙 정렬 설명 */
-    .measuring-guide,               /* 가이드 텍스트 */
-    .g-txt > div:last-child,        /* 듀얼 그리드 설명 */
-    .f-txt > div:last-child,        /* 상세 특징 설명 */
-    .spec-box > div,                /* 스펙 내용 */
-    .programs-auto div,             /* 프로그램 이름 */
-    .programs-manual div 
-    {
-        font-size: 24px !important;   /* 요청하신 18px */
-        line-height: 1.6 !important;  /* 줄간격 시원하게 */
-        font-weight: 300 !important;  /* 얇은 폰트 유지 */
-    }
+    
 }
 
 /* ========================================================
