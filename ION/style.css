@@ -3622,3 +3622,70 @@ a {
         font-size: 11px !important; 
     }
 }
+
+/* ========================================================
+   [최종 밸런스 수정] 상단 섹션 제목 크기 확대 & 굵기 강화
+   목표: 하단 'Auto Programs(50px)'와 균형 맞추기
+   ======================================================== */
+
+/* 1. SL-TRACK & SPACE SAVING (Dual Grid) */
+.dual-grid-section .grid-box:nth-child(1) .g-txt > div:first-child, /* SL-Track 제목 */
+.dual-grid-section .grid-box:nth-child(2) .g-txt > div:first-child  /* Space-Saving 제목 */
+{
+    /* [수정] 32px -> 40px로 확대 */
+    font-size: 40px !important;
+    
+    /* [수정] 500(Medium) -> 700(Bold)로 변경 */
+    font-weight: 700 !important; 
+    
+    /* 줄간격 미세 조정 */
+    line-height: 1.1 !important; 
+}
+
+/* 제목 안의 파란색 글씨도 동일하게 적용 */
+.dual-grid-section .grid-box:nth-child(1) .blue,
+.dual-grid-section .grid-box:nth-child(2) .blue {
+    font-size: 40px !important;
+    font-weight: 700 !important;
+}
+
+
+/* 2. 24-CELL AIR MASSAGE (Air Massage Section) */
+.air-massage-section .f-txt > div:first-child {
+    /* [수정] 40px -> 50px로 확대 (Auto Programs와 동일) */
+    font-size: 50px !important;
+    
+    /* [수정] 600(SemiBold) -> 700(Bold)로 변경 */
+    font-weight: 700 !important;
+    
+    /* 박스 높이 제한 해제 (글자가 커졌으므로) */
+    height: auto !important; 
+    width: auto !important; /* 너비도 글자에 맞게 */
+    
+    /* 줄간격 좁히기 */
+    line-height: 1.1 !important;
+    margin-bottom: 25px !important; /* 본문과 간격 조금 더 벌림 */
+}
+
+/* 24-CELL 파란 글씨도 동일하게 */
+.air-massage-section .blue {
+    font-size: 50px !important;
+    font-weight: 700 !important;
+}
+
+
+/* 3. (추천) 짝꿍인 LUMBER HEAT THERAPY도 같이 키우기 */
+/* 24-CELL과 같은 스타일을 공유하므로 같이 50px로 맞추는 게 예쁩니다 */
+.heat-section .f-txt > div:nth-child(2) {
+    font-size: 50px !important;
+    font-weight: 700 !important;
+    height: auto !important;
+    width: auto !important;
+    line-height: 1.1 !important;
+    margin-bottom: 25px !important;
+}
+
+.heat-section .red {
+    font-size: 50px !important;
+    font-weight: 700 !important;
+}
