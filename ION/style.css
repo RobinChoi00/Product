@@ -3504,3 +3504,22 @@ a {
         margin: 0 auto 30px !important; /* 중앙 정렬 */
     }
 }
+
+/* ========================================================
+   [최종 완성] 자간 통일 & 텍스트 박스 확장
+   ======================================================== */
+
+/* 1. 4D Massage & Body Scan 자간(글자 간격) 정상화 */
+.dark-features .dark-mode .f-desc {
+    /* 기존에 -0.5px로 좁혀져 있던 자간을 0px(기본)로 복구 */
+    letter-spacing: 0px !important; 
+}
+
+/* 2. Zero Gravity 본문 텍스트 박스 넓히기 */
+.zero-gravity-section .center-p {
+    /* 기존 750px -> 1000px로 확장 */
+    max-width: 1000px !important;
+    
+    /* 혹시 글자가 너무 퍼지는 게 싫으면 900px 정도로 조절하세요 */
+    width: 100% !important; 
+}
