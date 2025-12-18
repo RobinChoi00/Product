@@ -2686,7 +2686,7 @@ a {
     /* 텍스트 설정 (순서 2번, 이모티콘 포함) */
     .detailed-features .f-txt {
         order: 2 !important;
-        width: 100% !important;
+        width: 90% !important;
         padding: 0 10px !important;
         text-align: left !important;
         margin: 0 !important;
@@ -2751,7 +2751,7 @@ a {
     /* [1] QUALITY BLUETOOTH 화면 밖 나가는 문제 해결 */
     /* 4번째 행(Bluetooth)의 텍스트 박스 강제 초기화 */
     .detailed-features .feature-row:nth-child(4) .f-txt {
-        width: 100% !important;
+        width: 90% !important;
         min-width: 0 !important;    /* 고정 너비 해제 */
         margin: 0 !important;       /* PC의 margin-left: 100px 제거 */
         padding: 0 10px !important;
