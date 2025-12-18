@@ -3543,7 +3543,7 @@ a {
     /* 1. 25번 이미지 (Air Massage) 줄이기 */
     .air-massage-section .f-img img {
         /* ▼▼▼ 이 부분의 숫자를 키워야 합니다 ▼▼▼ */
-        width: 70% !important;          
+        width: 100% !important;          
         max-width: 400px !important;    
         
         margin: 0 auto 30px !important; 
