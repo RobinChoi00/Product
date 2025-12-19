@@ -3870,3 +3870,23 @@ a {
         margin-bottom: 0 !important;
     }
 }
+/* ========================================================
+   [추가 수정] Heat Therapy 하단 설명 문구 스타일
+   - 작게, 기울임꼴, 위쪽 여백 추가
+   ======================================================== */
+.heat-disclaimer {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13px !important;       /* 본문보다 작게 */
+    font-style: italic !important;    /* ★기울임 적용 */
+    color: #8e8e8e !important;        /* 연한 회색 */
+    margin-top: 15px !important;      /* 위쪽 본문과 간격 띄우기 */
+    line-height: 1.4 !important;      /* 줄간격 좁게 */
+    letter-spacing: 0px !important;
+}
+
+/* (모바일에서도 잘 보이게 유지) */
+@media (max-width: 844px) {
+    .heat-disclaimer {
+        font-size: 12px !important;   /* 모바일에서는 더 작게 */
+    }
+}
