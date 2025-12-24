@@ -902,7 +902,7 @@ a {
 
 /* 1. 전체 섹션 배경 (검은색) */
 .dual-grid-section {
-    background-color: #000000;
+    background-color: #090b10;
     padding: 60px 0;
     margin-bottom: 0 !important;
 }
@@ -3290,7 +3290,7 @@ a {
         ) !important;
         
         /* 그라데이션 뒤에 깔릴 기본 배경색 (검은색) */
-        background-color: #000000 !important; 
+        background-color: #090b10 !important; 
         
         /* 모서리 둥글게 유지 */
         border-radius: 40px !important;
