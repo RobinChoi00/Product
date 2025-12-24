@@ -3950,7 +3950,7 @@ a {
 
     /* 2. 실제 이미지(img) 태그 자체도 여백 제거 */
     .detailed-features .feature-row:nth-child(4) .f-img img {
-        margin-right: 40px !important;
+        margin-right: 60px !important;
     }
     
     /* (참고) 아까 맞춘 텍스트 위치는 유지 */
@@ -3958,5 +3958,81 @@ a {
         width: 400px !important;
         margin-right: 40px !important; 
         margin-left: 100px !important;
+    }
+}
+
+/* ========================================================
+   [전체 적용] Emergency Stop 아이콘 크기 조절
+   - PC, 모바일 상관없이 무조건 60x60px로 고정
+   ======================================================== */
+.detailed-features .feature-row:nth-child(3) .icon-wrap img {
+    width: 60px !important;    /* 너비 60px 고정 */
+    height: 60px !important;   /* 높이 60px 고정 */
+    object-fit: contain !important; /* 비율 유지 */
+}
+
+/* ========================================================
+   [전체 적용] 24-Cell Air Compression 이미지 크기 조절
+   - 패딩을 주어 이미지가 너무 꽉 차 보이지 않게 축소
+   ======================================================== */
+/* 주의: nth-child(5)의 숫자는 실제 섹션 순서에 맞게 변경해주세요! */
+.detailed-features .feature-row:nth-child(5) .f-img img {
+    padding: 10px !important;       /* 상하좌우 30px씩 안쪽 여백 추가 */
+    box-sizing: border-box !important; /* 패딩을 줘도 전체 틀이 커지지 않게 방지 */
+    
+    /* (선택사항) 만약 패딩으로도 부족하면 너비를 직접 줄이셔도 됩니다 */
+    /* width: 80% !important; */
+    /* margin: 0 auto !important; */
+}
+
+/* ========================================================
+   [모바일 전용] 화면 삐져나감(Overflow) 전체 해결 패치
+   - 모든 텍스트 박스와 제목이 화면 안쪽으로 들어오게 강제 조정
+   - 6 Manual Modes 아이콘 줄바꿈 처리
+   ======================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. 모든 설명 텍스트 박스(.f-txt) 강제 리셋 */
+    .detailed-features .feature-row .f-txt {
+        width: 100% !important;       /* 고정 너비 해제하고 화면에 맞춤 */
+        max-width: 100% !important;   /* 화면 밖으로 절대 못 나가게 막음 */
+        margin: 0 !important;         /* PC용 여백 제거 */
+        padding: 0 20px !important;   /* 양옆에 20px 숨쉴 공간 줌 */
+        box-sizing: border-box !important; /* 패딩 포함해서 너비 계산 */
+        text-align: center !important; /* 모바일은 중앙 정렬이 국룰 */
+    }
+
+    /* 2. 제목 글자 크기 줄이고 줄바꿈 허용 */
+    /* (제목이 보통 .f-txt 안의 두 번째 div나 span.red 바로 뒤에 옴) */
+    .detailed-features .feature-row .f-txt > div {
+        white-space: normal !important; /* 줄바꿈 허용 */
+        word-wrap: break-word !important; /* 긴 단어 강제 줄바꿈 */
+        word-break: keep-all !important; /* 단어 단위로 끊기 (가독성) */
+    }
+    
+    /* 제목 폰트 사이즈가 너무 크면 줄임 */
+    .detailed-features .feature-row .f-txt div:nth-child(2) {
+        font-size: 24px !important; /* 모바일에서 제목 크기 적당히 조절 */
+        line-height: 1.3 !important;
+    }
+
+    /* 3. [6 Manual Modes] 아이콘들이 옆으로 삐져나가는 문제 해결 */
+    /* 아이콘을 감싸는 박스를 찾아서 줄바꿈(wrap) 허용 */
+    .detailed-features .feature-row .icon-container, 
+    .detailed-features .feature-row .manual-modes-icons { 
+        /* 클래스명을 정확히 몰라서 예상되는 이름 다 넣었습니다 */
+        display: flex !important;
+        flex-wrap: wrap !important;   /* 공간 없으면 다음 줄로 넘겨라 */
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    /* 4. [이미지] 이미지도 화면 밖으로 못 나가게 막음 */
+    .detailed-features .feature-row .f-img,
+    .detailed-features .feature-row .f-img img {
+        max-width: 100% !important;
+        width: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
