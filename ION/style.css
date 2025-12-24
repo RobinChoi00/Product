@@ -3957,9 +3957,9 @@ a {
     /* 2. [추가 수정] 사진 위치 조정 */
     .detailed-features .feature-row:nth-child(4) .f-img img {
         /* 기존에 80px 정도 있던 오른쪽 여백을 0px로 줄여서 오른쪽 끝으로 보냄 */
-        margin-right: -20px !important; 
+        margin-right: 0px !important; 
         
         /* 만약 그래도 부족하면 아예 강제로 더 오른쪽으로 밀기 위해 아래 코드 주석 해제 사용 */
-        /* transform: translateX(20px); */ 
+        transform: translateX(20px);
     }
 }
