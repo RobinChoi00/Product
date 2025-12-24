@@ -222,7 +222,7 @@ a {
 .foot-rollers-section .text-center > div:nth-child(2) { /* Foot은 아이콘 다음이 제목 */
     font-size: 36px;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     line-height: 1.2;
     color: #04090e;
 }
@@ -3107,8 +3107,8 @@ a {
     .doorway-section, .dimensions-section, .spec-section {
         margin-top: 0 !important;
         margin-bottom: 40px !important; /* 요청하신 간격 */
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
     }
 
     /* 2. 제목 폰트 사이즈 통일 (32px) */
@@ -4038,14 +4038,30 @@ a {
 }
 
 /* ========================================================
-   [전체 적용] Emergency Stop 아이콘 크기 조절
-   - PC, 모바일 상관없이 무조건 60x60px로 고정
+   [전체 적용] 모든 아이콘 반응형 설정
+   - 화면이 크면 최대 60px까지만 커짐
+   - 화면이 작으면 비율(%)에 맞춰서 알아서 줄어듦
+   - 이미지가 찌그러지지 않도록 높이는 자동 설정
    ======================================================== */
-.detailed-features .feature-row:nth-child(3) .icon-wrap img {
-    width: 60px !important;    /* 너비 60px 고정 */
-    height: 60px !important;   /* 높이 60px 고정 */
-    object-fit: contain !important; /* 비율 유지 */
+.detailed-features .feature-row .icon-wrap img {
+    /* 1. 너비 설정: 화면(부모박스)의 15% 정도만 차지해라 (가변적) */
+    width: 15% !important; 
+    
+    /* 2. 제한 설정: 아무리 화면이 커져도 60px보다는 커지지 마라 */
+    max-width: 60px !important;
+    
+    /* 3. 높이 설정: 너비가 변하면 높이도 비율에 맞춰서 알아서 변해라 (찌그러짐 방지) */
+    height: auto !important;
+    
+    /* (선택사항) 이미지가 너무 작아지는 게 싫다면 최소 크기 설정 */
+    min-width: 40px !important; 
+    
+    /* 4. 배치: 주변 요소와 어울리게 */
+    display: block !important;
+    object-fit: contain !important;
 }
+
+
 /* ========================================================
    [Specification 섹션] 폰트 및 사이즈 변경 요청 반영
    - 제목: 48px, Arial 계열
