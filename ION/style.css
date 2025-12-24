@@ -2058,7 +2058,6 @@ a {
 
 /* 2. 메인 제목 (Specification) */
 .spec-section .container > div:first-child {
-    font-family: 'Poppins', sans-serif; /* Poppins 폰트 */
     font-weight: 600;       /* Bold */
     font-size: 50px;        /* 큰 제목 크기 */
     text-align: center;     /* 중앙 정렬 */
@@ -2090,7 +2089,6 @@ a {
 .spec-label {
     width: 30%;             /* 왼쪽 칸 너비 (약 30%) */
     min-width: 250px;       /* 최소 너비 확보 */
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;       /* SemiBold ~ Bold */
     font-size: 18px;
     color: #000000;         /* 검은색 */
@@ -2100,7 +2098,6 @@ a {
 /* 6. 오른쪽 값 (Titan ION, 110-120V 등) */
 .spec-value {
     flex: 1;                /* 남은 공간 다 차지 */
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;       /* Regular */
     font-size: 16px;
     color: #444444;         /* 약간 부드러운 검은색 */
@@ -3914,35 +3911,7 @@ a {
         margin-right: 80px !important;
     }
 }
-/* ========================================================
-   [추가 수정] Specification 섹션 폰트 통일
-   - 스펙 표 안의 모든 글자를 'Poppins'로 강제 적용
-   ======================================================== */
-.spec-section, 
-.spec-table,
-.spec-row,
-.spec-label, 
-.spec-value {
-    font-family: 'Poppins', sans-serif !important;
-}
 
-/* (혹시 모를 테이블 태그 직접 적용) */
-.spec-section table,
-.spec-section th,
-.spec-section td {
-    font-family: 'Poppins', sans-serif !important;
-}
-
-/* 글자 굵기 및 색상 미세 조정 (가독성 향상) */
-.spec-label {
-    font-weight: 600 !important; /* 항목 이름은 두껍게 */
-    color: #000 !important;
-}
-
-.spec-value {
-    font-weight: 400 !important; /* 값은 보통 굵기 */
-    color: #333 !important;
-}
 
 @media (min-width: 845px) {
     /* 4번째 줄: Quality Bluetooth Speakers */
