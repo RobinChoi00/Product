@@ -3929,6 +3929,6 @@ a {
         margin-right: 0px !important; 
         
         /* 만약 그래도 부족하면 아예 강제로 더 오른쪽으로 밀기 위해 아래 코드 주석 해제 사용 */
-        transform: translateX(20px);
+        transform: translateX(40px);
     }
 }
