@@ -4127,7 +4127,7 @@ a {
    ======================================================== */
 /* 주의: 만약 적용이 안 되면 nth-child(6) 숫자를 7로 바꿔보세요! */
 .detailed-features .feature-row:nth-child(6) {
-    margin-bottom: 80px !important;  /* 아래쪽 여백 80px 추가 (원하는 만큼 늘리세요) */
+    margin-bottom: 120px !important;  /* 아래쪽 여백 80px 추가 (원하는 만큼 늘리세요) */
     padding-bottom: 20px !important; /* 혹시 몰라 안쪽 여백도 살짝 추가 */
 }
 
@@ -4169,4 +4169,21 @@ a {
     .detailed-features .feature-row:nth-child(3) .f-txt div {
         margin-top: 5px !important;    /* 아주 살짝만 띄움 */
     }
+}
+
+/* ========================================================
+   [수정] 24-Cell Air Compression 이미지 여백
+   - 왼쪽/오른쪽에만 20px 안쪽 여백 추가
+   ======================================================== */
+.detailed-features .feature-row:nth-child(5) .f-img img {
+    /* 좌, 우 패딩 20px 적용 */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    
+    /* (참고) 위, 아래 패딩은 0으로 초기화 (필요하면 숫자 변경 가능) */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    /* 패딩 때문에 전체 크기가 틀어지지 않게 방지 */
+    box-sizing: border-box !important;
 }
