@@ -1869,7 +1869,7 @@ a {
 /* 5. 이미지 설정 (오른쪽 벽에서 떼기) */
 .detailed-features .feature-row:nth-child(4) .f-img img {
     /* [위치] 오른쪽 벽에서 80px 떨어짐 */
-    margin-right: 60px; 
+    margin-right: 40px; 
     
     /* 이미지 크기 조절 필요하면 아래 주석 해제 후 사용 */
     /* width: 450px; */
@@ -2756,7 +2756,6 @@ a {
     
     /* 이미지 위치 정상화 */
     .detailed-features .feature-row:nth-child(4) .f-img img {
-        margin: 0 auto 20px !important; /* 오른쪽 여백(margin-right) 제거 */
         max-width: 100% !important;
     }
 
@@ -3423,7 +3422,7 @@ a {
     .detailed-features .feature-row:nth-child(4) {
         display: flex !important;
         flex-direction: column !important;
-        gap: 30px !important;        /* 이미지와 텍스트 사이 30px 띄움 */
+        gap: 50px !important;        /* 이미지와 텍스트 사이 30px 띄움 */
         margin-bottom: 50px !important;
     }
 
