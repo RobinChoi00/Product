@@ -1652,8 +1652,8 @@ a {
 }
 
 .detailed-features .icon-blue img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -1848,8 +1848,8 @@ a {
 
 /* 2. 아이콘 설정 */
 .detailed-features .feature-row:nth-child(4) .icon-blue img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 0px; 
 }
 
@@ -2689,7 +2689,7 @@ a {
     }
     /* 이모티콘 크기 줄이기 */
     .detailed-features .icon-blue img {
-        width: 45px !important; /* 작게 조정 */
+        width: 60px !important; /* 작게 조정 */
         height: auto !important;
         margin-bottom: 10px !important;
     }
@@ -3028,7 +3028,7 @@ a {
 
     /* 2. 아이콘: 위아래 여백을 정리해서 텍스트와 가까워짐 */
     .detailed-features .feature-row:nth-child(2) .icon-blue img {
-        width: 50px !important;
+        width: 60px !important;
         height: auto !important;
         
         /* [핵심] 불필요한 공백 제거 */
