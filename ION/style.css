@@ -3950,7 +3950,7 @@ a {
 
     /* 2. 실제 이미지(img) 태그 자체도 여백 제거 */
     .detailed-features .feature-row:nth-child(4) .f-img img {
-        margin-right: 60px !important;
+        margin-right: 70px !important;
     }
     
     /* (참고) 아까 맞춘 텍스트 위치는 유지 */
@@ -4035,4 +4035,44 @@ a {
         margin-left: auto !important;
         margin-right: auto !important;
     }
+}
+
+/* ========================================================
+   [전체 적용] Emergency Stop 아이콘 크기 조절
+   - PC, 모바일 상관없이 무조건 60x60px로 고정
+   ======================================================== */
+.detailed-features .feature-row:nth-child(3) .icon-wrap img {
+    width: 60px !important;    /* 너비 60px 고정 */
+    height: 60px !important;   /* 높이 60px 고정 */
+    object-fit: contain !important; /* 비율 유지 */
+}
+/* ========================================================
+   [Specification 섹션] 폰트 및 사이즈 변경 요청 반영
+   - 제목: 48px, Arial 계열
+   - 내용(Label, Value): 20px, Arial 계열
+   ======================================================== */
+
+/* 1. Specification 제목 (h2 태그라고 가정) */
+.spec-section h2 {
+    font-size: 48px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    /* 혹시 제목 두께도 보통으로 하려면 아래 주석 해제 */
+    /* font-weight: normal !important; */
+}
+
+/* 2. 스펙 항목 이름 (왼쪽) */
+.spec-label {
+    font-size: 20px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* 3. 스펙 값 (오른쪽) */
+.spec-value {
+    font-size: 20px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* (참고) 테이블 전체에 폰트 상속 강제 */
+.spec-table {
+    font-family: Arial, Helvetica, sans-serif !important;
 }
