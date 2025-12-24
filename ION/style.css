@@ -4137,3 +4137,36 @@ a {
         margin-bottom: 50px !important; /* 모바일은 50px 정도가 적당 */
     }
 }
+
+/* ========================================================
+   [초소형 모바일 전용] Emergency 섹션 요소 간격 밀착
+   - 430px 이하 화면에서 이미지, 아이콘, 텍스트 사이 공백 제거
+   ======================================================== */
+@media (max-width: 430px) {
+    /* 3번째 줄: Emergency Stop 섹션 */
+
+    /* 1. 메인 이미지 (빨간 의자 사진) 아래 간격 줄이기 */
+    .detailed-features .feature-row:nth-child(3) .f-img {
+        margin-bottom: 10px !important; /* 원래 20~30px인걸 10px로 줄임 */
+    }
+
+    /* 2. 이모티콘 (빨간 버튼 아이콘) 위아래 간격 줄이기 */
+    .detailed-features .feature-row:nth-child(3) .icon-wrap,
+    .detailed-features .feature-row:nth-child(3) .icon_blue {
+        margin-top: 5px !important;    /* 위쪽 이미지랑 5px 거리 */
+        margin-bottom: 5px !important; /* 아래 텍스트랑 5px 거리 */
+        padding: 0 !important;         /* 불필요한 패딩 제거 */
+    }
+
+    /* 3. 텍스트 (Emergency Stop Button 제목 등) 위쪽 간격 없애기 */
+    .detailed-features .feature-row:nth-child(3) .f-txt {
+        margin-top: 0 !important;      /* 위쪽 여백 완전 제거 */
+        padding-top: 0 !important;     /* 안쪽 여백도 제거 */
+    }
+    
+    /* (혹시 제목 태그 자체에 여백이 있을 경우 대비) */
+    .detailed-features .feature-row:nth-child(3) .f-txt h3,
+    .detailed-features .feature-row:nth-child(3) .f-txt div {
+        margin-top: 5px !important;    /* 아주 살짝만 띄움 */
+    }
+}
