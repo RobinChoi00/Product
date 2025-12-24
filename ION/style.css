@@ -3930,3 +3930,33 @@ a {
         transform: translateX(40px);
     }
 }
+
+/* ========================================================
+   [PC 전용] Bluetooth 섹션 이미지 정렬 수정
+   - 이미지를 오른쪽 끝으로 강제로 밀어넣기
+   ======================================================== */
+@media (min-width: 845px) {
+    /* 4번째 줄: Bluetooth 섹션 */
+    
+    /* 1. 이미지 박스(.f-img)를 오른쪽 끝으로 보내기 */
+    .detailed-features .feature-row:nth-child(4) .f-img {
+        margin-left: auto !important;   /* 왼쪽 여백을 최대로 -> 오른쪽으로 밀림 */
+        margin-right: 0 !important;     /* 오른쪽 여백 제거 */
+        text-align: right !important;   /* 박스 내부 이미지도 우측 정렬 */
+        padding-right: 0 !important;    /* 혹시 모를 내부 여백 제거 */
+        display: flex !important;       /* 플렉스 박스로 만들어서 */
+        justify-content: flex-end !important; /* 내용물을 끝(오른쪽)으로 정렬 */
+    }
+
+    /* 2. 실제 이미지(img) 태그 자체도 여백 제거 */
+    .detailed-features .feature-row:nth-child(4) .f-img img {
+        margin-right: 0 !important;
+    }
+    
+    /* (참고) 아까 맞춘 텍스트 위치는 유지 */
+    .detailed-features .feature-row:nth-child(4) .f-txt {
+        width: 400px !important;
+        margin-right: 40px !important; 
+        margin-left: 100px !important;
+    }
+}
