@@ -4120,3 +4120,20 @@ a {
         display: block !important;   /* 중앙 정렬이 잘 먹히게 블록 요소로 변경 */
     }
 }
+
+/* ========================================================
+   [간격 수정] Foot Rollers와 Spring-Loaded 사이 벌리기
+   - 6번째 섹션 아래에 여백을 80px 추가
+   ======================================================== */
+/* 주의: 만약 적용이 안 되면 nth-child(6) 숫자를 7로 바꿔보세요! */
+.detailed-features .feature-row:nth-child(6) {
+    margin-bottom: 80px !important;  /* 아래쪽 여백 80px 추가 (원하는 만큼 늘리세요) */
+    padding-bottom: 20px !important; /* 혹시 몰라 안쪽 여백도 살짝 추가 */
+}
+
+/* (선택사항) 모바일에서는 간격을 조금 줄이고 싶다면? */
+@media (max-width: 768px) {
+    .detailed-features .feature-row:nth-child(6) {
+        margin-bottom: 50px !important; /* 모바일은 50px 정도가 적당 */
+    }
+}
