@@ -2985,7 +2985,7 @@ a {
     /* 2. 이미지 자체를 화면 너비보다 넓게 설정 (컨테이너 여백 무시) */
     .air-massage-section .f-img img {
         /* [핵심] 화면 양옆 여백(20px씩)을 덮어버릴 만큼 키움 */
-        width: calc(100% + 40px) !important; 
+        width: calc(100% + 20px) !important; 
         max-width: none !important;
         
         /* 왼쪽으로 20px 당겨서 화면 끝에 딱 맞춤 */
