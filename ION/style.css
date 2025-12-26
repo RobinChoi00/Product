@@ -902,7 +902,7 @@ a {
 
 /* 1. 전체 섹션 배경 (검은색) */
 .dual-grid-section {
-    background-color: #090b10;
+    background-color: #04090e;
     padding: 60px 0;
     margin-bottom: 0 !important;
 }
@@ -911,7 +911,7 @@ a {
 /* 두 개의 박스가 아니라, 이 전체 틀을 하나의 큰 카드로 만듭니다 */
 .dual-grid-section .grid-2 {
     /* [배경] 하나로 합쳐진 그라데이션 (위쪽 남색 -> 아래쪽 검은색) */
-    background: linear-gradient(180deg, #151922 0%, #000000 100%);
+    background: linear-gradient(180deg, #04090e 0%, #000000 100%);
     
     /* [테두리 둥글게] */
     border-radius: 40px;
@@ -2617,7 +2617,7 @@ a {
     }
     .dual-grid-section .grid-box {
         /* 각각 그라데이션 적용 */
-        background: linear-gradient(180deg, #151922 0%, #000000 100%) !important;
+        background: linear-gradient(180deg, #04090e 0%, #000000 100%) !important;
         border-radius: 20px !important;
         padding: 30px 20px !important;
         width: 100% !important;
