@@ -3950,7 +3950,7 @@ a {
 
     /* 2. 실제 이미지(img) 태그 자체도 여백 제거 */
     .detailed-features .feature-row:nth-child(4) .f-img img {
-        margin-right: 70px !important;
+        margin-right: 80px !important;
     }
     
     /* (참고) 아까 맞춘 텍스트 위치는 유지 */
