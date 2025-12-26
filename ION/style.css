@@ -1188,7 +1188,7 @@ a {
     height: 480px;
     object-fit: contain;   /* 비율 유지 */
     display: block;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 /* 2. 텍스트 박스 전체 위치 잡기 */
@@ -2985,7 +2985,7 @@ a {
     /* 2. 이미지 자체를 화면 너비보다 넓게 설정 (컨테이너 여백 무시) */
     .air-massage-section .f-img img {
         /* [핵심] 화면 양옆 여백(20px씩)을 덮어버릴 만큼 키움 */
-        width: calc(100% + 20px) !important; 
+        width: calc(100% + 30px) !important; 
         max-width: none !important;
         
         /* 왼쪽으로 20px 당겨서 화면 끝에 딱 맞춤 */
@@ -3475,7 +3475,7 @@ a {
     .air-massage-section .f-img img {
         width: 70% !important;          /* 100%에서 70%로 축소 */
         max-width: 400px !important;    /* 너무 커지지 않게 제한 */
-        margin: 0 auto 30px !important; /* 중앙 정렬 */
+        margin: 0 auto 10px !important; /* 중앙 정렬 */
     }
 
     /* 2. 59번 이미지 (Spring Footrest) 줄이기 */
@@ -3528,7 +3528,7 @@ a {
         width: 100% !important;          
         max-width: 400px !important;    
         
-        margin: 0 auto 30px !important;
+        margin: 0 auto 10px !important;
          
     }
     /* ... 아래 59번 이미지 코드는 그대로 둠 ... */
