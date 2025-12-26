@@ -3473,8 +3473,8 @@ a {
 
     /* 1. 25번 이미지 (Air Massage) 줄이기 */
     .air-massage-section .f-img img {
-        width: 70% !important;          /* 100%에서 70%로 축소 */
-        max-width: 400px !important;    /* 너무 커지지 않게 제한 */
+        width: 100% !important;          /* 100%에서 70%로 축소 */
+        max-width: 350px !important;    /* 너무 커지지 않게 제한 */
         margin: 0 auto 10px !important; /* 중앙 정렬 */
     }
 
