@@ -3481,9 +3481,9 @@ a {
     /* 2. 59번 이미지 (Spring Footrest) 줄이기 */
     /* 상세 특징 섹션의 첫 번째 이미지 */
     .detailed-features .feature-row:nth-child(1) .f-img img {
-        width: 60% !important;          /* 100%에서 60%로 축소 */
-        max-width: 350px !important;    /* 최대 크기 제한 */
-        margin: 0 auto 30px !important; /* 중앙 정렬 */
+        width: 1000% !important;          /* 100%에서 60%로 축소 */
+        max-width: 330px !important;    /* 최대 크기 제한 */
+        margin: 0 auto 15px !important; /* 중앙 정렬 */
     }
 }
 
@@ -4130,7 +4130,7 @@ a {
 @media (max-width: 768px) {
     .foot-rollers-section {
         /* 아래쪽 여백을 100px로 설정 (이 숫자를 늘리면 더 벌어집니다) */
-        margin-bottom: 100px !important; 
+        margin-bottom: 150px !important; 
         
         /* 혹시 몰라 안쪽 여백도 살짝 줌 */
         padding-bottom: 20px !important; 
@@ -4192,4 +4192,35 @@ a {
 
     /* 패딩 때문에 전체 크기가 틀어지지 않게 방지 */
     box-sizing: border-box !important;
+}
+
+/* ========================================================
+   [전체 적용] Detailed Features 텍스트 왼쪽 정렬 강제
+   - 아이콘, 제목, 설명글 모두 왼쪽 기준으로 정렬
+   ======================================================== */
+.detailed-features .feature-row .f-txt {
+    /* 1. 텍스트 왼쪽 정렬 */
+    text-align: left !important;
+    
+    /* 2. Flex 아이템(아이콘, div)들을 왼쪽(Start)으로 배치 */
+    align-items: flex-start !important; 
+    
+    /* (참고) 세로 방향 정렬은 중앙 유지 (필요 시 flex-start로 변경 가능) */
+    justify-content: center !important; 
+}
+
+/* 아이콘(이모티콘) 박스도 왼쪽 정렬 */
+.detailed-features .feature-row .icon-blue {
+    /* 중앙 정렬용 margin: 0 auto 해제 */
+    margin-left: 0 !important; 
+    margin-right: auto !important; 
+    
+    /* 내부 이미지도 왼쪽 정렬 */
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+/* 제목(.f-txt > div)과 본문도 왼쪽 정렬 확인 사살 */
+.detailed-features .feature-row .f-txt > div {
+    text-align: left !important;
 }
