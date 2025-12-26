@@ -4122,19 +4122,25 @@ a {
 }
 
 /* ========================================================
-   [간격 수정] Foot Rollers와 Spring-Loaded 사이 벌리기
-   - 6번째 섹션 아래에 여백을 80px 추가
+   [간격 수정] Foot Rollers 섹션과 그 다음 섹션 사이 벌리기
+   - nth-child가 아니라 클래스명을 직접 타겟팅해야 합니다.
    ======================================================== */
-/* 주의: 만약 적용이 안 되면 nth-child(6) 숫자를 7로 바꿔보세요! */
-.detailed-features .feature-row:nth-child(6) {
-    margin-bottom: 120px !important;  /* 아래쪽 여백 80px 추가 (원하는 만큼 늘리세요) */
-    padding-bottom: 60px !important; /* 혹시 몰라 안쪽 여백도 살짝 추가 */
+
+/* 1. 모바일(768px 이하)에서 간격 팍팍 늘리기 */
+@media (max-width: 768px) {
+    .foot-rollers-section {
+        /* 아래쪽 여백을 100px로 설정 (이 숫자를 늘리면 더 벌어집니다) */
+        margin-bottom: 100px !important; 
+        
+        /* 혹시 몰라 안쪽 여백도 살짝 줌 */
+        padding-bottom: 20px !important; 
+    }
 }
 
-/* (선택사항) 모바일에서는 간격을 조금 줄이고 싶다면? */
-@media (max-width: 768px) {
-    .detailed-features .feature-row:nth-child(6) {
-        margin-bottom: 50px !important; /* 모바일은 50px 정도가 적당 */
+/* (참고) PC 버전에서도 간격을 주고 싶다면 아래 코드 사용 */
+@media (min-width: 769px) {
+    .foot-rollers-section {
+        margin-bottom: 80px !important;
     }
 }
 
