@@ -3469,7 +3469,7 @@ a {
    [태블릿 전용 수정] 430px ~ 800px 구간 이미지 크기 조절
    대상: 25번(Air Massage), 59번(Spring Footrest)
    ======================================================== */
-@media (min-width: 430px) and (max-width: 800px) {
+@media (max-width: 800px) {
 
     /* 1. 25번 이미지 (Air Massage) 줄이기 */
     .air-massage-section .f-img img {
