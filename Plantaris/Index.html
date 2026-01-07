@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osaki Plantaris 4D Massage Chair</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.plantaris_product_main.png" alt="Osaki Plantaris 4D Main banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            <div class="intro-desc" style="font-weight: 300 !important; font-size: clamp(15px, 4vw, 24px) !important; line-height: 1.8 !important; color: #8e8e8e !important; max-width: 1000px !important; width: 90% !important; margin: 40px auto 100px !important;">
+                The Plantaris 4D Massage Chair brings elevated, everyday relaxation into your home with fluid 4D massage technology that feels natural, deep, and deeply restorative.
+                Hands-free voice control lets you customize your massage effortlessly, while the rotating footrest eases stiffness.
+                Paired with deep calf kneading to melt away tension, Plantaris is designed to help you unwind fully, recharge your body, and settle into total comfort—whenever you need it.
+            </div>
+            
+            <div class="chair-slider-wrapper">
+                <div class="slider-main">
+                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/4.arrow_left.png" alt="Previous">
+                    </button>
+
+                    <img id="current-chair" src="images/0.plantaris_black.png" alt="Plantaris Massage Chair">
+
+                    <button class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/5.arrow_right.png" alt="Next">
+                    </button>
+                </div>
+
+                <div class="swatch-control-panel">
+                    <img src="images/6.swatches_bar.png" class="bar-bg" alt="Color Bar">
+                    <div class="buttons-wrapper">
+                        <img src="images/7.swatch_black.png" class="color-btn active" onclick="changeColor(0)" alt="Black">
+                        <img src="images/8.swatch_brown.png" class="color-btn" onclick="changeColor(1)" alt="Brown">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="light-features">
+        <div class="container">
+            
+            <div class="feature-row img-full">
+                <div class="f-img"><img src="images/9.plantaris_voice.png" alt="Voice Control"></div>
+                <div class="f-txt">
+                    <div class="icon-wrap">
+                        <img src="images/icon_mic.png" alt="Mic Icon">
+                    </div>
+                    <div class="f-title">
+                        <div><span class="blue">INTELLIGENT</span><br>VOICE CONTROL</div>
+                    </div>
+                    <div class="f-desc">
+                        Control your massage without lifting a finger. The Plantaris features 
+                        intelligent voice recognition, allowing you to manage massage modes 
+                        and chair positions with simple voice commands.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse img-contain">
+                <div class="f-img"><img src="images/10.plantaris_dial.png" alt="Smart Dial"></div>
+                <div class="f-txt">
+                    <div class="f-title">
+                        <span class="blue">SMART DIAL</span><br>QUICK CONTROL
+                    </div>
+                    <div class="f-desc">
+                        Located on the armrest, the Smart Dial allows for convenient adjustments 
+                        to the intensity, chair position, and power without interrupting your massage.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row img-full custom-calf">
+                <div class="f-img">
+                    <img src="images/11.plantaris_calf.png" alt="Calf Kneading">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title">
+                        DEEP <br><span class="blue">CALF KNEADING</span>
+                    </div>
+                    <div class="f-desc">
+                        Rotating air massagers behind the calves provide a deep kneading sensation, 
+                        promoting blood circulation and relieving muscle fatigue in the legs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dark-features">
+        <div class="container">        
+            <div class="feature-row img-contain dark-mode">
+                <div class="f-img">
+                    <img src="images/12.plantaris_4d.png" alt="4D Mechanism">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title">
+                        <span class="blue">4D MASSAGE</span> <br>MECHANISM
+                    </div>
+                    <div class="f-desc">
+                        The advanced 4D rollers move up and down, left and right, and in and out, 
+                        while also adjusting the speed and rhythm to mimic the hands of a professional masseuse.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse img-contain dark-mode custom-bodyscan">
+                <div class="f-img">
+                    <img src="images/13.plantaris_scan.png" alt="Body Scan">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title">
+                        <span class="blue">BODY SCAN</span> <br>TECHNOLOGY
+                    </div>
+                    <div class="f-desc">
+                        Upon powering on, the chair automatically scans your body to detect 
+                        your shoulder height and spine curve, ensuring a custom-tailored massage.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zero-gravity-section">
+        <div class="container text-center">
+            <div><span class="blue">2-STAGE</span> <br>ZERO GRAVITY</div>
+            
+            <div class="center-p">
+                Inspired by NASA technology, the Zero Gravity position elevates your knees 
+                above your heart, minimizing spinal pressure and inducing a feeling of weightlessness.
+            </div>
+            
+            <div class="wide-img">
+                <img src="images/14.plantaris_zg.png" alt="Zero Gravity">
+            </div>
+        </div>
+    </div>
+
+    <div class="dual-grid-section">
+        <div class="container grid-2">
+            
+            <div class="grid-box">
+                <div class="icon-wrap2">
+                    <img src="images/icon_sl_track.png" alt="SL Track Icon">
+                </div>
+                <div class="g-txt">
+                    <div><span class="blue">SL-TRACK</span> <br>SYSTEM</div>
+                    <div>The extended SL-Track follows the curvature of your spine 
+                        from the neck down to the glutes/hamstrings.
+                    </div>
+                </div>
+                <img src="images/15.plantaris_sl.png" alt="SL Track Image" class="product-img">
+            </div>
+
+            <div class="grid-box">
+                <div class="icon-wrap2">
+                    <img src="images/icon_space.png" alt="Space Saving Icon"> 
+                </div>
+                <div class="g-txt">
+                    <div><span class="blue">SPACE-SAVING</span><br>TECHNOLOGY</div>
+                    <div>The chair slides forward as it reclines, requiring only 
+                        <strong>a few inches</strong> from the wall.
+                    </div>
+                </div>
+                <img src="images/16.plantaris_space.png" alt="Space Saving Image" class="product-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="air-massage-section">
+        <div class="container">
+            <div class="feature-row">
+                <div class="f-img">
+                    <img src="images/17.plantaris_aircells.png" alt="Air Massage">
+                </div>
+                <div class="f-txt">
+                    <div><span class="blue">FULL BODY</span><br>AIR MASSAGE</div>
+                    <div>Strategically placed airbags around the shoulders, arms, waist, and feet 
+                        provide a compression massage to improve circulation and relieve tension.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="heat-section">
+        <div class="container feature-row">
+            <div class="f-img"><img src="images/18.plantaris_heat.png" alt="Heat Therapy"></div>
+            <div class="f-txt">
+                <div class="icon-wrap">
+                    <img src="images/icon_heat.png" alt="Heat Icon">
+                </div>
+                <div><span class="red">LUMBAR & CALF</span><br>HEAT THERAPY</div>
+                <div>Carbon fiber heating elements in the backrest and calves radiate gentle warmth 
+                    to loosen tight muscles and enhance the massage experience.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-auto">
+        <div class="container text-center">
+            <div><span class="blue">AUTO MASSAGE PROGRAMS</span></div>
+            <div class="programs-grid-22">
+                <div class="program-item"><img src="images/icon_p1.png"><div class="p-name">RECOVER</div></div>
+                <div class="program-item"><img src="images/icon_p2.png"><div class="p-name">RELIEF</div></div>
+                <div class="program-item"><img src="images/icon_p3.png"><div class="p-name">STRETCH</div></div>
+                <div class="program-item"><img src="images/icon_p4.png"><div class="p-name">RENEW</div></div>
+                <div class="program-item"><img src="images/icon_p5.png"><div class="p-name">CALMING</div></div>
+                <div class="program-item"><img src="images/icon_p6.png"><div class="p-name">REFRESH</div></div>
+                <div class="program-item"><img src="images/icon_p7.png"><div class="p-name">ENERGY</div></div>
+                <div class="program-item"><img src="images/icon_p8.png"><div class="p-name">SLEEP</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot-rollers-section">
+        <div class="container text-center">
+            <div class="icon-center-wrap">
+                <img src="images/icon_foot.png" alt="Foot Icon">
+            </div>
+            <div><span class="blue">SPECIALIZED</span><br>FOOT ROLLERS</div>
+            <div class="center-p">
+                Spinning reflexology rollers at the bottom of the footrest stimulate 
+                acupressure points while airbags hold the foot in place.
+            </div>
+            <div class="wide-img">
+                <img src="images/19.plantaris_foot.png" alt="Specialized Foot Rollers">
+            </div>
+        </div>
+    </div>
+
+    <div class="detailed-features">
+        <div class="container">
+            <div class="feature-row">
+                <div class="f-img"><img src="images/20.plantaris_remote.png" alt="Touchscreen"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/icon_tablet.png"></div>
+                    <div>TOUCHSCREEN <br>CONTROLLER</div>
+                    <div>Navigate through massage programs and settings easily with the 
+                        intuitive, high-resolution touchscreen tablet.
+                    </div>
+                </div>
+            </div>
+            <div class="feature-row reverse">
+                <div class="f-img"><img src="images/21.plantaris_speaker.png" alt="Bluetooth"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/icon_bt.png"></div>
+                    <div>BLUETOOTH <br>SPEAKERS</div>
+                    <div>Connect your device to the built-in high-quality speakers 
+                        to enjoy your favorite music or guided meditation.
+                    </div>
+                </div>
+            </div>
+             <div class="feature-row">
+                <div class="f-img"><img src="images/22.plantaris_charging.png" alt="Wireless Charging"></div>
+                <div class="f-txt">
+                    <div class="icon-blue"><img src="images/icon_charge.png"></div>
+                    <div>WIRELESS <br>CHARGING</div>
+                    <div>Recharge your smartphone conveniently using the wireless charging pad 
+                        located on the armrest.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dimensions-section">
+        <div class="container text-center">
+            <div>DIMENSIONS</div>
+            <div class="dimensions-row">
+                <img src="images/23.plantaris_dim1.png" alt="Front Dimensions">
+                <img src="images/24.plantaris_dim2.png" alt="Side Dimensions">
+            </div>
+        </div>
+    </div>
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Osaki Plantaris</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions</div>
+                    <div class="spec-value">
+                        <strong>Upright:</strong> 30.3" x 63.8" x 46.5"<br>
+                        <strong>Reclined:</strong> 30.3" x 74.8" x 33.5"
+                    </div>
+                </div>
+                <div class="spec-row no-border"> 
+                    <div class="spec-label">Weight</div>
+                    <div class="spec-value">Net: 216 lbs / Gross: 255 lbs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
