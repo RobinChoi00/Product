@@ -71,12 +71,16 @@
     align-items: center;
     gap: 120px;            /* 화살표와 의자 사이 간격 */
     margin-bottom: 40px;  /* 색상 버튼과의 간격 */
+    height: 550px;
 }
 
 #current-chair {
-    width: 100%;
+    width: auto;
     max-width: 450px;     /* 의자 이미지 크기 제한 */
-    height: auto;
+    height: 100%
+    object-fit: contain;
+
+    transition: opacity 0.15s ease-in-out;
 }
 
 .nav-btn {
@@ -84,6 +88,8 @@
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
+
+    flex-shrink: 0;
 }
 .nav-btn:hover {
     transform: scale(1.1);

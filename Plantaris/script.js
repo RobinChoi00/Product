@@ -18,7 +18,7 @@ var slideData = [
         name: "Black"
     },
     {
-        chair: baseURL + "images/3.plantaris_swatch_brown_chair.png",
+        chair: baseURL + "images/2.plantaris_swatch_brown_chair.png",
         name: "Brown"
     }
 ];
