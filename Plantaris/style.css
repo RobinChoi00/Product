@@ -1116,9 +1116,9 @@ body {margin: 0;}
     
     font-family: 'Roboto', sans-serif;
     font-weight: 500;       /* Bold */
-    font-size: 18px;
+    font-size: 20px;
     color: #000000;         /* 검은색 */
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 /* 6. 오른쪽 값 (Titan Plantaris, 110-120V 등) */
@@ -1489,7 +1489,6 @@ body {margin: 0;}
         width: 100%;
     }
     
-    .spec-label { width: 100%; font-size: 14px; margin-bottom: 2px; }
-    .spec-value { width: 100%; font-size: 16px; }
+
     .spec-value.split-col { gap: 30px; margin-top: 5px; }
 }
