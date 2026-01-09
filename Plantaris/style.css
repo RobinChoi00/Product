@@ -1307,11 +1307,12 @@ body {margin: 0;}
     
     .horizontal-gray-box .f-txt,
     .vertical-gray-box .f-txt {
-        width: 100%;
+        width: 100%;          
+        padding: 0 0 20px 0;  
         text-align: center !important;
         align-items: center !important;   
     }
-    .horizontal-gray-box .f-img { width: 80%; }
+    .horizontal-gray-box .f-img { width: 100%; }
     
     .vertical-gray-box .f-desc, 
     .horizontal-gray-box .f-desc {
