@@ -1082,7 +1082,7 @@ body {margin: 0;}
 .spec-section .container > div:first-child {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;       /* 아주 굵게 (Image like) */
-    font-size: 36px;        /* 큰 제목 크기 */
+    font-size: 36px !important;        /* 큰 제목 크기 */
     text-align: center;     /* 중앙 정렬 */
     margin-bottom: 60px;    /* 표와의 간격 */
     color: #000000;
@@ -1478,7 +1478,7 @@ body {margin: 0;}
     .measuring-guide { width: 100%; text-align: left; }
 
     .dim-img:nth-child(1) img {
-        max-width: 200px !important;
+        max-width: 65% ;
     }
     .dim-img:nth-child(2) img {
         max-width: 100%; 
