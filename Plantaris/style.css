@@ -1354,6 +1354,30 @@ body {margin: 0;}
     
     .g-desc { width: 100%; }
 
+    /* ========================================================
+       [수정] SL-Track & Space-Saving 모바일 중앙 정렬
+       ======================================================== */
+    
+    /* 1. 그리드 아이템 내부 요소들을 가운데로 모음 */
+    .gradient-box.grid-2 .grid-item {
+        align-items: center !important;   /* Flex 아이템 수직 중앙 정렬 */
+        text-align: center !important;    /* 텍스트 중앙 정렬 */
+        padding: 50px 20px !important;    /* 모바일 여백 재조정 */
+    }
+
+    /* 2. 제목과 설명글 강제 중앙 정렬 */
+    .gradient-box.grid-2 .g-title, 
+    .gradient-box.grid-2 .g-desc {
+        text-align: center !important;    
+        width: 100% !important;           /* 너비를 꽉 채워서 중앙 정렬 유도 */
+        max-width: none !important;       /* PC에서 설정한 너비 제한 해제 */
+    }
+
+    /* 3. 아이콘 위치 보정 (왼쪽 마진 제거 -> 오토) */
+    .gradient-box.grid-2 .icon-wrap-left img {
+        margin: 0 auto 30px auto !important; /* 상하 0/30px, 좌우 Auto(중앙) */
+    }
+
     .feature-row.dark-mode, 
     .feature-row.dark-mode.reverse {
         flex-direction: column-reverse !important;
