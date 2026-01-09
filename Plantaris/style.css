@@ -1433,7 +1433,7 @@ body {margin: 0;}
         border-radius: 30px;
         box-sizing: border-box;
     }
-    .p-item img { width: 55px; height: 55px; padding: 10px; }
+    .p-item img { width: 70px; height: 70px; padding: 10px; }
     .p-name { font-size: 11px; }
 
 
@@ -1452,7 +1452,7 @@ body {margin: 0;}
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    .p1-item img { width: 55px; height: 55px; padding: 10px; }
+    .p1-item img { width: 70px; height: 70px; padding: 10px; }
     .p1-name { font-size: 11px; }
 
 
