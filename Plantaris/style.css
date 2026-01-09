@@ -1308,12 +1308,14 @@ body {margin: 0;}
     .horizontal-gray-box .f-txt,
     .vertical-gray-box .f-txt {
         width: 100%;          
-        padding: 0 0 20px 0;  
+        padding: 0 0 20px 0;
+        margin-bottom: 20px !important;  
         text-align: center !important;
         align-items: center !important;   
     }
     .horizontal-gray-box .f-img {
-        width: 115%;
+        width: 115% !important;
+        max-width: none !important;
 
     }
     
