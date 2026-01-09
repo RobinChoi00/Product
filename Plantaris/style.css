@@ -134,7 +134,6 @@ body {margin: 0;}
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.1); /* 버튼 경계선 추가하여 시인성 확보 */
     transition: all 0.2s ease-in-out;
     
     /* 버튼 자체의 기본 마진 제거 (gap으로 제어함) */
