@@ -2,7 +2,7 @@
 
 // 1. 기본 경로 설정
 // (로컬 테스트 시 이미지가 안 보이면 baseURL을 빈 문자열 ""로 변경하세요)
-var baseURL = "https://RobinChoi00.github.io/Product/Plantaris/"; 
+var baseURL = "";//"https://RobinChoi00.github.io/Product/Plantaris/"; 
 
 // 2. 데이터 정의 (HTML 버튼 순서와 1:1 매칭)
 // Index 0: All (Both)
@@ -18,7 +18,7 @@ var slideData = [
         name: "Black"
     },
     {
-        chair: baseURL + "images/2.plantaris_swatch_brown_chair.png",
+        chair: baseURL + "images/2.plantaris_color_brown.png",
         name: "Brown"
     }
 ];
