@@ -24,7 +24,7 @@ body {margin: 0;}
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px;
-    color: #8e8e8e;
+    color: #707070;
     text-align: center;
     line-height: 2.0;
 
@@ -707,8 +707,8 @@ body {margin: 0;}
 
 /* 7. 아이콘 스타일 (유지) */
 .p-item img {
-    width: 80px;             
-    height: 80px;
+    width: 100px;             
+    height: 100px;
     object-fit: contain;
     padding: 16px;           
     border-radius: 50%;      
@@ -771,8 +771,8 @@ body {margin: 0;}
 }
 
 .p1-item img {
-    width: 80px;             
-    height: 80px;
+    width: 100px;             
+    height: 100px;
     object-fit: contain;
     padding: 16px;           
     border-radius: 50%;      
@@ -1273,6 +1273,12 @@ body {margin: 0;}
     }
     .nav-btn.prev-btn { left: 0; }
     .nav-btn.next-btn { right: 0; }
+    .swatch-panel {
+        position: relative !important;
+        z-index: 100 !important;
+
+        margin-top: -40px !important;
+    }
 
 
     /* 4. [Light Features] 박스 꽉 채우기 */
