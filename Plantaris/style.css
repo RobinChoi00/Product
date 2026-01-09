@@ -615,6 +615,11 @@ body {margin: 0;}
         
         /* (선택사항) 만약 위아래로도 움직이고 싶다면 */
         /* transform: translate(20px, 10px);  (오른쪽 20px, 아래로 10px) */
+        /* 2. [핵심] 마스크 그라데이션 적용 */
+    /* 위쪽 0%~15% : 투명 -> 불투명 (Fade In) */
+    /* 아래쪽 85%~100% : 불투명 -> 투명 (Fade Out) */
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
     }
 
 /* [FIX] 문법 오류 수정됨 (trailing comma 제거) */
