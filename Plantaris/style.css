@@ -1126,8 +1126,8 @@ body {margin: 0;}
     flex: 1;                /* 남은 공간 다 차지 */
     
     font-family: 'Roboto', sans-serif; /* Avenir가 없으면 Poppins */
-    font-weight: 400;       /* Regular */
-    font-size: 16px;
+    font-weight: 500;       /* Regular */
+    font-size: 20px;
     color: #444444;         /* 약간 부드러운 검은색 */
     line-height: 1.6;
 }
@@ -1157,7 +1157,7 @@ body {margin: 0;}
     color: #ff4d4d;         /* 이미지와 동일한 빨간색 */
     text-decoration: none;  
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     transition: opacity 0.3s;
 }
 
@@ -1465,7 +1465,7 @@ body {margin: 0;}
     .measuring-guide { width: 100%; text-align: left; }
 
     .dim-img:nth-child(1) img {
-        max-width: 280px !important;
+        max-width: 240px !important;
     }
     .dim-img:nth-child(2) img {
         max-width: 100%; 
