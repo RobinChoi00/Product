@@ -1495,7 +1495,7 @@ body {margin: 0;}
     }
     
     .doorway-left, .doorway-right, .doorway-right .f-txt {
-        width: 100%;
+        width: 90%;
         text-align: center;
         align-items: center;
     }
