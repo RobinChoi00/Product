@@ -243,7 +243,6 @@ body {margin: 0;}
 /* 7. 이미지 */
 .vertical-gray-box .f-img img {
     width: 100%;
-    max-width: 500px !important;
     height: auto;
     display: block;         
     margin-bottom: -10px;
@@ -586,7 +585,7 @@ body {margin: 0;}
     width: 85%;
     height: auto;
     display: block;
-    margin-top: 60px !important;
+    margin-top: 90px !important;
 }
 
 /* 텍스트 영역 */
@@ -1313,12 +1312,18 @@ body {margin: 0;}
         text-align: center !important;
         align-items: center !important;   
     }
-    .horizontal-gray-box .f-img { width: 70%; }
+    .horizontal-gray-box .f-img { width: 80%; }
     
     .vertical-gray-box .f-desc, 
     .horizontal-gray-box .f-desc {
         width: 90%;          
         margin: 0 auto;
+    }
+
+    .vertical-gray-box .f-img img{
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
     }
 
 
@@ -1515,8 +1520,8 @@ body {margin: 0;}
         max-width: 90%; 
     }
     .g-img img {
-        width: 80% !important;
-
+        width: 100% !important;
+        max-width: 500px !important;
         margin: 0 auto !important;
     }
 
