@@ -764,7 +764,7 @@ body {margin: 0;}
     
     /* Auto 섹션과 너비를 맞추되, 내부 여백으로 높이감 형성 */
     width: 86%;
-    max-width: 1400px;
+    max-width: 1150px;
     margin: 0 auto;            
     padding: 40px 40px;        /* 위아래 넉넉하게, 좌우 적당히 */
 }
@@ -1358,7 +1358,7 @@ body {margin: 0;}
     .feature-row.dark-mode.reverse {
         flex-direction: column-reverse !important;
         gap: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 120px;
         width: 100% !important;
         padding: 0 20px; 
         box-sizing: border-box;
@@ -1367,8 +1367,21 @@ body {margin: 0;}
     .feature-row.dark-mode .f-img,
     .feature-row.dark-mode .f-txt {
         width: 100%;
-        text-align: center;
-        align-items: center;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    /* [추가] Lumbar Heating 하단 *문구 중앙 정렬 */
+    .feature-row.dark-mode .f-desc span {
+        /* 블록 요소를 가운데 정렬하는 치트키 */
+        margin: 15px auto 0 auto !important; 
+        text-align: center !important;
+    }
+    .feature-row.dark-mode .f-desc span {
+        display: block !important;         
+        width: 90% !important;             /* 너무 꽉 차지 않게 여백 줌 */
+        margin: 15px auto 0 auto !important; /* 좌우 auto = 중앙 정렬 */
+        text-align: center !important;     
+        opacity: 0.7;
     }
 
 
@@ -1465,7 +1478,7 @@ body {margin: 0;}
     .measuring-guide { width: 100%; text-align: left; }
 
     .dim-img:nth-child(1) img {
-        max-width: 240px !important;
+        max-width: 200px !important;
     }
     .dim-img:nth-child(2) img {
         max-width: 100%; 
