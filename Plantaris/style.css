@@ -1502,7 +1502,7 @@ body {margin: 0;}
     .measuring-guide { width: 100%; text-align: left; }
 
     .dim-img:nth-child(1) img {
-        max-width: 65% ;
+        max-width: 65% !important;
     }
     .dim-img:nth-child(2) img {
         max-width: 100%; 
