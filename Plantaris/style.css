@@ -1313,7 +1313,7 @@ body {margin: 0;}
         align-items: center !important;   
     }
     .horizontal-gray-box .f-img {
-        width: 130% !important;
+        width: 100% !important;
         max-width: none !important;
 
     }
@@ -1550,3 +1550,38 @@ body {margin: 0;}
 
     .spec-value.split-col { gap: 30px; margin-top: 5px; }
 }
+
+/* ========================================================
+       [수정] Rocking Massage: 박스 너비 확대 & 이미지 초대형화
+       ======================================================== */
+    
+    /* 1. 회색 박스 크기 키우기 */
+    .vertical-gray-box {
+        width: 100% !important;       /* 화면 너비 100% 꽉 채움 */
+        max-width: none !important;   /* 너비 제한 해제 */
+        margin-left: 0 !important;    /* 왼쪽 여백 제거 */
+        margin-right: 0 !important;   /* 오른쪽 여백 제거 */
+        border-radius: 0 !important;  /* (선택사항) 모서리를 각지게 해서 더 넓어 보이게 함 */
+        padding-bottom: 0 !important; /* 하단 여백 제거 (이미지를 끝까지 붙이기 위해) */
+        overflow: visible !important; /* 이미지가 커져도 잘리지 않게 설정 */
+    }
+
+    /* 2. 텍스트 여백 줄이기 (이미지를 위로 당기기 위함) */
+    .vertical-gray-box .f-txt {
+        margin-bottom: 0px !important;     /* 텍스트 아래 빈 공간 제거 */
+        padding-bottom: 10px !important;   /* 최소한의 패딩만 남김 */
+    }
+
+    /* 3. 이미지 초대형 확대 (115%) */
+    .vertical-gray-box .f-img img {
+        /* 박스 너비보다 15% 더 크게 설정하여 압도적인 느낌 연출 */
+        width: 115% !important; 
+        max-width: none !important;   /* 크기 제한 완전 해제 */
+        
+        /* 커진 만큼 왼쪽으로 당겨서 중앙 정렬 (계산식: -(115-100)/2) */
+        margin-left: -7.5% !important; 
+        
+        /* 위쪽으로 바짝 당겨서 텍스트와 밀착 */
+        margin-top: -20px !important; 
+        margin-bottom: -10px !important;
+    }
