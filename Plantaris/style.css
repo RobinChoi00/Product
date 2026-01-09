@@ -1307,9 +1307,7 @@ body {margin: 0;}
     
     .horizontal-gray-box .f-txt,
     .vertical-gray-box .f-txt {
-        width: 100%;          
-        padding: 0 0 30px 0;  
-        margin-bottom: 0 !important;
+        width: 100%;
         text-align: center !important;
         align-items: center !important;   
     }
