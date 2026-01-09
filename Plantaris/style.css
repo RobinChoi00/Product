@@ -1501,6 +1501,11 @@ body {margin: 0;}
     }
     .measuring-guide { width: 100%; text-align: left; }
 
+    .doorway-left img{
+        max-width: 60% !important;
+        margin: 0 auto !important;
+    }
+
     .dim-img:nth-child(1) img {
         max-width: 50% !important;
     }
