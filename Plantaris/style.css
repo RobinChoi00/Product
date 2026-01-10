@@ -1325,7 +1325,7 @@ body {margin: 0;}
     }
 
     .vertical-gray-box .f-img img{
-        width: 130% !important;
+        width: 110% !important;
         max-width: 600px !important;
         margin: 0 auto !important;
         transform: scale(1.2) translateY(-30px) !important;
