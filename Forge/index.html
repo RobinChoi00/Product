@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Forge 4D Massage Chair</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.forge_product_main.png" alt="Titan Forge 3D Main banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            <div class="intro-desc" style="width: 100%; max-width: 900px;">
+                Forge is a powerful 3D massage chair engineered to shape relief with precision. 
+                Inspired by the strength of forging, its adjustable 3D rollers deliver deep, targeted pressure 
+                that breaks down tension and restores comfort. Built for performance and crafted for relaxation, 
+                Forge transforms pressure into total-body relief.
+            </div>
+            
+            <div class="group-slider">
+                <div class="slider-main">
+                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/5.forge_left_arrow.png" alt="Prev">
+                    </button>
+                    
+                    <img id="current-chair" src="images/4.forge_colors_all.png" alt="Forge 3D Chair">
+                    
+                    <button class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/6.forge_right_arrow.png" alt="Next">
+                    </button>
+                </div>
+
+                <div class="swatch-panel">
+                    <img src="images/7.forge_swatches_bar.png" class="bar-bg" alt="Bar">
+                    <div class="btn-wrap">
+                        <img src="images/8.forge_swatch_all.png" class="color-btn active" onclick="changeColor(0)">
+                        <img src="images/9.forge_swatch_black.png" class="color-btn" onclick="changeColor(1)">
+                        <img src="images/10.forge_swatch_taupe.png" class="color-btn" onclick="changeColor(2)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="light-feature-section" style="padding: 80px 0;">
+        <div class="container">
+            
+            <div class="feature-row light-mode">
+                <div class="f-txt">
+                    <div class="f-title">
+                        <span class="blue">3D MASSAGE</span><br>MECHANISM
+                    </div>
+                    <div class="f-desc">
+                        A 3D massage mechanism allows the rollers to move <strong>not only up and down and side to side, but also in and out,</strong> 
+                        adjusting depth to deliver a more precise, human-like massage that targets muscles more effectively.
+                    </div>
+                </div>
+                <div class="f-img">
+                    <img src="images/14.forge_3D.png" alt="3D Massage Mechanism">
+                </div>
+            </div>
+
+            <div class="feature-row light-mode reverse">
+                <div class="f-img">
+                    <img src="images/15.forge_body-scan.png" alt="Body Scan Technology">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title">
+                        <span class="blue">BODY SCAN</span><br>TECHNOLOGY
+                    </div>
+                    <div class="f-desc">
+                        The intelligent body scan <strong>adapts the massage to your unique shape and contours</strong>, 
+                        accurately positioning the rollers for a highly effective and exceptionally comfortable experience.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dark-section-wrapper">
+        
+        <div class="zero-gravity-section">
+            <div class="container text-center">
+                <div class="zg-title">
+                    <span class="blue">3-STAGE</span><br>ZERO GRAVITY RECLINING
+                </div>
+                <div class="zg-desc center-p">
+                    Experience <strong>a weightless sense of relaxation</strong> with the Forge 3D's three-stage 
+                    Zero Gravity Technology, designed to evenly support your body as the chair reclines, 
+                    relieving back pressure and maximizing overall comfort.
+                </div>
+                <div class="wide-img">
+                    <img src="images/16.forge_ZG.png" alt="3-Stage Zero Gravity">
+                </div>
+            </div>
+        </div>
+
+        <div class="dual-gradient-section">
+            <div class="container">
+                <div class="gradient-box grid-2">
+                    
+                    <div class="grid-item">
+                        <div class="icon-wrap-left">
+                            <img src="images/17.forge_icon_SL.png" alt="SL Track Icon">
+                        </div>
+                        <div class="g-title">
+                            <span class="blue">SL-TRACK</span><br>SYSTEM
+                        </div>
+                        <div class="g-desc">
+                            The SL-track follows the natural curvature of your spine, 
+                            <strong>extending from the neck to the glutes</strong> to provide a smooth, full-length back massage.
+                        </div>
+                        <div class="g-img">
+                            <img src="images/18.forge_SL.png" alt="SL Track System">
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="icon-wrap-left">
+                            <img src="images/19.forge_icon_space-saving.png" alt="Space Saving Icon">
+                        </div>
+                        <div class="g-title">
+                            <span class="blue">SPACE-SAVING</span><br>TECHNOLOGY
+                        </div>
+                        <div class="g-desc">
+                            The space-saving design lets the chair glide forward as it reclines, 
+                            achieving a full recline while requiring <strong>only 3 inches of wall clearance.</strong>
+                        </div>
+                        <div class="g-img">
+                            <img src="images/20.forge_space-saving.png" alt="Space Saving Technology">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="dark-features-list">
+            <div class="container">
+                
+                <div class="feature-row dark-mode">
+                    <div class="f-img">
+                        <img src="images/21.forge_air-cells.png" alt="24-Cell Air Compression">
+                    </div>
+                    <div class="f-txt">
+                        <div class="f-title">
+                            <span class="blue">24-CELL</span><br>AIR COMPRESSION<br>MASSAGE
+                        </div>
+                        <div class="f-desc">
+                            With <strong>24 strategically placed air cells</strong>, the Forge 3D provides targeted, 
+                            gentle compression to relieve tension, deepen relaxation, and promote overall wellness.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-row reverse dark-mode">
+                    <div class="f-img">
+                        <img src="images/23.forge_heating.png" alt="Lumbar Heating Therapy">
+                    </div>
+                    <div class="f-txt">
+                        <div class="icon-wrap">
+                            <img src="images/22.forge_icon_heating.png" alt="Heat Icon">
+                        </div>
+                        <div class="f-title">
+                            <span class="red">LUMBAR</span><br>HEATING THERAPY
+                        </div>
+                        <div class="f-desc">
+                            Soothing lumbar heat enhances the Forge 3D's ability to <strong>ease tension, 
+                            amplifying your overall sense of relaxation.</strong>
+                            <br><br>
+                            <span style="font-size: 12px; line-height:1.2; opacity: 0.7; display: block;">
+                                * The heating therapy provides warmth in the range of approximately 75 - 83°F.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-auto-section">
+        <div class="container text-center">
+            <div class="section-title-blue"><span class="blue">21 AUTO</span> PROGRAMS</div>
+            <div class="gray-card auto-card">
+                <div class="programs-grid">
+                    <div class="p-item"><img src="images/24.forge_icon_full-body.png"><div class="p-name">FULL BODY</div></div>
+                    <div class="p-item"><img src="images/25.forge_icon_neck&shoulder.png"><div class="p-name">NECK & SHOULDER</div></div>
+                    <div class="p-item"><img src="images/26.forge_icon_back&waist.png"><div class="p-name">BACK & WAIST</div></div>
+                    <div class="p-item"><img src="images/27.forge_icon_spine-care.png"><div class="p-name">SPINE CARE</div></div>
+                    <div class="p-item"><img src="images/28.forge_icon_entertainment.png"><div class="p-name">ENTERTAINMENT</div></div>
+                    <div class="p-item"><img src="images/29.forge_icon_fatigue.png"><div class="p-name">FATIGUE</div></div>
+                    <div class="p-item"><img src="images/30.forge_icon_seated.png"><div class="p-name">STRETCHING</div></div>
+                    <div class="p-item"><img src="images/31.forge_icon_sport.png"><div class="p-name">SPORT</div></div>
+                    <div class="p-item"><img src="images/32.forge_icon_meridian.png"><div class="p-name">MERIDIAN</div></div>
+                    <div class="p-item"><img src="images/33.forge_icon_light-sound-rhythm.png"><div class="p-name">LIGHT SOUND</div></div>
+                    <div class="p-item"><img src="images/34.forge_icon_good-night.png"><div class="p-name">GOOD NIGHT</div></div>
+                    <div class="p-item"><img src="images/35.forge_icon_light-sound-dreaming.png"><div class="p-name">DREAMING</div></div>
+                    <div class="p-item"><img src="images/36.forge_icon_relax-massage.png"><div class="p-name">RELAX</div></div>
+                    <div class="p-item"><img src="images/37.forge_icon_comfort.png"><div class="p-name">COMFORT</div></div>
+                    <div class="p-item"><img src="images/38.forge_icon_leisure.png"><div class="p-name">LEISURE</div></div>
+                    <div class="p-item"><img src="images/39.forge_icon_balance.png"><div class="p-name">BALANCE</div></div>
+                    <div class="p-item"><img src="images/40.forge_icon_3D-escort.png"><div class="p-name">3D ESCORT</div></div>
+                    <div class="p-item"><img src="images/41.forge_icon_3D-back.png"><div class="p-name">3D BACK</div></div>
+                    <div class="p-item"><img src="images/42.forge_icon_3D-hip.png"><div class="p-name">3D HIP</div></div>
+                    <div class="p-item"><img src="images/43.forge_icon_3D-stretch.png"><div class="p-name">3D STRETCH</div></div>
+                    <div class="p-item"><img src="images/44.forge_icon_3D-shoulder.png"><div class="p-name">3D SHOULDER</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-manual-section">
+        <div class="container text-center">
+            <div class="section-title-blue"><span class="blue">11 MANUAL</span> MODES</div>
+            <div class="gray-card manual-card">
+                <div class="manual-flex">
+                    <div class="p1-item"><img src="images/45.forge_icon_kneading.png"><div class="p1-name">KNEADING</div></div>
+                    <div class="p1-item"><img src="images/46.forge_icon_tappingI.png"><div class="p1-name">TAPPING I</div></div>
+                    <div class="p1-item"><img src="images/47.forge_icon_tappingII.png"><div class="p1-name">TAPPING II</div></div>
+                    <div class="p1-item"><img src="images/48.forge_icon_knead&tap.png"><div class="p1-name">KNEAD & TAP</div></div>
+                    <div class="p1-item"><img src="images/49.forge_icon_shiatsuI.png"><div class="p1-name">SHIATSU I</div></div>
+                    
+                    <div class="p1-item"><img src="images/50.forge_icon_shiatsuII.png"><div class="p1-name">SHIATSU II</div></div>
+                    <div class="p1-item"><img src="images/51.forge_icon_shiatsuIII.png"><div class="p1-name">SHIATSU III</div></div>
+                    <div class="p1-item"><img src="images/52.forge_icon_shiatsuIV.png"><div class="p1-name">SHIATSU IV</div></div>
+                    <div class="p1-item"><img src="images/53.forge_icon_grasp.png"><div class="p1-name">GRASP</div></div>
+                    <div class="p1-item"><img src="images/54.forge_icon_3D_I.png"><div class="p1-name">3D I</div></div>
+                    <div class="p1-item"><img src="images/55.forge_icon_3D_II.png"><div class="p1-name">3D II</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detailed-features-center">
+        <div class="container">
+            
+            <div class="gray-feature-row">
+                <div class="gf-txt">
+                    <div class="f-title"><span class="blue">SPECIALIZED</span><br>FOOT ROLLERS</div>
+                    <div class="f-desc">
+                        The Specialized foot rollers use reflexology ridges to target key acupuncture points, 
+                        with <strong>three rollers per foot</strong> for a complete heel-to-toe massage.
+                    </div>
+                </div>
+                <div class="gf-img"><img src="images/56.forge_footrollers.png" alt="Foot Rollers"></div>
+            </div>
+
+            <div class="gray-feature-row reverse">
+                <div class="gf-img">
+                    <img src="images/58.forge_footrest.png" alt="Extendable Footrest">
+                </div>
+                <div class="gf-txt">
+                    <div class="icon-wrap">
+                        <img src="images/57.forge_icon_extend.png" alt="Extension Icon">
+                    </div>
+                    <div class="f-title">
+                        <span class="blue">SPRING-LOADED</span><br>EXTENDABLE FOOTREST
+                    </div>
+                    <div class="f-desc">
+                        To accommodate a wide range of heights and body types, the Forge 3D includes a spring-loaded 
+                        footrest that <strong>extends up to 7 inches</strong> for a more personalized fit and comfort.
+                    </div>
+                </div>
+            </div>
+
+            <div class="gray-feature-row">
+                <div class="gf-txt">
+                    <div class="f-title"><span class="blue">CONVENIENT</span><br>REMOTE CONTROLLER</div>
+                    <div class="f-desc">
+                        Take control of your ultimate relaxation with the Forge 3D's <strong>sleek, easy-to-use remote.</strong>
+                    </div>
+                </div>
+                <div class="gf-img"><img src="images/59.forge_remote.png" alt="Remote Controller"></div>
+            </div>
+
+            <div class="gray-feature-row reverse">
+                <div class="gf-img">
+                    <img src="images/61.forge_speakers.png" alt="Bluetooth Speakers">
+                </div>
+                <div class="gf-txt">
+                    <div class="icon-wrap">
+                        <img src="images/60.forge_icon_bluetooth.png" alt="Bluetooth Icon">
+                    </div>
+                    <div class="f-title">
+                        <span class="blue">PREMIUM</span><br>BLUETOOTH SPEAKERS
+                    </div>
+                    <div class="f-desc">
+                        Enjoy rich, high-quality audio through the chair's built-in Bluetooth speakers, 
+                        <strong>allowing your favorite music or sounds</strong> to enhance every moment of relaxation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="gray-feature-row">
+                <div class="gf-txt">
+                    <div class="f-title"><span class="blue">EASY<br>REMOVABLE</span><br>HEADREST</div>
+                    <div class="f-desc">
+                        The removable headrest lets you customize your session, allowing the massage rollers 
+                        create <strong>a deeper, full-back relaxation.</strong>
+                    </div>
+                </div>
+                <div class="gf-img"><img src="images/62.forge_removable-headrest.png" alt="Removable Headrest"></div>
+            </div>
+
+
+            <div class="bottom-clean-grid">
+                
+                <div class="clean-col">
+                    <div class="c-img">
+                        <img src="images/63.forge_side_panels.png" alt="Quick Side Panels">
+                    </div>
+                    <div class="c-txt">
+                        <div class="f-title"><span class="blue">QUICK SIDE</span> PANELS</div>
+                        <div class="f-desc">
+                            Quick-access side panels make it easy to adjust the chair, giving 
+                            <strong>you faster and quick access</strong> during your massage experience.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clean-col">
+                    <div class="c-img">
+                        <img src="images/64.forge_USB.png" alt="USB Charging Port">
+                    </div>
+                    <div class="c-txt">
+                        <div class="f-title"><span class="blue">USB CHARGING</span> PORT</div>
+                        <div class="f-desc">
+                            Stay connected and powered up with the conveniently placed USB-A port beneath the remote, 
+                            letting you <strong>charge devices without interrupting your massage.</strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="doorway-section">
+        <div class="container">            
+            <div class="section-title">MINIMUM DOORWAY & PACKAGING</div>
+            <div class="doorway-layout">
+                <div class="doorway-left">
+                    <img src="images/65.forge_min.doorway.png" alt="Minimum Doorway Size">
+                </div>
+                <div class="doorway-right">
+                    <div class="box-img">
+                        <img src="images/66.forge_packaging.png" alt="Packaging Box Dimensions">
+                    </div>
+                    <div class="measuring-guide">
+                        <div class="guide-title"><strong>Measuring Guide</strong></div>
+                        <div class="guide-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="dimensions-section">
+        <div class="container">
+            <div class="section-title text-center">DIMENSIONS</div>
+            <div class="dimensions-row">
+                <div class="dim-img">
+                    <img src="images/67.forge_dimensions1.png" alt="Forge Front Dimensions">
+                </div>
+                <div class="dim-img">
+                    <img src="images/68.forge_dimensions2.png" alt="Forge Side Dimensions">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Titan Forge 3D</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="#" class="red-link" target="_blank">Download</a>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item"><strong>Upright</strong><span>30.5" x 59.5" x 45.5"</span></div>
+                        <div class="col-item"><strong>Reclined</strong><span>30.5" x 68" x 39"</span></div>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">30.5"</div>
+                </div>
+                <div class="spec-row no-border">
+                    <div class="spec-label">Package Weight</div>
+                    <div class="spec-value">Ask for details</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
