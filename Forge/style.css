@@ -212,7 +212,8 @@ body {margin: 0;}
 
 /* 4. Text Area Styling */
 .light-feature-section .f-txt {
-    padding: 60px;              /* [변경] 레퍼런스 padding 값 반영 */
+    padding: 60px;  
+    width: 80%;            /* [변경] 레퍼런스 padding 값 반영 */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -303,6 +304,7 @@ body {margin: 0;}
     color: #b0b0b0; /* 어두운 배경 위 회색 텍스트 */
     line-height: 1.6;
     letter-spacing: 0.02em;
+    width: 90%;
 }
 
 .dark-section-wrapper strong {
@@ -391,7 +393,7 @@ body {margin: 0;}
 
 .dual-gradient-section .g-desc {
     margin-bottom: 60px;        /* 텍스트와 하단 이미지 사이 넉넉한 간격 */
-    width: 95%;                 /* 텍스트 줄바꿈 자연스럽게 */
+    width: 80%;                 /* 텍스트 줄바꿈 자연스럽게 */
 }
 
 /* 5. 하단 이미지 처리 */
@@ -654,7 +656,10 @@ body {margin: 0;}
     margin: 0 auto;
     padding: 0; /* 컨테이너 패딩 제거 (박스 자체 너비 90%로 제어) */
 }
-
+.detailed-features-center .gray-feature-row .f-desc {
+    max-width: 80%;      /* 너비를 80%로 제한 */
+    /* margin-bottom: 0; */ /* 필요 시 여백 조정 */
+}
 /* --- [Type 1] Gray Feature Rows (1~5번 박스) --- */
 .detailed-features-center .gray-feature-row {
     display: flex;
@@ -740,7 +745,7 @@ body {margin: 0;}
 /* --- Typography (Common) --- */
 .detailed-features-center .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 32px;
     line-height: 1.2;
     color: #000;
