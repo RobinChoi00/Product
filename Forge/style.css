@@ -740,7 +740,10 @@ body {margin: 0;}
     padding: 30px 10px 0 10px;
     text-align: left;
 }
-
+.bottom-clean-grid .clean-col .f-desc {
+    max-width: 60%;       /* 너비를 80%로 제한 (원하시는 만큼 조절하세요) */
+    line-height: 1.6;     /* 줄간격 유지 */
+}
 
 /* --- Typography (Common) --- */
 .detailed-features-center .f-title {
