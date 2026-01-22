@@ -259,35 +259,6 @@ body {margin: 0;}
     color: #000000;            /* [변경] #606060 -> #000000 */
 }
 
-/* =========================================
-   Mobile Optimization (Max-width: 768px)
-   ========================================= */
-@media (max-width: 768px) {
-    .light-feature-section .feature-row,
-    .light-feature-section .feature-row.reverse {
-        flex-direction: column;
-        width: 95%; /* 모바일에서는 90%보다 조금 더 넓게 쓰는 것이 일반적 */
-    }
-
-    .light-feature-section .f-txt,
-    .light-feature-section .f-img {
-        width: 100%;
-        flex: auto;
-    }
-    
-    /* HTML 구조상 두 번째 박스(Body Scan)는 이미지가 먼저 오므로 
-       CSS order 조절 없이도 자연스럽게 이미지->텍스트 순서가 됨.
-       첫 번째 박스만 텍스트->이미지 순서인데, 모바일에서 이미지 위로 올리고 싶다면 아래 주석 해제 */
-    
-    /* .light-feature-section .feature-row .f-img { order: -1; }
-    */
-
-    .light-feature-section .f-txt {
-        padding: 40px 24px;
-        text-align: center;
-    }
-}
-
 
 
 
@@ -506,34 +477,6 @@ body {margin: 0;}
     margin-top: 0; 
 }
 
-/* =========================================
-   [Mobile] Responsive Update (필수)
-   ========================================= */
-@media (max-width: 768px) {
-    .feature-row.dark-mode,
-    .feature-row.dark-mode.reverse {
-        flex-direction: column;
-        margin-bottom: 80px;
-        gap: 40px;
-        
-        /* [모바일 수정] 모바일에서는 옆 패딩을 줄여서 넓게 쓰기 */
-        padding: 0 10px; 
-    }
-
-    .feature-row.dark-mode .f-img,
-    .feature-row.dark-mode .f-txt {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-    
-    .feature-row.dark-mode.reverse .f-img img {
-        transform: none;
-        -webkit-mask-image: none;
-        mask-image: none;
-    }
-}
-
 
 
 
@@ -681,46 +624,6 @@ body {margin: 0;}
     letter-spacing: 0.02em;
 }
 
-/* =========================================
-   Mobile Optimization (Max-width: 768px)
-   ========================================= */
-@media (max-width: 768px) {
-    /* 카드 여백 축소 */
-    .gray-card {
-        padding: 40px 20px;
-        width: 95%;
-        border-radius: 30px;
-    }
-
-    /* Auto Programs: 7열 -> 3열로 변경 */
-    .programs-grid {
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 30px;
-        column-gap: 10px;
-    }
-
-    /* Manual Modes: 간격 조정 */
-    .manual-flex {
-        gap: 30px;
-    }
-
-    /* 아이콘 크기 축소 */
-    .p-item img, .p1-item img {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* 폰트 사이즈 축소 */
-    .p-name, .p1-name {
-        font-size: 11px;
-    }
-    
-    .section-title-blue {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-}
-
 
 
 
@@ -854,51 +757,7 @@ body {margin: 0;}
 .detailed-features-center .f-desc strong { color: #000; font-weight: 600; }
 
 
-/* =========================================
-   Mobile Optimization
-   ========================================= */
-@media (max-width: 768px) {
-    /* 모바일에서는 너비를 다시 넓혀서 답답하지 않게 */
-    .detailed-features-center .gray-feature-row,
-    .bottom-clean-grid {
-        width: 95%; /* 모바일은 95% 정도가 적당 */
-    }
 
-    .detailed-features-center .gray-feature-row,
-    .detailed-features-center .gray-feature-row.reverse {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .detailed-features-center .gray-feature-row .gf-txt,
-    .detailed-features-center .gray-feature-row .gf-img {
-        width: 100%;
-        max-width: 100%;
-        flex: auto;
-    }
-
-    .detailed-features-center .gray-feature-row .gf-txt {
-        padding: 40px 20px;
-        text-align: center;
-    }
-    
-    .detailed-features-center .gray-feature-row .gf-img {
-        height: 300px;
-    }
-
-    /* 하단 그리드 모바일 */
-    .bottom-clean-grid {
-        flex-direction: column;
-        gap: 50px;
-    }
-    .clean-col {
-        width: 100%;
-    }
-    .clean-col .c-txt {
-        text-align: center;
-        padding: 20px 0 0 0;
-    }
-}
 
 
 
@@ -1024,42 +883,6 @@ body {margin: 0;}
 
 
 
-/* =========================================
-   Mobile Optimization
-   ========================================= */
-@media (max-width: 768px) {
-    .doorway-section {
-        padding: 60px 0;
-    }
-
-    .doorway-section .section-title {
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-
-    .doorway-layout {
-        flex-direction: column; /* 세로 배치 */
-        align-items: center;
-        gap: 50px;
-    }
-
-    .doorway-left, .doorway-right {
-        max-width: 100%;
-        width: 100%;
-        text-align: center; /* 모바일에서 텍스트 중앙 정렬 */
-    }
-
-    /* 모바일에서 박스 이미지 중앙 정렬 */
-    .doorway-right .box-img {
-        margin-bottom: 30px;
-    }
-
-    /* 가이드 텍스트는 왼쪽 정렬 유지하되 패딩 추가 */
-    .measuring-guide {
-        text-align: left;
-        padding: 0 10px;
-    }
-}
 
 
 
@@ -1136,34 +959,6 @@ body {margin: 0;}
 }
 
 
-/* =========================================
-   Mobile Optimization
-   ========================================= */
-@media (max-width: 768px) {
-    .dimensions-section {
-        padding: 60px 0;
-    }
-
-    .dimensions-section .section-title {
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-
-    /* 모바일에서는 세로로 쌓기 */
-    .dimensions-row {
-        flex-direction: column;
-        align-items: center; /* 중앙 정렬 */
-        gap: 50px;
-    }
-
-    /* 모바일에서는 너비 제한 해제하고 꽉 차게 */
-    .dim-img:first-child,
-    .dim-img:last-child {
-        flex: auto;
-        width: 100%;
-        max-width: 90%; /* 화면 90% 정도 차지 */
-    }
-}
 
 
 
@@ -1273,4 +1068,251 @@ body {margin: 0;}
 
 .red-link:hover {
     opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   MOBILE RESPONSIVE STYLES (Max-Width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* [1] Intro Description */
+    .intro-desc {
+        width: 90%;          /* 고정 폭(850px) 해제하고 화면에 맞춤 */
+        margin: 0 auto 30px; /* 마이너스 마진 제거하여 겹침 방지 */
+        font-size: 14px;     /* 글자 크기 축소 */
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* [2] Slider Group (의자 슬라이더) */
+    .intro-slider-group {
+        padding: 40px 0;     /* 여백 축소 */
+    }
+
+    .slider-main {
+        flex-direction: column; /* 가로 배치 -> 세로 배치 */
+        height: auto;           /* 높이 자동 */
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    #current-chair {
+        width: 80%;             /* 의자 이미지 크기 화면 비례 */
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* 화살표 버튼 위치 조정 */
+    .nav-btn {
+        display: none; /* (선택) 모바일에서는 터치 스와이프가 익숙하므로 화살표 숨기기 
+                          혹은 아래 주석을 해제하여 하단에 배치 가능 */
+        /* margin: 10px; transform: rotate(90deg); */ 
+    }
+
+    /* [3] Light Feature & Detailed Features (공통: 50:50 박스 -> 세로 적층) */
+    .light-feature-section .container,
+    .detailed-features-center .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* 박스 컨테이너 */
+    .light-feature-section .feature-row,
+    .detailed-features-center .gray-feature-row {
+        flex-direction: column; /* 이미지/텍스트 세로 배치 */
+        height: auto;
+        margin-bottom: 30px;
+        border-radius: 0; /* 모바일에서는 꽉 차게 보이도록 둥근 모서리 제거 (선택사항) */
+    }
+
+    /* Reverse(지그재그) 해제 -> 무조건 이미지 위, 텍스트 아래 */
+    .light-feature-section .feature-row.reverse,
+    .detailed-features-center .gray-feature-row.reverse {
+        flex-direction: column;
+    }
+
+    /* 내부 요소 크기 */
+    .light-feature-section .f-txt,
+    .light-feature-section .f-img,
+    .detailed-features-center .gray-feature-row .gf-txt,
+    .detailed-features-center .gray-feature-row .gf-img {
+        width: 100%;
+        max-width: 100%;
+        flex: auto;
+    }
+
+    /* 텍스트 영역 여백 */
+    .light-feature-section .f-txt,
+    .detailed-features-center .gray-feature-row .gf-txt {
+        padding: 40px 20px;
+        text-align: center; /* 모바일은 중앙 정렬이 깔끔함 */
+    }
+
+    /* 폰트 크기 조정 */
+    .light-feature-section .f-title,
+    .detailed-features-center .f-title,
+    .section-title-blue,
+    .doorway-section .section-title,
+    .dimensions-section .section-title {
+        font-size: 26px !important; /* 제목 크기 축소 */
+    }
+
+    /* [4] Dual Gradient Section (Zero Gravity 하단) */
+    .dual-gradient-section .gradient-box {
+        flex-direction: column;
+        padding: 50px 20px 0 20px;
+        gap: 40px;
+    }
+
+    .dual-gradient-section .grid-item {
+        width: 100%;
+        align-items: center; /* 중앙 정렬 */
+        text-align: center;
+    }
+    
+    .dual-gradient-section .g-desc {
+        width: 100%;
+    }
+
+    /* [5] Dark Features List */
+    .feature-row.dark-mode,
+    .feature-row.dark-mode.reverse {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .feature-row.dark-mode .f-img,
+    .feature-row.dark-mode .f-txt {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    /* 마스크 효과 모바일 위치 수정 */
+    .feature-row.dark-mode.reverse .f-img img {
+        transform: none;
+    }
+
+    /* [6] Programs (Auto) - 7열 -> 2열 그리드 */
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
+        column-gap: 15px;
+        row-gap: 40px;
+        padding: 0 10px;
+    }
+    
+    /* 마지막 홀수 아이템 중앙 정렬 (선택) */
+    .programs-grid .p-item:last-child {
+        grid-column: span 2; 
+    }
+
+    /* [7] Programs (Manual) - 벽돌 배치 초기화 -> 3열 그리드 */
+    .manual-flex {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3열 */
+        gap: 30px 10px !important;
+        max-width: 100% !important;
+        padding: 0 10px;
+    }
+
+    /* 데스크탑용 강제 설정(span 2, start 2 등) 전부 해제 */
+    .manual-flex .p1-item,
+    .manual-flex .p1-item:nth-child(n) {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        grid-column-start: auto !important;
+        margin: 0 auto !important;
+    }
+
+    /* [8] Detailed Features - Bottom Clean Grid (Side Panel & USB) */
+    .bottom-clean-grid {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    .clean-col {
+        width: 100%;
+    }
+
+    .clean-col .c-txt {
+        text-align: center;
+        padding: 20px 0 0 0;
+    }
+
+    /* [9] Doorway Section */
+    .doorway-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .doorway-left, .doorway-right {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .doorway-right .box-img img {
+        margin: 0 auto 30px auto;
+    }
+
+    .measuring-guide {
+        text-align: left; /* 가이드 텍스트는 왼쪽 정렬 유지 */
+        padding: 0 15px;
+    }
+
+    /* [10] Dimensions Section */
+    .dimensions-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .dim-img:first-child,
+    .dim-img:last-child {
+        flex: auto;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    /* [11] Specs Table */
+    .spec-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .spec-label {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 5px;
+        color: #888; /* 라벨 색상 살짝 연하게 구분 */
+    }
+
+    .spec-value {
+        width: 100%;
+    }
+
+    .spec-value.split-col {
+        justify-content: center;
+        gap: 30px;
+    }
 }
