@@ -2365,3 +2365,29 @@ body > div:nth-of-type(5) .f-desc {
         padding: 0 !important;
     }
 }
+
+
+
+
+
+
+/* ==========================================================================
+   [MOBILE FIX] CENTER DOORWAY IMAGE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. 도어 이미지 컨테이너를 중앙 정렬로 변경 */
+    .doorway-left {
+        justify-content: center !important; /* 기존 flex-end 해제 */
+        display: flex !important;
+        width: 100% !important;
+        margin-bottom: 30px !important; /* 아래 텍스트와 간격 확보 */
+    }
+
+    /* 2. 이미지 자체도 중앙에 위치하도록 강제 */
+    .doorway-left img {
+        margin: 0 auto !important;
+        display: block !important;
+    }
+}
