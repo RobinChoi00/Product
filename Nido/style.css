@@ -1056,7 +1056,7 @@
 }
 
 .doorway-left img {
-    width: 95%;
+    width: 70%;
     max-width: 330px;          /* 이미지 크기 제한 */
     height: auto;
     object-fit: contain;
@@ -1464,8 +1464,7 @@
 /* 1. 2-Stage & Specialized Foot Rollers 이미지 크기 80% 축소 */
 .wide-img img,
 .center-img-wrap img {
-    width: 80% !important;
-    max-width: 80% !important;
+    width: 65% !important;
     margin: 0 auto; /* 중앙 정렬 확실하게 */
     display: block;
 }
@@ -1588,3 +1587,171 @@
     gap: 50px 40px !important; /* 세로 100px, 가로 80px 간격 */
 }
 
+
+
+
+
+
+
+
+/* =========================================
+   [FINAL FIX] DETAILED ADJUSTMENTS
+   ========================================= */
+
+/* 1. Intelligent & Rocking 이미지 확대 및 하단 밀착 */
+.feature-row-card .f-img img {
+    max-width: 650px !important; /* 기존 500px -> 650px 확대 */
+    width: 110% !important;      /* 부모 영역보다 살짝 더 크게 */
+}
+
+/* Intelligent Voice Control 이미지 하단 붙이기 */
+/* (첫 번째 feature-row-card의 이미지를 타겟팅) */
+.container:nth-of-type(3) .feature-row-card {
+    padding-bottom: 0 !important; /* 박스 하단 패딩 제거 */
+    align-items: flex-end !important; /* 아래쪽 정렬 */
+    overflow: hidden; /* 튀어나가는 이미지 자르기 */
+}
+.container:nth-of-type(3) .feature-row-card .f-img img {
+    margin-bottom: -4px; /* 미세하게 하단 공백 제거 */
+}
+
+
+/* 2. SL-Track & Space-Saving 높이 맞춤 */
+.dual-gradient-section .grid-2 {
+    align-items: stretch !important; /* 두 컬럼 높이 동일하게 */
+}
+
+.dual-gradient-section .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 내용을 위아래로 분산 */
+    height: 100%;
+}
+
+/* Space-Saving 이미지가 SL-Track과 높이가 맞도록 조정 */
+.dual-gradient-section .grid-item:last-child .g-img {
+    margin-top: auto; /* 이미지를 가능한 아래로 밀어냄 */
+    margin-bottom: -10px; /* SL-Track 이미지 위치와 시각적 보정 */
+}
+
+
+/* 3. Lumbar Heating (텍스트와 이미지 간격 벌리기) */
+.light-feature-section .feature-row.reverse {
+    gap: 80px !important; /* 간격 확장 */
+}
+.light-feature-section .feature-row.reverse .f-txt {
+    padding-left: 40px !important; /* 텍스트 왼쪽에 추가 여백 */
+}
+
+
+/* 4. Auto & Manual & Precision 제목 중앙 정렬 */
+.programs-auto-section .section-title-blue,
+.programs-manual-section .section-title-blue,
+.sub-title-precision {
+    text-align: center !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 5. Foot Rollers: 이미지 부분만 회색 박스 적용 */
+/* (1) 기존 전체 회색 박스 해제 */
+.center-feature-card.grey-card-box {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 80px !important;
+}
+
+/* (2) 이미지 래퍼에만 회색 박스 적용 */
+.center-img-wrap {
+    background-color: #efefef;
+    border-radius: 30px;
+    padding: 60px 40px; /* 박스 내부 여백 */
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+.center-img-wrap img {
+    width: 80% !important; /* 이미지 크기 적절히 조절 */
+    mix-blend-mode: multiply; /* 회색 배경과 자연스럽게 */
+}
+
+
+/* 6. Footrest & Back Pad: 이미지 부분만 회색 박스 적용 */
+/* (1) 전체 박스 배경 투명화 */
+.light-feature-section .grey-card-box {
+    background-color: transparent !important;
+    padding: 0 !important;
+    align-items: center !important; /* 수직 중앙 정렬 */
+    margin-bottom: 100px !important;
+}
+
+/* (2) 이미지 영역(.f-img)을 회색 박스로 변신 */
+.light-feature-section .grey-card-box .f-img {
+    background-color: #efefef;
+    border-radius: 30px;
+    padding: 0 !important; /* 이미지가 박스에 꽉 차게 */
+    overflow: hidden;
+    flex: 1; /* 너비 비율 유지 */
+    height: 100%;
+    min-height: 400px; /* 높이 확보 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* (3) 이미지 스타일 조정 */
+.light-feature-section .grey-card-box .f-img img {
+    width: 100% !important;
+    height: auto;
+    object-fit: cover; /* 박스를 꽉 채우도록 */
+    border-radius: 0 !important; /* 박스가 둥그니까 이미지는 직각 */
+}
+
+/* (4) 텍스트 영역 여백 조정 */
+.light-feature-section .grey-card-box .f-txt {
+    padding: 0 40px !important; /* 텍스트와 박스 사이 간격 */
+    flex: 0.8; /* 텍스트 영역 비율 살짝 줄임 */
+}
+
+
+
+
+
+/* =========================================
+   [FIX] DIMENSIONS IMAGE SIZE ADJUSTMENT
+   ========================================= */
+
+/* 1. 오른쪽 이미지(측면) 영역 대폭 확대 */
+.dimensions-row .dim-img:last-child {
+    flex: 2.5 !important;      /* [핵심] 왼쪽보다 2.5배 더 넓은 공간 차지 */
+    max-width: 900px !important; /* 너비 제한을 넉넉하게 풂 */
+}
+
+/* 2. 왼쪽 이미지(정면)는 작게 유지 */
+.dimensions-row .dim-img:first-child {
+    flex: 1 !important;        /* 1의 비율 */
+    max-width: 350px !important; /* 너무 커지지 않게 제한 */
+}
+
+/* 3. 이미지 자체는 영역을 꽉 채우도록 설정 */
+.dim-img img {
+    width: 100% !important;
+    height: auto;
+    display: block;
+}
+
+/* 모바일 대응 (세로 배치 시) */
+@media (max-width: 768px) {
+    .dimensions-row {
+        flex-direction: column; /* 위아래로 배치 */
+        align-items: center;
+    }
+    .dimensions-row .dim-img:last-child,
+    .dimensions-row .dim-img:first-child {
+        flex: auto !important;
+        max-width: 100% !important;
+        width: 100%;
+    }
+}
