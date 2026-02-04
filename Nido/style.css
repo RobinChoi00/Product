@@ -1491,7 +1491,7 @@
 
 /* 4. 6 Manual Modes 아이콘 간격 벌리기 */
 .manual-flex {
-    gap: 70px !important; /* 기존 40px -> 70px로 확장 */
+    gap: 120px !important; /* 기존 40px -> 70px로 확장 */
     width: 90% !important;
     margin: 0 auto;
 }
@@ -1742,16 +1742,91 @@
     display: block;
 }
 
-/* 모바일 대응 (세로 배치 시) */
-@media (max-width: 768px) {
-    .dimensions-row {
-        flex-direction: column; /* 위아래로 배치 */
-        align-items: center;
-    }
-    .dimensions-row .dim-img:last-child,
-    .dimensions-row .dim-img:first-child {
-        flex: auto !important;
-        max-width: 100% !important;
-        width: 100%;
-    }
+
+
+
+
+/* =========================================
+   [FIX] BACK PAD POSITION SWAP (Image Left, Text Right)
+   ========================================= */
+
+/* Back Pad 섹션(.grey-card-box이면서 .reverse인 것)만 타겟팅 */
+/* Flex 방향을 row-reverse로 설정하여 [이미지 | 텍스트] 순서로 변경 */
+.light-feature-section .grey-card-box.reverse {
+    flex-direction: row-reverse !important;
 }
+
+
+
+
+/* =========================================
+   [FIX] BACK PAD TEXT VERTICAL ALIGNMENT
+   ========================================= */
+
+/* Back Pad 섹션(.reverse)의 텍스트 영역만 타겟팅 */
+.light-feature-section .grey-card-box.reverse .f-txt {
+    
+    /* 1. 수직 정렬을 중앙(Center)에서 시작점(Start)으로 변경 */
+    align-self: flex-start !important; 
+    
+    /* 2. 회색 박스 상단 패딩(60px)에서 30px 정도 더 내려온 위치로 조정 */
+    /* 이렇게 하면 완전히 천장에 붙지 않고, 적당히 위쪽으로 올라가 보입니다 */
+    margin-top: 30px !important; 
+    
+    /* (참고) 필요하다면 margin-top 값을 줄이거나 늘려서 높이를 조절하세요 */
+}
+
+
+
+
+
+/* =========================================
+   [FIX] REMOVE PADDING FROM AIR 3D SECTION
+   ========================================= */
+
+/* 1. 그리드 컨테이너의 양옆 패딩(50px) 제거 */
+.grid-2-card {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+    /* 혹시 모를 너비 제한 해제 */
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+
+
+
+/* =========================================
+   [FIX] TEXT BOX WIDTH ADJUSTMENTS
+   ========================================= */
+
+/* 1. Rocking Motion: 텍스트 박스 넓히기 */
+/* Rocking 섹션이 위치한 5번째 컨테이너를 타겟팅하여 너비 제한을 풂 */
+body > div:nth-of-type(5) .f-desc {
+    width: 100% !important;      /* 기존 80% -> 100%로 확대 */
+    max-width: 100% !important;
+}
+
+/* 2. 2-Stage Zero Gravity: 텍스트 박스 줄이기 */
+/* 설명글이 너무 퍼지지 않게 중앙으로 모음 */
+.zg-desc.center-p {
+    max-width: 650px !important; /* 기존 900px -> 650px로 축소 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* =========================================
+   [FIX] REMOVE MARGIN FROM SL-TRACK TEXT
+   ========================================= */
+
+/* SL-Track 설명글 아래의 여백을 강제로 제거 */
+.dual-gradient-section .grid-item.item-left .g-desc {
+    margin-bottom: 0 !important; /* 간격 없애기 */
+    padding-bottom: 0 !important;
+}
+
+/* (참고) 만약 이미지를 더 위로 올리고 싶다면 마이너스 마진 사용 가능 */
+/* .dual-gradient-section .grid-item.item-left .g-desc { margin-bottom: -20px !important; } */
