@@ -2485,6 +2485,7 @@ body > div:nth-of-type(5) .f-desc {
 
 
 
+
 /* ==========================================================================
    [MOBILE FINAL FIX] ICON ALIGNMENT & CARD LAYOUT
    ========================================================================== */
@@ -2683,4 +2684,75 @@ body > div:nth-of-type(5) .f-desc {
 
 
 
- 
+ @media (min-width: 769px) {
+
+    /* 1. [핵심] 회색 박스 크기 축소 (패딩 대폭 감소) */
+    .user-suitability-section {
+        padding-top: 20px !important;    /* 기존 80px -> 30px */
+        padding-bottom: 20px !important; /* 기존 80px -> 30px */
+        /* 결과: 회색 박스 위아래 높이가 확 줄어듭니다 */
+    }
+
+    /* 2. 전체 레이아웃: 여백 밸런스 */
+    .suitability-wrapper {
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: space-between !important;
+        gap: 20px !important;
+        overflow: visible !important;
+        margin-top: 10px !important;      /* 제목과의 간격도 살짝 줄임 */
+        width: 100% !important;
+    }
+
+    /* 3. [왼쪽 영역] 의자 + 배지 */
+    .suitability-left {
+        flex: 0 0 42% !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important; /* 오른쪽(사람들 쪽)으로 붙이기 */
+        margin-right: 0 !important;
+        padding-right: 20px !important;
+    }
+
+    /* (A) 의자 이미지: 85% 크기 */
+    .dim-base-img {
+        width: 85% !important;       /* 적당한 크기 */
+        max-width: 400px !important;
+        height: auto !important;
+        display: block !important;
+        margin-bottom: 0 !important;
+        transform: none !important;  
+        
+        /* 오른쪽 정렬 */
+        margin-left: auto !important; 
+        margin-right: 0 !important;
+    }
+
+    /* (B) Recommended User 배지 */
+    .badge-overlay {
+        position: absolute !important;
+        top: -15px !important;       /* 박스가 작아졌으니 살짝 더 위로 */
+        left: auto !important;       
+        right: 10px !important;      /* 의자 따라 오른쪽으로 이동 */
+        width: 160px !important;
+        z-index: 10;
+        margin: 0 !important;
+    }
+
+    /* 4. [오른쪽 영역] Customer A-D */
+    .suitability-right {
+        flex: 0 0 55% !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    /* 이미지 높이 제한 (왼쪽 의자와 키 맞춤) */
+    .users-full-img {
+        width: auto !important;
+        height: auto !important;
+        max-height: 460px !important; 
+        object-fit: contain;
+    }
+}
