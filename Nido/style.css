@@ -2478,39 +2478,6 @@ body > div:nth-of-type(5) .f-desc {
 }
 
 
-/* =========================================
-   [PC FIX] SUITABILITY TEXT & IMAGE SIZE
-   ========================================= */
-
-@media (min-width: 769px) {
-
-    /* 1. 텍스트 박스 너비 "정말 조금만" 줄이기 */
-    /* 기존 100%에서 -> 90% 정도로 줄여서 너무 퍼지지 않게 함 */
-    .user-suitability-section .section-title-blue {
-        width: 90% !important;
-        max-width: 900px !important; /* 최대 너비 제한 */
-    }
-
-    /* 2. 오른쪽 이미지(Customer A-D) 위아래로 키우기 */
-    /* 높이를 강제로 지정하여 키를 키웁니다 */
-    .suitability-right .users-full-img {
-        height: 550px !important;    /* [핵심] 높이를 550px로 고정 (필요시 600px로 늘리세요) */
-        width: auto !important;      /* 비율 유지를 위해 너비는 자동 계산 */
-        max-width: none !important;  /* 너비 제한을 풀어버림 */
-        
-        /* 이미지가 커지면서 잘리지 않도록 플렉스 설정 보정 */
-        object-fit: contain;
-    }
-    
-    /* 오른쪽 영역 자체도 이미지를 담을 수 있게 확장 */
-    .suitability-right {
-        flex: 8 !important;          /* 영역 비율을 좀 더 넓힘 (기존 7 -> 8) */
-        align-items: flex-end !important; /* 바닥 라인 맞춤 */
-    }
-}
-
-
-
 
 
 
