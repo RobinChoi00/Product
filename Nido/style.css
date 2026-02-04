@@ -77,7 +77,7 @@ body {
 .group-slider {
     position: relative;
     max-width: 100%;
-    margin : 0 auto 80px ;       /* 중앙 정렬 */
+    margin : 0 auto 180px ;       /* 중앙 정렬 */
     
 }
 
@@ -1031,29 +1031,95 @@ body {
     padding-bottom: 50px;        /* 하단 여백 */
 }
 
-/* 모바일 대응: 텍스트 여백 조정 */
-@media (max-width: 768px) {
-    .grid-item:not(.item-left) .g-title,
-    .grid-item:not(.item-left) .g-desc {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .grid-item:not(.item-left) .g-desc {
-        padding-bottom: 30px;
-    }
-    
-    /* 모바일에서 Voice Control 아이콘 중앙 정렬 복구 방지 (왼쪽 유지) */
-    .feature-row.text-left,
-    .feature-row.text-left .f-txt,
-    .feature-row.text-left .top-icon-wrap {
-        text-align: left !important;
-        justify-content: flex-start !important;
-        align-items: flex-start !important;
-    }
+
+.dark-section-wrapper {
+    margin-bottom: 60px !important; /* [요청] 섹션 사이 거리 60px 추가 */
 }
 
 
+/* =========================================
+   [CLEAN] GRADIENT FLOW SECTION (2-Stage ~ Lumbar)
+   ========================================= */
 
+/* 1. 배경 통합 (회색 박스 제거 & 그라데이션 연결) */
+
+/* 상단: 2-Stage Zero Gravity (하늘색 -> 흰색) */
+.zero-gravity-section {
+    background: linear-gradient(180deg, #eefcfd 0%, #ffffff 90%);
+    padding-bottom: 0; /* 아래 섹션과 자연스럽게 연결 */
+}
+
+/* 중단: SL-Track / Space Saving (흰색 배경) */
+.dual-gradient-section {
+    background: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 0; /* 아래 섹션과 연결 */
+}
+
+/* 하단: 24-Cell / Lumbar (흰색 -> 하늘색) */
+.light-feature-section {
+    background: linear-gradient(180deg, #ffffff 10%, #eefcfd 100%);
+    padding-top: 40px;
+}
+
+/* 2. 기존 박스 스타일 초기화 (배경 투명하게) */
+.light-feature-section .feature-row,
+.dual-gradient-section .grid-item {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* =========================================
+   [CLEAN] SL-TRACK & SPACE SAVING (Left Align)
+   ========================================= */
+
+/* 왼쪽 정렬 강제 적용 */
+.dual-gradient-section .grid-item.item-left {
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* 아이콘 왼쪽 정렬 */
+.dual-gradient-section .grid-item.item-left .icon-wrap-left {
+    justify-content: flex-start;
+    display: flex; /* Flex 속성 확실히 부여 */
+}
+
+/* 설명 텍스트 박스 너비 줄이기 */
+.dual-gradient-section .grid-item.item-left .g-desc {
+    max-width: 420px;
+    margin-right: auto;
+}
+
+/* =========================================
+   [CLEAN] 24-CELL & LUMBAR ADJUSTMENTS
+   ========================================= */
+
+/* 1. 24-Cell Image (이미지 크기 줄임) */
+.light-feature-section .feature-row:first-child .f-img img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* 2. Lumbar Heating (위치 변경 & 이미지 효과) */
+.light-feature-section .feature-row:last-child {
+    flex-direction: row; /* 이미지 좌측, 텍스트 우측 */
+    gap: 80px;
+}
+
+/* Lumbar 이미지 스타일 */
+.light-feature-section .feature-row:last-child .f-img img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    
+    /* Fade Out Mask 효과 */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
 
 
 
