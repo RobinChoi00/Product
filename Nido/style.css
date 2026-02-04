@@ -50,7 +50,7 @@ body {
     margin: 0 auto 60px auto; /* 하단 여백 60px */
     font-family: var(--font-main);
     font-weight: 400; /* Regular */
-    font-size: 24px;  /* 18pt는 웹에서 약 24px에 해당합니다 */
+    font-size: 20px;  /* 18pt는 웹에서 약 24px에 해당합니다 */
     line-height: 1.6; /* 가독성을 위한 줄간격 */
     color: var(--text-gray);
 }
@@ -63,103 +63,112 @@ body {
 }
 
 /* =========================================
-   3. PRODUCT SLIDER (Fixed Arrows)
+   [GROUP] INTRO TEXT & SLIDER
    ========================================= */
+
+/* 1. 전체 그룹 껍데기 */
+.intro-slider-group {
+    padding: 80px 0;      /* 위아래 여백 */
+    background-color: #fff;
+    text-align: center;   /* 내부 요소 중앙 정렬 */
+}
+
+/* 3. 슬라이더 영역 */
 .group-slider {
     position: relative;
-    max-width: 1000px;
-    margin: 0 auto 100px auto; /* [요청사항] 밑에 공간 넉넉히 (100px) */
+    max-width: 100%;
+    margin : 0 auto;       /* 중앙 정렬 */
+    
 }
 
+/* 슬라이더 메인 (의자 + 화살표) */
 .slider-main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 20px; /* 화살표와 의자 사이 간격 */
+    align-items: center;
+    gap: 120px;            /* 화살표와 의자 사이 간격 */
+    margin-bottom: 0px;  /* 색상 버튼과의 간격 */
+    height: 550px;
 }
 
-/* 화살표 버튼 고정 (Fixed Size) */
+#current-chair {
+    width: auto;
+    max-width: 450px;     /* 의자 이미지 크기 제한 */
+    height: 100%;
+    object-fit: contain;
+
+    transition: opacity 0.15s ease-in-out;
+}
+
 .nav-btn {
     background: none;
     border: none;
     cursor: pointer;
-    flex: 0 0 60px; /* 너비 60px로 고정 (줄어들지 않음) */
-    height: 60px;   /* 높이 60px로 고정 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-}
+    transition: transform 0.2s;
 
+    flex-shrink: 0;
+}
 .nav-btn:hover {
-    transform: scale(1.1); /* 호버 시 살짝 커짐 */
+    transform: scale(1.1);
 }
-
 .nav-btn img {
-    width: 100%; /* 버튼 크기에 맞춰 꽉 차게 */
-    height: auto;
-    display: block;
+    width: 15px;          /* 화살표 크기 */
 }
 
-/* 의자 이미지 */
-#current-chair {
-    max-width: 600px; /* 의자 최대 크기 제한 */
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
-}
-
-/* =========================================
-   4. SWATCH PANEL (Color Buttons)
-   ========================================= */
+/* 4. 색상 버튼 패널 */
 .swatch-panel {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px; /* 의자와의 간격 */
-    height: 60px; /* 바 이미지 높이에 맞춰 공간 확보 */
+    /* 1. 배치 및 정렬 */
+    display: flex;              /* 내부 요소 플렉스 정렬 */
+    justify-content: center;    /* 가로 중앙 정렬 */
+    align-items: center;        /* 세로 중앙 정렬 */
+    gap: 15px;                  /* 버튼 사이의 간격 (이미지의 간격 반영) */
+    
+    /* 2. 패널 자체 위치 */
+    margin: -30px auto 0;             /* 블록 요소 기준 중앙 정렬 */
+    
+    /* 3. 디자인 (이미지처럼 둥근 회색 배경) */
+    background-color: #f0f0f0;  /* 연한 회색 배경 (이미지와 흡사한 톤) */
+    border-radius: 50px;        /* 둥근 알약(Pill) 형태 */
+    padding: 10px 25px;         /* 내부 여백을 통해 패널 크기 제어 */
+    
+    /* 4. 크기 제어 */
+    width: fit-content;         /* 내용물(버튼)에 딱 맞게 너비 자동 조절 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* (선택) 살짝 입체감 부여 */
 }
 
-/* 배경 바 이미지 (뒤로 보내기) */
-.bar-bg {
-    position: absolute;
-    z-index: 0;
-    max-width: 350px; /* 바 이미지 크기 조절 */
-    width: 100%;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 정확히 중앙 정렬 */
-}
-
-/* 색상 버튼 그룹 (앞으로 가져오기) */
-.btn-wrap {
-    position: relative;
-    z-index: 1; /* 바 이미지보다 위에 위치 */
-    display: flex;
-    gap: 35px; /* [중요] 구멍 위치에 맞게 간격 조절 필요 (이미지에 맞춰 수정하세요) */
-    padding-top: 2px; /* 미세 위치 조정 */
+/* 불필요해진 클래스 (기존 HTML에 남아있어도 영향 없도록 초기화하거나 삭제) */
+.bar-bg, .btn-wrap {
+    display: contents; /* 껍데기 역할만 하고 스타일 무시 (혹은 HTML에서 삭제 추천) */
+    /* 만약 bar-bg 이미지가 보인다면 display: none; 처리하십시오 */
 }
 
 .color-btn {
-    width: 32px;  /* 버튼 크기 */
-    height: 32px;
+    width: 30px;        /* 기존 38px -> 30px로 축소 (요청사항 반영) */
+    height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid transparent; /* 선택 안됐을 때 투명 테두리 */
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
+
+    /* [수정] 테두리와 사각형 아웃라인 제거 */
+    border: none ;   
+    outline: none ;  
+    box-shadow: none ;
+    background: transparent; /* 배경 투명화 */
+    
+    /* 버튼 자체의 기본 마진 제거 (gap으로 제어함) */
+    margin: 0; 
+    padding: 0;
 }
 
 .color-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.15); /* 호버 시 약간 확대 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .color-btn.active {
-    border-color: var(--primary-blue); /* 선택된 색상 테두리 */
-    transform: scale(1.1);
+    border: 2px solid #333; /* 선택된 버튼 테두리 강조 */
+    transform: scale(1.05);
 }
-
 
 
 
