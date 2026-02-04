@@ -1949,7 +1949,7 @@ body > div:nth-of-type(5) .f-desc {
     margin: 40px auto 0 auto !important; /* 화면 중앙 정렬 */
     
     /* 혹시 모를 너비 넘침 방지 */
-    max-width: 90% !important; 
+    max-width: 100% !important; 
 }
 
 /* 2. 이미지는 원본 비율 유지 */
