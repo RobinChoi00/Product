@@ -1934,5 +1934,5 @@ body > div:nth-of-type(5) .f-desc {
     margin-top: 0 !important;       /* 위쪽 불필요한 공백 제거 */
     
     /* 이 값을 조절해서 옆 섹션(Space Saving)과 이미지 높이를 맞추세요 */
-    margin-bottom: 60px !important; 
+    margin-bottom: 150px !important; 
 }
