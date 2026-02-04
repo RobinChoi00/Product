@@ -1336,3 +1336,68 @@
 
 
 
+
+
+
+
+
+/* =========================================
+   [FINAL FIX] MASTER ALIGNMENT (Unified Width)
+   ========================================= */
+
+/* 1. 모든 메인 박스의 너비를 1200px로 강제 통일 */
+/* 회색 박스, 그라데이션 박스, 일반 컨테이너 모두 포함 */
+.grey-card-box,
+.unified-gradient-box,
+.container,
+.programs-auto-section .container,
+.programs-manual-section .container,
+.center-feature-section .container,
+.light-feature-section .container,
+.quad-feature-section .container,
+.user-suitability-section .container,
+.doorway-section .container,
+.dimensions-section .container,
+.spec-section .container {
+    
+    /* [핵심] 모든 박스의 최대 너비를 1200px로 고정 */
+    max-width: 1200px !important;
+    
+    
+    /* [핵심] 박스 자체를 화면 중앙에 배치 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* 패딩 박스 계산법 통일 */
+    box-sizing: border-box !important;
+}
+
+/* 2. 회색 박스 (.grey-card-box) 마진 초기화 */
+/* 컨테이너 안에 들어가는 경우 이중 마진 방지 */
+.container .grey-card-box {
+    width: 100% !important; /* 부모(1200px)를 가득 채움 */
+    margin: 0 !important;
+}
+
+/* 3. 그라데이션 박스 (.unified-gradient-box) 독립 설정 */
+/* 컨테이너 없이 단독으로 쓰이는 경우를 위해 확실하게 중앙 정렬 */
+.unified-gradient-box {
+    margin: 0 auto 60px auto !important;
+}
+
+/* 4. 내부 여백(Padding) 라인 맞추기 */
+/* 모든 박스의 텍스트 시작점을 50px로 통일 */
+.feature-row-card,
+.grid-2-card,
+.unified-gradient-box,
+.grey-card-box {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+
+/* 5. 그리드 시스템 내부 간격 유지 */
+.grid-2-card {
+    width: 100% !important;
+    display: grid;
+    /* 패딩 50px을 제외한 공간을 사용 */
+}
