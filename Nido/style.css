@@ -1116,7 +1116,60 @@ body {
 }
 
 
+/* =========================================
+   [FIX] TITLE ALIGNMENT & DIVIDER LINES
+   ========================================= */
 
+/* 1. 제목 중앙 정렬 강제 적용 (22 Auto & 6 Manual) */
+.section-title-blue {
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. 구분선 디자인 변경 (Border -> Pseudo-element) */
+/* 기존의 꽉 차는 테두리 선 제거 */
+.program-group {
+    border-right: none !important; 
+    position: relative;            /* 가상요소(새로운 선)의 기준점 */
+}
+
+/* 새로운 구분선 생성 (길이 조절 가능) */
+.program-group::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;                    /* 상단에서 50% 위치 */
+    transform: translateY(-50%); /* 정확히 중앙으로 이동 */
+    
+    width: 1px;                  /* 선 두께 */
+    height: 70%;                 /* [핵심] 선의 길이를 70%로 설정 (위아래 여백 생김) */
+    background-color: #84c5d8;   /* 선 색상 (하늘색) */
+}
+
+/* 마지막 그룹(오른쪽 끝)은 선 제거 */
+.program-group:last-child::after {
+    display: none;
+}
+
+/* 3. 모바일 최적화 (세로 선 제거) */
+@media (max-width: 768px) {
+    /* 모바일에서는 세로 선(가상요소) 숨김 */
+    .program-group::after {
+        display: none;
+    }
+    
+    /* 모바일용 가로 구분선은 유지 */
+    .program-group {
+        border-bottom: 1px solid #ddd !important;
+    }
+    
+    .program-group:last-child {
+        border-bottom: none !important;
+    }
+}
 
 
 
