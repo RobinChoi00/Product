@@ -237,7 +237,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 50px; /* [중요] 박스 내부 여백 */
+    padding: 10px 10px; /* [중요] 박스 내부 여백 */
     gap: 40px;
 }
 
@@ -1830,3 +1830,109 @@ body > div:nth-of-type(5) .f-desc {
 
 /* (참고) 만약 이미지를 더 위로 올리고 싶다면 마이너스 마진 사용 가능 */
 /* .dual-gradient-section .grid-item.item-left .g-desc { margin-bottom: -20px !important; } */
+
+
+
+
+
+
+/* =========================================
+   [FIX] REDUCE FOOT ROLLER IMAGE SIZE
+   ========================================= */
+
+/* Specialized Foot Rollers 이미지 크기 대폭 축소 */
+.center-img-wrap img {
+    width: 45% !important;       /* 기존 80% -> 45%로 축소 (요청반영) */
+    max-width: 450px !important; /* 최대 너비 제한 */
+    margin: 0 auto;              /* 중앙 정렬 */
+}
+
+
+
+
+
+/* =========================================
+   [FIX] QUAD FEATURES IMAGE BACKGROUND
+   ========================================= */
+
+/* 1. 이미지 박스(.q-img)에 회색 배경 및 스타일 적용 */
+.q-img {
+    background-color: #efefef !important; /* [요청] 배경색 변경 */
+    box-sizing: border-box;               /* 패딩 포함 크기 계산 */
+    
+    /* 이미지를 박스 중앙에 배치 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 기존 그림자 제거 (배경이 생겼으므로 깔끔하게) */
+    box-shadow: none !important;
+}
+
+/* 2. 내부 이미지 크기 및 블렌딩 처리 */
+.q-img img {
+    width: 100% !important;
+    height: auto;
+    
+    /* 이미지가 흰 배경을 가지고 있다면 회색과 자연스럽게 섞이도록 설정 */
+    mix-blend-mode: multiply; 
+    
+    /* (선택) 이미지가 너무 꽉 차 보이면 크기를 조금 줄이세요 */
+    /* width: 80% !important; */ 
+}
+
+
+
+
+
+
+/* =========================================
+   [FIX] SUITABILITY TITLE STYLE
+   ========================================= */
+
+/* 1. 제목 컨테이너 스타일 변경 */
+.user-suitability-section .section-title-blue {
+    font-size: 16px !important;       /* [요청] 16px */
+    color: #1a1a1a !important;        /* [요청] #1a1a1a */
+    font-weight: 700 !important;      /* Bold 유지 */
+}
+
+/* 2. 내부 강조 텍스트(.blue) 색상도 덮어쓰기 */
+/* 이걸 안 하면 앞부분 'DESIGNED TO CATER'만 파란색으로 남습니다 */
+.user-suitability-section .section-title-blue .blue {
+    color: #1a1a1a !important;        /* 파란색 무시하고 검정색 적용 */
+}
+
+
+
+
+
+
+
+/* =========================================
+   [FIX] SL-TRACK SPACING & ALIGNMENT
+   ========================================= */
+
+/* 1. SL-TRACK 섹션 내부의 모든 자동 간격(Gap) 제거 */
+.dual-gradient-section .grid-item.item-left {
+    gap: 0 !important;             /* Flex gap 제거 */
+    justify-content: flex-start !important; /* 위쪽 정렬 */
+}
+
+/* 2. 아이콘과 제목 사이 간격 제거 */
+.dual-gradient-section .grid-item.item-left .top-icon-wrap {
+    margin-bottom: 10px !important; /* 최소한의 숨구멍만 유지 (필요 시 0으로 변경) */
+}
+
+/* 3. 제목과 설명글 사이 간격 제거 */
+.dual-gradient-section .grid-item.item-left .g-title {
+    margin-bottom: 10px !important; /* 최소한의 숨구멍만 유지 */
+}
+
+/* 4. [핵심] 설명글(f-desc) 밑에만 마진을 추가하여 이미지 위치 조정 */
+.dual-gradient-section .grid-item.item-left .g-desc {
+    margin-top: 0 !important;       /* 위쪽 불필요한 공백 제거 */
+    
+    /* 이 값을 조절해서 옆 섹션(Space Saving)과 이미지 높이를 맞추세요 */
+    margin-bottom: 60px !important; 
+}
