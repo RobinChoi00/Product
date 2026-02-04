@@ -34,7 +34,6 @@ body {
    2. INTRO TEXT SECTION
    ========================================= */
 .intro-text-section {
-    padding: 60px 0; /* 상하 여백 */
     text-align: center;
 }
 
@@ -1038,88 +1037,86 @@ body {
 
 
 /* =========================================
-   [CLEAN] GRADIENT FLOW SECTION (2-Stage ~ Lumbar)
+   [FIX] UNIFIED GRADIENT BOX (2-Stage ~ Lumbar)
    ========================================= */
 
-/* 1. 배경 통합 (회색 박스 제거 & 그라데이션 연결) */
+/* 1. 통합 래퍼 스타일 (하나의 큰 박스) */
+.unified-gradient-box {
+    max-width: 1100px;          /* [요청] Air 3D 등 다른 카드와 너비 통일 */
+    margin: 0 auto 60px auto;   /* 중앙 정렬 및 하단 여백 */
+    border-radius: 60px;        /* [요청] 둥근 모서리 60px */
+    overflow: hidden;           /* 내용이 모서리 밖으로 넘치지 않게 */
+    
+    /* [요청] 그라데이션: 시작(하늘색) -> 회색 -> 중앙(흰색) */
+    /* 하늘색 구간을 15%로 짧게 잡아 그라데이션 길이를 줄임 */
+    background: linear-gradient(180deg, #eefcfd 0%, #f9f9f9 15%, #ffffff 40%, #ffffff 100%);
+    
+    padding-bottom: 60px;       /* 박스 하단 여백 */
+}
 
-/* 상단: 2-Stage Zero Gravity (하늘색 -> 흰색) */
+/* 2. 내부 섹션 초기화 (투명화) */
+.unified-gradient-box .zero-gravity-section,
+.unified-gradient-box .dual-gradient-section,
+.unified-gradient-box .light-feature-section {
+    background: transparent !important; /* 배경색 제거 (래퍼 배경 사용) */
+    padding-top: 60px !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+
+/* 3. Zero Gravity (상단) */
 .zero-gravity-section {
-    background: linear-gradient(180deg, #eefcfd 0%, #ffffff 90%);
-    padding-bottom: 0; /* 아래 섹션과 자연스럽게 연결 */
+    padding-top: 80px !important; /* 첫 섹션은 상단 여백 좀 더 줌 */
 }
 
-/* 중단: SL-Track / Space Saving (흰색 배경) */
-.dual-gradient-section {
-    background: #ffffff;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 0; /* 아래 섹션과 연결 */
-}
-
-/* 하단: 24-Cell / Lumbar (흰색 -> 하늘색) */
-.light-feature-section {
-    background: linear-gradient(180deg, #ffffff 10%, #eefcfd 100%);
-    padding-top: 40px;
-}
-
-/* 2. 기존 박스 스타일 초기화 (배경 투명하게) */
-.light-feature-section .feature-row,
-.dual-gradient-section .grid-item {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    border-radius: 0;
-}
-
-/* =========================================
-   [CLEAN] SL-TRACK & SPACE SAVING (Left Align)
-   ========================================= */
-
-/* 왼쪽 정렬 강제 적용 */
+/* 4. SL-Track & Space Saving (중단 - 왼쪽 정렬) */
 .dual-gradient-section .grid-item.item-left {
     align-items: flex-start;
     text-align: left;
+    padding: 0 40px; /* 좌우 여백 추가 */
 }
 
-/* 아이콘 왼쪽 정렬 */
-.dual-gradient-section .grid-item.item-left .icon-wrap-left {
-    justify-content: flex-start;
-    display: flex; /* Flex 속성 확실히 부여 */
-}
-
-/* 설명 텍스트 박스 너비 줄이기 */
 .dual-gradient-section .grid-item.item-left .g-desc {
     max-width: 420px;
     margin-right: auto;
 }
 
-/* =========================================
-   [CLEAN] 24-CELL & LUMBAR ADJUSTMENTS
-   ========================================= */
+.icon-wrap-left {
+    justify-content: flex-start;
+    display: flex;
+}
 
-/* 1. 24-Cell Image (이미지 크기 줄임) */
-.light-feature-section .feature-row:first-child .f-img img {
+/* 5. 24-Cell & Lumbar (하단) */
+/* [요청] 텍스트 박스 크기 줄이기 */
+.light-feature-section .f-desc {
+    max-width: 500px;       /* 텍스트 폭 제한 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 이미지 크기 및 배치 */
+.light-feature-section .feature-row .f-img img {
     width: 70%;
     margin: 0 auto;
-}
-
-/* 2. Lumbar Heating (위치 변경 & 이미지 효과) */
-.light-feature-section .feature-row:last-child {
-    flex-direction: row; /* 이미지 좌측, 텍스트 우측 */
-    gap: 80px;
-}
-
-/* Lumbar 이미지 스타일 */
-.light-feature-section .feature-row:last-child .f-img img {
-    width: 70%;
     display: block;
-    margin: 0 auto;
-    
-    /* Fade Out Mask 효과 */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
 }
+
+/* Lumbar Heating (마지막 줄) */
+.light-feature-section .feature-row:last-child {
+    flex-direction: row;    /* 이미지 좌측, 텍스트 우측 */
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Lumbar 이미지 효과 */
+.light-feature-section .feature-row:last-child .f-img img {
+    /* 위아래 흐릿하게 (Fade Mask) */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+
+
 
 
 
