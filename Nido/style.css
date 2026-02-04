@@ -334,25 +334,32 @@
 
 
 /* =========================================
-   UNIFIED GRADIENT BOX (2-Stage ~ Lumbar)
+   [FIX] UNIFIED GRADIENT BOX (Alignment Fixed)
    ========================================= */
 
 /* 1. 통합 래퍼 스타일 (하나의 큰 박스) */
 .unified-gradient-box {
-    max-width: 1100px;          /* 다른 섹션과 너비 통일 */
-    margin: 0 auto 40px auto;   /* 중앙 정렬 및 하단 여백 */
-    border-radius: 30px;        /* [요청] Radius 20px~30px (부드럽게 30px 적용) */
-    overflow: hidden;           /* 내용이 모서리 밖으로 넘치지 않게 */
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    border-radius: 30px;
+    overflow: hidden;
     box-sizing: border-box;
     
-    /* [수정] 위/아래 그라데이션 (상하 180deg 적용) */
-    /* 하늘색(#eefcfd) -> 흰색(#ffffff) -> 하늘색(#eefcfd) */
+    /* 배경 그라데이션 */
     background: linear-gradient(180deg, #eefcfd 0%, #ffffff 25%, #ffffff 75%, #eefcfd 100%);
     
-    padding-bottom: 60px;       /* 박스 하단 여백 */
+    padding-bottom: 60px;
 }
 
-/* 2. 내부 섹션 배경 초기화 (부모 그라데이션이 보이도록) */
+/* [핵심] 내부 컨테이너 너비 및 여백 초기화 (치우침 해결) */
+.unified-gradient-box .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. 내부 섹션 배경 초기화 */
 .unified-gradient-box .zero-gravity-section,
 .unified-gradient-box .dual-gradient-section,
 .unified-gradient-box .light-feature-section {
@@ -364,49 +371,47 @@
 /* ----------------------------------------------------
    [TYPOGRAPHY] 폰트 및 색상 일괄 적용
    ---------------------------------------------------- */
-/* 제목 스타일 (Forma DJR Banner, Bold, 36px) */
 .unified-gradient-box .zg-title, 
 .unified-gradient-box .g-title, 
 .unified-gradient-box .f-title {
     font-family: 'Forma DJR Banner', sans-serif;
-    font-weight: 700;       /* Bold */
-    font-size: 36px;        /* [요청] 36px */
-    color: #606060;         /* [요청] 제목 기본 색상 */
+    font-weight: 700;
+    font-size: 36px;
+    color: #606060;
     line-height: 1.6;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-/* 설명 스타일 (Poppins, Regular, 21pt ≈ 28px) */
 .unified-gradient-box .zg-desc, 
 .unified-gradient-box .g-desc, 
 .unified-gradient-box .f-desc {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;       /* Regular */
-    font-size: 24px;        /* [요청] 21pt */
-    color: #9e9e9e;         /* [요청] 설명 색상 */
+    font-weight: 400;
+    font-size: 24px;
+    color: #9e9e9e;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* 강조 텍스트 (Strong) */
 .unified-gradient-box strong {
     font-weight: 700;
-    color: #606060 !important; /* [요청] Strong 색상 */
+    color: #606060 !important;
 }
 
-/* 포인트 컬러 (Span) */
 .unified-gradient-box .blue { color: #84c5d8 !important; }
-.unified-gradient-box .red  { color: #ee3e30 !important; } /* Lumbar 섹션용 */
+.unified-gradient-box .red  { color: #ee3e30 !important; }
 
 
 /* ----------------------------------------------------
-   [ALIGNMENT] 정렬 및 레이아웃
+   [ALIGNMENT] 정렬 및 레이아웃 수정
    ---------------------------------------------------- */
 
 /* 1. 2-Stage Zero Gravity (중앙 정렬) */
 .zero-gravity-section {
     text-align: center;
+    /* [수정] 상단 여백 60px, 좌우 패딩 40px 부여 */
+    padding: 60px 40px 0 40px !important; 
 }
 .zg-desc.center-p {
     margin-left: auto;
@@ -417,18 +422,28 @@
 
 
 /* 2. SL-Track & Space Saving (왼쪽 정렬) */
+.unified-gradient-box .dual-gradient-section {
+    width: 100%;
+    padding: 0 !important; /* 섹션 자체 패딩 제거 */
+}
+
 .dual-gradient-section .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px; /* [요청] 간격 60px */
+    gap: 60px;
+    /* [수정] 그리드 전체에 좌우 패딩 40px 적용 (균형 맞춤) */
+    padding: 0 40px !important; 
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .dual-gradient-section .grid-item.item-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* [요청] 왼쪽 정렬 */
-    text-align: left;        /* [요청] 왼쪽 정렬 */
-    padding: 0 40px;         /* 좌우 여백 */
+    align-items: flex-start;
+    text-align: left;
+    /* [수정] 개별 아이템 패딩 제거 (중복 여백 방지) */
+    padding: 0 !important; 
 }
 
 .icon-wrap-left {
@@ -439,13 +454,21 @@
 
 
 /* 3. 24-Cell & Lumbar (왼쪽 정렬) */
+.unified-gradient-box .light-feature-section {
+    padding: 60px 0 !important; /* 상하 여백만 부여 */
+    width: 100%;
+}
+
 .light-feature-section .feature-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;       /* [요청] 간격 60px */
-    padding: 0 40px; /* 좌우 여백 */
+    gap: 60px;
+    /* [수정] 좌우 패딩 50px로 설정하여 위아래 섹션과 라인 일치 */
+    padding: 0 50px !important; 
     margin-bottom: 60px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .light-feature-section .f-txt {
@@ -457,17 +480,17 @@
     display: flex;
 }
 
-/* Lumbar Heating 하단 disclaimer 텍스트 */
+/* Disclaimer Text */
 .disclaimer-text {
-    font-family: 'Avenir', 'Poppins', sans-serif; /* Avenir 없으면 Poppins */
-    font-weight: 400;       /* Roman (Regular) */
-    font-size: 16px;        /* [요청] 16px */
-    color: #9e9e9e;         /* [요청] 색상 */
+    font-family: 'Avenir', 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #9e9e9e;
     display: block;
     margin-top: 15px;
     line-height: 1.6;
-    margin-bottom: 0 auto 60px;
 }
+
 
 
 
