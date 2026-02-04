@@ -2310,3 +2310,25 @@ body > div:nth-of-type(5) .f-desc {
         display: block !important;
     }
 }
+
+
+
+/* ==========================================================================
+   [MOBILE FINAL FIX] REDUCE ICON SIZE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 모든 주요 아이콘/이모티콘 크기를 50px로 축소 */
+    .top-icon-wrap img, 
+    .center-icon-wrap img, 
+    .icon-wrap-left img,
+    .p-item img,
+    .p1-item img,
+    .icon-circle-md,
+    .icon-sm,
+    .icon-md {
+        width: 45px !important;  /* 기존 70px -> 50px */
+        height: 45px !important;
+        margin-bottom: 15px !important; /* 아이콘 아래 간격도 살짝 조정 */
+    }
+}
