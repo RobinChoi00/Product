@@ -31,7 +31,7 @@
 
 .hero-full-banner img {
     width: 100%;
-    height: auto;
+    height: ;
     display: block;
 }
 
@@ -41,7 +41,7 @@
 .intro-text-section {
     padding: 30px 0; /* 상하 여백 */
     text-align: center;
-    margin-bottom: 0 auto 80px;
+    margin-bottom: 0  80px;
 }
 
 .container {
@@ -53,7 +53,7 @@
 .intro-desc {
     width: 90%;               /* [요청] 너비 90% */
     max-width: 1000px;        /* 너무 넓어지지 않게 제한 */
-    margin: 0 auto 40px auto; /* 슬라이더와의 간격 */
+    margin: 0  40px ; /* 슬라이더와의 간격 */
     
     font-family: 'Roboto', sans-serif;
     font-weight: 400;         /* [요청] Regular */
@@ -78,7 +78,7 @@
 .group-slider {
     position: relative;
     max-width: 100%;
-    margin : 0 auto;       /* 중앙 정렬 */
+    margin : 0 ;       /* 중앙 정렬 */
     
 }
 
@@ -93,7 +93,7 @@
 }
 
 #current-chair {
-    width: auto;
+    width: ;
     max-width: 450px;     /* 의자 이미지 크기 제한 */
     height: 100%;
     object-fit: contain;
@@ -125,7 +125,7 @@
     gap: 15px;                  /* 버튼 사이의 간격 (이미지의 간격 반영) */
     
     /* 2. 패널 자체 위치 */
-    margin: -30px auto 0;             /* 블록 요소 기준 중앙 정렬 */
+    margin: -30px  0;             /* 블록 요소 기준 중앙 정렬 */
     
     /* 3. 디자인 (이미지처럼 둥근 회색 배경) */
     background-color: #f0f0f0;  /* 연한 회색 배경 (이미지와 흡사한 톤) */
@@ -261,7 +261,7 @@
 .feature-row-card .f-img img {
     width: 100%;
     max-width: 500px;
-    height: auto;
+    height: ;
 }
 
 
@@ -298,7 +298,7 @@
 
 .grid-item-card .g-img img {
     width: 100%;
-    height: auto;
+    height: ;
     display: block;
     /* border-radius는 부모(.grey-card-box)의 overflow: hidden으로 자동 처리됨 */
 }
@@ -313,7 +313,7 @@
 }
 
 .grid-item-card .g-desc {
-    margin: 0 auto; /* 중앙 정렬 */
+    margin: 0 ; /* 중앙 정렬 */
 }
 
 
@@ -341,7 +341,7 @@
 /* 1. 통합 래퍼 스타일 (하나의 큰 박스) */
 .unified-gradient-box {
     max-width: 1100px;          /* 다른 섹션과 너비 통일 */
-    margin: 0 auto 40px auto;   /* 중앙 정렬 및 하단 여백 */
+    margin: 0  40px ;   /* 중앙 정렬 및 하단 여백 */
     border-radius: 30px;        /* [요청] Radius 20px~30px (부드럽게 30px 적용) */
     overflow: hidden;           /* 내용이 모서리 밖으로 넘치지 않게 */
     box-sizing: border-box;
@@ -410,11 +410,11 @@
     text-align: center;
 }
 .zg-desc.center-p {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: ;
+    margin-right: ;
     max-width: 900px;
 }
-.wide-img img { margin: 0 auto; }
+.wide-img img { margin: 0 ; }
 
 
 /* 2. SL-Track & Space Saving (왼쪽 정렬) */
@@ -467,7 +467,7 @@
     display: block;
     margin-top: 15px;
     line-height: 1.6;
-    margin-bottom: 0 auto 60px;
+    margin-bottom: 0  60px;
 }
 
 
@@ -502,7 +502,7 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 ;
 }
 
 /* 2. 섹션 제목 (Box 밖) */
@@ -518,7 +518,7 @@
     color: #84c5d8 !important; /* [요청] span 색상 */
 }
 
-/* 3. Auto Programs 상단 (5개 그룹 Flex) */
+/* 3.  Programs 상단 (5개 그룹 Flex) */
 .programs-group-wrapper {
     display: flex;
     justify-content: space-between;
@@ -729,7 +729,7 @@
 .light-feature-section .f-img img {
     width: 100%;             /* 영역 꽉 채우기 */
     max-width: 600px;        /* 너무 커지지 않게 제한 */
-    height: auto;
+    height: ;
     border-radius: 20px;
 }
 
@@ -746,14 +746,14 @@
 }
 .center-max-600 {
     width: 90%;
-    margin: 0 auto 50px auto;
+    margin: 0  50px ;
 }
 .center-icon-wrap {
     display: flex;
     justify-content: center;
 }
 .center-img-wrap img {
-    margin: 0 auto;
+    margin: 0 ;
     max-width: 800px;
     width: 100%;
 }
@@ -815,7 +815,7 @@
 
 .q-img img {
     width: 100%;
-    height: auto;
+    height: ;
     display: block;
     transition: transform 0.4s ease; /* 부드러운 확대 효과 */
 }
@@ -917,7 +917,7 @@
 /* 의자 치수 이미지 */
 .dim-base-img {
     width: 100%;
-    height: auto;
+    height: ;
     display: block;
     mix-blend-mode: multiply; /* 회색 배경과 자연스럽게 섞임 */
     margin-top: 20px;
@@ -934,7 +934,7 @@
 
 .badge-overlay img {
     width: 100%;
-    height: auto;
+    height: ;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
@@ -947,7 +947,7 @@
 
 .users-full-img {
     width: 100%;
-    height: auto;
+    height: ;
     border-radius: 20px;
     display: block;
 }
@@ -1006,7 +1006,7 @@
     gap: 80px;                 /* 좌우 이미지 사이 간격 */
     
     max-width: 1300px;         /* 전체 폭 제한 */
-    margin: 0 auto;
+    margin: 0 ;
 }
 
 /* ------------------------------------------------
@@ -1021,7 +1021,7 @@
 .doorway-left img {
     width: 95%;
     max-width: 330px;          /* 이미지 크기 제한 */
-    height: auto;
+    height: ;
     object-fit: contain;
 }
 
@@ -1045,7 +1045,7 @@
 .doorway-right .box-img img {
     width: 100%;
     max-width: 420px;          /* 박스 이미지 크기 제한 */
-    height: auto;
+    height: ;
     display: block;
     margin: 0;                 /* 왼쪽 정렬 유지 */
 }
@@ -1111,7 +1111,7 @@
 
 .dimensions-section .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0 20px;
 }
 
@@ -1134,7 +1134,7 @@
     align-items: flex-end;   /* 바닥 라인 기준으로 정렬 (치수선 보기 좋게) */
     gap: 80px;               /* 두 이미지 사이 넉넉한 간격 */
     width: 90%;
-    margin: 0 auto;
+    margin: 0 ;
 }
 
 /* 3. 이미지별 크기 제어 (비율 차별화) */
@@ -1154,7 +1154,7 @@
 /* 이미지 공통 */
 .dim-img img {
     width: 90%;
-    height: auto;
+    height: ;
     display: block;
 }
 
@@ -1197,7 +1197,7 @@
 /* 3. 테이블 컨테이너 (중앙 정렬 & 상단 테두리) */
 .spec-table {
     max-width: 1000px;      /* 표 너비 제한 */
-    margin: 0 auto;         /* 중앙 정렬 */
+    margin: 0 ;         /* 중앙 정렬 */
     border-top: 1px solid #e5e5e5; /* 표 맨 위 가로선 */
 }
 
