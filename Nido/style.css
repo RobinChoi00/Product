@@ -215,6 +215,10 @@
 }
 .f-title .blue, .g-title .blue { color: #84c5d8 !important; }
 
+.f-img {
+    width:75%;
+}
+
 .f-desc, .g-desc {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -338,7 +342,7 @@
 
 /* 1. 통합 래퍼 스타일 (하나의 큰 박스) */
 .unified-gradient-box {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto 40px auto;
     border-radius: 30px;
     overflow: hidden;
@@ -415,7 +419,7 @@
 .zg-desc.center-p {
     margin-left: auto;
     margin-right: auto;
-    max-width: 900px;
+    max-width: 1200px;
 }
 .wide-img img { margin: 0 auto; }
 
@@ -522,7 +526,7 @@
     padding: 60px 40px;        /* 내부 여백 넉넉하게 */
     box-sizing: border-box;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1026,7 +1030,7 @@
     align-items: flex-start;   /* 상단 기준 정렬 */
     gap: 80px;                 /* 좌우 이미지 사이 간격 */
     
-    max-width: 1300px;         /* 전체 폭 제한 */
+    max-width: 1200px;         /* 전체 폭 제한 */
     margin: 0 auto;
 }
 
@@ -1217,7 +1221,7 @@
 
 /* 3. 테이블 컨테이너 (중앙 정렬 & 상단 테두리) */
 .spec-table {
-    max-width: 1000px;      /* 표 너비 제한 */
+    max-width: 1200px;      /* 표 너비 제한 */
     margin: 0 auto;         /* 중앙 정렬 */
     border-top: 1px solid #e5e5e5; /* 표 맨 위 가로선 */
 }
@@ -1335,38 +1339,3 @@
 
 
 
-/* =========================================
-   [FIX] FULL WIDTH ALIGNMENT (Remove Side Margins)
-   ========================================= */
-
-/* 1. 모든 메인 박스들의 너비 제한 해제 -> 컨테이너에 꽉 채움 */
-.grey-card-box,
-.unified-gradient-box,
-.programs-group-wrapper,
-.grey-card-simple,
-.spec-table,
-.doorway-layout,
-.dimensions-section .container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-/* 2. Unified Box (그라데이션 박스) 내부 여백 재조정 */
-/* 박스가 커졌으므로 내부 패딩을 줘서 텍스트가 벽에 붙지 않게 함 */
-.unified-gradient-box {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-/* 3. Manual Modes & Auto Programs 카드 너비 맞춤 */
-.programs-manual-section .grey-card-box,
-.programs-auto-section .grey-card-box {
-    max-width: 100% !important;
-}
-
-/* 4. Specification 테이블 너비 맞춤 */
-.spec-table {
-    border-top: 1px solid #e5e5e5;
-}
