@@ -2261,7 +2261,7 @@ body > div:nth-of-type(5) .f-desc {
 .dual-gradient-section .grid-item:first-child .g-img {
     
     /* 1. 위로 올리고 싶을 때 (음수 값) */
-    margin-top: 30px !important; 
+    margin-top: 60px !important; 
     
     /* 2. 아래로 내리고 싶을 때 (양수 값) */
     /* margin-top: 30px !important; */
@@ -2510,6 +2510,14 @@ body > div:nth-of-type(5) .f-desc {
 }
 
 
+
+
+
+
+
+
+
+
 /* ==========================================================================
    [MOBILE FINAL FIX] ICON ALIGNMENT & CARD LAYOUT
    ========================================================================== */
@@ -2677,3 +2685,30 @@ body > div:nth-of-type(5) .f-desc {
         display: block !important;
     }
 }
+
+
+
+
+
+
+/* =========================================
+   [PC FIX] FOOT ROLLERS - REMOVE PADDING
+   (Box shrinks to image size)
+   ========================================= */
+.center-img-wrap {
+    /* 1. 안쪽 여백(Padding)을 완전히 제거 -> 박스가 작아짐 */
+    padding: 0 !important;
+        
+    /* 2. 줄어든 패딩만큼 바깥 여백(Margin)을 늘림 -> 위치 유지 */
+    /* 기존 40px + 패딩 30px ≈ 70px */
+    margin-top: 70px !important; 
+        
+    /* 박스 크기 자동 계산 (이미지에 딱 맞게) */
+    width: fit-content !important;
+    display: table !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+        
+/* (선택) 너무 딱 붙는 게 싫다면 둥근 모서리를 살짝 줄여도 좋습니다 */
+    border-radius: 20px !important; 
+ }
