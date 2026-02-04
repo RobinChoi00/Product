@@ -56,7 +56,7 @@ body {
 }
 
 .intro-desc h2 {
-    font-size: 40px; /* 제목은 조금 더 크게 */
+    font-size: 36px; /* 제목은 조금 더 크게 */
     font-weight: 500;
     color: var(--text-dark);
     margin-bottom: 20px;
@@ -77,7 +77,7 @@ body {
 .group-slider {
     position: relative;
     max-width: 100%;
-    margin : 0 auto;       /* 중앙 정렬 */
+    margin : 0 auto 80px ;       /* 중앙 정렬 */
     
 }
 
@@ -207,7 +207,7 @@ body {
 .f-title, .g-title {
     font-family: var(--font-title);
     font-weight: 700;       /* Bold */
-    font-size: 60px;        /* 45pt ≈ 60px */
+    font-size: 48px;        /* 45pt ≈ 60px */
     line-height: 1.1;       /* 큰 폰트는 줄 간격을 좁혀야 예쁩니다 */
     color: #424242;         /* 제목 기본 색상은 진한 회색/검정 유지 */
     margin-bottom: 30px;    /* 폰트가 커진 만큼 여백도 확보 */
@@ -218,7 +218,7 @@ body {
 .f-desc, .g-desc {
     font-family: var(--font-desc);
     font-weight: 400;       /* Regular */
-    font-size: 28px;        /* 21pt ≈ 28px */
+    font-size: 24px;        /* 21pt ≈ 28px */
     line-height: 1.5;       /* 가독성 좋은 줄 간격 */
     color: var(--desc-gray); /* #9e9e9e */
 }
@@ -308,7 +308,7 @@ body {
 .zg-title {
     font-family: var(--font-title);
     font-weight: 700;       /* Bold */
-    font-size: 60px;        /* 45pt ≈ 60px */
+    font-size: 48px;        /* 45pt ≈ 60px */
     line-height: 1.1;
     color: #333;            /* 기본 제목 색상 */
     margin-bottom: 30px;
@@ -318,7 +318,7 @@ body {
 .zg-desc {
     font-family: var(--font-body);
     font-weight: 400;       /* Regular */
-    font-size: 28px;        /* 21pt ≈ 28px */
+    font-size: 24px;        /* 21pt ≈ 28px */
     line-height: 1.6;
     color: var(--text-desc);
     max-width: 1000px;      /* 텍스트가 너무 퍼지지 않게 제한 */
@@ -379,7 +379,7 @@ body {
 .g-title, .f-title {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 60px;        /* 45pt */
+    font-size: 48px;        /* 45pt */
     line-height: 1.1;
     color: #333;
     margin-bottom: 25px;
@@ -390,7 +390,7 @@ body {
 .g-desc, .f-desc {
     font-family: var(--font-body);
     font-weight: 400;
-    font-size: 28px;        /* 21pt */
+    font-size: 24px;        /* 21pt */
     line-height: 1.6;
     color: var(--text-desc);
     margin-bottom: 30px;
@@ -447,7 +447,7 @@ body {
 .f-title {
     font-family: var(--font-title);
     font-weight: 700;       /* Bold */
-    font-size: 60px;        /* 45pt ≈ 60px */
+    font-size: 48px;        /* 45pt ≈ 60px */
     line-height: 1.1;
     color: #333;
     margin-bottom: 25px;
@@ -458,7 +458,7 @@ body {
 .f-desc {
     font-family: var(--font-body);
     font-weight: 400;       /* Regular */
-    font-size: 28px;        /* 21pt ≈ 28px */
+    font-size: 24px;        /* 21pt ≈ 28px */
     line-height: 1.6;
     color: var(--text-desc);
     margin-bottom: 30px;
@@ -666,7 +666,7 @@ body {
 .section-title-blue {
     font-family: var(--font-title); /* Forma DJR Banner */
     font-weight: 700;       /* Bold */
-    font-size: 60px;        /* 45pt */
+    font-size: 48px;        /* 45pt */
     line-height: 1.1;
     color: #424242;
     margin-bottom: 60px;    /* 이미지와의 간격 */
@@ -979,7 +979,78 @@ body {
     align-items: center;
 }
 
-/
+/* =========================================
+   [FIX] VOICE CONTROL & AIR 3D LAYOUT
+   ========================================= */
+
+/* 1. Intelligent Voice Control: 텍스트 왼쪽 정렬 */
+/* HTML에 있는 .text-left 클래스를 활용하여 강제 적용 */
+.feature-row.text-left .f-txt {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+/* 아이콘 래퍼도 왼쪽 정렬 */
+.feature-row.text-left .top-icon-wrap {
+    justify-content: flex-start !important;
+    display: flex;
+}
+
+/* 2. Air 3D & Body Scan: 이미지 꽉 차게 (Full Bleed Card) */
+/* .item-left(SL-Track) 섹션에는 영향을 주지 않도록 :not 선택자 사용 */
+.grid-item:not(.item-left) {
+    padding: 0 !important;       /* 컨테이너 패딩 제거 (이미지가 끝까지 닿게) */
+    overflow: hidden;            /* 둥근 모서리 밖으로 이미지 튀어나감 방지 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 이미지 순서 변경 (텍스트보다 위로) 및 스타일링 */
+.grid-item:not(.item-left) .g-img {
+    order: -1;                   /* [핵심] HTML 수정 없이 이미지를 맨 위로 올림 */
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 30px;         /* 제목과의 간격 */
+}
+
+.grid-item:not(.item-left) .g-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 !important; /* 이미지 자체 둥근 모서리 제거 (컨테이너에 맞춤) */
+    display: block;
+}
+
+/* 패딩이 사라졌으므로 텍스트에만 별도로 여백 추가 */
+.grid-item:not(.item-left) .g-title,
+.grid-item:not(.item-left) .g-desc {
+    padding-left: 40px;          /* 좌측 여백 */
+    padding-right: 40px;         /* 우측 여백 */
+}
+
+.grid-item:not(.item-left) .g-desc {
+    padding-bottom: 50px;        /* 하단 여백 */
+}
+
+/* 모바일 대응: 텍스트 여백 조정 */
+@media (max-width: 768px) {
+    .grid-item:not(.item-left) .g-title,
+    .grid-item:not(.item-left) .g-desc {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .grid-item:not(.item-left) .g-desc {
+        padding-bottom: 30px;
+    }
+    
+    /* 모바일에서 Voice Control 아이콘 중앙 정렬 복구 방지 (왼쪽 유지) */
+    .feature-row.text-left,
+    .feature-row.text-left .f-txt,
+    .feature-row.text-left .top-icon-wrap {
+        text-align: left !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+}
 
 
 
