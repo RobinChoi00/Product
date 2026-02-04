@@ -1936,3 +1936,26 @@ body > div:nth-of-type(5) .f-desc {
     /* 이 값을 조절해서 옆 섹션(Space Saving)과 이미지 높이를 맞추세요 */
     margin-bottom: 80px !important; 
 }
+
+
+
+/* =========================================
+   [FIX] TIGHT FIT GREY BOX (Foot Rollers)
+   ========================================= */
+
+/* 1. 회색 박스를 내용물(이미지) 크기에 딱 맞춤 */
+.center-img-wrap {
+    width: fit-content !important;  /* [핵심] 내용물만큼만 너비 차지 */
+    margin: 40px auto 0 auto !important; /* 화면 중앙 정렬 */
+    
+    /* 혹시 모를 너비 넘침 방지 */
+    max-width: 90% !important; 
+}
+
+/* 2. 이미지는 원본 비율 유지 */
+.center-img-wrap img {
+    width: auto !important;        /* 강제 확대/축소 해제 */
+    max-width: 100% !important;    /* 박스를 넘지 않도록 */
+    max-height: 400px;             /* 너무 커지지 않게 적당한 높이 제한 */
+    display: block;
+}
