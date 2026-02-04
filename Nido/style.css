@@ -2712,3 +2712,77 @@ body > div:nth-of-type(5) .f-desc {
 /* (선택) 너무 딱 붙는 게 싫다면 둥근 모서리를 살짝 줄여도 좋습니다 */
     border-radius: 20px !important; 
  }
+
+
+
+
+ /* =========================================
+   [PC FIX] SUITABILITY BALANCED LAYOUT
+   (Safe Fit: No Overflow)
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    /* 1. 회색 박스 위아래 여백 축소 (요청사항 반영) */
+    .user-suitability-section {
+        padding-top: 50px !important;    /* 기존 80px -> 50px */
+        padding-bottom: 50px !important; /* 기존 100px -> 50px */
+    }
+
+    /* 2. 전체 레이아웃: 바닥 라인 정렬 */
+    .suitability-wrapper {
+        display: flex !important;
+        align-items: flex-end !important; /* 바닥 기준 정렬 */
+        justify-content: space-between !important;
+        gap: 20px !important;             /* 좌우 간격 */
+        overflow: visible !important;     /* 배지가 잘리지 않게 */
+        margin-top: 20px !important;      /* 제목과 간격 */
+    }
+
+    /* 3. [왼쪽 영역] 의자 + 배지 */
+    .suitability-left {
+        flex: 0 0 42% !important;     /* 42% 너비 고정 (의자 공간 확보) */
+        position: relative !important; /* 배지 위치 기준점 */
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* (A) 의자 이미지: 꽉 차게 */
+    .dim-base-img {
+        width: 100% !important;       /* 부모 너비에 딱 맞게 */
+        height: auto !important;
+        display: block !important;
+        margin-bottom: 0 !important;
+        
+        /* (선택) 살짝만 키우고 싶다면 안전하게 스케일 조정 */
+        transform: scale(1.05);       
+        transform-origin: bottom center; /* 바닥 중심 확대 */
+    }
+
+    /* (B) Recommended User 배지: 왼쪽 상단 고정 */
+    .badge-overlay {
+        position: absolute !important;
+        top: -10px !important;        /* 살짝 위로 띄움 */
+        left: 0 !important;
+        width: 170px !important;      /* 적당한 크기 */
+        z-index: 10;
+        margin: 0 !important;
+    }
+
+
+    /* 4. [오른쪽 영역] Customer A-D (요청: 조금 줄이기) */
+    .suitability-right {
+        flex: 0 0 55% !important;     /* 55% 너비 차지 */
+        display: flex;
+        align-items: flex-end;        /* 바닥 정렬 */
+        justify-content: flex-end;
+    }
+
+    /* 오른쪽 이미지 키(Height) 제한으로 전체 균형 맞춤 */
+    .users-full-img {
+        width: auto !important;
+        height: auto !important;
+        max-height: 480px !important; /* [핵심] 높이를 480px로 제한하여 왼쪽 의자와 키 맞춤 */
+        object-fit: contain;
+    }
+}
