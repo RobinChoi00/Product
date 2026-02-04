@@ -2160,3 +2160,61 @@ body > div:nth-of-type(5) .f-desc {
         text-align: center !important;
     }
 }
+
+
+
+
+
+/* ==========================================================================
+   [CRITICAL FIX] MOBILE OVERFLOW & WIDTH CORRECTION
+   화면 오른쪽 잘림 현상 방지 및 너비 재계산
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. 모든 요소의 너비 계산에 패딩과 테두리를 포함시킴 (가장 중요) */
+    * {
+        box-sizing: border-box !important;
+    }
+
+    /* 2. 화면 전체 가로 스크롤 방지 */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 3. 컨테이너 및 박스 너비가 화면을 넘지 않도록 100%로 제한 */
+    .container, 
+    .grey-card-box, 
+    .unified-gradient-box,
+    .programs-auto-section,
+    .spec-table,
+    .feature-row-card,
+    .feature-row,
+    .grid-2-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+        /* 화면 끝에 딱 붙지 않게 약간의 여백 부여 */
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    /* 4. 내부 이미지들이 부모 박스를 뚫고 나가지 않게 강제 축소 */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 5. 혹시 모를 고정 너비 강제 해제 */
+    .slider-main,
+    .spec-label,
+    .spec-value {
+        width: 100% !important;
+        min-width: 0 !important; /* 최소 너비 제한 해제 */
+    }
+}
