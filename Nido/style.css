@@ -539,97 +539,116 @@ body {
 
 
 /* =========================================
-   VARIABLES & FONTS (Check Consistency)
+   [FIX] 22 AUTO PROGRAMS & LAYOUT
    ========================================= */
-:root {
-    --nido-blue: #84c5d8;      /* 포인트 하늘색 */
-    --text-desc: #9e9e9e;      /* 설명 텍스트 */
-    --text-strong: #606060;    /* 설명 강조 텍스트 */
+
+/* 1. 배경 박스 및 전체 레이아웃 (회색 카드) */
+.programs-group-wrapper {
+    display: flex !important;          /* 강제로 가로 배치 */
+    flex-direction: row !important;    /* 가로 방향 고정 */
+    justify-content: space-between;
+    align-items: stretch;              /* 높이 균등 맞춤 (구분선 위해) */
     
-    --font-title: 'Forma DJR Banner', sans-serif;
-    --font-body: 'Poppins', sans-serif;
+    background-color: #f4f4f4;         /* 회색 배경 */
+    border-radius: 30px;               /* 둥근 모서리 */
+    padding: 50px 20px;                /* 내부 여백 */
+    margin: 0 auto 60px auto;          /* 중앙 정렬 및 하단 여백 */
+    max-width: 1100px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* =========================================
-   QUAD FEATURES (2x2 Grid Layout)
-   ========================================= */
-.quad-feature-section {
-    background-color: #ffffff;
-    padding-bottom: 100px; /* 하단 여백 넉넉하게 */
-}
-
-.quad-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2열 배치 */
-    gap: 80px 60px; /* 세로 간격 80px, 가로 간격 60px (폰트 크기 고려) */
-    margin-top: 50px;
-}
-
-/* Individual Item Card */
-.quad-item {
+/* 2. 개별 컬럼 (그룹) 스타일 */
+.program-group {
+    flex: 1;                           /* 균등 너비 분할 */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 왼쪽 정렬 */
+    flex-direction: column;            /* 아이템 세로 나열 */
+    align-items: center;               /* 중앙 정렬 */
+    gap: 40px;                         /* 아이템 간 간격 */
+    
+    border-right: 1px solid #84c5d8;   /* [요청] 하늘색 구분선 */
 }
 
-/* Image Styling */
-.q-img {
-    width: 100%;
-    margin-bottom: 35px; /* 텍스트와의 간격 */
-    border-radius: 20px; /* 둥근 모서리 */
-    overflow: hidden;
+/* 마지막 그룹은 오른쪽 선 제거 */
+.program-group:last-child {
+    border-right: none;
 }
 
-.q-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease; /* 부드러운 확대 효과 */
-}
-
-/* 호버 시 이미지 살짝 확대 */
-.quad-item:hover .q-img img {
-    transform: scale(1.03);
-}
-
-/* Text Container */
-.q-txt {
-    width: 100%;
-    padding-right: 10px; /* 오른쪽 여백 살짝 줌 */
-}
-
-/* Title Styling (45pt ≈ 60px) */
-.f-title {
-    font-family: var(--font-title);
-    font-weight: 700;       /* Bold */
-    font-size: 60px;        /* 45pt */
-    line-height: 1.1;
-    color: #424242;
+/* 3. 그룹 헤더 (UNIVERSAL COMFORT 등) */
+.group-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;                   /* [요청] 18pt */
+    color: #84c5d8;                    /* [요청] 하늘색 */
+    text-align: center;
+    line-height: 1.2;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    min-height: 45px;                  /* 줄바꿈 텍스트 높이 맞춤 */
+    display: flex;
+    align-items: flex-end;             /* 텍스트 바닥 라인 맞춤 */
+    justify-content: center;
+}
+
+/* 4. 아이콘 이미지 크기 강제 고정 */
+.p-item img {
+    width: 60px !important;            /* [중요] 이미지 크기 60px로 고정 */
+    height: auto !important;
+    max-width: 60px !important;        /* 100% 등으로 커지는 것 방지 */
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* 5. 프로그램 이름 (WOMEN'S RELIEF 등) */
+.p-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;                  /* Medium */
+    font-size: 12pt;                   /* [요청] 12pt */
+    color: #666666;
+    text-align: center;
+    line-height: 1.3;
     text-transform: uppercase;
 }
 
-/* Description Styling (21pt ≈ 28px) */
-.f-desc {
-    font-family: var(--font-body);
-    font-weight: 400;       /* Regular */
-    font-size: 28px;        /* 21pt */
-    line-height: 1.5;
-    color: var(--text-desc); /* #9e9e9e */
+.p-item img {
+    width: 85px ;       /* [수정] 가로 85px */
+    height: 85px ;      /* [수정] 세로 85px */
+    max-width: 85px ;   /* 최대 너비 제한도 85px로 맞춤 */
+    object-fit: contain;          /* 이미지가 비율을 유지하며 박스 안에 쏙 들어가게 함 */
+    margin-bottom: 15px;
+    display: block;
 }
 
-/* Strong Text Styling */
-.f-desc strong {
-    font-weight: 700;
-    color: var(--text-strong); /* #606060 */
+/* =========================================
+   [FIX] MANUAL MODES & GRID
+   ========================================= */
+/* Manual Modes 및 Grid 섹션도 동일한 회색 박스 적용 */
+.manual-flex, .grid-7-col {
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-/* Blue Span Styling */
-.blue {
-    color: var(--nido-blue) !important;
+/* Manual Modes 가로 배치 */
+.manual-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 
+
+/* 2. MANUAL MODES 아이콘 (6개 모드) */
+.p1-item img {
+    width: 85px ;       /* [수정] 가로 85px */
+    height: 85px ;      /* [수정] 세로 85px */
+    object-fit: contain;          /* 비율 유지 */
+    margin-bottom: 15px;
+}
 
 
 
@@ -915,16 +934,52 @@ body {
     justify-content: flex-start;
 }
 
-/* (참고) 중앙 정렬 아이콘의 경우 */
-.center-icon-wrap,
-.top-icon-wrap {
-    /* 상황에 따라 중앙 또는 왼쪽 정렬 */
-    /* feature-row 내부에서는 왼쪽, center-section에서는 중앙 */
+
+
+
+/* =========================================
+   [FIX] GREY CARD DESIGN (Voice, Air 3D, Rocking)
+   ========================================= */
+
+/* 1. 배경 초기화 (카드가 돋보이도록 섹션 배경은 흰색으로) */
+.dark-section-wrapper, 
+.intro-text-section,
+.light-feature-section {
+    background-color: #ffffff !important;
 }
 
+/* 2. Feature Row를 '회색 카드'로 변환 */
+/* (Voice Control, Rocking Motion, Footrest 등 적용) */
+.feature-row {
+    background-color: #f4f4f4; /* [핵심] 회색 배경 추가 */
+    border-radius: 30px;       /* 이미지처럼 둥근 모서리 */
+    padding: 60px;             /* 내부 콘텐츠 여백 */
+    margin-bottom: 40px;       /* 카드 사이 간격 */
+    box-sizing: border-box;
+    
+    /* 기존 Flex 레이아웃 유지 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
 
+/* 3. Grid Items를 '회색 카드'로 변환 */
+/* (Air 3D, Body Scan 적용) */
+.grid-item {
+    background-color: #efefef !important; /* [핵심] 회색 배경 추가 */
+    border-radius: 30px;       /* 둥근 모서리 */
+    padding: 50px 30px;        /* 내부 여백 */
+    box-shadow: none;          /* 기존 그림자 제거 (플랫 디자인) */
+    
+    /* 중앙 정렬 유지 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
+/
 
 
 
