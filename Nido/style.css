@@ -18,6 +18,7 @@
 .intro-text-section {
     padding: 30px 0; /* 상하 여백 */
     text-align: center;
+    margin-bottom: 0 auto 80px;
 }
 
 .container {
@@ -175,7 +176,7 @@
 /* 1. 공통 회색 박스 스타일 */
 .grey-card-box {
     background-color: #f4f4f4; /* 회색 배경 */
-    border-radius: 30px;       /* Radius 30px */
+    border-radius: 50px;       /* Radius 30px */
     overflow: hidden;          /* 이미지가 둥근 모서리를 넘지 않게 자름 */
     box-sizing: border-box;
     width: 100%;
@@ -188,7 +189,7 @@
     font-weight: 700;
     font-size: 36px;
     color: #606060;
-    line-height: 1.6;
+    line-height: 1.3;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
