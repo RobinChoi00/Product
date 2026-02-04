@@ -1491,7 +1491,7 @@
 
 /* 4. 6 Manual Modes 아이콘 간격 벌리기 */
 .manual-flex {
-    gap: 120px !important; /* 기존 40px -> 70px로 확장 */
+    gap: 90px !important; /* 기존 40px -> 70px로 확장 */
     width: 90% !important;
     margin: 0 auto;
 }
