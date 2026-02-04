@@ -2684,75 +2684,90 @@ body > div:nth-of-type(5) .f-desc {
 
 
 
- @media (min-width: 769px) {
+ /* =========================================
+   [PC FIX] SUITABILITY - FINAL TALL LAYOUT
+   (Text Down, Badge Left, Right Img Taller)
+   ========================================= */
 
-    /* 1. [핵심] 회색 박스 크기 축소 (패딩 대폭 감소) */
+@media (min-width: 769px) {
+
+    /* 1. 회색 박스 패딩 및 텍스트 위치 조정 */
     .user-suitability-section {
-        padding-top: 20px !important;    /* 기존 80px -> 30px */
-        padding-bottom: 20px !important; /* 기존 80px -> 30px */
-        /* 결과: 회색 박스 위아래 높이가 확 줄어듭니다 */
+        padding-top: 0 !important;      /* 상단 패딩 제거 (텍스트 마진으로 대체) */
+        padding-bottom: 40px !important; /* 하단 패딩 적절히 */
     }
 
-    /* 2. 전체 레이아웃: 여백 밸런스 */
+    /* [핵심 1] 텍스트 박스를 30px 밑으로 내림 */
+    .user-suitability-section .section-title-blue {
+        margin-top: 30px !important;    /* 위쪽 여백 추가 */
+        margin-bottom: 40px !important; /* 이미지와의 간격 */
+    }
+
+
+    /* 2. 전체 래퍼 레이아웃 (바닥 정렬 유지) */
     .suitability-wrapper {
         display: flex !important;
-        align-items: flex-end !important;
+        align-items: flex-end !important; /* 요소들의 바닥 라인을 맞춤 */
         justify-content: space-between !important;
-        gap: 20px !important;
+        gap: 30px !important;             /* 좌우 간격 약간 넓힘 */
         overflow: visible !important;
-        margin-top: 10px !important;      /* 제목과의 간격도 살짝 줄임 */
         width: 100% !important;
     }
 
-    /* 3. [왼쪽 영역] 의자 + 배지 */
+
+    /* 3. [왼쪽 영역] 배지 왼쪽 이동 & 의자 정렬 변경 */
     .suitability-left {
-        flex: 0 0 42% !important;
+        flex: 0 0 40% !important;     /* 영역 너비 설정 */
         position: relative !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-end !important; /* 오른쪽(사람들 쪽)으로 붙이기 */
-        margin-right: 0 !important;
-        padding-right: 20px !important;
+        
+        /* [변경] 배지가 왼쪽으로 가므로, 내용물도 왼쪽 정렬 */
+        align-items: flex-start !important; 
+        padding-right: 0 !important;
     }
 
-    /* (A) 의자 이미지: 85% 크기 */
+    /* (A) Recommended User 배지: 왼쪽으로 이동 */
+    .badge-overlay {
+        position: absolute !important;
+        top: -20px !important;       /* 의자보다 높게 띄움 */
+        
+        /* [핵심 2] 왼쪽 가장자리에 배치 (살짝 튀어나오게 -10px) */
+        left: -10px !important;      
+        right: auto !important;      /* 오른쪽 기준 해제 */
+        
+        width: 170px !important;     /* 배지 크기 */
+        z-index: 10;
+    }
+
+    /* (B) 의자 이미지: 왼쪽 정렬 및 크기 조절 */
     .dim-base-img {
-        width: 85% !important;       /* 적당한 크기 */
-        max-width: 400px !important;
+        width: 100% !important;      /* 왼쪽 영역에 꽉 차게 (오른쪽 이미지와 균형 맞춤) */
+        max-width: none !important;
         height: auto !important;
         display: block !important;
         margin-bottom: 0 !important;
-        transform: none !important;  
-        
-        /* 오른쪽 정렬 */
-        margin-left: auto !important; 
-        margin-right: 0 !important;
+        transform: none !important;
+
+        /* 왼쪽 정렬 */
+        margin-left: 0 !important; 
+        margin-right: auto !important; 
     }
 
-    /* (B) Recommended User 배지 */
-    .badge-overlay {
-        position: absolute !important;
-        top: -15px !important;       /* 박스가 작아졌으니 살짝 더 위로 */
-        left: auto !important;       
-        right: 10px !important;      /* 의자 따라 오른쪽으로 이동 */
-        width: 160px !important;
-        z-index: 10;
-        margin: 0 !important;
-    }
 
-    /* 4. [오른쪽 영역] Customer A-D */
+    /* 4. [오른쪽 영역] 이미지 키우기 */
     .suitability-right {
-        flex: 0 0 55% !important;
+        flex: 0 0 55% !important;    /* 영역 너비 설정 */
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
     }
 
-    /* 이미지 높이 제한 (왼쪽 의자와 키 맞춤) */
+    /* [핵심 3] 오른쪽 이미지 높이를 550px로 강제 고정하여 키움 */
     .users-full-img {
-        width: auto !important;
-        height: auto !important;
-        max-height: 460px !important; 
-        object-fit: contain;
+        height: 550px !important;    /* 원하는 만큼 높이를 키우세요 (예: 550px, 600px) */
+        width: auto !important;      /* 비율 유지를 위해 너비는 자동 */
+        max-height: none !important; /* 높이 제한 해제 */
+        object-fit: contain;         /* 이미지 짤림 방지 */
     }
 }
