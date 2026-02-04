@@ -1,4 +1,27 @@
 /* =========================================
+   0. UTILITIES (Spacing Helpers)
+   ========================================= */
+
+/* 마진 (바깥 여백) */
+.mb-20 { margin-bottom: 20px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-40 { margin-bottom: 40px !important; } /* [해결] 이 코드가 없어서 붙어있었습니다 */
+.mb-60 { margin-bottom: 60px !important; }
+.mb-80 { margin-bottom: 80px !important; }
+.mt-60 { margin-top: 60px !important; }
+
+/* 패딩 (안쪽 여백) */
+.py-80 { padding-top: 80px !important; padding-bottom: 80px !important; }
+.pb-80 { padding-bottom: 80px !important; }
+.pt-60 { padding-top: 60px !important; }
+
+/* 텍스트 정렬 */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+
+
+
+/* =========================================
    1. HERO BANNER
    ========================================= */
 .hero-full-banner {
@@ -24,7 +47,6 @@
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* 텍스트 스타일: Roboto, Regular, 20pt, #8e8e8e */
