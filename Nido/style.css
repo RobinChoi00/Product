@@ -1959,3 +1959,204 @@ body > div:nth-of-type(5) .f-desc {
     max-height: 400px;             /* 너무 커지지 않게 적당한 높이 제한 */
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   [MOBILE RESPONSIVE OVERRIDES] 
+   화면 너비 768px 이하(태블릿/모바일)일 때만 적용되는 강제 설정
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* ----------------------------------------------------
+       1. 레이아웃 초기화 (가로 배치 -> 세로 배치)
+       ---------------------------------------------------- */
+    
+    /* 플렉스 박스들을 세로로 정렬 (이미지 위, 텍스트 아래) */
+    .feature-row-card,
+    .feature-row,
+    .feature-row.reverse,
+    .suitability-wrapper,
+    .dimensions-row,
+    .doorway-layout,
+    .programs-group-wrapper,
+    .spec-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+        width: 100% !important;
+        padding-left: 20px !important; /* 모바일용 좌우 여백 */
+        padding-right: 20px !important;
+    }
+
+    /* 그리드 시스템을 1열로 변경 (2개씩 나오던걸 1개씩) */
+    .grid-2-card,
+    .grid-2,
+    .quad-grid,
+    .doorway-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* ----------------------------------------------------
+       2. 여백 및 크기 조정
+       ---------------------------------------------------- */
+
+    /* 전체 섹션 간격 줄이기 (너무 넓은 여백 축소) */
+    .grey-card-box,
+    .unified-gradient-box,
+    .programs-auto-section,
+    .center-feature-section,
+    .light-feature-section,
+    .quad-feature-section,
+    .user-suitability-section,
+    .doorway-section,
+    .dimensions-section,
+    .spec-section {
+        margin-bottom: 50px !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        width: 95% !important; /* 화면 꽉 차게 */
+    }
+
+    /* 내부 패딩 축소 */
+    .grey-card-box,
+    .center-img-wrap {
+        padding: 30px 20px !important;
+    }
+
+    /* ----------------------------------------------------
+       3. 텍스트 및 이미지 크기 최적화
+       ---------------------------------------------------- */
+
+    /* 제목 폰트 크기 축소 (36px -> 24px) */
+    .f-title, .g-title, .zg-title, .section-title-blue, .section-title {
+        font-size: 24px !important;
+        text-align: center !important;
+        width: 100% !important;
+        word-break: keep-all; /* 단어 단위 줄바꿈 */
+    }
+
+    /* 설명글 폰트 크기 축소 (24px -> 16px) */
+    .f-desc, .g-desc, .zg-desc, .intro-desc {
+        font-size: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important; /* 모바일은 중앙 정렬이 깔끔함 */
+        padding: 0 !important;
+    }
+
+    /* 이미지 크기 자동 조절 */
+    .f-img img, 
+    .g-img img, 
+    .center-img-wrap img,
+    .q-img img,
+    .wide-img img {
+        width: 100% !important;
+        max-width: 300px !important; /* 너무 커지지 않게 */
+        height: auto !important;
+    }
+    
+    /* ----------------------------------------------------
+       4. 섹션별 디테일 수정
+       ---------------------------------------------------- */
+
+    /* [Voice & Rocking] 텍스트 박스 너비 해제 */
+    .feature-row-card .f-txt,
+    .feature-row-card .f-img {
+        flex: auto !important;
+        width: 100% !important;
+    }
+
+    /* [SL-Track] 텍스트 아래 강제 마진 제거 (모바일엔 불필요) */
+    .dual-gradient-section .grid-item.item-left .g-desc {
+        margin-bottom: 20px !important;
+    }
+
+    /* [Foot Rollers] 이미지 다시 키우기 (45%는 모바일에서 너무 작음) */
+    .center-img-wrap img {
+        width: 80% !important;
+    }
+
+    /* [Auto Programs] 7열 그리드 -> 2열 그리드로 변경 */
+    .grid-7-col {
+        grid-template-columns: repeat(3, 1fr) !important; /* 한 줄에 3개씩 */
+        gap: 20px !important;
+    }
+    .program-group {
+        border-right: none !important; /* 구분선 제거 */
+        border-bottom: 1px solid #ddd; /* 아래쪽 구분선으로 변경 */
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* [Spec Table] 표 레이아웃 변경 */
+    .spec-row {
+        align-items: center !important;
+        border-bottom: 1px solid #eee;
+    }
+    .spec-label {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 5px;
+        color: #888; /* 라벨 색상 연하게 */
+    }
+    .spec-value {
+        width: 100% !important;
+        text-align: center !important;
+        font-weight: 700;
+    }
+
+    /* [Back Pad] 텍스트 상단 정렬 해제 */
+    .light-feature-section .grey-card-box.reverse .f-txt {
+        align-self: center !important;
+        margin-top: 0 !important;
+    }
+    
+    /* [Doorway] 왼쪽 정렬 해제 */
+    .doorway-right {
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
