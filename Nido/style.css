@@ -16,7 +16,7 @@
    2. INTRO TEXT SECTION
    ========================================= */
 .intro-text-section {
-    padding: 60px 0; /* 상하 여백 */
+    padding: 30px 0; /* 상하 여백 */
     text-align: center;
 }
 
@@ -34,8 +34,8 @@
     
     font-family: 'Roboto', sans-serif;
     font-weight: 400;         /* [요청] Regular */
-    font-size: 27px;          /* [요청] 20pt ≈ 26.66px */
-    line-height: 1.5;         /* 가독성을 위한 줄간격 */
+    font-size: 20px;          /* [요청] 20pt ≈ 26.66px */
+    line-height: 1.6;         /* 가독성을 위한 줄간격 */
     color: #8e8e8e;           /* [요청] 글자 색상 */
     word-break: keep-all;     /* 단어 단위 줄바꿈 */
 }
@@ -146,4 +146,1107 @@
 .color-btn.active {
     border: 2px solid #333; /* 선택된 버튼 테두리 강조 */
     transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+    GRAY BOX & LAYOUT DESIGN
+   ========================================= */
+
+/* 1. 공통 회색 박스 스타일 */
+.grey-card-box {
+    background-color: #f4f4f4; /* 회색 배경 */
+    border-radius: 30px;       /* [요청] Radius 30px */
+    overflow: hidden;          /* 이미지가 둥근 모서리를 넘지 않게 */
+    box-sizing: border-box;
+    margin-bottom: 40px;       /* 박스 간 세로 간격 */
+}
+
+/* 2. 타이포그래피 설정 (제목 & 설명) */
+.f-title, .g-title {
+    font-family: 'Forma DJR Banner', sans-serif; /* [요청] 폰트 */
+    font-weight: 700;        /* [요청] Bold */
+    font-size: 36px;         /* [요청] 36px */
+    color: #606060;          /* [요청] 제목 색상 */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.f-title .blue, .g-title .blue {
+    color: #84c5d8 !important; /* [요청] span 색상 */
+}
+
+.f-desc, .g-desc {
+    font-family: 'Poppins', sans-serif; /* [요청] 폰트 */
+    font-weight: 400;        /* [요청] Regular */
+    font-size: 24px;         /* [요청] 24px */
+    color: #9e9e9e;          /* [요청] 색상 */
+    line-height: 1.6;
+    
+    /* [요청] 텍스트 박스 크기 80% 제한 */
+    width: 80%;
+    max-width: 80%;
+}
+
+.f-desc strong, .g-desc strong {
+    color: #606060;          /* [요청] 강조 텍스트 색상 */
+    font-weight: 700;
+}
+
+
+/* =========================================
+   LAYOUT A: Intelligent Voice & Rocking Motion
+   (Left Align, 6:4 Ratio, Grey Box)
+   ========================================= */
+.feature-row-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px; /* 박스 내부 여백 */
+    gap: 40px;
+}
+
+/* 텍스트 (왼쪽 정렬) */
+.feature-row-card .f-txt {
+    flex: 0 0 40%;  /* [요청] 텍스트 4 비율 */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 설명글 80%지만 왼쪽 정렬이므로 margin-right 사용하지 않음 */
+.feature-row-card .f-txt .f-desc {
+    margin-left: 0; 
+}
+
+/* 이미지 (오른쪽 or 왼쪽) */
+.feature-row-card .f-img {
+    flex: 0 0 60%;  /* [요청] 이미지 6 비율 */
+    display: flex;
+    justify-content: center;
+}
+
+.feature-row-card .f-img img {
+    width: 100%;
+    max-width: 500px; /* 이미지 너무 커짐 방지 */
+}
+
+
+/* =========================================
+   LAYOUT B: Air 3D & Body Scan
+   (Center Align, Full Bleed Image, Grid)
+   ========================================= */
+.grid-2-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1:1 배치 */
+    gap: 40px; /* 카드 사이 간격 */
+}
+
+.grid-item-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* [요청] 이미지 꽉 채우기 위해 패딩 제거 */
+    text-align: center;
+    align-items: center;
+}
+
+/* [요청] 이미지를 회색 박스 위쪽 부분 다 채우기 */
+.grid-item-card .g-img {
+    width: 100%;
+    order: -1; /* [핵심] 텍스트보다 이미지를 무조건 위로 배치 */
+    margin-bottom: 40px;
+}
+
+.grid-item-card .g-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; /* 상단 모서리는 박스 radius를 따라감 */
+}
+
+/* 텍스트 부분만 별도 패딩 적용 */
+.grid-item-card .g-title, 
+.grid-item-card .g-desc {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.grid-item-card .g-desc {
+    margin: 0 auto 60px auto; /* 중앙 정렬 및 하단 여백 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   UNIFIED GRADIENT BOX (2-Stage ~ Lumbar)
+   ========================================= */
+
+/* 1. 통합 래퍼 스타일 (하나의 큰 박스) */
+.unified-gradient-box {
+    max-width: 1100px;          /* 다른 섹션과 너비 통일 */
+    margin: 0 auto 40px auto;   /* 중앙 정렬 및 하단 여백 */
+    border-radius: 30px;        /* [요청] Radius 20px~30px (부드럽게 30px 적용) */
+    overflow: hidden;           /* 내용이 모서리 밖으로 넘치지 않게 */
+    box-sizing: border-box;
+    
+    /* [수정] 위/아래 그라데이션 (상하 180deg 적용) */
+    /* 하늘색(#eefcfd) -> 흰색(#ffffff) -> 하늘색(#eefcfd) */
+    background: linear-gradient(180deg, #eefcfd 0%, #ffffff 25%, #ffffff 75%, #eefcfd 100%);
+    
+    padding-bottom: 60px;       /* 박스 하단 여백 */
+}
+
+/* 2. 내부 섹션 배경 초기화 (부모 그라데이션이 보이도록) */
+.unified-gradient-box .zero-gravity-section,
+.unified-gradient-box .dual-gradient-section,
+.unified-gradient-box .light-feature-section {
+    background: transparent !important; 
+    padding-top: 40px !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+
+/* ----------------------------------------------------
+   [TYPOGRAPHY] 폰트 및 색상 일괄 적용
+   ---------------------------------------------------- */
+/* 제목 스타일 (Forma DJR Banner, Bold, 36px) */
+.unified-gradient-box .zg-title, 
+.unified-gradient-box .g-title, 
+.unified-gradient-box .f-title {
+    font-family: 'Forma DJR Banner', sans-serif;
+    font-weight: 700;       /* Bold */
+    font-size: 36px;        /* [요청] 36px */
+    color: #606060;         /* [요청] 제목 기본 색상 */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* 설명 스타일 (Poppins, Regular, 21pt ≈ 28px) */
+.unified-gradient-box .zg-desc, 
+.unified-gradient-box .g-desc, 
+.unified-gradient-box .f-desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;       /* Regular */
+    font-size: 28px;        /* [요청] 21pt */
+    color: #9e9e9e;         /* [요청] 설명 색상 */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 강조 텍스트 (Strong) */
+.unified-gradient-box strong {
+    font-weight: 700;
+    color: #606060 !important; /* [요청] Strong 색상 */
+}
+
+/* 포인트 컬러 (Span) */
+.unified-gradient-box .blue { color: #84c5d8 !important; }
+.unified-gradient-box .red  { color: #ee3e30 !important; } /* Lumbar 섹션용 */
+
+
+/* ----------------------------------------------------
+   [ALIGNMENT] 정렬 및 레이아웃
+   ---------------------------------------------------- */
+
+/* 1. 2-Stage Zero Gravity (중앙 정렬) */
+.zero-gravity-section {
+    text-align: center;
+}
+.zg-desc.center-p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+.wide-img img { margin: 0 auto; }
+
+
+/* 2. SL-Track & Space Saving (왼쪽 정렬) */
+.dual-gradient-section .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px; /* [요청] 간격 60px */
+}
+
+.dual-gradient-section .grid-item.item-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* [요청] 왼쪽 정렬 */
+    text-align: left;        /* [요청] 왼쪽 정렬 */
+    padding: 0 40px;         /* 좌우 여백 */
+}
+
+.icon-wrap-left {
+    justify-content: flex-start;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+/* 3. 24-Cell & Lumbar (왼쪽 정렬) */
+.light-feature-section .feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;       /* [요청] 간격 60px */
+    padding: 0 40px; /* 좌우 여백 */
+    margin-bottom: 60px;
+}
+
+.light-feature-section .f-txt {
+    text-align: left;
+    align-items: flex-start;
+}
+.light-feature-section .top-icon-wrap {
+    justify-content: flex-start;
+    display: flex;
+}
+
+/* Lumbar Heating 하단 disclaimer 텍스트 */
+.disclaimer-text {
+    font-family: 'Avenir', 'Poppins', sans-serif; /* Avenir 없으면 Poppins */
+    font-weight: 400;       /* Roman (Regular) */
+    font-size: 16px;        /* [요청] 16px */
+    color: #9e9e9e;         /* [요청] 색상 */
+    display: block;
+    margin-top: 15px;
+    line-height: 1.6;
+    margin-bottom: 0 auto 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [FIX] PROGRAMS SECTION STYLING
+   ========================================= */
+
+/* 1. 회색 박스 컨테이너 (공통) */
+.grey-card-box {
+    background-color: #efefef; /* [요청] 배경색 */
+    border-radius: 20px;       /* [요청] Radius 20px */
+    padding: 60px 40px;        /* 내부 여백 넉넉하게 */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 2. 섹션 제목 (Box 밖) */
+.section-title-blue {
+    font-family: 'Forma DJR Banner', sans-serif;
+    font-weight: 700;       /* Bold */
+    font-size: 36px;        /* [요청] 36px */
+    color: #606060;         /* [요청] 일반 색상 */
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.section-title-blue .blue {
+    color: #84c5d8 !important; /* [요청] span 색상 */
+}
+
+/* 3. Auto Programs 상단 (5개 그룹 Flex) */
+.programs-group-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 상단 정렬 */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 개별 그룹 스타일 & 구분선 */
+.program-group {
+    flex: 1; /* 균등 분할 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* 아이콘 간격 */
+    
+    /* [요청] 구분선 (오른쪽 Border) */
+    border-right: 1px solid #84c5d8;
+}
+
+/* 마지막 그룹은 구분선 제거 */
+.program-group:last-child {
+    border-right: none;
+}
+
+/* 그룹 헤더 (UNIVERSAL COMFORT 등) */
+.group-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;       /* [요청] Semibold */
+    font-size: 16px;        /* [요청] 16px */
+    color: #84c5d8;         /* [요청] 색상 */
+    text-align: center;
+    line-height: 1.6;
+    text-transform: uppercase;
+    min-height: 40px;       /* 텍스트 줄바꿈 높이 맞춤 */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;  /* 텍스트 바닥 라인 정렬 */
+    justify-content: center;
+}
+
+/* 프로그램 아이템 (아이콘 + 이름) */
+.p-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.p-item img {
+    width: 70px !important;  /* [요청] 아이콘 크기 유지 */
+    height: 70px !important;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* 프로그램 이름 (WOMEN'S RELIEF 등) */
+.p-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;       /* [요청] Medium */
+    font-size: 12px;        /* [요청] 12px */
+    color: #6b6b6b;         /* [요청] 색상 */
+    text-align: center;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+
+/* 4. Precision Focus (중간 소제목) */
+.sub-title-precision {
+    font-family: 'Poppins', sans-serif; /* 헤더와 동일 폰트 */
+    font-weight: 600;       /* Semibold */
+    font-size: 16px;        /* 헤더와 동일 크기 */
+    color: #84c5d8;         /* 헤더와 동일 색상 */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 5. Precision Focus 그리드 (7 Columns) */
+.grid-7-col {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7열 균등 배치 */
+    gap: 15px;
+    justify-items: center;  /* 아이템 가로 중앙 */
+}
+
+
+/* 6. Manual Modes (Flex Layout) */
+.manual-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* 아이템 간격 */
+}
+
+/* Manual 아이콘 이름 스타일 (.p-name과 동일하게 적용) */
+.p1-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #6b6b6b;
+    text-align: center;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+.p1-item img {
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [FIX] FEATURES: FOOT ROLLER, FOOTREST, BACK PAD
+   ========================================= */
+
+/* 1. 타이포그래피 업데이트 (가이드라인 반영) */
+.center-feature-section .f-title,
+.light-feature-section .f-title {
+    font-family: 'Forma DJR Banner', sans-serif;
+    font-weight: 700;       /* Bold */
+    font-size: 36px;        /* [요청] 36px */
+    color: #424242;         /* [요청] #424242 */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.center-feature-section .f-desc,
+.light-feature-section .f-desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;       /* Regular */
+    font-size: 24px;        /* [요청] 24px */
+    color: #9e9e9e;         /* [요청] #9e9e9e */
+    line-height: 1.6;       /* [요청] 1.6 */
+}
+
+/* 색상 상세 설정 */
+.f-title .blue { color: #84c5d8 !important; } /* [요청] 하늘색 */
+.f-desc strong { color: #606060 !important; font-weight: 700; } /* [요청] 강조색 */
+
+
+/* 2. 아이콘 크기 통합 설정 (p-item 제외) */
+/* 이 섹션들 내부의 아이콘만 타겟팅하여 70px로 고정 */
+.center-feature-section .icon-circle-md,
+.light-feature-section .icon-sm,
+.light-feature-section .top-icon-wrap img {
+    width: 70px ;  /* [요청] 이전과 동일한 크기 */
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 0;        /* 래퍼가 간격을 담당하므로 이미지 자체 마진 제거 */
+}
+
+/* 아이콘 래퍼 간격 */
+.center-feature-section .center-icon-wrap,
+.light-feature-section .top-icon-wrap {
+    margin-bottom: 25px;     /* 제목과의 간격 */
+}
+
+
+/* 3. 레이아웃: 양쪽으로 벌리기 (Space Between) */
+.light-feature-section .feature-row {
+    display: flex;
+    justify-content: space-between; /* [요청] 양쪽 끝으로 붙이기 */
+    align-items: center;
+    gap: 80px;               /* 텍스트와 이미지 사이 넉넉한 간격 */
+    margin-bottom: 100px;
+    width: 100%;             /* 컨테이너 너비 꽉 채우기 */
+}
+
+.light-feature-section .feature-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Flex 비율 설정 (균형 있게 배분) */
+.light-feature-section .f-txt {
+    flex: 1;                 /* 1의 비율 */
+    text-align: left;        /* 텍스트 왼쪽 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.light-feature-section .f-img {
+    flex: 1;                 /* 1의 비율 */
+    display: flex;
+    justify-content: center; /* 이미지 영역 내 중앙 정렬 */
+}
+
+.light-feature-section .f-img img {
+    width: 100%;             /* 영역 꽉 채우기 */
+    max-width: 600px;        /* 너무 커지지 않게 제한 */
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Back Pad 섹션 (Reverse Layout) */
+/* HTML 순서(txt, img) + row-reverse = 이미지가 왼쪽, 텍스트가 오른쪽 */
+.light-feature-section .feature-row.reverse {
+    flex-direction: row-reverse; 
+}
+
+
+/* 4. Center Feature (Foot Rollers) 중앙 정렬 */
+.center-feature-section {
+    text-align: center;
+}
+.center-max-600 {
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+.center-icon-wrap {
+    display: flex;
+    justify-content: center;
+}
+.center-img-wrap img {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   QUAD FEATURES (Speakers, Remote, Side Panel, USB)
+   ========================================= */
+
+.quad-feature-section {
+    padding-bottom: 100px; /* 하단 여백 */
+    background-color: #ffffff;
+}
+
+/* 1. 2x2 그리드 레이아웃 */
+.quad-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 균등 배치 */
+    gap: 80px 60px; /* 세로 간격 80px, 가로 간격 60px */
+    margin-top: 50px;
+}
+
+/* 개별 아이템 컨테이너 */
+.quad-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* [중요] 텍스트 왼쪽 정렬 */
+    text-align: left;        /* [중요] 텍스트 왼쪽 정렬 */
+}
+
+/* 2. 이미지 스타일 */
+.q-img {
+    width: 100%;
+    margin-bottom: 35px; /* 텍스트와의 간격 */
+    border-radius: 20px; /* 둥근 모서리 */
+    overflow: hidden;    /* 호버 효과를 위해 넘치는 부분 숨김 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03); /* 아주 연한 그림자 */
+}
+
+.q-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease; /* 부드러운 확대 효과 */
+}
+
+/* 호버 시 이미지 살짝 확대 */
+.quad-item:hover .q-img img {
+    transform: scale(1.03);
+}
+
+/* 3. 텍스트 컨테이너 */
+.q-txt {
+    width: 100%;
+    padding-right: 10px; /* 오른쪽 여백 살짝 줌 */
+}
+
+/* 4. 타이포그래피 (이전 섹션과 동일 설정) */
+.quad-item .f-title {
+    font-family: 'Forma DJR Banner', sans-serif;
+    font-weight: 700;       /* Bold */
+    font-size: 36px;        /* [요청] 36px */
+    line-height: 1.2;
+    color: #424242;         /* [요청] 일반 텍스트 색상 */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.quad-item .f-title .blue {
+    color: #84c5d8 !important; /* [요청] 강조 색상 */
+}
+
+.quad-item .f-desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;       /* Regular */
+    font-size: 24px;        /* [요청] 24px */
+    line-height: 1.6;       /* [요청] 1.6 */
+    color: #9e9e9e;         /* [요청] 설명 색상 */
+}
+
+.quad-item .f-desc strong {
+    font-weight: 700;
+    color: #606060;         /* [요청] 강조 텍스트 색상 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [FIX] USER SUITABILITY (3.5 : 6.5 Layout)
+   ========================================= */
+
+.user-suitability-section {
+    background-color: #f4f4f4; /* bg-gray */
+    padding-bottom: 100px;
+}
+
+/* 1. 레이아웃 래퍼 (Flexbox) */
+.suitability-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* 하단 라인을 맞춰서 안정감 있게 */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* 2. 왼쪽 영역 (의자 치수 + 텍스트) - 비율 3.5 */
+.suitability-left {
+    flex: 3.5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 섹션 제목 (왼쪽 정렬) */
+.user-suitability-section .section-title-blue {
+    text-align: left !important; /* 왼쪽 정렬 강제 */
+    margin-bottom: 40px;
+    max-width: 90%; /* 텍스트가 너무 길어지지 않게 */
+}
+
+/* 의자 치수 이미지 */
+.dim-base-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply; /* 회색 배경과 자연스럽게 섞임 */
+    margin-top: 20px;
+}
+
+/* 뱃지 (Recommended User) 위치 조정 */
+.badge-overlay {
+    position: absolute;
+    top: 150px;   /* 텍스트 아래, 의자 머리 부분 쯤 */
+    left: 0;      /* 왼쪽 끝에 붙임 */
+    width: 45%;   /* 뱃지 크기 */
+    z-index: 10;
+}
+
+.badge-overlay img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+/* 3. 오른쪽 영역 (사용자 비교 카드) - 비율 6.5 */
+.suitability-right {
+    flex: 6.5;
+    display: flex;
+    align-items: flex-end; /* 이미지 바닥 정렬 */
+}
+
+.users-full-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* 둥근 모서리 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 살짝 입체감 */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [NEW] Minimum Doorway & Packaging Section
+   ========================================= */
+
+/* 1. 섹션 전체 설정 */
+.doorway-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    margin-bottom: 120px;
+}
+
+/* 2. 타이틀 스타일 (중앙 정렬) */
+.doorway-section .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 42px;           /* 기존 섹션들과 크기 통일 */
+    color: #333333;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 전체 레이아웃 (Flexbox: 좌우 배치) */
+.doorway-layout {
+    display: flex;
+    justify-content: center;   /* 중앙 정렬 */
+    align-items: flex-start;   /* 상단 기준 정렬 */
+    gap: 80px;                 /* 좌우 이미지 사이 간격 */
+    
+    max-width: 1300px;         /* 전체 폭 제한 */
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------
+   [Left Column] 도어웨이 이미지 (왼쪽)
+   ------------------------------------------------ */
+.doorway-left {
+    flex: 1;                   /* 공간 50% 차지 */
+    display: flex;
+    justify-content: flex-end; /* 이미지를 중앙(오른쪽)으로 붙임 */
+}
+
+.doorway-left img {
+    width: 95%;
+    max-width: 330px;          /* 이미지 크기 제한 */
+    height: auto;
+    object-fit: contain;
+}
+
+/* ------------------------------------------------
+   [Right Column] 박스 이미지 + 가이드 텍스트 (오른쪽)
+   ------------------------------------------------ */
+.doorway-right {
+    flex: 1;                   /* 공간 50% 차지 */
+    display: flex;
+    flex-direction: column;    /* 위: 박스, 아래: 텍스트 */
+    align-items: flex-start;   /* ★핵심: 모든 요소를 왼쪽 정렬 */
+    text-align: left;
+    padding-top: 20px;         /* 왼쪽 이미지와 높이 밸런스 맞춤 */
+}
+
+/* 박스 이미지 */
+.doorway-right .box-img {
+    margin-bottom: 40px;       /* 텍스트와의 간격 */
+}
+
+.doorway-right .box-img img {
+    width: 100%;
+    max-width: 420px;          /* 박스 이미지 크기 제한 */
+    height: auto;
+    display: block;
+    margin: 0;                 /* 왼쪽 정렬 유지 */
+}
+
+/* 측정 가이드 텍스트 영역 */
+.measuring-guide {
+    max-width: 500px;          /* 글자가 너무 길어지지 않게 제한 */
+    color: #888888;
+    font-family: 'Avenir', 'Nunito', sans-serif;
+}
+
+/* 가이드 제목 (Measuring Guide) */
+.measuring-guide .guide-title strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #424242;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* 가이드 리스트 (• 항목들) */
+.guide-list > div {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    
+    /* [엔지니어링 팁] 내어쓰기 (Hanging Indent) */
+    /* 글자가 줄바꿈될 때 '•' 기호 밑으로 들어가지 않고 예쁘게 정렬됨 */
+    padding-left: 15px; 
+    text-indent: -15px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Dimensions Section
+   ========================================= */
+
+.dimensions-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.dimensions-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. 타이틀 스타일 (이전 섹션들과 통일) */
+.dimensions-section .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #424242;   /* 진한 회색 */
+    text-align: center;
+    margin-bottom: 60px; /* 타이틀과 이미지 사이 여백 */
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+/* 2. 레이아웃 (가로 배치) */
+.dimensions-row {
+    display: flex;
+    justify-content: center; /* 전체 중앙 정렬 */
+    align-items: flex-end;   /* 바닥 라인 기준으로 정렬 (치수선 보기 좋게) */
+    gap: 80px;               /* 두 이미지 사이 넉넉한 간격 */
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 3. 이미지별 크기 제어 (비율 차별화) */
+
+/* 왼쪽: 정면 샷 (폭이 좁음) */
+.dim-img:first-child {
+    flex: 1;           /* 1의 비율 */
+    max-width: 350px;  /* 너무 커지지 않게 제한 */
+}
+
+/* 오른쪽: 측면 샷 (폭이 넓음) */
+.dim-img:last-child {
+    flex: 1.8;         /* 왼쪽보다 약 1.8배 더 넓은 공간 할당 */
+    max-width: 700px;  /* 넓은 이미지 수용 */
+}
+
+/* 이미지 공통 */
+.dim-img img {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [NEW] Specification Section
+   ========================================= */
+
+/* 1. 섹션 전체 여백 및 배경 */
+.spec-section {
+    background-color: #ffffff;
+    padding: 100px 0;      /* 위아래 넉넉한 여백 */
+    margin-bottom: 100px;  /* 하단 여백 */
+}
+
+/* 2. 메인 제목 (Specification) 스타일 */
+/* HTML 구조상 .container 바로 아래 첫 번째 div가 제목입니다 */
+.spec-section .container > div:first-child {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;       /* 아주 굵게 (Image like) */
+    font-size: 36px !important;        /* 큰 제목 크기 */
+    text-align: center;     /* 중앙 정렬 */
+    margin-bottom: 60px;    /* 표와의 간격 */
+    color: #000000;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 테이블 컨테이너 (중앙 정렬 & 상단 테두리) */
+.spec-table {
+    max-width: 1000px;      /* 표 너비 제한 */
+    margin: 0 auto;         /* 중앙 정렬 */
+    border-top: 1px solid #e5e5e5; /* 표 맨 위 가로선 */
+}
+
+/* 4. 행(Row) 스타일 */
+.spec-row {
+    display: flex;          /* 가로 배치 (좌:라벨, 우:값) */
+    align-items: flex-start;/* 위쪽 라인 맞춤 */
+    padding: 25px 0;        /* 행 높이 (위아래 여백) */
+    border-bottom: 1px solid #e5e5e5; /* 각 줄마다 회색 밑줄 */
+}
+
+/* 마지막 줄 테두리 제거 */
+.spec-row.no-border {
+    border-bottom: none;
+}
+
+/* 5. 왼쪽 라벨 (Product Name, Power Supply 등) */
+.spec-label {
+    width: 30%;             /* 왼쪽 칸 너비 (약 30%) */
+    min-width: 200px;       /* 최소 너비 확보 */
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;       /* Bold */
+    font-size: 20px;
+    color: #000000;         /* 검은색 */
+    line-height: 1.6;
+}
+
+/* 6. 오른쪽 값 (Titan Plantaris, 110-120V 등) */
+.spec-value {
+    flex: 1;                /* 남은 공간 다 차지 */
+    
+    font-family: 'Roboto', sans-serif; /* Avenir가 없으면 Poppins */
+    font-weight: 500;       /* Regular */
+    font-size: 20px;
+    color: #444444;         /* 약간 부드러운 검은색 */
+    line-height: 1.6;
+}
+
+/* 7. 내부 컬럼 나누기 (Upright / Reclined 등) */
+/* .spec-value 안에 .split-col이 있을 때 가로로 한 번 더 나눔 */
+.spec-value.split-col {
+    display: flex;          
+    gap: 80px;              /* 두 항목 사이 간격 (넓게) */
+}
+
+/* 내부 아이템 (Strong 제목 + Span 내용) */
+.col-item {
+    display: flex;
+    flex-direction: column; 
+}
+
+.col-item strong {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;     /* 제목과 수치 사이 간격 */
+    display: block;
+}
+
+/* 8. 다운로드 링크 스타일 (빨간색) */
+.red-link {
+    color: #ff4d4d;         /* 이미지와 동일한 빨간색 */
+    text-decoration: none;  
+    font-weight: 500;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.red-link:hover {
+    opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
 }
