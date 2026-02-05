@@ -530,7 +530,7 @@ body {margin: 0;}
 }
 .programs-auto-section .prog-container {
     justify-content: center; /* 중앙 정렬 */
-    margin-right: 30px;
+    padding-right: 30px;
 }
 
 /* 2. 타이틀 스타일링 (공통 가이드 준수) */
