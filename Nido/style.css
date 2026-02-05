@@ -2933,30 +2933,40 @@ body > div:nth-of-type(5) .f-desc {
 
 
 /* ==========================================================================
-   [PC FINAL POLISH] FINE-TUNING POSITIONING
+   [PC FINAL POLISH] POSITIONING CORRECTION
+   (Intelligent: Text UP / Specialized: Image UP)
    ========================================================================== */
 
 @media (min-width: 769px) {
 
-    /* 1. [Intelligent Voice Control] 이미지를 20px 위로 이동 */
-    /* 첫 번째 섹션의 의자 이미지를 살짝 들어 올립니다. */
-    .feature-row-card .f-img img {
-        margin-top: -20px !important;
+    /* 1. [Intelligent Voice Control] 텍스트를 30px 위로 이동 */
+    /* 기존에는 이미지를 올렸으나, 요청하신 대로 '텍스트'를 올립니다 */
+    .feature-row-card .f-txt,
+    .feature-row .f-txt {
+        transform: translateY(-30px) !important; /* 텍스트 덩어리를 위로 쑥 올림 */
         position: relative;
-        z-index: 1;
+        z-index: 2;
+    }
+    /* (참고) 이미지 위치는 건드리지 않고 원래대로 둡니다 */
+    .feature-row-card .f-img img {
+        margin-top: 0 !important; 
     }
 
-    /* 2. [Specialized Foot Rollers] 텍스트 부분을 30px 위로 이동 */
-    /* 두 번째 섹션의 아이콘, 타이틀, 설명글 전체를 위로 올립니다. */
+
+    /* 2. [Specialized Foot Rollers] 이미지를 20px 위로 이동 */
+    /* 회색 박스(이미지)를 위쪽 텍스트와 더 가까워지도록 당깁니다 */
+    .center-img-wrap {
+        /* 기존에 설정했던 마진(약 70px)을 줄이면 위로 올라갑니다 */
+        margin-top: 20px !important; 
+        
+        /* 확실하게 위로 더 당기고 싶다면 transform 추가 */
+        transform: translateY(-20px) !important; 
+    }
+    
+    /* 텍스트 위치는 원래대로 둡니다 (아까 올렸던거 취소) */
     .center-feature-card .f-title,
     .center-feature-card .f-desc,
     .center-feature-card .f-icon-wrap {
-        transform: translateY(-30px) !important;
+        transform: none !important;
     }
-    
-    /* 섹션 자체의 상단 여백이 너무 넓다면 아래 코드를 활성화하세요 */
-    /* .center-feature-section {
-        padding-top: 40px !important; 
-    } 
-    */
 }
