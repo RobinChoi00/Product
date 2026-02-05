@@ -2793,3 +2793,137 @@ body > div:nth-of-type(5) .f-desc {
         max-height: 700px !important; 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [PC FIX] SUITABILITY - PERFECT ALIGNMENT
+   (Top: Text=Img, Bottom: Chair=Img)
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    /* 1. 회색 박스: 위아래 여백을 타이트하게 줄임 */
+    .user-suitability-section {
+        /* 위아래 30px로 동일하게 설정하여 박스 크기 최소화 */
+        padding-top: 30px !important;    
+        padding-bottom: 30px !important; 
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* 2. 그리드 레이아웃 설정 (왼쪽/오른쪽 분할) */
+    .user-suitability-section .container {
+        display: grid !important;
+        /* 왼쪽(38%) : 오른쪽(62%) 너비 분할 */
+        grid-template-columns: 38% 62% !important; 
+        
+        /* [핵심] 상단(제목)은 자기 크기만큼, 하단(의자)은 나머지 공간 차지 */
+        grid-template-rows: min-content 1fr !important; 
+        
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        
+        /* 오른쪽 이미지 높이에 맞춰 그리드 높이 자동 결정 */
+        align-items: stretch !important; 
+    }
+
+    /* 기존 래퍼 무력화 (Grid 적용을 위해) */
+    .suitability-wrapper {
+        display: contents !important; 
+    }
+
+
+    /* --- [왼쪽 상단] 텍스트 (DESIGNED...) --- */
+    /* 오른쪽 이미지의 '맨 위'와 높이를 맞춤 */
+    .user-suitability-section .section-title-blue {
+        grid-column: 1 !important;
+        grid-row: 1 !important;    /* 첫 번째 줄 */
+        
+        text-align: left !important;
+        margin: 0 !important;      /* 불필요한 여백 제거 */
+        padding-top: 0 !important; /* 천장에 딱 붙임 */
+        padding-left: 40px !important; /* 왼쪽 벽에서 간격 둠 */
+        
+        /* 폰트 크기가 있어서 미세하게 내려와 보일 수 있으므로 줄 간격 보정 */
+        line-height: 1.2 !important; 
+        z-index: 2;
+    }
+
+
+    /* --- [왼쪽 하단] 의자 + 배지 --- */
+    /* 오른쪽 이미지의 '맨 아래'와 높이를 맞춤 */
+    .suitability-left {
+        grid-column: 1 !important;
+        grid-row: 2 !important;    /* 두 번째 줄 */
+        
+        display: flex !important;
+        flex-direction: column !important;
+        
+        /* [핵심] 요소를 바닥으로 밀어서 오른쪽 이미지 밑선과 맞춤 */
+        justify-content: flex-end !important; 
+        align-items: flex-start !important;   
+        
+        padding-left: 40px !important; /* 제목과 라인 맞춤 */
+        padding-right: 20px !important;
+        margin: 0 !important;
+    }
+    
+    /* 배지 (말풍선) */
+    .badge-overlay {
+        position: relative !important;
+        margin-bottom: 10px !important; /* 의자 머리 위 간격 */
+        width: 170px !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+    
+    /* 의자 이미지 */
+    .dim-base-img {
+        width: 100% !important;
+        max-width: 360px !important; /* 적당한 크기 제한 */
+        margin: 0 !important;
+        display: block !important;
+    }
+
+
+    /* --- [오른쪽 전체] 사람 이미지 --- */
+    /* 1번 줄(텍스트)부터 2번 줄(의자)까지 통으로 사용 */
+    .suitability-right {
+        grid-column: 2 !important;
+        grid-row: 1 / span 2 !important; 
+        
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: flex-end !important; /* 바닥 정렬 */
+        justify-content: flex-end !important;
+        margin: 0 !important;
+    }
+    
+    /* 이미지 높이 설정 (이 높이가 회색 박스 전체 높이를 결정함) */
+    .users-full-img {
+        width: auto !important;
+        /* 원하는 높이로 설정하세요 (예: 500px ~ 600px) */
+        height: 520px !important; 
+        
+        max-height: none !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+}
