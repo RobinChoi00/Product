@@ -2756,3 +2756,90 @@ body > div:nth-of-type(5) .f-desc {
         object-fit: contain;
     }
 }
+
+
+/* =========================================
+   [PC FIX] SUITABILITY - FINAL ADJUSTMENT
+   (1. Text Down 20px, 2. Badge Left, 3. Right Img Taller)
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    /* [수정 1] 텍스트를 밑으로 20px 내림 */
+    .user-suitability-section {
+        padding-top: 0 !important;      /* 상단 패딩 제거 */
+        padding-bottom: 40px !important;
+    }
+    .user-suitability-section .section-title-blue {
+        margin-top: 20px !important;    /* [핵심] 20px 만큼 여백 추가 */
+        margin-bottom: 40px !important;
+        width: 100% !important;
+    }
+
+    /* 전체 레이아웃 (바닥 정렬) */
+    .suitability-wrapper {
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: space-between !important;
+        gap: 20px !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    /* [수정 2] Recommended User 배지를 왼쪽으로 배치 */
+    .suitability-left {
+        flex: 0 0 42% !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        
+        /* 왼쪽 정렬로 변경 */
+        align-items: flex-start !important; 
+        margin-right: 0 !important;
+    }
+
+    /* (A) 배지: 왼쪽 고정 */
+    .badge-overlay {
+        position: absolute !important;
+        top: -15px !important;
+        
+        /* 왼쪽으로 붙임 */
+        left: 0 !important;          
+        right: auto !important;      
+        
+        width: 170px !important;
+        z-index: 10;
+        margin: 0 !important;
+    }
+
+    /* (B) 의자: 배지 아래에 맞춰 왼쪽 정렬 */
+    .dim-base-img {
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+        display: block !important;
+        margin-bottom: 0 !important;
+        transform: none !important;
+        
+        margin-left: 0 !important;    /* 왼쪽 정렬 */
+        margin-right: auto !important; 
+    }
+
+    /* [수정 3] 오른쪽 이미지 높이를 30px 정도 올림 */
+    .suitability-right {
+        flex: 0 0 55% !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .users-full-img {
+        width: auto !important;
+        height: auto !important;
+        
+        /* 기존(약 460px)보다 30px 정도 키운 490px로 설정 */
+        max-height: 490px !important; 
+        
+        object-fit: contain;
+    }
+}
