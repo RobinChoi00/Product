@@ -263,7 +263,7 @@ body {margin: 0;}
     font-weight: 400; /* Regular */
     font-size: 28px;
     color: #474747;
-    width: 85%;
+    max-width:1100px;
     line-height: 1.6;
     margin: 0 auto;    /* 중앙 정렬 */
 }
@@ -473,6 +473,7 @@ body {margin: 0;}
     line-height: 1.6;
     max-width: 1100px;   /* 가독성을 위해 너비 제한 */
     margin: 0 auto 60px; /* 중앙 정렬 및 이미지와의 간격 */
+    margin-top: 20px;
 }
 
 /* 4. 와이드 이미지 스타일링 (크고 둥글게) */
@@ -527,6 +528,9 @@ body {margin: 0;}
     padding: 100px 0;
     text-align: center;
     /* 배경 그라데이션은 상위 래퍼에서 처리되거나 필요시 여기에 추가 */
+}
+.programs-auto-section .prog-container {
+    justify-content: center; /* 중앙 정렬 */
 }
 
 /* 2. 타이틀 스타일링 (공통 가이드 준수) */
