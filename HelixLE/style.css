@@ -976,6 +976,7 @@ body {margin: 0;}
     border-radius: 50px;       /* 대형 섹션 공통 곡률 적용 */
     box-shadow: 0 15px 30px rgba(0,0,0,0.06);
     display: block;
+    padding-left: 20px;
 }
 
 /* =========================================
