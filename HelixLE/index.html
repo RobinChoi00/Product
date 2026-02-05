@@ -28,24 +28,36 @@
             
             <div class="group-slider">
                 <div class="slider-main">
-                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
                         <img src="images/6.nido_left_arrow copy.png" alt="Prev">
-                    </button>
+                    </div>
                     
-                    <img id="current-chair" src="images/2.HelixLE_Allcolor.png" alt="Forge 3D Chair">
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/2.HelixLE_Allcolor.png" alt="Helix LE Colors">
+                    </div>
                     
-                    <button class="nav-btn next-btn" onclick="moveSlide(1)">
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
                         <img src="images/7.nido_right_arrow copy.png" alt="Next">
-                    </button>
+                    </div>
                 </div>
 
                 <div class="swatch-panel">
-                    <img src="images/8.nido_swatches_bar copy.png" class="bar-bg" alt="Bar">
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.nido_swatches_bar copy.png" class="bar-bg" alt="Bar">
+                    </div>
                     <div class="btn-wrap">
-                        <img src="images/9.nido_swatch_all copy.png" class="color-btn active" onclick="changeColor(0)">
-                        <img src="images/10.nido_swatch_black copy.png" class="color-btn" onclick="changeColor(1)">
-                        <img src="images/11.nido_swatch_brown copy.png" class="color-btn" onclick="changeColor(2)">
-                        <img src="images/12.nido_swatch_taupe copy.png" class="color-btn" onclick="changeColor(3)">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.nido_swatch_all copy.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.nido_swatch_black copy.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.nido_swatch_brown copy.png" alt="Brown">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(3)">
+                            <img src="images/12.nido_swatch_taupe copy.png" alt="Taupe">
+                        </div>
                     </div>
                 </div>
             </div>
