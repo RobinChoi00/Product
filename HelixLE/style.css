@@ -14,107 +14,151 @@ body {margin: 0;}
 
 /* =========================================
    [SECTION 1] Intro Description 수정
+   - 폰트: Roboto, Regular(400), 18pt(24px)
+   - 색상: #8e8e8e
+   - 크기: 935px x 220px
+   - 정렬: 텍스트 중앙, 박스 중앙
    ========================================= */
 .intro-desc {
     /* 1. 폰트 및 텍스트 스타일 */
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
     color: #414042;
     text-align: center;
-    line-height: 1.6; /* 2.0은 너무 넓어서 1.6으로 조정 추천 */
+    line-height: 2.0;
 
-    /* 2. 박스 크기 */
+    /* 2. 박스 크기 (고정) */
     width: 95%;
-    max-width: 935px; /* 최대 너비 제한 추가 */
     height: auto;
 
-    /* 3. 위치 조정 */
+    /* 3. 위치 조정 (핵심: 위로 끌어올리기) */
+    /* 위쪽 마이너스 마진으로 배너와 겹치게 함 */
     margin: -20px auto 30px; 
-    padding: 20px 0;
 
-    /* 4. 레이어 */
+    /* 4. 레이어 순서 및 배경 (가독성 확보) */
     position: relative;
-    z-index: 10;
+    z-index: 10; /* 이미지보다 위에 오도록 설정 */
 
-    /* [핵심 수정] Flex 제거 -> Block으로 변경 */
-    /* Flex-direction: column이 문장을 끊어먹는 주범이었습니다. */
-    display: block; 
+    /* 5. 내부 텍스트 수직/수평 중앙 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0;
 }
 
-/* strong 태그가 줄바꿈되지 않도록 확실하게 인라인 처리 */
-.intro-desc strong {
-    display: inline;
-    font-weight: 700;
-    color: #000;
+.intro-strong {
+    font-weight: 600;
 }
 
 /* =========================================
-   [COLOR BANNER] Swatch Panel 수정
+   [GROUP] INTRO TEXT & SLIDER
    ========================================= */
-.swatch-panel {
-    /* 1. 배치 및 정렬 */
+
+/* 1. 전체 그룹 껍데기 */
+.intro-slider-group {
+    padding: 80px 0;      /* 위아래 여백 */
+    background-color: #fff;
+    text-align: center;   /* 내부 요소 중앙 정렬 */
+}
+
+/* 3. 슬라이더 영역 */
+.group-slider {
+    position: relative;
+    max-width: 100%;
+    margin : 0 auto;       /* 중앙 정렬 */
+    
+}
+
+/* 슬라이더 메인 (의자 + 화살표) */
+.slider-main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* 2. 패널 위치 및 간격 [핵심 수정] */
-    /* top: -30px, left/right: auto, bottom: 80px(간격 추가) */
-    margin: -30px auto 80px; 
-    
-    /* 3. 디자인 (알약 모양) */
-    background-color: #f0f0f0;
-    border-radius: 50px;
-    padding: 10px 30px; /* 좌우 여백을 조금 더 넉넉하게 */
-    
-    width: fit-content;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* 약간의 그림자로 입체감 */
-    
-    /* 겹침 방지 */
-    position: relative;
-    z-index: 20; 
+    gap: 120px;            /* 화살표와 의자 사이 간격 */
+    margin-bottom: 0px;  /* 색상 버튼과의 간격 */
+    height: 550px;
 }
 
-/* 불필요한 배경 이미지 래퍼는 숨김 처리 (CSS로 배경을 만들었으므로) */
-.bar-bg-wrap {
-    display: none; 
+#current-chair {
+    width: auto;
+    max-width: 450px;     /* 의자 이미지 크기 제한 */
+    height: 100%;
+    object-fit: contain;
+
+    transition: opacity 0.15s ease-in-out;
 }
 
-/* 버튼들을 감싸는 래퍼 정렬 */
-.btn-wrap {
-    display: flex;       /* contents 대신 flex 사용 */
-    gap: 20px;           /* 버튼 사이 간격 */
-    align-items: center;
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    flex-shrink: 0;
+}
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+.nav-btn img {
+    width: 15px;          /* 화살표 크기 */
+}
+
+/* 4. 색상 버튼 패널 */
+.swatch-panel {
+    /* 1. 배치 및 정렬 */
+    display: flex;              /* 내부 요소 플렉스 정렬 */
+    justify-content: center;    /* 가로 중앙 정렬 */
+    align-items: center;        /* 세로 중앙 정렬 */
+    gap: 15px;                  /* 버튼 사이의 간격 (이미지의 간격 반영) */
+    
+    /* 2. 패널 자체 위치 */
+    margin: -30px auto 0;             /* 블록 요소 기준 중앙 정렬 */
+    
+    /* 3. 디자인 (이미지처럼 둥근 회색 배경) */
+    background-color: #f0f0f0;  /* 연한 회색 배경 (이미지와 흡사한 톤) */
+    border-radius: 50px;        /* 둥근 알약(Pill) 형태 */
+    padding: 10px 25px;         /* 내부 여백을 통해 패널 크기 제어 */
+    
+    /* 4. 크기 제어 */
+    width: fit-content;         /* 내용물(버튼)에 딱 맞게 너비 자동 조절 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* (선택) 살짝 입체감 부여 */
+}
+
+/* 불필요해진 클래스 (기존 HTML에 남아있어도 영향 없도록 초기화하거나 삭제) */
+.bar-bg, .btn-wrap {
+    display: contents; /* 껍데기 역할만 하고 스타일 무시 (혹은 HTML에서 삭제 추천) */
+    /* 만약 bar-bg 이미지가 보인다면 display: none; 처리하십시오 */
 }
 
 .color-btn {
-    width: 30px;
+    width: 30px;        /* 기존 38px -> 30px로 축소 (요청사항 반영) */
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid transparent; /* 투명 테두리로 레이아웃 흔들림 방지 */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-    /* 이미지 꽉 차게 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+    transition: all 0.2s ease-in-out;
 
-.color-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* [수정] 테두리와 사각형 아웃라인 제거 */
+    border: none ;   
+    outline: none ;  
+    box-shadow: none ;
+    background: transparent; /* 배경 투명화 */
+    
+    /* 버튼 자체의 기본 마진 제거 (gap으로 제어함) */
+    margin: 0; 
+    padding: 0;
 }
 
 .color-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.15); /* 호버 시 약간 확대 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .color-btn.active {
-    border: 2px solid #333; /* 선택 시 테두리 */
-    transform: scale(1.1);
+    border: 2px solid #333; /* 선택된 버튼 테두리 강조 */
+    transform: scale(1.05);
 }
 
 
