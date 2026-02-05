@@ -2925,5 +2925,6 @@ body > div:nth-of-type(5) .f-desc {
         max-height: none !important;
         object-fit: contain !important;
         display: block !important;
+        margin-right: 20px !important;
     }
 }
