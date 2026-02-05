@@ -2790,6 +2790,6 @@ body > div:nth-of-type(5) .f-desc {
         
         /* [핵심] 이 숫자를 늘리면 이미지가 커집니다. */
         /* 기존 490px -> 550px로 변경 (더 키우고 싶으면 600px 등으로 수정하세요) */
-        max-height: 600px !important; 
+        max-height: 700px !important; 
     }
 }
