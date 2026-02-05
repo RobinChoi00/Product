@@ -17,143 +17,319 @@
     <div class="intro-text-section">
         <div class="container text-center">
             <div class="intro-title-logo">
-                <img src="images/helixle/logo_osaki_platinum.png" alt="Osaki Platinum" style="max-width: 150px; margin-bottom: 20px;">
-                <h2>Helix LE 4D</h2>
-                <p class="sub-title">Advanced 4D Massage for Everyday Wellness.</p>
+                <div class="logo-img">
+                    <img src="images/1.HelixLE_lifestyle.png" alt="Osaki Platinum">
+                </div>
             </div>
             
-            <div class="intro-desc" style="width: 100%; max-width: 900px; margin: 0 auto 40px;">
+            <div class="intro-desc">
                 Introducing the <strong>Osaki 4D Helix LE</strong>, a precision-engineered 4D massage chair designed to adapt seamlessly to your body. 
                 With intelligent body scanning and an advanced 4D massage mechanism, it delivers a deeply personalized, full-body massage that targets tension exactly where you need it.
             </div>
             
             <div class="group-slider">
                 <div class="slider-main">
-                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)"><img src="images/common/left_arrow.png" alt="Prev"></button>
-                    <img id="current-chair" src="images/helixle/02_colors_group.png" alt="Helix LE Colors">
-                    <button class="nav-btn next-btn" onclick="moveSlide(1)"><img src="images/common/right_arrow.png" alt="Next"></button>
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/6.nido_left_arrow copy.png" alt="Prev">
+                    </div>
+                    
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/2.HelixLE_Allcolor.png" alt="Helix LE Colors">
+                    </div>
+                    
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/7.nido_right_arrow copy.png" alt="Next">
+                    </div>
                 </div>
+
                 <div class="swatch-panel">
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.nido_swatches_bar copy.png" class="bar-bg" alt="Bar">
+                    </div>
                     <div class="btn-wrap">
-                        <img src="images/helixle/swatch_black.png" class="color-btn active" onclick="changeColor(0)">
-                        <img src="images/helixle/swatch_brown.png" class="color-btn" onclick="changeColor(1)">
-                        <img src="images/helixle/swatch_beige.png" class="color-btn" onclick="changeColor(2)">
-                        <img src="images/helixle/swatch_taupe.png" class="color-btn" onclick="changeColor(3)">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.nido_swatch_all copy.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.nido_swatch_black copy.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.nido_swatch_brown copy.png" alt="Brown">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(3)">
+                            <img src="images/12.nido_swatch_taupe copy.png" alt="Taupe">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="light-feature-section" style="background-color: #f4f6f9; padding: 60px 0;">
+    <div class="light-feature-section">
         <div class="container">
-            <div class="section-title-blue text-center mb-5">
-                <span class="blue">22-CELL FULL BODY</span><br>AIR MASSAGE
-            </div>
-            
-            <div class="air-system-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                <div class="air-main-img">
-                    <img src="images/helixle/03_air_main.png" alt="Full Body Air Massage Diagram" style="width: 100%;">
-                </div>
-                <div class="air-sub-features">
-                    <div class="sub-feat-row mb-4" style="display: flex; gap: 20px; align-items: center;">
-                        <img src="images/helixle/03_feat_heat.png" alt="Lumbar Heating" style="width: 150px; border-radius: 10px;">
-                        <div class="txt">
-                            <h4 class="blue">Lumbar Heating</h4>
-                            <p style="font-size: 14px;">Provides gentle warmth (approx. 75-83°F) to loosen tight muscles.</p>
-                        </div>
-                    </div>
-                    <div class="sub-feat-row" style="display: flex; gap: 20px; align-items: center;">
-                        <img src="images/helixle/03_feat_scan.png" alt="Auto Body Scan" style="width: 150px; border-radius: 10px;">
-                        <div class="txt">
-                            <h4 class="blue">Auto Body Scan</h4>
-                            <p style="font-size: 14px;">Customizes each massage to the user's unique shape and size.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="air-desc-bottom text-center mt-4" style="max-width: 800px; margin: 40px auto 0;">
-                With <strong>22 air cells</strong> strategically placed throughout the chair, the Osaki 4D Helix LE delivers soothing compression therapy to boost circulation and relieve tension.
-            </div>
-        </div>
-    </div>
-
-    <div class="core-tech-section" style="padding: 80px 0;">
-        <div class="container">
-            <div class="grid-2x2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div class="feature-row light-mode">
                 
-                <div class="tech-card text-center">
-                    <h3 class="blue mb-3">SL-TRACK<br>SYSTEM</h3>
-                    <img src="images/helixle/04_tech_sl.png" alt="SL Track" style="width: 100%; border-radius: 15px;">
-                    <p class="mt-3 p-3">The SL-Track system follows the body's natural contours, guiding rollers from neck to glutes for smooth, full-body coverage.</p>
-                </div>
-
-                <div class="tech-card text-center">
-                    <h3 class="blue mb-3">4D MASSAGE<br>MECHANISM</h3>
-                    <img src="images/helixle/04_tech_4d.png" alt="4D Mechanism" style="width: 100%; border-radius: 15px;">
-                    <p class="mt-3 p-3">Equipped with positioning gear back rollers for millimeter-level accuracy, delivering precisely controlled pressure.</p>
-                </div>
-
-                <div class="tech-card text-center">
-                    <h3 class="blue mb-3">SPACE SAVING<br>DESIGN</h3>
-                    <img src="images/helixle/04_tech_space.png" alt="Space Saving 8 inches" style="width: 100%; border-radius: 15px;">
-                    <p class="mt-3 p-3">Can be placed <strong>8 inches</strong> away from the wall and still achieve a complete recline.</p>
-                </div>
-
-                <div class="tech-card text-center">
-                    <h3 class="blue mb-3">SPRING-LOADED<br>EXTENDABLE FOOTREST</h3>
-                    <img src="images/helixle/04_tech_footrest.png" alt="Footrest Extension" style="width: 100%; border-radius: 15px;">
-                    <p class="mt-3 p-3">Extends up to <strong>5.7 inches</strong> with a spring-assisted mechanism to accommodate users of various heights.</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="zero-gravity-section dark-bg" style="background: #000; color: #fff; padding: 60px 0;">
-        <div class="container text-center">
-            <div class="zg-title mb-4">
-                <span style="color: #4A90E2;">ZERO GRAVITY</span> RECLINING
-            </div>
-            <div class="wide-img mb-4">
-                <img src="images/helixle/05_zg_main.png" alt="2 Stage Zero Gravity">
-            </div>
-            <div class="zg-desc">
-                Inspired by NASA technology, the Osaki 4D Helix LE offers <strong>2 stage zero gravity reclining</strong>.
-            </div>
-        </div>
-    </div>
-
-    <div class="programs-section" style="padding: 80px 0; background: #f9f9f9;">
-        <div class="container text-center">
-            
-            <div class="auto-prog mb-5">
-                <div class="section-title-blue mb-4"><span class="blue">15 AUTO</span> PROGRAMS</div>
-                <div class="prog-grid-5x3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 800px; margin: 0 auto;">
-                    <div class="p-item"><img src="images/helixle/icon_auto_women.png"><div class="p-name">WOMEN'S RELIEF</div></div>
-                    <div class="p-item"><img src="images/helixle/icon_auto_men.png"><div class="p-name">MEN'S RELIEF</div></div>
-                    <div class="p-item"><img src="images/helixle/icon_auto_senior.png"><div class="p-name">SENIOR CARE</div></div>
-                    <div class="p-item"><img src="images/helixle/icon_auto_neck.png"><div class="p-name">NECK & SHOULDER</div></div>
-                    <div class="p-item"><img src="images/helixle/icon_auto_back.png"><div class="p-name">BACK & SPINE</div></div>
-                    <div class="p-item"><img src="images/helixle/icon_auto_waist.png"><div class="p-name">WAIST & HIP</div></div>
+                <div class="f-txt">
+                    <div class="f-title">
+                        <div class="blue">22-CELL FULL BODY</div>
+                        AIR MASSAGE
                     </div>
+                    <div class="f-desc">
+                        With <strong>22 air cells</strong> strategically placed throughout the chair, the Osaki 4D Helix LE delivers soothing compression therapy to boost circulation and relieve tension, while <strong>lumbar heating</strong> provides gentle warmth to loosen tight muscles and improve blood microcirculation. 
+                        
+                        <div class="desc-space"></div> Its <strong>automatic body scan</strong> technology customizes each massage by adapting precisely to the user's unique shape and size for optimal comfort and effectiveness.
+                        
+                        <div class="footnote-text">
+                            *The heating therapy provide warmth in the range of approximately 75 - 83°F.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-img">
+                    <img src="images/6.HelixLE_AirCell.png" alt="22-Cell Full Body Air Massage System">
+                </div>
+
             </div>
+        </div>
+    </div>
 
-            <hr style="border: 0; border-top: 1px solid #ddd; margin: 50px 0;">
+    <div class="dark-section-wrapper">
+        <div class="dual-gradient-section">
+            <div class="container">
+                
+                <div class="gradient-box grid-2">
+                    
+                    <div class="grid-item">
+                        <div class="icon-wrap-left">
+                            <img src="images/7.HelixLE_SLTrack.png" alt="SL Track Icon">
+                        </div>
+                        <div class="g-title">
+                            <div class="blue">SL-TRACK</div>
+                            SYSTEM
+                        </div>
+                        <div class="g-desc">
+                            The SL-Track system in the Osaki 4D Helix LE follows the body’s natural contours, 
+                            guiding the rollers from the neck and shoulders down to the legs for smooth, full-body coverage. 
+                            Built with laser-crafted steel, it delivers consistent, comfortable relief that feels naturally aligned with your body.
+                        </div>
+                        <div class="g-img">
+                            <img src="images/7.HelixLE_SLTrack.png" alt="SL Track System">
+                        </div>
+                    </div>
 
-            <div class="manual-prog">
-                <div class="section-title-blue mb-4"><span class="blue">6 MANUAL</span> PROGRAMS</div>
-                <div class="manual-flex" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                    <div class="m-item"><img src="images/helixle/icon_man_knead.png"><div class="p-name">KNEADING</div></div>
-                    <div class="m-item"><img src="images/helixle/icon_man_sync.png"><div class="p-name">SYNC</div></div>
-                    <div class="m-item"><img src="images/helixle/icon_man_tap.png"><div class="p-name">TAPPING</div></div>
-                    <div class="m-item"><img src="images/helixle/icon_man_rub.png"><div class="p-name">RUBBING</div></div>
-                    <div class="m-item"><img src="images/helixle/icon_man_knock.png"><div class="p-name">KNOCKING</div></div>
-                    <div class="m-item"><img src="images/helixle/icon_man_shiatsu.png"><div class="p-name">SHIATSU</div></div>
+                    <div class="grid-item">
+                        <div class="icon-wrap-left">
+                            <img src="images/8.HelixLE_4DMech.png" alt="4D Mechanism Icon">
+                        </div>
+                        <div class="g-title">
+                            <div class="blue">4D MASSAGE</div>
+                            MECHANISM
+                        </div>
+                        <div class="g-desc">
+                            The Osaki 4D Helix LE features a precise 4D massage mechanism equipped with positioning gear back rollers for millimeter-level accuracy. 
+                            The system delivers precisely controlled pressure for a more targeted massage experience.
+                        </div>
+                        <div class="g-img">
+                            <img src="images/8.HelixLE_4DMech.png" alt="4D Massage Mechanism">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="gradient-box grid-2">
+                    
+                    <div class="grid-item">
+                        <div class="icon-wrap-left">
+                            <img src="images/9.HelixLE_SpaceSaving.png" alt="Space Saving Icon">
+                        </div>
+                        <div class="g-title">
+                            <div class="blue">SPACE SAVING</div>
+                            DESIGN
+                        </div>
+                        <div class="g-desc">
+                            Using Space-Saving Technology, the Osaki 4D Helix LE can be placed 8 inches away from the wall and still achieve a complete recline.
+                        </div>
+                        <div class="g-img">
+                            <img src="images/9.HelixLE_SpaceSaving.png" alt="Space Saving Design">
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="icon-wrap-left">
+                            <img src="images/10.HelixLE_Footrest.png" alt="Footrest Icon">
+                        </div>
+                        <div class="g-title">
+                            <div class="blue">SPRING-LOADED</div>                            
+                            <div class="sub-title">
+                                <span class="blue">EXTENDABLE</span> FOOTREST
+                            </div>
+                        </div>
+                        <div class="g-desc">
+                            The Osaki 4D Helix LE’s footrest extends up to 5.7 inches with a automatic extendable mechanism, accommodation users of various heights for a more customized fit.
+                        </div>
+                        <div class="g-img">
+                            <img src="images/10.HelixLE_Footrest.png" alt="Spring-Loaded Extendable Footrest">
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <div class="zero-gravity-section">
+        <div class="container text-center">
+            <div class="zg-title">
+                <span class="blue">ZERO GRAVITY</span> RECLINING
+            </div>
+            
+            <div class="zg-desc center-p">
+                Inspired by NASA technology, the Osaki 4D Helix LE offers 2 stage zero gravity reclining.
+            </div>
+            
+            <div class="wide-img">
+                <img src="images/11.HelixLE_ZeroGravity.png" alt="2 Stage Zero Gravity">
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-auto-section">
+        <div class="container text-center">
+            <div class="section-title-blue">
+                <span class="blue">15 AUTO</span> PROGRAMS
+            </div>
+
+            <div class="gray-card auto-card">
+                <div class="prog-container">
+                    
+                    <div class="prog-row">
+                        <div class="row-label">UNIVERSAL<br>COMFORT</div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/12.HelixLE_Women'sRelief.png" alt="Women's Relief">
+                                <div class="p-name">WOMEN'S RELIEF</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/13.HelixLE_Men'sRelief.png" alt="Men's Relief">
+                                <div class="p-name">MEN'S RELIEF</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/14.HelixLE_SeniorCare.png" alt="Senior Care">
+                                <div class="p-name">SENIOR CARE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row">
+                        <div class="row-label">TARGETED<br>RECOVERY</div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/15.HelixLE_Neck&Shoulder.png" alt="Neck & Shoulder">
+                                <div class="p-name">NECK & SHOULDER</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/16.HelixLE_Back&Spine.png" alt="Back & Spine">
+                                <div class="p-name">BACK & SPINE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/17.HelixLE_Waist&Hip.png" alt="Waist & Hip">
+                                <div class="p-name">WAIST & HIP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row">
+                        <div class="row-label">DEEP<br>RELAX</div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/18.HelixLE_Gamer'sMode.png" alt="Gamer's Mode">
+                                <div class="p-name">GAMER'S MODE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/19.HelixLE_RefreshMode.png" alt="Refresh Mode">
+                                <div class="p-name">REFRESH MODE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/20.HelixLE_NapMode.png" alt="Nap Mode">
+                                <div class="p-name">NAP MODE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row">
+                        <div class="row-label">AIR PRESSURE<br>MASSAGE</div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/21.HelixLE_AirBagKneading.png" alt="Airbag Kneading">
+                                <div class="p-name">AIRBAG KNEADING</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/22.HelixLE_AirBagPulsing.png" alt="Airbag Pulsing">
+                                <div class="p-name">AIRBAG PULSING</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/23.HelixLE_AirBagAlternating.png" alt="Airbag Alternating">
+                                <div class="p-name">AIRBAG ALTERNATING</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row border-none">
+                        <div class="row-label">CLASSIC</div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/24.HelixLE_RecoveryMode.png" alt="Recovery Mode">
+                                <div class="p-name">RECOVERY MODE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/25.HelixLE_SportsMode.png" alt="Sports Mode">
+                                <div class="p-name">SPORTS MODE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/26.HelixLE_GentleMode.png" alt="Gentle Mode">
+                                <div class="p-name">GENTLE MODE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-manual-section">
+        <div class="container text-center">
+            <div class="section-title-blue">
+                <span class="blue">6 MANUAL</span> PROGRAMS
+            </div>
+
+            <div class="gray-card manual-card">
+                <div class="manual-flex">
+                    <div class="p1-item">
+                        <img src="images/27.HelixLE_Kneading.png" alt="Kneading">
+                        <div class="p1-name">KNEADING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/28.HelixLE_Sync.png" alt="Sync">
+                        <div class="p1-name">SYNC</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/29.HelixLE_Tapping.png" alt="Tapping">
+                        <div class="p1-name">TAPPING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/30.HelixLE_Rubbing.png" alt="Rubbing">
+                        <div class="p1-name">RUBBING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/31.HelixLE_Knocking.png" alt="Knocking">
+                        <div class="p1-name">KNOCKING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/32.HelixLE_Shiatsu.png" alt="Shiatsu">
+                        <div class="p1-name">SHIATSU</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -162,48 +338,93 @@
             <div class="feature-row light-mode">
                 <div class="f-txt">
                     <div class="f-title">
-                        <span class="blue">VOICE CONTROL</span><br>& BLUETOOTH SPEAKERS
+                        <span class="blue">VOICE</span> CONTROL &<br> 
+                        <span class="blue">BLUETOOTH</span> SPEAKERS
                     </div>
                     <div class="f-desc">
-                        Enjoy music through high-quality <strong>Bluetooth speakers</strong> and control your massage hands-free with the <strong>Voice Control</strong> function. simply by waking the chair with "Hey Osaki".
+                        The Osaki 4D Helix LE features built-in <strong>Bluetooth speakers</strong> that deliver clear, immersive sound to enhance your massage experience, 
+                        allowing you to enjoy music, podcasts, or calming audio from your smart device. It also includes a <strong>voice control function</strong> for hands-free operation, 
+                        letting you start and control massage sessions simply by waking the chair with a voice command outlined in the user manual.
                     </div>
                 </div>
                 <div class="f-img">
-                    <img src="images/helixle/07_voice_bt.png" alt="Voice Control and Speakers">
+                    <img src="images/33.HelixLE_VoiceControlSpeaker.png" alt="Voice Control and Speakers">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="details-grid-section" style="padding: 60px 0; background: #f4f6f9;">
+    <div class="detailed-features-center">
         <div class="container">
-            <div class="grid-2x2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            
+            <div class="bottom-clean-grid">
                 
-                <div class="d-item text-center">
-                    <h3 class="blue mb-2">REMOVABLE HEADREST</h3>
-                    <img src="images/helixle/08_det_headrest.png" alt="Removable Headrest" style="width: 100%; border-radius: 10px;">
-                    <p class="mt-2 text-sm">Adjust cushioning and exposure for a more personalized massage experience.</p>
+                <div class="clean-col">
+                    <div class="c-img">
+                        <img src="images/34.HelixLE_Headrest.png" alt="Removable Headrest">
+                    </div>
+                    <div class="c-txt">
+                        <div class="f-title">
+                            <div class="blue">REMOVABLE</div> 
+                            HEADREST
+                        </div>
+                        <div class="f-desc">
+                            The Helix LE includes a removable headrest that allows you to adjust cushioning and exposure for a more personalized massage experience.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="d-item text-center">
-                    <h3 class="blue mb-2">DUAL-ROW FOOT ROLLERS</h3>
-                    <img src="images/helixle/08_det_rollers.png" alt="Foot Rollers" style="width: 100%; border-radius: 10px;">
-                    <p class="mt-2 text-sm">Two rotating foot rollers on each side stimulate reflex zones and acupuncture points.</p>
-                </div>
-
-                <div class="d-item text-center">
-                    <h3 class="blue mb-2">WIRELESS CHARGING</h3>
-                    <img src="images/helixle/08_det_wireless.png" alt="Wireless Charging" style="width: 100%; border-radius: 10px;">
-                    <p class="mt-2 text-sm">Integrated charging pad keeps your device powered hands-free.</p>
-                </div>
-
-                <div class="d-item text-center">
-                    <h3 class="blue mb-2">USB-C TYPE CHARGING</h3>
-                    <img src="images/helixle/08_det_usbc.png" alt="USB-C Port" style="width: 100%; border-radius: 10px;">
-                    <p class="mt-2 text-sm">Conveniently power your smartphone or devices while you relax.</p>
+                <div class="clean-col">
+                    <div class="c-img">
+                        <img src="images/35.HelixLE_FoorRollers.png" alt="Foot Rollers">
+                    </div>
+                    <div class="c-txt">
+                        <div class="f-title">
+                            <div class="blue">DUAL-ROW</div> 
+                            FOOT ROLLERS
+                        </div>
+                        <div class="f-desc">
+                            The Helix LE features two rotating foot rollerss on each side, designed to thoroughly stimulate reflex zones and acupuncture points for a deeper, more targeted foot massage.
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            <div class="bottom-clean-grid">
+                
+                <div class="clean-col">
+                    <div class="c-img">
+                        <img src="images/36.HelixLE_Wireless.png" alt="Wireless Charging">
+                    </div>
+                    <div class="c-txt">
+                        <div class="f-title">
+                            <div class="blue">WIRELESS</div> 
+                            CHARGING
+                        </div>
+                        <div class="f-desc">
+                            The Helix LE features a wireless charging pad integrated into the armrest, keeping your compatible device powered throughout your massage for a hands-free experience.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clean-col">
+                    <div class="c-img">
+                        <img src="images/37.HelixLE_USB-C.png" alt="USB-C Port">
+                    </div>
+                    <div class="c-txt">
+                        <div class="f-title">
+                            <div class="blue">USB-C TYPE</div> 
+                            CHARGING
+                        </div>
+                        <div class="f-desc">
+                            The Helix LE is equipped with a USB-C charging port, allowing you to conveniently power your smartphone or devices while you relax.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 
@@ -211,51 +432,79 @@
         <div class="container">
             
             <div class="feature-row">
-                <div class="f-img"><img src="images/helixle/09_ctrl_remote.png" alt="Touch Remote"></div>
+                <div class="f-img"><img src="images/38.HelixLE_TouchControl.png" alt="Touch Remote"></div>
                 <div class="f-txt">
-                    <div class="f-title"><span class="blue">TOUCH</span> REMOTE CONTROLLER</div>
-                    <div class="f-desc">Intuitive, full-color interface allows you to easily navigate auto programs and manual settings.</div>
+                    <div class="f-title"><span class="blue">TOUCH</span> REMOTE<br> CONTROLLER</div>
+                    <div class="f-desc">The Helix LE's touchscreen controller features an intuitive, full-color interface that allows you to easily navigate auto programs, manual settings, and personalization options. </div>
                 </div>
             </div>
 
             <div class="feature-row reverse">
                 <div class="f-txt">
-                    <div class="f-title"><span class="blue">SHORTCUT</span> REMOTE FUNCTION</div>
-                    <div class="f-desc">Convenient quick shortcut panels on the armrest allow easy access to adjust settings with a simple touch.</div>
+                    <div class="f-title"><span class="blue">SHORTCUT</span> <br> REMOTE FUNCTION</div>
+                    <div class="f-desc">The Helix LE features a convenient, quick shortcut panels on the armrest, allow easy access for the user to adjust settings with a simple touch.</div>
                 </div>
-                <div class="f-img"><img src="images/helixle/09_ctrl_shortcut.png" alt="Shortcut Panel"></div>
+                <div class="f-img"><img src="images/39.HelixLE_Shortcut.png" alt="Shortcut Panel"></div>
             </div>
 
             <div class="feature-row">
-                <div class="f-img"><img src="images/helixle/09_ctrl_rocking.png" alt="Rocking Mode"></div>
+                <div class="f-img"><img src="images/40.HelixLE_Rocking.png" alt="Rocking Mode"></div>
                 <div class="f-txt">
-                    <div class="f-title"><span class="blue">SPECIAL ROCKING</span> TECHNOLOGY</div>
-                    <div class="f-desc">Gently moves the chair back and forth to enhance relaxation and create a soothing, cradle-like experience.</div>
+                    <div class="f-title"><span class="blue">SPECIAL ROCKING</span><br> TECHNOLOGY</div>
+                    <div class="f-desc">The Helix LE features a special rocking technology that gently moves the chair back and forth to enhance relaxation. This rhythmic motion helps calm the body, reduce tension, and create a soothing, cradle-like massage experience.</div>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="safety-section text-center" style="padding: 60px 0;">
-        <div class="container">
-            <div class="section-title-blue mb-5"><span class="blue">TRIPLE SAFETY</span> DESIGN</div>
-            <div class="safety-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+    <div class="safety-section">
+        <div class="container text-center">
+            <div class="section-title-blue">
+                <span class="blue">TRIPLE SAFETY</span> DESIGN
+            </div>
+
+            <div class="safety-grid">
+                
                 <div class="s-item">
-                    <img src="images/helixle/10_safe_pinch.png" alt="Anti-Pinch" style="width: 100%; max-width: 300px;">
-                    <h4 class="blue mt-3">Anti-Pinch Protection</h4>
-                    <p class="text-sm">Automatically detects moving objects to help prevent pinching.</p>
+                    <div class="s-img">
+                        <img src="images/41.HelixLE_Anti-Pinch.png" alt="Anti-Pinch">
+                    </div>
+                    <div class="s-txt">
+                        <div class="s-title blue">Anti-Pinch</div>
+                        <div class="s-title blue">Protection</div>
+                        <div class="s-desc">
+                            The control box cover automatically detects moving objects to help prevent pinching and enhance safety.
+                        </div>
+                    </div>
                 </div>
+
                 <div class="s-item">
-                    <img src="images/helixle/10_safe_stop.png" alt="Emergency Stop" style="width: 100%; max-width: 300px;">
-                    <h4 class="blue mt-3">Emergency Stop Button</h4>
-                    <p class="text-sm">One-touch emergency stop provides an immediate response.</p>
+                    <div class="s-img">
+                        <img src="images/42.HelixLE_EmergencyStop.png" alt="Emergency Stop">
+                    </div>
+                    <div class="s-txt">
+                        <div class="s-title blue">Emergency</div>
+                        <div class="s-title blue">Stop Button</div>
+                        <div class="s-desc">
+                            One-touch emergency stop provides an immediate response in unexpected situations.
+                        </div>
+                    </div>
                 </div>
+
                 <div class="s-item">
-                    <img src="images/helixle/10_safe_reset.png" alt="Auto Reset" style="width: 100%; max-width: 300px;">
-                    <h4 class="blue mt-3">Auto Reset After Power Off</h4>
-                    <p class="text-sm">Safely resets to its original position automatically.</p>
+                    <div class="s-img">
+                        <img src="images/43.HelixLE_AutoRest.png" alt="Auto Reset">
+                    </div>
+                    <div class="s-txt">
+                        <div class="s-title blue">Auto Reset</div>
+                        <div class="s-title blue">After Power Off</div>
+                        <div class="s-desc">
+                            After power is cut off, the chair safely resets to its original position automatically.
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -265,14 +514,14 @@
             <div class="section-title">MINIMUM DOORWAY & PACKAGING</div>
             <div class="doorway-layout">
                 <div class="doorway-left">
-                    <img src="images/71.nido_min.doorway1.png" alt="Minimum Doorway Size">
+                    <img src="images/44.HelixLE_MinimumDW.png" alt="Minimum Doorway Size">
                 </div>
                 <div class="doorway-right">
                     <div class="box-img">
-                        <img src="images/72.nido_packaging.png" alt="Packaging Box Dimensions">
+                        <img src="images/45.HelixLE_Box.png" alt="Packaging Box Dimensions">
                     </div>
                     <div class="measuring-guide">
-                        <div class="guide-title">Measuring Guide</div>
+                        <div class="guide-title blue">Measuring Guide</div>
                         <div class="guide-list">
                             <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
                             <div>• Please use a standard measuring tape to measure the doorway.</div>
@@ -290,10 +539,10 @@
             <div class="section-title text-center">DIMENSIONS</div>
             <div class="dimensions-row">
                 <div class="dim-img">
-                    <img src="images/73.nido_dimensions1-1.png" alt="Forge Front Dimensions">
+                    <img src="images/46.HelixLE_Dimension_Front.png" alt="Forge Front Dimensions">
                 </div>
                 <div class="dim-img">
-                    <img src="images/74.nido_dimensions2.png" alt="Forge Side Dimensions">
+                    <img src="images/47.HelixLE_Dimension_Side.png" alt="Forge Side Dimensions">
                 </div>
             </div>
         </div>
@@ -306,7 +555,7 @@
             <div class="spec-table">
                 <div class="spec-row">
                     <div class="spec-label">Product Name</div>
-                    <div class="spec-value">Titan Nido</div>
+                    <div class="spec-value">Osaki Helix LE</div>
                 </div>
 
                 <div class="spec-row">
@@ -333,18 +582,18 @@
                     <div class="spec-value split-col">
                         <div class="col-item">
                             <strong>Upright</strong>
-                            <span>30.5" x 58.5" x 49"</span>
+                            <span>30.5" x 60" x 44"</span>
                         </div>
                         <div class="col-item">
                             <strong>Reclined</strong>
-                            <span>30.5" x 68" x 39"</span>
+                            <span>30.5" x 69.5" x 33.5"</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="spec-row">
                     <div class="spec-label">Chair Weight</div>
-                    <div class="spec-value">156.5 lb</div>
+                    <div class="spec-value">165.4 lb</div>
                 </div>
 
                 <div class="spec-row">
@@ -352,11 +601,11 @@
                     <div class="spec-value split-col">
                         <div class="col-item">
                             <strong>Shoulder</strong>
-                            <span>23"</span>
+                            <span>24.5"</span>
                         </div>
                         <div class="col-item">
                             <strong>Seat</strong>
-                            <span>19"</span>
+                            <span>20"</span>
                         </div>
                     </div>
                 </div>
@@ -376,7 +625,7 @@
                     <div class="spec-value split-col">
                         <div class="col-item">
                             <strong>Box 1</strong>
-                            <span>30.3" x 51.2" x 49.6"</span>
+                            <span>30.3" x 60.2" x 34.4"</span>
                         </div>
                     </div>
                 </div>
@@ -385,7 +634,7 @@
                     <div class="spec-value split-col">
                         <div class="col-item">
                             <strong>Box 1</strong>
-                            <span>194 lb</span>
+                            <span>196.2 lb</span>
                         </div>
                     </div>
                 </div>
