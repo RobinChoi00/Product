@@ -83,6 +83,6 @@ window.changeColor = function(index) {
 
 // 초기화
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("✅ Plantaris Script Loaded. Total Slides:", slideData.length);
+    console.log("✅ HelixLE Script Loaded. Total Slides:", slideData.length);
     updateDisplay();
 });
