@@ -2943,7 +2943,7 @@ body > div:nth-of-type(5) .f-desc {
     /* 기존에는 이미지를 올렸으나, 요청하신 대로 '텍스트'를 올립니다 */
     .feature-row-card .f-txt,
     .feature-row .f-txt {
-        transform: translateY(-50px) !important; /* 텍스트 덩어리를 위로 쑥 올림 */
+        transform: translateY(-70px) !important; /* 텍스트 덩어리를 위로 쑥 올림 */
         position: relative;
         z-index: 2;
     }
@@ -2991,5 +2991,35 @@ body > div:nth-of-type(5) .f-desc {
     .feature-row-card:last-of-type .f-img {
         /* 이미지 위치는 그대로 유지하거나 필요시 수정 */
         transform: none !important;
+    }
+}
+
+
+
+
+
+/* =========================================
+   [PC FIX] INTELLIGENT VOICE - CENTER TEXT
+   (Reset offsets & Force Center Align)
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    /* 1. 첫 번째 섹션(Intelligent Voice)만 콕 집어서 선택 */
+    .feature-row-card:first-of-type .f-txt {
+        
+        /* 기존의 위치 이동(transform) 초기화 */
+        transform: none !important; 
+        margin-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+
+        /* [핵심] 수직 중앙 정렬 강제 적용 */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; /* 위아래 가운데 정렬 */
+        
+        /* (선택) 만약 그래도 조금 낮다면 margin-bottom을 살짝 줘서 올릴 수 있습니다 */
+        /* margin-bottom: 20px !important; */
     }
 }
