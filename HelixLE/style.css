@@ -943,10 +943,17 @@ body {margin: 0;}
 }
 
 /* 2. 구역 반반 나누기 (50/50 Split) */
-.controls-section .f-img,
+.controls-section .f-img {
+    flex: 1;
+    width: 50%;
+}
+
 .controls-section .f-txt {
     flex: 1;
     width: 50%;
+
+    display: flex;
+    justify-content: center;
 }
 
 /* 3. 타이틀 스타일링 (표준 사양 준수) */
@@ -981,7 +988,6 @@ body {margin: 0;}
     border-radius: 50px;       /* 대형 섹션 공통 곡률 적용 */
     box-shadow: 0 15px 30px rgba(0,0,0,0.06);
     display: block;
-    padding-left: 20px;
 }
 
 /* =========================================
