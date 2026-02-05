@@ -2972,13 +2972,24 @@ body > div:nth-of-type(5) .f-desc {
 }
 
 
-@media (min-width: 769px) {
+/* =========================================
+   [PC FIX] ROCKING MOTION TEXT POSITION
+   (Override: Move text DOWN by 40px)
+   ========================================= */
 
-    /* Specialized Foot Rollers 텍스트 덩어리를 아래로 이동 */
-    .center-feature-card .f-icon-wrap, /* 아이콘 */
-    .center-feature-card .f-title,     /* 제목 */
-    .center-feature-card .f-desc {     /* 설명글 */
-        /* Y축 방향으로 40px 아래로 이동 */
+@media (min-width: 769px) {
+    
+    /* 1. Rocking Motion 섹션 타겟팅 (마지막 카드 박스 선택) */
+    /* 주의: 만약 이 코드가 안 먹히면 HTML에 'rocking-section' 클래스를 추가해야 합니다 */
+    .feature-row-card:last-of-type .f-txt {
+        /* 아까 올렸던 설정을 덮어쓰고, 아래로 40px 내림 */
         transform: translateY(40px) !important; 
+        padding-bottom: 0 !important; /* 하단 패딩 초기화 */
+    }
+
+    /* 2. (선택사항) 혹시 이미지가 너무 위에 있다면 같이 조절 */
+    .feature-row-card:last-of-type .f-img {
+        /* 이미지 위치는 그대로 유지하거나 필요시 수정 */
+        transform: none !important;
     }
 }
