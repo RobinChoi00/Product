@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osaki 4D Helix LE Massage Chair</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/helixle/01_hero_main.jpg" alt="Osaki Helix LE 4D Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            <div class="intro-title-logo">
+                <img src="images/helixle/logo_osaki_platinum.png" alt="Osaki Platinum" style="max-width: 150px; margin-bottom: 20px;">
+                <h2>Helix LE 4D</h2>
+                <p class="sub-title">Advanced 4D Massage for Everyday Wellness.</p>
+            </div>
+            
+            <div class="intro-desc" style="width: 100%; max-width: 900px; margin: 0 auto 40px;">
+                Introducing the <strong>Osaki 4D Helix LE</strong>, a precision-engineered 4D massage chair designed to adapt seamlessly to your body. 
+                With intelligent body scanning and an advanced 4D massage mechanism, it delivers a deeply personalized, full-body massage that targets tension exactly where you need it.
+            </div>
+            
+            <div class="group-slider">
+                <div class="slider-main">
+                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)"><img src="images/common/left_arrow.png" alt="Prev"></button>
+                    <img id="current-chair" src="images/helixle/02_colors_group.png" alt="Helix LE Colors">
+                    <button class="nav-btn next-btn" onclick="moveSlide(1)"><img src="images/common/right_arrow.png" alt="Next"></button>
+                </div>
+                <div class="swatch-panel">
+                    <div class="btn-wrap">
+                        <img src="images/helixle/swatch_black.png" class="color-btn active" onclick="changeColor(0)">
+                        <img src="images/helixle/swatch_brown.png" class="color-btn" onclick="changeColor(1)">
+                        <img src="images/helixle/swatch_beige.png" class="color-btn" onclick="changeColor(2)">
+                        <img src="images/helixle/swatch_taupe.png" class="color-btn" onclick="changeColor(3)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="light-feature-section" style="background-color: #f4f6f9; padding: 60px 0;">
+        <div class="container">
+            <div class="section-title-blue text-center mb-5">
+                <span class="blue">22-CELL FULL BODY</span><br>AIR MASSAGE
+            </div>
+            
+            <div class="air-system-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div class="air-main-img">
+                    <img src="images/helixle/03_air_main.png" alt="Full Body Air Massage Diagram" style="width: 100%;">
+                </div>
+                <div class="air-sub-features">
+                    <div class="sub-feat-row mb-4" style="display: flex; gap: 20px; align-items: center;">
+                        <img src="images/helixle/03_feat_heat.png" alt="Lumbar Heating" style="width: 150px; border-radius: 10px;">
+                        <div class="txt">
+                            <h4 class="blue">Lumbar Heating</h4>
+                            <p style="font-size: 14px;">Provides gentle warmth (approx. 75-83°F) to loosen tight muscles.</p>
+                        </div>
+                    </div>
+                    <div class="sub-feat-row" style="display: flex; gap: 20px; align-items: center;">
+                        <img src="images/helixle/03_feat_scan.png" alt="Auto Body Scan" style="width: 150px; border-radius: 10px;">
+                        <div class="txt">
+                            <h4 class="blue">Auto Body Scan</h4>
+                            <p style="font-size: 14px;">Customizes each massage to the user's unique shape and size.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="air-desc-bottom text-center mt-4" style="max-width: 800px; margin: 40px auto 0;">
+                With <strong>22 air cells</strong> strategically placed throughout the chair, the Osaki 4D Helix LE delivers soothing compression therapy to boost circulation and relieve tension.
+            </div>
+        </div>
+    </div>
+
+    <div class="core-tech-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="grid-2x2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                
+                <div class="tech-card text-center">
+                    <h3 class="blue mb-3">SL-TRACK<br>SYSTEM</h3>
+                    <img src="images/helixle/04_tech_sl.png" alt="SL Track" style="width: 100%; border-radius: 15px;">
+                    <p class="mt-3 p-3">The SL-Track system follows the body's natural contours, guiding rollers from neck to glutes for smooth, full-body coverage.</p>
+                </div>
+
+                <div class="tech-card text-center">
+                    <h3 class="blue mb-3">4D MASSAGE<br>MECHANISM</h3>
+                    <img src="images/helixle/04_tech_4d.png" alt="4D Mechanism" style="width: 100%; border-radius: 15px;">
+                    <p class="mt-3 p-3">Equipped with positioning gear back rollers for millimeter-level accuracy, delivering precisely controlled pressure.</p>
+                </div>
+
+                <div class="tech-card text-center">
+                    <h3 class="blue mb-3">SPACE SAVING<br>DESIGN</h3>
+                    <img src="images/helixle/04_tech_space.png" alt="Space Saving 8 inches" style="width: 100%; border-radius: 15px;">
+                    <p class="mt-3 p-3">Can be placed <strong>8 inches</strong> away from the wall and still achieve a complete recline.</p>
+                </div>
+
+                <div class="tech-card text-center">
+                    <h3 class="blue mb-3">SPRING-LOADED<br>EXTENDABLE FOOTREST</h3>
+                    <img src="images/helixle/04_tech_footrest.png" alt="Footrest Extension" style="width: 100%; border-radius: 15px;">
+                    <p class="mt-3 p-3">Extends up to <strong>5.7 inches</strong> with a spring-assisted mechanism to accommodate users of various heights.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="zero-gravity-section dark-bg" style="background: #000; color: #fff; padding: 60px 0;">
+        <div class="container text-center">
+            <div class="zg-title mb-4">
+                <span style="color: #4A90E2;">ZERO GRAVITY</span> RECLINING
+            </div>
+            <div class="wide-img mb-4">
+                <img src="images/helixle/05_zg_main.png" alt="2 Stage Zero Gravity">
+            </div>
+            <div class="zg-desc">
+                Inspired by NASA technology, the Osaki 4D Helix LE offers <strong>2 stage zero gravity reclining</strong>.
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-section" style="padding: 80px 0; background: #f9f9f9;">
+        <div class="container text-center">
+            
+            <div class="auto-prog mb-5">
+                <div class="section-title-blue mb-4"><span class="blue">15 AUTO</span> PROGRAMS</div>
+                <div class="prog-grid-5x3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 800px; margin: 0 auto;">
+                    <div class="p-item"><img src="images/helixle/icon_auto_women.png"><div class="p-name">WOMEN'S RELIEF</div></div>
+                    <div class="p-item"><img src="images/helixle/icon_auto_men.png"><div class="p-name">MEN'S RELIEF</div></div>
+                    <div class="p-item"><img src="images/helixle/icon_auto_senior.png"><div class="p-name">SENIOR CARE</div></div>
+                    <div class="p-item"><img src="images/helixle/icon_auto_neck.png"><div class="p-name">NECK & SHOULDER</div></div>
+                    <div class="p-item"><img src="images/helixle/icon_auto_back.png"><div class="p-name">BACK & SPINE</div></div>
+                    <div class="p-item"><img src="images/helixle/icon_auto_waist.png"><div class="p-name">WAIST & HIP</div></div>
+                    </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #ddd; margin: 50px 0;">
+
+            <div class="manual-prog">
+                <div class="section-title-blue mb-4"><span class="blue">6 MANUAL</span> PROGRAMS</div>
+                <div class="manual-flex" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <div class="m-item"><img src="images/helixle/icon_man_knead.png"><div class="p-name">KNEADING</div></div>
+                    <div class="m-item"><img src="images/helixle/icon_man_sync.png"><div class="p-name">SYNC</div></div>
+                    <div class="m-item"><img src="images/helixle/icon_man_tap.png"><div class="p-name">TAPPING</div></div>
+                    <div class="m-item"><img src="images/helixle/icon_man_rub.png"><div class="p-name">RUBBING</div></div>
+                    <div class="m-item"><img src="images/helixle/icon_man_knock.png"><div class="p-name">KNOCKING</div></div>
+                    <div class="m-item"><img src="images/helixle/icon_man_shiatsu.png"><div class="p-name">SHIATSU</div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="voice-bt-section">
+        <div class="container">
+            <div class="feature-row light-mode">
+                <div class="f-txt">
+                    <div class="f-title">
+                        <span class="blue">VOICE CONTROL</span><br>& BLUETOOTH SPEAKERS
+                    </div>
+                    <div class="f-desc">
+                        Enjoy music through high-quality <strong>Bluetooth speakers</strong> and control your massage hands-free with the <strong>Voice Control</strong> function. simply by waking the chair with "Hey Osaki".
+                    </div>
+                </div>
+                <div class="f-img">
+                    <img src="images/helixle/07_voice_bt.png" alt="Voice Control and Speakers">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-grid-section" style="padding: 60px 0; background: #f4f6f9;">
+        <div class="container">
+            <div class="grid-2x2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                
+                <div class="d-item text-center">
+                    <h3 class="blue mb-2">REMOVABLE HEADREST</h3>
+                    <img src="images/helixle/08_det_headrest.png" alt="Removable Headrest" style="width: 100%; border-radius: 10px;">
+                    <p class="mt-2 text-sm">Adjust cushioning and exposure for a more personalized massage experience.</p>
+                </div>
+
+                <div class="d-item text-center">
+                    <h3 class="blue mb-2">DUAL-ROW FOOT ROLLERS</h3>
+                    <img src="images/helixle/08_det_rollers.png" alt="Foot Rollers" style="width: 100%; border-radius: 10px;">
+                    <p class="mt-2 text-sm">Two rotating foot rollers on each side stimulate reflex zones and acupuncture points.</p>
+                </div>
+
+                <div class="d-item text-center">
+                    <h3 class="blue mb-2">WIRELESS CHARGING</h3>
+                    <img src="images/helixle/08_det_wireless.png" alt="Wireless Charging" style="width: 100%; border-radius: 10px;">
+                    <p class="mt-2 text-sm">Integrated charging pad keeps your device powered hands-free.</p>
+                </div>
+
+                <div class="d-item text-center">
+                    <h3 class="blue mb-2">USB-C TYPE CHARGING</h3>
+                    <img src="images/helixle/08_det_usbc.png" alt="USB-C Port" style="width: 100%; border-radius: 10px;">
+                    <p class="mt-2 text-sm">Conveniently power your smartphone or devices while you relax.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="controls-section">
+        <div class="container">
+            
+            <div class="feature-row">
+                <div class="f-img"><img src="images/helixle/09_ctrl_remote.png" alt="Touch Remote"></div>
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">TOUCH</span> REMOTE CONTROLLER</div>
+                    <div class="f-desc">Intuitive, full-color interface allows you to easily navigate auto programs and manual settings.</div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">SHORTCUT</span> REMOTE FUNCTION</div>
+                    <div class="f-desc">Convenient quick shortcut panels on the armrest allow easy access to adjust settings with a simple touch.</div>
+                </div>
+                <div class="f-img"><img src="images/helixle/09_ctrl_shortcut.png" alt="Shortcut Panel"></div>
+            </div>
+
+            <div class="feature-row">
+                <div class="f-img"><img src="images/helixle/09_ctrl_rocking.png" alt="Rocking Mode"></div>
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">SPECIAL ROCKING</span> TECHNOLOGY</div>
+                    <div class="f-desc">Gently moves the chair back and forth to enhance relaxation and create a soothing, cradle-like experience.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="safety-section text-center" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-title-blue mb-5"><span class="blue">TRIPLE SAFETY</span> DESIGN</div>
+            <div class="safety-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div class="s-item">
+                    <img src="images/helixle/10_safe_pinch.png" alt="Anti-Pinch" style="width: 100%; max-width: 300px;">
+                    <h4 class="blue mt-3">Anti-Pinch Protection</h4>
+                    <p class="text-sm">Automatically detects moving objects to help prevent pinching.</p>
+                </div>
+                <div class="s-item">
+                    <img src="images/helixle/10_safe_stop.png" alt="Emergency Stop" style="width: 100%; max-width: 300px;">
+                    <h4 class="blue mt-3">Emergency Stop Button</h4>
+                    <p class="text-sm">One-touch emergency stop provides an immediate response.</p>
+                </div>
+                <div class="s-item">
+                    <img src="images/helixle/10_safe_reset.png" alt="Auto Reset" style="width: 100%; max-width: 300px;">
+                    <h4 class="blue mt-3">Auto Reset After Power Off</h4>
+                    <p class="text-sm">Safely resets to its original position automatically.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="doorway-section">
+        <div class="container">            
+            <div class="section-title">MINIMUM DOORWAY & PACKAGING</div>
+            <div class="doorway-layout">
+                <div class="doorway-left">
+                    <img src="images/71.nido_min.doorway1.png" alt="Minimum Doorway Size">
+                </div>
+                <div class="doorway-right">
+                    <div class="box-img">
+                        <img src="images/72.nido_packaging.png" alt="Packaging Box Dimensions">
+                    </div>
+                    <div class="measuring-guide">
+                        <div class="guide-title">Measuring Guide</div>
+                        <div class="guide-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="dimensions-section">
+        <div class="container">
+            <div class="section-title text-center">DIMENSIONS</div>
+            <div class="dimensions-row">
+                <div class="dim-img">
+                    <img src="images/73.nido_dimensions1-1.png" alt="Forge Front Dimensions">
+                </div>
+                <div class="dim-img">
+                    <img src="images/74.nido_dimensions2.png" alt="Forge Side Dimensions">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+            
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Titan Nido</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="https://cdn.shopify.com/s/files/1/0086/1297/0558/files/A3201-8_Forge_3D_manual_revised_2025.8.20.pdf?v=1769098064" class="red-link" target="_blank">Download</a>
+                        
+                    
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Upright</strong>
+                            <span>30.5" x 58.5" x 49"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>30.5" x 68" x 39"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">156.5 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>23"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>19"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">30.5"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Maximum Weight</div>
+                    <div class="spec-value">270 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>30.3" x 51.2" x 49.6"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border"> <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>194 lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

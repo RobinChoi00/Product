@@ -2970,3 +2970,15 @@ body > div:nth-of-type(5) .f-desc {
         transform: none !important;
     }
 }
+
+
+@media (min-width: 769px) {
+
+    /* Specialized Foot Rollers 텍스트 덩어리를 아래로 이동 */
+    .center-feature-card .f-icon-wrap, /* 아이콘 */
+    .center-feature-card .f-title,     /* 제목 */
+    .center-feature-card .f-desc {     /* 설명글 */
+        /* Y축 방향으로 40px 아래로 이동 */
+        transform: translateY(40px) !important; 
+    }
+}
