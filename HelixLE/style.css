@@ -931,6 +931,107 @@ body {margin: 0;}
 
 
 
+
+
+/* =========================================
+   [SECTION 10] CONTROLS & TECHNOLOGY
+   ========================================= */
+
+/* 1. 섹션 컨테이너 및 행(Row) 설정 */
+.controls-section {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.controls-section .feature-row {
+    display: flex;
+    align-items: center;       /* 수직 중앙 정렬 */
+    justify-content: space-between;
+    gap: 80px;                 /* 이미지와 텍스트 사이의 넉넉한 간격 */
+    margin-bottom: 120px;      /* 행 간 간격 */
+}
+
+/* 마지막 행 여백 제거 */
+.controls-section .feature-row:last-child {
+    margin-bottom: 0;
+}
+
+/* 2. 구역 반반 나누기 (50/50 Split) */
+.controls-section .f-img,
+.controls-section .f-txt {
+    flex: 1;
+    width: 50%;
+}
+
+/* 3. 타이틀 스타일링 (표준 사양 준수) */
+.controls-section .f-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;           /* f-title 사양 */
+    color: #231f20;            /* 메인 텍스트 색상 */
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.controls-section .f-title .blue {
+    color: #3563e0;            /* 포인트 블루 컬러 */
+}
+
+/* 4. 설명 텍스트 스타일링 (표준 사양 준수) */
+.controls-section .f-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;          /* regular */
+    font-size: 28px;           /* f-desc 사양 */
+    color: #474747;
+    line-height: 1.6;
+}
+
+/* 5. 이미지 스타일링 (고급스러운 곡률 적용) */
+.controls-section .f-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;       /* 대형 섹션 공통 곡률 적용 */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    display: block;
+}
+
+/* =========================================
+   [Alignment Logic] 위치별 정렬 제어
+   ========================================= */
+
+/* A. 텍스트가 오른쪽에 있는 경우 (f-img가 첫 번째 자식일 때) */
+.controls-section .feature-row .f-txt:last-child {
+    text-align: left;          /* 왼쪽 정렬 */
+}
+
+/* B. 텍스트가 왼쪽에 있는 경우 (f-txt가 첫 번째 자식일 때) */
+.controls-section .feature-row .f-txt:first-child {
+    text-align: right;         /* 오른쪽 정렬 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================
    [SECTION 11] TRIPLE SAFETY DESIGN
    ========================================= */
