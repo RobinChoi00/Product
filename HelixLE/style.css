@@ -316,6 +316,7 @@ body {margin: 0;}
     gap: 40px; /* 카드 사이 간격 */
     max-width: 1200px;
     margin: 0 auto;
+    align-items: stretch;
 }
 
 /* 2. 개별 아이템 (Flex 컨테이너로 변환) */
@@ -390,6 +391,7 @@ body {margin: 0;}
 /* 6. 설명 텍스트 (흰색 박스의 아랫부분 역할) */
 .dual-gradient-section .g-desc {
     order: 3; /* 순서 3번: 맨 아래 */
+    flex-grow: 1;
     
     /* f-desc와 동일한 폰트 설정 */
     font-family: 'Roboto', sans-serif;
@@ -408,6 +410,8 @@ body {margin: 0;}
     
     /* 박스 그림자 (아래쪽 절반) - 부드러운 입체감 */
     box-shadow: 0 15px 30px rgba(0,0,0,0.05); 
+
+    margin-top: -1px;
 }
 
 
