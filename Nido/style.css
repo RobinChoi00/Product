@@ -2928,3 +2928,35 @@ body > div:nth-of-type(5) .f-desc {
         margin-right: 20px !important;
     }
 }
+
+
+
+
+/* ==========================================================================
+   [PC FINAL POLISH] FINE-TUNING POSITIONING
+   ========================================================================== */
+
+@media (min-width: 769px) {
+
+    /* 1. [Intelligent Voice Control] 이미지를 20px 위로 이동 */
+    /* 첫 번째 섹션의 의자 이미지를 살짝 들어 올립니다. */
+    .feature-row-card .f-img img {
+        margin-top: -20px !important;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* 2. [Specialized Foot Rollers] 텍스트 부분을 30px 위로 이동 */
+    /* 두 번째 섹션의 아이콘, 타이틀, 설명글 전체를 위로 올립니다. */
+    .center-feature-card .f-title,
+    .center-feature-card .f-desc,
+    .center-feature-card .f-icon-wrap {
+        transform: translateY(-30px) !important;
+    }
+    
+    /* 섹션 자체의 상단 여백이 너무 넓다면 아래 코드를 활성화하세요 */
+    /* .center-feature-section {
+        padding-top: 40px !important; 
+    } 
+    */
+}
