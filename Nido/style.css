@@ -2781,4 +2781,15 @@ body > div:nth-of-type(5) .f-desc {
         
         object-fit: contain;
     }
+
+
+    .users-full-img {
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain;
+        
+        /* [핵심] 이 숫자를 늘리면 이미지가 커집니다. */
+        /* 기존 490px -> 550px로 변경 (더 키우고 싶으면 600px 등으로 수정하세요) */
+        max-height: 550px !important; 
+    }
 }
