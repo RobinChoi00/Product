@@ -865,6 +865,11 @@ body {margin: 0;}
     text-transform: uppercase;
 }
 
+.detailed-features-center .f-title .blue{
+    color: #3563e0;
+    font-weight: 600;
+}
+
 /* [수정] order: 2 삭제 및 스타일 유지 */
 .detailed-features-center .c-img {
     width: 100%;
