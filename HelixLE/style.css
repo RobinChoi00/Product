@@ -1332,3 +1332,91 @@ body {margin: 0;}
 .red-link:hover {
     opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [GLOBAL SPACING & GRADIENTS]
+   ========================================= */
+
+/* 1. 공통 섹션 간격 (Airiness Strategy) */
+/* 모든 주요 섹션에 넉넉한 패딩 적용 */
+.light-feature-section,
+.dark-section-wrapper,
+.zero-gravity-section,
+.programs-auto-section,
+.programs-manual-section,
+.voice-bt-section,
+.detailed-features-center,
+.controls-section,
+.safety-section,
+.doorway-section {
+    padding: 120px 0; /* 상하 120px 간격 (Best for Premium Look) */
+}
+
+/* 모바일에서는 간격을 조금 줄임 (반응형 대응) */
+@media (max-width: 768px) {
+    [class*="-section"] { padding: 80px 0; }
+}
+
+
+/* 2. 상단 그라데이션 (22-Cell -> 15 Auto Programs) */
+.gradient-group-upper {
+    /* 배경: #eef1f7로 시작해서 끝부분(100%)에 가까워질수록 흰색으로 변함 */
+    /* 15 Auto Programs 중간쯤에서 끝나도록 정교하게 위치(85%) 조정 */
+    background: linear-gradient(180deg, 
+        #eef1f7 0%, 
+        #eef1f7 70%, 
+        #ffffff 100%
+    );
+}
+
+/* 주의: 중간에 있는 Dark Section이 그라데이션을 가리지 않도록 배경 투명화 혹은 유지 */
+/* 만약 Dark Section은 검은색을 유지해야 한다면 기존 background: #000 유지하면 됩니다. */
+
+
+/* 3. 하단 그라데이션 (Voice -> Special Rocking Title) */
+.gradient-group-lower {
+    /* Voice Control(#eef1f7) -> Controls Section 내부에서 화이트로 전환 */
+    background: linear-gradient(180deg, 
+        #eef1f7 0%, 
+        #eef1f7 40%, 
+        #ffffff 90% /* Special Rocking 제목 위치 쯤에서 흰색이 되도록 조정 */
+    );
+}
+
+/* 4. Controls Section 내부 미세 조정 */
+/* 그라데이션이 자연스럽게 보이도록 배경 투명화 */
+.voice-bt-section,
+.controls-section {
+    background-color: transparent !important; /* 상위 그라데이션을 보여주기 위함 */
+}
+
+
+/* 5. 섹션 내부 요소 간격 가이드 (Internal Spacing) */
+/* 타이틀과 설명 사이 */
+.f-title, .s-title, .g-title, .zg-title, .section-title-blue {
+    margin-bottom: 40px; 
+}
+
+/* 설명과 이미지 사이 */
+.f-desc, .s-desc, .g-desc, .zg-desc {
+    margin-bottom: 50px; 
+}
+
+/* 설명 텍스트의 줄간격 (가독성 확보) */
+.f-desc, .g-desc, .s-desc, .zg-desc, .intro-desc {
+    line-height: 1.8; /* 줄 간격을 1.8배로 넓혀 고급스러운 느낌 */
+}
