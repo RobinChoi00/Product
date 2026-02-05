@@ -966,11 +966,12 @@ body {margin: 0;}
     font-size: 24px;           /* f-desc 사양 */
     color: #474747;
     line-height: 1.6;
+    width: 90%;
 }
 
 /* 5. 이미지 스타일링 (고급스러운 곡률 적용) */
 .controls-section .f-img img {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 50px;       /* 대형 섹션 공통 곡률 적용 */
     box-shadow: 0 15px 30px rgba(0,0,0,0.06);
