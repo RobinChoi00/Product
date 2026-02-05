@@ -440,7 +440,7 @@ body {margin: 0;}
 .zero-gravity-section {
     padding: 120px 0;    /* 상하 여백을 넉넉히 주어 공간감 확보 */
     text-align: center;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 /* 2. 타이틀 스타일링 (f-title과 동일 설정) */
