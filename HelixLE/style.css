@@ -1103,7 +1103,7 @@ body {margin: 0;}
     font-size: 28px;           /* f-desc와 동일한 28px */
     color: #474747;
     line-height: 1.5;
-    max-width: 360px;          /* 3열 구조에서 글자가 너무 퍼지지 않게 제한 */
+    max-width: 400px;          /* 3열 구조에서 글자가 너무 퍼지지 않게 제한 */
     margin: 0 auto;
 }
 
@@ -1175,8 +1175,8 @@ body {margin: 0;}
 }
 
 .doorway-left img {
-    width: 95%;
-    max-width: 330px;          /* 이미지 크기 제한 */
+    width: 80%;
+    max-width: 250px;          /* 이미지 크기 제한 */
     height: auto;
     object-fit: contain;
 }
