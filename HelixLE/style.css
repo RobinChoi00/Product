@@ -1176,8 +1176,8 @@ body {margin: 0;}
 }
 
 .doorway-left img {
-    width: 80%;
-    max-width: 250px;          /* 이미지 크기 제한 */
+    width: 60%;
+    max-width: 200px;          /* 이미지 크기 제한 */
     height: auto;
     object-fit: contain;
 }
