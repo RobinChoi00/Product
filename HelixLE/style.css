@@ -44,7 +44,7 @@ body {margin: 0;}
     max-width: 1200px;     /* 너무 넓어지지 않게 안전장치 */
     margin: 0 auto 60px;   /* 중앙 정렬 & 아래 여백 */
     
-    line-height: 1.2;      /* 가독성 좋은 줄간격 */
+    line-height: 1.0;      /* 가독성 좋은 줄간격 */
     word-break: keep-all;  /* 단어 단위 줄바꿈 (한글/영문 혼용 시 유리) */
 }
 
@@ -128,7 +128,7 @@ body {margin: 0;}
     /* 배경 설정 (이미지 대신 CSS로 구현하여 깔끔하게) */
     background-color: #e6e6e6; /* 연한 회색 (업로드 이미지 참고) */
     border-radius: 50px;       /* 둥근 알약 모양 */
-    padding: 10px 40px;        /* 내부 여백 */
+    padding: 10px 20px;        /* 내부 여백 */
     
     margin-top: 30px;          /* 의자 이미지와 간격 */
     box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 살짝 떠있는 느낌 */
@@ -142,7 +142,7 @@ body {margin: 0;}
 /* 버튼 그룹 */
 .btn-wrap {
     display: flex;
-    gap: 20px;             /* 버튼 사이 간격 */
+    gap: 15px;             /* 버튼 사이 간격 */
     align-items: center;
 }
 
@@ -226,7 +226,7 @@ body {margin: 0;}
 .light-feature-section .f-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600; /* Bold */
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;   /* AIR MASSAGE 색상 */
     line-height: 1.2;
     margin-bottom: 20px;
@@ -278,9 +278,9 @@ body {margin: 0;}
 .footnote-text {
     font-family: 'Source Sans Variable', 'Source Sans Pro', sans-serif;
     font-style: italic;
-    font-size: 20px; /* 약 26.6px */
+    font-size: 16px; /* 약 26.6px */
     color: #6d6e71;
-    margin-top: 30px;
+    margin-top: 40px;
     display: block;
 }
 
@@ -339,7 +339,7 @@ body {margin: 0;}
     
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px; /* f-title과 동일 */
+    font-size: 40px; /* f-title과 동일 */
     color: #231f20;
     line-height: 1.2;
     margin-bottom: 25px; /* 흰색 박스와의 간격 */
@@ -451,7 +451,7 @@ body {margin: 0;}
 .zero-gravity-section .zg-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;     /* f-title 사양 준수 */
+    font-size: 40px;     /* f-title 사양 준수 */
     color: #231f20;      /* RECLINING 색상 */
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -472,7 +472,7 @@ body {margin: 0;}
     line-height: 1.6;
     max-width: 1100px;   /* 가독성을 위해 너비 제한 */
     margin: 0 auto 60px; /* 중앙 정렬 및 이미지와의 간격 */
-    margin-top: 20px;
+    padding-top: 15px;
 }
 
 /* 4. 와이드 이미지 스타일링 (크고 둥글게) */
@@ -530,13 +530,14 @@ body {margin: 0;}
 }
 .programs-auto-section .prog-container {
     justify-content: center; /* 중앙 정렬 */
+    margin-right: 30px;
 }
 
 /* 2. 타이틀 스타일링 (공통 가이드 준수) */
 .programs-auto-section .section-title-blue {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;
     margin-bottom: 80px; /* 아이콘과의 간격 확보 */
     text-transform: uppercase;
@@ -660,7 +661,7 @@ body {margin: 0;}
 .programs-manual-section .section-title-blue {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;
     margin-bottom: 70px; /* 아이콘과의 간격 */
     text-transform: uppercase;
@@ -761,7 +762,7 @@ body {margin: 0;}
     order: 1; /* 맨 위 배치 */
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -857,7 +858,7 @@ body {margin: 0;}
 .detailed-features-center .f-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;
     line-height: 1.2;
     margin-bottom: 25px; /* 이미지와의 간격 */
@@ -947,7 +948,7 @@ body {margin: 0;}
 .controls-section .f-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;           /* f-title 사양 */
+    font-size: 40px;           /* f-title 사양 */
     color: #231f20;            /* 메인 텍스트 색상 */
     line-height: 1.2;
     margin-bottom: 25px;
@@ -1027,7 +1028,7 @@ body {margin: 0;}
 .safety-section .section-title-blue {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;           /* f-title과 동일 */
+    font-size: 40px;           /* f-title과 동일 */
     color: #231f20;
     margin-bottom: 60px;       /* 그리드와의 간격 */
     text-transform: uppercase;
@@ -1279,7 +1280,7 @@ body {margin: 0;}
 .dimensions-section .section-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #424242;   /* 진한 회색 */
     text-align: center;
     margin-bottom: 60px; /* 타이틀과 이미지 사이 여백 */
@@ -1356,7 +1357,7 @@ body {margin: 0;}
 .spec-section .container > div:first-child {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;       /* 아주 굵게 (Image like) */
-    font-size: 36px !important;        /* 큰 제목 크기 */
+    font-size: 40px !important;        /* 큰 제목 크기 */
     text-align: center;     /* 중앙 정렬 */
     margin-bottom: 60px;    /* 표와의 간격 */
     color: #000000;
