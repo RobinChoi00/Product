@@ -2983,7 +2983,7 @@ body > div:nth-of-type(5) .f-desc {
     /* 주의: 만약 이 코드가 안 먹히면 HTML에 'rocking-section' 클래스를 추가해야 합니다 */
     .feature-row-card:last-of-type .f-txt {
         /* 아까 올렸던 설정을 덮어쓰고, 아래로 40px 내림 */
-        transform: translateY(25px) !important; 
+        transform: translateY(18px) !important; 
         padding-bottom: 0 !important; /* 하단 패딩 초기화 */
     }
 
