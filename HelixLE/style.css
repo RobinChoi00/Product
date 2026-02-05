@@ -250,9 +250,10 @@ body {margin: 0;}
 
 .light-feature-section .f-img img {
     width: 100%;          /* 사용자 요청 반영 */
-    max-width: 1000px;   /* 너무 커지지 않도록 최대폭 제한 */
+    max-width: 1100px;   /* 너무 커지지 않도록 최대폭 제한 */
     height: auto;
     object-fit: contain;
+    border-radius: 30px 30px 30px 30px; 
 }
 
 
@@ -262,7 +263,7 @@ body {margin: 0;}
     font-weight: 400; /* Regular */
     font-size: 28px;
     color: #474747;
-    width: 95%
+    width: 85%;
     line-height: 1.6;
     margin: 0 auto;    /* 중앙 정렬 */
 }
@@ -278,7 +279,7 @@ body {margin: 0;}
 .footnote-text {
     font-family: 'Source Sans Variable', 'Source Sans Pro', sans-serif;
     font-style: italic;
-    font-size: 20pt; /* 약 26.6px */
+    font-size: 20px; /* 약 26.6px */
     color: #6d6e71;
     margin-top: 30px;
     display: block;
