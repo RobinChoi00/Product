@@ -37,19 +37,19 @@ body {margin: 0;}
 .intro-desc {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;      /* Regular */
-    font-size: 26px;       /* 요청 사이즈 */
+    font-size: 22px;       /* 요청 사이즈 */
     color: #414042;        /* 요청 컬러 */
     
     width: 95%;            /* 요청 너비 */
     max-width: 1200px;     /* 너무 넓어지지 않게 안전장치 */
     margin: 0 auto 60px;   /* 중앙 정렬 & 아래 여백 */
     
-    line-height: 1.6;      /* 가독성 좋은 줄간격 */
+    line-height: 1.2;      /* 가독성 좋은 줄간격 */
     word-break: keep-all;  /* 단어 단위 줄바꿈 (한글/영문 혼용 시 유리) */
 }
 
 .intro-desc strong {
-    font-weight: 700;      /* 강조 텍스트 */
+    font-weight: 600;      /* 강조 텍스트 */
     color: #000;
 }
 
@@ -225,8 +225,8 @@ body {margin: 0;}
 /* 3. 타이틀 스타일링 (Poppins 40px) */
 .light-feature-section .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700; /* Bold */
-    font-size: 40px;
+    font-weight: 600; /* Bold */
+    font-size: 36px;
     color: #231f20;   /* AIR MASSAGE 색상 */
     line-height: 1.2;
     margin-bottom: 20px;
@@ -235,7 +235,7 @@ body {margin: 0;}
 /* 타이틀 내부 파란색 부분 */
 .light-feature-section .f-title .blue {
     color: #3563e0;
-    font-weight: 700;
+    font-weight: 600;
     display: block; /* 줄바꿈 효과 */
     line-height: 1.2;
 }
@@ -265,13 +265,12 @@ body {margin: 0;}
     color: #474747;
     max-width:1100px;
     line-height: 1.6;
-    margin: 0 auto;    /* 중앙 정렬 */
 }
 
 /* 설명 내부 강조 텍스트 */
 .light-feature-section .f-desc strong {
     color: #414042;
-    font-weight: 700; /* Bold */
+    font-weight: 600; /* Bold */
 }
 
 
@@ -339,7 +338,7 @@ body {margin: 0;}
     order: 1; /* 순서 1번: 맨 위 */
     
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px; /* f-title과 동일 */
     color: #231f20;
     line-height: 1.2;
@@ -355,7 +354,7 @@ body {margin: 0;}
 /* 4. 서브 타이틀 (2px 작게 설정) */
 .dual-gradient-section .g-title .sub-title {
     font-size: 38px; /* 40px - 2px */
-    font-weight: 700;
+    font-weight: 600;
     color: #231f20; /* 기본 검정 */
 }
 /* 서브 타이틀 내부의 파란색 처리 */
@@ -451,7 +450,7 @@ body {margin: 0;}
 /* 2. 타이틀 스타일링 (f-title과 동일 설정) */
 .zero-gravity-section .zg-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;     /* f-title 사양 준수 */
     color: #231f20;      /* RECLINING 색상 */
     margin-bottom: 25px;
@@ -536,7 +535,7 @@ body {margin: 0;}
 /* 2. 타이틀 스타일링 (공통 가이드 준수) */
 .programs-auto-section .section-title-blue {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     color: #231f20;
     margin-bottom: 80px; /* 아이콘과의 간격 확보 */
@@ -566,7 +565,7 @@ body {margin: 0;}
 .row-label {
     /* 폰트 설정 */
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 30px;
     color: #68a3ff;        /* 요청하신 색상 */
     line-height: 1.2;
@@ -660,7 +659,7 @@ body {margin: 0;}
 /* 2. 타이틀 스타일링 (공통 가이드 준수) */
 .programs-manual-section .section-title-blue {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     color: #231f20;
     margin-bottom: 70px; /* 아이콘과의 간격 */
@@ -761,7 +760,7 @@ body {margin: 0;}
 .voice-bt-section .f-title {
     order: 1; /* 맨 위 배치 */
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     color: #231f20;
     margin-bottom: 40px;
@@ -809,7 +808,7 @@ body {margin: 0;}
 /* 설명 내 강조 텍스트 */
 .voice-bt-section .f-desc strong {
     color: #414042;
-    font-weight: 700;     /* bold */
+    font-weight: 600;     /* bold */
 }
 
 
@@ -857,7 +856,7 @@ body {margin: 0;}
 /* [수정] order: 1 삭제 및 스타일 유지 */
 .detailed-features-center .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     color: #231f20;
     line-height: 1.2;
@@ -947,7 +946,7 @@ body {margin: 0;}
 /* 3. 타이틀 스타일링 (표준 사양 준수) */
 .controls-section .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;           /* f-title 사양 */
     color: #231f20;            /* 메인 텍스트 색상 */
     line-height: 1.2;
@@ -1027,7 +1026,7 @@ body {margin: 0;}
 /* 2. 메인 타이틀 스타일링 (f-title 표준 사양 준수) */
 .safety-section .section-title-blue {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;           /* f-title과 동일 */
     color: #231f20;
     margin-bottom: 60px;       /* 그리드와의 간격 */
@@ -1081,7 +1080,7 @@ body {margin: 0;}
 /* 5. 아이템 타이틀 (s-title: 요청 사양 적용) */
 .s-txt .s-title {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;          /* Bold */
+    font-weight: 600;          /* Bold */
     font-size: 32px;           /* 요청하신 32px */
     color: #3563e0;            /* 요청하신 색상 */
     line-height: 1.2;
@@ -1217,7 +1216,7 @@ body {margin: 0;}
 /* HTML에 strong 태그가 없으므로 .guide-title을 직접 타겟팅 */
 .measuring-guide .guide-title {
     font-family: 'Roboto', sans-serif; /* s-title 폰트 */
-    font-weight: 700;                  /* Bold */
+    font-weight: 600;                  /* Bold */
     font-size: 32px;                   /* s-title 크기 */
     color: #3563e0;                    /* s-title 색상 (Blue) */
     
