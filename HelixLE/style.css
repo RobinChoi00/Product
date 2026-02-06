@@ -306,6 +306,64 @@ body {margin: 0;}
 
 
 /* =========================================
+   [SECTION 4] CORE TECH (Dual Gradient Grid)
+   ========================================= */
+
+/* 1. 그리드 레이아웃 설정 */
+.dual-gradient-section .gradient-box.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 배치 */
+    gap: 40px; /* 카드 사이 간격 */
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* 2. 개별 아이템 (Flex 컨테이너로 변환) */
+.dual-gradient-section .grid-item {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    background: transparent; /* 배경 투명 (제목을 밖으로 빼기 위함) */
+    text-align: center;
+}
+
+/* [Magic] 아이콘은 시안에 없으므로 숨김 처리 (깔끔한 제목 배치를 위해) */
+.dual-gradient-section .icon-wrap-left {
+    display: none;
+}
+
+
+/* 3. 타이틀 스타일링 (f-title과 동일 + 밖으로 배치) */
+.dual-gradient-section .g-title {
+    order: 1; /* 순서 1번: 맨 위 */
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px; /* f-title과 동일 */
+    color: #231f20;
+    line-height: 1.2;
+    margin-bottom: 25px; /* 흰색 박스와의 간격 */
+    text-transform: uppercase;
+}
+
+.dual-gradient-section .g-title .blue {
+    color: #3563e0;
+    display: block;
+}
+
+/* 4. 서브 타이틀 (2px 작게 설정) */
+.dual-gradient-section .g-title .sub-title {
+    font-size: 38px; /* 40px - 2px */
+    font-weight: 600;
+    color: #231f20; /* 기본 검정 */
+}
+/* 서브 타이틀 내부의 파란색 처리 */
+.dual-gradient-section .g-title .sub-title .blue {
+    display: inline; /* 줄바꿈 방지 */
+    color: #3563e0;
+}
+
+/* =========================================
    [SECTION 4] CORE TECH - 통합 카드 전략 적용
    ========================================= */
 
@@ -356,6 +414,7 @@ body {margin: 0;}
     
     /* background, border-radius, box-shadow, margin-top: -1px 속성 모두 제거 */
 }
+
 
 
 
