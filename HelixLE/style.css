@@ -530,7 +530,8 @@ body {margin: 0;}
 }
 .programs-auto-section .prog-container {
     justify-content: center; /* 중앙 정렬 */
-    padding-right: 30px;
+    position: relative;
+    left: -30px;
 }
 
 /* 2. 타이틀 스타일링 (공통 가이드 준수) */
@@ -1212,8 +1213,8 @@ body {margin: 0;}
 }
 
 .doorway-right .box-img img {
-    width: 100%;
-    max-width: 420px;          /* 박스 이미지 크기 제한 */
+    width: 70%;
+    max-width: 300px;          /* 박스 이미지 크기 제한 */
     height: auto;
     display: block;
     margin: 0;                 /* 왼쪽 정렬 유지 */
@@ -1228,7 +1229,7 @@ body {margin: 0;}
 
 /* [수정됨] 가이드 제목 (s-title과 동일하게 설정) */
 /* HTML에 strong 태그가 없으므로 .guide-title을 직접 타겟팅 */
-.measuring-guide .guide-title {
+.guide-title {
     font-family: 'Roboto', sans-serif; /* s-title 폰트 */
     font-weight: 600;                  /* Bold */
     font-size: 28px;                   /* s-title 크기 */
@@ -1237,6 +1238,7 @@ body {margin: 0;}
     display: block;
     margin-bottom: 20px;               /* 리스트와의 간격 확보 */
     line-height: 1.2;
+    justify-content: center;
 }
 
 /* 가이드 리스트 (• 항목들) */
