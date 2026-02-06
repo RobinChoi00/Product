@@ -18,7 +18,7 @@ var slideData = [
         name: "Black"
     },
     {
-        chair: baseURL + "images/4.HelixLE_Brown.png",
+        chair: baseURL + "images/4.HelixLE_Brown1.png",
         name: "Brown"
     },
     {

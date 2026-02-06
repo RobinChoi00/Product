@@ -1682,35 +1682,58 @@ body {margin: 0;}
 
     
 
-    /* 4. 15 Auto Programs (레이아웃 재정의) */
-    .prog-row {
+    /* 4. 15 Auto Programs (레이아웃 완전 정복) */
+    /* [필수] PC에서 준 -30px 이동을 모바일에서는 0으로 초기화해야 정중앙에 옵니다 */
+    .programs-auto-section .prog-container {
+        left: 0 !important;
+        width: 100%;
+        display: flex;
         flex-direction: column;
-        gap: 30px;
-        margin-bottom: 80px;
+        align-items: center;
     }
+
+    .prog-row {
+        /* [수정] block이 아니라 flex여야 자식들을 중앙으로 모을 수 있습니다 */
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;    /* 자식 요소들(라벨, 아이콘)을 가로 중앙 정렬 */
+        
+        width: 90%;
+        max-width: 450px;       /* 너무 퍼지지 않게 제한 */
+        margin: 0 auto 80px !important; /* 박스 자체를 화면 중앙으로 */
+        gap: 30px;
+    }
+
     .row-label {
         width: 100%;
         text-align: center;
         border-right: none !important;
         border-bottom: 2px solid #68a3ff;
-        padding-right: 0;
-        padding-bottom: 15px;
+        padding: 0 0 15px 0;
         margin-bottom: 20px;
+        
+        /* 텍스트 중앙 정렬 보장 */
+        display: flex;
         justify-content: center;
     }
-    .row-icons {
-        justify-content: center;
-        gap: 20px;
-    }
-    .p-item { width: 100px; }
-    .p-item img { width: 70px; height: 70px; }
 
-    .prog-row {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 90%;
-        max-width: 400px;
-        display: block;
+    .row-icons {
+        display: flex;
+        justify-content: center; /* 아이콘들을 가로 중앙 정렬 */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .p-item { 
+        width: 100px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p-item img { 
+        width: 70px; 
+        height: 70px; 
     }
 
 
