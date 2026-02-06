@@ -10,11 +10,11 @@ var baseURL = "https://RobinChoi00.github.io/Product/HelixLE/";
 // Index 2: Brown
 var slideData = [
     {
-        chair: baseURL + "images/2.HelixLE_Allcolor.png",
+        chair: baseURL + "images/2.HelixLE_Allcolor1.png",
         name: "All"
     },
     {
-        chair: baseURL + "images/3.HelixLE_Black.png",
+        chair: baseURL + "images/3.HelixLE_Black1.png",
         name: "Black"
     },
     {

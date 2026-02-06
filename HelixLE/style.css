@@ -1603,7 +1603,7 @@ body {margin: 0;}
 @media (max-width: 768px) {
     /* 1. 글로벌 패딩 및 타이틀 조정 */
     [class*="-section"] {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .f-title, .g-title, .zg-title, .section-title, .section-title-blue {
@@ -1627,7 +1627,7 @@ body {margin: 0;}
     
     .swatch-panel {
         margin-top: 0 !important;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     /* [수정 1] 22-Cell 이미지 크기 적절히 조절 */
