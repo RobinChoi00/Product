@@ -1635,9 +1635,10 @@ body {margin: 0;}
     .dual-gradient-section .gradient-box.grid-2 {
         grid-template-columns: 1fr;
         gap: 60px;
+        justify-content: center; /* 가로 중앙 정렬 */
     }
     .dual-gradient-section .g-img {
-        width: 100%; 
+        width: 92%; 
         border-radius: 30px 30px 0 0; /* 위쪽만 둥글게 */
         overflow: hidden; /* [핵심] 둥근 모서리 밖으로 이미지가 튀어나가지 않게 자름 */
         margin: 0;        /* 불필요한 여백 제거 */
@@ -1645,7 +1646,7 @@ body {margin: 0;}
 
     /* 이미지 자체: 컨테이너에 꽉 차게 설정 */
     .dual-gradient-section .g-img img {
-        width: 90% !important;
+        width: 92% !important;
         max-width: 350px;
         height: auto;
         margin: 0;
@@ -1653,7 +1654,7 @@ body {margin: 0;}
     
     /* 텍스트 박스: 흰색 박스의 아랫부분 역할 */
     .dual-gradient-section .g-desc {
-        width: 100%;
+        width: 92%;
         box-sizing: border-box; /* 패딩 포함 크기 계산 */
         border-radius: 0 0 30px 30px; /* 아래쪽만 둥글게 */
     }
