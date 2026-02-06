@@ -1645,12 +1645,10 @@ body {margin: 0;}
 
     /* 이미지 자체: 컨테이너에 꽉 차게 설정 */
     .dual-gradient-section .g-img img {
-        width: 90% !important;
-        max-width: 280px;
+        width: 100% !important;
         height: auto;
         display: block;   /* 하단 미세 공백 제거 */
         margin: 0;
-        justify-content: center;
     }
     
     /* 텍스트 박스: 흰색 박스의 아랫부분 역할 */
