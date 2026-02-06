@@ -1707,9 +1707,11 @@ body {margin: 0;}
     width: 90%;
     }
 
-    .controls-section .f-txt {
+    .controls-section .f-txt .desc {
     align-items: center !important; /* 텍스트 요소들 중앙 정렬 */
     }
+
+
 
     /* 7. Safety & Doorway */
     .safety-grid { grid-template-columns: 1fr; gap: 50px; }
