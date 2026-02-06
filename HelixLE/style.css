@@ -306,112 +306,55 @@ body {margin: 0;}
 
 
 /* =========================================
-   [SECTION 4] CORE TECH (Dual Gradient Grid)
+   [SECTION 4] CORE TECH - 통합 카드 전략 적용
    ========================================= */
 
-/* 1. 그리드 레이아웃 설정 */
-.dual-gradient-section .gradient-box.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2열 배치 */
-    gap: 40px; /* 카드 사이 간격 */
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
-}
-
-/* 2. 개별 아이템 (Flex 컨테이너로 변환) */
-.dual-gradient-section .grid-item {
-    display: flex;
-    flex-direction: column; /* 세로 정렬 */
-    background: transparent; /* 배경 투명 (제목을 밖으로 빼기 위함) */
-    text-align: center;
-}
-
-/* [Magic] 아이콘은 시안에 없으므로 숨김 처리 (깔끔한 제목 배치를 위해) */
-.dual-gradient-section .icon-wrap-left {
-    display: none;
-}
-
-
-/* 3. 타이틀 스타일링 (f-title과 동일 + 밖으로 배치) */
-.dual-gradient-section .g-title {
-    order: 1; /* 순서 1번: 맨 위 */
-    
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 40px; /* f-title과 동일 */
-    color: #231f20;
-    line-height: 1.2;
-    margin-bottom: 25px; /* 흰색 박스와의 간격 */
-    text-transform: uppercase;
-}
-
-.dual-gradient-section .g-title .blue {
-    color: #3563e0;
-    display: block;
-}
-
-/* 4. 서브 타이틀 (2px 작게 설정) */
-.dual-gradient-section .g-title .sub-title {
-    font-size: 38px; /* 40px - 2px */
-    font-weight: 600;
-    color: #231f20; /* 기본 검정 */
-}
-/* 서브 타이틀 내부의 파란색 처리 */
-.dual-gradient-section .g-title .sub-title .blue {
-    display: inline; /* 줄바꿈 방지 */
-    color: #3563e0;
-}
-
-
-/* 5. 이미지 영역 (흰색 박스의 윗부분 역할) */
-.dual-gradient-section .g-img {
-    order: 2; /* 순서 2번: 중간 */
-    
+/* 1. 통합 흰색 카드 (Wrapper) 스타일 추가 */
+.dual-gradient-section .tech-card {
     background-color: #fff;
+    border-radius: 30px;           /* [핵심] 상하 전체 곡률 한 번에 제어 */
+    overflow: hidden;              /* [핵심] 자식(이미지)이 모서리를 뚫고 나가는 현상 방지 */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05); /* 통합 그림자 */
+    
+    display: flex;
+    flex-direction: column;        /* 내부 요소를 세로로 배치 */
+    height: 100%;                  /* 카드 높이 균일화 */
+    
+    /* iOS/Safari 렌더링 버그 방지용 (글로벌 스탠다드) */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* 2. [수정] 이미지 영역 스타일링 (개별 박스 스타일 제거) */
+.dual-gradient-section .g-img {
+    order: 1;                      /* 카드의 가장 윗부분 */
     width: 100%;
-    /* 위쪽만 둥글게 처리 */
-    border-radius: 30px 30px 0 0; 
-    overflow: hidden; /* 이미지가 둥근 모서리를 넘지 않게 */
-    
-    /* 이미지와 박스 사이의 여백이 필요 없다면 0, 필요하다면 padding 추가 */
-    padding: 0; 
-    
-    /* 박스 그림자 (위쪽 절반) */
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.03); 
+    margin: 0;
+    padding: 0;
+    /* background, border-radius, box-shadow 속성 모두 제거 */
 }
 
 .dual-gradient-section .g-img img {
     width: 100%;
-    display: block; /* 하단 미세 공백 제거 */
     height: auto;
+    display: block;                /* 이미지 하단 미세 공백 제거 */
+    object-fit: cover;
 }
 
-
-/* 6. 설명 텍스트 (흰색 박스의 아랫부분 역할) */
+/* 3. [수정] 설명 텍스트 스타일링 (개별 박스 스타일 제거) */
 .dual-gradient-section .g-desc {
-    order: 3; /* 순서 3번: 맨 아래 */
-    flex-grow: 1;
+    order: 2;                      /* 이미지 아래에 위치 */
+    flex-grow: 1;                  /* 텍스트가 적어도 카드를 꽉 채우도록 */
     
-    /* f-desc와 동일한 폰트 설정 */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 24px;
     color: #474747;
     line-height: 1.6;
     
-    /* 흰색 박스 스타일 */
-    background-color: #fff;
-    /* 아래쪽만 둥글게 처리 -> 위쪽 이미지와 합쳐져서 하나의 박스처럼 보임 */
-    border-radius: 0 0 30px 30px; 
+    padding: 40px;                 /* 내부 여백 유지 */
+    text-align: center;
     
-    padding: 40px; /* 텍스트 내부 여백 */
-    min-height: 250px; /* 카드 높이 균형 맞추기 */
-    
-    /* 박스 그림자 (아래쪽 절반) - 부드러운 입체감 */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05); 
-
-    margin-top: -1px;
+    /* background, border-radius, box-shadow, margin-top: -1px 속성 모두 제거 */
 }
 
 
