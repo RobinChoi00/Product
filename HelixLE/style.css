@@ -921,81 +921,110 @@ body {margin: 0;}
 
 
 /* =========================================
-[SECTION 10] CONTROLS & TECHNOLOGY
-========================================= */
+   [SECTION 10] CONTROLS & TECHNOLOGY (Updated)
+   ========================================= */
 
 /* 1. 섹션 컨테이너 및 행(Row) 설정 */
 .controls-section {
-padding: 120px 0;
-background-color: #fff;
+    padding: 120px 0;
+    background-color: #fff;
 }
 
 .controls-section .feature-row {
-display: flex;
-align-items: center; /* 수직 중앙 정렬 */
-justify-content: space-between;
-gap: 80px; /* 이미지와 텍스트 사이의 넉넉한 간격 */
-margin-bottom: 120px; /* 행 간 간격 */
+    display: flex;
+    align-items: center;       /* 수직 중앙 정렬 */
+    justify-content: space-between;
+    
+    /* [요청 1] Gap을 100px로 설정 */
+    gap: 100px;                
+    
+    margin-bottom: 120px;
 }
 
-/* 마지막 행 여백 제거 */
 .controls-section .feature-row:last-child {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
-/* 2. 구역 반반 나누기 (50/50 Split) */
+/* 2. 구역 반반 나누기 */
 .controls-section .f-img,
 .controls-section .f-txt {
-flex: 1;
-width: 50%;
+    flex: 1;
+    width: 50%;
 }
 
-/* 3. 타이틀 스타일링 (표준 사양 준수) */
+/* 3. 이미지 컨테이너 설정 (Flexbox 활성화) */
+/* 이미지를 정렬하기 위해 f-img 자체를 Flex 컨테이너로 만듭니다 */
+.controls-section .f-img {
+    display: flex;
+    align-items: center;
+    /* justify-content는 아래 [Alignment Logic]에서 방향에 따라 따로 설정 */
+}
+
+/* 4. 이미지 스타일링 */
+.controls-section .f-img img {
+    width: 80%;                /* 이미지 크기 유지 */
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    /* display: block; -> 부모가 Flex이므로 제거해도 무방 */
+}
+
+/* 5. 텍스트 스타일링 (타이틀 & 본문) */
 .controls-section .f-title {
-font-family: 'Poppins', sans-serif;
-font-weight: 600;
-font-size: 40px; /* f-title 사양 */
-color: #231f20; /* 메인 텍스트 색상 */
-line-height: 1.2;
-margin-bottom: 25px;
-text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #231f20;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .controls-section .f-title .blue {
-color: #3563e0; /* 포인트 블루 컬러 */
+    color: #3563e0;
 }
 
-/* 4. 설명 텍스트 스타일링 (표준 사양 준수) */
 .controls-section .f-desc {
-font-family: 'Roboto', sans-serif;
-font-weight: 400; /* regular */
-font-size: 24px; /* f-desc 사양 */
-color: #474747;
-line-height: 1.6;
-width: 90%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #474747;
+    line-height: 1.6;
+    /* width: 90%; -> Flexbox 정렬을 위해 제거하거나 100%로 설정 */
 }
 
-/* 5. 이미지 스타일링 (고급스러운 곡률 적용) */
-.controls-section .f-img img {
-width: 80%;
-height: auto;
-border-radius: 50px; /* 대형 섹션 공통 곡률 적용 */
-box-shadow: 0 15px 30px rgba(0,0,0,0.06);
-display: block;
-}
 
 /* =========================================
-[Alignment Logic] 위치별 정렬 제어
-========================================= */
+   [Alignment Logic] 위치별 정렬 제어 (핵심)
+   ========================================= */
 
-/* A. 텍스트가 오른쪽에 있는 경우 (f-img가 첫 번째 자식일 때) */
-.controls-section .feature-row .f-txt:last-child {
-text-align: left; /* 왼쪽 정렬 */
+/* CASE A: [이미지(좌) - 텍스트(우)] 구조 */
+/* 이미지가 첫 번째 자식인 경우 -> 이미지를 오른쪽 끝으로 보냄 */
+.controls-section .feature-row .f-img:first-child {
+    justify-content: flex-end; /* [요청 2] 그림 오른쪽 정렬 */
 }
 
-/* B. 텍스트가 왼쪽에 있는 경우 (f-txt가 첫 번째 자식일 때) */
+/* 텍스트가 마지막 자식인 경우 -> 텍스트를 왼쪽 정렬 */
+.controls-section .feature-row .f-txt:last-child {
+    text-align: left;          /* [요청 2] 텍스트 왼쪽 정렬 */
+    display: flex;             /* 텍스트 박스 내부 정렬을 위해 */
+    flex-direction: column;
+    align-items: flex-start;   /* 블록 전체를 왼쪽으로 당김 */
+}
+
+
+/* CASE B: [텍스트(좌) - 이미지(우)] 구조 (Reverse) */
+/* 이미지가 마지막 자식인 경우 -> 이미지를 왼쪽 끝으로 보냄 */
+.controls-section .feature-row .f-img:last-child {
+    justify-content: flex-start; /* [요청 3] 그림 왼쪽 정렬 */
+}
+
+/* 텍스트가 첫 번째 자식인 경우 -> 텍스트를 오른쪽 정렬 */
 .controls-section .feature-row .f-txt:first-child {
-text-align: right; /* 오른쪽 정렬 */
+    text-align: right;         /* [요청 3] 텍스트 오른쪽 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;     /* 블록 전체를 오른쪽으로 당김 */
 }
 
 
@@ -1175,15 +1204,11 @@ text-align: right; /* 오른쪽 정렬 */
 /* ------------------------------------------------
    [Left Column] 도어웨이 이미지 (왼쪽)
    ------------------------------------------------ */
-.doorway-left {
-    flex: 1;                   /* 공간 50% 차지 */
-    display: flex;
-    justify-content: flex-end; /* 이미지를 중앙(오른쪽)으로 붙임 */
-}
-
 .doorway-left img {
-    width: 60%;
-    max-width: 200px;          /* 이미지 크기 제한 */
+    /* [수정 1] 크기 더 축소 */
+    width: 50%;           /* 기존 60% -> 50%로 축소 */
+    max-width: 160px;     /* 기존 200px -> 160px로 제한 */
+    
     height: auto;
     object-fit: contain;
 }
@@ -1223,15 +1248,20 @@ text-align: right; /* 오른쪽 정렬 */
 /* [수정됨] 가이드 제목 (s-title과 동일하게 설정) */
 /* HTML에 strong 태그가 없으므로 .guide-title을 직접 타겟팅 */
 .guide-title {
-    font-family: 'Roboto', sans-serif; /* s-title 폰트 */
-    font-weight: 600;                  /* Bold */
-    font-size: 28px;                   /* s-title 크기 */
-    color: #3563e0;                    /* s-title 색상 (Blue) */
-    
-    display: block;
-    margin-bottom: 20px;               /* 리스트와의 간격 확보 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #3563e0;
     line-height: 1.2;
-    justify-content: center;
+
+    /* [수정 2] 왼쪽 정렬 및 여백 추가 */
+    display: block;
+    text-align: left;      /* 텍스트를 왼쪽으로 보냄 */
+    
+    /* 레이아웃 정렬을 위한 설정 */
+    max-width: 1000px;     /* 하단 내용물(doorway-layout)의 폭과 얼추 맞춤 */
+    margin: 0 auto 50px;   /* [핵심] 블록 자체는 중앙에 두되, 하단에 50px 여백 추가 */
+    padding-left: 20px;    /* 모바일 화면에서 벽에 붙지 않도록 안전 여백 */
 }
 
 /* 가이드 리스트 (• 항목들) */
