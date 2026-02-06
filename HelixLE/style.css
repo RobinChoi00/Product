@@ -1720,6 +1720,19 @@ body {margin: 0;}
         flex-direction: column; 
         align-items: center;
     }
+    /* [핵심 수정] 보라색 빈 공간 제거 및 이미지 중앙 정렬 */
+    .doorway-left {
+        width: 100%;
+        display: flex;
+        justify-content: center !important; /* [해결] flex-end를 무효화하고 중앙으로 배치 */
+        margin-bottom: 30px;
+    }
+
+    .doorway-left img {
+        width: 60% !important; /* 이미지 크기 조절 */
+        max-width: 180px;
+        margin: 0 auto;        /* 이중 중앙 정렬 */
+    }
     
     /* [수정 5] 박스 이미지 중앙 정렬 (오른쪽으로 땡기는 대신 중앙이 정석) */
     .doorway-right { 
