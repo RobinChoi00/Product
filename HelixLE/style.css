@@ -549,8 +549,8 @@ body {margin: 0;}
 /* [수정] 15 Auto Programs - 라벨 중앙 정렬 */
 .programs-auto-section .row-label {
     text-align: center;     /* [요청 1] 중앙 정렬 */
-    border-right: none;     /* 중앙 정렬 시 세로선 제거 (디자인 일관성) */
-    padding-right: 0;
+    border-right: 3px solid #68a3ff;     /* 중앙 정렬 시 세로선 제거 (디자인 일관성) */
+    padding-right: 40px;
     width: 320px;           /* 텍스트가 퍼지지 않게 적정 너비 유지 */
 }
 
@@ -1676,6 +1676,17 @@ body {margin: 0;}
         box-sizing: border-box; /* 패딩 포함 크기 계산 */
         border-radius: 0 0 30px 30px; /* 아래쪽만 둥글게 */
         margin-top: -1px;
+    }
+    .dual-gradient-section .g-title > .blue {
+        font-size: 38px !important;
+        line-height: 1.2;
+    }
+
+    /* 2. 하단 서브 타이틀 (EXTENDABLE FOOTREST) -> 28px로 축소 */
+    /* 기존 38px에서 28px로 변경하여 계층 구조 정리 */
+    .dual-gradient-section .g-title .sub-title {
+        font-size: 28px !important;
+        line-height: 1.2;
     }
 
     
