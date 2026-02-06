@@ -1641,15 +1641,16 @@ body {margin: 0;}
         border-radius: 30px 30px 0 0; /* 위쪽만 둥글게 */
         overflow: hidden; /* [핵심] 둥근 모서리 밖으로 이미지가 튀어나가지 않게 자름 */
         margin: 0;        /* 불필요한 여백 제거 */
-        -webkit-mask=image: -webkit-radial-gradient(white, black);
     }
 
     /* 이미지 자체: 컨테이너에 꽉 차게 설정 */
     .dual-gradient-section .g-img img {
-        width: 100% !important;
+        width: 90% !important;
+        max-width: 280px;
         height: auto;
         display: block;   /* 하단 미세 공백 제거 */
         margin: 0;
+        justify-content: center;
     }
     
     /* 텍스트 박스: 흰색 박스의 아랫부분 역할 */
