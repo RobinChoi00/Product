@@ -363,58 +363,46 @@ body {margin: 0;}
     color: #3563e0;
 }
 
-/* =========================================
-   [SECTION 4] CORE TECH - 통합 카드 전략 적용
-   ========================================= */
+/* [PC] Core Tech - 통합 카드 및 제목 위치 수정 */
 
-/* 1. 통합 흰색 카드 (Wrapper) 스타일 추가 */
-.dual-gradient-section .tech-card {
-    background-color: #fff;
-    border-radius: 30px;           /* [핵심] 상하 전체 곡률 한 번에 제어 */
-    overflow: hidden;              /* [핵심] 자식(이미지)이 모서리를 뚫고 나가는 현상 방지 */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05); /* 통합 그림자 */
-    
-    display: flex;
-    flex-direction: column;        /* 내부 요소를 세로로 배치 */
-    height: 100%;                  /* 카드 높이 균일화 */
-    
-    /* iOS/Safari 렌더링 버그 방지용 (글로벌 스탠다드) */
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
+/* 1. 타이틀: 맨 위로 (order: 1) */
+.dual-gradient-section .g-title {
+    order: 1 !important; 
+    margin-bottom: 25px;
+    /* ... 기존 폰트 스타일 유지 ... */
 }
 
-/* 2. [수정] 이미지 영역 스타일링 (개별 박스 스타일 제거) */
+/* 2. 통합 흰색 카드: 제목 아래로 (order: 2) */
+.dual-gradient-section .tech-card {
+    order: 2 !important;
+    background-color: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 3. 카드 내부 이미지 (상단) */
 .dual-gradient-section .g-img {
-    order: 1;                      /* 카드의 가장 윗부분 */
     width: 100%;
     margin: 0;
-    padding: 0;
-    /* background, border-radius, box-shadow 속성 모두 제거 */
 }
-
 .dual-gradient-section .g-img img {
     width: 100%;
-    height: auto;
-    display: block;                /* 이미지 하단 미세 공백 제거 */
-    object-fit: cover;
+    display: block;
 }
 
-/* 3. [수정] 설명 텍스트 스타일링 (개별 박스 스타일 제거) */
+/* 4. 카드 내부 설명 (하단) */
 .dual-gradient-section .g-desc {
-    order: 2;                      /* 이미지 아래에 위치 */
-    flex-grow: 1;                  /* 텍스트가 적어도 카드를 꽉 채우도록 */
-    
+    padding: 40px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     font-size: 24px;
     color: #474747;
     line-height: 1.6;
-    
-    padding: 40px;                 /* 내부 여백 유지 */
     text-align: center;
-    
-    /* background, border-radius, box-shadow, margin-top: -1px 속성 모두 제거 */
 }
-
 
 
 
@@ -563,7 +551,7 @@ body {margin: 0;}
 /* 3. 프로그램 행(Row) 레이아웃 - Flexbox */
 .prog-row {
     display: flex;
-    align-items: center;       /* 수직 중앙 정렬 */
+    align-items: stretch;       /* 수직 중앙 정렬 */
     justify-content: center;   /* 수평 중앙 정렬 */
     margin-bottom: 60px;       /* 행 사이의 간격 */
     gap: 50px;                 /* 라벨과 아이콘 그룹 사이의 간격 */
