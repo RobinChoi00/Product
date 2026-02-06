@@ -1686,34 +1686,36 @@ body {margin: 0;}
     
 
     /* 4. 15 Auto Programs (중앙 정렬) */
-    .programs-auto-section .prog-container {
-        left: 0 !important; 
-        padding-right: 0 !important;
+    .programs-auto-section .prog-row {
+        flex-direction: column;    /* 위아래 배치 */
+        align-items: center;       /* 전체 중앙 정렬 */
+        gap: 30px;                 /* 라벨과 아이콘 사이 간격 */
+        margin-bottom: 50px;       /* 다음 프로그램 그룹과의 간격 */
     }
-    .prog-row {
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 60px;
-    }
-    .row-label {
-        width: 100%;
-        text-align: center;
-        border-right: none;
-        border-bottom: 3px solid #68a3ff;
-        padding-right: 0;
-        padding-bottom: 15px;
-        margin-bottom: 20px;
-    }
-    .row-icons {
-        justify-content: center; 
-        gap: 20px;
-        flex-wrap: wrap; 
-    }
-    .p-item { width: 90px; }
-    .p-item img { width: 70px; height: 70px; }
 
-    .programs-auto-section .prog-row:nth-child(3) .row-label {
-        white-space: nowrap;
+    /* 2. 라벨 스타일 재설정 (이상한 선 제거 & 중앙 정렬) */
+    .programs-auto-section .row-label {
+        width: 100%;               /* 너비를 화면에 꽉 차게 */
+        text-align: center;        /* 텍스트 정중앙 배치 */
+        
+        /* [핵심] PC용 오른쪽 세로선 제거 */
+        border-right: none !important; 
+        padding-right: 0;
+        
+        /* [대안] 모바일에 어울리는 아래쪽 가로선 추가 (선택 사항) */
+        border-bottom: 2px solid #68a3ff; 
+        padding-bottom: 15px;      /* 텍스트와 선 사이 여백 */
+        margin-bottom: 10px;       /* 선과 아이콘 사이 추가 여백 */
+        
+        /* Flex 속성 초기화 혹은 중앙 정렬 유지 */
+        justify-content: center;   
+    }
+    
+    /* 3. 아이콘 그룹도 중앙 정렬 */
+    .programs-auto-section .row-icons {
+        justify-content: center;
+        gap: 20px;                 /* 모바일 화면에 맞춰 아이콘 간격 조절 */
+        flex-wrap: wrap;           /* 화면이 너무 좁으면 줄바꿈 허용 */
     }
 
     /* 5. Detailed Features */
@@ -1724,26 +1726,26 @@ body {margin: 0;}
 
     /* 6. [중요] Controls & Technology (이미지 -> 텍스트 순서 고정) */
     .controls-section .feature-row {
-    flex-direction: column; /* 기본: 이미지(좌)-텍스트(우) 구조에서 위아래로 */
-    text-align: center !important;
-    gap: 40px;
+        flex-direction: column; /* 기본: 이미지(좌)-텍스트(우) 구조에서 위아래로 */
+        text-align: center !important;
+        gap: 40px;
     }
 
     /* HTML에서 텍스트가 먼저 나오는 'reverse' 행은 순서를 뒤집음 */
     .controls-section .feature-row.reverse {
-    flex-direction: column-reverse; /* [핵심] 텍스트가 위인 구조를 뒤집어 이미지가 위로 오게 함 */
+        flex-direction: column-reverse; /* [핵심] 텍스트가 위인 구조를 뒤집어 이미지가 위로 오게 함 */
     }
 
     .controls-section .f-img, .controls-section .f-txt {
-    width: 100%;
+        width: 100%;
     }
 
     .controls-section .f-img {
-    justify-content: center !important; /* 이미지 중앙 정렬 */
+        justify-content: center !important; /* 이미지 중앙 정렬 */
     }
 
     .controls-section .f-img img {
-    width: 90%;
+        width: 90%;
     }
 
     /* :first-child, :last-child 선택자를 사용하여 데스크탑 CSS보다 우선순위를 높임 */
