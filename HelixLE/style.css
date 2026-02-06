@@ -1499,12 +1499,17 @@ body {margin: 0;}
 .zero-gravity-section,
 .programs-auto-section,
 .programs-manual-section,
-.voice-bt-section,
 .detailed-features-center,
 .controls-section,
 .safety-section,
 .doorway-section {
     padding: 120px 0; /* 상하 120px 간격 (Best for Premium Look) */
+}
+
+
+.voice-bt-section {
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
 
 /* 모바일에서는 간격을 조금 줄임 (반응형 대응) */
@@ -1598,7 +1603,7 @@ body {margin: 0;}
 @media (max-width: 768px) {
     /* 1. 글로벌 패딩 및 타이틀 조정 */
     [class*="-section"] {
-        padding: 30px 0;
+        padding: 50px 0;
     }
 
     .f-title, .g-title, .zg-title, .section-title, .section-title-blue {
@@ -1622,7 +1627,7 @@ body {margin: 0;}
     
     .swatch-panel {
         margin-top: 0 !important;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 
     /* [수정 1] 22-Cell 이미지 크기 적절히 조절 */
@@ -1677,7 +1682,17 @@ body {margin: 0;}
 
     .dual-gradient-section .tech-card{
         width: 95%;
-        justify-content: center !important;
+        max-width: 450px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+
+    .dual-gradient-section .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100;
     }
 
     
