@@ -396,7 +396,7 @@ body {margin: 0;}
 
 /* 4. 카드 내부 설명 (하단) */
 .dual-gradient-section .g-desc {
-    padding: 40px;
+    padding: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     color: #474747;
@@ -1685,6 +1685,7 @@ body {margin: 0;}
 
     .dual-gradient-section .tech-card{
         width: 95%;
+        justify-content: center !important;
     }
 
     
