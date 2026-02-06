@@ -990,6 +990,7 @@ body {margin: 0;}
     font-size: 24px;
     color: #474747;
     line-height: 1.6;
+    width: 90%
     /* width: 90%; -> Flexbox 정렬을 위해 제거하거나 100%로 설정 */
 }
 
