@@ -315,7 +315,7 @@ body {margin: 0;}
     grid-template-columns: 1fr 1fr; /* 2열 배치 */
     gap: 40px; /* 카드 사이 간격 */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 60px ;
     align-items: stretch;
 }
 
@@ -571,6 +571,7 @@ body {margin: 0;}
     color: #68a3ff;        /* 요청하신 색상 */
     line-height: 1.2;
     text-transform: uppercase;
+    
 
     /* 레이아웃 및 선 설정 */
     width: 280px;          /* 너비 고정 (줄바꿈 및 선 정렬 유지) */
@@ -579,6 +580,8 @@ body {margin: 0;}
     padding-right: 40px;   /* 텍스트와 선 사이의 여백 */
     border-right: 3px solid #68a3ff; /* [핵심] 우측 세로 선 구현 */
     
+    justify-content: center;
+    align-items: center;
     flex-shrink: 0;        /* 너비가 줄어들지 않도록 고정 */
 }
 
