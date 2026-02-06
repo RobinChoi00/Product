@@ -471,7 +471,7 @@ body {margin: 0;}
     font-size: 24px;      /* f-desc 사양 준수 */
     color: #474747;
     line-height: 1.6;
-    max-width: 900px;   /* 가독성을 위해 너비 제한 */
+    max-width: 1000px;   /* 가독성을 위해 너비 제한 */
     margin-left: auto; /* 중앙 정렬 및 이미지와의 간격 */
     margin-right: auto;
 }
@@ -1565,4 +1565,137 @@ body {margin: 0;}
 /* 설명 텍스트의 줄간격 (가독성 확보) */
 .f-desc, .g-desc, .s-desc, .zg-desc, .intro-desc {
     line-height: 1.8; /* 줄 간격을 1.8배로 넓혀 고급스러운 느낌 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [MOBILE RESPONSIVE] 768px 이하 최적화
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. 글로벌 패딩 및 타이틀 조정 */
+    [class*="-section"] {
+        padding: 60px 0; /* 여백 축소 */
+    }
+
+    .f-title, .g-title, .zg-title, .section-title, .section-title-blue {
+        font-size: 28px !important; /* 타이틀 크기 축소 */
+        margin-bottom: 25px;
+    }
+
+    .f-desc, .g-desc, .zg-desc, .intro-desc, .s-desc {
+        font-size: 18px !important; /* 본문 크기 축소 */
+        line-height: 1.6;
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 2. Intro Slider (화살표 크기 조정) */
+    .slider-main { height: 350px; gap: 20px; }
+    #current-chair { max-width: 90%; }
+    .nav-btn img { width: 15px; }
+
+    /* 3. Core Tech (2열 -> 1열) */
+    .dual-gradient-section .gradient-box.grid-2 {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    /* 4. 15 Auto Programs (레이아웃 재정의) */
+    .prog-row {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+    .row-label {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 3px solid #68a3ff;
+        padding-right: 0;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .row-icons {
+        justify-content: center;
+        gap: 20px;
+    }
+    .p-item { width: 100px; }
+    .p-item img { width: 70px; height: 70px; }
+
+    /* 5. Detailed Features (1열) */
+    .detailed-features-center .bottom-clean-grid {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    /* 6. [중요] Controls & Technology (이미지 -> 텍스트 순서 고정) */
+    .controls-section .feature-row {
+        flex-direction: column; /* 기본: 이미지(좌)-텍스트(우) 구조에서 위아래로 */
+        text-align: center !important;
+        gap: 40px;
+    }
+
+    /* HTML에서 텍스트가 먼저 나오는 'reverse' 행은 순서를 뒤집음 */
+    .controls-section .feature-row.reverse {
+        flex-direction: column-reverse; /* [핵심] 텍스트가 위인 구조를 뒤집어 이미지가 위로 오게 함 */
+    }
+
+    .controls-section .f-img, .controls-section .f-txt {
+        width: 100%;
+    }
+
+    .controls-section .f-img {
+        justify-content: center !important; /* 이미지 중앙 정렬 */
+    }
+
+    .controls-section .f-img img {
+        width: 90%;
+    }
+
+    .controls-section .f-txt {
+        align-items: center !important; /* 텍스트 요소들 중앙 정렬 */
+    }
+
+    /* 7. Safety & Doorway (1열) */
+    .safety-grid { grid-template-columns: 1fr; gap: 50px; }
+    .doorway-layout { flex-direction: column; align-items: center; gap: 50px; }
+    .doorway-right { align-items: center; text-align: center; }
+    .guide-title { font-size: 22px; margin-top: -20px; }
+
+    /* 8. Dimensions & Spec */
+    .dimensions-row { flex-direction: column; align-items: center; gap: 40px; }
+    .dim-img { max-width: 100% !important; }
+    .spec-row { flex-direction: column; gap: 10px; }
+    .spec-label { width: 100%; }
+    .spec-value.split-col { gap: 30px; }
 }
