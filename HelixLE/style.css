@@ -561,7 +561,7 @@ body {margin: 0;}
 
     /* 레이아웃 및 선 설정 */
     width: 320px;          /* 너비 고정 (줄바꿈 및 선 정렬 유지) */
-    text-align: right;     /* 텍스트 우측 정렬 (선 쪽으로 붙임) */
+    text-align: center;     /* 텍스트 우측 정렬 (선 쪽으로 붙임) */
     
     padding-right: 40px;   /* 텍스트와 선 사이의 여백 */
     border-right: 3px solid #68a3ff; /* [핵심] 우측 세로 선 구현 */
@@ -1705,7 +1705,7 @@ body {margin: 0;}
     .p-item { width: 100px; }
     .p-item img { width: 70px; height: 70px; }
 
-    .gray-card.auto-card {
+    .prog-row {
         margin-left: auto !important;
         margin-right: auto !important;
         width: 90%;
