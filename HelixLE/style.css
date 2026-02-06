@@ -546,6 +546,14 @@ body {margin: 0;}
     letter-spacing: -0.5px;
 }
 
+/* [수정] 15 Auto Programs - 라벨 중앙 정렬 */
+.programs-auto-section .row-label {
+    text-align: center;     /* [요청 1] 중앙 정렬 */
+    border-right: none;     /* 중앙 정렬 시 세로선 제거 (디자인 일관성) */
+    padding-right: 0;
+    width: 320px;           /* 텍스트가 퍼지지 않게 적정 너비 유지 */
+}
+
 .programs-auto-section .section-title-blue .blue {
     color: #3563e0; /* 타이틀 포인트 컬러 */
 }
@@ -743,7 +751,7 @@ body {margin: 0;}
 
 /* 1. 섹션 전체 레이아웃 (중앙 정렬) */
 .voice-bt-section {
-    padding: 120px 0;
+    padding: 80px 0;
     text-align: center;
     background-color: #fff; /* 그라데이션 이후 화이트 배경 유지 */
 }
@@ -1274,6 +1282,7 @@ body {margin: 0;}
     /* [엔지니어링 팁] 내어쓰기 (Hanging Indent) */
     padding-left: 15px;
     text-indent: -15px;
+    color: #444444;
 }
 
 
@@ -1624,6 +1633,11 @@ body {margin: 0;}
     .slider-main { height: 350px; gap: 20px; }
     #current-chair { max-width: 90%; }
     .nav-btn img { width: 15px; }
+    
+    .swatch-panel {
+        margin-top: 0 !important;
+        margin-bottom: 10px;
+    }
 
     /* [수정 1] 22-Cell 이미지 크기 적절히 조절 */
     .light-feature-section .f-img img {
@@ -1637,10 +1651,12 @@ body {margin: 0;}
         gap: 60px;
     }
     .dual-gradient-section .g-img {
-        width: 100%; 
+        width: 100%;
         border-radius: 30px 30px 0 0; /* 위쪽만 둥글게 */
         overflow: hidden; /* [핵심] 둥근 모서리 밖으로 이미지가 튀어나가지 않게 자름 */
         margin: 0;        /* 불필요한 여백 제거 */
+        -webkit-mask-image: -webkit-radial-gradient(white, black); /* iOS/Safari 버그 해결 */
+        line-height: 0;
     }
 
     /* 이미지 자체: 컨테이너에 꽉 차게 설정 */
@@ -1649,6 +1665,9 @@ body {margin: 0;}
         height: auto;
         display: block;   /* 하단 미세 공백 제거 */
         margin: 0;
+
+        border-radius: 30px 30px 0 0;
+        transform: scale(1.01);
     }
     
     /* 텍스트 박스: 흰색 박스의 아랫부분 역할 */
@@ -1656,7 +1675,10 @@ body {margin: 0;}
         width: 100%;
         box-sizing: border-box; /* 패딩 포함 크기 계산 */
         border-radius: 0 0 30px 30px; /* 아래쪽만 둥글게 */
+        margin-top: -1px;
     }
+
+    
 
     /* 4. 15 Auto Programs (중앙 정렬) */
     .programs-auto-section .prog-container {
@@ -1684,6 +1706,10 @@ body {margin: 0;}
     }
     .p-item { width: 90px; }
     .p-item img { width: 70px; height: 70px; }
+
+    .programs-auto-section .prog-row:nth-child(3) .row-label {
+        white-space: nowrap;
+    }
 
     /* 5. Detailed Features */
     .detailed-features-center .bottom-clean-grid {
@@ -1733,6 +1759,10 @@ body {margin: 0;}
         text-align: center !important; 
         width: 100% !important;
         max-width: 100%;
+    }
+
+    .safety-section .section-title-blue {
+        font-size: 32px;
     }
 
 
