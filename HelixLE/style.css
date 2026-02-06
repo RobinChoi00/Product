@@ -1636,7 +1636,7 @@ body {margin: 0;}
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    .dual-gradient-section .g-img {
+    .dual-gradient-section .g-img .icon-wrap-left {
         width: 90% !important;
         justify-content: center !important;
     }
