@@ -567,6 +567,10 @@ body {margin: 0;}
     border-right: 3px solid #68a3ff; /* [핵심] 우측 세로 선 구현 */
     
     flex-shrink: 0;        /* 너비가 줄어들지 않도록 고정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
 }
 
 /* 5. 오른쪽 아이콘 그룹 */
@@ -1700,6 +1704,14 @@ body {margin: 0;}
     }
     .p-item { width: 100px; }
     .p-item img { width: 70px; height: 70px; }
+
+    .gray-card.auto-card {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90%;
+        max-width: 400px;
+        display: block;
+    }
 
 
 
