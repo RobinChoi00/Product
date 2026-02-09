@@ -528,7 +528,7 @@
 /* [Q] 이미지가 클 때 설정법 */
 .zg-img img {
     width: 100%;
-    max-width: 700px; /* 너무 커지지 않게 최대폭 제한 */
+    max-width: 600px; /* 너무 커지지 않게 최대폭 제한 */
     height: auto;
     display: block;
     margin: 0 auto;   /* 중앙 정렬 */
@@ -536,35 +536,46 @@
 
 
 /* ---------------------------------------------------------
-   2. SL-TRACK & SPACE SAVING (Grid 2 Layout)
+   2. SL-TRACK & SPACE SAVING (Aligned Layout)
    --------------------------------------------------------- */
 .split-feature-row {
-    margin-bottom: 80px; /* 하단 Air/Heat 섹션과 간격 */
-    align-items: flex-start; /* 상단 기준 정렬 */
+    margin-bottom: 80px;
+    display: flex;          /* Flexbox로 명시 */
+    /* [핵심 1] 'flex-start'를 제거하고 'stretch'를 적용하여 양쪽 높이를 동일하게 맞춤 */
+    align-items: stretch;   
+    gap: 40px;              /* 좌우 간격 */
 }
 
-/* 개별 아이템 스타일 */
+/* 개별 카드 아이템 */
 .split-feature-row .grid-item {
+    flex: 1;                /* 너비 균등 분할 */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 중앙 정렬 */
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: left;
-    padding: 60px 60px 60px 60px; /* 왼쪽에만 Padding */
+    padding: 60px;          /* 내부 여백 */
+    background-color: transparent; /* 배경이 필요하면 #f9f9f9 등 설정 */
 }
 
-/* 아이콘 + 타이틀 그룹 */
+/* [핵심 2] 아이콘+타이틀 그룹의 높이를 고정하여 설명글 시작 위치 통일 */
 .icon-title {
     display: flex;
-    flex-direction: column; /* 아이콘 위, 타이틀 아래 */
+    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    /* 타이틀이 1줄이든 2줄이든 설명글(Desc)이 시작되는 높이를 강제로 맞춥니다 */
+    min-height: 160px;      
+    justify-content: flex-start;
 }
 
 .icon-title .small-icon {
-    width: 60px; /* 아이콘 크기 통일 */
+    width: 60px;
     height: auto;
+    margin-bottom: 20px;    /* 아이콘과 타이틀 사이 간격 */
 }
 
+/* 타이틀 스타일 */
 .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
@@ -572,16 +583,13 @@
     line-height: 1.2;
     color: #606060;
 }
+
 .g-title.blue {
-    font-family: 'Forma DJR Banner', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
     color: #84c5d8;
-    line-height: 1.2;
     margin-bottom: 0 !important;
 }
 
-/* 설명 텍스트 (이전과 동일) */
+/* 설명글 스타일 */
 .g-desc {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -593,29 +601,18 @@
 
 .g-desc strong { color: #606060; }
 
-.g-img.mt-20 { margin-top: 20px; }
-.g-img img {
-    max-width: 80%;
-    height: auto;
-}
-.split-feature-row .grid-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* 위에서부터 정렬 */
-}
-
-/* 아이콘과 타이틀, 설명글을 포함한 영역의 높이를 고정 */
+/* [핵심 3] 이미지 컨테이너: 무조건 바닥에 붙도록 설정 */
 .split-feature-row .g-img {
-    width: 100%;             /* 컨테이너 너비 */
+    width: 100%;
     display: flex;
-    justify-content: flex-start; /* [수정] 이미지를 왼쪽으로 정렬 */
-    margin-top: 20px;
+    justify-content: flex-start; /* 이미지 왼쪽 정렬 */
+    /* 위쪽 텍스트 길이와 상관없이 이미지를 박스 최하단으로 밀어버림 */
+    margin-top: auto; 
 }
 
 .split-feature-row .g-img img {
-    /* [수정] 이미지 크기를 줄임 (기존 100% -> 350px 또는 80%) */
-    width: 350px;            
-    max-width: 80%;          /* 모바일 대응 */
+    width: 300px;            /* [요청] 이미지 크기 축소 */
+    max-width: 100%;
     height: auto;
     object-fit: contain;
 }
