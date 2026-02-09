@@ -1208,7 +1208,7 @@
    [SECTION 6] USER COMPATIBILITY
    ========================================= */
 .compatibility-container {
-    padding: 100px 0;
+    padding: 30px;
     background-color: #edf0f7; /* 가독성을 위한 연한 배경 */
 }
 
@@ -1245,7 +1245,7 @@
     font-size: 18px;
     color: #1a1a1a;
     line-height: 1.2;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     max-width: 400px; /* [요청] 두 줄 표현을 위한 너비 제한 */
     text-align: left;
 }
@@ -1253,7 +1253,7 @@
 /* 말풍선과 의자를 묶는 그룹 (사각형 형태 유지) */
 .left-visual-group {
     position: relative; /* 말풍선 배치를 위한 기준점 */
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1261,7 +1261,7 @@
 
 /* 말풍선 이미지: 타이틀 바로 밑에 배치 */
 .comp-bubble-wrap {
-    width: 200px; /* 말풍선 적정 크기 */
+    width: 250px; /* 말풍선 적정 크기 */
     margin-bottom: -40px; /* 의자 이미지와 살짝 겹치게 하여 일체감 부여 */
     z-index: 2;
     position: relative;
@@ -1274,12 +1274,12 @@
 
 /* 의자 치수 이미지 */
 .comp-chair-wrap {
-    width: 100%;
+    width: 90%;
     z-index: 1;
 }
 
 .comp-chair-wrap img {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
 }
