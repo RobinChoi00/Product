@@ -1218,7 +1218,7 @@
     max-width: 1400px; /* 전체 너비 제한 */
     margin: 0 auto;
     gap: 40px;
-    align-items: flex-start; /* 상단 기준 정렬 */
+    align-items: center; /* 상단 기준 정렬 */
 }
 
 /* 왼쪽 컬럼 (40%) */
@@ -1231,6 +1231,10 @@
 /* 오른쪽 컬럼 (60%) */
 .comp-right-col {
     flex: 0 0 60%;
+    display: flex;
+    justify-content: conter;
+    align-items: center;
+    width: 100%;
 }
 
 
@@ -1289,11 +1293,15 @@
    3. RIGHT COLUMN: ALL CUSTOMERS PROFILE
    --------------------------------------------------------- */
 .comp-all-users-wrap {
-    width: 100%;
+    max-width: 100%;
     border-radius: 20px;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* 입체감 부여 */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .comp-all-users-wrap img {
@@ -1406,7 +1414,7 @@
 }
 
 .doorway-right .box-img img {
-    width: 70%;
+    width: 90%;
     max-width: 300px; /* 박스 이미지 크기 제한 */
     height: auto;
     display: block;
