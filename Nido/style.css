@@ -547,8 +547,8 @@
 .split-feature-row .grid-item {
     display: flex;
     flex-direction: column;
-    align-items: left; /* 중앙 정렬 */
-    text-align: left;  /* 텍스트 중앙 정렬 */
+    align-items: flex-end; /* 중앙 정렬 */
+    justify-content: space-between;
     padding: 60px 60px 60px 60px; /* 왼쪽에만 Padding */
 }
 
@@ -557,7 +557,6 @@
     display: flex;
     flex-direction: column; /* 아이콘 위, 타이틀 아래 */
     align-items: left;
-    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -653,7 +652,8 @@
 .feature-section-row .g-img.right-img { justify-content: flex-end; }
 
 .feature-section-row .g-img img {
-    max-width: 80%;
+    max-width: 100%;
+    width: 300px;
     height: auto;
     object-fit: contain;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
