@@ -265,7 +265,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end; /* 이미지를 박스 밑에 붙이기 위해 */
-    height: 100%;      /* 박스 높이 채우기 */
+    height: 90%;      /* 박스 높이 채우기 */
 }
 
 /* 이미지 크기 키우기 */
@@ -295,8 +295,7 @@
     font-weight: 600; /* Bold */
     font-size: 36px;
     color: #84c5d8;   /* 요청 색상 */
-    line-height: 1.0;
-    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 /* 설명 텍스트 스타일 */
@@ -352,7 +351,7 @@
 /* 텍스트 영역 (아래쪽 45%) */
 .tech-card .g-txt {
     flex: 4.5;  /* 4.5 비율 */
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     text-align: center;      /* 중앙 정렬 */
     display: flex;
     flex-direction: column;
@@ -364,7 +363,7 @@
     font-weight: 600; /* Bold */
     font-size: 36px;
     color: #606060;   /* 요청 색상 */
-    line-height: 1.0;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 .g-title.blue {
@@ -372,8 +371,7 @@
     font-weight: 600;
     font-size: 36px;
     color: #84c5d8;
-    line-height: 1.0;
-    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .g-desc {
@@ -506,7 +504,7 @@
     font-weight: 600;
     font-size: 36px;
     color: #606060; /* 메인 타이틀은 진한 회색 */
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 /* 설명 텍스트 */
@@ -579,7 +577,6 @@
     font-size: 36px;
     color: #84c5d8;
     line-height: 1.2;
-    margin-bottom: 15px;
 }
 
 /* 설명 텍스트 (이전과 동일) */
