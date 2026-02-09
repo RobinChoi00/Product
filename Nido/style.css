@@ -574,7 +574,7 @@
 .icon-title .small-icon {
     width: 60px;
     height: auto;
-    margin-bottom: 0px;    /* 아이콘과 타이틀 사이 간격 */
+    margin-bottom: -30px;    /* 아이콘과 타이틀 사이 간격 */
 }
 
 /* 타이틀 스타일 */
@@ -673,7 +673,7 @@
     text-align: left;
 }
 .feature-section-row .g-title .blue{
-    margin-bottom: 0px !important;
+    margin-bottom: -20px !important;
 }
 
 .feature-section-row .g-title .blue { color: #84c5d8; }
