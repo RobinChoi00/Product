@@ -498,7 +498,7 @@
     font-weight: 600;
     font-size: 36px; /* 서브타이틀은 조금 작게 */
     color: #84c5d8;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     letter-spacing: 1px;
 }
 
@@ -574,7 +574,7 @@
 .icon-title .small-icon {
     width: 60px;
     height: auto;
-    margin-bottom: 20px;    /* 아이콘과 타이틀 사이 간격 */
+    margin-bottom: 0px;    /* 아이콘과 타이틀 사이 간격 */
 }
 
 /* 타이틀 스타일 */
