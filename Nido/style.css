@@ -1307,13 +1307,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
 }
 
 .comp-all-users-wrap img {
     width: 100%;
     height: auto;
     display: block;
-    margin-right: 20px;
+    margin-right: 0;
 }
 
 
