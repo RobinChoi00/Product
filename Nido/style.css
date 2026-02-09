@@ -545,8 +545,8 @@
 .split-feature-row .grid-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 중앙 정렬 */
-    text-align: center;  /* 텍스트 중앙 정렬 */
+    align-items: left; /* 중앙 정렬 */
+    text-align: left;  /* 텍스트 중앙 정렬 */
     padding: 60px 60px 60px 60px; /* 왼쪽에만 Padding */
 }
 
@@ -554,7 +554,7 @@
 .icon-title {
     display: flex;
     flex-direction: column; /* 아이콘 위, 타이틀 아래 */
-    align-items: center;
+    align-items: left;
     gap: 15px;
     margin-bottom: 20px;
 }
@@ -585,7 +585,7 @@
     font-weight: 400;
     font-size: 24px;
     color: #9e9e9e;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
