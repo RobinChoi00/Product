@@ -596,7 +596,25 @@
     max-width: 80%;
     height: auto;
 }
+.split-feature-row .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 위에서부터 정렬 */
+}
 
+/* 아이콘과 타이틀, 설명글을 포함한 영역의 높이를 고정 */
+.split-feature-row .icon-title,
+.split-feature-row .g-desc {
+    min-height: 120px;       /* 텍스트 양에 따라 적절히 조절하여 이미지 시작선 맞춤 */
+}
+
+.split-feature-row .g-img {
+    margin-top: auto;        /* 텍스트가 짧아도 이미지는 무조건 바닥에 정렬 */
+    height: 400px;           /* 이미지 박스 높이 통일 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* =========================================
    [SECTION 3] INDEPENDENT FEATURE ROWS (Stacked)
