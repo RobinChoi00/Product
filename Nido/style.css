@@ -1759,51 +1759,84 @@
     .f-content-wrap.reverse-mobile {
         flex-direction: column !important; /* 무조건 세로 배치 */
         height: auto;
+        padding: 40px 20px !important; /* 전체 패딩 */
     }
 
-    /* 이미지와 텍스트 순서 제어 (이미지가 위로 오게) */
-    .f-img { 
-        order: 1; 
-        width: 100%; 
-        flex: auto;
-        padding: 40px 0 0; /* 이미지 상단 여백 */
-    }
-    
-    .f-txt { 
+    /* 텍스트 영역: 순서 2번 (아래) */
+    .f-txt,
+    .feature-card-full .f-content-wrap.reverse-mobile .f-txt { 
         order: 2; 
-        width: 100%; 
-        flex: auto;
-        padding: 40px 30px !important; /* 내부 여백 재설정 */
+        width: 100% !important; 
+        flex: none;
+        padding: 30px 0 0 0 !important; /* 상단 여백만 부여 */
         text-align: center; 
-        align-items: center; /* 텍스트 중앙 정렬 */
+        align-items: center; 
+    }
+
+    /* 이미지 영역: 순서 1번 (위) */
+    .f-img,
+    .feature-card-full .f-content-wrap.reverse-mobile .f-img { 
+        order: 1; 
+        width: 100% !important; 
+        flex: none;
+        height: auto; /* 고정 높이 해제 */
     }
 
     .f-img img {
-        max-width: 80%; /* 이미지 크기 최적화 */
+        max-width: 100%; 
+        width: 80%; /* 모바일에서 적당한 크기 */
         margin: 0 auto;
     }
 
     /* Grid 2 (Air 3D & Body Scan) */
     .grid-2 {
-        grid-template-columns: 1fr; /* 1열로 변경 */
-        gap: 30px;
+        display: flex; /* Grid 대신 Flex Column 사용 */
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .tech-card {
+        border-radius: 30px; /* PC와 동일하게 유지 */
     }
 
     /* -------------------------------------------
-       SECTION 3: MECHANICS & HORIZONTAL CARDS
+       [중요 수정] SECTION 3: INDEPENDENT ROWS & SPLIT
        ------------------------------------------- */
-    /* Horizontal Card (Air & Heat) -> 세로 배치 */
-    .horizontal-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-        background-color: rgba(255,255,255,0.5); /* 가독성을 위해 배경 살짝 */
-        border-radius: 20px;
+    /* 지그재그 섹션을 세로로 변경 */
+    .feature-section-row,
+    .split-feature-row {
+        padding: 40px 0 !important;
+        flex-direction: column !important; /* 세로 배치 */
+        display: flex !important;
+        gap: 40px !important;
+        align-items: center !important;
     }
 
-    /* 이미지 순서 조정 (항상 이미지가 위로 오게) */
-    .horizontal-card .g-img { order: 1; margin-bottom: 20px; }
-    .horizontal-card .g-txt-wrapper { order: 2; text-align: center; }
+    /* 내부 컨테이너도 세로로 */
+    .feature-section-row .horizontal-card,
+    .split-feature-row .grid-item {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 30px !important;
+        padding: 0 !important; /* 내부 패딩 제거 */
+    }
+
+    /* 텍스트와 이미지 너비 100% */
+    .feature-section-row .g-txt-wrapper,
+    .feature-section-row .g-img,
+    .split-feature-row .g-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    
+    /* 이미지 순서 조정 (이미지 위, 텍스트 아래) */
+    .feature-section-row .g-img { order: 1; }
+    .feature-section-row .g-txt-wrapper { order: 2; }
+    
+    /* 아이콘 타이틀 높이 제한 해제 */
+    .icon-title { min-height: auto !important; align-items: center !important; }
 
     /* -------------------------------------------
        SECTION 4: PROGRAMS (SCROLL or WRAP)
@@ -1855,23 +1888,29 @@
     .tech-grid-4 .grid-item { text-align: center; } /* 텍스트 중앙 정렬 */
 
     /* -------------------------------------------
-       SECTION 6: COMPATIBILITY
+       [중요 수정] SECTION 6: COMPATIBILITY
        ------------------------------------------- */
     .compatibility-row {
-        flex-direction: column; /* 세로 배치 */
+        flex-direction: column !important;
+        gap: 40px;
+        align-items: center !important;
     }
 
     .comp-left-col, .comp-right-col {
-        width: 100%;
+        width: 100% !important;
         flex: none;
+        padding: 0 !important;
     }
 
-    .comp-section-title {
-        text-align: center;
-        margin: 0 auto 30px;
+    /* PC에서 주었던 마진/패딩 초기화 */
+    .comp-all-users-wrap {
+        margin-right: 0 !important; 
+        max-width: 100% !important;
     }
-
-    .left-visual-group { align-items: center; } /* 말풍선/의자 중앙 정렬 */
+    
+    .comp-all-users-wrap img {
+        width: 100% !important;
+    }
 
     /* -------------------------------------------
        SECTION 7: DOORWAY & DIMENSIONS
