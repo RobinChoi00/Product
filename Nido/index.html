@@ -24,197 +24,38 @@
 
             <div class="group-slider">
                 <div class="slider-main">
-                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
                         <img src="images/6.nido_left_arrow.png" alt="Prev">
-                    </button>
+                    </div>
                     
-                    <img id="current-chair" src="images/5.nido_colors_all.png" alt="Forge 3D Chair">
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/5.nido_colors_all.png" alt="Helix LE Colors">
+                    </div>
                     
-                    <button class="nav-btn next-btn" onclick="moveSlide(1)">
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
                         <img src="images/7.nido_right_arrow.png" alt="Next">
-                    </button>
+                    </div>
                 </div>
 
                 <div class="swatch-panel">
-                    <img src="images/8.nido_swatches_bar.png" class="bar-bg" alt="Bar">
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.nido_swatches_bar.png" class="bar-bg" alt="Bar">
+                    </div>
                     <div class="btn-wrap">
-                        <img src="images/9.nido_swatch_all.png" class="color-btn active" onclick="changeColor(0)">
-                        <img src="images/10.nido_swatch_black.png" class="color-btn" onclick="changeColor(1)">
-                        <img src="images/11.nido_swatch_brown.png" class="color-btn" onclick="changeColor(2)">
-                        <img src="images/12.nido_swatch_taupe.png" class="color-btn" onclick="changeColor(3)">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mb-40">
-        <div class="grey-card-box feature-row-card">
-            <div class="f-txt">
-                <div class="top-icon-wrap">
-                    <img src="images/17.nido_icon_mic.png" alt="Voice Control Icon" class="icon-md">
-                </div>
-                <div class="f-title">
-                    <span class="blue">INTELLIGENT</span><br>VOICE CONTROL
-                </div>
-                <div class="f-desc">
-                    Enjoy fully <strong>hands-free operation</strong>—simply use voice commands to adjust massage settings without lifting a finger. 
-                    Relax uninterrupted while the chair responds instantly.
-                </div>
-            </div>
-            <div class="f-img">
-                <img src="images/18.nido_voice-control.png" alt="AI Voice Control">
-            </div>
-        </div>
-    </div>
-
-    <div class="container mb-40">
-        <div class="grid-2-card">
-            
-            <div class="grey-card-box grid-item-card">
-                <div class="g-img">
-                    <img src="images/19.nido_air_3D.png" alt="4D Massage Mechanism">
-                </div>
-                <div class="g-title">
-                    <span class="blue">AIR 3D MASSAGE</span><br>MECHANISM
-                </div>
-                <div class="g-desc">
-                    An Air 3D massage mechanism uses <strong>inflatable air cells to gently compress</strong> and release key areas of the body, delivering a full-body, 
-                    <strong>pressure-based massage that enhances circulation</strong>.
-                </div>
-            </div>
-
-            <div class="grey-card-box grid-item-card">
-                <div class="g-img">
-                    <img src="images/20.nido_body-scan.png" alt="Body Scan Technology">
-                </div>
-                <div class="g-title">
-                    <span class="blue">BODY SCAN</span><br>TECHNOLOGY
-                </div>
-                <div class="g-desc">
-                    An intelligent body scan <strong>tailors each massage to your unique shape and contours,</strong> ensuring precise roller placement for an incredibly effective and comfortable experience.
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container mb-40">
-        <div class="grey-card-box feature-row-card">
-            <div class="f-txt">
-                <div class="f-title">
-                    <span class="blue">ROCKING MOTION</span><br>POSITIONS
-                </div>
-                <div class="f-desc">
-                    The chair's <strong>slow, rhythmic rocking moves smoothly back and forth</strong> to enhance relaxation and comfort. 
-                    This calming motion helps ease tension, deepen the massage experience, and create <strong>a soothing, cradle-like feel</strong> that encourages full-body relaxation.
-                </div>
-            </div>
-            <div class="f-img">
-                <img src="images/21.nido_rocking.png" alt="Rocking Motion Positions">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="unified-gradient-box">
-        <div class="zero-gravity-section bg-gray">
-            <div class="container text-center">
-                <div class="zg-title">
-                    <span class="blue">2-STAGE</span><br>ZERO GRAVITY RECLINING
-                </div>
-                <div class="zg-desc center-p">
-                    Experience a <strong>sensation of weightlessness</strong> with the Titan Nido 2-Stage Zero Gravity massage chair. 
-                    As you recline, your body's weight is perfectly balanced to <strong>relieve pressure on the back</strong>, 
-                    enhancing comfort and delivering a deeply immersive massage experience.
-                </div>
-                <div class="wide-img">
-                    <img src="images/22.nido_ZG.png" alt="2-Stage Zero Gravity">
-                </div>
-            </div>
-        </div>
-
-        <div class="dual-gradient-section bg-white">
-            <div class="container">
-                <div class="gradient-box grid-2 clean-grid-box">
-                    
-                    <div class="grid-item item-left">
-                        <div class="icon-wrap-left">
-                            <img src="images/23.nido_icon_SL.png" alt="SL Track Icon" class="icon-sm">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.nido_swatch_all.png" alt="All">
                         </div>
-                        <div class="g-title dark-text">
-                            <span class="blue">SL-TRACK</span><br>SYSTEM
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.nido_swatch_black.png" alt="Black">
                         </div>
-                        <div class="g-desc gray-text">
-                            Designed to mirror the natural curvature of your spine, the SL-Track 
-                            <strong>glides from neck to glutes</strong> to deliver a smooth, uninterrupted full-body massage.
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.nido_swatch_brown.png" alt="Brown">
                         </div>
-                        <div class="g-img">
-                            <img src="images/24.nido_SL.png" alt="SL Track System">
-                        </div>
-                    </div>
-
-                    <div class="grid-item item-left">
-                        <div class="icon-wrap-left">
-                            <img src="images/25.nido_icon_space.png" alt="Space Saving Icon" class="icon-sm">
-                        </div>
-                        <div class="g-title dark-text">
-                            <span class="blue">SPACE-SAVING</span><br>TECHNOLOGY
-                        </div>
-                        <div class="g-desc gray-text">
-                            The space-saving design lets the chair slide forward as it reclines, maximizing your living space while 
-                            still providing a full recline with <strong>10 inches of wall clearance.</strong>
-                        </div>
-                        <div class="g-img">
-                            <img src="images/26.nido_space-saving.png" alt="Space Saving 10 inches">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="light-feature-section py-80">
-            <div class="container">
-                
-                <div class="feature-row light-mode">
-                    <div class="f-txt">
-                        <div class="f-title">
-                            <span class="blue">24-CELL</span><br>AIR COMPRESSION MASSAGE
-                        </div>
-                        <div class="f-desc">
-                            Strategically positioned <strong>24 air cells</strong> in the Titan Nido provide gentle, 
-                            <strong>targeted compression to release tension</strong>, deepen relaxation, and elevate your overall sense of well-being.
-                        </div>
-                    </div>
-                    <div class="f-img">
-                        <img src="images/27.nido_air-cells.png" alt="24-Cell Air Compression">
-                    </div>
-                </div>
-
-                <div class="feature-row light-mode reverse mt-60">
-                    <div class="f-img">
-                        <img src="images/29.nido_heating.png" alt="Lumbar and Calf Heating">
-                    </div>
-                    <div class="f-txt">
-                        <div class="top-icon-wrap">
-                            <img src="images/28.nido_icon_heating.png" alt="Heat Icon" class="icon-xs">
-                        </div>
-                        
-                        <div class="f-title">
-                            <span class="red">LUMBAR & CALF</span><br>HEATING THERAPY
-                        </div>
-                        <div class="f-desc">
-                            Targeted heat therapy in the lumbar and calf regions <strong>gently warms muscles to relieve tension</strong>, 
-                            boost circulation, and deepen relaxation.
-                            <br><br>
-                            <span class="disclaimer-text">
-                                * The heating therapy provides warmth in the range of approximately 75 - 83°F.
-                            </span>
+                        <div class="color-btn" onclick="changeColor(3)">
+                            <img src="images/12.nido_swatch_taupe.png" alt="Taupe">
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -222,226 +63,326 @@
 
 
 
-
-
-    <div class="programs-auto-section bg-white py-80">
+    
+    <div class="smart-tech-group">
         <div class="container">
             
-            <div class="section-title-blue text-center mb-40">
+            <div class="feature-card-full gray-bg">
+                <div class="f-content-wrap">
+                    <div class="f-txt">
+                        <div class="icon-top"><img src="images/17.nido_icon_mic.png" alt="Mic Icon"></div>
+                        <div class="f-title blue">INTELLIGENT<br>VOICE CONTROL</div>
+                        <div class="f-desc">
+                            Enjoy fully <strong>hands-free operation</strong>—simply use voice commands to adjust massage settings without lifting a finger. 
+                            Relax uninterrupted while the chair responds instantly.
+                        </div>
+                    </div>
+                    <div class="f-img">
+                        <img src="images/18.nido_voice-control.png" alt="Voice Control UI">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2 mt-40">
+                <div class="grid-item tech-card gray-bg">
+                    <div class="g-img">
+                        <img src="images/19.nido_air_3D.png" alt="Air 3D Massage Mechanism">
+                    </div>
+                    <div class="g-txt p-30">
+                        <div class="g-title blue">AIR 3D MASSAGE<br>MECHANISM</div>
+                        <div class="g-desc">
+                            An Air 3D massage mechanism uses <strong>inflatable air cells to gently compress</strong> and release key areas of the body, delivering a full-body, <strong>pressure-based massage</strong> that enhances circulation and promotes deep relaxation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item tech-card gray-bg">
+                    <div class="g-img">
+                        <img src="images/20.nido_body-scan.png" alt="Body Scan Technology">
+                    </div>
+                    <div class="g-txt p-30">
+                        <div class="g-title blue">BODY SCAN<br>TECHNOLOGY</div>
+                        <div class="g-desc">
+                            An intelligent body scan <strong>tailors each massage to your unique shape and contours</strong>, ensuring precise roller placement for an incredibly effective and comfortable experience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card-full gray-bg mt-40">
+                <div class="f-content-wrap reverse-mobile"> <div class="f-txt">
+                        <div class="f-title blue">ROCKING MOTION<br>POSITIONS</div>
+                        <div class="f-desc">
+                            The chair's <strong>slow, rhythmic rocking moves smoothly back and forth</strong> to enhance relaxation and comfort. This calming motion helps ease tension, deepen the massage experience, and create <strong>a soothing, cradle-like feel</strong> that encourages full-body relaxation.
+                        </div>
+                    </div>
+                    <div class="f-img">
+                        <img src="images/21.nido_rocking.png" alt="Rocking Motion">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="mechanics-group">
+        <div class="container">
+
+            <div class="zero-gravity-section text-center">
+                <div class="zg-header">
+                    <div class="sub-title blue">2-STAGE</div>
+                    <div class="main-title">ZERO GRAVITY RECLINING</div>
+                </div>
+                <div class="zg-desc center-width">
+                    <strong>Experience a sensation of weightlessness</strong> with the Titan Nido 2-Stage Zero Gravity massage chair. 
+                    As you recline, your body's weight is perfectly balanced to <strong>relieve pressure on the back</strong> enhancing comfort and delivering a deeply immersive massage experience.
+                </div>
+                <div class="zg-img full-width-img">
+                    <img src="images/22.nido_ZG.png" alt="Zero Gravity Reclining">
+                </div>
+            </div>
+
+            <div class="grid-2 split-feature-row mt-60">
+                <div class="grid-item">
+                    <div class="icon-title">
+                        <img src="images/23.nido_icon_SL.png" class="small-icon" alt="">
+                        <div class="g-title blue">SL-TRACK</div>SYSTEM
+                    </div>
+                    <div class="g-desc">
+                        Designed to mirror the natural curvature of your spine, the SL-Track <strong>glides from neck to glutes</strong> to deliver a smooth, uninterrupted full-back massage.
+                    </div>
+                    <div class="g-img mt-20">
+                        <img src="images/24.nido_SL.png" alt="SL Track Diagram">
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="icon-title">
+                        <img src="images/25.nido_icon_space.png" class="small-icon" alt="">
+                        <div class="g-title blue">SPACE-SAVING</div>TECHNOLOGY
+                    </div>
+                    <div class="g-desc">
+                        The space-saving design lets the chair slide forward as it reclines, maximizing your living space while still providing a full recline with <strong>10 inches of wall clearance.</strong>
+                    </div>
+                    <div class="g-img mt-20">
+                        <img src="images/26.nido_space-saving.png" alt="Space Saving Diagram">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2 air-heat-row mt-60">
+                <div class="grid-item horizontal-card"> 
+                    <div class="g-txt-wrapper"> <div class="g-title"><span class="blue">24-CELL</span><br>AIR COMPRESSION<br>MASSAGE</div>
+                        <div class="g-desc">
+                            <strong>Strategically positioned 24 air cells</strong> in the Titan Nido provide gentle, <strong>targeted compression to release tension</strong>, 
+                            deepen relaxation, and elevate your overall sense of well-being.
+                        </div>
+                    </div>
+                    <div class="g-img right-img"> <img src="images/27.nido_air-cells.png" alt="Air Bags Layout">
+                    </div>
+                </div>
+
+                <div class="grid-item horizontal-card">
+                    <div class="g-img left-img">
+                        <img src="images/29.nido_heating.png" alt="Heating Areas">
+                    </div>
+                    <div class="g-txt-wrapper">
+                        <div class="g-title red"> 
+                            <img src="images/28.nido_icon_heating.png" class="inline-icon" alt="">
+                            <span class="red">LUMBAR & CALF</span><br>HEATING THERAPY
+                        </div>
+                        <div class="g-desc">
+                            Targeted heat therapy in the lumbar and calf regions <strong>gently warms muscles to relieve tension,</strong> 
+                            boost circulation, and deepen relaxation.
+                        </div>
+                        <div class="footnote-text">
+                                *The heating therapy provides warmth in the range of approximately 75 - 83°F.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="programs-section-group">
+        <div class="container text-center">
+            
+            <div class="section-header">
                 <span class="blue">22 AUTO</span> PROGRAMS
             </div>
 
-            <div class="grey-card-box auto-programs-card">
-                
-                <div class="programs-group-wrapper">
-                    <div class="program-group">
-                        <div class="group-header">UNIVERSAL<br>COMFORT</div>
-                        <div class="p-item"><img src="images/30.nido_icon_womens_relief.png" alt="Women's Relief"><div class="p-name">WOMEN'S<br>RELIEF</div></div>
-                        <div class="p-item"><img src="images/35.nido_icon_mens-relief.png" alt="Men's Relief"><div class="p-name">MEN'S<br>RELIEF</div></div>
-                        <div class="p-item"><img src="images/40.nido_icon_senior-care.png" alt="Senior Care"><div class="p-name">SENIOR<br>CARE</div></div>
+            <div class="program-box gray-bg radius-20">
+                <div class="program-grid-5">
+                    <div class="prog-col">
+                        <div class="col-head">UNIVERSAL<br>COMFORT</div>
+                        <div class="icon-list">
+                            <div class="p-item"><img src="images/30.nido_icon_womens_relief.png" alt="Women"><span class="p-name">WOMEN'S RELIEF</span></div>
+                            <div class="p-item"><img src="images/35.nido_icon_mens-relief.png" alt="Men"><span class="p-name">MEN'S RELIEF</span></div>
+                            <div class="p-item"><img src="images/40.nido_icon_senior-care.png" alt="Senior"><span class="p-name">SENIOR CARE</span></div>
+                        </div>
                     </div>
-
-                    <div class="program-group">
-                        <div class="group-header">TARGETED<br>RECOVERY</div>
-                        <div class="p-item"><img src="images/31.nido_icon_neck&shoulder.png" alt="Neck & Shoulder"><div class="p-name">NECK &<br>SHOULDER</div></div>
-                        <div class="p-item"><img src="images/36.nido_icon_back&spine.png" alt="Back & Spine"><div class="p-name">BACK &<br>SPINE</div></div>
-                        <div class="p-item"><img src="images/41.nido_icon_waist&hip.png" alt="Waist & Hip"><div class="p-name">WAIST<br>& HIP</div></div>
+                    <div class="prog-col">
+                        <div class="col-head">TARGETED<br>RECOVERY</div>
+                        <div class="icon-list">
+                            <div class="p-item"><img src="images/31.nido_icon_neck&shoulder.png" alt=""><span class="p-name">NECK & SHOULDER</span></div>
+                            <div class="p-item"><img src="images/36.nido_icon_back&spine.png" alt=""><span class="p-name">BACK & SPINE</span></div>
+                            <div class="p-item"><img src="images/41.nido_icon_waist&hip.png" alt=""><span class="p-name">WAIST & HIP</span></div>
+                        </div>
                     </div>
-
-                    <div class="program-group">
-                        <div class="group-header">FEATURES</div>
-                        <div class="p-item"><img src="images/32.nido_icon_recovery-mode.png" alt="Recovery Mode"><div class="p-name">RECOVERY<br>MODE</div></div>
-                        <div class="p-item"><img src="images/37.nido_icon_sports-mode.png" alt="Sports Mode"><div class="p-name">SPORTS<br>MODE</div></div>
-                        <div class="p-item"><img src="images/42.nido_icon_gentle-mode.png" alt="Gentle Mode"><div class="p-name">GENTLE<br>MODE</div></div>
+                    <div class="prog-col">
+                        <div class="col-head">FEATURES</div>
+                        <div class="icon-list">
+                            <div class="p-item"><img src="images/32.nido_icon_recovery-mode.png" alt=""><span class="p-name">RECOVERY MODE</span></div>
+                            <div class="p-item"><img src="images/37.nido_icon_sports-mode.png" alt=""><span class="p-name">SPORTS MODE</span></div>
+                            <div class="p-item"><img src="images/42.nido_icon_gentle-mode.png" alt=""><span class="p-name">GENTLE MODE</span></div>
+                        </div>
                     </div>
-
-                    <div class="program-group">
-                        <div class="group-header">AIR PRESSURE<br>MASSAGE</div>
-                        <div class="p-item"><img src="images/33.nido_icon_airbag_kneading.png" alt="Airbag Kneading"><div class="p-name">AIRBAG<br>KNEADING</div></div>
-                        <div class="p-item"><img src="images/38.nido_icon_airbag-pulsing.png" alt="Airbag Pulsing"><div class="p-name">AIRBAG<br>PULSING</div></div>
-                        <div class="p-item"><img src="images/43.nido_icon_airbag-alternating.png" alt="Airbag Alternating"><div class="p-name">AIRBAG<br>ALTERNATING</div></div>
+                    <div class="prog-col">
+                        <div class="col-head">AIR PRESSURE<br>MASSAGE</div>
+                        <div class="icon-list">
+                            <div class="p-item"><img src="images/33.nido_icon_airbag_kneading.png" alt=""><span class="p-name">AIRBAG KNEADING</span></div>
+                            <div class="p-item"><img src="images/38.nido_icon_airbag-pulsing.png" alt=""><span class="p-name">AIRBAG PULSING</span></div>
+                            <div class="p-item"><img src="images/43.nido_icon_airbag-alternating.png" alt=""><span class="p-name">AIRBAG ALTERNATING</span></div>
+                        </div>
                     </div>
-
-                    <div class="program-group">
-                        <div class="group-header">CLASSIC</div>
-                        <div class="p-item"><img src="images/34.nido_icon_chinese-massage.png" alt="Chinese Massage"><div class="p-name">CHINESE<br>MASSAGE</div></div>
-                        <div class="p-item"><img src="images/39.nido_icon_thai_massage.png" alt="Thai Massage"><div class="p-name">THAI<br>MASSAGE</div></div>
-                        <div class="p-item"><img src="images/44.nido_icon_healthy-breathing.png" alt="Healthy Breathing"><div class="p-name">HEALTHY<br>BREATHING</div></div>
+                    <div class="prog-col no-border">
+                        <div class="col-head">CLASSIC</div>
+                        <div class="icon-list">
+                            <div class="p-item"><img src="images/34.nido_icon_chinese-massage.png" alt=""><span class="p-name">CHINESE MASSAGE</span></div>
+                            <div class="p-item"><img src="images/39.nido_icon_thai_massage.png" alt=""><span class="p-name">THAI MASSAGE</span></div>
+                            <div class="p-item"><img src="images/44.nido_icon_healthy-breathing.png" alt=""><span class="p-name">HEALTHY BREATHING</span></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="sub-title-precision mt-60 mb-30 text-center">
-                    PRECISION FOCUS
-                </div>
+                <div class="divider-line"></div>
 
-                <div class="programs-grid grid-7-col">
-                    <div class="p-item"><img src="images/45.nido_icon_head-relief.png" alt="Head Relief"><div class="p-name">HEAD<br>RELIEF</div></div>
-                    <div class="p-item"><img src="images/46.nido_icon_neck-focus.png" alt="Neck Focus"><div class="p-name">NECK<br>FOCUS</div></div>
-                    <div class="p-item"><img src="images/47.nido_icon_shoulder-focus.png" alt="Shoulder Relief"><div class="p-name">SHOULDER<br>RELIEF</div></div>
-                    <div class="p-item"><img src="images/48.nido_icon_back-relaxation.png" alt="Back Relaxation"><div class="p-name">BACK<br>RELAXATION</div></div>
-                    <div class="p-item"><img src="images/49.nido_icon_waist-care.png" alt="Waist Care"><div class="p-name">WAIST<br>CARE</div></div>
-                    <div class="p-item"><img src="images/50.nido_icon_hip-stretch.png" alt="Hip Stretch"><div class="p-name">HIP<br>STRETCH</div></div>
-                    <div class="p-item"><img src="images/51.nido_icon_leg-relaxation.png" alt="Leg Relaxation"><div class="p-name">LEG<br>RELAXATION</div></div>
+                <div class="precision-row">
+                    <div class="col-head mb-20">PRECISION FOCUS</div>
+                    <div class="icon-flex-row">
+                        <div class="p-item-small"><img src="images/45.nido_icon_head-relief.png" alt=""><span class="p-name">HEAD RELIEF</span></div>
+                        <div class="p-item-small"><img src="images/46.nido_icon_neck-focus.png" alt=""><span class="p-name">NECK FOCUS</span></div>
+                        <div class="p-item-small"><img src="images/47.nido_icon_shoulder-focus.png" alt=""><span class="p-name">SHOULDER RELIEF</span></div>
+                        <div class="p-item-small"><img src="images/48.nido_icon_back-relaxation.png" alt=""><span class="p-name">BACK RELAXATION</span></div>
+                        <div class="p-item-small"><img src="images/49.nido_icon_waist-care.png" alt=""><span class="p-name">WAIST CARE</span></div>
+                        <div class="p-item-small"><img src="images/50.nido_icon_hip-stretch.png" alt=""><span class="p-name">HIP STRETCH</span></div>
+                        <div class="p-item-small"><img src="images/51.nido_icon_leg-relaxation.png" alt=""><span class="p-name">LEG RELAXATION</span></div>
+                    </div>
                 </div>
             </div>
+
+            <div class="manual-section mt-50">
+                <div class="section-header">
+                    <span class="blue">6 MANUAL</span> MODES
+                </div>
+                <div class="manual-box gray-bg radius-20 flex-center">
+                    <div class="m-item"><img src="images/52.nido_icon_kneading.png" alt=""><span class="m-name">KNEADING</span></div>
+                    <div class="m-item"><img src="images/53.nido_icon_sync.png" alt=""><span class="m-name">SYNC</span></div>
+                    <div class="m-item"><img src="images/54.nido_icon_tapping.png" alt=""><span class="m-name">TAPPING</span></div>
+                    <div class="m-item"><img src="images/55.nido_icon_rubbing.png" alt=""><span class="m-name">RUBBING</span></div>
+                    <div class="m-item"><img src="images/56.nido_icon_knocking.png" alt=""><span class="m-name">KNOCKING</span></div>
+                    <div class="m-item"><img src="images/57.nido_icon_shiatsu.png" alt=""><span class="m-name">SHIATSU</span></div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="programs-manual-section bg-white pb-80">
-        <div class="container text-center">
-            
-            <div class="section-title-blue mb-40">
-                <span class="blue">6 MANUAL</span> MODES
-            </div>
-
-            <div class="grey-card-box manual-card">
-                <div class="manual-flex">
-                    <div class="p1-item"><img src="images/52.nido_icon_kneading.png" alt="Kneading"><div class="p1-name">KNEADING</div></div>
-                    <div class="p1-item"><img src="images/53.nido_icon_sync.png" alt="Sync"><div class="p1-name">SYNC</div></div>
-                    <div class="p1-item"><img src="images/54.nido_icon_tapping.png" alt="Tapping"><div class="p1-name">TAPPING</div></div>
-                    <div class="p1-item"><img src="images/55.nido_icon_rubbing.png" alt="Rubbing"><div class="p1-name">RUBBING</div></div>
-                    <div class="p1-item"><img src="images/56.nido_icon_knocking.png" alt="Knocking"><div class="p1-name">KNOCKING</div></div>
-                    <div class="p1-item"><img src="images/57.nido_icon_shiatsu.png" alt="Shiatsu"><div class="p1-name">SHIATSU</div></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
 
-    <div class="center-feature-section py-80">
+
+
+
+
+    <div class="details-group-section">
         <div class="container">
             
-            <div class="grey-card-box center-feature-card">
-                <div class="center-icon-wrap mb-20">
-                    <img src="images/58.nido_icon_feet.png" alt="Foot Icon" class="icon-circle-md">
-                </div>
-
-                <div class="f-title mb-20">
-                    <span class="blue">SPECIALIZED</span><br>FOOT ROLLERS
-                </div>
-
-                <div class="f-desc center-max-600 mb-40">
-                    Rotating footrest rollers with precision reflexology ridges stimulate key acupressure points for a deep, therapeutic foot massage.
-                </div>
-
-                <div class="center-img-wrap">
-                    <img src="images/59.nido_foot-rollers.png" alt="Specialized Foot Rollers Mechanism">
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="light-feature-section py-80">
-        <div class="container">
-            
-            <div class="grey-card-box feature-row">
-                <div class="f-txt">
-                    <div class="top-icon-wrap">
-                        <img src="images/60.nido_icon_extend.png" alt="Extend Icon" class="icon-sm">
-                    </div>
+            <div class="features-triple-row">
+                <div class="f-block text-center">
+                    <div class="icon-top"><img src="images/58.nido_icon_feet.png" alt=""></div>
                     <div class="f-title">
-                        <span class="blue">SPRING-LOADED</span><br>EXTENDABLE<br>FOOTREST
+                        <div class="blue">SPECIALIZED</div> 
+                        FOOT ROLLERS
                     </div>
-                    <div class="f-desc">
-                        The Titan Nido comes with a spring-loaded footrest that <strong>extends up to 6 inches</strong>, delivering a personalized, comfortable 
-                        <strong>fit for users of all heights and body types.</strong>
-                    </div>
+                    <div class="f-desc">Rotating footrest rollers with precision reflexology ridges stimulate key acupressure points for a deep, therapeutic foot massage.</div>
+                    <div class="f-img"><img src="images/59.nido_foot-rollers.png" alt=""></div>
                 </div>
-                <div class="f-img">
-                    <img src="images/61.nido_foot-extension.png" alt="Spring-Loaded Extendable Footrest">
+                <div class="f-block row-layout">
+                    <div class="f-txt">
+                        <div class="icon-top"><img src="images/60.nido_icon_extend.png" alt=""></div>
+                        <div class="f-title">
+                            <div class="blue">SPRING-LOADED</div> 
+                            EXTENDABLE<br>FOOTREST
+                        </div>
+                        <div class="f-desc">The Titan Nido comes with a spring-loaded footrest that 
+                            <strong>extends up to 6 inches,</strong> delivering a personalized, comfortable <strong>fit for users of all heights and body types.</strong></div>
+                    </div>
+                    <div class="f-img"><img src="images/61.nido_foot-extension.png" alt=""></div>
+                </div>
+                <div class="f-block row-layout reverse">
+                    <div class="f-img"><img src="images/63.nido_back_pad.png" alt=""></div>
+                    <div class="f-txt">
+                        <div class="icon-top"><img src="images/62.nido_icon_back.png" alt=""></div>
+                        <div class="f-title">
+                            <div class="blue">INCLUDED<br>MASSAGE</div> 
+                            BACK PAD
+                        </div>
+                        <div class="f-desc">A detachable back pad provides the ability to soften the massage, 
+                            allowing for <strong>a more personalized and comfortable session.</strong></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="grey-card-box feature-row reverse">
-                <div class="f-txt">
-                    <div class="top-icon-wrap">
-                        <img src="images/62.nido_icon_back.png" alt="Cushion Icon" class="icon-sm">
-                    </div>
-                    <div class="f-title">
-                        <span class="blue">INCLUDED</span><br>MASSAGE<br>BACK PAD
-                    </div>
-                    <div class="f-desc">
-                        A detachable back pad provides the ability to soften the massage, allowing for 
-                        <strong>a more personalized and comfortable session.</strong>
+            <div class="tech-grid-4 mt-60">
+                <div class="grid-item">
+                    <div class="g-img"><img src="images/64.nido_speakers.png" alt="Bluetooth Speakers"></div>
+                    <div class="g-txt">
+                        <div class="g-title">
+                            <div class="blue">QUALITY</div> 
+                            BLUETOOTH SPEAKERS
+                        </div>
+                        <div class="g-desc">Immerse yourself in rich, high-quality audio with built-in Bluetooth speakers, 
+                            <strong>enhancing your relaxation</strong> with your favorite music, podcasts, or ambient sounds.</div>
                     </div>
                 </div>
-                <div class="f-img">
-                    <img src="images/63.nido_back_pad.png" alt="Included Massage Back Pad">
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-    <div class="quad-feature-section bg-white pb-80">
-        <div class="container">
-            
-            <div class="quad-grid">
-                
-                <div class="quad-item">
-                    <div class="q-img">
-                        <img src="images/64.nido_speakers.png" alt="Quality Bluetooth Speakers">
-                    </div>
-                    <div class="q-txt">
-                        <div class="f-title">
-                            <span class="blue">QUALITY</span><br>BLUETOOTH SPEAKERS
+                <div class="grid-item">
+                    <div class="g-img"><img src="images/65.nido_remote.png" alt="Touch Controller"></div>
+                    <div class="g-txt">
+                        <div class="g-title">
+                            <div class="blue">7.5" TOUCHSCREEN</div> 
+                            CONTROLLER
                         </div>
-                        <div class="f-desc">
-                            Immerse yourself in rich, high-quality audio with built-in Bluetooth speakers, 
-                            <strong>enhancing your relaxation</strong> with your favorite music, podcasts, or ambient sounds.
-                        </div>
+                        <div class="g-desc">The intuitive touchscreen remote puts complete control at your fingertips, 
+                            <strong>making it easy to customize your massage experience.</div>
                     </div>
                 </div>
-
-                <div class="quad-item">
-                    <div class="q-img">
-                        <img src="images/65.nido_remote.png" alt="7.5 Inch Touchscreen Controller">
-                    </div>
-                    <div class="q-txt">
-                        <div class="f-title">
-                            <span class="blue">7.5” TOUCHSCREEN</span><br>CONTROLLER
-                        </div>
-                        <div class="f-desc">
-                            The intuitive touchscreen remote puts complete control at your fingertips, 
-                            <strong>making it easy to customize</strong> your massage experience.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quad-item">
-                    <div class="q-img">
-                        <img src="images/66.nido_side-panels.png" alt="Quick Side Panels">
-                    </div>
-                    <div class="q-txt">
-                        <div class="f-title">
+                <div class="grid-item">
+                    <div class="g-img"><img src="images/66.nido_side-panels.png" alt="Side Panel"></div>
+                    <div class="g-txt">
+                        <div class="g-title">
                             <span class="blue">QUICK</span> SIDE PANELS
                         </div>
-                        <div class="f-desc">
-                            Convenient quick-release side panels allow for <strong>easy adjustments and faster access</strong>, 
-                            so you stay comfortable and in control throughout your massage.
-                        </div>
+                        <div class="g-desc">Convenient quick-release side panels allow for <strong>easy adjustments and faster access</strong>, 
+                            so you stay comfortable and in control throughout your massage.</div>
                     </div>
                 </div>
-
-                <div class="quad-item">
-                    <div class="q-img">
-                        <img src="images/67.nido_USB.png" alt="USB Charging Port">
-                    </div>
-                    <div class="q-txt">
-                        <div class="f-title">
+                <div class="grid-item">
+                    <div class="g-img"><img src="images/67.nido_USB.png" alt="USB Port"></div>
+                    <div class="g-txt">
+                        <div class="g-title">
                             <span class="blue">USB</span> CHARGING PORT
                         </div>
-                        <div class="f-desc">
-                            A conveniently located USB-A port beneath the remote keeps your devices charged, so you can 
-                            <strong>stay connected without interrupting your massage.</strong>
-                        </div>
+                        <div class="g-desc">A conveniently located USB-A port keeps your devices charged, so you can 
+                            <strong>stay connected without interrupting your massage.</strong></div>
                     </div>
                 </div>
             </div>
@@ -449,30 +390,29 @@
     </div>
 
 
-
-
-    <div class="user-suitability-section bg-gray py-80">
-        <div class="container">
+    <div class="compatibility-container">
+        <div class="compatibility-row">
             
-            <div class="section-title-blue text-center mb-60">
-                <span class="blue">DESIGNED TO CATER to the diverse needs of<br>customers with different body types
-            </div>
-
-            <div class="suitability-wrapper">
-                
-                <div class="suitability-left">
-                    <img src="images/68.nido_user_dimension.png" alt="Chair Dimensions" class="dim-base-img">
-                    
-                    <div class="badge-overlay">
-                        <img src="images/70.nido_rec_user.png" alt="Recommended User: 6ft, 260lb">
-                    </div>
+            <div class="comp-left-col">
+                <div class="comp-section-title">
+                    Designed to cater to the diverse needs of customers with different body types
                 </div>
 
-                <div class="suitability-right">
-                    <img src="images/69.nido_all_users.png" alt="Customer Body Type Comparison" class="users-full-img">
+                <div class="comp-bubble-wrap">
+                    <img src="images/70.nido_rec_user.png" alt="Recommended User: 6ft, 260LB">
                 </div>
 
+                <div class="comp-chair-wrap">
+                    <img src="images/68.nido_user_dimension.png" alt="Titan Nido Chair Dimensions">
+                </div>
             </div>
+
+            <div class="comp-right-col">
+                <div class="comp-all-users-wrap">
+                    <img src="images/69.nido_all_users.png" alt="Customer A, B, C, D Comparison Profiles">
+                </div>
+            </div>
+
         </div>
     </div>
 
