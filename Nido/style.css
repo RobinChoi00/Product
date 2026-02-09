@@ -673,7 +673,7 @@
     text-align: left;
 }
 .feature-section-row .g-title .blue{
-    gap: 0px;
+    margin-bottom: 0px !important;
 }
 
 .feature-section-row .g-title .blue { color: #84c5d8; }
