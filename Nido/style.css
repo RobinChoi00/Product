@@ -1052,8 +1052,9 @@
 
 .f-block.text-center .f-img {
     width: 100%;
-    max-width: 70%; /* 이미지 박스 크기 적절히 조절 */
+    max-width: 40%; /* 이미지 박스 크기 적절히 조절 */
     margin-top: 20px;
+    display: flex;
     justify-content: center;
 }
 
@@ -1311,6 +1312,7 @@
     width: 100%;
     height: auto;
     display: block;
+    margin-right: 20px;
 }
 
 
