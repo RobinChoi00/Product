@@ -549,6 +549,7 @@
     flex-direction: column;
     align-items: center; /* 중앙 정렬 */
     text-align: center;  /* 텍스트 중앙 정렬 */
+    padding: 60px 60px 60px 60px; /* 왼쪽에만 Padding */
 }
 
 /* 아이콘 + 타이틀 그룹 */
@@ -608,6 +609,9 @@
 .feature-section-row {
     width: 100%;
     padding: 100px 0; /* 시안처럼 섹션 사이의 여백을 넉넉히 부여 */
+}
+.container .horizontal-card {
+    padding: 60px 60px 60px 60px; /* 왼쪽에만 Padding */
 }
 
 /* 2. 가로 배치 카드 레이아웃 (5:5 분할) */
@@ -968,9 +972,10 @@
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 700;
     font-size: 36px;
-    color: #333;
+    color: #606060;
     line-height: 1.1;
     margin-bottom: 20px;
+    justify-content: center; /* 중앙 정렬 */
 }
 
 .f-title .blue {
@@ -1002,7 +1007,7 @@
 }
 
 .f-img img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     display: block;
 }
@@ -1019,7 +1024,7 @@
 }
 
 .f-block.text-center .f-desc {
-    max-width: 800px; /* 텍스트가 너무 퍼지지 않게 제한 */
+    max-width: 700px; /* 텍스트가 너무 퍼지지 않게 제한 */
     margin-left: auto;
     margin-right: auto;
 }
@@ -1086,6 +1091,7 @@
     grid-template-columns: 1fr 1fr; /* 2열 배치 */
     gap: 40px;                      /* 카드 사이 간격 */
     padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 /* 1. 개별 카드 아이템 */
@@ -1139,6 +1145,7 @@
     font-size: 24px;                /* 이전 섹션 가이드 준수 */
     color: #9e9e9e;
     line-height: 1.5;
+    max-width: 85%;
 }
 
 .tech-grid-4 .g-desc strong {
