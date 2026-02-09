@@ -668,9 +668,12 @@
     font-weight: 600;
     font-size: 36px;
     line-height: 1.2;
-    color: #333; /* 가독성을 위해 컬러 조정 가능 */
+    color: #606060; /* 가독성을 위해 컬러 조정 가능 */
     margin-bottom: 20px;
     text-align: left;
+}
+.feature-section-row .g-title .blue{
+    gap: 0px;
 }
 
 .feature-section-row .g-title .blue { color: #84c5d8; }
@@ -1307,7 +1310,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .comp-all-users-wrap img {
