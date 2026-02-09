@@ -651,9 +651,11 @@
 
 .feature-section-row .g-img img {
     max-width: 100%;
-    width: 500px; /* 이미지를 더 크게 강조 */
     height: auto;
     object-fit: contain;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    /* 표준 문법 */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
 /* 4. 텍스트 스타일 (공통) */
@@ -1035,22 +1037,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: 80px;
 }
 
 .f-block.text-center .f-desc {
     max-width: 700px; /* 텍스트가 너무 퍼지지 않게 제한 */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .f-block.text-center .f-img {
     width: 100%;
-    max-width: 800px; /* 이미지 박스 크기 적절히 조절 */
+    max-width: 70%; /* 이미지 박스 크기 적절히 조절 */
     margin-top: 20px;
-    max-width: 80%;
+    justify-content: center;
 }
 
+.f-block.text-center .f-img img {
+    width: 100%;           /* 부모(f-img) 너비인 70%에 맞춤 */
+    height: auto;
+    display: block;
+}
 
 /* ---------------------------------------------------------
    [FEATURE 2] SPRING-LOADED FOOTREST (Text Left, Img Right)
