@@ -601,141 +601,88 @@
 
 
 /* =========================================
-   [SECTION 3-1] 24-CELL AIR COMPRESSION
+   [SECTION 3] INDEPENDENT FEATURE ROWS (Stacked)
    ========================================= */
 
-/* 1. 가로 배치 카드 컨테이너 */
-.air-heat-row .grid-item.horizontal-card {
+/* 1. 공통 행 설정: 한 줄에 하나씩 배치 */
+.feature-section-row {
+    width: 100%;
+    padding: 100px 0; /* 시안처럼 섹션 사이의 여백을 넉넉히 부여 */
+}
+
+/* 2. 가로 배치 카드 레이아웃 (5:5 분할) */
+.feature-section-row .horizontal-card {
     display: flex;
     align-items: center; /* 수직 가운데 정렬 */
-    width: 100%;
-    gap: 0;             /* 중앙 밀착을 위해 간격 제거 */
+    justify-content: space-between;
+    gap: 60px; /* 텍스트와 이미지 사이의 간격 */
 }
 
-/* 2. 왼쪽 텍스트 구역 (50%) */
-.air-heat-row .horizontal-card .g-txt-wrapper {
-    flex: 1;            /* 5:5 분할 */
+/* 3. 구역 분할 (텍스트 & 이미지) */
+.feature-section-row .g-txt-wrapper,
+.feature-section-row .g-img {
+    flex: 1; /* 50%씩 정확히 배분 */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 가운데 배치 */
-    text-align: left;        /* 왼쪽 정렬 */
-    padding-right: 40px;     /* 이미지와의 최소 간격 */
 }
 
-/* 3. 오른쪽 이미지 구역 (50%) */
-.air-heat-row .horizontal-card .g-img.right-img {
-    flex: 1;            /* 5:5 분할 */
-    display: flex;
-    justify-content: flex-end; /* 오른쪽 정렬 (중앙선에 밀착) */
-    align-items: center;       /* 가운데 배치 */
-}
+/* 이미지 정렬 디테일 */
+.feature-section-row .g-img.left-img { justify-content: flex-start; }
+.feature-section-row .g-img.right-img { justify-content: flex-end; }
 
-.air-heat-row .horizontal-card .g-img img {
+.feature-section-row .g-img img {
     max-width: 100%;
-    width: 400px;       /* 이미지 크기 고정 (시각적 밸런스) */
+    width: 500px; /* 이미지를 더 크게 강조 */
     height: auto;
     object-fit: contain;
 }
 
-/* 4. 텍스트 스타일 계승 */
-.air-heat-row .g-title {
+/* 4. 텍스트 스타일 (공통) */
+.feature-section-row .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
-    color: #606060;
+    color: #333; /* 가독성을 위해 컬러 조정 가능 */
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.air-heat-row .g-title .blue {
-    color: #84c5d8;
-}
+.feature-section-row .g-title .blue { color: #84c5d8; }
+.feature-section-row .g-title.red { color: #606060; } /* 텍스트 자체는 어둡게 유지 */
+.feature-section-row .red { color: #E02020; }      /* 포인트 컬러 레드 */
 
-.air-heat-row .g-desc {
+.feature-section-row .g-desc {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 24px;
     color: #9e9e9e;
     line-height: 1.5;
+    text-align: left;
 }
 
-.air-heat-row .g-desc strong {
+.feature-section-row .g-desc strong {
     font-weight: 600;
     color: #606060;
 }
 
-
-/* =========================================
-   [SECTION 3-2] LUMBAR & CALF HEATING
-   ========================================= */
-
-/* 1. 가로 배치 카드 컨테이너 (50% 분할) */
-.air-heat-row .grid-item.horizontal-card {
-    display: flex;
-    align-items: center; /* 수직 가운데 배치 */
-    width: 100%;
-    gap: 0;             /* 중앙 밀착형 레이아웃 */
-}
-
-/* 2. 왼쪽 이미지 구역 (50%) */
-.air-heat-row .horizontal-card .g-img.left-img {
-    flex: 1;            /* 5:5 분할 */
-    display: flex;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    align-items: center;        /* 수직 가운데 배치 */
-}
-
-.air-heat-row .horizontal-card .g-img.left-img img {
-    max-width: 100%;
-    width: 400px;       /* 24-CELL 이미지와 동일한 크기로 밸런스 유지 */
-    height: auto;
-    object-fit: contain;
-}
-
-/* 3. 오른쪽 텍스트 구역 (50%) */
-.air-heat-row .horizontal-card .g-txt-wrapper {
-    flex: 1;            /* 5:5 분할 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 수직 가운데 배치 */
-    text-align: left;        /* 왼쪽 정렬 */
-    padding-left: 40px;      /* 이미지와의 최소 간격 확보 */
-}
-
-/* 4. 아이콘 및 타이틀 스타일 */
-.air-heat-row .inline-icon {
-    width: 60px;        /* 요청 사항: W 60px */
-    height: 60px;       /* 요청 사항: H 60px */
+/* 5. Heating 전용 스타일 (아이콘 & 각주) */
+.feature-section-row .inline-icon {
+    width: 60px;
+    height: 60px;
     vertical-align: middle;
     margin-right: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.air-heat-row .g-title.red {
-    font-family: 'Forma DJR Banner', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
-    color: #9e9e9e;
-    margin-bottom: 20px;
-}
-
-.air-heat-row .red {
-    color: #E02020;    /* 난방 테마를 위한 레드 컬러 */
-}
-.air-heat-row .g-desc strong {
-    font-weight: 600;
-    color: #606060;
-}
-
-/* 5. 각주 (Footnote) 스타일 */
 .footnote-text {
-    font-family: 'Avenir', sans-serif; /* 요청 사항: Avenir */
-    font-weight: 400;                 /* 요청 사항: Roman (Regular) */
-    font-size: 16px;                  /* 요청 사항: 16px */
-    color: #9e9e9e;                   /* 요청 사항: 9e9e9e */
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400; /* Roman */
+    font-size: 16px;
+    color: #9e9e9e;
     margin-top: 25px;
     line-height: 1.4;
+    text-align: left;
 }
 
 
