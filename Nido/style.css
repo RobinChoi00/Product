@@ -296,6 +296,7 @@
     font-size: 36px;
     color: #84c5d8;   /* 요청 색상 */
     line-height: 1.2;
+    margin-bottom: 0 !important;
 }
 
 /* 설명 텍스트 스타일 */
@@ -372,6 +373,7 @@
     font-size: 36px;
     color: #84c5d8;
     line-height: 1.2;
+    margin-bottom: 0 !important;
 }
 
 .g-desc {
@@ -569,7 +571,7 @@
     font-weight: 600;
     font-size: 36px;
     line-height: 1.2;
-    color: #333;
+    color: #606060;
 }
 .g-title.blue {
     font-family: 'Forma DJR Banner', sans-serif;
@@ -577,6 +579,7 @@
     font-size: 36px;
     color: #84c5d8;
     line-height: 1.2;
+    margin-bottom: 0 !important;
 }
 
 /* 설명 텍스트 (이전과 동일) */
@@ -650,7 +653,7 @@
 .feature-section-row .g-img.right-img { justify-content: flex-end; }
 
 .feature-section-row .g-img img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     object-fit: contain;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
