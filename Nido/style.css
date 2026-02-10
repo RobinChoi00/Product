@@ -2056,9 +2056,17 @@
     }
 
     /* 2. 이미지 자체를 화면 너비에 맞춰 확대 */
-    .f-block.text-center img {
+    .f-block.text-center .f-icon img,
+    .f-block.text-center img[src*="icon"] {
         /* [수정] 90% -> 100%로 변경하여 꽉 채움 */
-        width: 100% !important; 
+        width: 60px !important; 
+        max-width: 60px !important;
+        height: auto !important;
+        margin: 0 auto 20px !important;
+    } 
+    .f-block.text-center .f-img img{
+
+        width: 100% !important;
         
         /* [핵심] 기존에 걸려있을 수 있는 모든 너비 제한을 강제로 해제 */
         max-width: none !important; 
@@ -2067,7 +2075,10 @@
         height: auto !important;
         display: block;
         margin: 0 auto;
+
     }
+        
+    
 
     /* 3. (선택사항) 이미지가 너무 커서 텍스트와 붙어 보인다면 텍스트 여백 조정 */
     .f-block.text-center .f-desc {
