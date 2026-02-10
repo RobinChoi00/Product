@@ -562,19 +562,20 @@
 /* [핵심 2] 아이콘+타이틀 그룹의 높이를 고정하여 설명글 시작 위치 통일 */
 .icon-title {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
     margin-bottom: 10px;
     /* 타이틀이 1줄이든 2줄이든 설명글(Desc)이 시작되는 높이를 강제로 맞춥니다 */
     min-height: 160px;      
     justify-content: flex-start;
-    gap: 10px;
+    gap: 15px;
 }
 
 .icon-title .small-icon {
     width: 60px;
     height: auto;
-    margin-bottom: 0 !important;    /* 아이콘과 타이틀 사이 간격 */
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;    /* 아이콘과 타이틀 사이 간격 */
 }
 
 /* 타이틀 스타일 */
