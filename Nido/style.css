@@ -2016,12 +2016,13 @@
         height: auto; 
         margin-top: 40px !important; /* 텍스트와의 간격 확보 */
         margin-bottom: 0 !important;
+        padding: 0 10px !important;
     }
     
     /* 4. 이미지 크기 확대 및 최적화 */
     .f-block.row-layout .f-img img {
-        width: 90% !important; /* 이미지 크기 확대 */
-        max-width: 450px !important;
+        width: 100% !important; /* 이미지 크기 확대 */
+        max-width: 100% !important;
         height: auto !important;
         object-fit: contain;
     }
@@ -2029,6 +2030,22 @@
     /* 5. 아이콘 및 타이틀 간격 미세 조정 */
     .f-block .f-txt .f-icon {
         margin-bottom: 20px !important;
+    }
+
+    /* [수정] Section 5 전용 설명글(desc) 중앙 정렬 */
+    .f-block .f-desc, 
+    .f-block .g-desc {
+        /* [핵심] 텍스트 자체를 중앙으로 정렬 */
+        text-align: center !important;
+        
+        /* [핵심] 블록 요소가 중앙에 오도록 좌우 마진 auto 설정 */
+        width: 100% !important;
+        max-width: 320px;       /* 모바일 가독성을 위한 최적 너비 제한 */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+        line-height: 1.5;
+        color: #9e9e9e;         /* 기존 컬러 유지 */
     }
 
     /* Tech Grid 4 (Extras) */
