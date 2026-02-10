@@ -568,7 +568,7 @@
     /* 타이틀이 1줄이든 2줄이든 설명글(Desc)이 시작되는 높이를 강제로 맞춥니다 */
     min-height: 160px;      
     justify-content: flex-start;
-    gap: 15px;
+    gap: 30px;
 }
 
 .icon-title .small-icon {
@@ -1083,6 +1083,7 @@
 .f-block.row-layout .f-txt {
     flex: 1; /* 50% 비율 */
     text-align: left; /* 왼쪽 정렬 */
+    line-height: 1.2;
 }
 
 .f-block.row-layout .f-img {
@@ -1104,6 +1105,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* 텍스트 수직 중앙 배치 */
+    line-height: 1.2;
 }
 
 
@@ -1266,16 +1268,16 @@
 /* 말풍선과 의자를 묶는 그룹 (사각형 형태 유지) */
 .left-visual-group {
     position: relative; /* 말풍선 배치를 위한 기준점 */
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 /* 말풍선 이미지: 타이틀 바로 밑에 배치 */
 .comp-bubble-wrap {
-    width: 250px; /* 말풍선 적정 크기 */
-    margin-bottom: -40px; /* 의자 이미지와 살짝 겹치게 하여 일체감 부여 */
+    width: 180px; /* 말풍선 적정 크기 */
+    margin-bottom: -50px; /* 의자 이미지와 살짝 겹치게 하여 일체감 부여 */
     z-index: 2;
     position: relative;
 }
@@ -1287,12 +1289,12 @@
 
 /* 의자 치수 이미지 */
 .comp-chair-wrap {
-    width: 90%;
+    width: 70%;
     z-index: 1;
 }
 
 .comp-chair-wrap img {
-    width: 90%;
+    width: 100%;
     height: auto;
     display: block;
 }
