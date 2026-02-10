@@ -2006,6 +2006,10 @@
         flex-direction: column !important;
         align-items: center !important; /* 텍스트 내부 요소들 중앙 정렬 */
     }
+    .f-block.text-center img {
+        width: 90%;
+        max-width: 90%;
+    }
 
     /* 3. 이미지 영역을 2순위(아래)로 배치 */
     .f-block.row-layout .f-img { 
