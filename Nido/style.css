@@ -1955,6 +1955,12 @@
         align-items: center; 
         text-align: center;
     }
+    .icon-list {
+        display: flex !important;
+        flex-direction: column !important; /* 수직으로 쌓기 */
+        align-items: center !important;    /* [핵심] 가로 중앙 정렬 */
+        justify-content: center !important;
+    }
     
     .prog-col:last-child { border-bottom: none; }
 
