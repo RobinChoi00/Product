@@ -2109,21 +2109,40 @@
         line-height: 1.6;
     }
 
-
-    /* 2. 하단 제품 이미지 (발 마사지기) 전체 너비로 확대 */
-    .f-block .f-img {
-        width: 100% !important;    /* 컨테이너 너비 확보 */
-        margin-top: 30px !important;
-        padding: 0 !important;     /* 여백 제거로 이미지 극대화 */
+    /* 1. 부모 박스의 '가두는' 패딩 제거 및 공간 확보 */
+    .features-triple-row .f-block.text-center .f-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;   /* 좌우 여백을 완전히 제거 */
+        margin: 30px 0 0 0 !important;
+        overflow: visible !important; /* 삐져나온 이미지 허용 */
+        display: block !important;
     }
 
-    .f-block .f-img img {
-        width: 100% !important;    /* [핵심] 116px 고정을 해제하고 100%로 확대 */
-        max-width: none !important; 
+    /* 2. 이미지 자체를 116px에서 화면 꽉 차게 강제 확대 */
+    .features-triple-row .f-block.text-center .f-img img {
+        /* 고정 수치(116px)를 무시하도록 min-width 설정 */
         min-width: 100% !important; 
+        width: 100% !important;
+        
+        /* 모든 제한 해제 */
+        max-width: none !important; 
         height: auto !important;
+        
+        /* 중앙 정렬 및 가시성 확보 */
         display: block !important;
         margin: 0 auto !important;
+        
+        /* 브라우저가 강제로 크기를 줄이지 못하도록 설정 */
+        flex: none !important;
+    }
+
+    /* 3. 아이콘은 작게 유지 (영향 받지 않도록 별도 고정) */
+    .features-triple-row .f-block.text-center .icon-top img {
+        width: 80px !important;
+        min-width: 80px !important; /* 축소 방지 */
+        max-width: 80px !important;
+        margin-bottom: 20px !important;
     }
 
     /* -------------------------------------------
