@@ -2067,7 +2067,7 @@
     .f-block.text-center .f-img img{
 
         width: 100% !important;
-        
+
         /* [핵심] 기존에 걸려있을 수 있는 모든 너비 제한을 강제로 해제 */
         max-width: none !important; 
         min-width: 100% !important;
@@ -2107,6 +2107,23 @@
         margin-right: auto;     /* 중앙 배치를 확정함 */
         text-align: center;
         line-height: 1.6;
+    }
+
+
+    /* 2. 하단 제품 이미지 (발 마사지기) 전체 너비로 확대 */
+    .f-block .f-img {
+        width: 100% !important;    /* 컨테이너 너비 확보 */
+        margin-top: 30px !important;
+        padding: 0 !important;     /* 여백 제거로 이미지 극대화 */
+    }
+
+    .f-block .f-img img {
+        width: 100% !important;    /* [핵심] 116px 고정을 해제하고 100%로 확대 */
+        max-width: none !important; 
+        min-width: 100% !important; 
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
     }
 
     /* -------------------------------------------
