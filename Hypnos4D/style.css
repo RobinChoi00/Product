@@ -1661,7 +1661,7 @@ body {margin: 0;}
         max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        padding: 0 15px !important;
+        padding: 15px 15px !important;
         word-break: keep-all;
     }
 
@@ -1689,7 +1689,8 @@ body {margin: 0;}
     .split-container {
         flex-direction: column-reverse !important; 
         gap: 30px !important;
-        padding: 0 20px !important;
+        padding: 20px 20px !important;
+    
     }
     .f-content-left {
         max-width: 100% !important;
@@ -1744,22 +1745,45 @@ body {margin: 0;}
     }
 
     /* 8. [Doorway & Dimensions] 중앙 배치 및 정면 이미지 축소 */
+    /* 8. [요청] MINIMUM DOORWAY & DIMENSIONS: 중앙 배치 최적화 */
     .doorway-layout, .dimensions-row {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 40px !important;
+        gap: 50px !important; /* 이미지 간격 여유 확보 */
     }
-    .doorway-left, .doorway-right, .dim-img {
+
+    /* 도어웨이 왼쪽(이미지) 및 오른쪽(가이드) 영역 */
+    .doorway-left, 
+    .doorway-right {
         width: 100% !important;
         max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* 수직축 중앙 */
+        justify-content: center !important; /* [핵심] 수평축 중앙 정렬 */
         text-align: center !important;
-        align-items: center !important;
     }
-    .dim-img:first-child {
-        max-width: 60% !important; /* 정면 샷 크기 축소 */
-        margin: 0 auto !important;
+
+    /* 첫 번째 이미지(문 통과 이미지) 크기 및 정렬 */
+    .doorway-left img {
+        width: 60% !important;   /* [수정] 너무 작지도 크지도 않게 조절 */
+        max-width: 220px !important; 
+        margin: 0 auto !important; /* 수동 중앙 정렬 보조 */
+        display: block !important;
     }
-    .guide-title { margin: 20px auto 40px !important; }
+
+    /* 두 번째 이미지(박스 이미지) */
+    .doorway-right .box-img img {
+        width: 70% !important;
+        max-width: 300px !important;
+        margin: 0 auto 30px auto !important;
+    }
+
+    /* 측정 가이드 텍스트 */
+    .measuring-guide {
+        align-self: center !important;
+        max-width: 90% !important;
+    }
 
     /* 9. 제품 사양(Specification) 행 구조 변경 */
     .spec-row {
@@ -1771,11 +1795,23 @@ body {margin: 0;}
     .spec-value { width: 100% !important; font-size: 18px !important; }
     .spec-value.split-col { flex-direction: column !important; gap: 15px !important; }
 
-    /* 6. [지그재그 섹션] 텍스트 중앙 정렬 & 이미지가 아래로 (텍스트가 위) */
-    .feature-row, .feature-row.reverse, .detailed-features-section .feature-row {
+    .feature-row, 
+    .detailed-features-section .feature-row {
+        display: flex !important;
         flex-direction: column-reverse !important; 
         gap: 30px !important;
     }
+
+    /* 6-2. 반전 행 [텍스트(좌) - 이미지(우)] 구조: 
+       텍스트가 HTML상 먼저 나오므로 그대로 아래로 쌓음 */
+    .feature-row.reverse, 
+    .detailed-features-section .feature-row.reverse {
+        display: flex !important;
+        flex-direction: column !important; 
+        gap: 30px !important;
+    }
+
+    /* 6-3. 텍스트 및 이미지 컬럼 정렬 초기화 */
     .f-img-col, .f-txt-col, .f-img, .f-txt {
         width: 100% !important;
         max-width: 100% !important;
@@ -1783,10 +1819,14 @@ body {margin: 0;}
         align-items: center !important;
         padding: 0 !important;
     }
-    /* 지그재그 내의 모든 타이틀/설명 강제 중앙 정렬 */
+
+    /* 6-4. 타이틀 및 설명글 중앙 정렬 (Global Override) */
     .feature-row .f-title, .feature-row .f-desc,
-    .feature-row.reverse .f-title, .feature-row.reverse .f-desc {
+    .feature-row.reverse .f-title, .feature-row.reverse .f-desc,
+    .detailed-features-section .f-title, .detailed-features-section .f-desc {
         text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     /* 8. [Doorway & Dimensions] 중앙 배치 및 정면 이미지 축소 */
