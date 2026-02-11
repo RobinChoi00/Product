@@ -231,19 +231,25 @@ body {margin: 0;}
 /* 1. Header: Logo & Title Alignment */
 .f-title-wrap {
     display: flex;
-    align-items: flex-start;  /* 로고를 타이틀 첫 줄에 맞춤 */
-    justify-content: center;   /* 가로 중앙 정렬 */
-    gap: 15px;                 /* 로고와 타이틀 사이 간격 */
+    justify-content: center;    /* 전체 내용을 가로 중앙으로 */
+    position: relative;         /* 자식 요소(로고)의 절대 위치 기준점 */
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 
-.f-label-logo .logo-ai-series {
-    /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
-    height: 36px;             
+/* 2. Logo Area: 텍스트 중심에 영향을 주지 않고 왼쪽으로 배치 */
+.f-label-logo {
+    position: absolute;         /* [핵심] 레이아웃 흐름에서 제외 */
+    /* 텍스트(f-title)의 시작점 기준으로 왼쪽 여백에 배치 */
+    right: calc(50% + 230px);   /* 텍스트 너비의 절반 + 간격만큼 왼쪽으로 이동 */
+    top: 6px;                   /* 첫 번째 줄 텍스트와 수평 맞춤 */
+}
+
+.logo-ai-series {
+    height: 32px;               /* 40px 폰트에 맞춘 높이 조정 */
     width: auto;
     object-fit: contain;
-    /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
-    margin-top: 4px;          
+    display: block;
 }
 
 /* 2. Title Style (Poppins Bold 36px) */
