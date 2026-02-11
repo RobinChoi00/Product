@@ -1631,169 +1631,150 @@ body {margin: 0;}
 
 
 /* =========================================
-   [RESPONSIVE] Unified Mobile Optimization (Max 768px)
+   [FINAL] UNIFIED MOBILE OPTIMIZATION
    ========================================= */
 @media (max-width: 768px) {
 
-    /* 1. 타이틀 및 본문 크기 일괄 통일 (Global UI Consistency) */
+    /* 1. 타이틀 & 본문: 전체 가운데 정렬 및 크기 통일 */
     .f-title, 
-    .section-title-blue, 
-    .section-title, 
-    .zg-title, 
     .f-title-text, 
-    .f-title-bottom {
-        font-size: 28px !important; /* [통일] 타이틀 크기 */
+    .f-title-bottom, 
+    .g-title, 
+    .section-title, 
+    .section-title-blue, 
+    .zg-title, 
+    .guide-title {
+        font-size: 28px !important;
         line-height: 1.2 !important;
         text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .f-desc, 
-    .zg-desc, 
+    .f-desc-ai, 
     .g-desc, 
-    .intro-desc,
-    .f-desc-ai {
-        font-size: 18px !important; /* [통일] 본문 크기 */
+    .zg-desc, 
+    .intro-desc, 
+    .measuring-guide {
+        font-size: 18px !important;
         line-height: 1.5 !important;
         text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 10px !important;
+        word-break: keep-all;
     }
 
-    /* 2. 인트로 슬라이더 및 네비게이션 */
-    .slider-main {
-        height: 350px;
-    }
-
-    #current-chair {
-        max-width: 80% !important;
-    }
-
-    .nav-btn {
-        padding: 15px;
-    }
-
-    .nav-btn img {
-        width: 15px;
-    }
-
-    .prev-btn { left: 10px !important; }
-    .next-btn { right: 10px !important; }
-
-    .tech-feature-block .f-title-top {
-        flex-direction: column;  /* [핵심] 가로에서 세로 정렬로 변경 */
-        gap: 12px;               /* 로고와 텍스트 사이 간격 */
-        margin-bottom: 8px;      /* 두 번째 줄과의 간격을 위한 여백 */
-    }
-
-    /* 2. 타이틀 텍스트 중앙 정렬 강화 */
-    .tech-feature-block .f-title-text, 
-    .tech-feature-block .f-title-bottom {
-        font-size: 28px;         /* 모바일용 폰트 크기 축소 */
-        text-align: center;      /* 모든 텍스트를 중앙으로 */
-        width: 100%;
-    }
-
-    /* 3. 로고 크기 최적화 */
-    .tech-feature-block .logo-ai-series {
-        height: 30px;            /* 모바일 화면에 맞는 로고 크기 */
-        margin-top: 0;           /* 모바일에서는 상단 여백 제거 */
-    }
-
-    /* 4. 전체 섹션 패딩 조정 */
-    .tech-feature-block {
-        padding: 60px 20px;
-    }
-
-    /* 3. 지그재그(Feature Row) 섹션: 항상 텍스트가 위로 */
-    .feature-row {
-        flex-direction: column-reverse !important; 
-        gap: 20px !important;
-    }
-
-    .feature-row.reverse {
-        flex-direction: column !important; 
-    }
-
-    .f-txt-col {
-        padding: 0 !important;
+    /* 2. [요청] F-Label을 Title 위로 배치 */
+    .f-title-top, 
+    .f-title-wrap {
+        flex-direction: column !important; /* 세로 배치 */
         align-items: center !important;
+        gap: 15px !important;
     }
 
-    /* 4. AI 기술 섹션 (Tech Feature Block) */
-    .tech-feature-block {
-        padding: 60px 20px;
-    }
-
-    .tech-feature-block .f-title-top {
-        flex-direction: column;
-        gap: 12px;
+    .logo-ai-series {
+        height: 30px !important; /* 모바일 로고 크기 최적화 */
+        margin-top: 0 !important;
         margin-bottom: 10px;
     }
 
-    .tech-feature-block .logo-ai-series {
-        height: 30px;
-        margin-top: 0;
+    /* 3. [요청] 지그재그 섹션: 무조건 Text(위) -> Image(아래) 배치 */
+    .feature-row {
+        /* 이미지가 앞에 있는 경우를 뒤집음 */
+        flex-direction: column-reverse !important; 
+        gap: 30px !important;
     }
 
-    /* 5. 12 Manual Modes (2열 그리드) */
-    .manual-flex {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 40px 20px !important;
-        width: 100%;
+    .feature-row.reverse {
+        /* 이미지가 뒤에 있는 경우 그대로 세로 나열 */
+        flex-direction: column !important; 
     }
 
-    /* 6. 20 Auto Programs (라벨 하단 선 & 아이콘 2열) */
+    .f-img-col, .f-txt-col, .f-img, .f-txt {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+        padding: 0 !important;
+    }
+
+    /* 4. [요청] 20 Auto 섹션: Label(위) -> 선(중간) -> Icons(2열) */
     .prog-row {
         flex-direction: column !important;
-        margin-bottom: 50px !important;
+        align-items: center !important;
+        margin-bottom: 60px !important;
     }
 
     .row-label {
         width: 100% !important;
-        border-right: none !important;
-        border-bottom: 1px solid #e5e5e5;
-        padding-bottom: 20px;
+        border-right: none !important; /* 기존 세로 선 제거 */
+        border-bottom: 1px solid #e5e5e5 !important; /* 가로 선 추가 */
+        padding-right: 0 !important;
+        padding-bottom: 20px !important;
         margin-right: 0 !important;
         margin-bottom: 30px !important;
     }
 
     .row-icons {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2열 배치 */
         gap: 30px 10px !important;
         width: 100%;
+        justify-items: center;
     }
 
-        /* 프로그램 아이콘 행(Row) 조정 */
-    .prog-row {
-    flex-direction: column;
-    border-bottom: 1px solid #111c2c;
-    padding-bottom: 30px;
+    /* 5. [요청] 12 Manual 섹션: 2열 배치 & 가운데 정렬 */
+    .manual-flex {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2열 배치 */
+        gap: 40px 10px !important;
+        justify-items: center;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
-    .row-label {
-    width: 100%;
-    border-right: none;
-    padding-right: 0;
-    margin-right: 0;
-    margin-bottom: 20px;
+    .p1-item, .p-item {
+        width: 100% !important;
+        max-width: 120px; /* 아이콘이 너무 커지지 않게 제한 */
     }
 
-    .row-icons {
-    justify-content: center;
-    gap: 20px 10px;
+    /* 6. 인트로 슬라이더 및 기타 요소 미세 조정 */
+    .slider-main { height: 380px; }
+    #current-chair { max-width: 85% !important; }
+    
+    .prev-btn { left: 5px !important; }
+    .next-btn { right: 5px !important; }
+    .nav-btn img { width: 18px; }
+
+    /* 7. 도어웨이 & 치수 섹션 세로 배치 */
+    .doorway-layout, .dimensions-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 40px !important;
     }
 
-    /* 7. 제품 사양 및 기타 요소 */
+    .doorway-left, .doorway-right, .dim-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .doorway-right { padding-top: 0; }
+    .guide-title { margin: 20px auto 40px !important; }
+
+    /* 8. 제품 사양(Specification) 행 구조 변경 */
     .spec-row {
         flex-direction: column;
         gap: 10px;
+        padding: 20px 0;
     }
-
-    .spec-label, .spec-value {
-        width: 100%;
-    }
-
-    .f-swatches {
-        justify-content: center;
-    }
+    .spec-label { width: 100%; font-size: 16px; color: #888; }
+    .spec-value { width: 100%; font-size: 18px; }
+    .spec-value.split-col { flex-direction: column; gap: 15px; }
 }
