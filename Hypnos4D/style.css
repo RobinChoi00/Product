@@ -1,0 +1,1694 @@
+body {margin: 0;}
+.container {
+    width: 100%;
+    max-width: 1200px;        /* 컨텐츠가 모이는 최대 너비 고정 */
+    margin: 0 auto;           /* 중앙 정렬 */
+    padding: 0 20px;          /* 양옆 안전 마진 */
+}
+
+/* =========================================
+   [SECTION 0] HERO BANNER
+   ========================================= */
+.hero-full-banner {
+    width: 100%;
+    overflow: hidden; /* 이미지가 튀어나가는 것 방지 */
+    margin-bottom: 30px; /* 인트로 섹션과의 간격 */
+}
+
+.hero-full-banner img {
+    width: 100%;       /* 가로 꽉 채우기 */
+    height: auto;      /* 비율 유지 */
+    display: block;    /* 하단 공백 제거 */
+}
+
+/* =========================================
+   [SECTION 1] INTRO TEXT & SLIDER GROUP
+   ========================================= */
+.intro-text-section {
+    padding-bottom: 80px;
+    text-align: center; /* 전체 중앙 정렬 */
+}
+
+/* 로고 영역 */
+.intro-title-logo {
+    margin-bottom: 30px;
+}
+
+.intro-title-logo img {
+    max-width: 200px; /* 로고 크기 적절히 제한 */
+    height: auto;
+}
+
+/* 설명 텍스트 (요청사항 반영) */
+.intro-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;      /* Regular */
+    font-size: 22px;       /* 요청 사이즈 */
+    color: #666666;        /* 요청 컬러 */
+    
+    width: 95%;            /* 요청 너비 */
+    max-width: 1000px;     /* 너무 넓어지지 않게 안전장치 */
+    margin: 0 auto 60px;   /* 중앙 정렬 & 아래 여백 */
+    
+    line-height: 1.6;      /* 가독성 좋은 줄간격 */
+    word-break: keep-all;  /* 단어 단위 줄바꿈 (한글/영문 혼용 시 유리) */
+}
+
+.intro-desc strong {
+    font-weight: 600;      /* 강조 텍스트 */
+    color: #000;
+}
+
+/* =========================================
+   [SLIDER AREA] Image & Navigation
+   ========================================= */
+.group-slider {
+    position: relative;    /* 화살표 배치의 기준점 */
+    max-width: 1200px;     /* 전체 슬라이더 폭 제한 */
+    margin: 0 auto;        /* 중앙 정렬 */
+}
+
+.slider-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;         /* [중요] 높이를 고정해야 화살표가 안 튑니다 */
+}
+
+/* 의자 이미지 */
+.chair-display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-chair {
+    max-width: 80%;        /* 양옆 화살표 공간 확보를 위해 80%로 제한 */
+    max-height: 100%;      /* 높이 제한 */
+    object-fit: contain;   /* 비율 유지 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* [엔지니어링] 화살표 버튼 위치 고정 */
+.nav-btn {
+    position: absolute;    /* 의자 이미지 크기와 상관없이 위치 고정 */
+    top: 50%;              /* 수직 중앙 */
+    transform: translateY(-50%); /* 정확한 중앙 보정 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;           /* 이미지보다 위에 오도록 */
+    padding: 20px;         /* 터치 영역 확보 */
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-50%) scale(1.2); /* 호버 시 살짝 커짐 */
+}
+
+.prev-btn {
+    left: 2%;  /* 왼쪽 끝에서 약간 안쪽 */
+}
+
+.next-btn {
+    right: 2%; /* 오른쪽 끝에서 약간 안쪽 */
+}
+
+.nav-btn img {
+    width: 25px; /* 화살표 크기 적절히 조정 */
+    height: auto;
+}
+
+
+/* =========================================
+   [SWATCH PANEL] Color Buttons
+   ========================================= */
+.swatch-panel {
+    display: inline-flex;  /* 내용물만큼만 너비 차지 */
+    justify-content: center;
+    align-items: center;
+    
+    /* 배경 설정 (이미지 대신 CSS로 구현하여 깔끔하게) */
+    background-color: #e6e6e6; /* 연한 회색 (업로드 이미지 참고) */
+    border-radius: 50px;       /* 둥근 알약 모양 */
+    padding: 10px 20px;        /* 내부 여백 */
+    
+    margin-top: 30px;          /* 의자 이미지와 간격 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 살짝 떠있는 느낌 */
+}
+
+/* 기존 배경 이미지 래퍼는 숨김 (CSS가 더 깔끔함) */
+.bar-bg-wrap {
+    display: none; 
+}
+
+/* 버튼 그룹 */
+.btn-wrap {
+    display: flex;
+    gap: 15px;             /* 버튼 사이 간격 */
+    align-items: center;
+}
+
+.color-btn {
+    width: 35px;           /* 버튼 크기 */
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent; /* 선택 안 됐을 때 투명 테두리 */
+    transition: all 0.2s ease;
+    
+    /* 이미지 꽉 차게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff; /* 투명 이미지일 경우 대비용 */
+}
+
+.color-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 활성화 된 버튼 스타일 (검은색 테두리) */
+.color-btn.active {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION: AI Health Check Detection
+   ========================================= */
+
+.tech-feature-block {
+    background-color: #eef1f7; /* 0. 배경 색상 */
+    padding: 100px 0;          /* 섹션 상하 여백 */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 중앙 배치 */
+    text-align: center;        /* 가운데 정렬 */
+    max-width: 1200px;
+}
+
+/* 1. Header: Logo & Title Alignment */
+.f-title-wrap {
+    display: flex;
+    align-items: flex-start;  /* 로고를 타이틀 첫 줄에 맞춤 */
+    justify-content: center;   /* 가로 중앙 정렬 */
+    gap: 15px;                 /* 로고와 타이틀 사이 간격 */
+    margin-bottom: 50px;
+}
+
+.f-label-logo .logo-ai-series {
+    /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
+    height: 36px;             
+    width: auto;
+    object-fit: contain;
+    /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
+    margin-top: 4px;          
+}
+
+/* 2. Title Style (Poppins Bold 36px) */
+.f-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;         /* Bold */
+    font-size: 36px;          /* 36px */
+    color: #231f20;           /* 기본 색상 */
+    line-height: 1.1;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
+    text-align: left;         /* 로고 옆에서 텍스트 줄끼리는 좌측 정렬 */
+    margin: 0;
+}
+
+.f-title .blue {
+    color: #3563e0;           /* blue 색상 */
+}
+
+/* 3. Image Style (Radius 30px) */
+.f-img-box {
+    width: 100%;
+    max-width: 1000px;        /* 이미지 비중에 따른 최적 너비 */
+    margin-bottom: 50px;
+}
+
+.f-img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;      /* 3. radius 30px */
+    display: block;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* 부드러운 입체감 */
+}
+
+/* 4. Description Style (Roboto Regular 24px) */
+.f-desc-wrap {
+    max-width: 960px;         /* 가독성을 위한 최대 너비 제한 */
+    margin: 0 auto;
+}
+
+.f-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;         /* Regular */
+    font-size: 24px;          /* 24px */
+    color: #5b5b5b;           /* 5b5b5b */
+    line-height: 1.6;         /* 가독성을 위한 행간 */
+    text-align: center;       /* 가운데 정렬 */
+    word-break: keep-all;     /* 단어 단위 끊김 방지 */
+}
+
+
+/* =========================================
+   SECTION: AI Body Scanning (Split Layout)
+   ========================================= */
+
+/* 1. 배경 및 섹션 설정 (Gradient Background) */
+.ai-body-scan-section {
+    /* 요청하신 3단계 그라데이션 적용 */
+    background: linear-gradient(90deg, #02020e 0%, #16234f 56%, #050618 100%);
+    padding: 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. 컨테이너 분할 (Left Text / Right Image) */
+.split-container {
+    display: flex;
+    align-items: center;       /* 수직 중앙 정렬 */
+    justify-content: space-between; /* 좌우 끝으로 배치 */
+    width: 100%;
+    max-width: 1200px;         /* 넓은 화면 대응 */
+    gap: 50px;                 /* 텍스트와 이미지 사이 간격 */
+    padding: 0 20px;
+}
+
+/* 3. Left Side: Text Styling */
+.f-content-left {
+    flex: 1;                   /* 좌측 영역 비율 1 */
+    max-width: 500px;          /* 텍스트가 너무 퍼지지 않도록 제한 */
+    text-align: left;          /* 텍스트 좌측 정렬 (이미지와 대칭) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* 세로 중앙 정렬 */
+}
+
+/* 3-1. Title (White Override) */
+.f-title.white {
+    color: #ffffff !important; /* 흰색 강제 적용 */
+    margin-bottom: 30px;
+    text-align: center;          /* 왼쪽 정렬 */
+}
+
+/* 3-2. Description (White Override) */
+.f-desc.white {
+    color: #ffffff !important; /* 흰색 강제 적용 */
+    text-align: center;          /* 왼쪽 정렬 */
+    line-height: 1.6;
+}
+
+/* 4. Right Side: Image Styling */
+.f-img-right {
+    flex: 1;                   /* 우측 영역 비율 1 */
+    display: flex;
+    justify-content: flex-end; /* 이미지를 오른쪽 끝으로 */
+}
+
+.f-img-right img {
+    max-width: 100%;           /* 반응형 */
+    height: auto;
+    /* 이 섹션 이미지는 배경과 자연스럽게 섞이므로 radius나 shadow 제외 */
+    display: block;
+}
+
+
+/* =========================================
+   SECTION: Dual Grid Layout (4D & Sonic)
+   ========================================= */
+
+/* 1. 섹션 전체 배경 및 레이아웃 */
+.gradient-box.grid-2 {
+    background-color: #eef1f7; /* 1. 배경색 */
+    padding: 80px 20px;       /* 상하 여백 80px, 좌우 20px */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 그리드 (1:1 비율) */
+    gap: 40px;                /* 카드 사이 간격 */
+    max-width: 1200px;        /* 전체 컨텐츠 최대 너비 */
+    margin: 0 auto;           /* 중앙 정렬 */
+}
+
+/* 2. Grid Item (Title + Card Wrapper) */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* 타이틀과 카드를 중앙 정렬 */
+}
+
+/* 3. Title Style */
+.g-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;          /* 타이틀 크기 */
+    color: #231f20;
+    text-align: center;
+    margin-bottom: 25px;      /* 카드와의 간격 */
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.g-title .blue {
+    color: #3563e0;
+}
+
+/* 4. Tech Card (White Box) */
+.tech-card {
+    background-color: #ffffff; /* 2. 카드 배경색 흰색 */
+    border-radius: 30px;       /* 2. Radius 30px */
+    overflow: hidden;          /* 내부 이미지가 둥근 모서리를 넘지 않도록 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* 부드러운 그림자 */
+    display: flex;
+    flex-direction: column;    /* 위: 이미지, 아래: 텍스트 */
+    height: 100%;             /* 그리드 높이에 꽉 차게 */
+}
+
+/* 5. Image Area (Top 55%) */
+.g-img {
+    flex: 5.5;                /* 2. 비율 5.5 */
+    width: 100%;              /* 3. 가로 꽉 차게 */
+    position: relative;       /* 이미지 배치를 위한 기준점 */
+    overflow: hidden;
+}
+
+.g-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* 3. 구역 안에 꽉 차게 (비율 유지하며 크롭) */
+    display: block;
+}
+
+/* 다크 배경 클래스가 있는 경우 (이미지 특성에 따라 선택) */
+.g-img.dark-bg {
+    background-color: #000;   /* 이미지가 투명 PNG일 경우 배경색 필요 */
+}
+
+/* 6. Description Area (Bottom 45%) */
+.g-desc {
+    flex: 4.5;                /* 2. 비율 4.5 */
+    padding: 40px 30px;       /* 텍스트 내부 여백 */
+    font-family: 'Roboto', sans-serif; /* 4. f-desc와 동일 폰트 */
+    font-weight: 400;
+    font-size: 20px;          /* 카드 내부는 살짝 작게 (취향껏 24px로 조정 가능) */
+    color: #5b5b5b;
+    line-height: 1.6;
+    text-align: center;       /* 4. 중앙 정렬 */
+    display: flex;
+    align-items: center;      /* 텍스트 세로 중앙 정렬 */
+    justify-content: center;
+    word-break: keep-all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION: LiFlex & Air Massage (Detailed Features)
+   ========================================= */
+
+/* 1. 배경 설정 (White) */
+.hypnos-detailed-features {
+    background-color: #ffffff; /* 요청하신 흰색 배경 */
+    padding: 80px 0;
+}
+
+/* 개별 블록 간격 조정 */
+.hypnos-detailed-features .tech-feature-block {
+    margin-bottom: 80px;      /* 블록 사이를 넓게 띄움 */
+    background-color: transparent; /* 부모 배경색(흰색)을 따름 */
+    padding: 0;               /* 내부 패딩 초기화 */
+}
+
+/* 2. Title Style (기존 스타일 상속 + 위치 보정) */
+.hypnos-detailed-features .f-title {
+    /* 기존 f-title 스타일(Poppins, 36px, #231f20) 유지 */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 3. Image Styling (Width 100% + Layout Control) */
+.hypnos-detailed-features .f-img-box {
+    width: 100%;
+    margin: 0 auto 40px auto; /* 중앙 정렬 및 하단 여백 */
+    padding: 0 20px;
+}
+
+/* 3-1. LiFlex (Wide Image) - 검은 배경 박스용 */
+.hypnos-detailed-features .f-img-box.dark-bg {
+    max-width: 1000px;        /* 와이드 이미지는 넓게 */
+}
+
+/* 3-2. Air Massage (Portrait Image) - 누끼 이미지용 */
+/* dark-bg 클래스가 없는 박스는 너비를 제한하여 거대해지는 것을 방지 */
+.hypnos-detailed-features .f-img-box:not(.dark-bg) {
+    max-width: 600px;         /* 세로형 이미지는 적당한 너비로 제한 */
+}
+
+.hypnos-detailed-features .f-img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 5. Radius 적용 (dark-bg가 있는 이미지에만) */
+.f-img-box.dark-bg img {
+    border-radius: 30px;      /* 요청하신 30px 적용 */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* 깊이감 추가 */
+}
+
+/* 4. Description Style (Strong Color Override) */
+.hypnos-detailed-features .f-desc {
+    /* 기존 f-desc 스타일(Roboto, 24px, #5b5b5b) 유지 */
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Strong 태그 색상 지정 */
+.f-desc strong {
+    color: #000000;           /* 요청하신 검은색 강조 */
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   SECTION: Zig-Zag Features (Heating, Calf, etc.)
+   ========================================= */
+
+.zigzag-features {
+    padding: 80px 0;
+    width: 100%;
+    /* 배경색이 필요하다면 여기에 추가 (예: #ffffff) */
+}
+
+/* 1. Row Layout (Flexbox) */
+.feature-row {
+    display: flex;
+    align-items: center;       /* 수직 중앙 정렬 */
+    justify-content: space-between;
+    gap: 40px;                 /* 이미지와 텍스트 사이 간격 */
+    margin-bottom: 80px;       /* 행(Row) 사이 간격 */
+    width: 100%;
+}
+
+/* Reverse Row (텍스트 왼쪽, 이미지 오른쪽) */
+.feature-row.reverse {
+    flex-direction: row-reverse; /* 순서 반전 */
+}
+
+/* 2. Column Ratio (5.5 : 4.5) */
+.f-img-col {
+    flex: 5.5;                 /* 1. 비율 5.5 */
+    display: flex;
+    justify-content: center;   /* 이미지를 구역 안에서 가운데 배치 */
+    align-items: center;
+}
+
+.f-txt-col {
+    flex: 4.5;                 /* 1. 비율 4.5 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 3. Image Styling (Radius 30px) */
+.f-img-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;       /* 2. Radius 30px */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* 깊이감 추가 */
+    display: block;
+}
+
+/* 4. Text Alignment Logic (User Request) */
+/* 구역이 오른쪽(Normal)에 있으면 -> 좌측 정렬 */
+.feature-row .f-txt-col {
+    text-align: left;
+    align-items: flex-start;   /* Flex 아이템 좌측 정렬 */
+    padding-left: 20px;        /* 시각적 여백 */
+}
+
+/* 구역이 왼쪽(Reverse)에 있으면 -> 우측 정렬 */
+.feature-row.reverse .f-txt-col {
+    text-align: right;
+    align-items: flex-end;     /* Flex 아이템 우측 정렬 */
+    padding-right: 20px;       /* 시각적 여백 */
+    padding-left: 0;           /* 기존 여백 초기화 */
+}
+
+/* 5. Title & Desc (Inheritance) */
+/* 기존 .f-title, .f-desc 스타일을 그대로 상속받지만, 정렬은 위 규칙을 따름 */
+.zigzag-features .f-title {
+    margin-bottom: 20px;
+    /* 폰트 크기/색상은 기존 글로벌 클래스 사용 */
+}
+
+.zigzag-features .f-desc {
+    max-width: 100%;           /* 텍스트 박스 꽉 채우기 */
+    margin: 0;                 /* 불필요한 마진 제거 */
+}
+
+/* 6. Footnote Text Styling */
+.footnote-text {
+    margin-top: 15px;          /* 설명글과의 간격 */
+    font-family: 'Source Sans Variable', 'Source Sans Pro', sans-serif; /* 4. 폰트 */
+    font-weight: 400;          /* Regular (Variable 폰트 특성에 따라 조정 가능) */
+    font-style: italic;        /* 4. Italic */
+    font-size: 16px;           /* 4. 16px */
+    color: #6d6e71;            /* 4. #6d6e71 */
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION: 3-Stage Zero Gravity (Final Version)
+   ========================================= */
+
+.zero-gravity-wrapper {
+    background-color: #eef1f7; /* 배경색 */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 1. Title Style (Poppins Bold 36px) */
+.zero-gravity-wrapper .f-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #231f20;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.zero-gravity-wrapper .f-title .blue {
+    color: #3563e0;
+}
+
+/* 2. Image Box (Max-width 1000px, Radius 30px) */
+.zero-gravity-wrapper .f-img-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.zero-gravity-wrapper .f-img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* 3. Description Style (Roboto Regular 24px, Corrected Color) */
+.zero-gravity-wrapper .f-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #474747;           /* [수정] 요청하신 정확한 컬러 적용 */
+    line-height: 1.6;
+    max-width: 960px;
+    margin: 0 auto;
+    word-break: keep-all;
+}
+
+/* 4. Strong Tag Color */
+.zero-gravity-wrapper .f-desc strong {
+    color: #000000;           /* 강조 텍스트는 완전한 블랙 */
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   SECTION: Dual Grid Layout (Shared Style)
+   ========================================= */
+
+/* 1. 배경 및 그리드 설정 */
+.gradient-box.grid-2 {
+    background-color: #eef1f7; /* 배경색 */
+    padding: 100px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1:1 컬럼 */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Grid Item Layout */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3. Title Style (Poppins 30px) */
+.g-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #231f20;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.g-title .blue {
+    color: #3563e0;
+}
+
+/* 4. Tech Card (White Box, Radius 30px) */
+.tech-card {
+    background-color: #ffffff; /* 카드 배경색 */
+    border-radius: 30px;       /* Radius 30px */
+    overflow: hidden;          /* 이미지가 둥근 모서리를 넘지 않게 처리 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 5. Image Area (Flex Ratio 5.5) */
+.g-img {
+    flex: 5.5;                /* 이미지 구역 5.5 비율 */
+    width: 100%;              /* 가로 꽉 채우기 */
+    background-color: #000;   /* 투명 PNG 대비용 검은 배경 */
+    overflow: hidden;
+}
+
+.g-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* 구역을 빈틈없이 채움 */
+    display: block;
+}
+
+/* 6. Description Area (Flex Ratio 4.5) */
+.g-desc {
+    flex: 4.5;                /* 설명 구역 4.5 비율 */
+    padding: 40px 30px;
+    
+    /* f-desc 설정 상속 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;          /* f-desc와 동일 */
+    color: #474747;           /* 수정된 #474747 적용 */
+    line-height: 1.6;
+    
+    text-align: center;       /* 중앙 정렬 */
+    display: flex;
+    align-items: center;      /* 세로 중앙 정렬 */
+    justify-content: center;  /* 가로 중앙 정렬 */
+    word-break: keep-all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION: Programs (Auto & Manual)
+   ========================================= */
+
+/* 1. 배경 설정 (White) */
+.programs-auto-section,
+.programs-manual-section {
+    background-color: #ffffff; /* 1. 요청하신 흰색 배경 */
+    padding: 100px 0;          /* 상하 여백 */
+}
+
+/* 2. Title Style (Override Blue) */
+.section-title-blue {
+    /* f-title 설정 상속 (Poppins, Bold, 36px) */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 70px;       /* 아이콘과의 간격 */
+    
+    /* 2. 요청하신 컬러 적용 */
+    color: #1a1a1a;            
+    text-transform: uppercase;
+}
+
+/* 블루 텍스트가 있을 경우 강제 변환 (HTML 수정 없이 CSS로 제어) */
+.section-title-blue .blue {
+    color: #1a1a1a;
+}
+
+/* =========================================
+   LAYOUT: Auto Programs (Row Structure)
+   ========================================= */
+
+.prog-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 각 행 (Row) 설정 */
+.prog-row {
+    display: flex;             /* 좌우 배치 */
+    align-items: center;       /* 수직 중앙 정렬 */
+    margin-bottom: 60px;       /* 행 사이 간격 */
+}
+
+.prog-row.border-none {
+    margin-bottom: 0;          /* 마지막 행 여백 제거 */
+}
+
+/* 5. Left Column: Row Label (Category) */
+.row-label {
+    width: 140px;              /* 라벨 영역 고정 너비 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* [핵심] 5. 라벨과 아이콘 사이의 세로 선 */
+    border-right: 1px solid #e5e5e5; 
+    
+    padding-right: 40px;       /* 선과 라벨 사이 여백 */
+    margin-right: 40px;        /* 선과 아이콘 사이 여백 */
+    flex-shrink: 0;            /* 너비 줄어듦 방지 */
+}
+
+.cat-icon {
+    width: 50px;               /* 카테고리 아이콘 크기 */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.label-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+/* Right Column: Icons Grid */
+.row-icons {
+    display: flex;
+    flex-wrap: wrap;           /* 아이콘 줄바꿈 허용 */
+    gap: 20px;                 /* 아이콘 사이 간격 */
+    flex-grow: 1;              /* 남은 공간 채우기 */
+}
+
+/* =========================================
+   ITEM STYLE: Icons & Text (Shared)
+   ========================================= */
+
+/* 3. Item Size (90px) */
+.p-item, .p1-item {
+    width: 90px;               /* 3. 요청하신 90px 너비 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 중앙 정렬 */
+    text-align: center;
+}
+
+/* Icon Image Style */
+.p-item img, .p1-item img {
+    width: 60px;               /* 90px 박스 안에서의 적절한 아이콘 크기 */
+    height: auto;
+    margin-bottom: 12px;       /* 텍스트와의 간격 */
+    transition: transform 0.3s ease; /* 호버 효과 준비 */
+}
+
+.p-item:hover img, .p1-item:hover img {
+    transform: translateY(-5px); /* 살짝 떠오르는 효과 */
+}
+
+/* 4. Name Text Style */
+.p-name, .p1-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;          /* 4. Bold */
+    font-size: 12px;           /* 4. 12px */
+    color: #111c2c;            /* 4. 요청하신 컬러 */
+    line-height: 1.4;
+    text-transform: uppercase;
+    word-break: keep-all;      /* 단어 끊김 방지 */
+}
+
+/* =========================================
+   LAYOUT: Manual Modes (Grid Structure)
+   ========================================= */
+
+.manual-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* 전체 중앙 정렬 */
+    gap: 50px 40px;            /* 세로 50px, 가로 40px 간격 */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION: Bluetooth Speakers (LiFlex Style Match)
+   ========================================= */
+
+/* 1. 배경 및 레이아웃 설정 (White) */
+.bluetooth-only {
+    background-color: #ffffff; /* 요청하신 흰색 배경 */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 중앙 배치 */
+    text-align: center;        /* 중앙 정렬 */
+}
+
+/* 2. Title Style (LiFlex와 동일한 Poppins 36px) */
+.bluetooth-only .zg-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #231f20;            /* 기본 타이틀 색상 */
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* 블루 포인트 컬러 적용 */
+.bluetooth-only .blue {
+    color: #3563e0;
+}
+
+/* 3. Image Style (Max-width 1000px + Radius 30px) */
+.bluetooth-only .wide-img {
+    width: 100%;
+    max-width: 1000px;         /* 1000px로 크게 설정 */
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.bluetooth-only .wide-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;       /* 요청하신 30px 라운드 */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* LiFlex와 동일한 깊이감 */
+    display: block;
+}
+
+/* 4. Description Style (Roboto 24px, #474747) */
+.bluetooth-only .zg-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #474747;            /* 요청하신 #474747 색상 */
+    line-height: 1.6;
+    max-width: 1000px;         /* 텍스트 가독성을 위한 너비 */
+    margin: 0 auto;
+    word-break: keep-all;
+}
+
+/* Strong 태그 색상 지정 */
+.bluetooth-only .zg-desc strong {
+    color: #000000;            /* 요청하신 검은색 강조 */
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   SECTION: Detailed Features (Zig-Zag Style)
+   ========================================= */
+
+.detailed-features-section {
+    background-color: #ffffff; /* 1. 흰색 배경 */
+    padding: 100px 0;
+}
+
+/* 1. Row Layout (Flexbox) */
+.detailed-features-section .feature-row {
+    display: flex;
+    align-items: center;       /* 수직 중앙 정렬 */
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 100px;      /* 섹션 간 간격 */
+    width: 100%;
+}
+
+/* Reverse Row는 HTML 순서가 이미 바뀌어 있으므로 별도 direction 설정 불필요 */
+/* 다만, 모바일 대응을 위해 아래에서 다룸 */
+
+/* 2. Column Ratio (5.5 : 4.5) */
+.detailed-features-section .f-img {
+    flex: 5.5;                 /* 비율 5.5 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailed-features-section .f-txt {
+    flex: 4.5;                 /* 비율 4.5 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 3. Image Styling (Radius 30px) */
+.detailed-features-section .f-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;       /* Radius 30px */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* 4. Text Alignment Logic (Hugging Effect) */
+
+/* Normal Row (이미지-텍스트): 텍스트가 오른쪽에 있음 -> 좌측 정렬 */
+.detailed-features-section .feature-row .f-txt {
+    text-align: left;
+    align-items: flex-start;   /* Flex 아이템 좌측 정렬 */
+    padding-left: 20px;
+}
+
+/* Reverse Row (텍스트-이미지): 텍스트가 왼쪽에 있음 -> 우측 정렬 */
+.detailed-features-section .feature-row.reverse .f-txt {
+    text-align: right;
+    align-items: flex-end;     /* Flex 아이템 우측 정렬 */
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+/* Title & Desc (기본 상속) */
+.detailed-features-section .f-title {
+    /* 기존 f-title 설정 (Poppins 36px) 상속 */
+    margin-bottom: 20px;
+}
+
+.detailed-features-section .f-desc {
+    /* 기존 f-desc 설정 상속 */
+    margin: 0;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   COMPONENT: LED Color Swatches
+   ========================================= */
+
+.f-swatches {
+    display: flex;             /* 가로 나열 */
+    gap: 15px;                 /* 점 사이 간격 */
+    margin-top: 25px;          /* 본문과의 간격 */
+    align-items: center;
+}
+
+/* Normal Row이므로 좌측 정렬은 상위 .f-txt 설정에 의해 자동 적용됨 */
+
+.s-dot img {
+    width: 35px;               /* 점 크기 설정 (이미지 비율에 맞춰 조정) */
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;           /* 인터랙션 암시 */
+    transition: transform 0.2s ease;
+}
+
+.s-dot:hover img {
+    transform: scale(1.2);     /* 호버 시 살짝 커지는 효과 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+[NEW] Minimum Doorway & Packaging Section
+========================================= */
+
+/* 1. 섹션 전체 설정 */
+.doorway-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    margin-bottom: 120px;
+}
+
+/* 2. 타이틀 스타일 (중앙 정렬) */
+.doorway-section .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 전체 레이아웃 (Flexbox: 좌우 배치) */
+.doorway-layout {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: flex-start; /* 상단 기준 정렬 */
+    gap: 80px; /* 좌우 이미지 사이 간격 */
+    max-width: 1300px; /* 전체 폭 제한 */
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------
+[Left Column] 도어웨이 이미지 (왼쪽)
+------------------------------------------------ */
+.doorway-left {
+    flex: 1; /* 공간 50% 차지 */
+    display: flex;
+    justify-content: flex-end; /* 이미지를 중앙(오른쪽)으로 붙임 */
+}
+
+.doorway-left img {
+    width: 60%;
+    max-width: 200px; /* 이미지 크기 제한 */
+    height: auto;
+    object-fit: contain;
+}
+
+/* ------------------------------------------------
+[Right Column] 박스 이미지 + 가이드 텍스트 (오른쪽)
+------------------------------------------------ */
+.doorway-right {
+    flex: 1; /* 공간 50% 차지 */
+    display: flex;
+    flex-direction: column; /* 위: 박스, 아래: 텍스트 */
+    align-items: flex-start; /* ★핵심: 모든 요소를 왼쪽 정렬 */
+    text-align: left;
+    padding-top: 20px; /* 왼쪽 이미지와 높이 밸런스 맞춤 */
+}
+
+/* 박스 이미지 */
+.doorway-right .box-img {
+    margin-bottom: 40px; /* 텍스트와의 간격 */
+}
+
+.doorway-right .box-img img {
+    width: 70%;
+    max-width: 300px; /* 박스 이미지 크기 제한 */
+    height: auto;
+    display: block;
+    margin: 0; /* 왼쪽 정렬 유지 */
+}
+
+/* 측정 가이드 텍스트 영역 */
+.measuring-guide {
+    max-width: 500px; /* 글자가 너무 길어지지 않게 제한 */
+    color: #888888;
+    font-family: 'Avenir', 'Nunito', sans-serif;
+}
+
+/* [수정됨] 가이드 제목 (s-title과 동일하게 설정) */
+/* HTML에 strong 태그가 없으므로 .guide-title을 직접 타겟팅 */
+.guide-title {
+    font-family: 'Roboto', sans-serif; /* s-title 폰트 */
+    font-weight: 600; /* Bold */
+    font-size: 28px; /* s-title 크기 */
+    color: #3563e0; /* s-title 색상 (Blue) */
+    display: block;
+    margin-bottom: 20px; /* 리스트와의 간격 확보 */
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: -40px auto 60px
+}
+
+/* 가이드 리스트 (• 항목들) */
+.guide-list > div {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    /* [엔지니어링 팁] 내어쓰기 (Hanging Indent) */
+    padding-left: 15px;
+    text-indent: -15px;
+    color: #444444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION 13 Dimensions Section
+   ========================================= */
+
+.dimensions-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.dimensions-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. 타이틀 스타일 (이전 섹션들과 통일) */
+.dimensions-section .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #424242;   /* 진한 회색 */
+    text-align: center;
+    margin-bottom: 60px; /* 타이틀과 이미지 사이 여백 */
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+/* 2. 레이아웃 (가로 배치) */
+.dimensions-row {
+    display: flex;
+    justify-content: center; /* 전체 중앙 정렬 */
+    align-items: flex-end;   /* 바닥 라인 기준으로 정렬 (치수선 보기 좋게) */
+    gap: 80px;               /* 두 이미지 사이 넉넉한 간격 */
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 3. 이미지별 크기 제어 (비율 차별화) */
+
+/* 왼쪽: 정면 샷 (폭이 좁음) */
+.dim-img:first-child {
+    flex: 1;           /* 1의 비율 */
+    max-width: 350px;  /* 너무 커지지 않게 제한 */
+}
+
+/* 오른쪽: 측면 샷 (폭이 넓음) */
+.dim-img:last-child {
+    flex: 1.8;         /* 왼쪽보다 약 1.8배 더 넓은 공간 할당 */
+    max-width: 700px;  /* 넓은 이미지 수용 */
+}
+
+/* 이미지 공통 */
+.dim-img img {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION 14 Specification Section
+   ========================================= */
+
+/* 1. 섹션 전체 여백 및 배경 */
+.spec-section {
+    background-color: #ffffff;
+    padding: 100px 0;      /* 위아래 넉넉한 여백 */
+    margin-bottom: 100px;  /* 하단 여백 */
+}
+
+/* 2. 메인 제목 (Specification) 스타일 */
+/* HTML 구조상 .container 바로 아래 첫 번째 div가 제목입니다 */
+.spec-section .container > div:first-child {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;       /* 아주 굵게 (Image like) */
+    font-size: 40px !important;        /* 큰 제목 크기 */
+    text-align: center;     /* 중앙 정렬 */
+    margin-bottom: 60px;    /* 표와의 간격 */
+    color: #000000;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 테이블 컨테이너 (중앙 정렬 & 상단 테두리) */
+.spec-table {
+    max-width: 1000px;      /* 표 너비 제한 */
+    margin: 0 auto;         /* 중앙 정렬 */
+    border-top: 1px solid #e5e5e5; /* 표 맨 위 가로선 */
+}
+
+/* 4. 행(Row) 스타일 */
+.spec-row {
+    display: flex;          /* 가로 배치 (좌:라벨, 우:값) */
+    align-items: flex-start;/* 위쪽 라인 맞춤 */
+    padding: 25px 0;        /* 행 높이 (위아래 여백) */
+    border-bottom: 1px solid #e5e5e5; /* 각 줄마다 회색 밑줄 */
+}
+
+/* 마지막 줄 테두리 제거 */
+.spec-row.no-border {
+    border-bottom: none;
+}
+
+/* 5. 왼쪽 라벨 (Product Name, Power Supply 등) */
+.spec-label {
+    width: 30%;             /* 왼쪽 칸 너비 (약 30%) */
+    min-width: 200px;       /* 최소 너비 확보 */
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;       /* Bold */
+    font-size: 20px;
+    color: #000000;         /* 검은색 */
+    line-height: 1.6;
+}
+
+/* 6. 오른쪽 값 (Titan Plantaris, 110-120V 등) */
+.spec-value {
+    flex: 1;                /* 남은 공간 다 차지 */
+    
+    font-family: 'Roboto', sans-serif; /* Avenir가 없으면 Poppins */
+    font-weight: 500;       /* Regular */
+    font-size: 20px;
+    color: #444444;         /* 약간 부드러운 검은색 */
+    line-height: 1.6;
+}
+
+/* 7. 내부 컬럼 나누기 (Upright / Reclined 등) */
+/* .spec-value 안에 .split-col이 있을 때 가로로 한 번 더 나눔 */
+.spec-value.split-col {
+    display: flex;          
+    gap: 80px;              /* 두 항목 사이 간격 (넓게) */
+}
+
+/* 내부 아이템 (Strong 제목 + Span 내용) */
+.col-item {
+    display: flex;
+    flex-direction: column; 
+}
+
+.col-item strong {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;     /* 제목과 수치 사이 간격 */
+    display: block;
+}
+
+/* 8. 다운로드 링크 스타일 (빨간색) */
+.red-link {
+    color: #ff4d4d;         /* 이미지와 동일한 빨간색 */
+    text-decoration: none;  
+    font-weight: 500;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.red-link:hover {
+    opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [RESPONSIVE] Media Queries
+   ========================================= */
+
+/* 1. 태블릿 및 작은 화면 (Max 992px) */
+@media (max-width: 992px) {
+    /* 글로벌 너비 조정 */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* 타이틀 크기 일괄 최적화 (Hierarchy 유지) */
+    .f-title, .section-title-blue, .section-title, .zg-title {
+        font-size: 28px !important;
+        line-height: 1.2;
+    }
+
+    /* 본문 크기 최적화 */
+    .f-desc, .zg-desc, .g-desc, .intro-desc {
+        font-size: 18px !important;
+        line-height: 1.5;
+    }
+
+    /* 2열 그리드 -> 1열 전환 (4D Mechanism, Quiet 등) */
+    .gradient-box.grid-2 {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    /* 지그재그 레이아웃 -> 세로 스택 전환 */
+    .feature-row, .feature-row.reverse {
+        flex-direction: column !important; /* 항상 이미지가 위로 오게 하려면 column-reverse 사용 가능 */
+        text-align: center !important;
+        gap: 30px;
+    }
+
+    .f-img-col, .f-txt-col, .f-img, .f-txt {
+        flex: auto !important;
+        width: 100% !important;
+        padding: 0 !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 바디 스캐닝 섹션 (Split Layout) */
+    .split-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .f-content-left {
+        max-width: 100%;
+    }
+
+    /* 도어웨이/치수 섹션 세로 배치 */
+    .doorway-layout, .dimensions-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .doorway-left, .doorway-right, .dim-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 2. 모바일 특화 (Max 768px) */
+@media (max-width: 768px) {
+    /* 인트로 슬라이더 높이 조정 */
+    .slider-main {
+        height: 350px; /* 모바일에서는 의자 이미지가 작아지므로 높이 축소 */
+    }
+
+    #current-chair {
+        max-width: 95%;
+    }
+
+    /* 프로그램 아이콘 행(Row) 조정 */
+    .prog-row {
+        flex-direction: column;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 30px;
+    }
+
+    .row-label {
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .row-icons {
+        justify-content: center;
+        gap: 20px 10px;
+    }
+
+    /* 사양표(Specification) 모바일 최적화 */
+    .spec-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .spec-label {
+        width: 100%;
+        font-size: 16px;
+        color: #888;
+    }
+
+    .spec-value {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .spec-value.split-col {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* LED 스와치 중앙 정렬 */
+    .f-swatches {
+        justify-content: center;
+    }
+}

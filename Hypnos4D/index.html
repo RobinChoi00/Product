@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.Hypnos_lifestyle.png" alt="Osaki Helix LE 4D Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            
+            <div class="intro-desc">
+                Experience exclusive, adaptive programs designed to melt away tension and target your specific aches with deeply nurturing care. 
+                The Osaki Hypnos brings together advanced AI Series Health Detection, Dual 4D massage technology, Sonic Pulse massage, and the LiFlex SL-Track system to soothe both 
+                body and mind, guiding you into true relaxation, deep rest, and better sleep.
+            </div>
+            
+            <div class="group-slider">
+                <div class="slider-main">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/6.nido_left_arrow copy.png" alt="Prev">
+                    </div>
+                    
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/2.Hypnos_AllColor.png" alt="Helix LE Colors">
+                    </div>
+                    
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/7.nido_right_arrow copy.png" alt="Next">
+                    </div>
+                </div>
+
+                <div class="swatch-panel">
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.nido_swatches_bar copy.png" class="bar-bg" alt="Bar">
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.nido_swatch_all copy.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.nido_swatch_black copy.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.nido_swatch_brown copy.png" alt="Brown">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="hypnos-tech-suite">
+        <div class="container">
+            <div class="tech-feature-block">
+                <div class="f-title-wrap">
+                    <div class="f-label-logo">
+                        <img src="images/74.Hypnos_Aiseries.png" alt="AI Series Logo" class="logo-ai-series">
+                    </div>
+                    <div class="f-title">
+                        <span class="blue">INTELLIGENT A.I.</span><br>HEALTH CHECK DETECTION
+                    </div>
+                </div>               
+                <div class="f-img-box dark-bg">
+                    <img src="images/5.Hypnos_AI_Health.png" alt="AI Health Check Interface" class="f-img-fluid">
+                </div>
+                <div class="f-desc-wrap">
+                    <div class="f-desc">
+                        The cutting-edge AI health sensor gently monitors your heart rate, blood oxygen saturation, microcirculation, and fatigue level, instinctively identifying areas of tension in your body that demand extra care. 
+                        When in AI mode, it designs a customized massage based on your unique requirements, adjusting in real-time to offer targeted comfort. 
+                        Every motion is tailored to your needs, carefully crafted to usher you into a profound state of tranquility.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-feature-block ai-body-scan-section">
+                <div class="container split-container">       
+                    <div class="f-content-left">
+                        <div class="f-title-wrap">
+                            <div class="f-title white">AI BODY SCANNING</div>
+                        </div>
+                        <div class="f-desc-wrap">
+                            <div class="f-desc white">
+                                Your body is unique. Your massage should be too. The Hypnos 4D Pro AI's smart body scan maps your contours and molds itself to your dimensions, delivering a truly personalized experience.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-img-right">
+                        <img src="images/6.Hypnos_BodyScan.png" alt="AI Body Scanning Map" class="f-img-fluid no-radius">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gradient-box grid-2">
+                
+                <div class="grid-item">
+                    <div class="g-title">
+                        <span class="blue">4D MECHANISM</span><br>TECHNOLOGY</div>
+                    <div class="tech-card">
+                        <div class="g-img dark-bg">
+                            <img src="images/7.Hypnos_4DMech.png" alt="4D Mechanism detail">
+                        </div>
+                        <div class="g-desc">
+                            The Hypnos 4D Pro AI features an advanced 4D massage system. Its intelligent, ergonomically-designed manipulators glide seamlessly along the full track, with fully adjustable speed, intensity, and width to deliver a precisely targeted.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="g-title">
+                        <span class="blue">SONIC PULSE</span><br>MASSAGE</div>
+                    <div class="tech-card">
+                        <div class="g-img dark-bg">
+                            <img src="images/8.Hypnos_Sonic.png" alt="Sonic Pulse Waves">
+                        </div>
+                        <div class="g-desc">
+                            The Hypnos 4D Pro AI integrates sonic pulse technology into its auto, stretch, and health-check massage programs. 
+                            You can manually activate this layer of therapy at any time, seamlessly adding a deeper dimension to your massage.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="hypnos-detailed-features">
+        <div class="container">
+            <div class="tech-feature-block">
+                <div class="f-title-wrap">
+                    <div class="f-title"><span class="blue">LiFlex</span> MOTION TRACK</div> </div>
+                
+                <div class="f-img-box dark-bg">
+                    <img src="images/9.Hypnos_LiFlex.png" alt="LiFlex Motion Track Reclining">
+                </div>
+
+                <div class="f-desc-wrap">
+                    <div class="f-desc">
+                        Featuring a <strong>170-degree reclining LiFlex Track</strong>, the Hypnos 4D Pro AI uses revolutionary flexible track technology 
+                        to extend massage coverage from the neck and shoulders all the way down to the hamstrings, delivering complete, multi-angle relaxation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-feature-block">
+                <div class="f-title-wrap">
+                    <div class="f-title"><span class="blue">48-CELL FULL BODY</span><br>AIR MASSAGE</div> </div>
+
+                <div class="f-img-box">
+                    <img src="images/10.Hypnos_48Cell.png" alt="48-Cell Air Massage System">
+                </div>
+
+                <div class="f-desc-wrap">
+                    <div class="f-desc">
+                        Equipped with <strong>48 airbags</strong> that are strategically positioned throughout the chair, 
+                        it helps providing a thorough and immersive compression therapy experience.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="zigzag-features">
+                <div class="feature-row">
+                    <div class="f-img-col dark-bg rounded-box">
+                        <img src="images/11.Hypnos_Heating.png" alt="Heating Therapy">
+                    </div>
+                    <div class="f-txt-col">
+                        <div class="f-title"><span class="blue">HEATING</span> THERAPY</div> 
+                        <div class="f-desc">
+                            The Hypnos 4D Pro AI features a complete heating system with targeted warmth for both the lumbar region and calves. 
+                            This soothing heat helps relax tense muscles, melt away fatigue, and ease the stress of your day with cozy, enveloping comfort.
+                        </div>
+                        <div class="footnote-text">
+                            * The heating therapy provides warmth in the range of approximately 75-83°F.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-row reverse">
+                    <div class="f-txt-col">
+                        <div class="f-title"><span class="blue">DEEP CALF</span><br>KNEADING</div> 
+                        <div class="f-desc">
+                            You can use quick access for instant control, adjust chair reclining, and indulge in an auto massage. 
+                            The smart dial powers the chair and adjusts massage intensity with a simple turn.
+                        </div>
+                    </div>
+                    <div class="f-img-col dark-bg rounded-box">
+                        <img src="images/12.Hypnos_CalfKneading.png" alt="Deep Calf Kneading Mechanism">
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    <div class="f-img-col dark-bg rounded-box">
+                        <img src="images/13.Hypnos_Footrest.png" alt="Auto Extension Footrest">
+                    </div>
+                    <div class="f-txt-col">
+                        <div class="f-title"><span class="blue">AUTO EXTENSION</span><br>FOOTREST</div> 
+                        <div class="f-desc">
+                            Featuring an auto-extending footrest, the Hypnos 4D Pro AI accommodates users of virtually all heights with up to 
+                            <strong>7 inches</strong> of extension and no manual adjustment needed.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-row reverse">
+                    <div class="f-txt-col">
+                        <div class="f-title"><span class="blue">SPACE-SAVING</span><br>TECHNOLOGY</div> 
+                        <div class="f-desc">
+                            The Hypnos 4D Pro AI features Space-Saving Technology, needing <strong>only 4 inches</strong> from the wall for a full recline. 
+                            This smart design maximizes comfort while conserving space, ideal for any room.
+                        </div>
+                    </div>
+                    <div class="f-img-col dark-bg rounded-box">
+                        <img src="images/14.Hypnos_SpaceSaving.png" alt="Space Saving Recline">
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    <div class="f-img-col dark-bg rounded-box">
+                        <img src="images/15.Hypnos_Footroller.png" alt="Specialized Foot Rollers">
+                    </div>
+                    <div class="f-txt-col">
+                        <div class="f-title"><span class="blue">SPECIALIZED</span><br>FOOT ROLLERS</div> 
+                        <div class="f-desc">
+                            The Hypnos 4D Pro AI combines 2 specialized rollers on each side to target your feet, delivering soothing relief where you need it most.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="tech-feature-block zero-gravity-wrapper">
+        <div class="f-title-wrap">
+            <div class="f-title"><span class="blue">3-STAGE</span> ZERO GRAVITY</div> 
+        </div>
+
+        <div class="f-img-box dark-bg">
+            <img src="images/16.Hypnos_ZeroG.png" alt="3-Stage Zero Gravity Reclining">
+        </div>
+
+        <div class="f-desc-wrap">
+            <div class="f-desc">
+                The Hypnos 4D Pro AI uses NASA-inspired Zero Gravity Technology to deliver ultimate relaxation. 
+                With <strong>3-stages of recline</strong>, it creates a weightless sensation that relieves pressure and enhances the massage experience.
+            </div>
+        </div>
+    </div>
+
+    <div class="gradient-box grid-2">                
+        <div class="grid-item">
+            <div class="g-title">
+                <span class="blue">QUIET MASSAGE</span><br>TECHNOLOGY
+            </div>
+            <div class="tech-card">
+                <div class="g-img dark-bg">
+                    <img src="images/17.Hypnos_Quiet.png" alt="Quiet Massage Operation">
+                </div>
+                <div class="g-desc">
+                    Designed for quiet immersion, the Hypnos 4D Pro AI operates with minimal sound, 
+                    letting you disappear into pure relaxation without any disturbance.
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="g-title">
+                <span class="blue">SAFETY</span><br>SENSORS
+            </div>
+            <div class="tech-card">
+                <div class="g-img dark-bg">
+                    <img src="images/18.Hypnos_Safety.png" alt="Anti-Pinch Safety Sensor">
+                </div>
+                <div class="g-desc">
+                    To use the Safety Sensors, simply navigate to Settings on your controller. 
+                    When enabled, the system alerts you via a pop-up if an obstruction is detected near the footrest or base. 
+                    After visually inspecting and clearing the area, tap to confirm and continue.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="programs-auto-section">
+        <div class="container text-center">
+            <div class="section-title-blue">
+                20 AUTO PROGRAMS
+            </div>
+            <div class="gray-card auto-card">
+                <div class="prog-container">
+                    
+                    <div class="prog-row">
+                        <div class="row-label">
+                            <img src="images/19.Hypnos_style.png" alt="Styles Category" class="cat-icon">
+                            <div class="label-text">STYLES</div>
+                        </div>
+                        
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/20.Hypnos_MorningCare.png" alt="Morning Care">
+                                <div class="p-name">MORNING<br>CARE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/21.Hypnos_MiddayCare.png" alt="Midday Care">
+                                <div class="p-name">MIDDAY<br>CARE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/22.Hypnos_NightCare.png" alt="Night Care">
+                                <div class="p-name">NIGHT<br>CARE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/23.Hypnos_Fatigue.png" alt="Fatigue">
+                                <div class="p-name">FATIGUE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row">
+                        <div class="row-label">
+                            <img src="images/24.Hypnos_Effects.png" alt="Effects Category" class="cat-icon">
+                            <div class="label-text">EFFECTS</div>
+                        </div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/25.Hypnos_Calm.png" alt="Calm">
+                                <div class="p-name">CALM</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/26.Hypnos_Recover.png" alt="Recover">
+                                <div class="p-name">RECOVER</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/27.Hypnos_Care.png" alt="Care">
+                                <div class="p-name">CARE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/28.Hypnos_Relax.png" alt="Relax">
+                                <div class="p-name">RELAX</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row">
+                        <div class="row-label">
+                            <img src="images/29.Hypnos_Exclusive.png" alt="Exclusive Category" class="cat-icon">
+                            <div class="label-text">EXCLUSIVE</div>
+                        </div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/30.Hypnos_Men'sHealth.png" alt="Men's Health">
+                                <div class="p-name">MEN'S<br>HEALTH</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/31.Hypnos_Women'sHealth.png" alt="Women's Health">
+                                <div class="p-name">WOMEN'S<br>HEALTH</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/32.Hypnos_DeepTissue.png" alt="Deep Tissue">
+                                <div class="p-name">DEEP<br>TISSUE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/33.Hypnos_ThaiStretch.png" alt="Thai Stretch">
+                                <div class="p-name">THAI<br>STRETCH</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row">
+                        <div class="row-label">
+                            <img src="images/34.Hypnos_Parts.png" alt="Parts Category" class="cat-icon">
+                            <div class="label-text">PARTS</div>
+                        </div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/35.Hypnos_Neck&Shoulder.png" alt="Neck & Shoulder">
+                                <div class="p-name">NECK &<br>SHOULDER</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/36.Hypnos_LumbarCare.png" alt="Lumbar Care">
+                                <div class="p-name">LUMBAR<br>CARE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/37.Hypnos_Waist&Hips.png" alt="Waist & Hips">
+                                <div class="p-name">WAIST <br>& HIPS</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/38.Hypnos_Waist&Legs.png" alt="Waist & Legs">
+                                <div class="p-name">WAIST<br>& LEGS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prog-row border-none">
+                        <div class="row-label">
+                            <img src="images/39.Hypnos_Theme.png" alt="Themes Category" class="cat-icon">
+                            <div class="label-text">THEMES</div>
+                        </div>
+                        <div class="row-icons">
+                            <div class="p-item">
+                                <img src="images/40.Hypnos_DemoFullBody.png" alt="Demo Full Body">
+                                <div class="p-name">DEMO<br>FULL BODY</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/41.Hypnos_SmartCare.png" alt="Smart Care">
+                                <div class="p-name">SMART<br>CARE</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/42.Hypnos_BodyCirculation.png" alt="Body Circulation">
+                                <div class="p-name">BODY<br>CIRCULATION</div>
+                            </div>
+                            <div class="p-item">
+                                <img src="images/43.Hypnos_Gentle.png" alt="Gentle">
+                                <div class="p-name">GENTLE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programs-manual-section">
+        <div class="container text-center">
+            <div class="section-title-blue">
+                <span class="blue">12 MANUAL</span> MODES
+            </div>
+
+            <div class="gray-card manual-card">
+                <div class="manual-flex">
+                    <div class="p1-item">
+                        <img src="images/43.Hypnos_Gentle.png" alt="Kneading">
+                        <div class="p1-name">KNEADING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/45.Hypnos_Shiatsu.png" alt="Shiatsu">
+                        <div class="p1-name">SHIATSU</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/46.Hypnos_Swedish.png" alt="Swedish">
+                        <div class="p1-name">SWEDISH</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/47.Hypnos_Tapping.png" alt="Tapping">
+                        <div class="p1-name">TAPPING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/48.Hypnos_Clapping.png" alt="Clapping">
+                        <div class="p1-name">CLAPPING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/49.Hypnos_Rolling.png" alt="Rolling">
+                        <div class="p1-name">ROLLING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/50.Hypnos_Scraping.png" alt="Scraping">
+                        <div class="p1-name">SCRAPING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/51.Hypnos_Pressing.png" alt="Pressing">
+                        <div class="p1-name">PRESSING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/52.Hypnos_Pointing.png" alt="Pointing">
+                        <div class="p1-name">POINTING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/53.Hypnos_Soothing.png" alt="Soothing">
+                        <div class="p1-name">SOOTHING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/54.Hypnos_Dialing.png" alt="Dialing">
+                        <div class="p1-name">DIALING</div>
+                    </div>
+                    <div class="p1-item">
+                        <img src="images/55.Hypnos_Knocking.png" alt="Knocking">
+                        <div class="p1-name">KNOCKING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="zero-gravity-section bluetooth-only">
+        <div class="container text-center">
+            
+            <div class="zg-title">
+                <span class="blue">BLUETOOTH</span> SPEAKERS
+            </div>           
+            
+            <div class="wide-img dark-bg rounded-box">
+                <img src="images/56.Hypnos_BluetoothSpeaker.png" alt="Bluetooth Speakers with Mood Lighting" class="f-img-fluid">
+            </div>
+            
+            <div class="zg-desc center-p">
+                The Hypnos 4D Pro AI's Bluetooth Speakers deliver powerful bass, crisp highs, and immersive surround sound. 
+                With wireless Bluetooth and noise isolation, they transform the Hypnos 4D Pro AI into a true multi-sensory escape.
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="detailed-features-section">
+        <div class="container">
+            <div class="feature-row">
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/57.Hypnos_Touchscreen.png" alt="Advanced 7-inch Touchscreen Controller">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">ADVANCED 7"</span><br>TOUCHSCREEN</div>
+                    <div class="f-desc">
+                        The Hypnos 4D Pro AI features an advanced 7-inch touchscreen with a clear, responsive display that makes it easy to navigate programs and customize your massage with simple, intuitive controls.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">QUICK ACCESS</span><br>SIDE PANEL</div>
+                    <div class="f-desc">
+                        You can use quick access for instant control, adjust chair reclining, and indulge in an auto massage. The smart dial powers the chair and adjusts massage intensity with a simple turn.
+                    </div>
+                </div>
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/58.Hypnos_SidePanel.png" alt="Quick Access Side Panel with Smart Dial">
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/59.Hypnos_Charging.png" alt="Wireless and Type C Charging Ports">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">WIRELESS CHARGER</span><br>& TYPE C PORT</div>
+                    <div class="f-desc">
+                        Stay fully charged and connected. The Hypnos 4D Pro AI keeps your devices powered with both a wireless charger and a Type-C port, so you can relax without ever worrying about battery life.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">NEW PU SIDE</span><br>PANEL DESIGN</div>
+                    <div class="f-desc">
+                        The Hypnos 4D Pro AI is elevated by its luxurious PU leather upholstery, soft to the touch and rich in appearance. It's designed to wrap you in warmth and comfort, turning any room into a personal retreat.
+                    </div>
+                </div>
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/60.Hypnos_PanelDesign.png" alt="Luxurious PU Side Panel Design">
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/61.Hypnos_LED.png" alt="Mood LED Lighting on Speakers">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">MOOD LED LIGHT</span><br>ON DUAL SPEAKERS</div>
+                    <div class="f-desc">
+                        Elevate your senses with integrated ambient lighting. Six static LEDs and a pulsating rainbow light transform your massage into a multi-sensory experience, turning your space into a personal oasis of calm.
+                    </div>
+                    
+                    <div class="f-swatches">
+                        <div class="s-dot"><img src="images/62.Hypnos_LED_Red.png" alt="Red"></div>
+                        <div class="s-dot"><img src="images/63.Hypnos_LED_Orange.png" alt="Orange"></div>
+                        <div class="s-dot"><img src="images/64.Hypnos_LED_Yellow.png" alt="Yellow"></div>
+                        <div class="s-dot"><img src="images/65.Hypnos_LED_Green.png" alt="Green"></div>
+                        <div class="s-dot"><img src="images/66.Hypnos_LED_Blue.png" alt="Blue"></div>
+                        <div class="s-dot"><img src="images/67.Hypnos_LED_Purple.png" alt="Purple"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">REMOVABLE</span><br>HEADREST</div>
+                    <div class="f-desc">
+                        To get the most personalized massage, begin by gently removing the included head pillow. 
+                        Then, slide all the way back into the seat to allow the chair to map your shoulders accurately for a truly tailored session.
+                    </div>
+                </div>
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/68.Hypnos_Headrest.png" alt="Removable Headrest for Better Scanning">
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="f-img dark-bg rounded-box">
+                    <img src="images/69.Hypnos_Software.png" alt="OTA Software Update Display">
+                </div>
+                <div class="f-txt">
+                    <div class="f-title"><span class="blue">OTA SOFTWARE</span><br>UPDATES</div>
+                    <div class="f-desc">
+                        Connect to the internet to personalize massage programs to your exact preferences, and enjoy the convenience of seamless software upgrades that keep your chair up to date.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="doorway-section">
+        <div class="container">            
+            <div class="section-title">MINIMUM DOORWAY</div>
+            <div class="guide-title blue">Measuring Guide</div>
+            <div class="doorway-layout">
+                <div class="doorway-left">
+                    <img src="images/70.Hypnos_MinimumDW.png" alt="Minimum Doorway Size">
+                </div>
+                <div class="doorway-right">
+                    <div class="box-img">
+                        <img src="images/71.Hypnos_Box.png" alt="Packaging Box Dimensions">
+                    </div>
+                    <div class="measuring-guide">                        
+                        <div class="guide-list">
+                            <div>•  Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>•  Please use a standard measuring tape to measure the doorway.</div>
+                            <div>•  If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                            <div>•  If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+    <div class="dimensions-section">
+        <div class="container">
+            <div class="section-title text-center">DIMENSIONS</div>
+            <div class="dimensions-row">
+                <div class="dim-img">
+                    <img src="images/72.Hypnos_DimensionFront.png" alt="Forge Front Dimensions">
+                </div>
+                <div class="dim-img">
+                    <img src="images/73.Hypnos_DimensionSide.png" alt="Forge Side Dimensions">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+            
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Osaki Hypnos 4D Pro AI</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="https://cdn.shopify.com/s/files/1/0086/1297/0558/files/A3201-8_Forge_3D_manual_revised_2025.8.20.pdf?v=1769098064" class="red-link" target="_blank">Download</a>
+                        
+                    
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Upright</strong>
+                            <span>32" x 66" x 48"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>32" x 80" x 38"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">269</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>25"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>21"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">32"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Maximum User Weight</div>
+                    <div class="spec-value">270 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>33.5" x 57.9" x 50"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border"> <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span> lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
