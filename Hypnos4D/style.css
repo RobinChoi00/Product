@@ -214,82 +214,86 @@ body {margin: 0;}
 
 
 /* =========================================
-   SECTION: AI Health Check Detection
+   SECTION: AI Health Check Detection (Modified)
    ========================================= */
 
 .tech-feature-block {
-    background-color: #eef1f7; /* 0. 배경 색상 */
-    padding: 100px 0;          /* 섹션 상하 여백 */
+    background-color: #eef1f7; 
+    padding: 100px 0;          
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;       /* 중앙 배치 */
-    text-align: center;        /* 가운데 정렬 */
+    align-items: center;       
+    text-align: center;        
     max-width: 1200px;
+    margin: 0 auto;           /* 중앙 정렬 보장 */
 }
 
 /* 1. Header: Logo & Title Alignment */
 .f-title-wrap {
     display: flex;
-    align-items: flex-start;  /* 로고를 타이틀 첫 줄에 맞춤 */
-    justify-content: center;   /* 가로 중앙 정렬 */
-    gap: 15px;                 /* 로고와 타이틀 사이 간격 */
+    /* [수정] flex-start를 사용하여 로고를 타이틀의 첫 번째 줄 옆에 고정 */
+    align-items: flex-start;  
+    justify-content: center;   
+    gap: 15px;                 
     margin-bottom: 50px;
 }
 
 .f-label-logo .logo-ai-series {
-    /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
-    height: 36px;             
+    /* [수정] 40px 폰트 높이에 시각적으로 맞춘 로고 높이 조정 */
+    height: 32px;             
     width: auto;
     object-fit: contain;
-    /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
-    margin-top: 4px;          
+    /* [수정] 텍스트의 베이스라인과 맞추기 위한 미세 상단 여백 */
+    margin-top: 6px;          
 }
 
-/* 2. Title Style (Poppins Bold 36px) */
+/* 2. Title Style (Poppins Bold 40px) */
 .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;         /* Bold */
-    font-size: 40px;          /* 36px */
-    color: #231f20;           /* 기본 색상 */
-    line-height: 1.1;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
-    text-align: left;         /* 로고 옆에서 텍스트 줄끼리는 좌측 정렬 */
+    font-weight: 600;         /* 600에서 700으로 더 굵게 조정 가능 */
+    font-size: 40px;          
+    color: #231f20;           
+    line-height: 1.1;         
+    /* [수정] 로고 옆에서 텍스트 줄들이 왼쪽으로 정렬되도록 고정 */
+    text-align: left;         
     margin: 0;
 }
 
 .f-title .blue {
-    color: #3563e0;           /* blue 색상 */
+    color: #3563e0;           
 }
 
-/* 3. Image Style (Radius 30px) */
+/* 3. Image Style (기존 유지) */
 .f-img-box {
     width: 100%;
-    max-width: 1000px;        /* 이미지 비중에 따른 최적 너비 */
+    max-width: 1000px;        
     margin-bottom: 50px;
 }
 
 .f-img-fluid {
     width: 100%;
     height: auto;
-    border-radius: 30px;      /* 3. radius 30px */
+    border-radius: 30px;      
     display: block;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* 부드러운 입체감 */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); 
 }
 
-/* 4. Description Style (Roboto Regular 24px) */
+/* 4. Description Style (색상 수정 반영) */
 .f-desc-wrap {
-    max-width: 960px;         /* 가독성을 위한 최대 너비 제한 */
+    max-width: 990px;         
     margin: 0 auto;
 }
 
 .f-desc {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;         /* Regular */
-    font-size: 24px;          /* 24px */
-    color: #5b5b5b;           /* 5b5b5b */
-    line-height: 1.6;         /* 가독성을 위한 행간 */
-    text-align: center;       /* 가운데 정렬 */
-    word-break: keep-all;     /* 단어 단위 끊김 방지 */
+    font-weight: 400;         
+    font-size: 24px;          
+    /* [수정] 이전에 요청하신 #474747 컬러로 반영 */
+    color: #474747;           
+    line-height: 1.6;         
+    text-align: center;       
+    word-break: keep-all;     
 }
 
 
