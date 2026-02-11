@@ -1765,6 +1765,11 @@ body {margin: 0;}
         margin-bottom: 20px;
     }
 
+    .feature-row .f-title,
+    .feature-row.reverse .f-title {
+        text-align: center !important; /* 지그재그 본문 중앙 정렬 */
+    }
+
 
     /* 2. 12 Manual Modes: 2열 6행 그리드 전환 */
     .manual-flex {
