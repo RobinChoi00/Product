@@ -209,34 +209,7 @@ body {margin: 0;}
 
 
 
-.f-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 40px;          /* 타이틀 크기 */
-    color: #231f20;
-    text-align: center;
-    margin-bottom: 25px;      /* 카드와의 간격 */
-    line-height: 1.2;
-    text-transform: uppercase;
-}
 
-.f-title .blue {
-    color: #3563e0;
-}
-.f-desc {
-    flex: 4.5;                /* 2. 비율 4.5 */
-    padding: 40px 30px;       /* 텍스트 내부 여백 */
-    font-family: 'Roboto', sans-serif; /* 4. f-desc와 동일 폰트 */
-    font-weight: 400;
-    font-size: 20px;          /* 카드 내부는 살짝 작게 (취향껏 24px로 조정 가능) */
-    color: #5b5b5b;
-    line-height: 1.6;
-    text-align: center;       /* 4. 중앙 정렬 */
-    display: flex;
-    align-items: center;      /* 텍스트 세로 중앙 정렬 */
-    justify-content: center;
-    word-break: keep-all;
-}
 
 
 
