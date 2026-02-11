@@ -214,75 +214,85 @@ body {margin: 0;}
 
 
 /* =========================================
-   SECTION: AI Health Check Detection (Scoped)
+   SECTION: AI Health Check Detection
    ========================================= */
 
-/* 1. 컨테이너는 그대로 유지하되, 내부 요소들만 격리합니다. */
 .tech-feature-block {
-    background-color: #eef1f7;
-    padding: 80px 20px;
-    margin: 60px auto 0;
+    background-color: #eef1f7; /* 0. 배경 색상 */
+    padding: 60px 20px;          /* 섹션 상하 여백 */
+    margin-top: 60px;
     width: 100%;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: center;       /* 중앙 배치 */
+    text-align: center;        /* 가운데 정렬 */
+    max-width: 1200px;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
-/* 2. [핵심] 모든 클래스 앞에 .tech-feature-block을 붙여 이 섹션 전용으로 만듭니다. */
-.tech-feature-block .f-title-group {
+/* 1. Header: Logo & Title Alignment */
+.f-title-wrap {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: center;  /* 로고를 타이틀 첫 줄에 맞춤 */
+    justify-content: center;   /* 가로 중앙 정렬 */
+    gap: 24px;                 /* 로고와 타이틀 사이 간격 */
     margin-bottom: 50px;
 }
 
-.tech-feature-block .f-title-top {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.f-label-logo .logo-ai-series {
+    /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
+    height: 36px;             
+    width: auto;
+    object-fit: contain;
+    /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
+    display: block;          
 }
 
-/* 다른 섹션의 f-title-text와 충돌하지 않도록 격리 */
-.tech-feature-block .f-title-text, 
-.tech-feature-block .f-title-bottom {
+/* 2. Title Style (Poppins Bold 36px) */
+.f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 1.2;
-    color: #231f20;
+    font-weight: 600;         /* Bold */
+    font-size: 40px;          /* 36px */
+    color: #231f20;           /* 기본 색상 */
+    line-height: 1.2;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
+    text-align: left;         /* 로고 옆에서 텍스트 줄끼리는 좌측 정렬 */
     margin: 0;
 }
 
-.tech-feature-block .blue {
-    color: #3563e0;
+.f-title .blue {
+    color: #3563e0;           /* blue 색상 */
 }
 
-/* 이미지 및 설명글도 이 섹션 내부에서만 스타일 적용 */
-.tech-feature-block .f-img-box {
+/* 3. Image Style (Radius 30px) */
+.f-img-box {
     width: 100%;
-    max-width: 1000px;
-    margin-bottom: 40px;
+    max-width: 1000px;        /* 이미지 비중에 따른 최적 너비 */
+    margin-bottom: 50px;
 }
 
-.tech-feature-block .f-img-fluid {
+.f-img-fluid {
     width: 100%;
     height: auto;
-    border-radius: 30px;
+    border-radius: 30px;      /* 3. radius 30px */
     display: block;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* 부드러운 입체감 */
 }
 
-.tech-feature-block .f-desc {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px; 
-    color: #5b5b5b;
-    line-height: 1.6;
-    word-break: keep-all;
-    max-width: 900px; /* wrap 대신 desc에 직접 적용하면 더 깔끔합니다 */
+/* 4. Description Style (Roboto Regular 24px) */
+.f-desc-wrap {
+    max-width: 990px;         /* 가독성을 위한 최대 너비 제한 */
     margin: 0 auto;
+}
+
+.f-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;         /* Regular */
+    font-size: 24px;          /* 24px */
+    color: #5b5b5b;           /* 5b5b5b */
+    line-height: 1.6;         /* 가독성을 위한 행간 */
+    text-align: center;       /* 가운데 정렬 */
+    word-break: keep-all;     /* 단어 단위 끊김 방지 */
 }
 
 
