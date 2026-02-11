@@ -1733,3 +1733,81 @@ body {margin: 0;}
         justify-content: center;
     }
 }
+
+/* =========================================
+   [RESPONSIVE] Mobile Optimization (Max 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. 지그재그 섹션: 텍스트(Title/Desc)가 위로, 이미지가 아래로 */
+    .feature-row {
+        /* 이미지(좌)-텍스트(우) 구조였으므로 뒤집어서 텍스트를 위로 보냄 */
+        flex-direction: column-reverse !important; 
+        gap: 20px !important;
+    }
+
+    .feature-row.reverse {
+        /* 텍스트(좌)-이미지(우) 구조였으므로 그대로 내려서 텍스트를 위로 보냄 */
+        flex-direction: column !important; 
+    }
+
+    /* 지그재그 섹션 본문 중앙 정렬 강제 적용 */
+    .feature-row .f-txt-col,
+    .feature-row.reverse .f-txt-col {
+        text-align: center !important;
+        align-items: center !important;
+        padding: 0 !important;
+    }
+
+    .feature-row .f-desc,
+    .feature-row.reverse .f-desc {
+        text-align: center !important; /* 지그재그 본문 중앙 정렬 */
+        margin-bottom: 20px;
+    }
+
+
+    /* 2. 12 Manual Modes: 2열 6행 그리드 전환 */
+    .manual-flex {
+        /* Flex 대신 Grid를 사용하여 2열 고정 */
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 40px 20px !important;
+        justify-items: center;
+        max-width: 100%;
+    }
+
+    .p1-item {
+        width: 100% !important; /* 그리드 칸에 맞춤 */
+    }
+
+
+    /* 3. 20 Auto Programs: 라벨 하단 선 추가 및 아이콘 2열 배치 */
+    .prog-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-bottom: 50px !important;
+        border-bottom: none !important; /* 개별 행 밑줄 제거 */
+    }
+
+    .row-label {
+        width: 100% !important;
+        border-right: none !important; /* 세로 선 제거 */
+        border-bottom: 1px solid #e5e5e5; /* 가로 선 추가 */
+        padding-right: 0 !important;
+        padding-bottom: 20px;
+        margin-right: 0 !important;
+        margin-bottom: 30px !important;
+    }
+
+    .row-icons {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2열 배치 */
+        gap: 30px 10px !important;
+        width: 100%;
+        justify-items: center;
+    }
+
+    .p-item {
+        width: 100% !important;
+    }
+}
