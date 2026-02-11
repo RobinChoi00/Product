@@ -226,21 +226,20 @@ body {margin: 0;}
     align-items: center;       /* 중앙 배치 */
     text-align: center;        /* 가운데 정렬 */
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* 1. Header: Logo & Title Alignment */
 .f-title-wrap {
     display: flex;
-    align-items: center;  /* 로고를 타이틀 첫 줄에 맞춤 */
+    align-items: flex-start;  /* 로고를 타이틀 첫 줄에 맞춤 */
     justify-content: center;   /* 가로 중앙 정렬 */
-    gap: 20px;                 /* 로고와 타이틀 사이 간격 */
+    gap: 15px;                 /* 로고와 타이틀 사이 간격 */
     margin-bottom: 50px;
 }
 
 .f-label-logo .logo-ai-series {
     /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
-    height: 48px;             
+    height: 36px;             
     width: auto;
     object-fit: contain;
     /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
