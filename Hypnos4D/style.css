@@ -1683,7 +1683,7 @@ body {margin: 0;}
     }
 
     #current-chair {
-        max-width: 95%;
+        max-width: 70%;
     }
 
     /* 프로그램 아이콘 행(Row) 조정 */
@@ -1738,6 +1738,30 @@ body {margin: 0;}
    [RESPONSIVE] Mobile Optimization (Max 768px)
    ========================================= */
 @media (max-width: 768px) {
+
+    .nav-btn img {
+        width: 18px; 
+        height: auto;
+    }
+
+    /* 2. 터치 영역 확보 (크기는 작아도 클릭은 잘 되게 패딩 유지) */
+    .nav-btn {
+        padding: 15px; /* 20px에서 소폭 축소하여 외곽 밀착 유도 */
+    }
+
+    /* 3. 양 옆으로 더 밀어내기 (기존 2% -> 5px 고정) */
+    .prev-btn {
+        left: 10px !important;  /* 화면 왼쪽 끝으로 밀착 */
+    }
+
+    .next-btn {
+        right: 10px !important; /* 화면 오른쪽 끝으로 밀착 */
+    }
+
+    /* 4. 의자 이미지 크기 재조정 (화살표 여유 공간 확보) */
+    #current-chair {
+        max-width: 80% !important; /* 화살표와 겹치지 않도록 이미지 폭 미세 조정 */
+    }
 
     /* 1. 지그재그 섹션: 텍스트(Title/Desc)가 위로, 이미지가 아래로 */
     .feature-row {
