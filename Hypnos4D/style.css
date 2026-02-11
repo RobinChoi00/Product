@@ -250,7 +250,7 @@ body {margin: 0;}
 .f-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;         /* Bold */
-    font-size: 36px;          /* 36px */
+    font-size: 40px;          /* 36px */
     color: #231f20;           /* 기본 색상 */
     line-height: 1.1;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
     text-align: left;         /* 로고 옆에서 텍스트 줄끼리는 좌측 정렬 */
@@ -681,6 +681,8 @@ body {margin: 0;}
     background-color: #eef1f7; /* 배경색 */
     padding: 100px 0;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -691,7 +693,7 @@ body {margin: 0;}
 .zero-gravity-wrapper .f-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;
     line-height: 1.1;
     margin-bottom: 50px;
@@ -816,7 +818,7 @@ body {margin: 0;}
     
     text-align: center;       /* 중앙 정렬 */
     display: flex;
-    align-items: center;      /* 세로 중앙 정렬 */
+    align-items: flex-center;      /* 세로 중앙 정렬 */
     justify-content: center;  /* 가로 중앙 정렬 */
     word-break: keep-all;
 }
@@ -865,7 +867,7 @@ body {margin: 0;}
     /* f-title 설정 상속 (Poppins, Bold, 36px) */
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 70px;       /* 아이콘과의 간격 */
     
@@ -887,6 +889,9 @@ body {margin: 0;}
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 각 행 (Row) 설정 */
@@ -894,6 +899,8 @@ body {margin: 0;}
     display: flex;             /* 좌우 배치 */
     align-items: center;       /* 수직 중앙 정렬 */
     margin-bottom: 60px;       /* 행 사이 간격 */
+    width: 100%;
+    max-width: 900px;
 }
 
 .prog-row.border-none {
@@ -979,7 +986,8 @@ body {margin: 0;}
    ========================================= */
 
 .manual-flex {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 90px);
     flex-wrap: wrap;
     justify-content: center;   /* 전체 중앙 정렬 */
     gap: 50px 40px;            /* 세로 50px, 가로 40px 간격 */
@@ -987,6 +995,26 @@ body {margin: 0;}
     margin: 0 auto;
 }
 
+/* 아이콘과 텍스트 중앙 정렬 보장 */
+.p1-item {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.p1-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #111c2c;
+    line-height: 1.2;
+    margin-top: 10px;
+    text-transform: uppercase;
+    word-break: keep-all;
+    text-align: center;        /* 텍스트 중앙 정렬 */
+}
 
 
 
@@ -1039,7 +1067,7 @@ body {margin: 0;}
 .bluetooth-only .zg-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 40px;
     color: #231f20;            /* 기본 타이틀 색상 */
     line-height: 1.2;
     margin-bottom: 40px;
