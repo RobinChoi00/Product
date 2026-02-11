@@ -226,20 +226,21 @@ body {margin: 0;}
     align-items: center;       /* 중앙 배치 */
     text-align: center;        /* 가운데 정렬 */
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 1. Header: Logo & Title Alignment */
 .f-title-wrap {
     display: flex;
-    align-items: flex-start;  /* 로고를 타이틀 첫 줄에 맞춤 */
+    align-items: center;  /* 로고를 타이틀 첫 줄에 맞춤 */
     justify-content: center;   /* 가로 중앙 정렬 */
-    gap: 15px;                 /* 로고와 타이틀 사이 간격 */
+    gap: 20px;                 /* 로고와 타이틀 사이 간격 */
     margin-bottom: 50px;
 }
 
 .f-label-logo .logo-ai-series {
     /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
-    height: 36px;             
+    height: 48px;             
     width: auto;
     object-fit: contain;
     /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
@@ -249,7 +250,7 @@ body {margin: 0;}
 /* 2. Title Style (Poppins Bold 36px) */
 .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;         /* Bold */
+    font-weight: 600;         /* Bold */
     font-size: 40px;          /* 36px */
     color: #231f20;           /* 기본 색상 */
     line-height: 1.1;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
@@ -383,7 +384,7 @@ body {margin: 0;}
 /* 3. Title Style */
 .g-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 30px;          /* 타이틀 크기 */
     color: #231f20;
     text-align: center;
@@ -546,7 +547,7 @@ body {margin: 0;}
 /* Strong 태그 색상 지정 */
 .f-desc strong {
     color: #000000;           /* 요청하신 검은색 강조 */
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
@@ -692,7 +693,7 @@ body {margin: 0;}
 /* 1. Title Style (Poppins Bold 36px) */
 .zero-gravity-wrapper .f-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     color: #231f20;
     line-height: 1.1;
@@ -735,7 +736,7 @@ body {margin: 0;}
 /* 4. Strong Tag Color */
 .zero-gravity-wrapper .f-desc strong {
     color: #000000;           /* 강조 텍스트는 완전한 블랙 */
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
@@ -765,7 +766,7 @@ body {margin: 0;}
 /* 3. Title Style (Poppins 30px) */
 .g-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 30px;
     color: #231f20;
     text-align: center;
@@ -866,7 +867,7 @@ body {margin: 0;}
 .section-title-blue {
     /* f-title 설정 상속 (Poppins, Bold, 36px) */
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     text-align: center;
     margin-bottom: 70px;       /* 아이콘과의 간격 */
@@ -931,7 +932,7 @@ body {margin: 0;}
 
 .label-text {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     color: #1a1a1a;
     letter-spacing: 0.5px;
@@ -974,7 +975,7 @@ body {margin: 0;}
 /* 4. Name Text Style */
 .p-name, .p1-name {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;          /* 4. Bold */
+    font-weight: 600;          /* 4. Bold */
     font-size: 12px;           /* 4. 12px */
     color: #111c2c;            /* 4. 요청하신 컬러 */
     line-height: 1.4;
@@ -1007,7 +1008,7 @@ body {margin: 0;}
 
 .p1-name {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 12px;
     color: #111c2c;
     line-height: 1.2;
@@ -1067,7 +1068,7 @@ body {margin: 0;}
 /* 2. Title Style (LiFlex와 동일한 Poppins 36px) */
 .bluetooth-only .zg-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     color: #231f20;            /* 기본 타이틀 색상 */
     line-height: 1.2;
@@ -1112,7 +1113,7 @@ body {margin: 0;}
 /* Strong 태그 색상 지정 */
 .bluetooth-only .zg-desc strong {
     color: #000000;            /* 요청하신 검은색 강조 */
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
