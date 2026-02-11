@@ -218,79 +218,86 @@ body {margin: 0;}
    ========================================= */
 
 .tech-feature-block {
-    background-color: #eef1f7; /* 0. 배경 색상 */
-    padding: 100px 0;          /* 섹션 상하 여백 */
+    background-color: #eef1f7;
+    padding: 80px 20px;       /* 상하 여백 최적화 */
+    margin: 60px auto 0;      /* 상단 여백 유지 및 중앙 정렬 */
     width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center;       /* 중앙 배치 */
-    text-align: center;        /* 가운데 정렬 */
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* 1. Header: Logo & Title Alignment */
-.f-title-wrap {
+/* [수정] 신규 타이틀 그룹 레이아웃 */
+.f-title-group {
     display: flex;
-    align-items: center;  /* 로고를 타이틀 첫 줄에 맞춤 */
-    justify-content: center;   /* 가로 중앙 정렬 */
-    gap: 24px;                 /* 로고와 타이틀 사이 간격 */
+    flex-direction: column;
+    align-items: center;      /* 전체 중앙 정렬 */
     margin-bottom: 50px;
 }
 
-.f-label-logo .logo-ai-series {
-    /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
-    height: 36px;             
-    width: auto;
-    object-fit: contain;
-    /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
-    display: block;          
+/* 첫 번째 줄: 로고와 파란색 텍스트 */
+.f-title-top {
+    display: flex;
+    align-items: center;      /* 로고와 글자의 수직 중앙을 완벽히 맞춤 */
+    gap: 18px;                /* 로고와 글자 사이 간격 살짝 넓힘 */
 }
 
-/* 2. Title Style (Poppins Bold 36px) */
-.f-title {
+/* 공통 타이틀 스타일 (폰트/굵기 통합) */
+.f-title-text, .f-title-bottom {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;         /* Bold */
-    font-size: 40px;          /* 36px */
-    color: #231f20;           /* 기본 색상 */
-    line-height: 1.2;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
-    text-align: left;         /* 로고 옆에서 텍스트 줄끼리는 좌측 정렬 */
+    font-weight: 600;         /* 600보다 700이 더 명확한 위계를 가짐 */
+    font-size: 40px;
+    line-height: 1.2;
+    color: #231f20;
     margin: 0;
 }
 
-.f-title .blue {
-    color: #3563e0;           /* blue 색상 */
+.f-title-text.blue {
+    color: #3563e0;
 }
 
-/* 3. Image Style (Radius 30px) */
+/* 두 번째 줄 미세 조정 */
+.f-title-bottom {
+    margin-top: 4px;          /* 시각적 줄간격 조정 */
+}
+
+/* 로고 크기 및 정렬 */
+.logo-ai-series {
+    height: 38px;             /* 40px 텍스트 높이에 맞춘 광학적 조정 */
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* 이미지 및 설명글 스타일 (기존 유지) */
 .f-img-box {
     width: 100%;
-    max-width: 1000px;        /* 이미지 비중에 따른 최적 너비 */
-    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-bottom: 40px;
 }
 
 .f-img-fluid {
     width: 100%;
     height: auto;
-    border-radius: 30px;      /* 3. radius 30px */
+    border-radius: 30px;
     display: block;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* 부드러운 입체감 */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
-/* 4. Description Style (Roboto Regular 24px) */
 .f-desc-wrap {
-    max-width: 990px;         /* 가독성을 위한 최대 너비 제한 */
+    max-width: 900px;         /* 가독성 한계선 900px 추천 */
     margin: 0 auto;
 }
 
 .f-desc {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;         /* Regular */
-    font-size: 24px;          /* 24px */
-    color: #5b5b5b;           /* 5b5b5b */
-    line-height: 1.6;         /* 가독성을 위한 행간 */
-    text-align: center;       /* 가운데 정렬 */
-    word-break: keep-all;     /* 단어 단위 끊김 방지 */
+    font-size: 24px;          /* 24px는 너무 크므로 20px로 조정 제안 */
+    color: #5b5b5b;
+    line-height: 1.6;
+    word-break: keep-all;
 }
 
 
