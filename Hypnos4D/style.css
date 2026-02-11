@@ -231,9 +231,9 @@ body {margin: 0;}
 /* 1. Header: Logo & Title Alignment */
 .f-title-wrap {
     display: flex;
-    align-items: flex-start;  /* 로고를 타이틀 첫 줄에 맞춤 */
+    align-items: center;  /* 로고를 타이틀 첫 줄에 맞춤 */
     justify-content: center;   /* 가로 중앙 정렬 */
-    gap: 15px;                 /* 로고와 타이틀 사이 간격 */
+    gap: 24px;                 /* 로고와 타이틀 사이 간격 */
     margin-bottom: 50px;
 }
 
@@ -334,7 +334,7 @@ body {margin: 0;}
     color: #ffffff !important; /* 흰색 강제 적용 */
     margin-bottom: 30px;
     text-align: center;          /* 왼쪽 정렬 */
-    max-width: 95%;
+    max-width: 90%;
 }
 
 /* 3-2. Description (White Override) */
@@ -489,12 +489,12 @@ body {margin: 0;}
 /* 1. 배경 설정 (White) */
 .hypnos-detailed-features {
     background-color: #ffffff; /* 요청하신 흰색 배경 */
-    padding: 80px 0;
+    padding: 160px 0;
 }
 
 /* 개별 블록 간격 조정 */
 .hypnos-detailed-features .tech-feature-block {
-    margin-bottom: 80px;      /* 블록 사이를 넓게 띄움 */
+    margin-bottom: 160px;      /* 블록 사이를 넓게 띄움 */
     background-color: transparent; /* 부모 배경색(흰색)을 따름 */
     padding: 0;               /* 내부 패딩 초기화 */
 }
@@ -557,7 +557,7 @@ body {margin: 0;}
    ========================================= */
 
 .zigzag-features {
-    padding: 80px 0;
+    padding: 160px 0;
     width: 100%;
     /* 배경색이 필요하다면 여기에 추가 (예: #ffffff) */
 }
@@ -696,8 +696,7 @@ body {margin: 0;}
     font-weight: 600;
     font-size: 40px;
     color: #231f20;
-    line-height: 1.1;
-    margin-bottom: 50px;
+    line-height: 1.2;
     display: block;
 }
 
