@@ -301,7 +301,7 @@ body {margin: 0;}
 .ai-body-scan-section {
     /* 요청하신 3단계 그라데이션 적용 */
     background: linear-gradient(90deg, #02020e 0%, #16234f 56%, #050618 100%);
-    padding: 80px 0;
+    padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -334,6 +334,7 @@ body {margin: 0;}
     color: #ffffff !important; /* 흰색 강제 적용 */
     margin-bottom: 30px;
     text-align: center;          /* 왼쪽 정렬 */
+    max-width: 95%;
 }
 
 /* 3-2. Description (White Override) */
@@ -384,7 +385,7 @@ body {margin: 0;}
 .g-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 30px;          /* 타이틀 크기 */
+    font-size: 40px;          /* 타이틀 크기 */
     color: #231f20;
     text-align: center;
     margin-bottom: 25px;      /* 카드와의 간격 */
@@ -766,7 +767,7 @@ body {margin: 0;}
 .g-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 40px;
     color: #231f20;
     text-align: center;
     margin-bottom: 30px;
@@ -1740,7 +1741,7 @@ body {margin: 0;}
 @media (max-width: 768px) {
 
     .nav-btn img {
-        width: 18px; 
+        width: 15px; 
         height: auto;
     }
 
