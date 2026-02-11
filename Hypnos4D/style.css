@@ -1631,150 +1631,103 @@ body {margin: 0;}
 
 
 /* =========================================
-   [FINAL] UNIFIED MOBILE OPTIMIZATION
+   [FINAL] PRECISE MOBILE OPTIMIZATION
    ========================================= */
 @media (max-width: 768px) {
 
-    /* 1. 타이틀 & 본문: 전체 가운데 정렬 및 크기 통일 */
-    .f-title, 
-    .f-title-text, 
-    .f-title-bottom, 
-    .g-title, 
-    .section-title, 
-    .section-title-blue, 
-    .zg-title, 
-    .guide-title {
+    /* 0. 글로벌 타이틀 & 본문 중앙 정렬 통일 */
+    .f-title, .f-title-text, .f-title-bottom, .g-title, 
+    .section-title, .section-title-blue, .zg-title, .guide-title {
         font-size: 28px !important;
-        line-height: 1.2 !important;
         text-align: center !important;
         width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
-    .f-desc, 
-    .f-desc-ai, 
-    .g-desc, 
-    .zg-desc, 
-    .intro-desc, 
-    .measuring-guide {
+    .f-desc, .f-desc-ai, .g-desc, .zg-desc, .intro-desc, .measuring-guide {
         font-size: 18px !important;
-        line-height: 1.5 !important;
         text-align: center !important;
         width: 100% !important;
-        max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        padding: 0 10px !important;
-        word-break: keep-all;
+        padding: 0 15px !important;
     }
 
-    /* 2. [요청] F-Label을 Title 위로 배치 */
-    .f-title-top, 
-    .f-title-wrap {
-        flex-direction: column !important; /* 세로 배치 */
-        align-items: center !important;
-        gap: 15px !important;
-    }
-
-    .logo-ai-series {
-        height: 30px !important; /* 모바일 로고 크기 최적화 */
-        margin-top: 0 !important;
-        margin-bottom: 10px;
-    }
-
-    /* 3. [요청] 지그재그 섹션: 무조건 Text(위) -> Image(아래) 배치 */
-    .feature-row {
-        /* 이미지가 앞에 있는 경우를 뒤집음 */
-        flex-direction: column-reverse !important; 
+    /* 1. [요청] AI BODY SCANING: 위(그림) / 아래(텍스트) 배치 */
+    .split-container {
+        flex-direction: column-reverse !important; /* 이미지(Right)를 위로 올림 */
         gap: 30px !important;
     }
-
-    .feature-row.reverse {
-        /* 이미지가 뒤에 있는 경우 그대로 세로 나열 */
-        flex-direction: column !important; 
+    .f-content-left {
+        max-width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
     }
 
-    .f-img-col, .f-txt-col, .f-img, .f-txt {
-        width: 100% !important;
-        max-width: 100% !important;
+    /* 2 & 4. [요청] Gradient-box Grid-2: 위아래 배치 (Sonic을 아래로) */
+    .gradient-box.grid-2 {
+        grid-template-columns: 1fr !important; /* 1열로 변경하여 위아래 배치 */
+        gap: 60px !important;
+    }
+
+    /* 3 & 5. [요청] 지그재그 섹션: 타이틀/설명글 모두 중앙 배치 & 중앙 정렬 */
+    .feature-row, .feature-row.reverse {
+        flex-direction: column-reverse !important; /* 항상 이미지가 아래로 (텍스트가 위) */
+        gap: 30px !important;
+    }
+    .zigzag-features .f-txt-col, 
+    .detailed-features-section .f-txt {
         text-align: center !important;
         align-items: center !important;
         padding: 0 !important;
     }
+    .zigzag-features .f-title, .zigzag-features .f-desc,
+    .detailed-features-section .f-title, .detailed-features-section .f-desc {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 
-    /* 4. [요청] 20 Auto 섹션: Label(위) -> 선(중간) -> Icons(2열) */
-    .prog-row {
+    /* 6. [요청] MINIMUM DOORWAY: 이미지 가운데 배치 */
+    .doorway-layout {
         flex-direction: column !important;
         align-items: center !important;
-        margin-bottom: 60px !important;
     }
-
-    .row-label {
+    .doorway-left, .doorway-right {
         width: 100% !important;
-        border-right: none !important; /* 기존 세로 선 제거 */
-        border-bottom: 1px solid #e5e5e5 !important; /* 가로 선 추가 */
-        padding-right: 0 !important;
-        padding-bottom: 20px !important;
-        margin-right: 0 !important;
-        margin-bottom: 30px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
     }
-
-    .row-icons {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* 2열 배치 */
-        gap: 30px 10px !important;
-        width: 100%;
-        justify-items: center;
-    }
-
-    /* 5. [요청] 12 Manual 섹션: 2열 배치 & 가운데 정렬 */
-    .manual-flex {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* 2열 배치 */
-        gap: 40px 10px !important;
-        justify-items: center;
-        width: 100% !important;
+    .doorway-left img, .doorway-right .box-img img {
         margin: 0 auto !important;
     }
 
-    .p1-item, .p-item {
-        width: 100% !important;
-        max-width: 120px; /* 아이콘이 너무 커지지 않게 제한 */
-    }
-
-    /* 6. 인트로 슬라이더 및 기타 요소 미세 조정 */
-    .slider-main { height: 380px; }
-    #current-chair { max-width: 85% !important; }
-    
-    .prev-btn { left: 5px !important; }
-    .next-btn { right: 5px !important; }
-    .nav-btn img { width: 18px; }
-
-    /* 7. 도어웨이 & 치수 섹션 세로 배치 */
-    .doorway-layout, .dimensions-row {
+    /* 7. [요청] DIMENSIONS: 첫 번째 이미지 크기 축소 및 가운데 배치 */
+    .dimensions-row {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 40px !important;
+        gap: 50px !important;
+    }
+    .dim-img:first-child {
+        max-width: 60% !important; /* [핵심] 첫 번째 이미지(정면) 크기 축소 */
+        margin: 0 auto !important;
+    }
+    .dim-img:last-child {
+        max-width: 90% !important;
+        margin: 0 auto !important;
     }
 
-    .doorway-left, .doorway-right, .dim-img {
+    /* 기타 요소 (Nav, Program Grid 등) */
+    .manual-flex, .row-icons {
+        grid-template-columns: repeat(2, 1fr) !important;
+        justify-items: center !important;
+    }
+    .row-label {
+        border-right: none !important;
+        border-bottom: 1px solid #e5e5e5 !important;
+        margin-bottom: 30px !important;
         width: 100% !important;
-        max-width: 100% !important;
-        text-align: center !important;
-        align-items: center !important;
     }
-
-    .doorway-right { padding-top: 0; }
-    .guide-title { margin: 20px auto 40px !important; }
-
-    /* 8. 제품 사양(Specification) 행 구조 변경 */
-    .spec-row {
-        flex-direction: column;
-        gap: 10px;
-        padding: 20px 0;
-    }
-    .spec-label { width: 100%; font-size: 16px; color: #888; }
-    .spec-value { width: 100%; font-size: 18px; }
-    .spec-value.split-col { flex-direction: column; gap: 15px; }
 }
