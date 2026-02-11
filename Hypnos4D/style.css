@@ -573,7 +573,7 @@ body {margin: 0;}
 
 /* Reverse Row (텍스트 왼쪽, 이미지 오른쪽) */
 .feature-row.reverse {
-    flex-direction: row-reverse; /* 순서 반전 */
+    
 }
 
 /* 2. Column Ratio (5.5 : 4.5) */
