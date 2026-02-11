@@ -209,18 +209,46 @@ body {margin: 0;}
 
 
 
+.f-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;          /* 타이틀 크기 */
+    color: #231f20;
+    text-align: center;
+    margin-bottom: 25px;      /* 카드와의 간격 */
+    line-height: 1.2;
+    text-transform: uppercase;
+}
 
+.f-title .blue {
+    color: #3563e0;
+}
+.f-desc {
+    flex: 4.5;                /* 2. 비율 4.5 */
+    padding: 40px 30px;       /* 텍스트 내부 여백 */
+    font-family: 'Roboto', sans-serif; /* 4. f-desc와 동일 폰트 */
+    font-weight: 400;
+    font-size: 20px;          /* 카드 내부는 살짝 작게 (취향껏 24px로 조정 가능) */
+    color: #5b5b5b;
+    line-height: 1.6;
+    text-align: center;       /* 4. 중앙 정렬 */
+    display: flex;
+    align-items: center;      /* 텍스트 세로 중앙 정렬 */
+    justify-content: center;
+    word-break: keep-all;
+}
 
 
 
 /* =========================================
-   SECTION: AI Health Check Detection
+   SECTION: AI Health Check Detection (Scoped)
    ========================================= */
 
+/* 1. 컨테이너는 그대로 유지하되, 내부 요소들만 격리합니다. */
 .tech-feature-block {
     background-color: #eef1f7;
-    padding: 80px 20px;       /* 상하 여백 최적화 */
-    margin: 60px auto 0;      /* 상단 여백 유지 및 중앙 정렬 */
+    padding: 80px 20px;
+    margin: 60px auto 0;
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -230,56 +258,43 @@ body {margin: 0;}
     box-sizing: border-box;
 }
 
-/* [수정] 신규 타이틀 그룹 레이아웃 */
-.f-title-group {
+/* 2. [핵심] 모든 클래스 앞에 .tech-feature-block을 붙여 이 섹션 전용으로 만듭니다. */
+.tech-feature-block .f-title-group {
     display: flex;
     flex-direction: column;
-    align-items: center;      /* 전체 중앙 정렬 */
+    align-items: center;
     margin-bottom: 50px;
 }
 
-/* 첫 번째 줄: 로고와 파란색 텍스트 */
-.f-title-top {
+.tech-feature-block .f-title-top {
     display: flex;
-    align-items: center;      /* 로고와 글자의 수직 중앙을 완벽히 맞춤 */
-    gap: 18px;                /* 로고와 글자 사이 간격 살짝 넓힘 */
+    align-items: center;
+    gap: 18px;
 }
 
-/* 공통 타이틀 스타일 (폰트/굵기 통합) */
-.f-title-text, .f-title-bottom {
+/* 다른 섹션의 f-title-text와 충돌하지 않도록 격리 */
+.tech-feature-block .f-title-text, 
+.tech-feature-block .f-title-bottom {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;         /* 600보다 700이 더 명확한 위계를 가짐 */
+    font-weight: 600;
     font-size: 40px;
     line-height: 1.2;
     color: #231f20;
     margin: 0;
 }
 
-.f-title-text.blue {
+.tech-feature-block .blue {
     color: #3563e0;
 }
 
-/* 두 번째 줄 미세 조정 */
-.f-title-bottom {
-    margin-top: 4px;          /* 시각적 줄간격 조정 */
-}
-
-/* 로고 크기 및 정렬 */
-.logo-ai-series {
-    height: 38px;             /* 40px 텍스트 높이에 맞춘 광학적 조정 */
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
-/* 이미지 및 설명글 스타일 (기존 유지) */
-.f-img-box {
+/* 이미지 및 설명글도 이 섹션 내부에서만 스타일 적용 */
+.tech-feature-block .f-img-box {
     width: 100%;
     max-width: 1000px;
     margin-bottom: 40px;
 }
 
-.f-img-fluid {
+.tech-feature-block .f-img-fluid {
     width: 100%;
     height: auto;
     border-radius: 30px;
@@ -287,17 +302,14 @@ body {margin: 0;}
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
-.f-desc-wrap {
-    max-width: 900px;         /* 가독성 한계선 900px 추천 */
-    margin: 0 auto;
-}
-
-.f-desc {
+.tech-feature-block .f-desc {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;          /* 24px는 너무 크므로 20px로 조정 제안 */
+    font-size: 24px; 
     color: #5b5b5b;
     line-height: 1.6;
     word-break: keep-all;
+    max-width: 900px; /* wrap 대신 desc에 직접 적용하면 더 깔끔합니다 */
+    margin: 0 auto;
 }
 
 
