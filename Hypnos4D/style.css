@@ -208,9 +208,11 @@ body {margin: 0;}
     color: #231f20;           /* 기본 색상 */
     line-height: 1.2;         /* 줄간격을 좁게 잡아 로고와의 일체감 형성 */
     text-align: left;         /* 로고 옆에서 텍스트 줄끼리는 좌측 정렬 */
-    margin: 0;
+    margin-bottom: 15px;
 }
-
+.f-title .blue {
+    color: #3563e0;
+}
 
 .f-desc {
     font-family: 'Roboto', sans-serif;
@@ -356,6 +358,7 @@ body {margin: 0;}
     margin-bottom: 30px;
     text-align: center;          /* 왼쪽 정렬 */
     max-width: 80%;
+    justify-content: center;
 }
 
 /* 3-2. Description (White Override) */
