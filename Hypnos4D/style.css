@@ -226,6 +226,7 @@ body {margin: 0;}
     align-items: center;       /* 중앙 배치 */
     text-align: center;        /* 가운데 정렬 */
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 1. Header: Logo & Title Alignment */
@@ -243,7 +244,7 @@ body {margin: 0;}
     width: auto;
     object-fit: contain;
     /* 폰트의 시각적 베이스라인을 맞추기 위한 미세 조정 */
-    margin-top: 4px;          
+    display: block;          
 }
 
 /* 2. Title Style (Poppins Bold 36px) */
@@ -503,7 +504,6 @@ body {margin: 0;}
 .hypnos-detailed-features .f-title {
     /* 기존 f-title 스타일(Poppins, 36px, #231f20) 유지 */
     text-align: center;
-    margin-bottom: 40px;
 }
 
 /* 3. Image Styling (Width 100% + Layout Control) */
@@ -540,7 +540,7 @@ body {margin: 0;}
 .hypnos-detailed-features .f-desc {
     /* 기존 f-desc 스타일(Roboto, 24px, #5b5b5b) 유지 */
     text-align: center;
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
@@ -1838,5 +1838,24 @@ body {margin: 0;}
 
     .p-item {
         width: 100% !important;
+    }
+}
+
+/* CSS 맨 아래에 추가 */
+@media (max-width: 768px) {
+    .f-title-wrap {
+        flex-direction: column; /* 로고와 타이틀을 세로로 나열 */
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .f-title {
+        text-align: center;     /* 모바일에서는 중앙 정렬이 가독성이 높음 */
+        font-size: 30px;        /* 폰트 크기 축소 */
+    }
+
+    .f-desc {
+        font-size: 18px;        /* 모바일 본문 크기 최적화 */
+        line-height: 1.5;
     }
 }
