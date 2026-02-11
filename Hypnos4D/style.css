@@ -237,7 +237,7 @@ body {margin: 0;}
     margin-bottom: 50px;
 }
 
-.f-label-logo {
+.f-label-logo .logo-ai-series {
     /* 1. 타이틀 폰트 크기(36px)와 동일하게 설정하여 크기를 맞춤 */
     height: 36px;             
     width: auto;
