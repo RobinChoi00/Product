@@ -214,7 +214,7 @@ body {margin: 0;}
 
 
 /* =========================================
-   SECTION: AI Health Check Detection (Modified)
+   SECTION: AI Health Check Detection (Visual Anchor Style Applied)
    ========================================= */
 
 .tech-feature-block {
@@ -226,74 +226,91 @@ body {margin: 0;}
     align-items: center;       
     text-align: center;        
     max-width: 1200px;
-    margin: 0 auto;           /* 중앙 정렬 보장 */
+    margin: 0 auto;
 }
 
-/* 1. Header: Logo & Title Alignment */
+/* 1. Header: Logo & Title Wrap (중앙 정렬 유지) */
 .f-title-wrap {
     display: flex;
-    /* [수정] flex-start를 사용하여 로고를 타이틀의 첫 번째 줄 옆에 고정 */
-    align-items: flex-start;  
-    justify-content: center;   
-    gap: 15px;                 
-    margin-bottom: 50px;
+    justify-content: center;    /* 텍스트 덩어리를 화면 정중앙으로 */
+    padding: 20px 0;
+    margin-bottom: 50px;        /* 하단 요소와의 간격 */
 }
 
-.f-label-logo .logo-ai-series {
-    /* [수정] 40px 폰트 높이에 시각적으로 맞춘 로고 높이 조정 */
-    height: 32px;             
-    width: auto;
-    object-fit: contain;
-    /* [수정] 텍스트의 베이스라인과 맞추기 위한 미세 상단 여백 */
-    margin-top: 6px;          
-}
-
-/* 2. Title Style (Poppins Bold 40px) */
+/* 2. Title Container: 로고 배치의 기준점 */
 .f-title {
+    position: relative;         /* [핵심] absolute 로고의 기준점 */
+    display: inline-block;      /* 텍스트 길이만큼만 박스 형성 */
+}
+
+/* 3. Logo: 텍스트 흐름에서 제외하여 왼쪽 여백에 배치 */
+.f-label-logo {
+    position: absolute;         /* [핵심] 레이아웃을 무시하고 공중에 띄움 */
+    right: calc(100% + 25px);   /* [핵심] 텍스트 시작점 기준 왼쪽으로 25px 이동 */
+    top: 6px;                   /* 첫 번째 줄 텍스트와 수평 맞춤 */
+}
+
+.logo-ai-series {
+    height: 32px;               /* 40px 폰트에 맞춘 높이 */
+    width: auto;
+    display: block;
+}
+
+/* 4. Text Group: 두 줄 텍스트 정렬 */
+.text-group {
+    text-align: left;           /* 두 줄의 시작점 왼쪽 정렬 */
+    display: flex;
+    flex-direction: column;
+}
+
+.line-1 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;         /* 600에서 700으로 더 굵게 조정 가능 */
-    font-size: 40px;          
-    color: #231f20;           
-    line-height: 1.1;         
-    /* [수정] 로고 옆에서 텍스트 줄들이 왼쪽으로 정렬되도록 고정 */
-    text-align: left;         
-    margin: 0;
+    font-weight: 700;
+    font-size: 40px;            /* 요청하신 타이틀 크기 */
+    line-height: 1.1;
+    white-space: nowrap;        /* 줄바꿈 방지 */
 }
 
-.f-title .blue {
-    color: #3563e0;           
+.line-1.blue {
+    color: #3563e0;
 }
 
-/* 3. Image Style (기존 유지) */
+.line-2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #231f20;
+}
+
+/* 5. Image & Description (기존 설정 유지) */
 .f-img-box {
     width: 100%;
-    max-width: 1000px;        
+    max-width: 1000px;
     margin-bottom: 50px;
 }
 
 .f-img-fluid {
     width: 100%;
     height: auto;
-    border-radius: 30px;      
+    border-radius: 30px;
     display: block;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
-/* 4. Description Style (색상 수정 반영) */
 .f-desc-wrap {
-    max-width: 990px;         
+    max-width: 990px;
     margin: 0 auto;
 }
 
 .f-desc {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;         
-    font-size: 24px;          
-    /* [수정] 이전에 요청하신 #474747 컬러로 반영 */
-    color: #474747;           
-    line-height: 1.6;         
-    text-align: center;       
-    word-break: keep-all;     
+    font-weight: 400;
+    font-size: 24px;
+    color: #474747;            /* 요청하신 수정 컬러 반영 */
+    line-height: 1.6;
+    text-align: center;
+    word-break: keep-all;
 }
 
 
