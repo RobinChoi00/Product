@@ -898,9 +898,9 @@ body {margin: 0;}
 .prog-row {
     display: flex;             /* 좌우 배치 */
     align-items: center;       /* 수직 중앙 정렬 */
+    justify-content: center;
     margin-bottom: 60px;       /* 행 사이 간격 */
     width: 100%;
-    max-width: 900px;
 }
 
 .prog-row.border-none {
@@ -916,7 +916,7 @@ body {margin: 0;}
     justify-content: center;
     
     /* [핵심] 5. 라벨과 아이콘 사이의 세로 선 */
-    border-right: 1px solid #e5e5e5; 
+    border-right: 1px solid #111c2c; 
     
     padding-right: 40px;       /* 선과 라벨 사이 여백 */
     margin-right: 40px;        /* 선과 아이콘 사이 여백 */
@@ -942,7 +942,8 @@ body {margin: 0;}
     display: flex;
     flex-wrap: wrap;           /* 아이콘 줄바꿈 허용 */
     gap: 20px;                 /* 아이콘 사이 간격 */
-    flex-grow: 1;              /* 남은 공간 채우기 */
+    flex-grow: 0;              /* 남은 공간 채우기 */
+    justify-content: center;
 }
 
 /* =========================================
