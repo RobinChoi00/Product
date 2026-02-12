@@ -1942,3 +1942,76 @@ body {margin: 0;}
     
     /* (참고) 텍스트는 이미 중앙 정렬 되어 있으므로 유지 */
 }
+
+
+
+/* ==============================================================
+   [FINAL CORRECTION] 최종 컨펌 수정 사항 (7가지 항목)
+   ============================================================== */
+
+/* 1. [Color Viewer] 의자 컬러 보는 창 위에 여백 추가 */
+/* (참고: 컬러 뷰어의 부모 컨테이너 클래스명이 .nova-viewer-section 이라고 가정) */
+.nova-viewer-section, 
+.nova-color-viewer {
+    margin-top: 60px !important;  /* 기존보다 여백 추가 */
+    padding-top: 40px;            /* 내부 여백도 살짝 추가 */
+}
+
+/* 2. [3D Mech] 좌우 반전 (이미지 위치 변경) */
+/* 3D Massage Mech가 첫 번째 섹션이라고 가정할 때, 순서를 뒤집습니다. */
+/* 만약 이미지가 왼쪽이었다면 오른쪽으로, 오른쪽이었다면 왼쪽으로 갑니다. */
+.nova-feature-card:first-child .nova-content-wrapper {
+    flex-direction: row-reverse !important; /* [핵심] 좌우 반전 */
+}
+/* (참고: 만약 반전 후 텍스트 정렬도 바꾸고 싶다면 아래 주석 해제) */
+/*
+.nova-feature-card:first-child .nova-text-group {
+    text-align: right !important; 
+    align-items: flex-end !important;
+}
+*/
+
+/* 3. [Typography] 타이틀 더 굵게 (Bold) */
+.nova-title, 
+.section-title,
+.nova-feature-card .title {
+    font-weight: 800 !important; /* [변경] 700(Bold)보다 더 굵은 800(Extra Bold) */
+}
+
+/* 4. [Typography] 설명글 행간(줄 간격) 늘리기 */
+.nova-desc, 
+p {
+    letter-spacing: 1.2em !important; /* [변경] 기본(1.4~1.5)보다 넓게 */
+}
+
+/* 5. [Alignment] SL Track & Space Saving 높이 맞춤 */
+.nova-grid-2-col {
+    align-items: stretch !important; /* [핵심] 두 컬럼의 높이를 강제로 맞춤 */
+}
+/* SL-Track 이미지만 바닥에 딱 붙이기 */
+.nova-grid-2-col .nova-col-item:first-child .nova-img-group {
+    margin-top: auto !important; 
+}
+
+/* 6. [Lumbar Therapy] 위에 여백 추가 */
+/* 2번째 아이템(Lumbar)인 경우 */
+.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) {
+    margin-top: 80px !important; /* [추가] 윗부분 여백을 넉넉하게 줌 */
+}
+
+/* 7. [Foot Roller] 아이콘 Missing 해결 */
+/* 아이콘이 안 보인다면 display 속성이나 크기 문제일 수 있습니다. */
+.nova-icon-circle img {
+    display: block !important;   /* 강제로 보이게 설정 */
+    width: 100% !important;      /* 너비 확보 */
+    height: auto !important;
+    opacity: 1 !important;       /* 투명도 해제 */
+    visibility: visible !important;
+}
+/* 혹시 아이콘 감싸는 원(Circle) 자체의 문제일 수도 있으니 */
+.nova-icon-circle {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    overflow: visible !important; /* 이미지가 잘리지 않도록 */
+}
