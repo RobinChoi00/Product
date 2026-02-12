@@ -648,7 +648,10 @@ body {margin: 0;}
         align-items: center;    /* 모바일에서는 중앙 정렬이 더 예쁨 (선택사항) */
         text-align: center;
     }
-    
+    .nova-col-item .nova-icon {
+        align-items: center !important;    /* 모바일에서는 중앙 정렬이 더 예쁨 (선택사항) */
+        text-align: center !important;
+    }
     .nova-col-item .nova-text-group {
         text-align: center;     /* 모바일 텍스트 중앙 정렬 */
     }
@@ -1175,15 +1178,18 @@ body {margin: 0;}
         margin-bottom: 0;
     }
     
-    /* 4. 텍스트 그룹 설정 */
-    .nova-zigzag-list .nova-text-group {
-        text-align: center;             /* 모바일: 중앙 정렬 */
-        padding: 0 10px;
-    }
+    
     
     /* 5. 아이콘 중앙 정렬 */
     .nova-zigzag-list .nova-icon-small img {
         margin: 0 auto 20px;            /* 아이콘 가운데 배치 */
+    }
+
+    /* 4. 텍스트 그룹 설정 */
+    .nova-zigzag-list .nova-text-group {
+        text-align: center;             /* 모바일: 중앙 정렬 */
+        padding: 0px !important;
+        justify-content: center !important;
     }
 }
 
@@ -1740,7 +1746,7 @@ body {margin: 0;}
    1. ZERO GRAVITY 텍스트 너비 확장
    ========================================= */
 .nova-center-feature .nova-text-group {
-    max-width: 900px !important;           /* [수정] 800px -> 100% (넓게 사용) */
+    max-width: 800px !important;           /* [수정] 800px -> 100% (넓게 사용) */
     margin: 0 auto 40px;       /* 중앙 정렬 유지 */
     text-align: center;
     justify-content: center;
