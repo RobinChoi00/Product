@@ -911,35 +911,36 @@ body {margin: 0;}
     - 1열 아이템: 5칸씩 차지 (4 items * 5 = 20)
     - 2열 아이템: 4칸씩 차지 (5 items * 4 = 20) */
 
-/* =========================================================
-   [GRID FIXED] 9 MANUAL MODES (Honeycomb Layout)
-   ========================================================= */
 .nova-flex-wrap {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr); /* 20칸 그리드 */
-    gap: 0px; 
-    row-gap: 50px;
-    max-width: 1200px; /* 전체 폭 제한 (선택사항) */
+    display: flex;              /* Flexbox 모드 */
+    flex-wrap: wrap;            /* 줄바꿈 허용 */
+    justify-content: center;    /* 중앙 정렬 */
+    width: 100%;
     margin: 0 auto;
+    padding: 0;                 /* 불필요한 패딩 제거 */
 }
 
-/* 1. 모든 아이콘: 기본적으로 4칸씩 차지하게 설정 */
+/* 1. 기본 설정 (둘째 줄 5개 아이템용) */
+/* 100% 나누기 5 = 20% */
 .nova-flex-wrap .nova-mode-item {
-    grid-column: span 4 !important; /* [중요] 모든 아이콘 크기 4칸 고정 */
-    
+    width: 20% !important;      /* 5등분 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;     /* 테두리/패딩 포함 크기 계산 */
+    
+    /* 그리드 관련 속성 초기화 (혹시 남아있을까봐) */
+    grid-column: auto !important; 
+    margin: 0 !important;       /* 마진 제거 (너비 %로 제어하므로) */
+    margin-bottom: 40px !important; /* 위아래 줄 간격 */
 }
 
-/* 2. 첫 번째 아이콘: '3번 칸에서 시작' + '4칸 차지' 동시 적용 */
-/* 이렇게 해야 작아지지 않고, 옆으로 밀리면서 5번째 아이콘을 다음 줄로 보냅니다. */
-.nova-flex-wrap .nova-mode-item:first-child {
-    grid-column: 3 / span 4 !important; /* [핵심] 시작위치 / 크기 */
+/* 2. 첫째 줄 4개 아이템 전용 설정 */
+/* 100% 나누기 4 = 25% */
+.nova-flex-wrap .nova-mode-item:nth-child(-n+4) {
+    width: 25% !important;      /* 4등분 */
 }
-
-/* (참고) 2열 아이콘들은 자동으로 꽉 차게 배치되므로 추가 설정 불필요 */
 
 /* =========================================
    [RESPONSIVE] Mobile Optimization
