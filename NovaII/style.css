@@ -1879,7 +1879,7 @@ body {margin: 0;}
 }
 
 .nova-grid-2-col .nova-col-item:first-child {
-    padding-top: 30px !important;
+    padding-top: 35px !important;
 }
 
 /* -----------------------------------------------------------
@@ -1958,3 +1958,20 @@ body {margin: 0;}
 
 
 
+@media (max-width: 768px) {
+
+    /* 1. [섹션 vs 섹션] 큰 덩어리 사이 간격 넓히기 */
+    /* 모든 섹션 태그나 메인 클래스에 하단 여백을 크게 줍니다. */
+    section, 
+    .nova-section, 
+    .nova-sub-section,
+    .nova-container {
+        padding-bottom: 100px !important; /* [수정] 60px -> 100px (시원하게 띄움) */
+    }
+
+    /* 2. [섹션 내부] 카드나 아이템끼리의 간격 넓히기 */
+    /* (예: Zigzag 리스트, 기능 카드들 사이) */
+    .nova-feature-card, 
+    .nova-card {
+        margin-bottom: 80px !important;   /* [수정] 카드끼리 80px 간격 */
+    }
