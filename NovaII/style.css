@@ -1956,6 +1956,19 @@ body {margin: 0;}
     /* (참고) 텍스트는 이미 중앙 정렬 되어 있으므로 유지 */
 }
 
+.section, 
+.nova-section, 
+.nova-sub-section,
+.nova-container {
+    padding-bottom: 120px !important; /* [수정] 60px -> 100px (시원하게 띄움) */
+}
+
+/* 2. [섹션 내부] 카드나 아이템끼리의 간격 넓히기 */
+/* (예: Zigzag 리스트, 기능 카드들 사이) */
+.nova-feature-card, 
+.nova-card {
+    margin-bottom: 100px !important;   /* [수정] 카드끼리 80px 간격 */
+}
 
 
 @media (max-width: 768px) {
