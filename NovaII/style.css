@@ -912,27 +912,37 @@ body {margin: 0;}
     - 2열 아이템: 4칸씩 차지 (5 items * 4 = 20) */
 
 .nova-flex-wrap {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr); /* 20칸짜리 초정밀 그리드 */
-    gap: 0px; /* 정교한 배치를 위해 갭 제거 후 마진으로 제어 */
-    row-gap: 50px;
+    display: flex;              /* Flex 모드 */
+    flex-wrap: wrap;            /* 줄바꿈 허용 */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    
+    /* 기존 Grid 설정 초기화 */
+    gap: 0 !important;          
+    display: flex !important;   
 }
 
-/* 1열: 처음 4개 아이템 -> 5칸씩 차지 */
-.nova-flex-wrap .nova-mode-item:nth-child(-n+4) {
-    grid-column: span 5;
-    /* 시각적 보정: 아이콘이 그리드 칸 중앙에 오도록 */
+/* 1. 모든 아이콘 공통 설정: 너비 20% (5등분) */
+.nova-flex-wrap .nova-mode-item {
+    width: 20% !important;      /* 화면의 1/5 크기 */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;     /* 테두리 포함 크기 계산 */
+    
+    /* Grid 관련 속성 강제 해제 */
+    grid-column: auto !important; 
+    margin: 0;                  /* 기본 마진 제거 */
+    margin-bottom: 40px;        /* 위아래 줄 간격 */
 }
 
-/* 2열: 나머지 5개 아이템 -> 4칸씩 차지 */
-    .nova-flex-wrap .nova-mode-item:nth-child(n+5) {
-    grid-column: span 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 2. [핵심] 첫 번째 아이콘을 오른쪽으로 10% 밀어버리기 */
+/* 논리: 왼쪽 여백 10% + 아이콘 4개(80%) = 90% 사용 */
+/* 이렇게 하면 양옆에 10%씩 남는 것처럼 보여서 '완벽한 중앙 정렬'이 됩니다. */
+.nova-flex-wrap .nova-mode-item:first-child {
+    margin-left: 10% !important;
 }
 
 /* =========================================
