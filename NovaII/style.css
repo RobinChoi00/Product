@@ -920,11 +920,15 @@ body {margin: 0;}
 
 /* 1열: 처음 4개 아이템 -> 5칸씩 차지 */
 .nova-flex-wrap .nova-mode-item:nth-child(-n+4) {
-    grid-column: span 5;
+    grid-column: span 4;
     /* 시각적 보정: 아이콘이 그리드 칸 중앙에 오도록 */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nova-flex-wrap .nova-mode-item:first-child {
+    grid-column-start: 3;
 }
 
 /* 2열: 나머지 5개 아이템 -> 4칸씩 차지 */
