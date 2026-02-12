@@ -816,8 +816,7 @@ body {margin: 0;}
 
 /* 2. 타이틀 스타일 (기존 재사용 + 중앙 정렬 명시) */
 .nova-program-card .nova-title {
-    text-align: center;
-    justify-content: center;
+    text-align: center !important;
     margin-bottom: 30px;       /* 박스와의 간격 */
 }
 
@@ -871,36 +870,40 @@ body {margin: 0;}
 }
 
 /* ----------------------------------------------------
-    [GRID TYPE B] 9 MANUAL MODES (4 Items / 5 Items)
-    ---------------------------------------------------- */
-    /* [Engineering Point: LCM Grid Strategy]
-    - 1열(4개)과 2열(5개)을 완벽하게 중앙 정렬하고 사이사이에 배치하기 위해
-    - 4와 5의 최소공배수(LCM)인 20 컬럼 그리드를 사용합니다.
-    - 1열 아이템: 5칸씩 차지 (4 items * 5 = 20)
-    - 2열 아이템: 4칸씩 차지 (5 items * 4 = 20) */
-
+   [GRID TYPE B] 9 MANUAL MODES (Modified Logic)
+   ---------------------------------------------------- */
 .nova-flex-wrap {
     display: grid;
-    grid-template-columns: repeat(20, 1fr); /* 20칸짜리 초정밀 그리드 */
-    gap: 0px; /* 정교한 배치를 위해 갭 제거 후 마진으로 제어 */
+    grid-template-columns: repeat(20, 1fr); /* 20칸 유지 */
+    gap: 0px; 
     row-gap: 50px;
 }
 
-/* 1열: 처음 4개 아이템 -> 5칸씩 차지 */
+/* [수정] 1열: 5칸 -> 4칸으로 축소 (총 16칸 사용) */
+/* 이렇게 하면 아이템 간격이 서로 더 가까워집니다. */
 .nova-flex-wrap .nova-mode-item:nth-child(-n+4) {
-    grid-column: span 5;
-    /* 시각적 보정: 아이콘이 그리드 칸 중앙에 오도록 */
+    grid-column: span 4; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 2열: 나머지 5개 아이템 -> 4칸씩 차지 */
-    .nova-flex-wrap .nova-mode-item:nth-child(n+5) {
+/* [핵심] 1열 중앙 정렬을 위한 오프셋(Offset) 설정 */
+/* 논리: 전체 20칸 - 사용 16칸 = 남는 공간 4칸
+   왼쪽에 2칸, 오른쪽에 2칸을 비워야 중앙에 옵니다.
+   따라서 첫 번째 아이템을 3번째 칸(1,2번 건너뜀)부터 시작하게 합니다.
+*/
+.nova-flex-wrap .nova-mode-item:first-child {
+    grid-column-start: 3;
+}
+
+/* 2열: 5개 아이템 -> 4칸씩 차지 (기존 유지, 20칸 꽉 참) */
+.nova-flex-wrap .nova-mode-item:nth-child(n+5) {
     grid-column: span 4;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* 2열은 자동으로 줄바꿈되어 1번 칸부터 시작하므로 별도 설정 불필요 */
 }
 
 /* =========================================
@@ -1729,4 +1732,85 @@ body {margin: 0;}
     
     /* 그림자 효과 추가 (선택사항: 제공해주신 이미지처럼 입체감 부여) */
     box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+
+
+
+
+
+
+
+/* =========================================
+   1. ZERO GRAVITY 텍스트 너비 확장
+   ========================================= */
+.nova-center-feature .nova-text-group {
+    max-width: 100%;           /* [수정] 800px -> 100% (넓게 사용) */
+    margin: 0 auto 40px;       /* 중앙 정렬 유지 */
+    text-align: center;
+    padding: 0 20px;           /* 모바일 안전 여백 */
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* =========================================
+   2. SL-TRACK & SPACE SAVING 수정
+   ========================================= */
+
+/* 2-1. 텍스트 너비 100% 사용 */
+.nova-col-item .nova-text-group {
+    max-width: 100% !important; /* [수정] 강제로 너비 제한 해제 */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* 2-2. 이미지 그룹을 바닥으로 밀기 (Bottom Align) */
+.nova-col-item .nova-img-group {
+    margin-top: auto;           /* [핵심] 위쪽 여백을 가득 채워 요소를 바닥으로 밈 */
+    width: 100%;
+    display: flex;              /* 내부 이미지 정렬을 위해 */
+    justify-content: center;    /* 이미지 중앙 정렬 */
+}
+
+/* (참고) 컬럼 자체도 세로 꽉 차게 설정 */
+.nova-col-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;               /* 부모 높이만큼 꽉 차게 */
+}
+
+
+
+
+
+
+/* =========================================
+   3. HEATING THERAPY 배경 제거 (투명화)
+   ========================================= */
+.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img-group {
+    background: transparent !important;       /* [핵심] 배경 투명 */
+    background-color: transparent !important;
+    box-shadow: none !important;              /* 그림자 제거 */
+    border-radius: 0 !important;
+    padding: 0 !important;                    /* 패딩 제거 */
+    
+    margin: 0 auto;                           /* 중앙 정렬 */
+}
+
+
+
+
+
+
+/* =========================================
+   5. FOOT ROLLERS 텍스트 너비 확장
+   ========================================= */
+.nova-feature-center .nova-text-group {
+    max-width: 100%;           /* [수정] 너비 제한 해제 */
+    margin: 0 auto 60px;       /* 하단 여백 */
+    text-align: center;
+    padding: 0 20px;
 }
