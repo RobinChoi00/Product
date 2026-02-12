@@ -1777,25 +1777,14 @@ body {margin: 0;}
     flex-direction: column;
     height: 100%;               /* 부모 높이만큼 꽉 차게 */
 }
+.nova-grid-2-col {
+    display: flex;
+    justify-content: space-between;
 
-
-
-
-
-
-/* =========================================
-   3. HEATING THERAPY 배경 제거 (투명화)
-   ========================================= */
-.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img-group {
-    background: transparent !important;       /* [핵심] 배경 투명 */
-    background-color: transparent !important;
-    box-shadow: none !important;              /* 그림자 제거 */
-    border-radius: 0 !important;
-    padding: 0 !important;                    /* 패딩 제거 */
-    
-    margin: 0 auto;                           /* 중앙 정렬 */
+    /* [핵심 수정] 이 한 줄을 추가하세요! */
+    /* 자식 요소들(컬럼들)의 높이를 강제로 가장 긴 쪽에 맞춥니다. */
+    align-items: stretch; 
 }
-
 
 
 
@@ -1822,4 +1811,19 @@ body {margin: 0;}
 .nova-program-card .nova-title {
     text-align: center !important;
     margin-bottom: 30px;       /* 박스와의 간격 */
+}
+
+
+
+/* =========================================
+   3. HEATING THERAPY 배경 제거 (투명화)
+   ========================================= */
+.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img-group {
+    background: transparent !important;       /* [핵심] 배경 투명 */
+    background-color: transparent !important;
+    box-shadow: none !important;              /* 그림자 제거 */
+    border-radius: 0 !important;
+    padding: 0 !important;                    /* 패딩 제거 */
+    
+    margin: 0 auto;                           /* 중앙 정렬 */
 }
