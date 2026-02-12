@@ -1915,6 +1915,8 @@ body {margin: 0;}
     padding: 0 !important;                    /* 패딩 제거 */
     
     margin: 0 auto;                           /* 중앙 정렬 */
+
+    margin-left: 20px !important;
 }
 .nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img {
     max-width: 450px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
