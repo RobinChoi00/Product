@@ -546,6 +546,7 @@ body {margin: 0;}
     padding: 60px 50px;            /* 전체 컨테이너 안쪽 여백 */
     margin-bottom: 100px;        /* 다음 섹션과의 간격 */
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* 2. 개별 컬럼 아이템 (왼쪽/오른쪽 각각) */
@@ -554,6 +555,7 @@ body {margin: 0;}
     display: flex;
     flex-direction: column;     /* 내부 요소는 위에서 아래로 쌓임 */
     justify-content: space-between;
+    max-width: 100%;
 }
 
 .nova-col-item:first-child {
@@ -664,15 +666,6 @@ body {margin: 0;}
    ---------------------------------------------------- */
    
 /* Heating 섹션의 이미지 흐림 효과 추가 */
-.nova-feature-card.transparent-bg .nova-img-group .nova-img {
-    /* [요청사항] 위아래 흐릿하게 */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    
-    /* 이미지 중앙 배치 */
-    display: block;
-    margin: 0 auto;
-}
 
 /* Heating 아이콘 크기 */
 .nova-icon-small img {
@@ -688,9 +681,15 @@ body {margin: 0;}
 
 /* 1. 이미지 크기 축소 및 가운데 배치 */
 .nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img {
-    max-width: 400px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
+    max-width: 450px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
     width: 100%;            /* 모바일 대응 */
     margin: 0 auto;         /* [요청] 이미지 그룹 내에서 중앙 정렬 */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    
+    /* 이미지 중앙 배치 */
+    display: block;
+    margin: 0 auto;
     
     /* 기존 흐림 효과(mask-image)는 그대로 유지됨 */
 }
