@@ -52,6 +52,7 @@ body {margin: 0;}
     
     line-height: 1.6;      /* 가독성 좋은 줄간격 */
     word-break: keep-all;  /* 단어 단위 줄바꿈 (한글/영문 혼용 시 유리) */
+    padding-bottom: 60px;
 }
 
 .intro-desc strong {
@@ -333,7 +334,7 @@ body {margin: 0;}
 .nova-title {
     /* FormaDJRBanner 폰트가 시스템에 없으면 대체 폰트 사용 */
     font-family: 'FormaDJRBanner', 'Avenir', sans-serif; 
-    font-weight: 600;             /* Bold */
+    font-weight: 700;             /* Bold */
     font-size: 40px;              /* 요청 사이즈 */
     line-height: 1.2;             /* 줄간격 타이트하게 */
     color: #606060;               /* 요청 색상 */
@@ -715,6 +716,15 @@ body {margin: 0;}
     color: #ef4242;             /* Heating 전용 붉은색 */
 }
 
+/* =========================================================
+   [간격 조정] 26-CELL과 LUMBAR 섹션 사이 여백 늘리기
+   ========================================================= */
+
+/* 두 번째 카드(LUMBAR)의 위쪽 여백을 강제로 늘립니다 */
+.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) {
+    margin-top: 100px;  /* 원하는 간격만큼 숫자(px)를 조절하세요 (기본값보다 크게) */
+}
+
 /* 1. 이미지 크기 축소 및 가운데 배치 */
 .nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img {
     max-width: 450px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
@@ -1015,9 +1025,8 @@ body {margin: 0;}
 }
 
 .nova-icon-circle img {
-    width: 50%;                /* 원 안에 들어가는 아이콘 크기 비율 */
+    width: 60px;                /* 원 안에 들어가는 아이콘 크기 비율 */
     height: auto;
-    filter: brightness(0) invert(1); /* 이미지가 검정색이라면 흰색으로 반전시킴 */
 }
 
 /* 2. 텍스트 그룹 (중앙 정렬) */
@@ -1238,7 +1247,7 @@ body {margin: 0;}
 /* 2. 타이틀 스타일 (중앙 정렬) */
 .doorway-section .section-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 40px;
     color: #333333;
     text-align: center;
@@ -1309,7 +1318,7 @@ body {margin: 0;}
 /* HTML에 strong 태그가 없으므로 .guide-title을 직접 타겟팅 */
 .guide-title {
     font-family: 'Roboto', sans-serif; /* s-title 폰트 */
-    font-weight: 600; /* Bold */
+    font-weight: 700; /* Bold */
     font-size: 28px; /* s-title 크기 */
     color: #3563e0; /* s-title 색상 (Blue) */
     display: block;
@@ -1454,7 +1463,7 @@ body {margin: 0;}
 /* 1. 타이틀 스타일 (이전 섹션들과 통일) */
 .dimensions-section .section-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 40px;
     color: #424242;   /* 진한 회색 */
     text-align: center;
@@ -1574,7 +1583,7 @@ body {margin: 0;}
 /* HTML 구조상 .container 바로 아래 첫 번째 div가 제목입니다 */
 .spec-section .container > div:first-child {
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;       /* 아주 굵게 (Image like) */
+    font-weight: 700;       /* 아주 굵게 (Image like) */
     font-size: 40px !important;        /* 큰 제목 크기 */
     text-align: center;     /* 중앙 정렬 */
     margin-bottom: 60px;    /* 표와의 간격 */
@@ -1863,10 +1872,14 @@ body {margin: 0;}
        물리적인 빈 공간(Padding)을 밀어넣습니다. 
        눈대중으로 봤을 때 약 80px~100px 정도면 옆 이미지와 높이가 맞을 겁니다.
     */
-    padding-top: 150px !important; 
+    padding-top: 120px !important; 
     
     /* 혹시 모를 간섭 제거 */
     margin-top: 0 !important; 
+}
+
+.nova-grid-2-col .nova-col-item:first-child {
+    padding-top: 30px !important;
 }
 
 /* -----------------------------------------------------------
@@ -1945,70 +1958,3 @@ body {margin: 0;}
 
 
 
-/* ==============================================================
-   [FINAL CORRECTION] 최종 컨펌 수정 사항 (7가지 항목)
-   ============================================================== */
-
-/* 1. [Color Viewer] 의자 컬러 보는 창 위에 여백 추가 */
-/* (참고: 컬러 뷰어의 부모 컨테이너 클래스명이 .nova-viewer-section 이라고 가정) */
-.nova-viewer-section, 
-.nova-color-viewer {
-    margin-top: 60px !important;  /* 기존보다 여백 추가 */
-    padding-top: 40px;            /* 내부 여백도 살짝 추가 */
-}
-
-/* 2. [3D Mech] 좌우 반전 (이미지 위치 변경) */
-/* 3D Massage Mech가 첫 번째 섹션이라고 가정할 때, 순서를 뒤집습니다. */
-/* 만약 이미지가 왼쪽이었다면 오른쪽으로, 오른쪽이었다면 왼쪽으로 갑니다. */
-.nova-feature-card:first-child .nova-content-wrapper {
-    flex-direction: row-reverse !important; /* [핵심] 좌우 반전 */
-}
-/* (참고: 만약 반전 후 텍스트 정렬도 바꾸고 싶다면 아래 주석 해제) */
-/*
-.nova-feature-card:first-child .nova-text-group {
-    text-align: right !important; 
-    align-items: flex-end !important;
-}
-*/
-
-/* 3. [Typography] 타이틀 더 굵게 (Bold) */
-.nova-title, 
-.section-title,
-.nova-feature-card .title {
-    font-weight: 800 !important; /* [변경] 700(Bold)보다 더 굵은 800(Extra Bold) */
-}
-
-/* 4. [Typography] 설명글 행간(줄 간격) 늘리기 */
-
-
-/* 5. [Alignment] SL Track & Space Saving 높이 맞춤 */
-.nova-grid-2-col {
-    align-items: stretch !important; /* [핵심] 두 컬럼의 높이를 강제로 맞춤 */
-}
-/* SL-Track 이미지만 바닥에 딱 붙이기 */
-.nova-grid-2-col .nova-col-item:first-child .nova-img-group {
-    margin-top: auto !important; 
-}
-
-/* 6. [Lumbar Therapy] 위에 여백 추가 */
-/* 2번째 아이템(Lumbar)인 경우 */
-.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) {
-    margin-top: 80px !important; /* [추가] 윗부분 여백을 넉넉하게 줌 */
-}
-
-/* 7. [Foot Roller] 아이콘 Missing 해결 */
-/* 아이콘이 안 보인다면 display 속성이나 크기 문제일 수 있습니다. */
-.nova-icon-circle img {
-    display: block !important;   /* 강제로 보이게 설정 */
-    width: 100% !important;      /* 너비 확보 */
-    height: auto !important;
-    opacity: 1 !important;       /* 투명도 해제 */
-    visibility: visible !important;
-}
-/* 혹시 아이콘 감싸는 원(Circle) 자체의 문제일 수도 있으니 */
-.nova-icon-circle {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    overflow: visible !important; /* 이미지가 잘리지 않도록 */
-}
