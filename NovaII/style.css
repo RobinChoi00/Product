@@ -923,26 +923,28 @@ body {margin: 0;}
 
 .nova-flex-wrap {
     display: grid;
-    grid-template-columns: repeat(20, 1fr); /* 20칸짜리 초정밀 그리드 */
-    gap: 0px; /* 정교한 배치를 위해 갭 제거 후 마진으로 제어 */
+    grid-template-columns: repeat(20, 1fr); /* 20칸 그리드 */
+    gap: 0px; 
     row-gap: 50px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-/* 1열: 처음 4개 아이템 -> 5칸씩 차지 */
-.nova-flex-wrap .nova-mode-item:nth-child(-n+4) {
-    grid-column: span 5;
-    /* 시각적 보정: 아이콘이 그리드 칸 중앙에 오도록 */
+/* 1. 모든 아이콘 공통 설정 (1열, 2열 모두 4칸씩) */
+/* 기존 코드의 span 5 설정을 덮어씁니다. */
+.nova-flex-wrap .nova-mode-item {
+    grid-column: span 4 !important; 
+    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* 2열: 나머지 5개 아이템 -> 4칸씩 차지 */
-    .nova-flex-wrap .nova-mode-item:nth-child(n+5) {
-    grid-column: span 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 2. [핵심] 첫 번째 아이콘을 3번 칸부터 시작하게 밀기 */
+/* 1,2번 칸을 비우고 3번부터 시작하면 -> 끝에도 19,20번 칸이 남아서 완벽한 중앙 정렬 */
+.nova-flex-wrap .nova-mode-item:first-child {
+    grid-column-start: 3 !important; 
 }
 
 /* =========================================
