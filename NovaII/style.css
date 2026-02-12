@@ -1747,6 +1747,9 @@ body {margin: 0;}
     padding: 0 20px;           /* 모바일 안전 여백 */
     box-sizing: border-box;
 }
+.nova-center-feature .nova-desc {
+    text-align: center !important;
+}
 
 
 
@@ -1817,33 +1820,6 @@ body {margin: 0;}
 
 
 /* =========================================
-   3. HEATING THERAPY 배경 제거 (투명화)
-   ========================================= */
-.nova-feature-card .nova-img-group {
-    background: transparent !important;       /* [핵심] 배경 투명 */
-    background-color: transparent !important;
-    box-shadow: none !important;              /* 그림자 제거 */
-    border-radius: 0 !important;
-    padding: 0 !important;                    /* 패딩 제거 */
-    
-    margin: 0 auto;                           /* 중앙 정렬 */
-}
-.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img {
-    max-width: 450px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
-    width: 100%;            /* 모바일 대응 */
-    margin: 0 auto;         /* [요청] 이미지 그룹 내에서 중앙 정렬 */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    
-    /* 이미지 중앙 배치 */
-    display: block;
-    margin: 0 auto;
-    
-    /* 기존 흐림 효과(mask-image)는 그대로 유지됨 */
-
-}
-
-/* =========================================
    [TITLES] 9 MANUAL & 12 AUTO 중앙 정렬
    ========================================= */
 
@@ -1881,7 +1857,7 @@ body {margin: 0;}
        물리적인 빈 공간(Padding)을 밀어넣습니다. 
        눈대중으로 봤을 때 약 80px~100px 정도면 옆 이미지와 높이가 맞을 겁니다.
     */
-    padding-top: 100px !important; 
+    padding-top: 120px !important; 
     
     /* 혹시 모를 간섭 제거 */
     margin-top: 0 !important; 
@@ -1895,4 +1871,32 @@ body {margin: 0;}
         padding-top: 0 !important;
         margin-top: 20px !important; /* 모바일에서 적당한 간격 유지 */
     }
+}
+
+
+/* =========================================
+   3. HEATING THERAPY 배경 제거 (투명화)
+   ========================================= */
+.nova-feature-card .nova-img-group {
+    background: transparent !important;       /* [핵심] 배경 투명 */
+    background-color: transparent !important;
+    box-shadow: none !important;              /* 그림자 제거 */
+    border-radius: 0 !important;
+    padding: 0 !important;                    /* 패딩 제거 */
+    
+    margin: 0 auto;                           /* 중앙 정렬 */
+}
+.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img {
+    max-width: 450px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
+    width: 100%;            /* 모바일 대응 */
+    margin: 0 auto;         /* [요청] 이미지 그룹 내에서 중앙 정렬 */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%) !important;
+    
+    /* 이미지 중앙 배치 */
+    display: block;
+    margin: 0 auto;
+    
+    /* 기존 흐림 효과(mask-image)는 그대로 유지됨 */
+
 }
