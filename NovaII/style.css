@@ -1,0 +1,1609 @@
+body {margin: 0;}
+.container {
+    width: 100%;
+    max-width: 1200px;        /* 컨텐츠가 모이는 최대 너비 고정 */
+    margin: 0 auto;           /* 중앙 정렬 */
+    padding: 0 20px;          /* 양옆 안전 마진 */
+}
+
+/* =========================================
+   [SECTION 0] HERO BANNER
+   ========================================= */
+.hero-full-banner {
+    width: 100%;
+    overflow: hidden; /* 이미지가 튀어나가는 것 방지 */
+    margin-bottom: 30px; /* 인트로 섹션과의 간격 */
+}
+
+.hero-full-banner img {
+    width: 100%;       /* 가로 꽉 채우기 */
+    height: auto;      /* 비율 유지 */
+    display: block;    /* 하단 공백 제거 */
+}
+
+/* =========================================
+   [SECTION 1] INTRO TEXT & SLIDER GROUP
+   ========================================= */
+.intro-text-section {
+    padding-bottom: 80px;
+    text-align: center; /* 전체 중앙 정렬 */
+}
+
+/* 로고 영역 */
+.intro-title-logo {
+    margin-bottom: 30px;
+}
+
+.intro-title-logo img {
+    max-width: 200px; /* 로고 크기 적절히 제한 */
+    height: auto;
+}
+
+/* 설명 텍스트 (요청사항 반영) */
+.intro-desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;      /* Regular */
+    font-size: 22px;       /* 요청 사이즈 */
+    color: #8e8e8e;        /* 요청 컬러 */
+    
+    width: 95%;            /* 요청 너비 */
+    max-width: 1000px;     /* 너무 넓어지지 않게 안전장치 */
+    margin: 0 auto 60px;   /* 중앙 정렬 & 아래 여백 */
+    
+    line-height: 1.6;      /* 가독성 좋은 줄간격 */
+    word-break: keep-all;  /* 단어 단위 줄바꿈 (한글/영문 혼용 시 유리) */
+}
+
+.intro-desc strong {
+    font-weight: 600;      /* 강조 텍스트 */
+    color: #000;
+}
+
+/* =========================================
+   [SLIDER AREA] Image & Navigation
+   ========================================= */
+.group-slider {
+    position: relative;    /* 화살표 배치의 기준점 */
+    max-width: 1200px;     /* 전체 슬라이더 폭 제한 */
+    margin: 0 auto;        /* 중앙 정렬 */
+}
+
+.slider-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;         /* [중요] 높이를 고정해야 화살표가 안 튑니다 */
+}
+
+/* 의자 이미지 */
+.chair-display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-chair {
+    max-width: 80%;        /* 양옆 화살표 공간 확보를 위해 80%로 제한 */
+    max-height: 100%;      /* 높이 제한 */
+    object-fit: contain;   /* 비율 유지 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* [엔지니어링] 화살표 버튼 위치 고정 */
+.nav-btn {
+    position: absolute;    /* 의자 이미지 크기와 상관없이 위치 고정 */
+    top: 50%;              /* 수직 중앙 */
+    transform: translateY(-50%); /* 정확한 중앙 보정 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;           /* 이미지보다 위에 오도록 */
+    padding: 20px;         /* 터치 영역 확보 */
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-50%) scale(1.2); /* 호버 시 살짝 커짐 */
+}
+
+.prev-btn {
+    left: 2%;  /* 왼쪽 끝에서 약간 안쪽 */
+}
+
+.next-btn {
+    right: 2%; /* 오른쪽 끝에서 약간 안쪽 */
+}
+
+.nav-btn img {
+    width: 25px; /* 화살표 크기 적절히 조정 */
+    height: auto;
+}
+
+
+/* =========================================
+   [SWATCH PANEL] Color Buttons
+   ========================================= */
+.swatch-panel {
+    display: inline-flex;  /* 내용물만큼만 너비 차지 */
+    justify-content: center;
+    align-items: center;
+    
+    /* 배경 설정 (이미지 대신 CSS로 구현하여 깔끔하게) */
+    background-color: #e6e6e6; /* 연한 회색 (업로드 이미지 참고) */
+    border-radius: 50px;       /* 둥근 알약 모양 */
+    padding: 10px 20px;        /* 내부 여백 */
+    
+    margin-top: 30px;          /* 의자 이미지와 간격 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 살짝 떠있는 느낌 */
+}
+
+/* 기존 배경 이미지 래퍼는 숨김 (CSS가 더 깔끔함) */
+.bar-bg-wrap {
+    display: none; 
+}
+
+/* 버튼 그룹 */
+.btn-wrap {
+    display: flex;
+    gap: 15px;             /* 버튼 사이 간격 */
+    align-items: center;
+}
+
+.color-btn {
+    width: 35px;           /* 버튼 크기 */
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent; /* 선택 안 됐을 때 투명 테두리 */
+    transition: all 0.2s ease;
+    
+    /* 이미지 꽉 차게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff; /* 투명 이미지일 경우 대비용 */
+}
+
+.color-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 활성화 된 버튼 스타일 (검은색 테두리) */
+.color-btn.active {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+
+
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment (Intro & Slider)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 인트로 텍스트 가독성 조정 */
+    .intro-desc {
+        font-size: 16px;        /* 22px -> 16px (모바일 표준) */
+        line-height: 1.5;       /* 줄간격 조정 */
+        width: 90%;             /* 좌우 여백 5%씩 확보 */
+        margin-bottom: 40px;    /* 슬라이더와의 간격 축소 */
+    }
+
+    /* 2. 슬라이더 영역 높이 최적화 */
+    /* 모바일에서는 500px이 너무 길 수 있어 350px~400px 정도로 줄임 */
+    .slider-main {
+        height: 350px; 
+    }
+
+    /* 3. 의자 이미지 크기 고정 (꽉 차게) */
+    #current-chair {
+        max-width: 85%;         /* 양옆 화살표 공간 제외하고 꽉 채움 */
+        max-height: 90%;        /* 위아래 여백 살짝 줌 */
+        /* width를 고정하고 싶다면 아래 주석 해제 (단, 비율 깨짐 주의) */
+        /* width: 85%; */
+    }
+
+    /* 4. 화살표 버튼: 작게 & 양끝으로 */
+    .nav-btn {
+        padding: 10px;          /* 터치 영역은 유지하되 패딩 축소 */
+    }
+
+    .nav-btn img {
+        width: 18px;            /* 25px -> 18px 로 축소 */
+    }
+
+    .prev-btn {
+        left: 0;                /* 왼쪽 끝으로 완전 밀착 */
+    }
+
+    .next-btn {
+        right: 0;               /* 오른쪽 끝으로 완전 밀착 */
+    }
+
+    /* 5. 컬러 버튼 패널 미세 조정 */
+    .swatch-panel {
+        margin-top: 20px;       /* 의자와의 간격 줄임 */
+        padding: 8px 15px;      /* 패널 크기 살짝 축소 */
+    }
+
+    .color-btn {
+        width: 30px;            /* 버튼 크기 35px -> 30px */
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [SECTION 2] NOVA FEATURE LIST (3D+ / Body Scan)
+   ========================================= */
+
+.nova-feature-list {
+    padding: 60px 0;
+    width: 100%;
+}
+
+/* 1. 회색 카드 박스 스타일 */
+.nova-feature-card {
+    background-color: #f4f4f4;    /* 요청 배경색 */
+    border-radius: 30px;          /* 요청 둥근 모서리 */
+    max-width: 1100px;            /* 요청 너비 (컨테이너보다 약간 작게) */
+    margin: 0 auto 50px;          /* 중앙 정렬 & 카드 간 간격 50px */
+    
+    /* 2. 레이아웃: 좌우 5:5 분할 */
+    display: flex;                /* Flexbox 사용 */
+    align-items: center;          /* 수직 중앙 정렬 (Vertical Center) */
+    justify-content: space-between;
+    overflow: hidden;             /* 이미지가 둥근 모서리를 뚫고 나가지 않게 */
+}
+
+/* 왼쪽: 이미지 그룹 (50%) */
+.nova-img-group {
+    width: 50%;
+    flex: 0 0 50%;                /* 너비 강제 고정 */
+    position: relative;           /* 내부 배치 기준점 */
+}
+
+/* 3. 이미지 스타일 & 페이딩 효과 */
+.nova-img {
+    width: 100%;
+    height: auto;
+    display: block;               /* 하단 공백 제거 */
+    
+    /* [Engineering Point] CSS로 위아래 흐리게 만들기 (Masking) 
+       - transparent(0%) -> black(15%): 위쪽 부드럽게 나타남
+       - black(85%) -> transparent(100%): 아래쪽 부드럽게 사라짐 */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+/* 오른쪽: 텍스트 그룹 (50%) */
+.nova-text-group {
+    width: 50%;
+    flex: 1;                      /* 남은 공간 채우기 */
+    padding: 0 60px;              /* 좌우 여백을 넉넉히 주어 텍스트가 답답하지 않게 */
+    text-align: left;             /* 텍스트 왼쪽 정렬 */
+    
+    /* Flexbox 중첩으로 텍스트 그룹 자체를 수직 중앙 배치 보장 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 4. 타이틀 스타일 */
+.nova-title {
+    /* FormaDJRBanner 폰트가 시스템에 없으면 대체 폰트 사용 */
+    font-family: 'FormaDJRBanner', 'Avenir', sans-serif; 
+    font-weight: 700;             /* Bold */
+    font-size: 36px;              /* 요청 사이즈 */
+    line-height: 1.2;             /* 줄간격 타이트하게 */
+    color: #606060;               /* 요청 색상 */
+    margin-bottom: 24px;          /* 설명글과의 간격 */
+}
+
+.nova-title .text-blue {
+    color: #75b2cc;               /* 요청 Blue 컬러 */
+}
+
+/* 5. 설명글 스타일 */
+.nova-desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;             /* Regular */
+    font-size: 24px;              /* 요청 사이즈 (PC 기준 상당히 큽니다) */
+    line-height: 1.5;             /* 가독성 확보 */
+    color: #9e9e9e;               /* 요청 색상 */
+}
+
+.nova-desc strong {
+    font-weight: 700;             /* Bold */
+    color: #606060;               /* 요청 강조 색상 */
+}
+
+
+/* =========================================
+   [RESPONSIVE] Mobile Optimization (Under 1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+    .nova-feature-card {
+        flex-direction: column;   /* 모바일에서는 상하 배치 */
+        max-width: 100%;          /* 화면 꽉 차게 */
+        text-align: center;       /* 모바일은 중앙 정렬이 예쁨 */
+        padding-bottom: 40px;     /* 하단 여백 추가 */
+    }
+
+    .nova-img-group, 
+    .nova-text-group {
+        width: 100%;              /* 너비 100% */
+        flex: auto;
+    }
+
+    .nova-img {
+        /* 모바일에서는 마스킹 효과를 줄이거나 제거할 수 있음 (선택사항) */
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
+    .nova-text-group {
+        padding: 30px 20px 0;     /* 모바일 패딩 조정 */
+        text-align: center;       /* 텍스트 중앙 정렬 */
+    }
+
+    .nova-title {
+        font-size: 28px;          /* 모바일 폰트 사이즈 조정 */
+    }
+
+    .nova-desc {
+        font-size: 18px;          /* 모바일 가독성 조정 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [SECTION 3] GRADIENT BIG SECTION 
+   (Zero Gravity ~ Heating 통합 배경)
+   ========================================= */
+
+.nova-gradient-section {
+    width: 100%;
+    /* 위아래 섹션과의 간격을 위해 여백 추가 */
+    padding-bottom: 50px; 
+}
+
+/* 배경 및 레이아웃을 담당하는 메인 컨테이너 */
+.nova-gradient-section .nova-container {
+    max-width: 1100px;       /* 요청 너비 */
+    margin: 0 auto;          /* 중앙 정렬 */
+    border-radius: 30px;     /* 요청 둥근 모서리 */
+    
+    /* 내부 콘텐츠가 벽에 붙지 않도록 안쪽 여백 설정 */
+    padding: 80px 0;         
+    box-sizing: border-box;  /* 패딩이 너비에 영향 주지 않도록 설정 */
+    
+    /* [Engineering Point: Linear Gradient]
+       1. to bottom: 위에서 아래로
+       2. 0%: #d3e7ed (시작 색상)
+       3. 13%: #f4f4f4 (여기서 색상 변화 끝)
+       4. 100%: #f4f4f4 (끝까지 회색 유지)
+    */
+    background: linear-gradient(to bottom, #d3e7ed 0%, #f4f4f4 13%, #f4f4f4 100%);
+    
+    /* 자식 요소(이미지 등)가 둥근 모서리를 뚫고 나오지 않게 처리 */
+    overflow: hidden; 
+}
+
+
+
+
+
+/* =========================================
+   [SUB-SECTION] ZERO GRAVITY (Center Feature)
+   ========================================= */
+
+/* 1. 섹션 전체 레이아웃 */
+.nova-center-feature {
+    display: flex;
+    flex-direction: column;    /* 위(텍스트) -> 아래(이미지) 수직 배치 */
+    align-items: center;       /* 가로축 중앙 정렬 */
+    text-align: center;        /* 텍스트 내용 중앙 정렬 */
+    
+    margin-bottom: 80px;       /* 다음 섹션(SL-Track)과의 넉넉한 간격 */
+    width: 100%;
+}
+
+/* 2. 텍스트 그룹 (중앙 정렬) */
+.nova-center-feature .nova-text-group {
+    max-width: 800px;          /* 글자가 너무 옆으로 퍼지지 않게 제한 (가독성 UP) */
+    margin: 0 auto 40px;       /* 중앙 정렬 & 이미지와의 간격 40px */
+}
+
+/* 타이틀과 설명글 폰트는 공통 클래스(.nova-title, .nova-desc)를 상속받지만,
+   필요하다면 여기서 미세 조정 가능 */
+.nova-center-feature .nova-desc {
+    padding: 0 20px;           /* 모바일에서 글자가 화면 끝에 붙지 않게 */
+}
+
+/* 3. 이미지 그룹 */
+.nova-center-feature .nova-img-group {
+    width: 100%;               /* 컨테이너 너비 100% 사용 */
+    display: flex;
+    justify-content: center;   /* 이미지 자체를 중앙에 배치 */
+}
+
+/* 4. 이미지 크기 설정 (핵심) */
+.nova-center-feature .nova-img {
+    width: 100%;               /* 기본적으로 꽉 차게 */
+    max-width: 800px;          /* [Engineering Point] 원본 이미지 비율 고려하여 최대폭 제한 */
+    height: auto;              /* 비율 유지 */
+    
+    /* 이미지가 너무 딱딱해 보이지 않게 하단 페이딩 살짝 추가 (선택사항) */
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment
+   ========================================= */
+@media (max-width: 768px) {
+    .nova-center-feature {
+        margin-bottom: 50px;   /* 모바일에서는 간격 줄임 */
+    }
+    
+    .nova-center-feature .nova-title {
+        font-size: 28px;       /* 타이틀 크기 축소 */
+    }
+    
+    .nova-center-feature .nova-desc {
+        font-size: 18px;       /* 설명글 크기 축소 */
+    }
+    
+    .nova-center-feature .nova-img {
+        max-width: 100%;       /* 모바일에서는 화면 꽉 차게 */
+        padding: 0 10px;       /* 양옆 살짝 여백 */
+    }
+}
+
+
+
+
+
+/* =========================================
+   [SUB-SECTION] 2-COLUMN GRID (SL-Track & Space Saving)
+   ========================================= */
+
+/* 1. 2열 그리드 부모 컨테이너 */
+.nova-grid-2-col {
+    display: flex;              /* 좌우 배치를 위한 Flexbox */
+    justify-content: space-between; /* 좌우 균등 분할 */
+    gap: 60px;                  /* 두 컬럼 사이의 간격 */
+    padding: 0 50px;            /* 전체 컨테이너 안쪽 여백 */
+    margin-bottom: 80px;        /* 다음 섹션과의 간격 */
+    box-sizing: border-box;
+}
+
+/* 2. 개별 컬럼 아이템 (왼쪽/오른쪽 각각) */
+.nova-col-item {
+    flex: 1;                    /* 1:1 비율로 공간 차지 (정확히 50%) */
+    display: flex;
+    flex-direction: column;     /* 내부 요소는 위에서 아래로 쌓임 */
+    align-items: flex-start;    /* [중요] 모든 요소를 왼쪽 정렬 */
+    text-align: left;           /* 텍스트 왼쪽 정렬 */
+}
+
+/* 3. 아이콘 스타일 */
+.nova-col-item .nova-icon {
+    margin-bottom: 25px;        /* 타이틀과의 간격 */
+}
+
+.nova-col-item .nova-icon img {
+    width: 60px;                /* [요청사항] 아이콘 크기 고정 */
+    height: auto;               /* 비율 유지 */
+    display: block;             /* 하단 공백 제거 */
+}
+
+/* 4. 텍스트 그룹 재설정 (왼쪽 정렬 강제) */
+.nova-col-item .nova-text-group {
+    padding: 0;                 /* 기존 중앙 정렬용 패딩 제거 */
+    text-align: left;           /* 왼쪽 정렬 */
+    margin-bottom: 30px;        /* 이미지와의 간격 */
+    max-width: 100%;            /* 꽉 차게 */
+}
+
+/* 5. 이미지 스타일 */
+.nova-col-item .nova-img-group {
+    width: 100%;                /* 컬럼 너비에 맞춤 */
+}
+
+.nova-col-item .nova-img {
+    width: 100%;
+    max-width: 450px;           /* 이미지가 너무 커지지 않게 적절히 제한 */
+    height: auto;
+    display: block;
+    /* 왼쪽 정렬이므로 margin: 0 auto 제거 */
+}
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment (Tablet & Phone)
+   ========================================= */
+@media (max-width: 768px) {
+    .nova-grid-2-col {
+        flex-direction: column; /* 모바일에서는 위아래로 쌓임 */
+        gap: 60px;
+        padding: 0 20px;        /* 모바일 좌우 여백 축소 */
+    }
+
+    .nova-col-item {
+        align-items: center;    /* 모바일에서는 중앙 정렬이 더 예쁨 (선택사항) */
+        text-align: center;
+    }
+    
+    .nova-col-item .nova-text-group {
+        text-align: center;     /* 모바일 텍스트 중앙 정렬 */
+    }
+}
+
+
+
+
+
+/* =========================================
+   [SUB-SECTION] FEATURE LIST (Air Compression & Heating)
+   ========================================= */
+
+.nova-sub-section.nova-feature-list {
+    padding: 0 50px;             /* 전체 컨테이너 좌우 여백 */
+    box-sizing: border-box;
+}
+
+/* 1. 투명 배경 카드 (공통 설정) */
+.nova-feature-card.transparent-bg {
+    background-color: transparent; /* 회색 배경 제거 */
+    box-shadow: none;              /* 그림자 제거 */
+    border-radius: 0;              /* 둥근 모서리 제거 (필요 시) */
+    margin-bottom: 80px;           /* 섹션 간 간격 */
+    max-width: 100%;               /* 컨테이너 너비 꽉 채움 */
+    
+    /* Flexbox 설정은 기존 .nova-feature-card 상속 */
+    /* 기본적으로 align-items: center; justify-content: space-between; 되어 있음 */
+}
+
+/* ----------------------------------------------------
+   [ITEM 1] 26-CELL AIR COMPRESSION (Text Left / Image Right)
+   ---------------------------------------------------- */
+   
+/* 텍스트 그룹: 좌측 정렬 (기본값 상속) */
+.nova-feature-card.transparent-bg .nova-text-group {
+    padding: 0 40px 0 0;        /* 오른쪽 여백을 주어 이미지와 간격 확보 */
+    text-align: left;           /* [요청사항] 좌측 정렬 */
+}
+
+/* 이미지 그룹: 우측 정렬 */
+.nova-feature-card.transparent-bg .nova-img-group {
+    text-align: right;          /* 이미지 우측 정렬 */
+}
+
+/* ----------------------------------------------------
+   [ITEM 2] LUMBAR HEATING (Image Left / Text Right)
+   ---------------------------------------------------- */
+   
+/* Heating 섹션의 이미지 흐림 효과 추가 */
+.nova-feature-card.transparent-bg .nova-img-group .nova-img {
+    /* [요청사항] 위아래 흐릿하게 */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    
+    /* 이미지 중앙 배치 */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Heating 아이콘 크기 */
+.nova-icon-small img {
+    width: 40px;                /* 적절한 아이콘 크기 */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* 타이틀 색상 (Red) */
+.text-red {
+    color: #ef4242;             /* Heating 전용 붉은색 */
+}
+
+/* ----------------------------------------------------
+   [ELEMENT] Note Text (* The heating therapy...)
+   ---------------------------------------------------- */
+.nova-note {
+    font-family: 'Avenir', sans-serif; /* [요청사항] Avenir Roman */
+    font-weight: 400;                  /* Roman (Normal) */
+    font-size: 16px;                   /* [요청사항] 16px */
+    color: #9e9e9e;                    /* [요청사항] #9e9e9e */
+    margin-top: 20px;                  /* 위쪽 설명글과 간격 */
+    line-height: 1.5;
+}
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment
+   ========================================= */
+@media (max-width: 768px) {
+    .nova-sub-section.nova-feature-list {
+        padding: 0 20px;
+    }
+
+    .nova-feature-card.transparent-bg {
+        flex-direction: column;    /* 모바일: 상하 배치 */
+        text-align: center;
+    }
+
+    .nova-feature-card.transparent-bg .nova-text-group {
+        padding: 0 0 30px 0;       /* 모바일: 하단 여백 */
+        text-align: center;        /* 모바일: 중앙 정렬 */
+        order: 1;                  /* 텍스트 먼저 */
+    }
+
+    .nova-feature-card.transparent-bg .nova-img-group {
+        width: 100%;
+        text-align: center;
+        order: 2;                  /* 이미지 나중 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [SECTION 4] MODES & PROGRAMS
+   (12 Auto Programs & 9 Manual Modes)
+   ========================================= */
+
+.nova-modes-section {
+    padding-bottom: 80px;
+    width: 100%;
+}
+
+/* 1. 프로그램 카드 래퍼 (타이틀 + 그리드 박스) */
+.nova-program-card {
+    margin-bottom: 80px;       /* Auto와 Manual 섹션 사이 간격 */
+}
+
+/* 2. 타이틀 스타일 (기존 재사용 + 중앙 정렬 명시) */
+.nova-program-card .nova-heading {
+    text-align: center;
+    margin-bottom: 30px;       /* 박스와의 간격 */
+}
+
+/* 3. 회색 박스 스타일 (The Grey Box) 
+   - 제목 제외, 그리드만 감싸는 스타일 */
+.nova-mode-grid {
+    background-color: #f4f4f4; /* [요청사항] 배경색 */
+    border-radius: 30px;       /* [요청사항] 둥근 모서리 */
+    max-width: 1100px;         /* [요청사항] 최대 너비 */
+    margin: 0 auto;            /* 중앙 정렬 */
+    padding: 60px 40px;        /* 박스 내부 여백 */
+    box-sizing: border-box;
+}
+
+/* 4. 공통 아이템 스타일 (Icon + Text) */
+.nova-mode-item {
+    display: flex;
+    flex-direction: column;    /* 위: 아이콘, 아래: 텍스트 */
+    align-items: center;       /* 중앙 정렬 */
+    justify-content: flex-start;
+    text-align: center;
+}
+
+/* 아이콘 스타일 */
+.nova-mode-item img {
+    width: 90px;               /* [요청사항] 90px */
+    height: 90px;              /* 정방형 유지 */
+    object-fit: contain;
+    margin-bottom: 15px;       /* 텍스트와의 간격 */
+    display: block;
+}
+
+/* 텍스트(span) 스타일 */
+.nova-mode-item span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;          /* [요청사항] Medium */
+    font-size: 12px;           /* [요청사항] 12px */
+    color: #6d6d6d;            /* [요청사항] #6d6d6d */
+    line-height: 1.4;
+    text-transform: uppercase; /* 대문자 변환 (선택사항) */
+}
+
+/* ----------------------------------------------------
+   [GRID TYPE A] 12 AUTO PROGRAMS (4 Columns x 3 Rows)
+   ---------------------------------------------------- */
+.nova-grid-4-col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4열 균등 분할 */
+    gap: 40px;                             /* 아이템 간격 */
+    row-gap: 50px;                         /* 줄바꿈 간격 */
+}
+
+/* ----------------------------------------------------
+   [GRID TYPE B] 9 MANUAL MODES (4 Items / 5 Items)
+   ---------------------------------------------------- */
+/* [Engineering Point: LCM Grid Strategy]
+   - 1열(4개)과 2열(5개)을 완벽하게 중앙 정렬하고 사이사이에 배치하기 위해
+   - 4와 5의 최소공배수(LCM)인 20 컬럼 그리드를 사용합니다.
+   - 1열 아이템: 5칸씩 차지 (4 items * 5 = 20)
+   - 2열 아이템: 4칸씩 차지 (5 items * 4 = 20)
+*/
+.nova-flex-wrap {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); /* 20칸짜리 초정밀 그리드 */
+    gap: 0px;                               /* 정교한 배치를 위해 갭 제거 후 마진으로 제어 */
+    row-gap: 50px;
+}
+
+/* 1열: 처음 4개 아이템 -> 5칸씩 차지 */
+.nova-flex-wrap .nova-mode-item:nth-child(-n+4) {
+    grid-column: span 5;
+    /* 시각적 보정: 아이콘이 그리드 칸 중앙에 오도록 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2열: 나머지 5개 아이템 -> 4칸씩 차지 */
+.nova-flex-wrap .nova-mode-item:nth-child(n+5) {
+    grid-column: span 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   [RESPONSIVE] Mobile Optimization
+   ========================================= */
+@media (max-width: 768px) {
+    .nova-mode-grid {
+        padding: 40px 20px;
+    }
+
+    /* 모바일에서는 2열 그리드로 변경 (가장 안정적) */
+    .nova-grid-4-col,
+    .nova-flex-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2열로 통일 */
+        gap: 20px;
+        row-gap: 40px;
+    }
+
+    /* Manual Mode의 복잡한 그리드 해제 -> 모바일 기본값 복귀 */
+    .nova-flex-wrap .nova-mode-item:nth-child(n) {
+        grid-column: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [SECTION 5] SPECIALIZED FOOT ROLLERS
+   ========================================= */
+
+.nova-feature-center {
+    background-color: #ffffff; /* [요청사항] 배경 흰색 */
+    padding: 80px 0;           /* 상하 여백 */
+    width: 100%;
+    
+    /* 전체 중앙 정렬 배치를 위한 Flex 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 1. 상단 원형 아이콘 (Blue Circle) */
+.nova-icon-circle {
+    width: 90px;               /* [요청사항] 다른 아이콘들과 비슷한 크기감 */
+    height: 90px;
+    background-color: #75b2cc; /* [Design] 텍스트와 동일한 Blue 톤 */
+    border-radius: 50%;        /* 완벽한 원형 */
+    margin: 0 auto 30px;       /* 중앙 정렬 & 타이틀과의 간격 */
+    
+    /* 내부 아이콘 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nova-icon-circle img {
+    width: 50%;                /* 원 안에 들어가는 아이콘 크기 비율 */
+    height: auto;
+    filter: brightness(0) invert(1); /* 이미지가 검정색이라면 흰색으로 반전시킴 */
+}
+
+/* 2. 텍스트 그룹 (중앙 정렬) */
+.nova-feature-center .nova-text-group {
+    max-width: 800px;          /* 가독성을 위해 너비 제한 */
+    margin: 0 auto 60px;       /* 이미지 박스와의 간격 60px */
+}
+
+/* Title & Desc는 공통 클래스(.nova-title, .nova-desc) 설정을 그대로 따름 */
+
+/* 3. 이미지 그룹 (회색 박스 역할) */
+.nova-feature-center .nova-img-group {
+    background-color: #f4f4f4; /* [요청사항] 회색 배경 */
+    width: 100%;
+    max-width: 450px;          /* [요청사항] 너비 450px 고정 */
+    margin: 0 auto;            /* 중앙 정렬 */
+    padding: 40px;             /* 이미지가 박스 안에 예쁘게 담기도록 여백 추가 */
+    box-sizing: border-box;
+    border-radius: 0;          /* [요청사항] 둥근 모서리 없음 (직각) */
+    
+    /* 이미지를 박스 정중앙에 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 4. 이미지 스타일 */
+.nova-feature-center .nova-img {
+    width: 100%;               /* 450px 박스 안에서 꽉 차게 (패딩 제외) */
+    height: auto;
+    display: block;
+    
+    /* [Engineering Tip] 
+       이미지 배경이 흰색일 경우, 회색 박스와 자연스럽게 섞이도록 블렌딩 처리 
+       (이미지가 투명 PNG라면 이 줄은 없어도 됩니다) */
+    mix-blend-mode: multiply; 
+}
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment
+   ========================================= */
+@media (max-width: 768px) {
+    .nova-feature-center {
+        padding: 50px 20px;
+    }
+    
+    .nova-feature-center .nova-img-group {
+        max-width: 100%;       /* 모바일에서는 화면 폭에 맞춤 */
+        padding: 20px;
+    }
+}
+
+
+
+
+
+/* =========================================
+   [SECTION 6] ZIGZAG FEATURES LIST
+   (Footrest, Headrest, Remote, Bluetooth)
+   ========================================= */
+
+.nova-zigzag-list {
+    width: 100%;
+    padding-bottom: 80px;      /* 하단 여백 */
+}
+
+.nova-zigzag-list .nova-container {
+    max-width: 1100px;         /* [요청사항] 최대 너비 1100px */
+    margin: 0 auto;            /* 중앙 정렬 */
+    padding: 0 20px;           /* 모바일 대응 안전 여백 */
+    box-sizing: border-box;
+}
+
+/* 1. 투명 카드 공통 설정 (기존 .transparent-bg 확장) */
+.nova-zigzag-list .nova-feature-card.transparent-bg {
+    /* 기존 설정 상속 + 추가 여백 */
+    margin-bottom: 100px;      /* 아이템 간 간격을 넓게 주어 시원하게 배치 */
+    align-items: center;       /* 수직 중앙 정렬 */
+    
+    /* 기본 배치: 텍스트(좌) - 이미지(우) */
+    display: flex;
+    flex-direction: row;       
+    justify-content: space-between;
+    gap: 50px;                 /* 좌우 요소 사이 간격 */
+}
+
+/* 2. 텍스트 그룹 설정 */
+.nova-zigzag-list .nova-text-group {
+    flex: 1;                   /* 50% 공간 차지 */
+    text-align: left;          /* [요청사항] 좌측 정렬 */
+    padding: 0;                /* 불필요한 패딩 제거 */
+}
+
+/* 아이콘 설정 (기존 .nova-icon-small 재사용 또는 구체화) */
+.nova-zigzag-list .nova-icon-small img {
+    width: 60px;               /* [요청사항] 다른 아이콘(SL-Track 등)과 동일 크기 */
+    height: auto;
+    margin-bottom: 20px;       /* 타이틀과의 간격 */
+    display: block;
+}
+
+/* 타이틀 & 설명글은 공통 클래스(.nova-title, .nova-desc) 설정을 따름 */
+
+/* 3. 이미지 그룹 설정 */
+.nova-zigzag-list .nova-img-group {
+    flex: 1;                   /* 50% 공간 차지 */
+    display: flex;
+    justify-content: center;   /* 이미지 자체 중앙 정렬 */
+    align-items: center;
+}
+
+.nova-zigzag-list .nova-img {
+    width: 100%;               /* 영역 꽉 차게 */
+    max-width: 500px;          /* 이미지가 너무 커지지 않게 제한 */
+    height: auto;
+    display: block;
+}
+
+/* 4. 지그재그 핵심 로직 (Reverse Desktop) 
+   - 2번째(Headrest), 4번째(Bluetooth) 아이템에 적용된 클래스
+*/
+.nova-feature-card.transparent-bg.nova-reverse-desktop {
+    flex-direction: row-reverse; /* [핵심] 순서를 반대로 뒤집음 (이미지 좌측, 텍스트 우측) */
+}
+
+/* =========================================
+   [RESPONSIVE] Mobile Optimization (Zigzag Section)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. 기본 배치: 상하 정렬 (Column) */
+    .nova-zigzag-list .nova-feature-card.transparent-bg {
+        flex-direction: column;         /* HTML 순서대로: 텍스트(위) -> 이미지(아래) */
+        margin-bottom: 60px;
+        gap: 0;                         /* 갭 대신 마진으로 제어 */
+    }
+
+    /* 2. 데스크탑용 반전(Reverse) 클래스 무력화 */
+    /* 모바일에서는 순서 뒤집지 않고 무조건 위->아래 유지 */
+    .nova-feature-card.transparent-bg.nova-reverse-desktop {
+        flex-direction: column;
+    }
+
+    /* 3. [수정됨] 이미지 그룹 설정 */
+    .nova-zigzag-list .nova-img-group {
+        order: initial;                 /* [중요] -1 제거 (강제 상단 배치 해제) */
+        margin-top: 30px;               /* 텍스트와 이미지 사이 간격 추가 */
+        margin-bottom: 0;
+    }
+    
+    /* 4. 텍스트 그룹 설정 */
+    .nova-zigzag-list .nova-text-group {
+        text-align: center;             /* 모바일: 중앙 정렬 */
+        padding: 0 10px;
+    }
+    
+    /* 5. 아이콘 중앙 정렬 */
+    .nova-zigzag-list .nova-icon-small img {
+        margin: 0 auto 20px;            /* 아이콘 가운데 배치 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+[NEW] Minimum Doorway & Packaging Section
+========================================= */
+
+/* 1. 섹션 전체 설정 */
+.doorway-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    margin-bottom: 120px;
+}
+
+/* 2. 타이틀 스타일 (중앙 정렬) */
+.doorway-section .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 전체 레이아웃 (Flexbox: 좌우 배치) */
+.doorway-layout {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: flex-start; /* 상단 기준 정렬 */
+    gap: 80px; /* 좌우 이미지 사이 간격 */
+    max-width: 1300px; /* 전체 폭 제한 */
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------
+[Left Column] 도어웨이 이미지 (왼쪽)
+------------------------------------------------ */
+.doorway-left {
+    flex: 1; /* 공간 50% 차지 */
+    display: flex;
+    justify-content: flex-end; /* 이미지를 중앙(오른쪽)으로 붙임 */
+}
+
+.doorway-left img {
+    width: 60%;
+    max-width: 200px; /* 이미지 크기 제한 */
+    height: auto;
+    object-fit: contain;
+}
+
+/* ------------------------------------------------
+[Right Column] 박스 이미지 + 가이드 텍스트 (오른쪽)
+------------------------------------------------ */
+.doorway-right {
+    flex: 1; /* 공간 50% 차지 */
+    display: flex;
+    flex-direction: column; /* 위: 박스, 아래: 텍스트 */
+    align-items: flex-start; /* ★핵심: 모든 요소를 왼쪽 정렬 */
+    text-align: left;
+    padding-top: 20px; /* 왼쪽 이미지와 높이 밸런스 맞춤 */
+}
+
+/* 박스 이미지 */
+.doorway-right .box-img {
+    margin-bottom: 40px; /* 텍스트와의 간격 */
+}
+
+.doorway-right .box-img img {
+    width: 70%;
+    max-width: 300px; /* 박스 이미지 크기 제한 */
+    height: auto;
+    display: block;
+    margin: 0; /* 왼쪽 정렬 유지 */
+}
+
+/* 측정 가이드 텍스트 영역 */
+.measuring-guide {
+    max-width: 500px; /* 글자가 너무 길어지지 않게 제한 */
+    color: #888888;
+    font-family: 'Avenir', 'Nunito', sans-serif;
+}
+
+/* [수정됨] 가이드 제목 (s-title과 동일하게 설정) */
+/* HTML에 strong 태그가 없으므로 .guide-title을 직접 타겟팅 */
+.guide-title {
+    font-family: 'Roboto', sans-serif; /* s-title 폰트 */
+    font-weight: 600; /* Bold */
+    font-size: 28px; /* s-title 크기 */
+    color: #3563e0; /* s-title 색상 (Blue) */
+    display: block;
+    margin-bottom: 20px; /* 리스트와의 간격 확보 */
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: -40px auto 60px
+}
+
+.guide-title strong {
+    color: #515151;
+    font-weight: 600;
+    font-family: "Arial", sans-serif;
+}
+
+/* 가이드 리스트 (• 항목들) */
+.guide-list > div {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    /* [엔지니어링 팁] 내어쓰기 (Hanging Indent) */
+    padding-left: 15px;
+    text-indent: -15px;
+    color: #888888;
+}
+
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment (Doorway Section)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 전체 레이아웃: 세로 배치로 변경 */
+    .doorway-layout {
+        flex-direction: column;    /* 위아래로 쌓임 */
+        align-items: center;       /* 가로축 중앙 정렬 */
+        gap: 40px;                 /* 간격 줄임 */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. 왼쪽 (도어 이미지) 구역 */
+    .doorway-left {
+        width: 100%;
+        justify-content: center;   /* 이미지 중앙 정렬 */
+        margin-bottom: 20px;       /* 아래 요소와 간격 */
+    }
+
+    .doorway-left img {
+        width: 50%;                /* 모바일에서 적절한 크기로 조정 */
+        max-width: 180px;
+    }
+
+    /* 3. 오른쪽 (박스 + 텍스트) 구역 */
+    .doorway-right {
+        width: 100%;
+        align-items: center;       /* 내부 요소(박스, 텍스트) 중앙 정렬 */
+        padding-top: 0;            /* 데스크탑용 패딩 제거 */
+    }
+
+    /* 4. 박스 이미지 중앙 정렬 */
+    .doorway-right .box-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;   /* 플렉스로 중앙 정렬 강제 */
+        margin-bottom: 30px;
+    }
+
+    .doorway-right .box-img img {
+        margin: 0 auto;            /* 마진 오토로 확실하게 중앙 */
+        width: 60%;                /* 모바일 크기 조정 */
+    }
+
+    /* 5. 가이드 타이틀 (Measuring Guide) 위치 재설정 */
+    .guide-title {
+        margin: 0 0 30px 0;        /* 데스크탑의 -40px 마진 초기화 */
+        text-align: center;
+    }
+
+    /* 6. 설명 텍스트 (리스트) */
+    .measuring-guide {
+        width: 100%;
+        padding: 0 20px;           /* 모바일 좌우 여백 */
+        box-sizing: border-box;
+    }
+
+    /* 리스트 자체는 중앙 정렬하되, 글자는 왼쪽 정렬 유지 (가독성 위함) */
+    .guide-list {
+        display: inline-block;     /* 중앙 정렬을 위해 블록 속성 변경 */
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION 13 Dimensions Section
+   ========================================= */
+
+.dimensions-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.dimensions-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. 타이틀 스타일 (이전 섹션들과 통일) */
+.dimensions-section .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #424242;   /* 진한 회색 */
+    text-align: center;
+    margin-bottom: 60px; /* 타이틀과 이미지 사이 여백 */
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+/* 2. 레이아웃 (가로 배치) */
+.dimensions-row {
+    display: flex;
+    justify-content: center; /* 전체 중앙 정렬 */
+    align-items: flex-end;   /* 바닥 라인 기준으로 정렬 (치수선 보기 좋게) */
+    gap: 80px;               /* 두 이미지 사이 넉넉한 간격 */
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 3. 이미지별 크기 제어 (비율 차별화) */
+
+/* 왼쪽: 정면 샷 (폭이 좁음) */
+.dim-img:first-child {
+    flex: 1;           /* 1의 비율 */
+    max-width: 350px;  /* 너무 커지지 않게 제한 */
+}
+
+/* 오른쪽: 측면 샷 (폭이 넓음) */
+.dim-img:last-child {
+    flex: 1.8;         /* 왼쪽보다 약 1.8배 더 넓은 공간 할당 */
+    max-width: 700px;  /* 넓은 이미지 수용 */
+}
+
+/* 이미지 공통 */
+.dim-img img {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment (Dimensions Section)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 섹션 여백 조정 */
+    .dimensions-section {
+        padding: 60px 0;          /* 상하 여백 축소 */
+    }
+
+    /* 2. 레이아웃: 세로 배치로 변경 */
+    .dimensions-row {
+        flex-direction: column;   /* 위아래로 쌓임 */
+        align-items: center;      /* 가로축 중앙 정렬 */
+        gap: 50px;                /* 이미지 사이 간격 조정 */
+        width: 100%;              /* 너비 100% */
+    }
+
+    /* 3. 이미지 래퍼(Wrapper) 크기 재설정 */
+    /* 데스크탑의 flex 비율(1 vs 1.8)과 max-width 제한을 해제하고 통일 */
+    .dim-img:first-child,
+    .dim-img:last-child {
+        flex: auto;               /* 비율 무시 */
+        width: 100%;              /* 화면 꽉 차게 */
+        max-width: 400px;         /* 모바일에서 너무 커지지 않게 제한 (선택사항) */
+        margin: 0 auto;           /* 중앙 정렬 */
+    }
+
+    /* 4. 실제 이미지 스타일 */
+    .dim-img img {
+        width: 100%;              /* 래퍼 안에서 꽉 차게 */
+        margin: 0 auto;           /* 중앙 정렬 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION 14 Specification Section
+   ========================================= */
+
+/* 1. 섹션 전체 여백 및 배경 */
+.spec-section {
+    background-color: #ffffff;
+    padding: 100px 0;      /* 위아래 넉넉한 여백 */
+    margin-bottom: 100px;  /* 하단 여백 */
+}
+
+/* 2. 메인 제목 (Specification) 스타일 */
+/* HTML 구조상 .container 바로 아래 첫 번째 div가 제목입니다 */
+.spec-section .container > div:first-child {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;       /* 아주 굵게 (Image like) */
+    font-size: 40px !important;        /* 큰 제목 크기 */
+    text-align: center;     /* 중앙 정렬 */
+    margin-bottom: 60px;    /* 표와의 간격 */
+    color: #000000;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 테이블 컨테이너 (중앙 정렬 & 상단 테두리) */
+.spec-table {
+    max-width: 1000px;      /* 표 너비 제한 */
+    margin: 0 auto;         /* 중앙 정렬 */
+    border-top: 1px solid #e5e5e5; /* 표 맨 위 가로선 */
+}
+
+/* 4. 행(Row) 스타일 */
+.spec-row {
+    display: flex;          /* 가로 배치 (좌:라벨, 우:값) */
+    align-items: flex-start;/* 위쪽 라인 맞춤 */
+    padding: 25px 0;        /* 행 높이 (위아래 여백) */
+    border-bottom: 1px solid #e5e5e5; /* 각 줄마다 회색 밑줄 */
+}
+
+/* 마지막 줄 테두리 제거 */
+.spec-row.no-border {
+    border-bottom: none;
+}
+
+/* 5. 왼쪽 라벨 (Product Name, Power Supply 등) */
+.spec-label {
+    width: 30%;             /* 왼쪽 칸 너비 (약 30%) */
+    min-width: 200px;       /* 최소 너비 확보 */
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;       /* Bold */
+    font-size: 20px;
+    color: #000000;         /* 검은색 */
+    line-height: 1.6;
+}
+
+/* 6. 오른쪽 값 (Titan Plantaris, 110-120V 등) */
+.spec-value {
+    flex: 1;                /* 남은 공간 다 차지 */
+    
+    font-family: 'Roboto', sans-serif; /* Avenir가 없으면 Poppins */
+    font-weight: 500;       /* Regular */
+    font-size: 20px;
+    color: #444444;         /* 약간 부드러운 검은색 */
+    line-height: 1.6;
+}
+
+/* 7. 내부 컬럼 나누기 (Upright / Reclined 등) */
+/* .spec-value 안에 .split-col이 있을 때 가로로 한 번 더 나눔 */
+.spec-value.split-col {
+    display: flex;          
+    gap: 80px;              /* 두 항목 사이 간격 (넓게) */
+}
+
+/* 내부 아이템 (Strong 제목 + Span 내용) */
+.col-item {
+    display: flex;
+    flex-direction: column; 
+}
+
+.col-item strong {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;     /* 제목과 수치 사이 간격 */
+    display: block;
+}
+
+/* 8. 다운로드 링크 스타일 (빨간색) */
+.red-link {
+    color: #ff4d4d;         /* 이미지와 동일한 빨간색 */
+    text-decoration: none;  
+    font-weight: 500;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.red-link:hover {
+    opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
+}
+
+
+
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment (Spec Section)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 섹션 여백 축소 */
+    .spec-section {
+        padding: 60px 0;       /* 위아래 패딩 줄임 */
+        margin-bottom: 60px;
+    }
+
+    /* 2. 메인 제목 크기 조정 */
+    .spec-section .container > div:first-child {
+        font-size: 28px !important; /* 모바일 타이틀 크기 축소 */
+        margin-bottom: 30px;
+    }
+
+    /* 3. 행(Row) 레이아웃 변경: 좌우 배치 -> 상하 배치 */
+    .spec-row {
+        flex-direction: column; /* 위: 라벨, 아래: 값 */
+        align-items: flex-start;
+        padding: 20px 0;        /* 행 간격 살짝 좁힘 */
+    }
+
+    /* 4. 라벨 스타일 (위쪽으로 이동) */
+    .spec-label {
+        width: 100%;            /* 너비 100% 차지 */
+        min-width: auto;        /* 최소 너비 제한 해제 */
+        margin-bottom: 8px;     /* 값과의 간격 추가 */
+        font-size: 16px;        /* 폰트 사이즈 조정 */
+        color: #888;            /* 구분을 위해 살짝 연하게 (선택사항) */
+    }
+
+    /* 5. 값 스타일 (아래쪽으로 이동) */
+    .spec-value {
+        width: 100%;
+        font-size: 18px;        /* 중요 정보이므로 라벨보다 크게 */
+    }
+
+    /* 6. 내부 분할 컬럼 (Upright/Reclined) 세로 배치 */
+    .spec-value.split-col {
+        flex-direction: column; /* 가로 나열 -> 세로 나열 */
+        gap: 15px;              /* 내부 아이템 간격 축소 */
+    }
+
+    /* 7. 다운로드 링크 폰트 조정 */
+    .red-link {
+        font-size: 18px;
+    }
+}

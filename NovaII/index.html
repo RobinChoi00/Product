@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.nova_II_product_main.png" alt="Osaki Helix LE 4D Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            
+            <div class="intro-desc">
+                Nova II is a 3D+ massage chair designed to deliver precise, full-body relief. 
+                Its advanced massage mechanism adapts to your body’s contours with integrated 4D control elements, 
+                while reaching deep into tired muscles for a more personalized, therapeutic experience. 
+                With smooth reclining comfort and intuitive controls, 
+                Nova II transforms everyday relaxation into something truly next-level.
+            </div>
+            
+            <div class="group-slider">
+                <div class="slider-main">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/5.nova_II_left_arrow.png" alt="Prev">
+                    </div>
+                    
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/4.nova_II_colors_all.png" alt="Helix LE Colors">
+                    </div>
+                    
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/6.nova_II_right_arrow.png" alt="Next">
+                    </div>
+                </div>
+
+                <div class="swatch-panel">
+                    <div class="bar-bg-wrap">
+                        <img src="images/7.nova_II_swatches_bar.png" class="bar-bg" alt="Bar">
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/8.nova_II_swatch_all.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/9.nova_II_swatch_black.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/10.nova_II_swatch_taupe.png" alt="Brown">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="nova-section nova-feature-list">
+        <div class="nova-container">
+            <div class="nova-feature-card">
+                <div class="nova-img-group">
+                    <img src="images/14.nova_II_3D+.png" alt="3D+ Massage Mechanism Structure" class="nova-img">
+                </div>
+                <div class="nova-text-group">
+                    <div class="nova-title">
+                        <span class="text-blue">3D+ MASSAGE</span><br>
+                        MECHANISM
+                    </div>
+                    <div class="nova-desc">
+                        3D+ is an enhanced 3D system that <strong>integrates selected 4D control elements,</strong> 
+                        delivering smoother motion and more precise pressure control—<strong>without the complexity or cost of a full 4D system.</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="nova-feature-card">        
+                <div class="nova-img-group">
+                    <img src="images/15.nova_II_body_scan.png" alt="AI Body Scanning Technology" class="nova-img">
+                </div>
+                <div class="nova-text-group">
+                    <div class="nova-title">
+                        <span class="text-blue">BODY SCAN</span><br>
+                        TECHNOLOGY
+                    </div>
+                    <div class="nova-desc">
+                        An intelligent body scan <strong>adapts seamlessly to your body’s natural contours,</strong> 
+                        guiding the rollers into perfect alignment for a refined, deeply satisfying massage.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="nova-section nova-gradient-section">
+        <div class="nova-container">
+            <div class="nova-sub-section nova-center-feature">
+                <div class="nova-text-group center-align">
+                    <div class="nova-title">
+                        <span class="text-blue">3-STAGE</span><br>
+                        ZERO GRAVITY RECLINING
+                    </div>
+                    <div class="nova-desc">
+                        Experience <strong>a feeling of weightlessness</strong> with the Osaki Nova II 3-Stage Zero Gravity massage chair. 
+                        As you recline, your body is <strong>evenly supported to reduce back pressure and enhance comfort</strong> for a more immersive massage.
+                    </div>
+                </div>
+                <div class="nova-img-group">
+                    <img src="images/16.nova_II_ZG.png" alt="3-Stage Zero Gravity Reclining" class="nova-img">
+                </div>
+            </div>
+
+            <div class="nova-sub-section nova-grid-2-col">       
+                <div class="nova-col-item">
+                    <div class="nova-icon">
+                        <img src="icons/17.nova_II_icon_SL.png" alt="SL-Track Icon">
+                    </div>
+                    <div class="nova-text-group">
+                        <div class="nova-title">
+                            <span class="text-blue">SL-TRACK</span><br>
+                            SYSTEM
+                        </div>
+                        <div class="nova-desc">
+                            Shaped to match the natural curvature of your spine, the SL-track <strong>flows from neck to glutes</strong>, 
+                            creating a fluid, deeply satisfying <strong>full-back massage.</strong>
+                        </div>
+                    </div>
+                    <div class="nova-img-group">
+                        <img src="images/18.nova_II_SL.png" alt="SL-Track Structure" class="nova-img">
+                    </div>
+                </div>
+                <div class="nova-col-item">
+                    <div class="nova-icon">
+                        <img src="icons/19.nova_II_icon_space-saving.png" alt="Space Saving Icon">
+                    </div>
+                    <div class="nova-text-group">
+                        <div class="nova-title">
+                            <span class="text-blue">SPACE-SAVING</span><br>
+                            TECHNOLOGY
+                        </div>
+                        <div class="nova-desc">
+                            Thoughtfully engineered to save space, the Osaki Nova II slides forward as it reclines, 
+                            preserving your living area while achieving a full recline with just <strong>8.5 inches of wall clearance.</strong>
+                        </div>
+                    </div>
+                    <div class="nova-img-group">
+                        <img src="images/20.nova_II_space-saving.png" alt="Space Saving Slide Mechanism" class="nova-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nova-sub-section nova-feature-list">    
+                <div class="nova-feature-card transparent-bg">
+                    <div class="nova-text-group">
+                        <div class="nova-title">
+                            <span class="text-blue">26-CELL</span><br>
+                            AIR COMPRESSION<br>MASSAGE
+                        </div>
+                        <div class="nova-desc">
+                            Twenty-six precisely placed air cells envelop your body in <strong>gentle compression, easing tension and deepening relaxation</strong> 
+                            for a more restorative experience.
+                        </div>
+                    </div>
+                    <div class="nova-img-group">
+                        <img src="images/21.nova_II_air-cell.png" alt="26-Cell Air Compression Massage" class="nova-img">
+                    </div>
+                </div>
+
+                <div class="nova-feature-card transparent-bg">
+                    <div class="nova-img-group">
+                        <img src="images/23.nova_II_heating.png" alt="Lumbar Heating Therapy" class="nova-img">
+                    </div>
+                    <div class="nova-text-group">
+                        <div class="nova-icon-small">
+                            <img src="icons/22.nova_II_icon_heating.png" alt="Heat Icon">
+                        </div>
+                        <div class="nova-title">
+                            <span class="text-red">LUMBAR</span><br>
+                            HEATING THERAPY
+                        </div>
+                        <div class="nova-desc">
+                            Soothing lumbar heat envelops tired muscles in gentle warmth, <strong>releasing tension, improving circulation,</strong> 
+                            and elevating your relaxation experience.
+                        </div>
+                        <div class="nova-note">
+                            * The heating therapy provides warmth in the range of approximately 75 - 83°F.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="nova-section nova-modes-section">
+        <div class="nova-container">
+            <div class="nova-program-card">
+                <div class="nova-text-group center-align">
+                    <div class="nova-title">
+                        <span class="text-blue">12 AUTO</span> PROGRAMS
+                    </div>
+                </div>
+
+                <div class="nova-mode-grid nova-grid-4-col">
+                    <div class="nova-mode-item">
+                        <img src="icons/24.nova_II_icon_comfort.png" alt="Comfort">
+                        <span>COMFORT</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/25.nova_II_icon_relax.png" alt="Relax">
+                        <span>RELAX</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/26.nova_II_icon_rocking.png" alt="Rocking">
+                        <span>ROCKING</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/27.nova_II_icon_back&waist.png" alt="Back & Waist">
+                        <span>BACK & WAIST</span>
+                    </div>
+
+                    <div class="nova-mode-item">
+                        <img src="icons/28.nova_II_icon_neck&shoulder.png" alt="Neck & Shoulder">
+                        <span>NECK &<br>SHOULDER</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/29.nova_II_icon_full-body.png" alt="Full Body Massage">
+                        <span>FULL BODY<br>MASSAGE</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/30.nova_II_icon_spine-care.png" alt="Spine Care Massage">
+                        <span>SPINE CARE<br>MASSAGE</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/31.nova_II_icon_fatigue-recovery.png" alt="Fatigue Recovery">
+                        <span>FATIGUE<br>RECOVERY</span>
+                    </div>
+
+                    <div class="nova-mode-item">
+                        <img src="icons/32.nova_II_icon_meridian_relaxation.png" alt="Meridian Relaxation">
+                        <span>MERIDIAN<br>RELAXATION</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/33.nova_II_icon_seated_stretch.png" alt="Seated Stretch">
+                        <span>SEATED<br>STRETCH</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/34.nova_II_icon_soothing_sleep.png" alt="Soothing Sleep">
+                        <span>SOOTHING<br>SLEEP</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/35.nova_II_icon_leisure_health.png" alt="Leisure Health">
+                        <span>LEISURE<br>HEALTH</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nova-program-card">
+                
+                <div class="nova-text-group center-align">
+                    <div class="nova-title">
+                        <span class="text-blue">9 MANUAL</span> MODES
+                    </div>
+                </div>
+
+                <div class="nova-mode-grid nova-flex-wrap">
+                    <div class="nova-mode-item">
+                        <img src="icons/36.nova_II_icon_knead.png" alt="Knead">
+                        <span>KNEAD</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/37.nova_II_icon_tap.png" alt="Tap">
+                        <span>TAP</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/38.nova_II_icon_knock.png" alt="Knock">
+                        <span>KNOCK</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/39.nova_II_icon_knead&pat.png" alt="Knead Pat">
+                        <span>KNEAD PAT</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/40.nova_II_icon_shiatsu.png" alt="Shiatsu">
+                        <span>SHIATSU</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/41.nova_II_icon_4D-knead.png" alt="4D Knead">
+                        <span>4D KNEAD</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/42.nova_II_icon_4D-tap.png" alt="4D Tap">
+                        <span>4D TAP</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/43.nova_II_icon_4D-knead&tap.png" alt="4D Knead & Tap">
+                        <span>4D KNEAD & TAP</span>
+                    </div>
+                    <div class="nova-mode-item">
+                        <img src="icons/44.nova_II_icon_4D_knock.png" alt="4D Knock">
+                        <span>4D KNOCK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="nova-section nova-feature-center">
+        <div class="nova-container">
+            <div class="nova-text-group center-align">
+                <div class="nova-icon-circle">
+                    <img src="icons/45.nova_II_icon_foot.png" alt="Foot Icon">
+                </div>
+
+                <div class="nova-title">
+                    <span class="text-blue">3 SPECIALIZED</span><br>
+                    FOOT ROLLERS
+                </div>
+
+                <div class="nova-desc">
+                    The footrest’s rotating massage rollers use <strong>precision-engineered reflexology ridges</strong> 
+                    to target key <strong>acupressure points</strong>, delivering a deep, therapeutic massage that supports overall foot wellness.
+                </div>
+            </div>
+
+            <div class="nova-img-group">
+                <img src="images/46.nova_II_foot-rollers.png" alt="Foot Rollers Mechanism" class="nova-img">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="nova-section nova-zigzag-list">
+        <div class="nova-container">
+
+            <div class="nova-feature-card transparent-bg">
+                <div class="nova-text-group">
+                    <div class="nova-icon-small">
+                        <img src="icons/47.nova_II_icon_extend.png" alt="Extension Icon">
+                    </div>
+                    <div class="nova-title">
+                        <span class="text-blue">SPRING-LOADED</span><br>
+                        EXTENDABLE<br>FOOTREST
+                    </div>
+                    <div class="nova-desc">
+                        The Osaki Nova II features a spring-loaded footrest that <strong>extends up to 6 inches</strong>, automatically adjusting to provide a comfortable, <strong>customized fit for users of all heights and body types.</strong>
+                    </div>
+                </div>
+                <div class="nova-img-group">
+                    <img src="images/48.nova_II_footrest_extend.png" alt="Spring-Loaded Footrest" class="nova-img">
+                </div>
+            </div>
+
+            <div class="nova-feature-card transparent-bg nova-reverse-desktop">
+                <div class="nova-text-group">
+                    <div class="nova-title">
+                        <span class="text-blue">REMOVABLE</span><br>
+                        HEADREST
+                    </div>
+                    <div class="nova-desc">
+                        The removable headrest lets you easily <strong>adjust cushioning and support</strong>, ensuring optimal comfort and <strong>precise 3D+ massage alignment for your neck and shoulders.</strong>
+                    </div>
+                </div>
+                <div class="nova-img-group">
+                    <img src="images/49.nova_II_removable-headrest.png" alt="Removable Headrest" class="nova-img">
+                </div>
+            </div>
+
+            <div class="nova-feature-card transparent-bg">
+                <div class="nova-text-group">
+                    <div class="nova-title">
+                        <span class="text-blue">REMOTE</span><br>
+                        CONTROLLER
+                    </div>
+                    <div class="nova-desc">
+                        The remote controller features a wide array of clearly labeled buttons, <strong>giving you precise, intuitive control</strong> over every massage setting without the need for a touchscreen.
+                    </div>
+                </div>
+                <div class="nova-img-group">
+                    <img src="images/50.nova_II_remote.png" alt="Remote Controller" class="nova-img">
+                </div>
+            </div>
+
+            <div class="nova-feature-card transparent-bg nova-reverse-desktop">
+                <div class="nova-text-group">
+                    <div class="nova-icon-small">
+                        <img src="icons/51.nova_II_icon_bluetooth.png" alt="Bluetooth Icon">
+                    </div>
+                    <div class="nova-title">
+                        <span class="text-blue">QUALITY</span><br>
+                        BLUETOOTH SPEAKERS
+                    </div>
+                    <div class="nova-desc">
+                        Surround yourself with rich, refined audio from integrated Bluetooth speakers, designed to <strong>deepen relaxation with your preferred music or ambient sounds.</strong>
+                    </div>
+                </div>
+                <div class="nova-img-group">
+                    <img src="images/52.nova_II_speakers.png" alt="Bluetooth Speakers" class="nova-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="doorway-section">
+        <div class="container">            
+            <div class="section-title">MINIMUM DOORWAY & PACKAGING</div>
+            <div class="doorway-layout">
+                <div class="doorway-left">
+                    <img src="images/71.nido_min.doorway1.png" alt="Minimum Doorway Size">
+                </div>
+                <div class="doorway-right">
+                    <div class="box-img">
+                        <img src="images/72.nido_packaging.png" alt="Packaging Box Dimensions">
+                    </div>
+                    <div class="measuring-guide">
+                        <div class="guide-title"><strong>Measuring Guide</strong></div>
+                        <div class="guide-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="dimensions-section">
+        <div class="container">
+            <div class="section-title text-center">DIMENSIONS</div>
+            <div class="dimensions-row">
+                <div class="dim-img">
+                    <img src="images/55.nova_II_dimensions1.png" alt="Forge Front Dimensions">
+                </div>
+                <div class="dim-img">
+                    <img src="images/56.nova_II_dimensions2.png" alt="Forge Side Dimensions">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    
+    
+    
+    
+    
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+            
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Osaki Nova II</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="https://cdn.shopify.com/s/files/1/0086/1297/0558/files/A3201-8_Forge_3D_manual_revised_2025.8.20.pdf?v=1769098064" class="red-link" target="_blank">Download</a>
+                        
+                    
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Standing</strong>
+                            <span>29.5" x 60" x 44.2"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>29.5" x 67.5" x 37"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">178.574</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>22.5"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>20"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">29.75"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Maximum User Weight</div>
+                    <div class="spec-value">270 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>30.315" x 61" x 33.85"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border"> <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span> 209.439lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
