@@ -1740,9 +1740,10 @@ body {margin: 0;}
    1. ZERO GRAVITY 텍스트 너비 확장
    ========================================= */
 .nova-center-feature .nova-text-group {
-    max-width: 1000px !important;           /* [수정] 800px -> 100% (넓게 사용) */
+    max-width: 900px !important;           /* [수정] 800px -> 100% (넓게 사용) */
     margin: 0 auto 40px;       /* 중앙 정렬 유지 */
     text-align: center;
+    justify-content: center;
     padding: 0 20px;           /* 모바일 안전 여백 */
     box-sizing: border-box;
 }
@@ -1804,7 +1805,7 @@ body {margin: 0;}
 
 
 .nova-feature-center .nova-text-group .nova-desc {
-    max-width: 1000px !important;           /* [수정] 너비 제한 해제 */
+    max-width: 900px !important;           /* [수정] 너비 제한 해제 */
 }
 
 
@@ -1864,4 +1865,34 @@ body {margin: 0;}
     text-align: center !important;
     margin: 0 auto 50px !important;
     width: 100%;
+}
+
+
+
+
+/* ==============================================================
+   [강제 정렬] SL-Track 이미지만 물리적으로 아래로 내리기
+   ============================================================== */
+
+/* 1번째 컬럼(SL-Track)의 이미지 그룹만 콕 집어서 위쪽 여백 추가 */
+.nova-grid-2-col .nova-col-item:first-child .nova-img-group {
+    /* [Engineering Point] 
+       옆 섹션(Space Saving) 텍스트 양과의 차이만큼 
+       물리적인 빈 공간(Padding)을 밀어넣습니다. 
+       눈대중으로 봤을 때 약 80px~100px 정도면 옆 이미지와 높이가 맞을 겁니다.
+    */
+    padding-top: 100px !important; 
+    
+    /* 혹시 모를 간섭 제거 */
+    margin-top: 0 !important; 
+}
+
+/* -----------------------------------------------------------
+   [모바일 방어] 모바일에서는 이 강제 여백이 필요 없으므로 제거
+   ----------------------------------------------------------- */
+@media (max-width: 768px) {
+    .nova-grid-2-col .nova-col-item:first-child .nova-img-group {
+        padding-top: 0 !important;
+        margin-top: 20px !important; /* 모바일에서 적당한 간격 유지 */
+    }
 }
