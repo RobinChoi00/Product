@@ -547,6 +547,7 @@ body {margin: 0;}
     padding: 60px 50px;            /* 전체 컨테이너 안쪽 여백 */
     margin-bottom: 100px;        /* 다음 섹션과의 간격 */
     box-sizing: border-box;
+    align-items: stretch;
 }
 
 /* 2. 개별 컬럼 아이템 (왼쪽/오른쪽 각각) */
@@ -554,7 +555,6 @@ body {margin: 0;}
     flex: 1;                    /* 1:1 비율로 공간 차지 (정확히 50%) */
     display: flex;
     flex-direction: column;     /* 내부 요소는 위에서 아래로 쌓임 */
-    justify-content: space-between;
 }
 
 .nova-col-item:first-child {
@@ -1809,4 +1809,17 @@ body {margin: 0;}
     margin: 0 auto 60px;       /* 하단 여백 */
     text-align: center;
     padding: 0 20px;
+}
+
+
+
+
+.nova-feature-center .nova-text-group .nova-desc {
+    max-width: 800px !important;           /* [수정] 너비 제한 해제 */
+}
+
+
+.nova-program-card .nova-title {
+    text-align: center !important;
+    margin-bottom: 30px;       /* 박스와의 간격 */
 }
