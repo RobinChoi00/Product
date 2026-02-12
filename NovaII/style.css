@@ -1857,7 +1857,7 @@ body {margin: 0;}
        물리적인 빈 공간(Padding)을 밀어넣습니다. 
        눈대중으로 봤을 때 약 80px~100px 정도면 옆 이미지와 높이가 맞을 겁니다.
     */
-    padding-top: 120px !important; 
+    padding-top: 150px !important; 
     
     /* 혹시 모를 간섭 제거 */
     margin-top: 0 !important; 
@@ -1899,4 +1899,19 @@ body {margin: 0;}
     
     /* 기존 흐림 효과(mask-image)는 그대로 유지됨 */
 
+}
+
+/* =========================================
+   [FIX] ZERO GRAVITY 설명글 중앙 정렬
+   ========================================= */
+
+/* Zero Gravity 섹션 안에 있는 설명글(.nova-desc)만 타겟팅 */
+.nova-center-feature .nova-desc {
+    text-align: center !important;  /* [핵심] 글자 가운데 정렬 */
+    margin: 0 auto !important;      /* 박스 자체도 중앙 배치 */
+    display: block;
+    width: 100%;
+    
+    /* (선택사항) 글줄이 너무 길어서 읽기 힘들다면 맥스 너비를 살짝 줘도 좋습니다 */
+    /* max-width: 1000px; */ 
 }
