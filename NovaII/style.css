@@ -1740,7 +1740,7 @@ body {margin: 0;}
    1. ZERO GRAVITY 텍스트 너비 확장
    ========================================= */
 .nova-center-feature .nova-text-group {
-    max-width: 100%;           /* [수정] 800px -> 100% (넓게 사용) */
+    max-width: 1000px !important;           /* [수정] 800px -> 100% (넓게 사용) */
     margin: 0 auto 40px;       /* 중앙 정렬 유지 */
     text-align: center;
     padding: 0 20px;           /* 모바일 안전 여백 */
@@ -1804,7 +1804,7 @@ body {margin: 0;}
 
 
 .nova-feature-center .nova-text-group .nova-desc {
-    max-width: 800px !important;           /* [수정] 너비 제한 해제 */
+    max-width: 1000px !important;           /* [수정] 너비 제한 해제 */
 }
 
 
@@ -1818,7 +1818,7 @@ body {margin: 0;}
 /* =========================================
    3. HEATING THERAPY 배경 제거 (투명화)
    ========================================= */
-.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img-group {
+.nova-feature-card .nova-img-group {
     background: transparent !important;       /* [핵심] 배경 투명 */
     background-color: transparent !important;
     box-shadow: none !important;              /* 그림자 제거 */
@@ -1826,4 +1826,42 @@ body {margin: 0;}
     padding: 0 !important;                    /* 패딩 제거 */
     
     margin: 0 auto;                           /* 중앙 정렬 */
+}
+.nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-img {
+    max-width: 450px;       /* [요청] 크기를 400px 정도로 줄임 (기존보다 작게) */
+    width: 100%;            /* 모바일 대응 */
+    margin: 0 auto;         /* [요청] 이미지 그룹 내에서 중앙 정렬 */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    
+    /* 이미지 중앙 배치 */
+    display: block;
+    margin: 0 auto;
+    
+    /* 기존 흐림 효과(mask-image)는 그대로 유지됨 */
+
+}
+
+/* =========================================
+   [TITLES] 9 MANUAL & 12 AUTO 중앙 정렬
+   ========================================= */
+
+/* 특정 클래스(center-align)가 붙은 텍스트 그룹을 강제로 중앙 정렬 */
+.nova-text-group.center-align {
+    display: block !important;
+    width: 100% !important;        /* 너비를 가득 채워서 중앙 정렬 공간 확보 */
+    max-width: 100% !important;    /* 혹시 걸려있을 너비 제한 해제 */
+    
+    text-align: center !important; /* [글자] 가운데 정렬 */
+    margin: 0 auto 50px !important;/* [박스] 중앙 배치 & 아래 여백 */
+    
+    padding: 0 !important;         /* 불필요한 좌우 패딩 제거 (이미지상의 60px 제거) */
+}
+
+/* 혹시 .center-align 클래스가 없는 경우를 대비해 부모 섹션 기준으로도 적용 */
+.manual-modes-section .nova-text-group,
+.auto-programs-section .nova-text-group {
+    text-align: center !important;
+    margin: 0 auto 50px !important;
+    width: 100%;
 }
