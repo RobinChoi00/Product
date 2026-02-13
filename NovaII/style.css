@@ -2090,4 +2090,10 @@ body {margin: 0;}
         align-items: center !important;     /* Flex 아이템 중앙 정렬 */
     }
     
+    .nova-grid-2-col .nova-col-item:first-child {
+        padding-bottom: 80px !important; /* 요청하신 패딩 방식 */
+        
+        /* (선택) 만약 패딩 대신 바깥 여백으로 밀고 싶다면 아래 주석 해제 */
+        /* margin-bottom: 120px !important; */
+    }
 }
