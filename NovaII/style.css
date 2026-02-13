@@ -2076,7 +2076,7 @@ body {margin: 0;}
         padding: 40px 20px !important;
     }
 
-    .nova-feature-card .nova-text-group {
+    .nova-feature-card.nova-text-group {
         text-align: center !important;
         justify-content: center !important;
     }    
