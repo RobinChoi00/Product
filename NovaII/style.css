@@ -1791,6 +1791,7 @@ body {margin: 0;}
     max-width: 100% !important; /* [수정] 강제로 너비 제한 해제 */
     width: 100%;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 /* 2-2. 이미지 그룹을 바닥으로 밀기 (Bottom Align) */
@@ -2071,9 +2072,7 @@ body {margin: 0;}
         width: 100% !important;             /* 그리드 칸 안에서 꽉 차게 */
         margin: 0 !important;
     }
-    .nova-flex-wrap .nova-mode-item img {
-        width: 70px !important;        /* [수정] 살짝 작게 하여 주변 여백 강조 */
-        height: 70px !important;
-        margin-bottom: 12px !important;
+    .nova-mode-grid .nova-flex-wrap{
+        padding: 40px 20px !important;
     }
 }
