@@ -2056,7 +2056,7 @@ body {margin: 0;}
         display: grid !important;
         /* [핵심] 3열 균등 배분 */
         grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 20px !important;
+        column-gap: 10px !important;   /* 좌우 간격은 살짝 좁혀서 공간 확보 */
         row-gap: 40px !important;
         width: 100% !important;
         padding: 0 10px !important;
@@ -2070,5 +2070,10 @@ body {margin: 0;}
         grid-column-start: auto !important; /* 시작 위치 초기화 */
         width: 100% !important;             /* 그리드 칸 안에서 꽉 차게 */
         margin: 0 !important;
+    }
+    .nova-flex-wrap .nova-mode-item img {
+        width: 70px !important;        /* [수정] 살짝 작게 하여 주변 여백 강조 */
+        height: 70px !important;
+        margin-bottom: 12px !important;
     }
 }
