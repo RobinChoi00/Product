@@ -2098,7 +2098,7 @@ body {margin: 0;}
     }
 }
 
-.nova-grid-2-col .nova-col-item {
-        align-items: flex-start !important; /* 플렉스 아이템 왼쪽 배치 */
-        text-align: left !important;        /* 텍스트 내용 왼쪽 정렬 */
+.nova-col-item {
+    align-items: flex-start !important; /* 플렉스 아이템 왼쪽 배치 */
+    text-align: left !important;        /* 텍스트 내용 왼쪽 정렬 */
 }
