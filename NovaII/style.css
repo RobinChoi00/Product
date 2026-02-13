@@ -2072,11 +2072,12 @@ body {margin: 0;}
         width: 100% !important;             /* 그리드 칸 안에서 꽉 차게 */
         margin: 0 !important;
     }
-    .nova-mode-grid .nova-flex-wrap{
+    .nova-mode-grid.nova-flex-wrap{
         padding: 40px 20px !important;
     }
 
     .nova-feature-card .nova-text-group {
         text-align: center !important;
+        justify-content: center !important;
     }    
 }
