@@ -2075,4 +2075,8 @@ body {margin: 0;}
     .nova-mode-grid .nova-flex-wrap{
         padding: 40px 20px !important;
     }
+
+    .nova-feature-card .nova-text-group {
+        text-align: center !important;
+    }    
 }
