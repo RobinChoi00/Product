@@ -2090,7 +2090,7 @@ body {margin: 0;}
         align-items: center !important;     /* Flex 아이템 중앙 정렬 */
     }
 
-    .nova-sub-section.nova-grid-2-col {
+    .nova-col-item {
         gap: 120px !important;
     }
 }
