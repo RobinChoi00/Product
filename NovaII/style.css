@@ -2009,6 +2009,7 @@ body {margin: 0;}
 
     /* 1. [타이틀 굵기 조정] 모든 nova-title을 700(Bold)으로 설정 */
 .nova-title {
+    font-family: 'Oswald', sans-serif !important; /* Banner 스타일 대체 */
     font-weight: 800 !important; /* 기존 800 설정 덮어쓰기 */
 }
 
