@@ -1974,7 +1974,7 @@ body {margin: 0;}
 .nova-section, 
 .nova-sub-section,
 .nova-container {
-    padding-bottom: 120px !important; /* [수정] 60px -> 100px (시원하게 띄움) */
+    padding-bottom: 60px !important; /* [수정] 60px -> 100px (시원하게 띄움) */
 }
 
 /* 2. [섹션 내부] 카드나 아이템끼리의 간격 넓히기 */
@@ -2096,4 +2096,9 @@ body {margin: 0;}
         /* (선택) 만약 패딩 대신 바깥 여백으로 밀고 싶다면 아래 주석 해제 */
         /* margin-bottom: 120px !important; */
     }
+}
+
+.nova-grid-2-col .nova-col-item {
+        align-items: flex-start !important; /* 플렉스 아이템 왼쪽 배치 */
+        text-align: left !important;        /* 텍스트 내용 왼쪽 정렬 */
 }
