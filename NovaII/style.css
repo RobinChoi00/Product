@@ -2089,8 +2089,5 @@ body {margin: 0;}
         text-align: center !important;      /* 글자 중앙 정렬 */
         align-items: center !important;     /* Flex 아이템 중앙 정렬 */
     }
-
-    .nova-col-item {
-        gap: 120px !important;
-    }
+    
 }
