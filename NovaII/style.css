@@ -2081,3 +2081,16 @@ body {margin: 0;}
         justify-content: center !important;
     }    
 }
+
+@media (max-width: 768px) {
+    /* [Heating Therapy] 텍스트 중앙 정렬 강제 수정 */
+    /* nth-child(2)를 써서 이전에 왼쪽 정렬했던 것을 덮어씁니다. */
+    .nova-sub-section.nova-feature-list .nova-feature-card:nth-child(2) .nova-text-group {
+        text-align: center !important;      /* 글자 중앙 정렬 */
+        align-items: center !important;     /* Flex 아이템 중앙 정렬 */
+    }
+
+    .nova-sub-section.nova-grid-2-col {
+        gap: 120px !important;
+    }
+}
