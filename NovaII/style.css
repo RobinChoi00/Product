@@ -2130,24 +2130,28 @@ body {margin: 0;}
         max-width: 350px !important;
     }
 
-    /* 2. [Dimensions] 오른쪽 이미지 높이 꽉 채우기 */
-    /* 부모 컨테이너(Row)를 스트레치 모드로 변경하여 높이를 맞춤 */
+    
+    /* (1) 부모 박스 높이를 600px로 고정 (PC 화면 기준 적당한 높이) */
     .dimensions-row {
-        align-items: stretch !important; 
+        height: 600px !important;    /* [핵심] 높이 고정 */
+        align-items: flex-end !important; /* 바닥 기준 정렬 */
+        gap: 50px !important;        /* 사이 간격 */
     }
 
-    /* 오른쪽 이미지 래퍼 설정 */
-    .dim-img:last-child {
+    /* (2) 이미지 래퍼(껍데기) 설정 */
+    .dim-img {
+        height: 100% !important;     /* 부모 높이(600px)를 가득 채움 */
         display: flex !important;
-        align-items: flex-end !important; /* 바닥 기준 정렬하되 */
+        align-items: flex-end !important; /* 이미지 바닥 정렬 */
+        justify-content: center !important;
     }
 
-    /* 오른쪽 이미지 자체를 높이에 맞게 키움 */
-    .dim-img:last-child img {
-        height: 100% !important;          /* 높이를 부모(왼쪽이미지 높이)만큼 강제 확장 */
-        width: auto !important;           /* 비율 유지 */
-        object-fit: contain !important;   /* 찌그러지지 않게 박스 안에 맞춤 */
-        margin: 0 !important;             /* 혹시 있을 마진 제거 */
+    /* (3) 실제 이미지: 비율 유지하면서 높이 채우기 */
+    .dim-img img {
+        height: 100% !important;     /* 600px 높이에 딱 맞춤 */
+        width: auto !important;      /* 너비는 알아서 비율에 맞게 조절 */
+        object-fit: contain !important; /* [중요] 찌그러지지 않게 원본 비율 유지 */
+        max-width: none !important;  /* 너비 제한 해제 */
     }
 
     /* 3. [Specification] 다운로드 링크 색상 변경 */
