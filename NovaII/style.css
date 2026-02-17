@@ -2140,7 +2140,7 @@ body {margin: 0;}
     
     /* (1) 부모 박스 높이를 600px로 고정 (PC 화면 기준 적당한 높이) */
     .dimensions-row {
-        height: 630px !important;    /* [핵심] 높이 고정 */
+        height: 650px !important;    /* [핵심] 높이 고정 */
         align-items: flex-end !important; /* 바닥 기준 정렬 */
         gap: 50px !important;        /* 사이 간격 */
     }
