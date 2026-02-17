@@ -2159,3 +2159,25 @@ body {margin: 0;}
         color: #ff4d4d !important;        /* 요청하신 붉은색 적용 */
     }
 }
+
+
+/* =========================================================
+   [PC FIX] 12 Auto & 9 Manual 섹션 간격 및 너비 조정
+   ========================================================= */
+
+   @media (min-width: 769px) {
+    /* 1. [12 Auto Programs] 섹션 전체 상단 패딩 추가 */
+    /* .nova-modes-section은 두 프로그램을 감싸는 큰 섹션입니다 */
+    .nova-modes-section {
+        padding-top: 100px !important; 
+    }
+
+    /* 2. [9 Manual Modes] 회색 박스 너비 축소 */
+    .nova-mode-grid {
+        max-width: 1100px !important;  /* [수정] 1200px -> 1100px */
+        
+        /* 너비가 줄어들면서 내부가 좁아질 수 있으니 패딩 미세 조정 (선택사항) */
+        /* padding-left: 40px !important; */
+        /* padding-right: 40px !important; */
+    }
+}
