@@ -2140,26 +2140,25 @@ body {margin: 0;}
     
     /* (1) 부모 박스 높이를 600px로 고정 (PC 화면 기준 적당한 높이) */
     .dimensions-row {
-        height: 650px !important;    /* [핵심] 높이 고정 */
-        align-items: flex-end !important; /* 바닥 기준 정렬 */
-        gap: 50px !important;        /* 사이 간격 */
+        height: 680px !important; 
     }
 
-    /* (2) 이미지 래퍼(껍데기) 설정 */
-    .dim-img {
-        height: 100% !important;     /* 부모 높이(600px)를 가득 채움 */
-        display: flex !important;
-        align-items: flex-end !important; /* 이미지 바닥 정렬 */
-        justify-content: center !important;
+    /* 2. 왼쪽 이미지(정면)는 덩달아 너무 커지지 않게 90%로 제한 */
+    /* 이렇게 하면 왼쪽은 이전 크기와 비슷하게 유지됩니다. */
+    .dim-img:first-child img {
+        height: 90% !important; 
+        /* 바닥 기준 정렬 유지 */
+        object-fit: contain !important;
     }
 
-    /* (3) 실제 이미지: 비율 유지하면서 높이 채우기 */
-    .dim-img img {
-        height: 100% !important;     /* 600px 높이에 딱 맞춤 */
-        width: auto !important;      /* 너비는 알아서 비율에 맞게 조절 */
-        object-fit: contain !important; /* [중요] 찌그러지지 않게 원본 비율 유지 */
-        max-width: none !important;  /* 너비 제한 해제 */
+    /* 3. 오른쪽 이미지(측면)는 확보된 680px 높이를 100% 다 씁니다 */
+    /* 결과적으로 오른쪽 이미지만 "키가 더 커진" 효과가 납니다. */
+    .dim-img:last-child img {
+        height: 100% !important;
+        width: auto !important;
+        max-width: none !important;
     }
+    
 
     /* 3. [Specification] 다운로드 링크 색상 변경 */
     .red-link {
