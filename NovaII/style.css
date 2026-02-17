@@ -2149,7 +2149,7 @@ body {margin: 0;}
     .dim-img {
         height: 100% !important;     /* 부모 높이(600px)를 가득 채움 */
         display: flex !important;
-        align-items: flex-end !important; /* 이미지 바닥 정렬 */
+        align-items: flex-start !important; /* 이미지 바닥 정렬 */
         justify-content: center !important;
     }
 
