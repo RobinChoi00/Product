@@ -354,7 +354,7 @@
 }
 
 .voice-control-section .f-img img {
-    max-width: 80% !important;               /* 이미지 크기 확대 */
+    max-width: 600px !important;               /* 이미지 크기 확대 */
     
     height: auto;
     display: block;
@@ -381,7 +381,7 @@
     font-size: 24px;
     color: #9e9e9e;
     line-height: 1.6;
-    max-width: 400px;           /* 텍스트가 너무 퍼지지 않게 제한 */
+    max-width: 400px !important;           /* 텍스트가 너무 퍼지지 않게 제한 */
 }
 
 /* ---------------------------------------------------------
@@ -1633,7 +1633,7 @@
     align-items: flex-end !important;
     /* 중앙 정렬 및 간격 */
     justify-content: center !important;
-    gap: 80px !important; /* 간격이 좀 더 필요해 보여서 넓혔습니다 */
+    gap: 60px !important; /* 간격이 좀 더 필요해 보여서 넓혔습니다 */
     max-width: 1200px !important;
     margin: 0 auto !important;
 }
