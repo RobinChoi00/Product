@@ -286,14 +286,14 @@
 /* 타이틀 스타일 */
 .f-title {
     font-weight: 600; /* Bold */
-    font-size: 36px;
+    font-size: 40px;
     color: #606060;   /* 요청 색상 */
     line-height: 1.0;
     margin-bottom: 20px;
 }
 .f-title.blue {
     font-weight: 600; /* Bold */
-    font-size: 36px;
+    font-size: 40px;
     color: #84c5d8;   /* 요청 색상 */
     line-height: 1.2;
     margin-bottom: 0 !important;
@@ -357,7 +357,7 @@
 
 /* 5. 타이틀 & 설명글 디테일 */
 .voice-control-section .f-title {
-    font-size: 36px;          /* 섹션 강조를 위해 크기 살짝 키움 */
+    font-size: 40px;          /* 섹션 강조를 위해 크기 살짝 키움 */
     color: #606060;
     line-height: 1.1;
     margin-bottom: 25px;
@@ -463,7 +463,7 @@
 .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600; /* Bold */
-    font-size: 36px;
+    font-size: 40px;
     color: #606060;   /* 요청 색상 */
     line-height: 1.2;
     margin-bottom: 20px;
@@ -471,7 +471,7 @@
 .g-title.blue {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #84c5d8;
     line-height: 1.2;
     margin-bottom: 0 !important;
@@ -605,7 +605,7 @@
 .zg-header .sub-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px; /* 서브타이틀은 조금 작게 */
+    font-size: 40px; /* 서브타이틀은 조금 작게 */
     color: #84c5d8;
     margin-bottom: 0px;
     letter-spacing: 1px;
@@ -614,7 +614,7 @@
 .zg-header .main-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #606060; /* 메인 타이틀은 진한 회색 */
     line-height: 1.1;
 }
@@ -691,7 +691,7 @@
 .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 1.2;
     color: #606060;
 }
@@ -786,7 +786,7 @@
 .feature-section-row .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 1.2;
     color: #606060; /* 가독성을 위해 컬러 조정 가능 */
     margin-bottom: 20px;
@@ -876,7 +876,7 @@
 .section-header {
     font-family: 'Forma DJR Banner', sans-serif; /* g-title과 동일 */
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #333;
     margin-bottom: 40px;
     line-height: 1.2;
@@ -1117,7 +1117,7 @@
 .f-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     color: #606060;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -1297,7 +1297,7 @@
 .tech-grid-4 .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
     font-weight: 600;
-    font-size: 36px;                /* 이전 섹션 가이드 준수 */
+    font-size: 40px;                /* 이전 섹션 가이드 준수 */
     color: #606060;
     line-height: 1.1;
     margin-bottom: 15px;
