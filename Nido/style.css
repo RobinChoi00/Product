@@ -400,8 +400,8 @@
 /* 3. 이미지(자식): 부모가 커도 나는 내 갈 길 간다 (380px 고정) */
 #voice-img-box img {
     /* [핵심] 부모가 55%라서 넓더라도, 이미지는 380px로 딱 고정 */
-    width: 400px !important; 
-    max-width: 400px !important; 
+    width: 100% !important; 
+    max-width: 650px !important; 
     
     height: auto !important;
     display: block !important;
