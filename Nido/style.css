@@ -392,6 +392,7 @@
     /* 넓은 55% 공간 안에서 이미지를 어디에 둘지 결정 */
     justify-content: flex-end !important; /* 중앙 정렬 (오른쪽 정렬 원하시면 flex-end) */
     align-items: flex-end !important;   /* 바닥 정렬 */
+    padding: 0 !important;
     
     
 }
