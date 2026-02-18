@@ -407,7 +407,7 @@
     display: block !important;
     
     /* 위치 및 여백 미세 조정 */
-    margin-bottom: -20px !important; /* 바닥 밀착 */
+    margin-bottom: -30px !important; /* 바닥 밀착 */
     
     /* 브라우저 간섭 차단 */
     flex: none !important;
