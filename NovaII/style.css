@@ -2141,7 +2141,7 @@ body {margin: 0;}
     /* (1) 부모 박스 높이를 600px로 고정 (PC 화면 기준 적당한 높이) */
     .dimensions-row {
         height: 680px !important;    /* [핵심] 높이 고정 */
-        align-items: flex-end !important; /* 바닥 기준 정렬 */
+        align-items: flex-start !important; /* 바닥 기준 정렬 */
         gap: 50px !important;        /* 사이 간격 */
     }
 
@@ -2158,7 +2158,7 @@ body {margin: 0;}
         height: 100% !important;     /* 600px 높이에 딱 맞춤 */
         width: auto !important;      /* 너비는 알아서 비율에 맞게 조절 */
         object-fit: contain !important; /* [중요] 찌그러지지 않게 원본 비율 유지 */
-        max-width: none !important;  /* 너비 제한 해제 */
+        max-width: 100% !important;  /* 너비 제한 해제 */
     }
 
     /* 3. [Specification] 다운로드 링크 색상 변경 */
