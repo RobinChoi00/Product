@@ -376,21 +376,39 @@
     max-width: 370px !important;           /* 텍스트가 너무 퍼지지 않게 제한 */
 }
 
-div.voice-control-section div.f-content-wrap div.f-img img {
-    /* 1. % 대신 확실한 px 수치를 입력하세요 (원하시는 크기로 조절) */
-    width: 420px !important; 
+/* ---------------------------------------------------------
+   [REMEDY] Voice Control 전용 이미지 크기 강제 해결
+   --------------------------------------------------------- */
+
+/* 1. 이미지 상자(부모) 자체의 크기를 먼저 줄입니다. */
+.voice-control-section .f-content-wrap .f-img {
+    /* 기존 55%~60%에서 비중을 확 낮춰 이미지가 커질 공간을 차단합니다. */
+    flex: 0 0 35% !important; 
+    max-width: 35% !important;
+    justify-content: center !important;
+}
+
+/* 2. 이미지(자식)에 아주 구체적인 선택자를 사용하여 전역 설정을 무시합니다. */
+.voice-control-section .f-content-wrap .f-img > img {
+    /* 810px이 나오던 문제를 380px로 강제 고정하여 해결합니다. */
+    width: 380px !important; 
+    max-width: 380px !important; 
     
-    /* 2. 유연성을 완전히 차단하기 위해 max/min을 동시에 잡습니다 */
-    max-width: 420px !important; 
-    min-width: 100px !important; 
-    
-    /* 3. 브라우저의 강제 렌더링 방지 */
+    /* 브라우저가 강제로 늘리는 것을 방지하는 안전장치 */
     height: auto !important;
+    min-width: 0 !important; 
     flex: none !important;
     
-    /* 4. 이미지 하단 여백 및 정렬 유지 */
-    margin-bottom: -20px !important;
+    /* 정렬 및 여백 */
+    margin: 0 auto -20px auto !important;
     display: block !important;
+    object-fit: contain !important;
+}
+
+/* 3. 이미지가 줄어든 만큼 텍스트 영역을 더 넓게 확보합니다. */
+.voice-control-section .f-txt {
+    flex: 0 0 65% !important;
+    max-width: 65% !important;
 }
 
 /* ---------------------------------------------------------
@@ -2368,37 +2386,3 @@ div.voice-control-section div.f-content-wrap div.f-img img {
 
 
 
-/* ---------------------------------------------------------
-   [FINAL] Voice Control Section 정밀 밸런스 조정
-   --------------------------------------------------------- */
-
-/* 1. 이미지 상자(부모)의 크기 자체를 줄여서 공간을 확보합니다. */
-.voice-control-section .f-img {
-    flex: 0 0 40% !important;   /* 기존 55%에서 40%로 축소 */
-    max-width: 40% !important;
-    justify-content: center !important; /* 오른쪽 정렬 대신 중앙으로 */
-    align-items: flex-end !important;
-}
-
-/* 2. 이미지(자식)의 너비를 px 단위로 확실하게 고정합니다. */
-.voice-control-section .f-img img {
-    /* 350px~400px 사이로 설정하면 시각적으로 가장 안정적입니다. */
-    width: 380px !important; 
-    max-width: 380px !important;
-    min-width: 200px !important; 
-    
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto -20px auto !important; /* 하단 밀착 및 중앙 정렬 */
-    
-    /* 브라우저가 강제로 늘리는 것을 방지 */
-    flex: none !important;
-    object-fit: contain !important;
-}
-
-/* 3. 이미지가 줄어든 만큼 텍스트 영역을 더 넓혀줍니다. */
-.voice-control-section .f-txt {
-    flex: 0 0 60% !important;   /* 기존 45%에서 60%로 확대 */
-    max-width: 60% !important;
-    padding: 80px 40px 80px 80px !important;
-}
