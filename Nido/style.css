@@ -256,7 +256,8 @@
     flex-direction: column;
     justify-content: center; /* 수직 중앙 */
     align-items: flex-start; /* 왼쪽 정렬 */
-    padding: 60px 0 60px 60px; /* 왼쪽에만 Padding */
+    padding: 70px 0 60px 60px; /* 왼쪽에만 Padding */
+    max-width: 80%;
 }
 
 /* 이미지 영역 (오른쪽 60%) */
@@ -265,7 +266,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end; /* 이미지를 박스 밑에 붙이기 위해 */
-    height: 90%;      /* 박스 높이 채우기 */
+    height: 70%;      /* 박스 높이 채우기 */
 }
 
 /* 이미지 크기 키우기 */
@@ -358,6 +359,7 @@
     flex-direction: column;
     justify-content: flex-start; /* 수직 중앙 */
     align-items: center;     /* 수평 중앙 */
+    
 }
 .g-title {
     font-family: 'Forma DJR Banner', sans-serif;
@@ -382,6 +384,7 @@
     font-size: 24px;
     color: #9e9e9e;
     line-height: 1.6;
+    max-width: 85%;
 }
 
 .g-desc strong {
@@ -400,8 +403,9 @@
 /* Rocking Motion 전용 텍스트 영역 (50%) */
 .feature-card-full .f-content-wrap.reverse-mobile .f-txt {
     flex: 0 0 50%;     /* 50% 너비 */
-    padding: 60px 0 60px 60px; /* 왼쪽에만 Padding */
+    padding: 60px 0 100px 100px; /* 왼쪽에만 Padding */
     align-items: flex-start;   /* 왼쪽 정렬 */
+    max-width: 80%;
 }
 
 /* Rocking Motion 전용 이미지 영역 (50%) */
@@ -461,17 +465,20 @@
    [SECTION 3] MECHANICS GROUP
    ========================================= */
 .mechanics-group {
-    padding: 60px 0; /* 상하 여백 넉넉하게 */
+    padding: 60px 0;
     border-radius: 30px;
     
-    /* 1. 배경 그라데이션 설정 */
+    /* [수정] rgba를 사용하여 불투명도 적용 (0.8 = 80%) */
     background: linear-gradient(
         to bottom, 
-        #dcefee 0%, 
-        #efefef 31%, 
-        #efefef 72%, 
-        #dcefee 100%
+        rgba(220, 239, 238, 0.8) 0%,   /* #dcefee */
+        rgba(255, 255, 255, 0.8) 31%,  /* #ffffff */
+        rgba(239, 239, 239, 0.8) 72%,  /* #efefef */
+        rgba(220, 239, 238, 0.8) 100%  /* #dcefee */
     );
+    
+    /* [추가] 배경이 투명해지면 뒤에 깔린 요소가 보일 수 있으므로 대비책 마련 */
+    backdrop-filter: blur(10px); /* 배경을 살짝 흐리게 하여 가독성 확보 */
 }
 
 /* 폰트 패밀리 공통 정의 */
@@ -618,6 +625,16 @@
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    /* 표준 문법 */
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    /* 마스크 반복 방지 및 크기 설정 (안전장치) */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
 
 /* =========================================
@@ -651,7 +668,7 @@
 
 /* 이미지 정렬 디테일 */
 .feature-section-row .g-img.left-img { justify-content: flex-start; }
-.feature-section-row .g-img.right-img { justify-content: flex-end; }
+.feature-section-row .g-img.right-img { justify-content: center !important; }
 
 .feature-section-row .g-img img {
     max-width: 100%;
@@ -688,6 +705,7 @@
     color: #9e9e9e;
     line-height: 1.5;
     text-align: left;
+    max-width: 80%;
 }
 
 .feature-section-row .g-desc strong {
@@ -1067,6 +1085,16 @@
     width: 100%;           /* 부모(f-img) 너비인 70%에 맞춤 */
     height: auto;
     display: block;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+    
+    /* 표준 문법 */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+    
+    /* 마스크 반복 방지 및 크기 설정 (안전장치) */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
 
 /* ---------------------------------------------------------
@@ -1390,7 +1418,7 @@
     justify-content: center; /* 중앙 정렬 */
     align-items: flex-start; /* 상단 기준 정렬 */
     gap: 80px; /* 좌우 이미지 사이 간격 */
-    max-width: 1300px; /* 전체 폭 제한 */
+    max-width: 1100px; /* 전체 폭 제한 */
     margin: 0 auto;
 }
 
@@ -1428,8 +1456,8 @@
 }
 
 .doorway-right .box-img img {
-    width: 90%;
-    max-width: 300px; /* 박스 이미지 크기 제한 */
+    width: 100%;
+    max-width: 500px; /* 박스 이미지 크기 제한 */
     height: auto;
     display: block;
     margin: 0; /* 왼쪽 정렬 유지 */
@@ -1455,7 +1483,7 @@
     text-align: left;
     display: block;
     width: 100%;
-    margin: 0 auto 60px;
+    margin: 0 auto 20px;
 }
 
 /* 가이드 리스트 (• 항목들) */
@@ -1522,33 +1550,49 @@
 
 /* 2. 레이아웃 (가로 배치) */
 .dimensions-row {
-    display: flex;
-    justify-content: center; /* 전체 중앙 정렬 */
-    align-items: flex-end;   /* 바닥 라인 기준으로 정렬 (치수선 보기 좋게) */
-    gap: 80px;               /* 두 이미지 사이 넉넉한 간격 */
-    width: 90%;
-    margin: 0 auto;
+    display: flex !important;
+    /* [핵심] 이 높이로 두 이미지가 똑같이 맞춰집니다. */
+    height: 600px !important;
+    /* 바닥 라인 기준 정렬 */
+    align-items: flex-end !important;
+    /* 중앙 정렬 및 간격 */
+    justify-content: center !important;
+    gap: 80px !important; /* 간격이 좀 더 필요해 보여서 넓혔습니다 */
+    max-width: 1200px !important;
+    margin: 0 auto !important;
 }
 
-/* 3. 이미지별 크기 제어 (비율 차별화) */
-
-/* 왼쪽: 정면 샷 (폭이 좁음) */
-.dim-img:first-child {
-    flex: 1;           /* 1의 비율 */
-    max-width: 350px;  /* 너무 커지지 않게 제한 */
+/* 2. 이미지 래퍼(껍데기) 설정 */
+/* 아까 설정했던 30%, 60% 같은 너비 제한을 다 풉니다. */
+.dim-img {
+    height: 100% !important;  /* 부모 높이(600px)를 꽉 채움 */
+    width: auto !important;   /* 너비는 내용물에 맡김 */
+    display: flex !important;
+    align-items: flex-end !important; /* 이미지 바닥 정렬 */
+    /* flex: 1 같은 강제 비율 제거 */
+    flex: none !important;
 }
 
-/* 오른쪽: 측면 샷 (폭이 넓음) */
-.dim-img:last-child {
-    flex: 1.8;         /* 왼쪽보다 약 1.8배 더 넓은 공간 할당 */
-    max-width: 700px;  /* 넓은 이미지 수용 */
-}
-
-/* 이미지 공통 */
+/* 3. 실제 이미지 설정 */
 .dim-img img {
-    width: 90%;
-    height: auto;
-    display: block;
+    height: 100% !important;       /* 600px 높이에 무조건 맞춤 */
+    width: auto !important;        /* 너비는 비율에 따라 자동 조절 */
+    /* [핵심] 이미지가 찌그러지지 않고 비율을 유지하며 박스 안에 담김 */
+    object-fit: contain !important;
+    max-width: none !important;    /* 너비 제한 해제 */
+    margin-bottom: 0 !important;   /* 바닥에 딱 붙게 */
+}
+
+.dim-img:last-child img {
+    /* 1. 원래 크기(1.0)보다 8% 정도 키웁니다. (숫자를 조절해보세요) */
+    transform: scale(1.08) !important; 
+
+    /* 2. 확대 기준점을 '바닥 중앙'으로 잡습니다. */
+    /* 이렇게 해야 이미지가 공중으로 뜨지 않고 바닥에 붙은 채로 위로 커집니다. */
+    transform-origin: bottom center !important;
+
+    /* (선택사항) 확대되면서 혹시 위쪽 다른 요소와 겹치면 위쪽 여백을 조금 줍니다 */
+    /* margin-top: 20px !important; */
 }
 
 

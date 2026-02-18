@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/.png" alt="Osaki DUKE LE 4D Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            
+            <div class="intro-desc">
+                The 4D Atlas XL is designed for larger users, featuring on oversized frame that supports up to 400 lb and 
+                heights up to 6'8" for a comfortable, spacious massage experience. Its advanced 4D massage technology 
+                adjusts roller intensity and angles to deliver deep-tissue relief and full-body customization.
+            </div>
+            
+            <div class="group-slider">
+                <div class="slider-main">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/.png" alt="Prev">
+                    </div>
+                    
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/.png" alt="Helix LE Colors">
+                    </div>
+                    
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/.png" alt="Next">
+                    </div>
+                </div>
+
+                <div class="swatch-panel">
+                    <div class="bar-bg-wrap">
+                        <img src="images/.png" class="bar-bg" alt="Bar">
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/.png" alt="Brown">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="gray-section">
+        <div class="SIZE-ACCOMMODATING CHAIR">
+            <div class="container">
+                <div class="m-col-item">
+                    <div class="m-txt-group">
+                        <div class="m-title">
+                            <span class="txt-blue">SIZE-ACCOMMODATING</span> CHAIR
+                        </div>
+                        <div class="m-desc">
+                            The Osaki DUke XL is <strong>precision-engineered for taller and larger users,</strong> 
+                            featuring a wider frame and reinforced steel construction that easily supports up to 400lb. 
+                            Its extended backrest fits individuals up to 6'8", while widened armrests and calf massagers provide added comfort and 
+                        </div>
+                    </div>
+                    <div class="m-img">
+                        <img src="images/.png" alt="SL-Track Structure" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="gray-section">
+        <div class="feature-center">
+            <div class="container">
+                <div class="m-col-item">
+                    <div class="m-icon">
+                        <img src="images/.png" alt="Icon">
+                    </div>
+                    <div class="m-txt-group">
+                        <div class="m-title">
+                            <span class="txt-blue">INTELLIGENT HEALTH</span> DETECTION
+                        </div>
+                        <div class="m-desc">
+                            The Osaki Duke XL is equipped with and advanced health monitoring system that 
+                            measures key indicators such as fatigue level, heart rate, blood oxygen, microcirculation, 
+                            and heart rate variability. <strong>Powered by AI, it uses these insights to automatically 
+                            customize a massage experience tailored to your body's real-time needs.</strong>
+                        </div>
+                    </div>
+                    <div class="m-img">
+                        <img src="images/.png" alt="SL-Track Structure" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+    <div id="gray-section">
+        <div class="container">
+    
+            <div class="m-card reverse">
+                
+                <div class="txt-col">
+                    <div class="m-title">
+                        <span>SL-FLEX</span><br>TRACK SYSTEM
+                    </div>
+                    <div class="m-desc">
+                        The Osaki Duke XL elevates the traditional SL-track with and advanced SL-Flex Track that <strong>
+                        maintains a fixed angle to the backrest for greater adaptability and comfort.</strong> 
+                        This innovative flexible track delivers <strong>full-body coverage from the neck and shoulders down to the upper glutes,</storng>
+                        enabling a deeper stretch massage.
+                    </div>
+                </div>
+                <div class="m-img">
+                    <img src="images/.png" alt="이미지 오른쪽 텍스트 왼쪽">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="gray-section">
+        <div class="container">
+    
+            <div class="m-card">
+                <div class="m-img">
+                    <img src="images/.png" alt="이미지 왼쪽 텍스트 오른쪽">
+                </div>              
+                    <div class="txt-col">
+                        <div class="m-title">
+                            <span>DEEL CALF</span><br>MASSAGE
+                        </div>
+                        <div class="m-desc">
+                            The Osaki Duke XL features <strong>14 air cells</strong> and <strong>four calf bumpers</strong> 
+                            that work together to deliver targeted compression and relief exactly where your legs need it most.
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="gray-section">
+        <div class="container">
+    
+            <div class="m-card reverse">
+                
+                <div class="txt-col">
+                    <div class="m-title">
+                        <span>BODY SCAN</span><br>TECHNOLOGY
+                    </div>
+                    <div class="m-desc">
+                        The Osaki Duke XL automatically <strong>adapts to your body's unique contours,</strong> 
+                        precisely positioning the rollers for a deeply comfortable and effective massage.
+                    </div>
+                </div>
+                <div class="m-img">
+                    <img src="images/.png" alt="이미지 오른쪽 텍스트 왼쪽">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="gray-section">
+        <div class="m-grid--col">       
+            <div class="m-col-item">
+                <div class="m-icon">
+                    <img src="images/.png" alt="Icon">
+                </div>
+                <div class="m-txt-group">
+                    <div class="m-title">
+                        <span class="txt-blue">ZERO GRAVITY</span><br>RECLINING
+                    </div>
+                    <div class="m-desc">
+                        Zero gravity reclines the chair into a <strong>single, perfectly balanced position that 
+                        elevates the legs and evenly distributes body weight</strong> to reduce pressure on the 
+                        spine and enhance overall relaxation.
+                    </div>
+                </div>
+                <div class="m-img">
+                    <img src="images/.png" alt="SL-Track Structure" class="img">
+                </div>
+            </div>
+            <div class="m-col-item">
+                <div class="m-icon">
+                    <img src="images/.png" alt="Icon">
+                </div>
+                <div class="m-txt-group">
+                    <div class="m-title">
+                        <span class="txt-blue">SPACE-SAVING</span><br>TECHNOLOGY
+                    </div>
+                    <div class="m-desc">
+                        Space-saving technology allows the massage chair to slide forward as it reclines, rquiring 
+                        <strong>only 12 inches from the wall</strong> while still delivering a full, immersive massage experience.
+                    </div>
+                </div>
+                <div class="m-img">
+                    <img src="images/.png" alt="SL-Track Structure" class="img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="gray-section">
+        <div class="feature-center">
+            <div class="container">
+                <div class="m-col-item">
+                    <div class="m-txt-group">
+                        <div class="m-title">
+                            <span class="txt-blue">48-CELL AIR<br>COMPRESSION</span> MASSAGE
+                        </div>
+                        <div class="m-desc">
+                            Equipped with 48 strategically placed air cells, the Duke XL provides 
+                            <strong>gentle, targeted compression that eases tension,</strong> 
+                            enhances relaxation, and leaves you feeling fully rejuvenated.
+                        </div>
+                    </div>
+                    <div class="m-img">
+                        <img src="images/.png" alt="SL-Track Structure" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="red-section">
+        <div class="feature-center">
+            <div class="container">
+                <div class="m-col-item">
+                    <div class="m-icon">
+                        <img src="images/.png" alt="Icon">
+                    </div>
+                    <div class="m-txt-group">
+                        <div class="m-title">
+                            <span class="txt-red">HEATING SHAWL</span> THERAPY
+                        </div>
+                        <div class="m-desc">
+                            The Duke XL utilizes advanced heating technology to deliver 
+                            <strong>targeted warmth to the lumbar and feet,</strong> relieving muscle tension and 
+                            enhancing deep relaxation. This chair also offers the <strong>option of placing the shawl
+                            over your body to target the chest and abdomen areas.</strong>
+                        </div>
+                    </div>
+                    <div class="m-img">
+                        <img src="images/.png" alt="SL-Track Structure" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="programs-section-group">
+        <div class="container">
+            
+            <div class="m-title">
+                <span class="blue">20 AUTO</span> PROGRAMS
+            </div>
+
+            <div class="auto-section">
+                <div class="program-grid-5">
+                    <div class="prog-col">
+                        <div class="col-head"><br></div>
+                        <div class="icon-list">
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">QUICK DEMO</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">UNWIND</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">STRETCH</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">MUSCLE</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">GENTLE</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">SPINE</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">WAIST & GLUTES</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">LEG & FOOT</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">BACK & WAIST</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">NECK & SHOULDER</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">UPPER<br>BODY</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">GLUTES</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">SPORTS<br>RECOVERY</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">LOWER BODY<br>RELAXATION</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">OFFICE<br>RELIEF</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">MORNING</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">MIDDAY</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">NIGHT</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">VITALITY</span></div>
+                            <div class="m-item"><img src="images/.png" alt="ICON"><span class="m-name">RELAX</span></div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="manual-section">
+                <div class="m-title">
+                    <span class="blue"></span>
+                </div>
+                <div class="manual">
+                    <div class="m-item"><img src="images/.png" alt=""><span class="m-name">KNEAD</span></div>
+                    <div class="m-item"><img src="images/.png" alt=""><span class="m-name">KNOCK</span></div>
+                    <div class="m-item"><img src="images/.png" alt=""><span class="m-name">TAP</span></div>
+                    <div class="m-item"><img src="images/.png" alt=""><span class="m-name">KNEAD<br>& TAP</span></div>
+                    <div class="m-item"><img src="images/.png" alt=""><span class="m-name">SHIATSU</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="feature-center">
+        <div class="container">
+            <div class="m-col-item">
+                <div class="m-icon">
+                    <img src="images/.png" alt="Icon">
+                </div>
+                <div class="m-txt-group">
+                    <div class="m-title">
+                        3 SPECIALIZED<br>FOOT ROLLEREST
+                    </div>
+                    <div class="m-desc">
+                        The foot massage rollers within the footrest stimulate <strong>
+                        acupuncture points with scientifically-designed reflexology ridges.</strong> 
+                        These rollers rotate to deliver a deep therapeutic massage, promoting overall foot health.
+                    </div>
+                </div>
+                <div class="m-img">
+                    <img src="images/.png" alt="SL-Track Structure" class="img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="m-card reverse">
+            <div class="txt-col">
+                <div class="m-title">
+                    SPRING-LOADED<br>EXTENDABLE<br>FOOTREST
+                </div>
+                <div class="m-desc">
+                    The Osaki Duke XL features a spring-loaded footrest that extends up to <strong>7 inches,</strong> 
+                    smoothly adjusting to comfortably <strong>accommodate users of all heights.</strong>
+                </div>
+            </div>
+            <div class="m-img">
+                <img src="images/.png" alt="이미지 오른쪽 텍스트 왼쪽">
+            </div>
+        </div>
+        <div class="m-card">
+            <div class="m-img">
+                <img src="images/.png" alt="이미지 왼쪽 텍스트 오른쪽">
+            </div>              
+                <div class="txt-col">
+                    <div class="m-title">
+                        TOUCHSCREEN<br>CONTROLLER
+                    </div>
+                    <div class="m-desc">
+                        The intuitive touchscreen controller offers <strong>easy, responsive navigation</strong> 
+                        of massage settings and personalized adjustments.
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="m-grid-4col">       
+        <div class="m-col-item">
+            <div class="m-img">
+                <img src="images/.png" alt="SL-Track Structure" class="img">
+            </div>
+            <div class="m-txt-group">
+                <div class="m-title">
+                    LED LIGHTING<br>DETAIL
+                </div>
+                <div class="m-desc">
+                    With the touch of a button on the remote, the Duke XL's LED lighting can be activated to create 
+                    a calming ambiance for your overall relaxation.
+                </div>
+            </div>
+        </div>
+        <div class="m-col-item">
+            <div class="m-img">
+                <img src="images/.png" alt="SL-Track Structure" class="img">
+            </div>
+            <div class="m-txt-group">
+                <div class="m-title">
+                    CONVENIENT<br>SHORTCUT PANELS
+                </div>
+                <div class="m-desc">
+                    The quick-access shortcut panels provide effortless and convenient access to functions, making 
+                    adjustments simple.
+                </div>
+            </div>
+        </div>
+        <div class="m-col-item">
+            <div class="m-img">
+                <img src="images/.png" alt="SL-Track Structure" class="img">
+            </div>
+            <div class="m-txt-group">
+                <div class="m-title">
+                    USB-C<br>CHARGING PORT
+                </div>
+                <div class="m-desc">
+                    The Osaki Duke XL's built-in USB-C charging port keeps your device fully charged throughout your 
+                    massage experience.
+                </div>
+            </div>
+        </div>
+        <div class="m-col-item">
+            <div class="m-img">
+                <img src="images/.png" alt="SL-Track Structure" class="img">
+            </div>
+            <div class="m-txt-group">
+                <div class="m-title">
+                    QUALITY BLUETOOTH<br>SPEAKERS
+                </div>
+                <div class="m-desc">
+                    High-quality Bluetooth speakers deliver rich, immersive sound that enhances your relaxation 
+                    with your favorite audio.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="doorway-section">
+        <div class="container">            
+            <div class="m-title">MINIMUM DOORWAY & PACKAGING</div>
+            <div class="doorway-layout">
+                <div class="doorway-left">
+                    <img src="images/.png" alt="Minimum Doorway Size">
+                    <img src="images/.png" alt="Minimum Doorway Size">
+                </div>
+                <div class="doorway-right">
+                    <div class="box-img">
+                        <img src="images/.png" alt="Packaging Box Dimensions">
+                        <img src="images/.png" alt="Packaging Box Dimensions">
+                    </div>
+                    <div class="measuring-guide">
+                        <div class="g-title"><strong>Measuring Guide</strong></div>
+                        <div class="g-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="dimensions-section">
+        <div class="container">
+            <div class="m-title">DIMENSIONS</div>
+            <div class="dimensions-row">
+                <div class="dim-img">
+                    <img src="images/.png" alt="Forge Front Dimensions">
+                </div>
+                <div class="dim-img">
+                    <img src="images/.png" alt="Forge Side Dimensions">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+        <div class="spec-section">
+            <div class="container">
+                <div>Specification</div>
+                
+                <div class="spec-table">
+                    <div class="spec-row">
+                        <div class="spec-label">Product Name</div>
+                        <div class="spec-value">Duke XL</div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">User Manual</div>
+                        <div class="spec-value links">
+                            <a href="" class="red-link" target="_blank">Download</a>
+                            <a href="https://youtu.be/2URk88RbgXc" class="red-link youtube-link" target="_blank">
+                                <span class="play-icon">▶</span> Watch Video
+                            </a>
+                        
+                        </div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Power Supply</div>
+                        <div class="spec-value">110 - 120V</div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Rate Frequency</div>
+                        <div class="spec-value">50 / 60Hz</div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Standing</strong>
+                                <span>35" x 60" x 45"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Reclined</strong>
+                                <span>35" x 67" x 37"</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Weight</div>
+                        <div class="spec-value">148.2</div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Shoulder</strong>
+                                <span>26"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Seat</strong>
+                                <span>23"</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Minimum Door Width</div>
+                        <div class="spec-value">35"</div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Maximum User Weight</div>
+                        <div class="spec-value">270lb</div>
+                    </div>
+    
+                    <div class="spec-row">
+                        <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>32.3" x 49.2" x 51.2"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Box 2</strong>
+                                <span>20.5" x 65" x 32.3"</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="spec-row no-border"> <div class="spec-label">Package Weight</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span> 239.86lb</span>
+                            </div>
+                        </div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 2</strong>
+                                <span> 104.7lb</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
