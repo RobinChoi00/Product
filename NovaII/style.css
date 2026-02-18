@@ -2210,4 +2210,15 @@ body {margin: 0;}
         max-width: none !important;    /* 너비 제한 해제 */
         margin-bottom: 0 !important;   /* 바닥에 딱 붙게 */
     }
+    .dim-img:last-child img {
+    /* 1. 원래 크기(1.0)보다 8% 정도 키웁니다. (숫자를 조절해보세요) */
+    transform: scale(1.08) !important; 
+
+    /* 2. 확대 기준점을 '바닥 중앙'으로 잡습니다. */
+    /* 이렇게 해야 이미지가 공중으로 뜨지 않고 바닥에 붙은 채로 위로 커집니다. */
+    transform-origin: bottom center !important;
+    
+    /* (선택사항) 확대되면서 혹시 위쪽 다른 요소와 겹치면 위쪽 여백을 조금 줍니다 */
+    /* margin-top: 20px !important; */
+}
 }
