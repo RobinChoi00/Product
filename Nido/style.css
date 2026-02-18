@@ -412,6 +412,16 @@
     /* 브라우저 간섭 차단 */
     flex: none !important;
     object-fit: contain !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    /* 표준 문법 */
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    /* 마스크 반복 방지 및 영역 채우기 */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
 
 /* ---------------------------------------------------------
