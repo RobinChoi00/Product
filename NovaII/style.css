@@ -2140,7 +2140,7 @@ body {margin: 0;}
     
     /* (1) 부모 박스 높이를 600px로 고정 (PC 화면 기준 적당한 높이) */
     .dimensions-row {
-        height: 600px !important;    /* [조절가능] 600px 정도가 가장 적당합니다 (너무 크면 화면 넘어감) */
+        height: 500px !important;    /* [조절가능] 600px 정도가 가장 적당합니다 (너무 크면 화면 넘어감) */
         align-items: flex-start !important; /* 상단 정렬 */
         justify-content: center !important;
         gap: 60px !important;
