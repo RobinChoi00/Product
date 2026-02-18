@@ -359,7 +359,6 @@
     flex-direction: column;
     justify-content: flex-start; /* 수직 중앙 */
     align-items: center;     /* 수평 중앙 */
-    height: auto;
     
 }
 .g-title {
