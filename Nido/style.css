@@ -376,39 +376,41 @@
     max-width: 370px !important;           /* 텍스트가 너무 퍼지지 않게 제한 */
 }
 
-/* ---------------------------------------------------------
-   [REMEDY] Voice Control 전용 이미지 크기 강제 해결
-   --------------------------------------------------------- */
-
-/* 1. 이미지 상자(부모) 자체의 크기를 먼저 줄입니다. */
-.voice-control-section .f-content-wrap .f-img {
-    /* 기존 55%~60%에서 비중을 확 낮춰 이미지가 커질 공간을 차단합니다. */
-    flex: 0 0 35% !important; 
-    max-width: 35% !important;
-    justify-content: center !important;
-}
-
-/* 2. 이미지(자식)에 아주 구체적인 선택자를 사용하여 전역 설정을 무시합니다. */
-.voice-control-section .f-content-wrap .f-img > img {
-    /* 810px이 나오던 문제를 380px로 강제 고정하여 해결합니다. */
-    width: 380px !important; 
-    max-width: 380px !important; 
-    
-    /* 브라우저가 강제로 늘리는 것을 방지하는 안전장치 */
-    height: auto !important;
-    min-width: 0 !important; 
-    flex: none !important;
-    
-    /* 정렬 및 여백 */
-    margin: 0 auto -20px auto !important;
-    display: block !important;
-    object-fit: contain !important;
-}
-
-/* 3. 이미지가 줄어든 만큼 텍스트 영역을 더 넓게 확보합니다. */
+/* 1. 텍스트 영역: 45% 비율 유지 */
 .voice-control-section .f-txt {
-    flex: 0 0 65% !important;
-    max-width: 65% !important;
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+    /* 패딩은 기존 설정 유지 */
+}
+
+/* 2. 이미지 컨테이너(부모): 55% 비율 유지 (ID 사용) */
+#voice-img-box {
+    flex: 0 0 55% !important;
+    max-width: 55% !important;
+    
+    display: flex !important;
+    /* 넓은 55% 공간 안에서 이미지를 어디에 둘지 결정 */
+    justify-content: flex-end !important; /* 중앙 정렬 (오른쪽 정렬 원하시면 flex-end) */
+    align-items: flex-end !important;   /* 바닥 정렬 */
+    
+    
+}
+
+/* 3. 이미지(자식): 부모가 커도 나는 내 갈 길 간다 (380px 고정) */
+#voice-img-box img {
+    /* [핵심] 부모가 55%라서 넓더라도, 이미지는 380px로 딱 고정 */
+    width: 400px !important; 
+    max-width: 400px !important; 
+    
+    height: auto !important;
+    display: block !important;
+    
+    /* 위치 및 여백 미세 조정 */
+    margin-bottom: -20px !important; /* 바닥 밀착 */
+    
+    /* 브라우저 간섭 차단 */
+    flex: none !important;
+    object-fit: contain !important;
 }
 
 /* ---------------------------------------------------------
