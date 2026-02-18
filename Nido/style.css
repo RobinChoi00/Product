@@ -352,7 +352,7 @@
 
 /* 텍스트 영역 (아래쪽 45%) */
 .tech-card .g-txt {
-    flex: 4.5;  /* 4.5 비율 */
+    flex: none;  /* 4.5 비율 */
     padding: 50px 30px 30px 30px;
     text-align: center;      /* 중앙 정렬 */
     display: flex;
@@ -385,7 +385,8 @@
     font-size: 24px;
     color: #9e9e9e;
     line-height: 1.6;
-    width: 85%;
+    max-width: 85%;
+    word-break: keep-all;
 }
 
 .g-desc strong {
