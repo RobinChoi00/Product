@@ -271,7 +271,7 @@
 
 /* 이미지 크기 키우기 */
 .f-img img {
-    max-width: 110%;   /* 박스 밖으로 나갈 정도로 키움 (필요시 조절) */
+    max-width: 80%;   /* 박스 밖으로 나갈 정도로 키움 (필요시 조절) */
     height: auto;
     display: block;
     margin-bottom: -20px; /* 하단 여백 제거하여 딱 붙게 */
@@ -353,12 +353,13 @@
 /* 텍스트 영역 (아래쪽 45%) */
 .tech-card .g-txt {
     flex: 4.5;  /* 4.5 비율 */
-    padding: 25px 30px 40px 30px;
+    padding: 50px 30px 30px 30px;
     text-align: center;      /* 중앙 정렬 */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* 수직 중앙 */
     align-items: center;     /* 수평 중앙 */
+    height: auto;
     
 }
 .g-title {
@@ -384,7 +385,7 @@
     font-size: 24px;
     color: #9e9e9e;
     line-height: 1.6;
-    max-width: 85%;
+    width: 85%;
 }
 
 .g-desc strong {
@@ -403,9 +404,9 @@
 /* Rocking Motion 전용 텍스트 영역 (50%) */
 .feature-card-full .f-content-wrap.reverse-mobile .f-txt {
     flex: 0 0 50%;     /* 50% 너비 */
-    padding: 60px 0 100px 100px; /* 왼쪽에만 Padding */
+    padding: 60px 60px 100px 100px; /* 왼쪽에만 Padding */
     align-items: flex-start;   /* 왼쪽 정렬 */
-    max-width: 80%;
+    max-width: 100%;
 }
 
 /* Rocking Motion 전용 이미지 영역 (50%) */
@@ -420,6 +421,19 @@
     margin-bottom: 0;  /* Voice Control의 마진 초기화 */
 }
 
+.feature-card-full .f-content-wrap.reverse-mobile .f-txt .f-desc {
+    /* [핵심] 너비를 고정값(px) 혹은 비율(%)로 제한 */
+    max-width: 450px; 
+    
+    /* 텍스트 줄바꿈 시 단어 단위로 끊기게 설정 (한글 가독성 향상) */
+    word-break: keep-all; 
+    
+    /* 줄 간격 확보로 가독성(Readability) 최적화 */
+    line-height: 1.6; 
+    
+    /* 왼쪽 정렬 유지 (부모 설정에 따름) */
+    text-align: left;
+}
 
 
 
@@ -514,7 +528,7 @@
     font-weight: 600;
     font-size: 36px;
     color: #606060; /* 메인 타이틀은 진한 회색 */
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 /* 설명 텍스트 */
@@ -1457,7 +1471,7 @@
 
 .doorway-right .box-img img {
     width: 100%;
-    max-width: 500px; /* 박스 이미지 크기 제한 */
+    max-width: 400px; /* 박스 이미지 크기 제한 */
     height: auto;
     display: block;
     margin: 0; /* 왼쪽 정렬 유지 */
@@ -1552,13 +1566,13 @@
 .dimensions-row {
     display: flex !important;
     /* [핵심] 이 높이로 두 이미지가 똑같이 맞춰집니다. */
-    height: 600px !important;
+    height: 500px !important;
     /* 바닥 라인 기준 정렬 */
     align-items: flex-end !important;
     /* 중앙 정렬 및 간격 */
     justify-content: center !important;
     gap: 80px !important; /* 간격이 좀 더 필요해 보여서 넓혔습니다 */
-    max-width: 1200px !important;
+    max-width: 1100px !important;
     margin: 0 auto !important;
 }
 
@@ -1584,8 +1598,6 @@
 }
 
 .dim-img:last-child img {
-    /* 1. 원래 크기(1.0)보다 8% 정도 키웁니다. (숫자를 조절해보세요) */
-    transform: scale(1.08) !important; 
 
     /* 2. 확대 기준점을 '바닥 중앙'으로 잡습니다. */
     /* 이렇게 해야 이미지가 공중으로 뜨지 않고 바닥에 붙은 채로 위로 커집니다. */
