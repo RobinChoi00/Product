@@ -340,7 +340,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 80px 40px 80px 140px; /* 시계방향: Top Right Bottom Left */
+    padding: 80px 40px 80px 140px !important; /* 시계방향: Top Right Bottom Left */
     box-sizing: border-box;
 }
 
