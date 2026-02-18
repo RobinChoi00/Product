@@ -2173,42 +2173,41 @@ body {margin: 0;}
    [PC FINAL] Dimensions: 너비 비율 기반 자연스러운 정렬
    ========================================================= */
 
+/* =========================================================
+   [PC FIX] Dimensions: 너비 비율 조정을 통한 높이 맞춤
+   ========================================================= */
+
 @media (min-width: 769px) {
 
-    /* 1. 전체 틀: 높이 고정 제거 (height: auto) */
+    /* 1. 전체 컨테이너 설정 */
     .dimensions-row {
         display: flex !important;
-        
-        /* [핵심 1] 바닥(Floor) 라인 맞춤 */
-        align-items: flex-end !important; 
-        
+        align-items: flex-end !important; /* [유지] 바닥 라인 정렬 */
         justify-content: center !important;
-        height: auto !important;     /* 억지 높이 설정 제거 */
-        min-height: 500px;           /* 최소 높이만 확보 */
-        gap: 5% !important;          /* 두 의자 사이 간격 (퍼센트) */
-        padding-bottom: 50px !important; /* 바닥 여백 */
+        width: 100% !important;
+        max-width: 1200px !important;     /* 전체 폭 제한 (너무 퍼지지 않게) */
+        margin: 0 auto !important;        /* 중앙 정렬 */
+        gap: 5% !important;               /* 이미지 사이 간격 */
     }
 
-    /* 2. 왼쪽 이미지 (정면): 좁은 공간 할당 */
+    /* 2. 왼쪽 이미지 (정면): 홀쭉하니까 공간을 조금만 줌 (30%) */
     .dim-img:first-child {
-        width: 35% !important;       /* 전체 너비의 35% 차지 */
+        width: 30% !important; 
         display: block !important;
-        flex: none !important;       /* flex 자동 계산 방지 */
     }
 
-    /* 3. 오른쪽 이미지 (측면): 넓은 공간 할당 */
+    /* 3. 오른쪽 이미지 (측면): 뚱뚱하니까 공간을 많이 줌 (60%) */
+    /* [핵심] 너비를 2배로 주면 높이도 그만큼 커져서 왼쪽과 비슷해집니다 */
     .dim-img:last-child {
-        width: 55% !important;       /* 전체 너비의 55% 차지 (더 넓음) */
+        width: 60% !important;
         display: block !important;
-        flex: none !important;
     }
 
-    /* 4. 이미지 공통: 가로 꽉 채우고 세로는 알아서(Auto) */
+    /* 4. 이미지 공통 설정 */
     .dim-img img {
-        width: 100% !important;      /* 할당된 박스 너비에 딱 맞춤 */
-        height: auto !important;     /* [핵심 2] 비율 깨지지 않게 자동 높이 조절 */
+        width: 100% !important;      /* 할당된 구역을 가득 채움 */
+        height: auto !important;     /* 비율 유지 */
         max-width: none !important;
-        object-fit: contain !important;
         display: block !important;
     }
 }
