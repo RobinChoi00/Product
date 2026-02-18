@@ -401,7 +401,7 @@
 #voice-img-box img {
     /* [핵심] 부모가 55%라서 넓더라도, 이미지는 380px로 딱 고정 */
     width: 100% !important; 
-    max-width: 550px !important; 
+    max-width: 800px !important; 
     
     height: auto !important;
     display: block !important;
