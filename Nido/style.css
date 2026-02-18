@@ -256,7 +256,7 @@
     flex-direction: column;
     justify-content: center; /* 수직 중앙 */
     align-items: flex-start; /* 왼쪽 정렬 */
-    padding: 60px 0 60px 60px; /* 왼쪽에만 Padding */
+    padding: 80px 0 60px 60px; /* 왼쪽에만 Padding */
 }
 
 /* 이미지 영역 (오른쪽 60%) */
