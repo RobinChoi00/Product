@@ -353,18 +353,7 @@
     position: relative;
 }
 
-.voice-control-section .f-img img {
-    /* [수정] 부모 너비 내에서 유연하게 움직이되, 절대 넘지 말아야 할 상한선 설정 */
-    width: 100% !important;       /* 컨테이너 안에서 가득 차도록 허용 */
-    max-width: 650px !important;  /* [핵심] 시안에 따른 최적 이미지 상한선 (600~700px 권장) */
-    
-    height: auto;
-    display: block;
-    
-    /* [핵심] 이미지가 바닥 경계선에 딱 맞게 겹치도록 음수 마진 활용 */
-    margin-bottom: -5px; 
-    object-fit: contain;
-}
+
 
 /* 5. 타이틀 & 설명글 디테일 */
 .voice-control-section .f-title {
@@ -2357,4 +2346,20 @@
         flex-direction: column;
         gap: 15px;
     }
+}
+
+
+
+
+.voice-control-section .f-img img {
+    /* [수정] 부모 너비 내에서 유연하게 움직이되, 절대 넘지 말아야 할 상한선 설정 */
+    width: 100% !important;       /* 컨테이너 안에서 가득 차도록 허용 */
+    max-width: 650px !important;  /* [핵심] 시안에 따른 최적 이미지 상한선 (600~700px 권장) */
+    
+    height: auto;
+    display: block;
+    
+    /* [핵심] 이미지가 바닥 경계선에 딱 맞게 겹치도록 음수 마진 활용 */
+    margin-bottom: -5px; 
+    object-fit: contain;
 }
