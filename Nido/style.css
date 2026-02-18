@@ -231,7 +231,7 @@
 
 
 /* ---------------------------------------------------------
-   1. INTELLIGENT VOICE CONTROL (Full Width Card)
+   Whole
    --------------------------------------------------------- */
 .feature-card-full {
     background-color: #efefef; /* 요청 색상 */
@@ -256,7 +256,7 @@
     flex-direction: column;
     justify-content: center; /* 수직 중앙 */
     align-items: flex-start; /* 왼쪽 정렬 */
-    padding: 60px 0 60px 120px; /* 왼쪽에만 Padding */
+    padding: 60px 0 60px 60px; /* 왼쪽에만 Padding */
     max-width: 400px;
 }
 
@@ -271,7 +271,7 @@
 
 /* 이미지 크기 키우기 */
 .f-img img {
-    max-width: 80% ;   /* 박스 밖으로 나갈 정도로 키움 (필요시 조절) */
+    max-width: 80% !important;   /* 박스 밖으로 나갈 정도로 키움 (필요시 조절) */
     height: auto;
     display: block;
     margin-bottom: -20px; /* 하단 여백 제거하여 딱 붙게 */
@@ -311,6 +311,78 @@
 .f-desc strong {
     font-weight: 500;
     color: #606060;   /* 요청 색상 */
+}
+
+/* ---------------------------------------------------------
+   [SECTION] INTELLIGENT VOICE CONTROL - Dedicated Style
+   --------------------------------------------------------- */
+/* 1. 섹션 전체 컨테이너 */
+.voice-control-section {
+    background-color: #efefef;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    min-height: 500px;   /* 섹션의 최소 높이 확보 */
+}
+
+/* 2. 내부 텍스트 & 이미지 배치 (4.5 : 5.5) */
+.voice-control-section .f-content-wrap {
+    display: flex;
+    width: 100%;
+    align-items: stretch; /* 이미지와 텍스트 박스 높이를 맞춤 */
+}
+
+/* 3. 전용 텍스트 영역 */
+.voice-control-section .f-txt {
+    flex: 0 0 45%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 40px 80px 100px; /* 시계방향: Top Right Bottom Left */
+    box-sizing: border-box;
+}
+
+/* 4. 전용 이미지 영역 (바닥 밀착형) */
+.voice-control-section .f-img {
+    flex: 0 0 55%;
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    align-items: flex-end;    /* [핵심] 이미지를 바닥에 붙임 */
+    position: relative;
+}
+
+.voice-control-section .f-img img {
+    width: 95%;               /* 이미지 크기 확대 */
+    max-width: 600px;
+    height: auto;
+    display: block;
+    /* [핵심] 이미지가 바닥 경계선에 딱 맞게 겹치도록 음수 마진 활용 */
+    margin-bottom: -5px; 
+    object-fit: contain;
+}
+
+/* 5. 타이틀 & 설명글 디테일 */
+.voice-control-section .f-title {
+    font-size: 42px;          /* 섹션 강조를 위해 크기 살짝 키움 */
+    color: #606060;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.voice-control-section .f-title .blue {
+    color: #84c5d8;
+    display: block;           /* 타이틀을 두 줄로 분리 */
+    margin-bottom: 5px;
+}
+
+.voice-control-section .f-desc {
+    font-size: 22px;
+    color: #9e9e9e;
+    line-height: 1.6;
+    max-width: 90%;           /* 텍스트가 너무 퍼지지 않게 제한 */
 }
 
 
