@@ -336,7 +336,7 @@
 
 /* 이미지 영역 (위쪽 55%) */
 .tech-card .g-img {
-    flex: 5.5;  /* 5.5 비율 */
+    flex: 6;  /* 5.5 비율 */
     background-color: #000; /* 이미지 배경 검정 (이미지에 따라 변경 가능) */
     display: flex;
     justify-content: center;
@@ -352,7 +352,7 @@
 
 /* 텍스트 영역 (아래쪽 45%) */
 .tech-card .g-txt {
-    flex: 4.5;  /* 4.5 비율 */
+    flex: 4;  /* 4.5 비율 */
     padding: 50px 30px 30px 30px;
     text-align: center;      /* 중앙 정렬 */
     display: flex;
