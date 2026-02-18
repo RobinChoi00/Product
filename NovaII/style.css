@@ -2138,37 +2138,7 @@ body {margin: 0;}
     }
 
     
-    /* (1) 부모 박스 높이를 600px로 고정 (PC 화면 기준 적당한 높이) */
-    .dimensions-row {
-        height: 500px !important;    /* [조절가능] 600px 정도가 가장 적당합니다 (너무 크면 화면 넘어감) */
-        align-items: flex-start !important; /* 상단 정렬 */
-        justify-content: center !important;
-        gap: 60px !important;
-    }
-
-    /* 2. 왼쪽 이미지 (정면): 좁으니까 공간을 적게 차지함 */
-    .dim-img:first-child {
-        flex: 1 !important;          /* 비율 1 */
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    /* 3. 오른쪽 이미지 (측면): 넓으니까 공간을 2배로 줌 */
-    /* [핵심] 공간을 넓게 줘야 이미지가 커질 수 있습니다 */
-    .dim-img:last-child {
-        flex: 2 !important;          /* 비율 2 (왼쪽보다 2배 넓은 공간 확보) */
-        display: flex !important;
-        justify-content: center !important; /* 공간 안에서 중앙 정렬 */
-    }
-
-    /* 4. 이미지 공통 설정: 무조건 높이 100% */
-    .dim-img img {
-        height: 100% !important;     /* 부모 높이(600px)에 강제로 맞춤 */
-        width: auto !important;      /* 너비는 비율에 맞춰 알아서 늘어남 */
-        max-width: none !important;  /* [중요] 너비 제한을 풀어버림 */
-        object-fit: contain !important;
-        max-width: 100% !important;
-    }
+   
 
     /* 3. [Specification] 다운로드 링크 색상 변경 */
     .red-link {
@@ -2195,5 +2165,50 @@ body {margin: 0;}
         /* 너비가 줄어들면서 내부가 좁아질 수 있으니 패딩 미세 조정 (선택사항) */
         /* padding-left: 40px !important; */
         /* padding-right: 40px !important; */
+    }
+}
+
+
+/* =========================================================
+   [PC FINAL] Dimensions: 너비 비율 기반 자연스러운 정렬
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    /* 1. 전체 틀: 높이 고정 제거 (height: auto) */
+    .dimensions-row {
+        display: flex !important;
+        
+        /* [핵심 1] 바닥(Floor) 라인 맞춤 */
+        align-items: flex-end !important; 
+        
+        justify-content: center !important;
+        height: auto !important;     /* 억지 높이 설정 제거 */
+        min-height: 500px;           /* 최소 높이만 확보 */
+        gap: 5% !important;          /* 두 의자 사이 간격 (퍼센트) */
+        padding-bottom: 50px !important; /* 바닥 여백 */
+    }
+
+    /* 2. 왼쪽 이미지 (정면): 좁은 공간 할당 */
+    .dim-img:first-child {
+        width: 35% !important;       /* 전체 너비의 35% 차지 */
+        display: block !important;
+        flex: none !important;       /* flex 자동 계산 방지 */
+    }
+
+    /* 3. 오른쪽 이미지 (측면): 넓은 공간 할당 */
+    .dim-img:last-child {
+        width: 55% !important;       /* 전체 너비의 55% 차지 (더 넓음) */
+        display: block !important;
+        flex: none !important;
+    }
+
+    /* 4. 이미지 공통: 가로 꽉 채우고 세로는 알아서(Auto) */
+    .dim-img img {
+        width: 100% !important;      /* 할당된 박스 너비에 딱 맞춤 */
+        height: auto !important;     /* [핵심 2] 비율 깨지지 않게 자동 높이 조절 */
+        max-width: none !important;
+        object-fit: contain !important;
+        display: block !important;
     }
 }
