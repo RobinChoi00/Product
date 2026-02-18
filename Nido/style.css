@@ -354,8 +354,8 @@
 }
 
 .voice-control-section .f-img img {
-    width: 90%;               /* 이미지 크기 확대 */
-    max-width: 500px;
+    max-width: 80% !important;               /* 이미지 크기 확대 */
+    
     height: auto;
     display: block;
     /* [핵심] 이미지가 바닥 경계선에 딱 맞게 겹치도록 음수 마진 활용 */
@@ -1209,6 +1209,9 @@
     line-height: 1.2;
 }
 
+.f-block.row-layout.reverse .f-txt .f-desc {
+    max-width: 80% !important;
+}
 
 
 
@@ -1529,8 +1532,8 @@
 }
 
 .doorway-right .box-img img {
-    width: 90%;
-    max-width: 300px; /* 박스 이미지 크기 제한 */
+    width: 100%;
+    max-width: 400px; /* 박스 이미지 크기 제한 */
     height: auto;
     display: block;
     margin: 0; /* 왼쪽 정렬 유지 */
@@ -1538,7 +1541,7 @@
 
 /* 측정 가이드 텍스트 영역 */
 .measuring-guide {
-    max-width: 500px; /* 글자가 너무 길어지지 않게 제한 */
+    max-width: 450px; /* 글자가 너무 길어지지 않게 제한 */
     color: #888888;
     font-family: 'Avenir', 'Nunito', sans-serif;
 }
@@ -1623,34 +1626,39 @@
 
 /* 2. 레이아웃 (가로 배치) */
 .dimensions-row {
-    display: flex;
-    justify-content: center; /* 전체 중앙 정렬 */
-    align-items: flex-end;   /* 바닥 라인 기준으로 정렬 (치수선 보기 좋게) */
-    gap: 80px;               /* 두 이미지 사이 넉넉한 간격 */
-    width: 90%;
-    margin: 0 auto;
+    display: flex !important;
+    /* [핵심] 이 높이로 두 이미지가 똑같이 맞춰집니다. */
+    height: 600px !important;
+    /* 바닥 라인 기준 정렬 */
+    align-items: flex-end !important;
+    /* 중앙 정렬 및 간격 */
+    justify-content: center !important;
+    gap: 80px !important; /* 간격이 좀 더 필요해 보여서 넓혔습니다 */
+    max-width: 1200px !important;
+    margin: 0 auto !important;
 }
 
-/* 3. 이미지별 크기 제어 (비율 차별화) */
-
-/* 왼쪽: 정면 샷 (폭이 좁음) */
-.dim-img:first-child {
-    flex: 1;           /* 1의 비율 */
-    max-width: 350px;  /* 너무 커지지 않게 제한 */
+/* 2. 이미지 래퍼(껍데기) 설정 */
+/* 아까 설정했던 30%, 60% 같은 너비 제한을 다 풉니다. */
+.dim-img {
+    height: 100% !important;  /* 부모 높이(600px)를 꽉 채움 */
+    width: auto !important;   /* 너비는 내용물에 맡김 */
+    display: flex !important;
+    align-items: flex-end !important; /* 이미지 바닥 정렬 */
+    /* flex: 1 같은 강제 비율 제거 */
+    flex: none !important;
 }
 
-/* 오른쪽: 측면 샷 (폭이 넓음) */
-.dim-img:last-child {
-    flex: 1.8;         /* 왼쪽보다 약 1.8배 더 넓은 공간 할당 */
-    max-width: 700px;  /* 넓은 이미지 수용 */
-}
-
-/* 이미지 공통 */
+/* 3. 실제 이미지 설정 */
 .dim-img img {
-    width: 90%;
-    height: auto;
-    display: block;
+    height: 100% !important;       /* 600px 높이에 무조건 맞춤 */
+    width: auto !important;        /* 너비는 비율에 따라 자동 조절 */
+    /* [핵심] 이미지가 찌그러지지 않고 비율을 유지하며 박스 안에 담김 */
+    object-fit: contain !important;
+    max-width: none !important;    /* 너비 제한 해제 */
+    margin-bottom: 0 !important;   /* 바닥에 딱 붙게 */
 }
+
 
 
 
