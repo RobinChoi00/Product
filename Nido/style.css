@@ -1442,7 +1442,7 @@
 .doorway-left {
     flex: 1; /* 공간 50% 차지 */
     display: flex;
-    justify-content: flex-end; /* 이미지를 중앙(오른쪽)으로 붙임 */
+    justify-content: center; /* 이미지를 중앙(오른쪽)으로 붙임 */
 }
 
 .doorway-left img {
