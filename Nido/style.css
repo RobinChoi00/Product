@@ -345,7 +345,7 @@
 }
 
 /* 4. 전용 이미지 영역 (바닥 밀착형) */
-.voice-control-section .f-img {
+.voice-control-section .f--img {
     flex: 0 0 55%;
     display: flex;
     justify-content: flex-end; /* 오른쪽 정렬 */
@@ -380,7 +380,7 @@
    [FIX] Voice Control 전용 이미지 정밀 제어 (Production-ready)
    --------------------------------------------------------- */
 /* 범용 클래스(.f-img)보다 더 구체적인 선택자를 사용하여 확실하게 이깁니다 */
-.voice-control-section .f-img img {
+.voice-control-section .f--img img {
     /* 1. 비율로 줄이기 (부모 너비의 70%) */
     width: 70% !important; 
     
