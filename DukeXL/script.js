@@ -7,21 +7,17 @@ var baseURL = "https://RobinChoi00.github.io/Product//";
 // Index 2: Brown
 var slideData = [
     {
-        chair: baseURL + "images/.png",
+        chair: baseURL + "images/4.dukeXL_colors_all.png",
         name: "All"
     },
     {
-        chair: baseURL + "images/.png",
+        chair: baseURL + "images/2.dukeXL_color_black.png",
         name: "Black"
     },
     {
-        chair: baseURL + "images/.png",
+        chair: baseURL + "images/3.dukeXL_color_taupe.png",
         name: "Brown"
     },
-    {
-        chair: baseURL + "images/.png",
-        name: "Taupe"
-    }
 ];
 
 var currentIndex = 0; // 초기값 0 (All)
