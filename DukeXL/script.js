@@ -1,5 +1,5 @@
 
-var baseURL = "https://RobinChoi00.github.io/Product//";
+var baseURL = "https://RobinChoi00.github.io/Product/DukeXL/";
 
 // 2. 데이터 정의 (HTML 버튼 순서와 1:1 매칭)
 // Index 0: All (Both)
