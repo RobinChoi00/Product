@@ -354,6 +354,7 @@ body {margin: 0;}
 
 #section-size-accommodating .m-desc {
     line-height: 1.8;
+    max-width: 700px;
 }
 
 /* 2. Flexbox를 활용한 좌/우 레이아웃 분할 */
@@ -459,7 +460,7 @@ body {margin: 0;}
 
 
 #section-4d-mechanism .m-desc {
-    max-width: 400px;
+    max-width: 370px;
     line-height: 2.0;
 }
 
@@ -606,7 +607,7 @@ body {margin: 0;}
 #section-sl-flex .m-desc {
     margin-top: 10px;
     line-height: 1.8;
-    max-width: 430px;
+    max-width: 350px;
 }
 
 
@@ -673,7 +674,7 @@ body {margin: 0;}
 #section-deep-calf .m-title,
 #section-deep-calf .m-desc {
     width: 100%;
-    max-width: 400px; /* 엔지니어님의 의도대로 텍스트 폭을 제한 */
+    max-width: 350px; /* 엔지니어님의 의도대로 텍스트 폭을 제한 */
     text-align: left; /* [핵심] 폭은 제한하되, 글씨 자체는 가독성을 위해 좌측 정렬 유지 */
 }
 
@@ -741,7 +742,7 @@ body {margin: 0;}
 
 #section-zg-scan .m-desc {
     line-height: 1.8;
-    max-width: 400px;
+    max-width: 350px;
 }
 
 /* 4. [엔지니어링 테크닉] 이미지를 바닥으로 강제 푸시 (Push) */
@@ -792,7 +793,7 @@ body {margin: 0;}
 /* 2. 텍스트 그룹 중앙 집중화 */
 #section-air-compression .txt-group-center {
     text-align: center;
-    max-width: 800px; /* 텍스트가 너무 길게 퍼지지 않도록 폭 제한 */
+    max-width: 750px; /* 텍스트가 너무 길게 퍼지지 않도록 폭 제한 */
     margin-bottom: 50px; /* 텍스트와 하단 이미지 사이의 쾌적한 간격 */
 }
 
@@ -864,12 +865,13 @@ body {margin: 0;}
 
 #section-heating-shawl .txt-group-center{
     text-align: center;
-    max-width: 700px; /* 텍스트가 너무 길게 퍼지지 않도록 폭 제한 */
+    max-width: 650px; /* 텍스트가 너무 길게 퍼지지 않도록 폭 제한 */
     margin-bottom: 50px; /* 텍스트와 하단 이미지 사이의 쾌적한 간격 */
 }
 
 #section-heating-shawl .m-desc {
     line-height: 1.8;
+    
 }
 
 #section-heating-shawl .m-note {
@@ -1132,7 +1134,7 @@ body {margin: 0;}
 
 /* 4. 본문 설명 텍스트 */
 #section-foot-rollers .m-desc {
-    max-width: 600px; /* 텍스트가 너무 찢어지지 않도록 폭 통제 */
+    max-width: 550px; /* 텍스트가 너무 찢어지지 않도록 폭 통제 */
     margin: 0 auto 50px auto;
     color: #9d9d9d;
     line-height: 1.6;
@@ -1368,7 +1370,7 @@ body {margin: 0;}
     font-size: 24px;
     color: #9d9d9d; /* 라이트 그레이 본문 */
     line-height: 1.8;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 
