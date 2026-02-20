@@ -1939,7 +1939,7 @@ body {margin: 0;}
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important; /* 모바일에서도 2열 강제 유지 */
         gap: 15px !important;
-        padding: 10px 0 40px 0 !important;
+        padding: 40px 0 10px 0 !important;
         width: 100% !important;
     }
 
