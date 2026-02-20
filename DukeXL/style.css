@@ -1880,6 +1880,56 @@ body {margin: 0;}
     #section-footrest-touchscreen .m-card:first-child { margin-bottom: 60px; }
 
 
+
+
+
+
+
+
+
+
+    /* ==========================================================================
+       [Section 1] Size-Accommodating 모바일 디테일 최적화
+       ========================================================================== */
+    
+    /* 1. 메인 이미지와 서브 이미지 그룹을 상하(Column)로 배치 */
+    #section-size-accommodating .size-image-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important; /* 메인 이미지와 서브 이미지 사이의 간격 */
+        width: 100% !important;
+    }
+
+    /* 2. 메인 이미지가 모바일 화면을 꽉 채우도록 허용 */
+    #section-size-accommodating .img-main {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 3. [핵심] 3개의 서브 이미지를 가로(Row)로 균형 있게 배치 */
+    #section-size-accommodating .img-sub-group {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between;
+        gap: 12px !important; /* 모바일 화면에 맞는 정교한 12px 여백 */
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+
+    /* 4. 개별 서브 이미지 비율 1:1:1 강제 분배 */
+    #section-size-accommodating .img-sub {
+        flex: 1; /* 세 개의 박스가 좁은 화면에서도 정확히 같은 너비를 가짐 */
+        display: flex;
+    }
+
+    #section-size-accommodating .img-sub img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px; /* 모바일에 어울리는 부드러운 모서리 라운딩 */
+        object-fit: cover; /* 이미지가 찌그러지지 않고 꽉 차게 방어 */
+    }
+
+
     /* ==========================================================================
        [수정 요청] Section 10 (Foot Rollers) 모바일 시각적 계층(Hierarchy) 강제 재정렬
        ========================================================================== */
