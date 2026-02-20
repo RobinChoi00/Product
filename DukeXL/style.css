@@ -1722,7 +1722,9 @@ body {margin: 0;}
         --m-title-size: 28px !important;  
         --m-desc-size: 16px !important;   
     }
-
+    .m-title {
+        margin-bottom: 15px;
+    }
     /* 모든 섹션의 상하 거대한 패딩을 50px로 강제 축소 */
     [id^="section-"], .spec-section {
         padding: 50px 0 !important;
@@ -1805,6 +1807,10 @@ body {margin: 0;}
         align-self: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    #section-air-compression .img-wide-bottom img {
+        padding-right: 50px;
     }
 
     /* ----------------------------------------------------------------------
@@ -1893,7 +1899,7 @@ body {margin: 0;}
     #section-foot-rollers .m-title-dark {
         order: 2 !important;
         margin-top: 10px !important; 
-        margin-bottom: 30px !important; /* 본문과의 숨통 확보 */
+        margin-bottom: 15px !important; /* 본문과의 숨통 확보 */
         font-size: 28px;
     }
 
