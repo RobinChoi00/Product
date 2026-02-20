@@ -1931,6 +1931,57 @@ body {margin: 0;}
 
 
     /* ==========================================================================
+       [수정 요청] Section 3 (AI Health) 모바일 프리미엄 UI/UX 최적화
+       ========================================================================== */
+    
+    /* 1. [핵심] 4대 건강 지표를 2x2 그리드 '캡슐 UI'로 디자인업 (스크롤 피로도 감소) */
+    #section-ai-health .ai-indicators {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 모바일에서도 2열 강제 유지 */
+        gap: 15px !important;
+        padding: 10px 0 40px 0 !important;
+        width: 100% !important;
+    }
+
+    /* 프리미엄 앱(App) 스타일의 다크 캡슐 버튼 디자인 적용 */
+    #section-ai-health .indicator-item {
+        background-color: #1a1a1a; /* 완전 검정이 아닌 튀어나오는 다크 그레이 배경 */
+        padding: 15px 10px !important;
+        border-radius: 16px; /* 부드러운 모바일 라운딩 */
+        
+        font-size: 13px !important; /* 긴 단어가 깨지지 않도록 정교하게 축소 */
+        line-height: 1.3 !important;
+        letter-spacing: 0.05em; /* 자간을 살짝 벌려 고급스러움 유지 */
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+
+    /* 2. 하단 두 개의 이미지를 갤러리처럼 정돈 (Stacking) */
+    #section-ai-health .ai-image-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important; /* 두 이미지 사이의 시각적 숨통 */
+        width: 100% !important;
+    }
+
+    #section-ai-health .img-box {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    #section-ai-health .img-box img {
+        width: 100% !important;
+        max-width: 340px !important; /* 이미지가 화면 가득 무식하게 커지는 것을 방어 */
+        height: auto;
+        border-radius: 20px !important; /* 이미지 모서리 둥글게 처리 */
+    }
+
+
+    /* ==========================================================================
        [수정 요청] Section 10 (Foot Rollers) 모바일 시각적 계층(Hierarchy) 강제 재정렬
        ========================================================================== */
     
