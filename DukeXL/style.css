@@ -2026,6 +2026,10 @@ body {margin: 0;}
        ========================================================================== */
     
     /* 1. 전체 레이아웃을 세로로 완벽하게 통제 */
+    #section-doorway-packaging {
+        padding-top: 80px !important;
+    }
+
     #section-doorway-packaging .doorway-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -2105,11 +2109,16 @@ body {margin: 0;}
        ========================================================================== */
     
     /* 1. 두 이미지를 세로로 쌓고 넉넉한 숨통(Gap)을 줍니다 */
+    #section-dimensions {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
     #section-dimensions .dimensions-layout {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 50px !important; 
+        gap: 40px !important; 
     }
 
     /* 2. [핵심] 정면 이미지 폭 제한 (세로로 무한정 거대해지는 것 방어) */
