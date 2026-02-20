@@ -2021,8 +2021,8 @@ body {margin: 0;}
 
 
 
-    #section-doorway-packaging .m-title-dark,
-    #section-doorway-packaging .m-title-dark, {
+    #section-dimensions .m-title-dark.text-center,
+    #section-doorway-packaging .m-title-dark.text-center, {
         font-size: 28px;
     }
 
