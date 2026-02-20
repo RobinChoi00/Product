@@ -2021,13 +2021,123 @@ body {margin: 0;}
 
 
 
-    #section-dimensions .m-title-dark.text-center,
-    #section-doorway-packaging .m-title-dark.text-center, {
-        font-size: 28px;
+    /* ==========================================================================
+       [수정 요청] Section 13 (Doorway & Packaging) 모바일 컨텍스트 및 UI 최적화
+       ========================================================================== */
+    
+    /* 1. 전체 레이아웃을 세로로 완벽하게 통제 */
+    #section-doorway-packaging .doorway-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
     }
 
-    .spec-section .spec-title {
-        font-size: 28px;
+    /* 2. [핵심] 문 이미지 2개는 가로로 나란히 (비교하기 쉽게 나란히 유지) */
+    #section-doorway-packaging .doorway-left {
+        display: flex !important;
+        flex-direction: row !important; /* 세로가 아닌 가로 배치로 강제 */
+        justify-content: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        order: 1 !important; /* 최상단 배치 */
+    }
+
+    #section-doorway-packaging .doorway-left img {
+        width: 48% !important;
+        max-width: 200px !important;
+        height: auto !important;
+    }
+
+    /* 3. 오른쪽 그룹 (박스 + 가이드)을 문 이미지 아래에 배치 */
+    #section-doorway-packaging .doorway-right {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        order: 2 !important; /* 문 이미지 다음으로 배치 */
+    }
+
+    /* 4. 박스 이미지 2개도 공간 절약을 위해 가로로 나란히 배치 */
+    #section-doorway-packaging .box-img-grid {
+        display: flex !important;
+        flex-direction: row !important; /* 가로 배치 */
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+        order: 1 !important; /* 박스 이미지를 가이드 텍스트 '위'로 끌어올림 */
+        margin-bottom: 30px !important;
+    }
+
+    #section-doorway-packaging .box-img-grid img {
+        width: 48% !important;
+        max-width: 200px !important;
+        height: auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 5. [엔지니어링 테크닉] 측정 가이드(Measuring Guide) 프리미엄 캡슐 UI 화 */
+    #section-doorway-packaging .measuring-guide {
+        order: 2 !important; /* 박스 이미지 '아래'로 강제 추방 (글로벌 룰 무효화) */
+        background-color: #f8f9fa !important; /* 아주 옅고 고급스러운 라이트 그레이 배경 */
+        padding: 30px 20px !important;
+        border-radius: 20px !important; /* 모서리를 둥글게 깎아 위젯 느낌 부여 */
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: left !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 캡슐 내부 텍스트 정렬 최적화 */
+    #section-doorway-packaging .g-title {
+        text-align: center !important;
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+        color: #1d1d1d !important;
+    }
+
+    #section-doorway-packaging .g-list li {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        color: #555555 !important;
+        text-align: left !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* ==========================================================================
+       [수정 요청] Section 14 (Dimensions) 모바일 종횡비 팽창 방어 및 정렬
+       ========================================================================== */
+    
+    /* 1. 두 이미지를 세로로 쌓고 넉넉한 숨통(Gap)을 줍니다 */
+    #section-dimensions .dimensions-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 50px !important; 
+    }
+
+    /* 2. [핵심] 정면 이미지 폭 제한 (세로로 무한정 거대해지는 것 방어) */
+    #section-dimensions .dim-img-front {
+        width: 100% !important;
+        max-width: 260px !important; /* 스마트폰에서 보기에 가장 안정적인 너비로 고정 */
+        margin: 0 auto !important;
+    }
+
+    /* 3. 측면 이미지 (가로형이므로 화면을 넓게 쓰도록 허용) */
+    #section-dimensions .dim-img-side {
+        width: 100% !important;
+        max-width: 100% !important; 
+        margin: 0 auto !important;
+    }
+
+    /* ==========================================================================
+       [수정 요청] 모든 다크 타이틀 및 예외 타이틀 모바일 최적화 (28px 강제)
+       ========================================================================== */
+    
+    /* m-title-dark 뿐만 아니라, 하드코딩된 다른 타이틀들도 일괄적으로 28px로 통일합니다 */
+    .m-title-dark,
+    .spec-title,
+    .f-title,
+    .m-title {
+        font-size: 28px !important;
     }
 }
 
