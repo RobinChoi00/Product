@@ -2012,9 +2012,22 @@ body {margin: 0;}
     }
 
     /* 4순위: 발바닥 이미지 (가장 밑으로 강제 추방) */
-    #section-foot-rollers .img-wide-bottom {
+    #section-foot-rollers .img-wide-bottom, {
         order: 4 !important;
         margin-top: 0 !important;
+    }
+
+
+
+
+
+    #section-doorway-packaging .m-title-dark,
+    #section-doorway-packaging .m-title-dark, {
+        font-size: 28px;
+    }
+
+    .spec-section .spec-title {
+        font-size: 28px;
     }
 }
 
