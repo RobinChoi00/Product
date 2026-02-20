@@ -2077,9 +2077,7 @@ body {margin: 0;}
     /* 5. [엔지니어링 테크닉] 측정 가이드(Measuring Guide) 프리미엄 캡슐 UI 화 */
     #section-doorway-packaging .measuring-guide {
         order: 2 !important; /* 박스 이미지 '아래'로 강제 추방 (글로벌 룰 무효화) */
-        background-color: #f8f9fa !important; /* 아주 옅고 고급스러운 라이트 그레이 배경 */
         padding: 30px 20px !important;
-        border-radius: 20px !important; /* 모서리를 둥글게 깎아 위젯 느낌 부여 */
         width: 100% !important;
         box-sizing: border-box;
         text-align: left !important;
