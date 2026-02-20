@@ -1226,7 +1226,7 @@ body {margin: 0;}
 }
 
 #section-footrest-touchscreen .m-desc{
-    max-width: 430px;
+    max-width: 400px;
 }
 
 /* 3. 아이콘과 이미지 디테일 정렬 */
@@ -1357,7 +1357,7 @@ body {margin: 0;}
 #section-convenience-features .f-title {
     font-family: var(--m-font-head);
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     color: #424242; /* 다크 그레이 타이틀 */
     line-height: 1.2;
     margin-bottom: 15px;
@@ -1365,9 +1365,9 @@ body {margin: 0;}
 
 #section-convenience-features .f-desc {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     color: #9d9d9d; /* 라이트 그레이 본문 */
-    line-height: 1.6;
+    line-height: 1.8;
     max-width: 400px;
 }
 
@@ -1408,7 +1408,7 @@ body {margin: 0;}
 /* 1. 공통 타이틀 스타일 재사용 및 덮어쓰기 */
 #section-doorway-packaging .m-title-dark {
     font-family: var(--m-font-head);
-    font-size: 38px;
+    font-size: 42px;
     font-weight: 600;
     color: #424242;
     margin-bottom: 60px;
@@ -1591,7 +1591,7 @@ body {margin: 0;}
 /* [엔지니어링 테크닉] 이 섹션 내부의 모든 요소에 'Poppins' 폰트를 일괄 적용 (유지보수 극대화) */
 .spec-section,
 .spec-section * {
-    font-family: 'Nunito', sans-serif !important;
+    font-family: 'Arial, Helvetica', sans-serif !important;
 }
 
 /* 1. 섹션 전체 여백 및 배경 */
@@ -1606,7 +1606,7 @@ body {margin: 0;}
 /* HTML에서 제목 태그에 반드시 <div class="spec-title">를 추가하세요! */
 .spec-section .spec-title {
     font-weight: 600;       /* 글로벌 스탠다드 Bold */
-    font-size: 40px;        
+    font-size: 42px;        
     text-align: center;     
     margin-bottom: 60px;    
     color: #1d1d1d;
