@@ -1865,7 +1865,45 @@ body {margin: 0;}
 
     /* Section 11: Footrest 간격 제어 */
     #section-footrest-touchscreen .m-card:first-child { margin-bottom: 60px; }
+
+
+    /* ==========================================================================
+       [수정 요청] Section 10 (Foot Rollers) 모바일 시각적 계층(Hierarchy) 강제 재정렬
+       ========================================================================== */
+    
+    /* 래퍼를 Flex Column으로 확정 지어 내부 요소들의 순서를 조작할 준비를 합니다 */
+    #section-foot-rollers .content-center-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 1순위: 아이콘 */
+    #section-foot-rollers .m-icon {
+        order: 1 !important;
+    }
+
+    /* 2순위: 타이틀 (요청하신 상단 마진 10px 포함) */
+    #section-foot-rollers .m-title-dark {
+        order: 2 !important;
+        margin-top: 10px !important; 
+        margin-bottom: 30px !important; /* 본문과의 숨통 확보 */
+        font-size: 28px;
+    }
+
+    /* 3순위: 본문 설명 */
+    #section-foot-rollers .m-desc {
+        order: 3 !important;
+        margin-bottom: 40px !important; /* 아래로 밀려난 이미지와의 간격 확보 */
+        font-size: 16px;
+    }
+
+    /* 4순위: 발바닥 이미지 (가장 밑으로 강제 추방) */
+    #section-foot-rollers .img-wide-bottom {
+        order: 4 !important;
+        margin-top: 0 !important;
+    }
 }
+
 
 /* 초소형 모바일 화면 대응 */
 @media (max-width: 480px) {
