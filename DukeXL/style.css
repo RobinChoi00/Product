@@ -332,6 +332,13 @@ body {margin: 0;}
 /* 1. 섹션 전체 여백 및 텍스트 중앙 정렬 */
 #section-size-accommodating {
     padding: 100px 0px 30px 0px; /* 위아래 숨통을 틔워주는 여백 */
+    
+}
+
+#section-size-accommodating .m-col-item{
+    background-color: #000000;
+    border-radius: 30px;
+    padding: 40px;
 }
 
 #section-size-accommodating .m-txt-group {
@@ -339,6 +346,14 @@ body {margin: 0;}
     max-width: 750px;
     margin: 0 auto 60px auto; /* 텍스트와 이미지 사이의 간격 확보 */
     padding-top: 40px;
+}
+
+#section-size-accommodating .m-title {
+    padding-bottom: 10px;
+}
+
+#section-size-accommodating .m-desc {
+    line-height: 1.8;
 }
 
 /* 2. Flexbox를 활용한 좌/우 레이아웃 분할 */
@@ -379,30 +394,7 @@ body {margin: 0;}
     object-fit: contain; /* 비율이 찌그러지지 않도록 방어 */
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-size-accommodating .size-image-grid {
-        flex-direction: column; /* 가로 배치를 세로 배치로 즉시 전환 */
-        gap: 30px;
-    }
-    
-    #section-size-accommodating .img-main,
-    #section-size-accommodating .img-sub-group {
-        width: 100%; /* 모바일에서는 각각 화면 너비를 100% 꽉 채우도록 변경 */
-        flex: none; /* Flex 비율 초기화 */
-        justify-content: center;
-        align-items: center;
-    }
-   
-    #section-size-accommodating .img-sub-group {
-        width: 100%; /* 모바일에서는 각각 화면 너비를 100% 꽉 채우도록 변경 */
-        flex: none; /* Flex 비율 초기화 */
-        justify-content: center;
-        align-items: center;
-    }
-}
+
 
 
 
@@ -471,12 +463,7 @@ body {margin: 0;}
     line-height: 2.0;
 }
 
-/* 모바일 환경 텍스트 정렬 방어 */
-@media (max-width: 768px) {
-    #section-4d-mechanism .txt-col {
-        padding-left: 0; /* 모바일에서는 패딩 초기화 */
-    }
-}
+
 
 
 
@@ -581,27 +568,7 @@ body {margin: 0;}
 
 
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-ai-health .m-card-vertical {
-        padding: 40px 20px;
-    }
-    
-    #section-ai-health .ai-indicators {
-        grid-template-columns: 1fr; /* 모바일에서는 2열을 1열로 강제 압착 */
-        text-align: center; /* 1열이 되면 중앙 정렬이 예쁨 */
-    }
-    
-    #section-ai-health .indicator-item {
-        text-align: center;
-    }
-    
-    #section-ai-health .ai-image-grid {
-        flex-direction: column; /* 가로로 나열된 이미지를 세로로 탑쌓기 */
-    }
-}
+
 
 
 
@@ -642,14 +609,7 @@ body {margin: 0;}
     max-width: 430px;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-sl-flex .txt-col {
-        padding-right: 0; /* 모바일에서는 가로 여백 초기화 */
-    }
-}
+
 
 
 
@@ -721,14 +681,7 @@ body {margin: 0;}
     line-height: 1.8;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-deep-calf .txt-col {
-        padding-left: 0; /* 모바일에서는 카드가 세로로 떨어지므로 가로 여백을 초기화 */
-    }
-}
+
 
 
 
@@ -807,18 +760,7 @@ body {margin: 0;}
     display: block;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-zg-scan .m-grid-2col {
-        grid-template-columns: 1fr; /* 모바일에서는 가로 2열을 세로 1열로 붕괴 */
-    }
 
-    #section-zg-scan .m-col-card {
-        padding: 40px 30px 0 30px; /* 모바일 화면에 맞춰 패딩 축소 */
-    }
-}
 
 
 
@@ -878,14 +820,7 @@ body {margin: 0;}
     padding-right: 100px;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-air-compression .m-card-dark-center {
-        padding: 40px 20px 0 20px; /* 모바일 화면에 맞춰 패딩 축소 */
-    }
-}
+
 
 
 
@@ -1007,17 +942,6 @@ body {margin: 0;}
     );
     pointer-events: none; /* 클릭 방해 방지 */
 }
-
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-heating-shawl .heating-image-grid {
-        flex-direction: column; /* 모바일에서는 두 이미지를 세로로 쌓음 */
-        gap: 20px;
-    }
-}
-
 
 
 
@@ -1359,14 +1283,7 @@ body {margin: 0;}
 }
 
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-footrest-touchscreen .txt-col {
-        padding: 0 !important; /* 모바일에서는 가로 여백 초기화 */
-    }
-}
+
 
 
 
@@ -1454,15 +1371,7 @@ body {margin: 0;}
     max-width: 400px;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-convenience-features .feature-grid-2x2 {
-        grid-template-columns: 1fr; /* 모바일에서는 1열(세로)로 자동 붕괴 */
-        gap: 50px; /* 세로로 쌓일 때의 간격 조절 */
-    }
-}
+
 
 
 
@@ -1574,15 +1483,7 @@ body {margin: 0;}
     color: #888888;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 992px) {
-    #section-doorway-packaging .doorway-grid {
-        grid-template-columns: 1fr; /* 모바일/태블릿에서는 좌우 기둥을 상하 1열로 붕괴 */
-        gap: 50px;
-    }
-}
+
 
 
 
@@ -1660,22 +1561,7 @@ body {margin: 0;}
     display: block;
 }
 
-/* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화
-   ========================================================================== */
-@media (max-width: 768px) {
-    #section-dimensions .dimensions-layout {
-        flex-direction: column; /* 모바일에서는 이미지를 위아래로 쌓음 */
-        align-items: center;    /* 세로로 쌓일 때는 가운데 정렬이 안정적임 */
-        gap: 50px;
-    }
-    
-    #section-dimensions .dim-img-front,
-    #section-dimensions .dim-img-side {
-        flex: auto;
-        width: 100%; /* 모바일에서는 두 이미지 모두 100% 꽉 채우기 */
-    }
-}
+
 
 
 
@@ -1705,7 +1591,7 @@ body {margin: 0;}
 /* [엔지니어링 테크닉] 이 섹션 내부의 모든 요소에 'Poppins' 폰트를 일괄 적용 (유지보수 극대화) */
 .spec-section,
 .spec-section * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif !important;
 }
 
 /* 1. 섹션 전체 여백 및 배경 */
@@ -1799,71 +1685,260 @@ body {margin: 0;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화 방어 코드 (참고용)
+   [Mobile Responsive] 완벽한 모바일 최적화 (max-width: 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+
+    /* ----------------------------------------------------------------------
+       1. 글로벌 여백 및 폰트 축소 (Dead Space 제거)
+       ---------------------------------------------------------------------- */
+    :root {
+        --m-title-size: 28px !important;  /* 모바일용 제목 크기 축소 */
+        --m-desc-size: 16px !important;   /* 모바일용 본문 크기 축소 */
+        --m-card-padding: 40px 20px !important; /* 마스터 카드 패딩 압축 */
+        --m-card-gap: 30px !important;    /* 마스터 카드 내부 간격 압축 */
+    }
+
+    /* 모든 섹션의 상하 거대한 패딩을 모바일 친화적으로 강제 축소 */
+    [id^="section-"], .spec-section {
+        padding: 50px 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* ----------------------------------------------------------------------
+       2. [핵심] 텍스트 우선, 이미지 나중 배치 (Flexbox Order)
+       ---------------------------------------------------------------------- */
+    /* 마스터 카드 수직 붕괴 */
+    .m-card {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    /* 텍스트 컬럼 무조건 1번으로 위로 끌어올림 */
+    .txt-col, .m-txt-group, .f-txt-group, .measuring-guide {
+        order: 1 !important;
+        width: 100% !important;
+        padding: 0 !important; /* PC에 있던 억지 여백 제거 */
+        margin: 0 auto 30px auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 자식 요소들 가운데 정렬 */
+        text-align: center !important;
+    }
+
+    /* 이미지 컬럼 무조건 2번으로 바닥에 배치 */
+    .m-img, .m-img-bottom, .f-img, .box-img-grid, .img-main {
+        order: 2 !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+
+    /* 제목, 아이콘, 텍스트 정렬 보정 */
+    .m-title, .m-desc, .f-title, .f-desc {
+        text-align: center !important;
+    }
+    .m-icon, .m-icon img {
+        align-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* ----------------------------------------------------------------------
+       3. 그리드(Grid) 섹션 1열(1 Column) 통일
+       ---------------------------------------------------------------------- */
+    
+    /* Section 3: AI Health (4대 지표) */
+    #section-ai-health .ai-indicators {
+        grid-template-columns: 1fr; /* 1열 변경 */
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+    #section-ai-health .indicator-item {
+        text-align: center;
+    }
+    #section-ai-health .ai-image-grid {
+        flex-direction: column;
+    }
+    #section-ai-health .img-box img {
+        width: 100%;
+    }
+
+    /* Section 6: Zero Gravity & Body Scan */
+    #section-zg-scan .m-grid-2col {
+        grid-template-columns: 1fr; /* 1열 변경 */
+    }
+    #section-zg-scan .m-col-card {
+        padding: 40px 20px 0 20px;
+    }
+
+    /* Section 8: Heating Shawl (하단 이미지 2개) */
+    #section-heating-shawl .heating-image-grid {
+        flex-direction: column; /* 세로 배치 */
+    }
+    #section-heating-shawl .heating-image-grid .img-box {
+        max-width: 100%;
+    }
+
+    /* Section 12: Convenience Features (2x2 그리드) */
+    #section-convenience-features .feature-grid-2x2 {
+        grid-template-columns: 1fr; /* 1열 변경 */
+        gap: 50px;
+    }
+    #section-convenience-features .feature-item-clean {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Section 13: Minimum Doorway */
+    #section-doorway-packaging .doorway-grid {
+        grid-template-columns: 1fr; /* 1열 변경 */
+    }
+    #section-doorway-packaging .doorway-left,
+    #section-doorway-packaging .box-img-grid {
+        flex-direction: column;
+    }
+    #section-doorway-packaging .doorway-left img,
+    #section-doorway-packaging .box-img-grid img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 20px auto;
+    }
+    #section-doorway-packaging .g-list li {
+        text-align: left !important; /* 리스트는 가독성을 위해 좌측 정렬 방어 */
+    }
+
+    /* Section 14: Dimensions */
+    #section-dimensions .dimensions-layout {
+        flex-direction: column; /* 세로 배치 */
+        align-items: center;
+    }
+    #section-dimensions .dim-img-front,
+    #section-dimensions .dim-img-side {
+        flex: auto;
+        max-width: 100%;
+    }
+
+    /* Section 15: Specifications (스펙 테이블) */
     .spec-row {
-        flex-direction: column; /* 모바일에서는 좌우 배치를 상하 배치로 변경 */
+        flex-direction: column;
         gap: 10px;
+        padding: 20px 0;
     }
     .spec-label {
         width: 100%;
+        min-width: auto;
     }
     .spec-value.split-col {
-        flex-direction: column; /* 내부 컬럼도 세로로 붕괴 */
-        gap: 20px;
+        grid-template-columns: 1fr; /* 내부 항목도 1열 변경 */
+        gap: 15px;
+    }
+
+    /* ----------------------------------------------------------------------
+       4. 특수 예외 처리 (UX 방어)
+       ---------------------------------------------------------------------- */
+    
+    /* Section 1: Size Accommodating (이미지 그룹화 방어) */
+    #section-size-accommodating .size-image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    #section-size-accommodating .img-sub-group {
+        flex-direction: row; /* 서브 이미지는 가로로 나란히 두어 공간 절약 */
+        max-width: 100%;
+    }
+
+    /* Section 9: 20 Auto Programs & 5 Manual Modes */
+    /* 🚨 면접관 경고: 이걸 1열(1fr)로 바꾸면 고객은 스크롤하다 지쳐서 이탈합니다. */
+    #section-programs .m-card-dark-grid {
+        padding: 40px 20px;
+    }
+    #section-programs .icon-grid-5 {
+        grid-template-columns: repeat(3, 1fr); /* 3열 붕괴 (추천) */
+        gap: 40px 10px;
+    }
+
+    /* Section 11: Footrest 간격 제어 */
+    #section-footrest-touchscreen .m-card:first-child {
+        margin-bottom: 60px; /* 기존 160px에서 60px로 대폭 축소 */
+    }
+
+
+
+
+    /* 1. intro-desc 섹션 하단 패딩 완벽 제거 */
+    .intro-desc {
+        padding: 0 !important;
+        /* margin-bottom: 40px !important; (만약 아래 요소와 너무 붙는다면 이 주석을 해제하세요) */
+        margin: 0;
+    }
+
+    /* 2. Size Accommodating 섹션 상단 여백 확대 (시각적 숨통 확보) */
+    #section-size-accommodating {
+        padding-top: 100px !important;
+    }
+
+    /* 3. [핵심] 흩어져 있는 모든 다크 카드(검은색 박스)의 패딩을 20px로 일괄 통일 */
+    .m-card,
+    .m-col-card,
+    .m-card-dark-center,
+    .m-card-dark-grid,
+    .m-card-vertical,
+    #section-size-accommodating .m-col-item {
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 2. [핵심] 텍스트가 들어간 래퍼는 무조건 1순위(위쪽)로 끌어올림 */
+    .txt-col,
+    .m-txt-group,
+    .f-txt-group,
+    .measuring-guide {
+        order: 1 !important;
+        margin-bottom: 30px !important; /* 아래로 내려갈 이미지와의 숨통 확보 */
+    }
+
+    /* 3. [핵심] 이미지가 들어간 래퍼는 무조건 2순위(아래쪽)로 밀어냄 */
+    .m-img,
+    .m-img-bottom,
+    .f-img,
+    .size-image-grid,
+    .box-img-grid {
+        order: 2 !important;
+        margin-bottom: 0 !important; /* 바닥에 밀착되도록 여백 제거 */
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-    /* 1. 모든 컨테이너 및 텍스트 중앙 정렬 */
-    .container, 
-    .m-intro-section, 
-    .m-grid-item, 
-    .txt-col, 
-    .m-title, 
-    .m-desc {
-        text-align: center ;
-        justify-content: center ;
-        align-items: center ;
-    }
-
-    /* 2. m-card 세로 배치 및 그림 하단 이동 */
-    .m-card, .m-card.reverse {
-        flex-direction: column ; /* 세로 쌓기 */
-        padding: 40px 20px;
-        gap: 30px; /* 텍스트와 이미지 사이 간격 */
-    }
-
-    /* [핵심] order 속성으로 순서 강제 조정 */
-    .txt-col {
-        order: 1; /* 텍스트를 무조건 위로 */
-        width: 100% ;
-    }
-
-    .m-img {
-        order: 2; /* 그림을 무조건 아래로 */
-        width: 100% ;
-    }
-
-    /* 모바일 제목 크기 최적화 */
-    .m-title {
-        font-size: calc(var(--m-title-size) * 0.75) ;
-        margin-bottom: 15px;
+/* 초소형 모바일 화면 대응 */
+@media (max-width: 480px) {
+    #section-programs .icon-grid-5 {
+        grid-template-columns: repeat(2, 1fr); /* 극단적으로 좁을 때만 2열 */
+        /* 만약 엔지니어님이 정말로 1열을 원하신다면 위 줄을 grid-template-columns: 1fr; 로 바꾸세요 */
     }
 }
