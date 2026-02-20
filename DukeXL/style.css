@@ -1831,6 +1831,13 @@ body {margin: 0;}
         border-radius: 15px;
         overflow: hidden;
     }
+    #section-convenience-features .f-title {
+        font-size: 28px;
+    }
+
+    #section-convenience-features .f-desc {
+        font-size: 16px;
+    }
 
     /* Section 13: Minimum Doorway */
     #section-doorway-packaging .doorway-grid { grid-template-columns: 1fr; }
