@@ -714,7 +714,7 @@ body {margin: 0;}
     border-radius: 30px;
     
     /* [핵심 2] 상, 좌, 우 패딩은 50px로 넉넉히 주되, 하단 패딩은 0으로 날려버립니다 (이미지 밀착용) */
-    padding: 60px 60px 0 60px; 
+    padding: 60px 60px 60px 60px; 
     
     display: flex;
     flex-direction: column; /* 내부 요소를 위에서 아래로 쌓음 */
@@ -815,10 +815,10 @@ body {margin: 0;}
 
 #section-air-compression .img-wide-bottom img {
     width: 100%;
-    max-width: 450px; /* 이미지가 무한정 거대해지는 것을 방어 (시안 비율 유지) */
+    max-width: 550px; /* 이미지가 무한정 거대해지는 것을 방어 (시안 비율 유지) */
     height: auto;
     display: block;
-    padding-right: 100px;
+    padding-right: 90px;
 }
 
 
@@ -1452,7 +1452,7 @@ body {margin: 0;}
 
 #section-doorway-packaging .g-title {
     font-family: var(--m-font-head);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     color: #515151;
     margin-bottom: 20px;
