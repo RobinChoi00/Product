@@ -2747,7 +2747,7 @@ html, body {
 
 @media (max-width: 768px) {
     #convenience-features {
-        padding: 120px 0; 
+        padding: 180px 0; 
     }
 
     #convenience-features .feature-grid-2x2 {
@@ -3451,5 +3451,9 @@ html, body {
     }
     .m-title {
         padding: 20px 0 !important;
+        font-size: 32px !important;
+    }
+    .m-desc {
+        font-size: 20px !important;
     }
 }
