@@ -199,6 +199,10 @@ html, body {
     .next-btn {
         right: 0; /* 기존 2%에서 화면 오른쪽 끝(0)으로 밀착 */
     }
+    .swatch-panel {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 
