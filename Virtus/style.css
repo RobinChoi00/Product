@@ -1690,6 +1690,9 @@ html, body {
     #hardware-features-wrapper .dark-theme-box {
         padding: 50px 20px;
     }
+    .m-title {
+        padding-bottom: 20px;
+    }
 }
 
 
@@ -2003,7 +2006,7 @@ html, body {
     }
 
     #manual-modes-section .program-item {
-        width: calc(50% - 20px); /* 모바일: 한 줄에 2개씩 */
+        width: calc(33.333% - 20px); /* 모바일: 한 줄에 2개씩 */
     }
 
     /* 모바일 가로 스크롤 오버플로우 방어 */
@@ -2137,12 +2140,19 @@ html, body {
 
     #specialized-foot-rollers .txt-col {
         max-width: 100%;
-        align-items: center; /* 화면이 좁아지면 모든 요소(아이콘 포함)를 중앙 정렬로 스위칭 */
+        align-items: center; 
     }
 
     #specialized-foot-rollers .m-img {
         max-width: 85%;
-        order: -1; /* [UX 일관성] 모바일에서는 발 롤러 하드웨어 이미지를 먼저 보여줌 */
+        
+        /* 💡 [핵심 해결책] 데스크탑에서 주었던 좌측/상단 쏠림 현상을 해제하고 
+           모바일 환경에 맞게 다시 수직/수평 중앙 정렬로 스위칭합니다. */
+        align-self: center; 
+        margin: 0 auto; /* 추가 안전 장치 (가운데 정렬 쐐기) */
+
+        /* (참고) 이전 단계에서 '텍스트를 무조건 위로' 올리는 글로벌 코드를 
+           적용하셨다면, 이 곳의 order: -1; 은 지우셔도 무방합니다. */
     }
 }
 
@@ -2151,7 +2161,6 @@ html, body {
         padding: 50px 20px;
     }
 }
-
 
 
 
@@ -2723,7 +2732,7 @@ html, body {
 
 @media (max-width: 768px) {
     #convenience-features {
-        padding: 60px 0; 
+        padding: 120px 0; 
     }
 
     #convenience-features .feature-grid-2x2 {
@@ -3038,13 +3047,6 @@ html, body {
 /* =========================================
    [RESPONSIVE] 태블릿 & 모바일 환경 최적화
    ========================================= */
-@media (max-width: 992px) {
-    /* 태블릿 사이즈에서는 모니터 밖으로 튀어나가지 않도록 높이를 살짝 줄여줍니다 */
-    .dim-img img {
-        height: 380px; 
-    }
-}
-
 @media (max-width: 768px) {
     .dimensions-section {
         padding: 60px 0;          
@@ -3057,19 +3059,26 @@ html, body {
         width: 100%;              
     }
 
-    /* 💡 모바일에서는 세로로 쌓이므로, 고정 높이를 해제하고 가로 꽉 차게 반응형 전환 */
     .dim-img {
         width: 100%;
     }
 
+    /* 1. 공통 설정 (기본적으로 가로 꽉 차게 하되 최대 450px 방어)
+       -> 이 설정은 두 번째 이미지(측면도)에 그대로 적용됩니다. */
     .dim-img img {
-        width: 100%;              /* 가로 100% 꽉 차게 */
-        max-width: 450px;         /* 너무 무식하게 커지지 않도록 최대폭 방어 */
-        height: auto;             /* 높이는 다시 비율에 맞춰 자동 계산 */
+        width: 100%;              
+        max-width: 450px;         
+        height: auto;             
         margin: 0 auto;           
     }
-}
 
+    /* 2. 💡 [핵심 해결책] 첫 번째 이미지(정면도) 정밀 타격 및 축소 */
+    .dim-img:first-child img {
+        /* 첫 번째 이미지는 폭이 좁은 정면도이므로, 측면도(450px)보다 
+           훨씬 작은 300px(또는 280px)에서 성장을 멈추도록 강제 락(Lock)을 겁니다. */
+        max-width: 300px; 
+    }
+}
 
 
 
@@ -3213,7 +3222,55 @@ html, body {
 }
 
 
+/* ==========================================================================
+   [Mobile Responsive] Specification Section 모바일 최적화
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. 모바일 화면에 맞춘 섹션 상하 여백 최적화 */
+    .spec-section {
+        padding: 60px 0;      
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
 
+    /* 2. 테이블이 모바일 양옆 가장자리에 너무 붙지 않도록 안전 여백(Safe Area) 추가 */
+    .spec-table {
+        padding: 0 20px; 
+    }
+
+    /* 3. 💡 [핵심 해결책] 가로 배치(Row)를 세로 배치(Column)로 꺾어줍니다. */
+    .spec-row {
+        flex-direction: column; 
+        padding: 20px 0;
+    }
+
+    /* 4. 라벨(Product Name 등)이 위로 올라가며 전체 너비를 쓰도록 해방합니다. */
+    .spec-label {
+        width: 100%;
+        min-width: auto; /* 데스크탑의 200px 강제 할당 해제 */
+        margin-bottom: 8px; /* 아래쪽 데이터와의 숨통(간격) 확보 */
+        color: #888888; /* [디테일] 모바일에서는 라벨을 살짝 흐리게 하면 데이터(값)가 더 돋보입니다 */
+    }
+
+    /* 5. 값(Virtus, 110V 등) 영역도 전체 너비를 꽉 차게 씁니다. */
+    .spec-value {
+        width: 100%;
+    }
+
+    /* 6. Standing / Reclined 두 갈래로 나뉘는 영역 최적화 */
+    .spec-value.split-col {
+        gap: 20px; /* 기존 40px 간격은 모바일에서 너무 넓어 잘림을 유발하므로 반으로 축소 */
+        
+        /* 만약 간격을 줄였는데도 텍스트가 길어서 잘린다면, 
+           아래 주석을 해제하여 이 영역마저도 세로로 1줄씩 쌓이게 만들 수 있습니다. */
+        /* grid-template-columns: 1fr; */
+    }
+
+    .spec-section .spec-title {
+        font-size: 32px; /* 모바일 화면에 맞게 타이틀 크기 살짝 축소 */
+        margin-bottom: 40px;
+    }
+}
 
 
 
@@ -3376,5 +3433,8 @@ html, body {
     #touchscreen-remote-section .txt-col,
     #wireless-charging-section .txt-col {
         padding: 0 20px !important; /* 모바일에서 텍스트가 너무 좌우로 붙는 것을 방어 */
+    }
+    .m-title {
+        padding: 20px 0 !important;
     }
 }
