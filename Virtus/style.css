@@ -833,6 +833,12 @@ html, body {
         grid-template-columns: 20px 120px auto; 
         gap: 10px;
     }
+    #bluetooth-controller .how-to-title.txt-blue {
+        margin-bottom: 20px !important;
+    }
+    #bluetooth-controller .m-img.img {
+        padding: 0px 0px 0px 0px !important;
+    }
 }
 
 
@@ -1101,8 +1107,8 @@ html, body {
 
     #calf-kneading-massage .m-img {
         max-width: 95%; /* 모바일에서 더 꽉 차게 확대 */
-        justify-content: center;
-        align-self: center; /* 모바일에서는 다시 중앙 정렬로 복귀 */
+        justify-content: flex-start; /* 모바일에서도 왼쪽 정렬 유지 */
+        align-self: flex-start; /* 모바일에서는 다시 중앙 정렬로 복귀 */
         order: -1; /* [UX 일관성] 기기 이미지가 먼저 보이도록 강제 */
     }
 }
@@ -1973,30 +1979,33 @@ html, body {
 }
 
 /* ==========================================================================
-   [Mobile Responsive] 모바일 환경 최적화 (Grid -> Flex 붕괴)
+   [Mobile Responsive] 모바일 환경 최적화 (3열 Grid 완벽 재배치)
    ========================================================================== */
-/* 모바일처럼 화면이 좁아지면 20열 LCM 그리드 로직을 해제하고 유연한 Flex로 변환합니다. */
 @media (max-width: 992px) {
+    /* 1. 💡 [핵심] 컨테이너를 완벽한 3열 Grid로 재정의 */
     #manual-modes-section .manual-modes-container {
-        display: flex;
-        flex-direction: column; /* 줄(Row) 단위로 세로 스태킹 */
-        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 1:1:1 비율의 3열 생성 */
+        gap: 40px 20px; /* 상하 40px, 좌우 20px 간격 */
     }
 
+    /* 2. HTML 래퍼 투명화 유지 (Flex로 풀지 않고 유지해야 Grid가 자식들을 직접 통제함) */
     #manual-modes-section .mode-row {
-        display: flex; /* 투명화 해제 */
-        flex-wrap: wrap; /* 자유로운 줄바꿈 허용 */
-        justify-content: center; /* Flex 중앙 정렬로 전환 */
-        gap: 40px 20px;
+        display: contents; 
     }
 
+    /* 3. 데스크탑의 복잡한 20열 락(Lock) 및 강제 위치 지정 해제 */
     #manual-modes-section .program-item {
-        width: calc(33.333% - 20px); /* 태블릿: 한 줄에 3개씩 */
+        grid-column: span 1 !important; /* [초기화] 각 아이템이 정확히 1칸씩만 차지하도록 강제 */
+        width: 100%;
     }
 
-    /* 그리드 고정 락 해제 */
-    #manual-modes-section .mode-row:first-child .program-item:first-child {
-        grid-column: auto; 
+    /* 4. 데스크탑 중앙 정렬을 위해 밀어냈던 첫 번째/다섯 번째 아이템 좌표 초기화 */
+    #manual-modes-section .mode-row:first-child .program-item:first-child,
+    #manual-modes-section .mode-row:last-child .program-item:first-child {
+        grid-column-start: auto !important; 
+        grid-column-end: auto !important;
+        grid-column: span 1 !important;
     }
 }
 
@@ -2005,14 +2014,20 @@ html, body {
         padding: 50px 20px;
     }
 
-    #manual-modes-section .program-item {
-        width: calc(33.333% - 20px); /* 모바일: 한 줄에 2개씩 */
+    /* 모바일에서는 화면이 더 좁아지므로 3열 유지 시 간격을 타이트하게 줄임 */
+    #manual-modes-section .manual-modes-container {
+        gap: 30px 10px; 
     }
 
-    /* 모바일 가로 스크롤 오버플로우 방어 */
+    /* 💡 [모바일 가로 오버플로우 방어] 
+       3개가 한 줄에 들어가야 하므로 아이콘과 글씨 크기를 콤팩트하게 다듬어 줍니다. */
     #manual-modes-section .p-icon img {
-        width: 80px;
-        height: 80px;
+        width: 65px; /* 기존 80px에서 축소 */
+        height: 65px;
+    }
+    
+    #manual-modes-section .program-item {
+        font-size: 13px; /* 텍스트가 줄바꿈되어 깨지지 않도록 미세 조정 */
     }
 }
 
