@@ -1717,6 +1717,9 @@ html, body {
     #air-compression-massage .m-img {
         order: -1; /* [UX 일관성] 텍스트 우측에 있던 에어셀 이미지를 모바일 상단으로 끌어올림 */
     }
+    #sl-track-and-space-saving .m-img {
+        padding-top: 40px; /* 모바일에서 텍스트와 이미지 사이 간격 확보 */
+    }
 }
 
 @media (max-width: 768px) {
