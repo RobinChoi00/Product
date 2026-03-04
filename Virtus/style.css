@@ -1,0 +1,3376 @@
+body {margin: 0;}
+/* ==========================================================================
+   GLOBAL RESET & OVERFLOW CONTROL (모바일 가로 쏠림 방지)
+   ========================================================================== */
+
+/* 1. 패딩(Padding)과 테두리(Border)가 너비(Width)를 팽창시키지 않도록 강제 통제 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. 화면 밖으로 튀어나가는 이탈자를 숨겨서 가로 스크롤(흰색 여백) 원천 차단 */
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden; /* [핵심] X축(가로)으로 넘어가는 건 무조건 잘라냄 */
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-full-banner {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.hero-full-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro-text-section {
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.intro-title-logo {
+    margin-bottom: 30px;
+}
+
+.intro-title-logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.intro-desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #8e8e8e;
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+    word-break: keep-all;
+    padding-bottom: 60px;
+}
+
+.intro-desc strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.group-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.chair-display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-chair {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+.prev-btn {
+    left: 2%;
+}
+
+.next-btn {
+    right: 2%;
+}
+
+.nav-btn img {
+    width: 25px;
+    height: auto;
+}
+
+.swatch-panel {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.bar-bg-wrap {
+    display: none;
+}
+
+.btn-wrap {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.color-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+.color-btn.active {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 슬라이더 네비게이션 최적화
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. 💡 화살표 시각적 크기 축소 */
+    .nav-btn img {
+        width: 16px; /* 기존 25px에서 모바일에 맞게 앙증맞게 축소 */
+    }
+
+    /* 2. 💡 화면 끝 밀착 및 터치 영역(Padding) 튜닝 */
+    .nav-btn {
+        /* 시각적으로 끝에 붙어 보이도록 좌우 패딩은 줄이되, 
+           손가락 터치를 위해 상하 패딩은 넉넉하게 유지합니다. */
+        padding: 20px 10px; 
+    }
+
+    /* 3. 💡 위치 좌표를 끝단으로 완벽히 밀어냅니다. */
+    .prev-btn {
+        left: 0; /* 기존 2%에서 화면 왼쪽 끝(0)으로 밀착 */
+    }
+
+    .next-btn {
+        right: 0; /* 기존 2%에서 화면 오른쪽 끝(0)으로 밀착 */
+    }
+}
+
+
+
+/* ==========================================================================
+   1. GLOBAL VARIABLES (디자인 토큰 - Single Source of Truth)
+   ========================================================================== */
+:root {
+    /* Theme Colors (다크 테마 / 라이트 테마) */
+    --bg-dark: #000000;
+    
+    /* Brand Accent Colors */
+    --virtus-blue: #75b2cc;
+    --virtus-red: #ee3e30;
+
+    /* Text Colors - Dark Theme Box (.dark-theme-box 내부) */
+    --text-title-dark: #ffffff;
+    --text-desc-dark: #b5b5b5;
+    --text-strong-dark: #ffffff;
+
+    /* Text Colors - Light Theme (기본 상태) */
+    --text-title-light: #000000;
+    --text-desc-light: #606060;
+
+    /* Typography 
+       *주의: FormaDJRBanner는 최상단에 @font-face로 폰트 파일을 반드시 연결해야 합니다. */
+    --font-title: 'FormaDJRBanner', sans-serif;
+    --font-desc: 'Poppins', sans-serif;
+
+    /* Base Layout */
+    --box-radius: 30px;
+}
+
+/* ==========================================================================
+   2. COMMON COMPONENT STYLES (공통 텍스트 및 박스 설정)
+   ========================================================================== */
+
+/* 포인트 컬러 유틸리티 (어떤 테마에서든 강제 적용) */
+.txt-blue { color: var(--virtus-blue) !important; }
+.txt-red { color: var(--virtus-red) !important; }
+
+/* --------------------------------------------------------------------------
+   [기본 테마 (Light Theme)] - dark-theme-box 바깥 영역
+   -------------------------------------------------------------------------- */
+.m-title {
+    font-family: var(--font-title);
+    font-size: 40px; /* 40px */
+    font-weight: 700;  /* Bold */
+    color: var(--text-title-light); /* #000000 */
+    line-height: 1.2;
+}
+
+.m-desc {
+    font-family: var(--font-desc);
+    font-size: 24px; /* 24px */
+    font-weight: 400;  /* Regular */
+    color: var(--text-desc-light); /* #606060 */
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   [다크 테마 (Dark Theme Box)] - 검은색 배경 전용 설정
+   -------------------------------------------------------------------------- */
+.dark-theme-box {
+    background-color: var(--bg-dark);
+    border-radius: var(--box-radius);
+    /* 섹션별 안쪽 여백(padding)은 개별 클래스에서 제어하도록 비워둡니다 */
+}
+
+/* 다크 테마 박스 내부의 타이틀 색상 오버라이드 (흰색) */
+.dark-theme-box .m-title {
+    color: var(--text-title-dark); /* #ffffff */
+}
+
+/* 다크 테마 박스 내부의 설명 텍스트 색상 오버라이드 (회색) */
+.dark-theme-box .m-desc {
+    color: var(--text-desc-dark); /* #b5b5b5 */
+}
+
+/* 다크 테마 박스 내부의 강조(strong) 텍스트 오버라이드 (흰색 볼드) */
+.dark-theme-box .m-desc strong {
+    color: var(--text-strong-dark); /* #ffffff */
+    font-weight: 700; /* Bold */
+}
+
+.feature-section + .feature-section {
+    margin-top: 40px; /* 섹션 간격을 충분히 확보하여 시각적 구분 명확화 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: INTELLIGENT HEALTH DETECTION (#intelligent-health-detection)
+   ========================================================================= */
+
+/* 1. Section Spacing (섹션 밖 위아래 여백) */
+#intelligent-health-detection {
+    padding: 200px 0px 0px 0px; /* 이전보다 조금 더 넉넉한 외부 여백 확보 */
+}
+
+/* 2. Dark Theme Box Padding (검은 박스 내부 여백 수정) */
+#intelligent-health-detection .dark-theme-box {
+    /* [수정] 이미지를 왼쪽 밑바닥에 붙이기 위해 Left, Bottom 패딩을 0으로 설정 */
+    padding: 60px 0px 0px 0px; 
+    position: relative;
+    overflow: hidden; /* 이미지 상단 마스크 효과가 박스 밖으로 나가지 않도록 방어 */
+}
+
+/* 3. Section Header (로고, 타이틀, 설명 - 중앙 정렬 유지) */
+#intelligent-health-detection .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px; /* [수정] 이미지 크기가 커짐에 따라 헤더와의 간격 미세 조정 */
+    /* [중요] 박스 자체 Left 패딩이 0이므로, 헤더 텍스트가 왼쪽 벽에 붙지 않도록 별도 여백 부여 */
+    padding: 0 40px; 
+}
+
+#intelligent-health-detection .m-icon img {
+    height: 40px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+#intelligent-health-detection .m-title {
+    margin-bottom: 15px;
+}
+
+#intelligent-health-detection .m-desc {
+    max-width: 1020px;
+}
+
+/* 4. Content Area (좌측: 이미지 / 우측: 지표 리스트) */
+#intelligent-health-detection .content-wrapper {
+    display: flex;
+    /* [수정] 이미지는 바닥에 붙고, 텍스트는 수직 중앙에 오도록 Flex 정렬 변경 */
+    align-items: flex-end; 
+    justify-content: space-between;
+    gap: 0px; /* [수정] 이미지 비율을 높여 gap을 0으로 만들고 너비로 통제 */
+    max-width: 100%; /* [수정] 박스 전체 너비를 활용하기 위해 100%로 변경 */
+    margin: 0; /* 중앙 정렬 해제 (왼쪽 벽 밀착) */
+}
+
+/* 좌측 이미지 래퍼 */
+#intelligent-health-detection .m-img {
+    flex: 0 0 65%; /* [요청 반영] 이미지가 차지하는 비율을 65%로 크게 확대 */
+    max-width: 65%;
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-end; /* 바닥 정렬 */
+    position: relative;
+    
+    /* 💡 [핵심 요청: 상단 흐리게 효과] 
+       CSS Mask Image를 이용해 상단 20% 지점부터 부드럽게 투명해지도록 설정 */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
+}
+
+#intelligent-health-detection .m-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* 💡 [핵심 요청: 왼쪽 밑에 딱 맞춤]
+       이미지 자체 여백(Ghost margin) 제거 및 완벽한 바닥 밀착 */
+    margin-bottom: -1px; 
+}
+
+/* 우측 텍스트 래퍼 */
+#intelligent-health-detection .metrics-list-wrapper {
+    flex: 0 0 35%; /* 우측 텍스트 영역을 35% 할당 */
+    display: flex;
+    justify-content: center; /* 텍스트 덩어리를 35% 영역 내에서 중앙 배치 */
+    /* [수정] 이미지 바닥 밀착에 따라 수직 중앙 정렬을 위한 여백 재조정 */
+    padding-bottom: 80px; 
+    padding-right: 40px; /* 오른쪽 벽과의 간격 확보 */
+}
+
+/* 우측 텍스트 리스트 */
+#intelligent-health-detection .metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; /* 텍스트는 좌측 정렬 */
+    justify-content: center; /* 리스트 전체는 수직 중앙 정렬 */
+    padding-bottom: 75px;
+}
+
+#intelligent-health-detection .metric-item {
+    font-family: var(--font-desc);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--virtus-blue);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================= */
+@media (max-width: 992px) {
+    #intelligent-health-detection .dark-theme-box {
+        padding: 50px 0px 0px 0px;
+    }
+
+    #intelligent-health-detection .section-header {
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    #intelligent-health-detection .content-wrapper {
+        flex-direction: column; /* 모바일 세로 스태킹 */
+        align-items: center;
+        text-align: center;
+    }
+
+    #intelligent-health-detection .m-img {
+        max-width: 100%; /* 모바일에서는 가로 꽉 차게 */
+        flex: 0 0 100%;
+        /* 모바일에서는 상단 흐림 효과 비율 조정 (선택사항, 필요시 주석 해제) */
+        /* -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%); */
+    }
+
+    #intelligent-health-detection .metrics-list-wrapper {
+        justify-content: center;
+        padding: 40px 20px; /* 모바일용 여백 설정 */
+        flex: 0 0 100%;
+    }
+
+    #intelligent-health-detection .metrics-list {
+        align-items: center; /* 모바일 중앙 정렬 */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #intelligent-health-detection .dark-theme-box {
+        border-radius: 20px; /* 모바일 곡률 축소 */
+    }
+
+    #intelligent-health-detection .metric-item {
+        font-size: 20px; /* 모바일 폰트 축소 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: 4D+3D DUAL MECHANISM (#dual-mechanism-system)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#dual-mechanism-system .dark-theme-box {
+    padding: 80px 0px 80px 0px;
+}
+
+/* 2. Flex Layout 뼈대 (좌: 이미지 / 우: 텍스트) */
+#dual-mechanism-system .dual-layout {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬로 텍스트와 이미지 축 동기화 */
+    justify-content: space-between;
+    gap: 80px; /* 시안에 맞춘 넉넉한 좌우 간격 */
+    max-width: 1100px; /* 컨텐츠가 화면 양끝으로 너무 벌어지지 않게 전체 폭 통제 */
+    margin: 0 auto;
+}
+
+/* 3. 좌측 메인 이미지 영역 */
+#dual-mechanism-system .m-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 45%; /* 이미지가 우측 텍스트 영역을 침범하지 않도록 최대치 제한 */
+}
+
+#dual-mechanism-system .m-img img {
+    width: 100%;
+    max-width: 450px; /* 원본 이미지가 너무 클 경우를 대비한 안전 장치 */
+    height: auto;
+    display: block; /* 이미지 하단의 미세 여백(Ghost margin) 제거 */
+}
+
+/* 4. 우측 텍스트 영역 */
+#dual-mechanism-system .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dual-mechanism-system .m-title {
+    margin-bottom: 30px; /* 타이틀과 본문 사이의 숨통 확보 */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #dual-mechanism-system .dual-layout {
+        flex-direction: column; /* 화면이 좁아지면 가로(Row)에서 세로(Column) 배치로 전환 */
+        text-align: center;
+        gap: 50px;
+    }
+
+    #dual-mechanism-system .m-img {
+        max-width: 80%; /* 모바일에서는 하드웨어 이미지가 잘 보이도록 크기 확대 */
+        order: -1; /* [핵심] HTML 수정 없이 이미지를 강제로 텍스트 위로 끌어올림 */
+    }
+}
+
+@media (max-width: 768px) {
+    #dual-mechanism-system .dark-theme-box {
+        padding: 50px 20px; /* 모바일 환경 패딩 축소 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: BLUETOOTH CONTROLLER (#bluetooth-controller)
+   ========================================================================== */
+
+/* 1. Section Base & Top Content */
+#bluetooth-controller .dark-theme-box {
+    padding: 80px 0px;
+}
+
+#bluetooth-controller .center-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#bluetooth-controller .m-txt-group {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+#bluetooth-controller .m-title {
+    margin-bottom: 25px;
+}
+
+/* 💡 [수정됨] 이미지 영역 우측 끝 밀착 및 크기 확대 */
+#bluetooth-controller .m-img {
+    width: 100%;
+    max-width: 1050px; /* 기존 900px -> 1050px로 확대하여 더 큰 볼륨감 제공 */
+    
+    /* 기존 margin: 0 auto 80px auto; (중앙 정렬)에서 
+       margin-left를 auto로, margin-right를 0으로 설정하여 우측으로 끝까지 밀어냅니다. */
+    margin: 0 0 80px auto; 
+    
+    display: flex;
+    justify-content: flex-end; /* 내부 이미지 요소도 우측 끝으로 칼같이 정렬 */
+}
+
+#bluetooth-controller .m-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* 만약 오른쪽 패딩(20px)마저 무시하고 브라우저 끝에 완전 닿게 하고 싶다면 
+       아래 주석을 해제하세요. (하지만 현재 구조상 안 하는 것이 더 안정적입니다) */
+    /* margin-right: -20px; */ 
+}
+
+/* ==========================================================================
+   HOW TO USE (Manual Interface)
+   ========================================================================== */
+
+/* 1. Title */
+#bluetooth-controller .how-to-title {
+    font-family: var(--font-title);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+}
+
+/* 2. Cards Container */
+#bluetooth-controller .instruction-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* 두 카드 사이의 간격 */
+}
+
+/* 개별 카드 공통 스타일 (유리 질감의 얇은 테두리) */
+#bluetooth-controller .instruction-card {
+    width: 100%;
+    max-width: 750px;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* 시안처럼 은은하고 고급스러운 테두리 */
+    border-radius: 20px;
+    padding: 40px 50px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+/* 카드 타이틀 */
+#bluetooth-controller .card-title {
+    font-family: var(--font-desc);
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+}
+
+/* -----------------------------------------------------------
+   Card 1: SET UP BLUETOOTH (리스트 정렬)
+   ----------------------------------------------------------- */
+#bluetooth-controller .step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content; /* 박스는 중앙에 있되 텍스트는 좌측 정렬되도록 감싸기 */
+    margin: 0 auto;
+}
+
+#bluetooth-controller .step-row {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트 수직 중앙 동기화 */
+    gap: 15px;
+}
+
+#bluetooth-controller .step-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#bluetooth-controller .step-txt {
+    font-family: var(--font-desc);
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* -----------------------------------------------------------
+   Card 2: TURN ON ASSISTIVE TOUCH (인라인 패스 & Grid 정렬)
+   ----------------------------------------------------------- */
+/* 경로 안내 (Wrap 처리로 모바일 줄바꿈 방어) */
+#bluetooth-controller .path-instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* 화면 좁아질 때 자연스럽게 줄바꿈 허용 */
+    gap: 10px;
+    font-family: var(--font-desc);
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+#bluetooth-controller .inline-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 6px; /* 아이콘 모서리 살짝 둥글게 */
+}
+
+/* [핵심] OS 추천 리스트 Grid 정렬 */
+#bluetooth-controller .os-rec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#bluetooth-controller .os-row {
+    display: grid;
+    grid-template-columns: 24px 150px auto; /* 아이콘(24px) | OS이름(150px 고정) | 설명(나머지) */
+    align-items: center;
+    gap: 15px;
+}
+
+#bluetooth-controller .os-icon img {
+    width: 20px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* 아이콘 박스 내에서 중앙 정렬 */
+}
+
+#bluetooth-controller .os-name {
+    font-family: var(--font-desc);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#bluetooth-controller .os-desc {
+    font-family: var(--font-desc);
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 768px) {
+    #bluetooth-controller .dark-theme-box {
+        padding: 50px 20px; 
+    }
+
+    #bluetooth-controller .instruction-card {
+        padding: 30px 20px; /* 모바일에서는 카드 안쪽 여백 축소 */
+    }
+
+    #bluetooth-controller .how-to-title {
+        font-size: 26px;
+    }
+
+    #bluetooth-controller .card-title {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    #bluetooth-controller .step-txt,
+    #bluetooth-controller .path-instruction,
+    #bluetooth-controller .os-desc {
+        font-size: 15px; /* 모바일 가독성을 위해 폰트 사이즈 조정 */
+    }
+
+    /* 모바일에서는 OS 이름 열(Column) 길이를 줄여서 공간 확보 */
+    #bluetooth-controller .os-row {
+        grid-template-columns: 20px 120px auto; 
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: INTELLIGENT VOICE CONTROL (#intelligent-voice-control)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#intelligent-voice-control .dark-theme-box {
+    padding: 0px 0px 0px 0px; /* 오른쪽 패딩이 0이므로 이미지가 끝에 닿을 수 있습니다 */
+    overflow: hidden; /* 마스크 오버레이가 박스 밖으로 나가지 않도록 방어 */
+}
+
+/* 2. Dual Layout 뼈대 (좌: 텍스트 / 우: 이미지) */
+#intelligent-voice-control .dual-layout {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 20px; 
+    
+    /* 💡 [핵심] 이미지를 오른쪽 끝에 붙이기 위해 max-width를 100%로 해제합니다 */
+    max-width: 100%; 
+    margin: 0;
+}
+
+/* 3. 좌측 텍스트 영역 */
+#intelligent-voice-control .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px; 
+    
+    /* 전체 넓이를 100%로 풀었으므로, 텍스트가 다른 섹션과 일직선이 되도록 왼쪽 여백을 부여합니다 */
+    padding-left: 80px; 
+    padding-bottom: 20px;
+}
+
+#intelligent-voice-control .m-title {
+    margin-bottom: 25px; 
+}
+
+/* 4. 우측 이미지 영역 (음성 인식 웨이브 폼) */
+#intelligent-voice-control .m-img {
+    flex: 1.2; /* 이미지가 차지하는 공간 비율 확대 */
+    display: flex;
+    justify-content: flex-end; /* 이미지를 우측 여백으로 완벽히 밀착 */
+    align-items: flex-end; /* 필요시 바닥 밀착을 위해 설정 */
+    
+    /* 💡 [핵심: 상단 흐리게 효과] 
+       위쪽 0% 지점은 투명하게, 25% 지점부터 선명해지도록 마스크 그라데이션 적용 */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
+}
+
+#intelligent-voice-control .m-img img {
+    width: 100%;
+    max-width: 680px; /* 시원한 개방감을 위해 기존 550px에서 크기 대폭 확대 */
+    height: auto;
+    display: block;
+    margin-right: -1px; /* 우측 끝 칼각 밀착 */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #intelligent-voice-control .dual-layout {
+        flex-direction: column; 
+        text-align: center; 
+        gap: 50px;
+    }
+
+    #intelligent-voice-control .txt-col {
+        max-width: 100%;
+        padding-left: 0; /* 모바일에서는 좌측 여백 리셋 */
+        padding-right: 0;
+        align-items: center; 
+    }
+
+    #intelligent-voice-control .m-img {
+        justify-content: center; 
+        max-width: 100%; /* 모바일에서 이미지 크기 가로 꽉 차게 확대 */
+        
+        /* 모바일에서는 상단 흐림 효과의 범위를 좁혀서 기기가 더 잘 보이게 조정 */
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%);
+    }
+}
+
+@media (max-width: 768px) {
+    #intelligent-voice-control .dark-theme-box {
+        padding: 50px 0px 0px 0px; 
+    }
+    
+    #intelligent-voice-control .txt-col {
+        padding: 0 20px; /* 모바일 텍스트 좌우 여백 확보 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: CALF-KNEADING MASSAGE (#calf-kneading-massage)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#calf-kneading-massage .dark-theme-box {
+    padding: 0; /* 패딩을 완전히 제거하여 이미지가 상/좌측 끝에 닿을 수 있게 허용 */
+    overflow: hidden; /* 이미지 밖으로 삐져나가는 부분 차단 */
+}
+
+/* 2. Dual Layout 뼈대 (좌: 이미지 / 우: 텍스트) */
+#calf-kneading-massage .dual-layout {
+    display: flex;
+    align-items: center; /* 텍스트는 여전히 수직 중앙에 머물도록 기본값 설정 */
+    justify-content: space-between;
+    gap: 40px; 
+    
+    /* 💡 [핵심] 1100px 제한을 풀어 왼쪽 끝까지 확장을 허용합니다 */
+    max-width: 100%; 
+    margin: 0;
+}
+
+/* 3. 좌측 이미지 영역 */
+#calf-kneading-massage .m-img {
+    flex: 1.2; /* [크기 확대] 이미지가 차지하는 공간 비율을 늘림 */
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 끝 벽으로 밀착 */
+    
+    /* 💡 [핵심: 위로 밀착] 부모의 align-items: center를 무시하고 
+       자기 자신(이미지 박스)만 위쪽(Top) 벽으로 강제 이동시킵니다. */
+    align-self: flex-start; 
+}
+
+#calf-kneading-massage .m-img img {
+    width: 100%;
+    max-width: 650px; /* [요청 반영] 기존 480px에서 650px로 대폭 확대 */
+    height: auto;
+    display: block;
+    margin-top: -1px; /* 상단 미세 틈새 방어 (칼각 밀착) */
+    margin-left: -1px; /* 좌측 미세 틈새 방어 (칼각 밀착) */
+}
+
+/* 4. 우측 텍스트 영역 */
+#calf-kneading-massage .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px; 
+    
+    /* 전체 넓이를 100%로 풀었으므로, 우측 텍스트가 시각적으로 1100px 중앙 축을 
+       유지하는 것처럼 보이도록 우측 여백을 넉넉하게 줍니다. */
+    padding-right: 80px; 
+    padding-top: 80px; /* 텍스트 상하 공간 숨통 확보 */
+    padding-bottom: 80px;
+}
+
+#calf-kneading-massage .m-title {
+    margin-bottom: 25px; /* 타이틀과 본문 사이 쾌적한 간격 */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #calf-kneading-massage .dual-layout {
+        flex-direction: column; 
+        text-align: center; 
+        gap: 50px;
+    }
+
+    #calf-kneading-massage .txt-col {
+        max-width: 100%;
+        padding-right: 0; /* 모바일 우측 여백 리셋 */
+        padding-bottom: 0;
+        align-items: center; 
+    }
+
+    #calf-kneading-massage .m-img {
+        max-width: 95%; /* 모바일에서 더 꽉 차게 확대 */
+        justify-content: center;
+        align-self: center; /* 모바일에서는 다시 중앙 정렬로 복귀 */
+        order: -1; /* [UX 일관성] 기기 이미지가 먼저 보이도록 강제 */
+    }
+}
+
+@media (max-width: 768px) {
+    #calf-kneading-massage .dark-theme-box {
+        padding: 50px 0 0 0; /* 모바일 상단 여백 재조정 */
+    }
+
+    #calf-kneading-massage .txt-col {
+        padding: 0 20px 50px 20px; /* 모바일 텍스트 좌우/하단 여백 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: INTELLIGENT MEMORY FUNCTION (#intelligent-memory-function)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#intelligent-memory-function .dark-theme-box {
+    padding: 80px 0px;
+}
+
+/* 2. Top Text Group (타이틀 및 메인 설명 중앙 정렬) */
+#intelligent-memory-function .m-txt-group {
+    max-width: 900px;
+    margin: 0 auto 60px auto; /* 텍스트와 하단 이미지 사이의 쾌적한 숨통 */
+    text-align: center;
+}
+
+#intelligent-memory-function .m-title {
+    margin-bottom: 25px;
+    
+}
+
+/* 3. Main Image Wrapper */
+#intelligent-memory-function .memory-img-wrapper {
+    width: 100%;
+    max-width: 600px; /* 터치스크린 UI 이미지가 화면을 과도하게 덮지 않도록 통제 */
+    margin: 0 auto 60px auto; 
+    display: flex;
+    justify-content: center;
+}
+
+#intelligent-memory-function .memory-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block; /* 이미지 하단 고스트 마진 제거 */
+}
+
+/* 4. Bottom Memory Features (하단 텍스트 및 리스트 래퍼) */
+#intelligent-memory-function .memory-features-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 리스트 상단 설명 (시각적 위계를 위해 본문보다 살짝 작게) */
+#intelligent-memory-function .pre-list-desc {
+    margin-bottom: 40px;
+    font-size: 20px; 
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* 5. 2-Column Grid List (핵심 2단 레이아웃) */
+#intelligent-memory-function .memory-grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 50:50 비율로 정확히 2분할 */
+    column-gap: 60px; /* 좌우 리스트 간격 */
+    row-gap: 25px;    /* 상하 리스트 간격 */
+    max-width: 1000px; /* 리스트가 너무 양옆으로 찢어지지 않게 방어 */
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#intelligent-memory-function .grid-list-item {
+    display: flex;
+    align-items: flex-start; /* [핵심 디테일] 텍스트가 두 줄이 되어도 불릿이 첫 줄 상단을 유지하도록 강제 */
+    font-family: var(--font-desc);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--virtus-blue);
+    text-transform: uppercase; /* 시안에 맞춰 대문자 강제 적용 */
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+}
+
+#intelligent-memory-function .bullet-point {
+    font-size: 18px;
+    margin-right: 12px; /* 불릿과 텍스트 사이 간격 */
+    margin-top: 3px; /* 텍스트 라인 높이(line-height)와 시각적 밸런스를 맞추기 위한 미세 마진 */
+}
+
+/* 리스트 하단 마무리 텍스트 */
+#intelligent-memory-function .post-list-desc {
+    font-size: 18px;
+    color: var(--text-desc-dark);
+    max-width: 800px;
+    line-height: 2.0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #intelligent-memory-function .memory-grid-list {
+        column-gap: 30px; /* 태블릿 환경에서는 좌우 리스트 간격을 좁혀 가독성 확보 */
+    }
+}
+
+@media (max-width: 768px) {
+    #intelligent-memory-function .dark-theme-box {
+        padding: 50px 20px; /* 모바일 패딩 축소 */
+    }
+
+    #intelligent-memory-function .memory-grid-list {
+        grid-template-columns: 1fr; /* [핵심] 모바일에서는 2단을 해제하고 1단 세로형 리스트로 스태킹 */
+        row-gap: 20px;
+    }
+
+    /* 모바일 가독성을 위해 리스트 폰트 일괄 축소 */
+    #intelligent-memory-function .pre-list-desc,
+    #intelligent-memory-function .grid-list-item,
+    #intelligent-memory-function .post-list-desc {
+        font-size: 16px; 
+    }
+
+    #intelligent-memory-function .bullet-point {
+        margin-top: 1px; /* 폰트 축소에 맞춰 불릿 미세 밸런스 재조정 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: BODY SCAN TECHNOLOGY (#body-scan-technology)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#body-scan-technology .dark-theme-box {
+    padding: 40px 0px;
+}
+
+/* 2. Dual Layout 뼈대 (좌: 텍스트 / 우: 이미지) */
+#body-scan-technology .dual-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 3. 좌측 텍스트 영역 (.txt-col Flexbox 제어) */
+#body-scan-technology .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* 데스크탑: 내부 요소(아이콘 포함) 좌측 완벽 정렬 */
+    max-width: 550px;
+    padding-left: 40px;
+}
+
+#body-scan-technology .m-desc {
+    max-width: 470px;
+    line-height: 1.6;
+}
+
+/* 아이콘 스타일링 */
+#body-scan-technology .section-icon {
+    margin-bottom: 20px; /* 타이틀과의 쾌적한 간격 */
+}
+
+#body-scan-technology .section-icon img {
+    height: 45px; /* 시안 비율에 맞춘 아이콘 높이 고정 */
+    width: auto;
+    display: block;
+}
+
+#body-scan-technology .m-title {
+    margin-bottom: 25px;
+}
+
+/* 4. 우측 이미지 영역 */
+#body-scan-technology .m-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 50%; /* 이미지가 전체 너비의 절반을 넘지 않도록 방어 */
+}
+
+#body-scan-technology .m-img img {
+    width: 100%;
+    max-width: 500px; /* 홀로그램 스캔 이미지가 너무 뚱뚱해지지 않도록 최대 너비 제한 */
+    height: auto;
+    display: block;
+    
+    /* 💡 [핵심 요청 반영] 이미지의 양 끝(좌우)을 검은색 배경 속으로 부드럽게 흐리게(Fade-out) 만듭니다. 
+       -webkit- prefix는 Safari 및 Chrome 계열 브라우저 호환성을 위해 반드시 필요합니다. */
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #body-scan-technology .dual-layout {
+        flex-direction: column;
+        text-align: center; /* 내부 텍스트 노드 중앙 정렬 */
+        gap: 50px;
+    }
+
+    #body-scan-technology .txt-col {
+        max-width: 100%;
+        align-items: center; /* [핵심] 모바일: 아이콘을 포함한 모든 컨테이너 요소를 중앙으로 강제 이동 */
+    }
+
+    #body-scan-technology .m-img {
+        max-width: 80%; /* 좁은 화면에서 이미지 가시성 확보 */
+        order: -1; /* [UX 일관성] 모바일에서는 체형 스캔 홀로그램 이미지를 먼저 노출 */
+    }
+}
+
+@media (max-width: 768px) {
+    #body-scan-technology .dark-theme-box {
+        padding: 50px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: HARDWARE FEATURES WRAPPER (#hardware-features-wrapper)
+   ========================================================================== */
+
+/* 1. Master Dark Theme Box Padding */
+#hardware-features-wrapper .dark-theme-box {
+    padding: 100px 0px; /* 내부 컨텐츠가 많으므로 상하 여백을 더 넉넉하게 확보 */
+}
+
+/* 2. 각 내부 섹션 간의 수직 리듬(Vertical Rhythm) 제어 */
+#hardware-features-wrapper .inner-feature-section {
+    margin-bottom: 120px; /* 섹션 사이의 쾌적한 숨통 */
+}
+
+#hardware-features-wrapper .inner-feature-section:last-child {
+    margin-bottom: 0; /* 마지막 섹션은 하단 여백 제거 */
+}
+
+/* 공통 아이콘 설정 */
+#hardware-features-wrapper .section-icon img {
+    height: 45px;
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#hardware-features-wrapper .m-title {
+    margin-bottom: 25px;
+}
+
+#hardware-features-wrapper .m-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Part 1. ZERO GRAVITY RECLINING (중앙 정렬 레이아웃)
+   -------------------------------------------------------------------------- */
+#zero-gravity-reclining .m-txt-group {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#zero-gravity-reclining .margin-top-lg {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#zero-gravity-reclining .m-img img {
+    max-width: 700px; /* 메인 기기 이미지가 너무 거대해지는 것 방어 */
+    
+    /* 💡 [핵심 요청 반영] 이미지 하단이 검은색 배경 속으로 부드럽게 스며들도록(Fade-out) 만듭니다. 
+       0%~75% 구간은 형태를 유지하고, 나머지 25% 구간에서 투명하게 사라집니다. */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Part 2. SL-TRACK & SPACE-SAVING (2단 Grid 레이아웃)
+   -------------------------------------------------------------------------- */
+#sl-track-and-space-saving .feature-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 완벽한 50:50 분할 */
+    gap: 60px;
+    padding-top: 80px;
+}
+
+#sl-track-and-space-saving .grid-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    justify-self: center;
+}
+
+#sl-track-and-space-saving .m-desc {
+    max-width: 400px;
+}
+
+#sl-track-and-space-saving .m-img {
+    margin-top: 40px; /* 텍스트와 하단 이미지 사이 간격 */
+    margin-top: auto; /* [핵심] 텍스트 길이가 달라도 이미지를 항상 바닥에 밀착시킴 */
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Part 3 & 4 공통. AIR COMPRESSION & HEATING THERAPY (Dual Flex 레이아웃)
+   -------------------------------------------------------------------------- */
+#hardware-features-wrapper .dual-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 0 0 0px; /* 텍스트와 이미지가 양쪽 끝에 붙지 않도록 내부 여백 확보 */
+}
+
+#hardware-features-wrapper .dual-layout .txt-col,
+#hardware-features-wrapper .dual-layout .m-img {
+    flex: 1;
+}
+
+#hardware-features-wrapper .m-desc {
+    max-width: 1050px; /* 텍스트 영역이 너무 넓어지는 것을 방어 */
+    line-height: 1.6;
+}
+
+#hardware-features-wrapper .dual-layout .m-img {
+    display: flex;
+    justify-content: center;
+}
+
+#hardware-features-wrapper .dual-layout .m-img img {
+    max-width: 350px; /* 부분 하드웨어 이미지 크기 최적화 */
+}
+
+#air-compression-massage .dual-layout {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Part 4 특화. HEATING THERAPY (이미지 축소 및 위아래 흐림 효과)
+   ========================================================================== */
+
+#heating-therapy .dual-layout {
+    margin: 0 auto;
+}
+
+#heating-therapy .txt-col {
+    margin: 0 auto;
+}
+
+#heating-therapy .m-desc {
+    max-width: 450px;
+}
+
+#heating-therapy .m-img {
+    display: flex;
+    justify-content: center; /* 이미지를 50% 영역 내에서 정중앙에 배치 */
+}
+
+#heating-therapy .m-img img {
+    /* 💡 [요청 1: 크기 축소] 기존 450px 규격에서 350px로 과감하게 줄여 
+       다소 뚱뚱해 보일 수 있는 좌석 이미지를 슬림하고 컴팩트하게 배치합니다. */
+    max-width: 350px; 
+    height: auto;
+    display: block;
+
+    /* 💡 [요청 2: 위아래 흐리게] 4단계 컬러 스탑을 활용한 양방향 페이드 아웃 */
+    -webkit-mask-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%,    /* 상단 끝 (0%): 완전 투명 */
+        rgba(0,0,0,1) 20%,   /* 상단 20% 지점: 완전 선명해짐 */
+        rgba(0,0,0,1) 80%,   /* 하단 80% 지점: 여기까지 선명함 유지 */
+        rgba(0,0,0,0) 100%   /* 하단 끝 (100%): 다시 완전 투명하게 사라짐 */
+    );
+    mask-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,1) 20%, 
+        rgba(0,0,0,1) 80%, 
+        rgba(0,0,0,0) 100%
+    );
+}
+
+/* 기존에 있던 각주 텍스트 설정 (유지) */
+#heating-therapy .footnote-txt {
+    font-family: var(--font-desc);
+    font-size: 14px; 
+    color: #888888;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Part 4 특화. HEATING THERAPY (각주 및 텍스트 정렬)
+   -------------------------------------------------------------------------- */
+#heating-therapy .footnote-txt {
+    font-family: var(--font-desc);
+    font-size: 14px; /* 본문보다 확연히 작은 크기로 위계 하향 */
+    color: #b5b5b5;
+    margin-top: 20px;
+    line-height: 1.5;
+    max-width: 300px;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #hardware-features-wrapper .inner-feature-section {
+        margin-bottom: 80px; /* 모바일에서는 섹션 간격 축소 */
+    }
+
+    #sl-track-and-space-saving .feature-grid-2col {
+        grid-template-columns: 1fr; /* 2단을 1단 세로 스태킹으로 변환 */
+        gap: 200px;
+    }
+
+    #hardware-features-wrapper .dual-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    /* 모바일에서는 교차 레이아웃의 아이콘들을 중앙으로 강제 이동 */
+    #hardware-features-wrapper .section-icon {
+        display: flex;
+        justify-content: center;
+    }
+
+    #air-compression-massage .m-img {
+        order: -1; /* [UX 일관성] 텍스트 우측에 있던 에어셀 이미지를 모바일 상단으로 끌어올림 */
+    }
+}
+
+@media (max-width: 768px) {
+    #hardware-features-wrapper .dark-theme-box {
+        padding: 50px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: 20 AUTO PROGRAMS (#auto-programs-section)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#auto-programs-section .dark-theme-box {
+    padding: 80px 0px;
+    margin: 0 auto;
+}
+
+/* 2. Header (타이틀) */
+#auto-programs-section .margin-bottom-lg {
+    margin-bottom: 60px; /* 타이틀과 그리드 사이의 쾌적한 숨통 */
+}
+
+/* 3. 5-Column Grid Layout (핵심 뼈대) */
+#auto-programs-section .program-grid-5col {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 1:1:1:1:1 비율로 5칸 분할 */
+    row-gap: 50px;    /* 위아래 줄 간격 */
+    column-gap: 20px; /* 좌우 칸 간격 */
+}
+
+#auto-programs-section .m-title {
+    text-align: center;
+}
+
+/* 4. Individual Program Item (아이콘 + 텍스트) */
+#auto-programs-section .program-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* 아이콘과 텍스트 중앙 정렬 */
+    justify-content: flex-start;
+    text-align: center;
+}
+
+/* [요청 반영] 아이콘 100px 고정 */
+#auto-programs-section .p-icon {
+    margin-bottom: 15px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+#auto-programs-section .p-icon img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    object-fit: contain; /* 찌그러짐 방어 */
+}
+
+#auto-programs-section .program-grid-5col {
+    padding: 0 40px;
+}
+
+/* [요청 반영] 텍스트 12px, #ffffff */
+#auto-programs-section .p-name {
+    font-family: var(--font-desc); /* Poppins 폰트 적용 */
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 600; /* 12px의 작은 글씨이므로 가독성을 위해 Semi-bold 적용 */
+    text-transform: uppercase; /* 시안에 맞춰 강제 대문자 변환 */
+    letter-spacing: 0.05em; /* 작은 폰트의 답답함을 해소하는 자간 확대 */
+    line-height: 1.4; /* 두 줄로 꺾였을 때의 줄간격 방어 */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+
+/* 태블릿 환경 (화면이 좁아지면 4열로 축소) */
+@media (max-width: 992px) {
+    #auto-programs-section .program-grid-5col {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+/* 모바일 환경 (화면이 더 좁아지면 3열로 축소 및 패딩/아이콘 크기 조정) */
+@media (max-width: 768px) {
+    #auto-programs-section .dark-theme-box {
+        padding: 50px 20px; 
+    }
+    
+    #auto-programs-section .program-grid-5col {
+        grid-template-columns: repeat(3, 1fr); 
+        row-gap: 40px; 
+        column-gap: 15px;
+    }
+
+    /* 화면 오버플로우를 막기 위해 아이콘 크기 유연한 축소 */
+    #auto-programs-section .p-icon img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* 초소형 모바일 화면 (가로 480px 이하일 때는 2열로 최종 붕괴) */
+@media (max-width: 480px) {
+    #auto-programs-section .program-grid-5col {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: 9 MANUAL MODES (#manual-modes-section)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#manual-modes-section .dark-theme-box {
+    padding: 80px 0px;
+}
+
+#manual-modes-section .margin-bottom-lg {
+    margin-bottom: 60px; /* 타이틀과 그리드 사이 넉넉한 숨통 */
+}
+
+/* ----------------------------------------------------
+   [GRID TYPE B] LCM Grid Strategy (4 Items / 5 Items)
+   ---------------------------------------------------- */
+#manual-modes-section .manual-modes-container {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); /* 20칸 그리드 */
+    gap: 0px; 
+    row-gap: 50px;
+    width: 100%;
+    /* Nova II의 1200px을 가져오되, Virtus 전체 레이아웃 밸런스를 위해 1000px 유지 권장 
+       (만약 더 넓게 퍼지길 원하시면 1200px로 수정하셔도 무방합니다) */
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+/* [필수 유지] HTML의 .mode-row 래퍼가 Grid를 방해하지 않도록 투명화 */
+#manual-modes-section .mode-row {
+    display: contents;
+}
+
+/* 1. 모든 아이콘: 기본 4칸 차지 */
+#manual-modes-section .program-item {
+    grid-column: span 4 !important; /* 기본값 */
+    width: 100%;                    /* 내용물 꽉 차게 */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2. [핵심 해결책] 첫 번째 아이콘을 '3번 줄 ~ 7번 줄'로 고정 */
+/* "3에서 시작해서 4칸(span 4) 차지해라"를 숫자로 풀면 3,4,5,6을 쓰고 7에서 끝납니다. */
+/* 이렇게 적으면 브라우저가 크기를 줄일 수가 없습니다. */
+#manual-modes-section .mode-row:first-child .program-item:first-child {
+    grid-column: 3 / 7 !important;  /* [변경] Start 3 / End 7 */
+}
+
+/* 3. [안전 장치] 5번째 아이콘은 무조건 '줄바꿈' 해서 '1번 줄'부터 시작 */
+/* 혹시라도 윗줄에 공간이 남아서 올라오는 것을 원천 차단합니다. */
+/* Virtus 구조상 5번째 아이콘은 '마지막 줄(.mode-row:last-child)의 첫 번째 아이템'입니다. */
+#manual-modes-section .mode-row:last-child .program-item:first-child {
+    grid-column-start: 1 !important; 
+    grid-column-end: span 4 !important;
+}
+
+/* ----------------------------------------------------
+   개별 아이콘 및 텍스트 스타일 (요청 수치 완벽 반영)
+   ---------------------------------------------------- */
+#manual-modes-section .p-icon {
+    margin-bottom: 15px;
+}
+
+#manual-modes-section .m-title {
+    text-align: center;
+}
+
+#manual-modes-section .p-icon img {
+    width: 100px;  /* 요청하신 100px 고정 */
+    height: 100px;
+    display: block;
+    object-fit: contain;
+}
+
+#manual-modes-section .p-name {
+    font-family: var(--font-desc);
+    font-size: 12px; /* 요청하신 12px 고정 */
+    color: #ffffff;  /* 요청하신 #ffffff 적용 */
+    font-weight: 600; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화 (Grid -> Flex 붕괴)
+   ========================================================================== */
+/* 모바일처럼 화면이 좁아지면 20열 LCM 그리드 로직을 해제하고 유연한 Flex로 변환합니다. */
+@media (max-width: 992px) {
+    #manual-modes-section .manual-modes-container {
+        display: flex;
+        flex-direction: column; /* 줄(Row) 단위로 세로 스태킹 */
+        gap: 50px;
+    }
+
+    #manual-modes-section .mode-row {
+        display: flex; /* 투명화 해제 */
+        flex-wrap: wrap; /* 자유로운 줄바꿈 허용 */
+        justify-content: center; /* Flex 중앙 정렬로 전환 */
+        gap: 40px 20px;
+    }
+
+    #manual-modes-section .program-item {
+        width: calc(33.333% - 20px); /* 태블릿: 한 줄에 3개씩 */
+    }
+
+    /* 그리드 고정 락 해제 */
+    #manual-modes-section .mode-row:first-child .program-item:first-child {
+        grid-column: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    #manual-modes-section .dark-theme-box {
+        padding: 50px 20px;
+    }
+
+    #manual-modes-section .program-item {
+        width: calc(50% - 20px); /* 모바일: 한 줄에 2개씩 */
+    }
+
+    /* 모바일 가로 스크롤 오버플로우 방어 */
+    #manual-modes-section .p-icon img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: 3 SPECIALIZED FOOT ROLLERS (#specialized-foot-rollers)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#specialized-foot-rollers .dark-theme-box {
+    padding: 0 0 80px 0px; /* 텍스트가 이미지에 너무 붙지 않도록 좌측에 넉넉한 패딩 확보 */
+}
+
+/* 2. Dual Layout 뼈대 (좌: 텍스트 / 우: 이미지) */
+/* 이전 섹션들과 완벽하게 동일한 1100px 폭과 60px 간격을 유지하여 시각적 축을 동기화합니다. */
+#specialized-foot-rollers .dual-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 3. 좌측 텍스트 영역 */
+#specialized-foot-rollers .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* 데스크탑에서는 아이콘과 텍스트를 완벽히 좌측 정렬 */
+    max-width: 480px; /* 텍스트가 이미지를 침범하지 않도록 안전 방어선 구축 */
+}
+
+/* 아이콘 스타일링 */
+#specialized-foot-rollers .section-icon {
+    margin-bottom: 20px;
+}
+
+#specialized-foot-rollers .section-icon img {
+    height: 60px; /* 시안 비율에 맞춘 일관된 아이콘 높이 */
+    width: auto;
+    display: block;
+}
+
+#specialized-foot-rollers .txt-col {
+    padding-top: 80px; /* 아이콘과 타이틀 사이 간격 */
+}
+
+#specialized-foot-rollers .m-title {
+    margin-bottom: 25px;
+}
+
+/* 4. 우측 이미지 영역 (발 롤러 하드웨어) */
+#specialized-foot-rollers .m-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    align-self: flex-start; /* 이미지가 텍스트보다 살짝 위에 배치되어 발 롤러의 존재감을 극대화합니다. */
+    
+}
+
+#specialized-foot-rollers .m-img img {
+    width: 100%;
+    max-width: 450px; /* 누끼 이미지가 화면을 과도하게 차지하지 않도록 제어 */
+    height: auto;
+    display: block;
+    
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #specialized-foot-rollers .dual-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #specialized-foot-rollers .txt-col {
+        max-width: 100%;
+        align-items: center; /* 화면이 좁아지면 모든 요소(아이콘 포함)를 중앙 정렬로 스위칭 */
+    }
+
+    #specialized-foot-rollers .m-img {
+        max-width: 85%;
+        order: -1; /* [UX 일관성] 모바일에서는 발 롤러 하드웨어 이미지를 먼저 보여줌 */
+    }
+}
+
+@media (max-width: 768px) {
+    #specialized-foot-rollers .dark-theme-box {
+        padding: 50px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: AUTOMATIC EXTENDABLE FOOTREST (#automatic-extendable-footrest)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#automatic-extendable-footrest .dark-theme-box {
+    padding: 60px 0px;
+    overflow: hidden; /* 이미지 오버플로우 방어 */
+}
+
+/* 2. Dual Layout 뼈대 (좌: 이미지 / 우: 텍스트) */
+#automatic-extendable-footrest .dual-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    
+    /* 💡 [핵심 해결책] 1100px 제한을 풀고 화면 전체(100%) 너비를 사용하도록 허용합니다. */
+    max-width: 100%;
+    margin: 0; /* 중앙 정렬 해제 */
+}
+
+/* 3. 좌측 메인 이미지 영역 */
+#automatic-extendable-footrest .m-img {
+    flex: 1.2; /* 텍스트보다 이미지가 차지하는 공간을 더 넓게 할당 */
+    display: flex;
+    
+    /* 💡 [핵심 해결책] 이미지를 중앙(center)이 아닌 왼쪽 끝벽(flex-start)으로 밀착 */
+    justify-content: flex-start; 
+    max-width: none; /* 기존 50% 제한 해제 */
+}
+
+#automatic-extendable-footrest .m-img img {
+    width: 100%;
+    max-width: 550px; /* 왼쪽으로 붙인 만큼, 이미지가 더 시원하게 보이도록 크기 확대 */
+    height: auto;
+    display: block;
+    margin-left: -1px; /* 왼쪽 1px 미세 틈새 방어 (칼각 밀착) */
+}
+
+/* 4. 우측 텍스트 영역 */
+#automatic-extendable-footrest .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* 데스크탑: 좌측 칼각 정렬 */
+    max-width: 400px; 
+    
+    
+    /* 💡 [핵심 해결책] 전체 100% 레이아웃에서 텍스트가 모니터 우측 끝에 너무 붙지 않도록,
+       안전한 여백을 주어 기존 1100px 축과 밸런스를 맞춥니다. */
+    padding-right: 80px; 
+}
+
+/* 아이콘 스타일링 */
+#automatic-extendable-footrest .section-icon {
+    margin-bottom: 20px;
+    
+}
+
+#automatic-extendable-footrest .section-icon img {
+    height: 60px; /* 시안 비율 유지 */
+    width: auto;
+    display: block;
+}
+
+#automatic-extendable-footrest .m-title {
+    margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #automatic-extendable-footrest .dual-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #automatic-extendable-footrest .txt-col {
+        max-width: 100%;
+        padding-right: 0; /* 모바일 우측 여백 리셋 */
+        align-items: center; /* 좁은 화면에서는 내부 요소를 중앙으로 모음 */
+    }
+
+    #automatic-extendable-footrest .m-img {
+        max-width: 100%; /* 모바일에서 꽉 차게 */
+        justify-content: center; /* 모바일에서는 다시 중앙 정렬로 스위치 */
+    }
+}
+
+@media (max-width: 768px) {
+    #automatic-extendable-footrest .dark-theme-box {
+        padding: 50px 0px; /* 모바일 상하 패딩 조정 */
+    }
+
+    #automatic-extendable-footrest .txt-col {
+        padding: 0 20px; /* 모바일 텍스트 좌우 여백 확보 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: TOUCHSCREEN REMOTE (#touchscreen-remote-section)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#touchscreen-remote-section .dark-theme-box {
+    /* 💡 [핵심] 이미지가 바닥과 우측 끝에 닿을 수 있도록 Right, Bottom 패딩을 0으로 제거합니다. */
+    padding: 80px 0px 0px 0px;
+    overflow: hidden; /* 이미지가 박스 밖으로 튀어나가는 현상 방어 */
+}
+
+/* 2. Dual Layout 뼈대 (좌: 텍스트 / 우: 이미지) */
+#touchscreen-remote-section .dual-layout {
+    display: flex;
+    align-items: center; /* 텍스트는 수직 중앙 유지 */
+    justify-content: space-between;
+    gap: 40px;
+    
+    /* 💡 [핵심] 1100px 제한을 풀고 화면 전체(100%) 너비를 사용하도록 허용합니다. */
+    max-width: 100%;
+    margin: 0; /* 중앙 정렬 해제 */
+}
+
+/* 3. 좌측 텍스트 영역 */
+#touchscreen-remote-section .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 500px;
+    
+    /* 전체 넓이를 100%로 풀었으므로, 텍스트가 기존 1100px 축과 
+       일직선을 유지하도록 좌측에 넉넉한 여백을 줍니다. */
+    padding-left: 80px; 
+    padding-bottom: 80px; /* 이미지가 바닥에 붙으면서 텍스트 공간을 압박하지 않도록 하단 여백 확보 */
+}
+
+/* 아이콘 스타일링 */
+#touchscreen-remote-section .section-icon {
+    margin-bottom: 20px;
+}
+
+#touchscreen-remote-section .section-icon img {
+    height: 60px; 
+    width: auto;
+    display: block;
+}
+
+#touchscreen-remote-section .m-title {
+    margin-bottom: 25px;
+}
+
+/* 4. 우측 이미지 영역 (터치스크린 패널) */
+#touchscreen-remote-section .m-img {
+    flex: 1.2; /* [크기 확대] 텍스트보다 넓은 공간 할당 */
+    display: flex;
+    
+    /* 💡 [핵심 해결책] 가로는 우측 끝으로(flex-end), 세로는 바닥 끝으로(flex-end) 밀착시킵니다. */
+    justify-content: flex-end; 
+    align-self: flex-end; 
+    
+    max-width: none; /* 기존 50% 제한 해제 */
+}
+
+#touchscreen-remote-section .m-img img {
+    width: 100%;
+    max-width: 650px; /* [요청 반영] 터치스크린 이미지를 650px로 대폭 확대 */
+    height: auto;
+    display: block;
+    margin-right: -1px; /* 우측 1px 미세 틈새 방어 (칼각 밀착) */
+    margin-bottom: -1px; /* 하단 1px 미세 틈새 방어 (칼각 밀착) */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #touchscreen-remote-section .dual-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #touchscreen-remote-section .txt-col {
+        max-width: 100%;
+        padding-left: 0; /* 모바일 좌측 여백 리셋 */
+        padding-bottom: 0;
+        align-items: center; 
+    }
+
+    #touchscreen-remote-section .m-img {
+        max-width: 100%; /* 모바일에서 꽉 차게 */
+        justify-content: center; /* 다시 중앙 정렬로 스위치 */
+        align-self: center; /* 세로 바닥 밀착 해제 */
+        order: -1; /* DOM 순서를 무시하고 이미지를 최상단으로 끌어올림 */
+    }
+}
+
+@media (max-width: 768px) {
+    #touchscreen-remote-section .dark-theme-box {
+        padding: 50px 0px 0px 0px; /* 모바일 상하 패딩 조정 */
+    }
+
+    #touchscreen-remote-section .txt-col {
+        padding: 0 20px 50px 20px; /* 모바일 텍스트 좌우/하단 여백 확보 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: WIRELESS CHARGING PORT (#wireless-charging-section)
+   ========================================================================== */
+
+/* 1. Dark Theme Box Padding */
+#wireless-charging-section .dark-theme-box {
+    padding: 0;
+    overflow: hidden; /* 이미지가 박스 밖으로 튀어나가는 현상 방어 */
+}
+
+/* 2. Dual Layout 뼈대 (좌: 이미지 / 우: 텍스트) */
+#wireless-charging-section .dual-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    
+    /* 💡 [핵심 해결책] 1100px 제한을 풀고 화면 전체(100%) 너비를 사용하도록 허용합니다. */
+    max-width: 100%;
+    margin: 0; /* 중앙 정렬 해제 */
+}
+
+/* 3. 좌측 이미지 영역 */
+#wireless-charging-section .m-img {
+    flex: 1.2; /* [크기 확대] 텍스트보다 넓은 공간 할당 */
+    display: flex;
+    
+    /* 💡 [핵심 해결책] 이미지를 중앙(center)이 아닌 왼쪽 끝벽(flex-start)으로 밀착 */
+    justify-content: flex-start; 
+    max-width: none; /* 기존 50% 제한 해제 */
+}
+
+#wireless-charging-section .m-img img {
+    width: 100%;
+    max-width: 550px; /* [요청 반영] 세로형 이미지를 550px로 대폭 확대 */
+    height: auto;
+    display: block;
+    margin-left: -1px; /* 왼쪽 1px 미세 틈새 방어 (칼각 밀착) */
+}
+
+/* 4. 우측 텍스트 영역 */
+#wireless-charging-section .txt-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* 데스크탑: 좌측 칼각 정렬 */
+    max-width: 450px;
+    
+    /* 전체 넓이를 100%로 풀었으므로, 텍스트가 너무 우측으로 쏠리지 않도록
+       안전한 여백을 주어 기존 1100px 축과 밸런스를 맞춥니다. */
+    padding-right: 80px; 
+    padding-top: 80px; /* 텍스트 상하 공간 숨통 확보 */
+    padding-bottom: 80px;
+}
+
+/* 아이콘 스타일링 */
+#wireless-charging-section .section-icon {
+    margin-bottom: 20px;
+}
+
+#wireless-charging-section .section-icon img {
+    height: 45px; 
+    width: auto;
+    display: block;
+}
+
+#wireless-charging-section .m-title {
+    margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #wireless-charging-section .dual-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #wireless-charging-section .txt-col {
+        max-width: 100%;
+        padding-right: 0; /* 모바일 우측 여백 리셋 */
+        padding-bottom: 0;
+        align-items: center; /* 좁은 화면에서는 내부 텍스트와 아이콘을 중앙으로 이동 */
+    }
+
+    #wireless-charging-section .m-img {
+        max-width: 100%; /* 모바일에서 꽉 차게 */
+        justify-content: center; /* 모바일에서는 다시 중앙 정렬로 스위치 */
+    }
+}
+
+@media (max-width: 768px) {
+    #wireless-charging-section .dark-theme-box {
+        padding: 50px 0px 0px 0px; /* 모바일 상하 패딩 조정 */
+    }
+    
+    #wireless-charging-section .txt-col {
+        padding: 0 20px 50px 20px; /* 모바일 텍스트 좌우/하단 여백 확보 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: CONVENIENCE FEATURES (#convenience-features)
+   ========================================================================== */
+
+/* 1. Light Theme Base */
+#convenience-features {
+    padding: 40px 0; /* 라이트 테마 전환 시 여백을 충분히 주어 시각적 환기 */
+    background-color: #ffffff; /* 명시적 흰색 배경 선언 */
+}
+
+/* 2. 2x2 Grid Layout (CSS Grid 제어) */
+#convenience-features .feature-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 완벽한 50:50 2열 분할 */
+    column-gap: 40px; /* 좌우 카드 간격 */
+    row-gap: 60px;    /* 상하 카드 간격 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. 개별 카드 컨테이너 */
+#convenience-features .grid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+}
+
+/* 4. [수정됨] 이미지 둥근 모서리 및 검은색 배경(액자) 설정 */
+#convenience-features .image-rounded {
+    width: 100%;
+    margin-bottom: 30px; 
+    
+    /* 💡 [핵심 해결책] 이미지를 감싸는 부모 컨테이너에 검은색 배경 적용 */
+    background-color: #000000; 
+    
+    /* [필수] 부모가 배경을 가졌으므로 둥근 모서리 설정을 부모에게 부여 */
+    border-radius: 30px; 
+    
+    /* 이미지가 부모의 둥근 테두리를 벗어나지 않도록 강제 통제 */
+    overflow: hidden; 
+    
+    /* 패딩이 포함된 너비 계산 방식 지정 */
+    box-sizing: border-radius;
+}
+
+#convenience-features .image-rounded img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    /* 💡 [수정] 부모가 border-radius를 가졌으므로 img 태그의 radius는 제거하거나 
+       부모보다 작게 설정하여 깨짐 현상 방지 (여기서는 부모 overflow로 통제하므로 제거) */
+    border-radius: 0; 
+}
+
+/* 5. 텍스트 미세 제어 */
+#convenience-features .m-title {
+    margin-bottom: 15px; /* 타이틀과 본문 사이 간격 */
+}
+
+#convenience-features .m-desc {
+    max-width: 90%; /* 텍스트 라인이 너무 길어져 가독성을 해치는 현상(Line-length) 방어 */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    #convenience-features .feature-grid-2x2 {
+        column-gap: 40px;
+        row-gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    #convenience-features {
+        padding: 60px 0; 
+    }
+
+    #convenience-features .feature-grid-2x2 {
+        grid-template-columns: 1fr; /* [핵심] 모바일에서는 2열을 부수고 1단 세로형으로 스태킹 */
+        row-gap: 60px;
+    }
+
+    #convenience-features .grid-card {
+        align-items: center; /* 좁은 화면에서는 좌측 정렬 대신 중앙 정렬로 시각적 안정감 확보 */
+        text-align: center;
+    }
+
+    #convenience-features .m-desc {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SECTION: MINIMUM DOORWAY & PACKAGING (.doorway-section)
+   ========================================================================== */
+
+/* 1. Light Theme Base */
+.doorway-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+/* 2. 타이틀 중앙 정렬 및 여백 */
+.doorway-section .m-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* 3. Main 2-Column Layout (좌: 문 / 우: 박스 및 텍스트) */
+.doorway-section .doorway-layout {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬로 좌우 밸런스 유지 */
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 4. Left Column (문 통과 이미지) */
+.doorway-section .doorway-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 45%; /* 좌측 영역이 너무 넓어지는 것 통제 */
+}
+
+.doorway-section .doorway-left img {
+    width: 100%;
+    max-width: 350px; /* 안마의자 정면 이미지가 무식하게 커지는 것 방어 */
+    height: auto;
+    display: block;
+}
+
+/* 5. Right Column (박스 이미지 + 측정 가이드) */
+.doorway-section .doorway-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+}
+
+/* 6. 박스 2개 병렬 배치 (핵심 정렬 기술 적용) */
+.doorway-section .box-img-grid {
+    display: flex;
+    align-items: flex-end; /* [핵심] 높이가 다른 두 박스의 바닥(Baseline)을 완벽하게 일치시킴 */
+    gap: 30px;
+    margin-bottom: 50px; /* 하단 텍스트와의 넉넉한 간격 */
+}
+
+.doorway-section .box-img-grid img {
+    height: auto;
+    display: block;
+}
+
+/* 크기가 다른 두 박스의 시각적 비율을 Flex width로 통제 */
+.doorway-section .box-img-grid img:first-child {
+    width: 55%; /* 큰 메인 박스 */
+}
+
+.doorway-section .box-img-grid img:last-child {
+    width: 45%; /* 작은 서브 박스 */
+}
+
+/* 7. Measuring Guide (가이드 텍스트) */
+.doorway-section .measuring-guide {
+    text-align: left;
+}
+
+.doorway-section .g-title {
+    font-family: var(--font-desc);
+    font-size: 26px;
+    color: var(--text-title-light); /* #000000 */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.doorway-section .g-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 항목 간의 시각적 숨통 확보 */
+}
+
+/* [엔지니어링 테크닉] div로 짠 리스트의 내어쓰기(Hanging Indent) 정렬 마법 */
+.doorway-section .g-list div {
+    font-family: var(--font-desc);
+    font-size: 15px; /* 본문(24px)보다 확연히 줄여 보조 정보로서의 위계 확립 */
+    color: var(--text-desc-light); /* #606060 */
+    line-height: 1.6;
+    padding-left: 15px;  /* 왼쪽으로 전체 공간을 밀고 */
+    text-indent: -15px;  /* 첫 줄(불릿 기호)만 15px 다시 당겨와 칼같이 정렬합니다 */
+}
+
+/* ==========================================================================
+   [Mobile Responsive] 태블릿 & 모바일 환경 최적화
+   ========================================================================== */
+@media (max-width: 992px) {
+    .doorway-section .doorway-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 80px;
+    }
+
+    .doorway-section .doorway-left,
+    .doorway-section .doorway-right {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .doorway-section .box-img-grid {
+        justify-content: center;
+    }
+
+    .doorway-section .measuring-guide {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .doorway-section {
+        padding: 60px 0;
+    }
+
+    .doorway-section .box-img-grid {
+        flex-direction: column; /* 모바일에서는 가로 폭이 부족하므로 박스 2개를 세로로 스태킹 */
+        align-items: center; 
+        gap: 30px;
+    }
+
+    .doorway-section .box-img-grid img:first-child,
+    .doorway-section .box-img-grid img:last-child {
+        width: 100%;
+        max-width: 280px; /* 세로로 쌓인 박스들의 최대 크기 제한 */
+    }
+    
+    .doorway-section .g-list div {
+        text-align: left; /* 전체가 중앙 정렬되더라도 리스트는 가독성을 위해 좌측 정렬 방어 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION 13 Dimensions Section
+   ========================================= */
+
+.dimensions-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.dimensions-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. 💡 [수정] 타이틀 중앙 정렬 완벽 적용 */
+.dimensions-section .m-title {
+    font-family: var(--font-title, 'Poppins', sans-serif);
+    font-weight: 700;
+    font-size: 40px;
+    color: #424242;   
+    
+    /* 텍스트 중앙 정렬을 강제하기 위해 block 속성 추가 */
+    display: block;
+    width: 100%;
+    text-align: center; 
+    
+    margin-bottom: 60px; 
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+/* 2. 레이아웃 (가로 배치) */
+.dimensions-row {
+    display: flex;
+    justify-content: center; 
+    /* 💡 [디테일] 두 이미지의 '바닥 라인(치수선)'이 완벽하게 일직선이 되도록 하단 정렬 */
+    align-items: flex-end;   
+    gap: 60px; /* 폭이 넓어지는 것을 고려해 간격 살짝 최적화 */
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* 3. 💡 [핵심 해결책] 이미지 높이 완벽 동기화 */
+.dim-img {
+    display: flex;
+    justify-content: center;
+}
+
+/* 기존의 flex 1, 1.8 비율을 삭제하고, 이미지의 '높이'를 기준으로 크기를 통제합니다. */
+.dim-img img {
+    height: 480px; /* 데스크탑 기준 두 이미지의 공통 높이 강제 고정 */
+    width: auto;   /* 가로는 원본 비율에 맞춰 브라우저가 자동 계산 */
+    object-fit: contain; /* 이미지 찌그러짐 원천 차단 */
+    display: block;
+}
+
+/* =========================================
+   [RESPONSIVE] 태블릿 & 모바일 환경 최적화
+   ========================================= */
+@media (max-width: 992px) {
+    /* 태블릿 사이즈에서는 모니터 밖으로 튀어나가지 않도록 높이를 살짝 줄여줍니다 */
+    .dim-img img {
+        height: 380px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .dimensions-section {
+        padding: 60px 0;          
+    }
+
+    .dimensions-row {
+        flex-direction: column;   /* 세로로 스태킹 */
+        align-items: center;      /* 가로축 중앙 정렬 */
+        gap: 60px;                
+        width: 100%;              
+    }
+
+    /* 💡 모바일에서는 세로로 쌓이므로, 고정 높이를 해제하고 가로 꽉 차게 반응형 전환 */
+    .dim-img {
+        width: 100%;
+    }
+
+    .dim-img img {
+        width: 100%;              /* 가로 100% 꽉 차게 */
+        max-width: 450px;         /* 너무 무식하게 커지지 않도록 최대폭 방어 */
+        height: auto;             /* 높이는 다시 비율에 맞춰 자동 계산 */
+        margin: 0 auto;           
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   [SECTION 15] Specification Section
+   ========================================= */
+
+/* [엔지니어링 테크닉] 이 섹션 내부의 모든 요소에 'Poppins' 폰트를 일괄 적용 (유지보수 극대화) */
+.spec-section,
+.spec-section * {
+    font-family: 'Arial, Helvetica', sans-serif !important;
+}
+
+/* 1. 섹션 전체 여백 및 배경 */
+.spec-section {
+    background-color: #ffffff;
+    padding: 100px 0;      
+    margin-bottom: 100px;  
+    margin-top: 60px;
+}
+
+/* 2. [수정됨] 위험한 자식 선택자를 버리고 명확한 클래스(.spec-title) 사용 */
+/* HTML에서 제목 태그에 반드시 <div class="spec-title">를 추가하세요! */
+.spec-section .spec-title {
+    font-weight: 600;       /* 글로벌 스탠다드 Bold */
+    font-size: 42px;        
+    text-align: center;     
+    margin-bottom: 60px;    
+    color: #1d1d1d;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 테이블 컨테이너 */
+.spec-table {
+    max-width: 1000px;      
+    margin: 0 auto;         
+    border-top: 1px solid #e5e5e5; 
+}
+
+/* 4. 행(Row) 스타일 */
+.spec-row {
+    display: flex;          
+    align-items: flex-start;
+    padding: 25px 0;        
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.spec-row.no-border {
+    border-bottom: none;
+}
+
+/* 5. 왼쪽 라벨 (항목 이름) */
+.spec-label {
+    width: 30%;             
+    min-width: 200px;       
+    font-weight: 600;       /* 라벨은 가독성을 위해 Semi-bold 추천 */
+    font-size: 20px;
+    color: #1d1d1d;         
+    line-height: 1.6;
+}
+
+/* 6. 오른쪽 값 (데이터) */
+.spec-value {
+    flex: 1;                
+    font-weight: 400;       /* 본문 데이터는 Regular */
+    font-size: 20px;
+    color: #444444;         
+    line-height: 1.6;
+}
+
+/* 7. 내부 컬럼 나누기 */
+.spec-value.split-col {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;              
+}
+
+.col-item {
+    display: flex;
+    flex-direction: column; 
+}
+
+.col-item strong {
+    font-weight: 600;
+    color: #1d1d1d;
+    margin-bottom: 5px;     
+    display: block;
+}
+
+/* 8. 다운로드 링크 스타일 */
+.red-link {
+    color: #ff4d4d;         
+    text-decoration: none;  
+    font-weight: 500;
+    font-size: 20px;
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 추가 */
+}
+
+.red-link:hover {
+    opacity: 0.7;           
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   [Mobile Responsive] 모바일 환경 최적화 (텍스트 우선 & 중앙 정렬)
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* 1. 컨테이너 세로 스태킹 및 중앙 정렬 */
+    #TARGET-SECTION .dual-layout {
+        flex-direction: column;
+        text-align: center; /* 내부 텍스트 노드 중앙 정렬 */
+        justify-content: center; /* 전체 요소 중앙 정렬 */
+        gap: 50px;
+    }
+
+    /* 2. 텍스트 영역 제어 (💡 위로 끌어올림) */
+    #TARGET-SECTION .txt-col {
+        max-width: 100%;
+        align-items: center; /* Flexbox 내부 요소(아이콘 등)를 중앙으로 모음 */
+        padding: 0 20px; /* 모바일 환경 좌우 안전 여백 */
+        
+        /* 💡 [핵심 해결책] DOM 순서상 뒤에 있더라도, order를 -1로 주어 
+           형제 요소들 중 무조건 가장 위쪽(최상단)으로 렌더링되도록 강제합니다. */
+        order: -1 !important; 
+    }
+
+    /* 3. 이미지 영역 제어 (텍스트 밑으로 내려감) */
+    #TARGET-SECTION .m-img {
+        max-width: 85%; /* 모바일에서 쾌적한 크기 유지 (필요시 100% 조정) */
+        justify-content: center; /* 이미지 박스 가로 중앙 정렬 */
+        align-self: center; /* 이미지 박스 수직 중앙(기본값) 정렬 */
+        
+        /* 텍스트가 order: -1을 가져갔으므로, 
+           이미지는 자연스럽게 텍스트 다음(아래)에 배치됩니다. */
+    }
+    
+}
+
+/* 모든 기능 섹션에 일괄 적용하고 싶을 때 */
+@media (max-width: 768px) {
+    .feature-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .dark-theme-box {
+        border-radius: 20px;
+    }
+    .txt-col {
+        padding: 0 !important;
+    }
+}
+
+
+/* ==========================================================================
+   [Mobile Responsive] INTELLIGENT HEALTH DETECTION 모바일 최적화
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 💡 [핵심 해결책] 검은색 박스를 감싸고 있는 최상단 부모 섹션에 패딩을 주어 
+       스마트폰 화면 가장자리에서 박스를 20px 안전하게 떼어냅니다. */
+    #intelligent-health-detection {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #intelligent-health-detection .dark-theme-box {
+        /* [유지] 내부 이미지가 왼쪽 벽에 딱 붙도록 박스 자체의 좌우/하단 패딩은 0으로 유지합니다. */
+        padding: 50px 0px 0px 0px; 
+        
+        /* [디테일] 박스가 화면에서 떨어져 '카드(Card)' 형태가 되었으므로 모서리를 부드럽게 깎아줍니다. */
+        border-radius: 20px; 
+    }
+
+    /* 텍스트(헤더) 영역이 검은색 박스의 왼쪽 벽에 너무 붙지 않도록 내부 여백을 따로 줍니다. */
+    #intelligent-health-detection .section-header {
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    /* 우측 지표 텍스트(BLOOD OXYGEN 등)도 모바일에서는 중앙 또는 안전한 여백을 갖도록 제어 */
+    #intelligent-health-detection .metrics-list-wrapper {
+        padding: 40px 20px; 
+    }
+}
+
+
+/* ==========================================================================
+   [Mobile Responsive] 전역 렌더링 순서 제어 (TEXT -> IMAGE 강제화)
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* 1. 💡 [핵심] 지정된 9개 섹션의 텍스트(.txt-col)를 무조건 최상단으로 끌어올립니다. 
+       기존 코드에 흩어진 설정들을 무시하기 위해 !important로 락(Lock)을 겁니다. */
+    #dual-mechanism-system .txt-col,
+    #calf-kneading-massage .txt-col,
+    #body-scan-technology .txt-col,
+    #air-compression-massage .txt-col,
+    #heating-therapy .txt-col,
+    #specialized-foot-rollers .txt-col,
+    #automatic-extendable-footrest .txt-col,
+    #touchscreen-remote-section .txt-col,
+    #wireless-charging-section .txt-col {
+        order: -1 !important;
+    }
+
+    /* 2. 💡 지정된 9개 섹션의 이미지(.m-img)에 걸려있던 
+       기존의 끌어올림(order: -1) 설정을 무력화하고 텍스트 아래로 강제 배치합니다. */
+    #dual-mechanism-system .m-img,
+    #calf-kneading-massage .m-img,
+    #body-scan-technology .m-img,
+    #air-compression-massage .m-img,
+    #heating-therapy .m-img,
+    #specialized-foot-rollers .m-img,
+    #automatic-extendable-footrest .m-img,
+    #touchscreen-remote-section .m-img,
+    #wireless-charging-section .m-img {
+        order: 2 !important; 
+    }
+
+    #intelligent-voice-control .txt-col,
+    #calf-kneading-massage .txt-col,
+    #automatic-extendable-footrest .txt-col,
+    #touchscreen-remote-section .txt-col,
+    #wireless-charging-section .txt-col {
+        padding: 0 20px !important; /* 모바일에서 텍스트가 너무 좌우로 붙는 것을 방어 */
+    }
+}
