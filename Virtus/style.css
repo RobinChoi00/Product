@@ -844,6 +844,7 @@ html, body {
     }
     #bluetooth-controller .how-to-title.txt-blue {
         margin-top: 20px !important;
+        margin-bottom: 0px !important;
     }
     /* 💡 [핵심 해결책] 네거티브 마진 브레이크아웃 (Negative Margin Breakout) */
     #bluetooth-controller .m-img {
