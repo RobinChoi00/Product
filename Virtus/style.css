@@ -2732,32 +2732,33 @@ html, body {
     text-align: left;
 }
 
-/* 4. [수정됨] 이미지 둥근 모서리 및 검은색 배경(액자) 설정 */
+/* 4. [수정됨] 이미지 둥근 모서리 및 1:1 비율 강제 (액자 효과) */
 #convenience-features .image-rounded {
     width: 100%;
     margin-bottom: 30px; 
-    
-    /* 💡 [핵심 해결책] 이미지를 감싸는 부모 컨테이너에 검은색 배경 적용 */
     background-color: #000000; 
-    
-    /* [필수] 부모가 배경을 가졌으므로 둥근 모서리 설정을 부모에게 부여 */
     border-radius: 30px; 
-    
-    /* 이미지가 부모의 둥근 테두리를 벗어나지 않도록 강제 통제 */
     overflow: hidden; 
-    
-    /* 패딩이 포함된 너비 계산 방식 지정 */
     box-sizing: border-box;
-    position: relative; /* 자식 요소의 절대 위치 지정이 부모 기준이 되도록 설정 */
+    position: relative; 
+    
+    /* 💡 [핵심 해결책 1] 래퍼에 완벽한 1:1(정사각형) 비율 강제 할당 */
+    aspect-ratio: 1 / 1; 
+    
+    /* 💡 [핵심 해결책 2] 부모 레벨에서 발생할 수 있는 미세한 텍스트 베이스라인(검은 줄) 원천 차단 */
+    line-height: 0; 
 }
 
 #convenience-features .image-rounded img {
     width: 100%;
-    height: auto;
-    display: block;
     
-    /* 💡 [수정] 부모가 border-radius를 가졌으므로 img 태그의 radius는 제거하거나 
-       부모보다 작게 설정하여 깨짐 현상 방지 (여기서는 부모 overflow로 통제하므로 제거) */
+    /* 💡 [핵심 해결책 3] height: auto;를 버리고 부모 높이에 100% 꽉 채움 */
+    height: 100%; 
+    
+    /* 💡 [핵심 해결책 4] 100% 100%로 억지로 늘렸을 때 이미지가 찌그러지지 않도록 방어 */
+    object-fit: cover; 
+    
+    display: block;
     border-radius: 0; 
 }
 
