@@ -2743,7 +2743,8 @@ html, body {
     overflow: hidden; 
     
     /* 패딩이 포함된 너비 계산 방식 지정 */
-    box-sizing: border-radius;
+    box-sizing: border-box;
+    position: relative; /* 자식 요소의 절대 위치 지정이 부모 기준이 되도록 설정 */
 }
 
 #convenience-features .image-rounded img {
