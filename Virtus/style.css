@@ -7,6 +7,10 @@ body {margin: 0;}
 *, *::before, *::after {
     box-sizing: border-box;
 }
+img {
+    /* 💡 [핵심 해결책] 이미지를 블록 레벨로 승격시켜 글자 꼬리표(디센더) 공간을 소멸시킵니다. */
+    display: block; 
+}
 
 /* 2. 화면 밖으로 튀어나가는 이탈자를 숨겨서 가로 스크롤(흰색 여백) 원천 차단 */
 html, body {
