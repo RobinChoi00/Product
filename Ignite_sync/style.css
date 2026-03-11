@@ -589,7 +589,7 @@ html, body {
     background: linear-gradient(to right, #1d1833 0%, #000000 40%);
     
     border-radius: 40px;
-    padding: 80px 0 0 80px; 
+    padding: 40px 0 0 40px; 
     overflow: hidden; 
     display: flex;
     align-items: stretch; 
@@ -598,8 +598,8 @@ html, body {
 /* --- Left Column (Text) --- */
 #sec-ankle-stretching .text-content-area {
     width: 50%;
-    padding-bottom: 80px; /* 컨테이너에서 뺀 하단 패딩 보상 */
-    padding-right: 40px;
+    padding-bottom: 40px; /* 컨테이너에서 뺀 하단 패딩 보상 */
+    padding-right: 20px;
     
     position: relative;
     z-index: 2;
@@ -648,6 +648,7 @@ html, body {
 
 #sec-ankle-stretching .mechanism-media {
     width: 100%;
+    max-width: 650px;
     height: auto;
     display: block;
     object-fit: cover;
@@ -1267,6 +1268,7 @@ html, body {
     display: flex;
     gap: 80px; /* 양쪽 카드 사이의 시원한 여백 */
     align-items: stretch; /* 💡 [핵심] 텍스트 길이가 달라도 양쪽 카드의 총 높이를 동일하게 강제 동기화 */
+    padding-left: 40px; /* 왼쪽 패딩으로 카드 전체를 시안의 퍼플 영역 안으로 밀어넣기 */
 }
 
 /* --- 개별 카드 (Feature Card) --- */
@@ -3199,6 +3201,7 @@ html, body {
     .text-content-area .section-desc,
     .text-content-area .section-desc strong {
         text-align: center !important;
+        padding: 0 20px !important; /* 모바일에서는 텍스트가 너무 양옆으로 붙지 않도록 안전 여백 추가 */
     }
 
     /* 💡 4. 비주얼(이미지/영상) 영역을 무조건 2순위(아래쪽)로 내립니다! */
@@ -3223,5 +3226,44 @@ html, body {
     }
     #sec-lcd-controller .container {
         background: linear-gradient(to bottom, #1d1833 0%, #1d1833 40%, #000000 80%) !important;
+    }
+}
+/* ==========================================================================
+   📱 [Mobile Responsive] 4D+3D DUAL MECHANISM 모바일 최적화 (Max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* 💡 1. 박스 전체 레이아웃 (이미지 밑으로 배치) 및 중앙 정렬 - Already done */
+    #sec-dual-mechanism .container {
+        flex-direction: column-reverse !important; /* text above, visual below */
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* 💡 2. 텍스트 부분만 중앙 정렬 - Already done */
+    #sec-dual-mechanism .text-content-area {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    #sec-dual-mechanism .text-content-area .section-title,
+    #sec-dual-mechanism .text-content-area .section-desc {
+        text-align: center !important;
+    }
+
+    /* ---------------------------------------------------
+       [New Fixes] 박스 패딩 제거 및 텍스트 패딩 추가
+       --------------------------------------------------- */
+
+    /* 💡 3. [핵심 교정] 박스 안의 모든 패딩(여백)을 0으로 제거하여 꽉 차게 만듭니다. */
+    #sec-dual-mechanism .container {
+        padding: 0 !important;
+    }
+
+    /* 💡 4. [핵심 교정] 텍스트 부분들만 좌우 패딩 20px를 명시적으로 추가합니다. */
+    #sec-dual-mechanism .text-content-area .section-title,
+    #sec-dual-mechanism .text-content-area .section-desc {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 }
