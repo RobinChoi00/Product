@@ -3593,6 +3593,28 @@ html, body {
         height: auto !important;
         object-fit: contain !important;
     }
+
+    /* ==========================================================================
+       💡 [비주얼 페이드 효과] 모바일 화면 주요 이미지/영상 상단 스무딩 
+       ========================================================================== */
+    
+    /* 로고나 아이콘이 흐려지는 것을 막기 위해 '주요 제품 비주얼'만 정밀 타겟팅합니다. */
+    .feature-img-block, 
+    .feature-img-large, 
+    .mechanism-media, 
+    .scan-feature-img, 
+    .chair-img, 
+    .tablet-img,
+    .hero-full-banner img,
+    .visual-content-area img,
+    .img
+    .video
+    .visual-content-area video {
+        
+        /* 💡 상단(0%)은 완전 투명하게 지우고, 15% 지점부터 원래 이미지가 나타나게 하는 알파 마스크! */
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%) !important;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%) !important;
+    }
 }
 
 /* ==========================================================================
