@@ -3190,7 +3190,7 @@ html, body {
         align-items: center !important; 
         
         /* 이미지와 겹치지 않도록 상하 패딩 최적화 */
-        padding: 40px 30px 20px 30px !important; 
+        padding: 40px 0px 20px 0px !important; 
         margin-top: 0 !important;
     }
 
