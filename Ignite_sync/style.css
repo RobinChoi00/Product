@@ -509,7 +509,6 @@ html, body {
     #sec-health-detection .column-left {
         width: 100%;
         margin-right: 0;
-        padding: 0 30px 40px 30px; 
     }
 
     #sec-health-detection .section-title {
@@ -848,7 +847,7 @@ html, body {
     margin: 0 auto;
     
     /* 💡 [핵심 해결책] 왼쪽(0%)에서 퍼플로 시작해 40% 지점에서 완벽한 칠흑으로 변환 */
-    background: linear-gradient(to right, #1d1833 0%, #000000 40%);
+    background: linear-gradient(to right, #1d1833 0%, #000000 50%);
     border-radius: 40px;
     
     /* 우측과 하단 이미지를 벽에 완벽하게 밀착(Flush)시키기 위한 비대칭 패딩 */
@@ -1267,9 +1266,12 @@ html, body {
 
 #sub-track-space .split-features {
     display: flex;
-    gap: 80px; /* 양쪽 카드 사이의 시원한 여백 */
+    gap: 200px; /* 양쪽 카드 사이의 시원한 여백 */
     align-items: stretch; /* 💡 [핵심] 텍스트 길이가 달라도 양쪽 카드의 총 높이를 동일하게 강제 동기화 */
-    padding-left: 40px; /* 왼쪽 패딩으로 카드 전체를 시안의 퍼플 영역 안으로 밀어넣기 */
+}
+
+#feature-sl-track.column-left.feature-card{
+    padding-left: 40px;
 }
 
 /* --- 개별 카드 (Feature Card) --- */
@@ -1755,7 +1757,7 @@ html, body {
 }
 
 #sub-manual-modes .icon-label {
-    font-size: 14px; /* 상단보다 글씨도 살짝 더 큼직하게 */
+    font-size: 12px; /* 상단보다 글씨도 살짝 더 큼직하게 */
     line-height: 1.4;
     color: #ffffff;
     font-weight: 500;
@@ -2134,7 +2136,7 @@ html, body {
     border-radius: 40px;
     overflow: hidden;
     padding: 0; 
-    background: linear-gradient(to right, #000000 0%, #000000 60%, #1d1833 90%);
+    background: linear-gradient(to right, #000000 0%, #000000 35%, #1d1833 90%);
     display: flex;
     align-items: stretch; /* 또는 center (기존 유지) */
     
@@ -2165,7 +2167,7 @@ html, body {
     width: 35%; /* 지웅님의 35% 비율 유지 */
     
     /* 💡 [핵심 교정 2] 좌우 패딩이 0이면 글씨가 박스 밖으로 튀어나가거나 영상에 닿습니다. 안전 여백 확보! */
-    padding: 40px 0px 40px 60px; 
+    padding: 40px 0px 60px 80px; 
     
     display: flex;
     flex-direction: column;
@@ -3272,4 +3274,265 @@ html, body {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+
+
+    /* ==========================================================================
+       📱 INTELLIGENT HEALTH DETECTION 모바일 정렬 
+       ========================================================================== */
+    
+    /* 💡 1. 2단 컬럼 구조 해제 및 세로 1단 배치 */
+    #sec-health-detection .container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 💡 2. 왼쪽 컬럼(텍스트 + 태블릿)의 내부를 Flexbox로 만들고 세로 정렬합니다. */
+    #sec-health-detection .column-left {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    /* 💡 3. [핵심 교정] 이미지가 갇혀있는 "방(.tablet-image-wrap)" 전체를 밑으로 내동댕이칩니다! */
+    #sec-health-detection .tablet-image-wrap {
+        order: 99 !important; /* 태블릿 래퍼를 꼴찌로 강등 */
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important; /* 이미지 중앙 정렬 */
+        margin-top: 40px !important; /* 텍스트와의 상단 여백 확보 */
+    }
+
+    /* 💡 4. [선택] 태블릿 이미지 크기 조율 */
+    #sec-health-detection .tablet-img {
+        width: 100% !important;
+        max-width: 500px !important; 
+        height: auto !important;
+    }
+
+    /* 💡 5. 텍스트 컨텐츠는 위쪽(order 미지정 시 기본값 0으로 위쪽 유지) 및 중앙 정렬 */
+    #sec-health-detection .text-content-area {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 타이틀, 설명, 브랜드 로고 모두 중앙 정렬 강제 */
+    #sec-health-detection .section-title,
+    #sec-health-detection .section-desc {
+        text-align: center !important;
+    }
+
+    .swatch-panel {
+        margin-bottom: -20px !important; /* 태블릿과 텍스트 사이의 간격 조정 */
+    }
+    .text-content-area {
+        padding: 0 20px !important; /* 텍스트가 화면 가장자리에 너무 붙지 않도록 좌우 패딩 추가 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   📱 [Global Mobile Responsive] 박스(Card) 스타일 모바일 마스터 (Max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* ---------------------------------------------------
+       1. 렌더링 순서 강제: 텍스트 무조건 위, 비주얼 무조건 아래
+       --------------------------------------------------- */
+    .layout-two-column, 
+    .split-features, 
+    .feature-card {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .text-content-area {
+        order: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .section-title, 
+    .section-desc {
+        text-align: center !important;
+    }
+
+    .visual-content-area {
+        order: 2 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* [예외 처리] Health Detection 태블릿 이미지를 맨 밑으로 강등 */
+    #sec-health-detection .column-left {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    #sec-health-detection .tablet-image-wrap {
+        order: 99 !important; 
+        margin-top: 30px !important;
+    }
+
+    /* ---------------------------------------------------
+       2. [핵심 교정] 섹션 바깥 여백 유지 & 박스 디자인 보존
+       --------------------------------------------------- */
+    /* 💡 박스 바깥의 좌우 여백(20px)과 각 섹션 사이의 상하 여백(60px)을 유지합니다. */
+    .feature-section, 
+    .features-group-wrap, 
+    .programs-group-wrap,
+    .intro-text-section,
+    .doorway-section,
+    .dimensions-section,
+    .spec-section {
+        padding: 60px 20px !important; 
+        box-sizing: border-box !important;
+    }
+
+    /* 💡 박스(Container) 본체 설정: 둥근 모서리를 살리고, 삐져나감을 방지합니다. */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 30px !important; /* 모바일에 어울리는 부드러운 둥근 모서리 */
+        overflow: hidden !important; /* 둥근 모서리 밖으로 이미지가 튀어나오지 못하게 방어 */
+        padding: 0 !important; /* 컨테이너 내부의 전역 패딩은 0으로 초기화 */
+    }
+
+    .column-left, 
+    .column-right {
+        width: 100% !important;
+    }
+
+    /* 이미지는 박스 너비에 100% 꽉 차게 맞춥니다. */
+    .feature-img-block, 
+    .feature-img-large, 
+    .mechanism-media, 
+    .scan-feature-img, 
+    .chair-img, 
+    .tablet-img, 
+    .card-image-wrap {
+        width: 100% !important;
+        height: auto !important;
+    }
+    #feature-sl-track.column-left.feature-card {
+    padding-left: 0px;
+    }
+
+    /* ---------------------------------------------------
+       3. 콘텐트 세이프 존 (박스 내부 텍스트 여백 설정)
+       --------------------------------------------------- */
+    /* 💡 박스 안의 텍스트가 테두리에 바짝 붙지 않도록 상하좌우 안전 여백을 줍니다. */
+    .text-content-area {
+        padding: 40px 20px 30px 20px !important; /* 상 40px, 좌우 20px, 하 30px */
+        box-sizing: border-box !important;
+    }
+
+    /* 박스 구조가 없는 일반 텍스트 그룹들의 좌우 안전 여백 */
+    .intro-desc,
+    .dimensions-section .m-title,
+    .dimensions-row,
+    .spec-section .container,
+    .programs-grid-area,
+    .recovery-cards-area {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important; 
+    }
+
+    /* ---------------------------------------------------
+       [부록] 배경 그라데이션 상하 방향 동기화
+       --------------------------------------------------- */
+    #sec-extendable-footrest .container {
+        background: linear-gradient(to bottom, #1d1833 0%, #000000 40%, #000000 100%) !important;
+    }
+    #sec-lcd-controller .container {
+        background: linear-gradient(to bottom, #1d1833 0%, #1d1833 40%, #000000 80%) !important;
+    }
+    #sec-extendable-footrest,
+    #sec-foot-rollers,
+    #sec-lcd-controller,
+    #sec-convenience-features {
+        padding: 60px 0px !important;
+    }
+
+    /* ---------------------------------------------------
+       💡 [핵심 교정] 3D+2D DUAL MECHANISM 모바일 순서 교정
+       --------------------------------------------------- */
+    #sec-dual-mechanism .container {
+        /* 💡 기존의 column-reverse를 column으로 변경하여 정방향(텍스트 위, 영상 아래)으로 되돌립니다! */
+        flex-direction: column !important; 
+        
+        display: flex !important;
+        align-items: center !important;
+        padding: 0 !important; /* 이전에 적용한 박스 패딩 제거 유지 */
+    }
+    /* ---------------------------------------------------
+       💡 [오륜기 레이아웃] 5 MANUAL MODES 지그재그(Staggered) 배치
+       --------------------------------------------------- */
+    /* 1. 이전에 넣었던 :nth-child(n) order 코드는 모두 지워주세요! */
+
+    /* 2. Grid를 무력화하고 Flexbox의 자동 중앙 정렬 마법을 사용합니다. */
+    #sub-manual-modes .manual-modes-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important; /* 💡 아랫줄의 2개를 한가운데로 모아주는 핵심! */
+        row-gap: 30px !important; /* 위아래 줄 간격 */
+        column-gap: 0 !important;
+    }
+
+    /* 3. 아이콘들을 정확히 3등분(33.33%)하여 수학적으로 배치합니다. */
+    #sub-manual-modes .manual-modes-grid .icon-item {
+        width: 33.33% !important; /* 💡 1줄에 3개씩 꽉 차게 만듭니다. */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* ---------------------------------------------------
+       💡 [순서 교정] 카드 및 그리드 영역을 텍스트(order:1) 아래로 강등 
+       --------------------------------------------------- */
+    
+    /* 1. 부모 요소들이 순서(order) 명령을 들을 수 있도록 Flex 구조로 변환 */
+    .program-item {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 2. 카드 영역과 아이콘 그리드 영역을 2순위(아래쪽)로 고정 */
+    .recovery-cards-area,
+    .programs-grid-area {
+        order: 2 !important; /* 텍스트(1) 다음인 2로 설정하여 아래로 배치 */
+        width: 100% !important;
+        
+        /* 💡 추가 교정: 텍스트가 위로 올라왔으므로 상단에 여백 확보 */
+        margin-top: 30px !important; 
+    }
+
+    
+}
+
+/* ==========================================================================
+   💡 SHORTCUT DIAL & BLUETOOTH SPEAKERS 카드 이미지 배경 강제 적용
+   ========================================================================== */
+#sec-convenience-features .card-image-wrap {
+    /* 💡 지웅님의 제안 적용: 직관적인 방향 키워드를 사용한 대각선 그라데이션 */
+    background: linear-gradient(to bottom right, #1d1833 0%, #000000 100%) !important;
+    
+    box-sizing: border-box !important;
+    overflow: hidden !important; 
+    border-radius: 30px !important; 
 }
