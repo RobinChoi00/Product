@@ -600,6 +600,7 @@ html, body {
     width: 50%;
     padding-bottom: 40px; /* 컨테이너에서 뺀 하단 패딩 보상 */
     padding-right: 20px;
+    padding-left: 40px; /* 시안 기준 왼쪽 패딩 확보 */
     
     position: relative;
     z-index: 2;
@@ -1794,6 +1795,11 @@ html, body {
     margin: 0 auto 80px auto; 
     text-align: center; /* 명시적 중앙 정렬 */
 }
+#sub-daily-recovery .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
 
 #sub-daily-recovery .section-desc {
     color: #d1d1d1;
@@ -1993,7 +1999,7 @@ html, body {
 /* --- Left Column (Text) --- */
 #sec-foot-rollers .column-left {
     width: 40%;
-    padding: 80px 20px 80px 60px; 
+    padding: 40px 20px 40px 60px; 
     
     /* 💡 [핵심 해결책 2] 텍스트 영역 내부의 모든 요소를 명시적으로 좌측 정렬합니다. */
     display: flex;
@@ -2003,9 +2009,9 @@ html, body {
 }
 
 #sec-foot-rollers .feature-icon {
-    width: 64px; 
+    width: 56px; 
     height: auto;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 #sec-foot-rollers .section-title {
@@ -2127,12 +2133,13 @@ html, body {
     margin: 0 auto;
     border-radius: 40px;
     overflow: hidden;
-    
-    /* 💡 영상이 65%를 차지하므로, 블랙 배경 유지 구간을 60%까지 넉넉히 밀어줍니다. */
+    padding: 0; 
     background: linear-gradient(to right, #000000 0%, #000000 60%, #1d1833 90%);
     display: flex;
-    align-items: center;
-    padding: 0; /* 패딩은 각 컬럼 내부에서 개별적으로 처리합니다. */
+    align-items: stretch; /* 또는 center (기존 유지) */
+    
+    /* 💡 [핵심 교정] 전역 클래스에서 몰래 상속된 Flexbox 갭을 완전히 무력화시킵니다! */
+    gap: 0 !important; 
 }
 #sec-extendable-footrest .feature-section {
     padding: 0;
@@ -2158,7 +2165,7 @@ html, body {
     width: 35%; /* 지웅님의 35% 비율 유지 */
     
     /* 💡 [핵심 교정 2] 좌우 패딩이 0이면 글씨가 박스 밖으로 튀어나가거나 영상에 닿습니다. 안전 여백 확보! */
-    padding: 80px 0px 80px 120px; 
+    padding: 40px 0px 40px 60px; 
     
     display: flex;
     flex-direction: column;
@@ -3201,7 +3208,6 @@ html, body {
     .text-content-area .section-desc,
     .text-content-area .section-desc strong {
         text-align: center !important;
-        padding: 0 20px !important; /* 모바일에서는 텍스트가 너무 양옆으로 붙지 않도록 안전 여백 추가 */
     }
 
     /* 💡 4. 비주얼(이미지/영상) 영역을 무조건 2순위(아래쪽)로 내립니다! */
