@@ -1,0 +1,920 @@
+/* =========================
+   Base Layout
+========================= */
+
+.wholeWrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #777777;
+    overflow: hidden;
+    gap: 3rem;
+}
+
+.titleText {
+    font-size: 32px;
+    color: #010101;
+    font-weight: 500;
+}
+
+.titleText.white {
+    color: #fff;
+}
+
+.subTitleText {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.subTitleText.black {
+    color: #010101;
+}
+
+.pill {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.pill.capsicum {
+    background: #e47a3b;
+}
+
+.pill.knee {
+    background: #3ab476;
+}
+
+.pill.medium {
+    background-color: #79d8e7;
+    color: #000;
+}
+
+/* =========================
+   Intro
+========================= */
+
+.introWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.introWrapper img {
+    max-width: 1300px;
+    width: 100%;
+    height: auto;
+}
+
+.introWrapper .textBox {
+    max-width: 80%;
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+.introWrapper .patchInfo {
+    font-weight: 600;
+    color: #62606a;
+}
+
+/* =========================
+   Common 2-Column Grid Wrappers
+========================= */
+
+.ingredientWrapper,
+.benefitWrapper,
+.checkboxWrapper,
+.iconWrapper,
+.supportWrapper,
+.howToWrapper {
+    display: grid;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* =========================
+   Ingredient
+========================= */
+
+.ingredientWrapper {
+    grid-template-columns: 46% 54%;
+}
+
+.ingredientWrapper .left,
+.ingredientWrapper .right {
+    height: 100%;
+}
+
+.ingredientWrapper .capsicum_gradient {
+    background: linear-gradient(to bottom, #fffbf3 0%, #fffbf3 60%, #f49536 100%);
+}
+
+.ingredientWrapper .knee_gradient {
+    background: linear-gradient(to bottom, #fffbf3 0%, #fffbf3 60%, #a6e4ba 100%);
+}
+
+.ingredientWrapper .medium_gradient {
+    background: linear-gradient(to bottom, #fffbf3 0%, #fffbf3 60%, #79d8e7 100%);
+}
+
+.ingredientWrapper .left {
+    padding: 3rem 2.5rem;
+}
+
+.ingredientWrapper .left .textBox {
+    max-width: 380px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ingredientWrapper .left .textBox .part {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ingredientWrapper .left .textBox .part .desc {
+    font-size: 15px;
+    color: #010101;
+    font-weight: 500;
+}
+
+.ingredientWrapper .left img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+}
+
+.ingredientWrapper .right {
+    position: relative;
+    overflow: hidden;
+}
+
+.ingredientWrapper .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* =========================
+   Benefit
+========================= */
+
+.benefitWrapper {
+    grid-template-columns: 50% 50%;
+    background: #fffbf3;
+}
+
+.benefitWrapper .left,
+.benefitWrapper .right {
+    overflow: hidden;
+}
+
+.benefitWrapper .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.benefitWrapper .right.textBox {
+    max-width: 500px;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.benefitWrapper .right.textBox .part {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.benefitWrapper .right.textBox .part .bullet {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.4rem;
+}
+
+.benefitWrapper .right.textBox .part .bullet.capsicum {
+    background-color: #f9b04f;
+}
+
+.benefitWrapper .right.textBox .part .bullet.knee {
+    background-color: #3ab476;
+}
+
+.benefitWrapper .right.textBox .part .bullet.medium {
+    background-color: #79d8e7;
+}
+
+.benefitWrapper .right.textBox .part .desc {
+    font-size: 15px;
+    color: #010101;
+    font-weight: 500;
+}
+
+/* =========================
+   Checkbox
+========================= */
+
+.checkboxWrapper {
+    grid-template-columns: 45% 55%;
+}
+
+.checkboxWrapper .left,
+.checkboxWrapper .right {
+    overflow: hidden;
+}
+
+.checkboxWrapper .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.checkboxWrapper .right.textBox {
+    max-width: 520px;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.checkboxWrapper .right.textBox .part {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0.4rem 0;
+    margin-left: 2rem;
+}
+
+.checkboxWrapper .right.textBox .part img {
+    flex-shrink: 0;
+    max-width: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.checkboxWrapper .right.textBox .part .desc {
+    font-size: 15px;
+    color: #010101;
+    font-weight: 500;
+    margin-top: 0.4rem;
+}
+
+/* =========================
+   Full Width Image
+========================= */
+
+.fullWidthImg {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+/* =========================
+   Icon
+========================= */
+
+.iconWrapper {
+    grid-template-columns: 45% 55%;
+    align-items: center;
+}
+
+.iconWrapper .left,
+.iconWrapper .right {
+    overflow: hidden;
+}
+
+.iconWrapper .left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.iconWrapper .right.iconBox {
+    max-width: 500px;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.iconWrapper .right.iconBox .part {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0.4rem 0;
+}
+
+.iconWrapper .right.iconBox .part img {
+    flex-shrink: 0;
+    width: 8rem;
+    height: auto;
+}
+
+.iconWrapper .right.iconBox.medium {
+    padding: 2.5rem 2rem;
+}
+
+/* two blocks spacing */
+.iconWrapper .right.iconBox .part_top,
+.iconWrapper .right.iconBox .part_bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.iconWrapper .right.iconBox .part_top {
+    padding-bottom: 2.5rem;
+}
+
+.iconWrapper .right.iconBox .part_bottom {
+    padding-top: 2.5rem;
+}
+
+/* TOP grid (3 cards) */
+.iconWrapper .right.iconBox .iconGrid_top {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.iconWrapper .right.iconBox .iconCard {
+    width: 100%;
+    max-width: 170px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.iconWrapper .right.iconBox .iconCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* BOTTOM grid (4 round icons + labels) */
+.iconWrapper .right.iconBox .iconGrid_bottom {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+}
+
+.iconWrapper .right.iconBox .iconRound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.iconWrapper .right.iconBox .iconRound img {
+    width: 74px;
+    height: auto;
+    display: block;
+}
+
+.iconWrapper .right.iconBox .iconRound .label {
+    font-size: 13px;
+    color: #010101;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* =========================
+   Support
+========================= */
+
+.supportWrapper {
+    grid-template-columns: 45% 55%;
+}
+
+.supportWrapper .left,
+.supportWrapper .right {
+    overflow: hidden;
+}
+
+.supportWrapper .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.supportWrapper .left.textBox {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.supportWrapper .left.capsicum {
+    background: linear-gradient(to left, #f9a14e 0%, #f9a14e 60%, #f48936 100%);
+}
+
+.supportWrapper .left.knee {
+    background-color: #3ab476;
+}
+
+.supportWrapper .left.medium {
+    background: linear-gradient(to left, #fffbf3 0%, #fffbf3 60%, #79d8e7 100%);
+}
+
+.supportWrapper .left.textBox .desc {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 0.4rem;
+}
+
+.supportWrapper .left.textBox .desc.black {
+    color: #010101;
+}
+
+.supportWrapper .left.textBox img {
+    justify-self: center;
+    max-width: 500px;
+    width: 70%;
+    height: auto;
+    padding: 3rem 0 0 0;
+}
+
+/* =========================
+   Design
+========================= */
+
+.designWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.designWrapper .desc {
+    max-width: 60%;
+    font-size: 15px;
+    color: #010101;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.designWrapper img {
+    width: 100%;
+    height: auto;
+}
+
+/* =========================
+   How To
+========================= */
+
+.howToWrapper {
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.howToWrapper .left,
+.howToWrapper .right {
+    overflow: hidden;
+}
+
+.howToWrapper .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.howToWrapper .left.textBox {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.howToWrapper .left.textBox .line {
+    max-width: 520px;
+    width: 100%;
+    height: 3px;
+    background-color: #aaaaaa;
+    margin: 2rem 0;
+}
+
+.howToWrapper .left.textBox .part {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.4rem 0;
+}
+
+.howToWrapper .left.textBox .part .number {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+}
+
+.howToWrapper .left.textBox .part .desc {
+    font-size: 14px;
+    color: #010101;
+    font-weight: 500;
+    margin-top: 0.4rem;
+}
+
+.howToWrapper .left.textBox .suggestText {
+    width: 88%;
+    height: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin: 2rem auto 0;
+    padding: 1.25rem 2rem;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.howToWrapper .left.textBox .suggestGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 2rem;
+    gap: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.howToWrapper .left.textBox .suggestGrid .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.howToWrapper .left.textBox .suggestGrid img {
+    width: 70px;
+    height: auto;
+}
+
+.howToWrapper .left.textBox .suggestGrid .label {
+    font-size: 13px;
+    color: #010101;
+    font-weight: 500;
+}
+
+/* =========================
+   Responsive
+   (Keep your ingredient 768px rules behavior)
+========================= */
+/* 900px */
+@media (max-width: 900px) {
+
+    /* 2-column grids -> 1 column (includes ingredient too) */
+    .ingredientWrapper,
+    .benefitWrapper,
+    .checkboxWrapper,
+    .iconWrapper,
+    .supportWrapper,
+    .howToWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ingredient: (right then left) */
+    .ingredientWrapper,
+    .howToWrapper {
+        grid-template-areas:
+            "right"
+            "left";
+    }
+
+    .ingredientWrapper .right,
+    .howToWrapper .right {
+        grid-area: right;
+    }
+
+    .ingredientWrapper .left,
+    .howToWrapper .left {
+        grid-area: left;
+    }
+
+    /* How-to blocks */
+    .howToWrapper .left.textBox .line {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    /* iconWrapper */
+    .iconWrapper .right.iconBox .iconGrid_top {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .iconWrapper .right.iconBox .iconGrid_bottom {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet + Mobile (<= 768px) */
+@media (max-width: 768px) {
+    .wholeWrapper {
+        padding: 0 2rem;
+        font-size: 18px;
+        gap: 2rem;
+    }
+
+    .titleText {
+        font-size: 28px;
+    }
+
+    .introWrapper .textBox {
+        max-width: 100%;
+    }
+
+    /* Image sizing when stacked */
+    .benefitWrapper .left img,
+    .checkboxWrapper .left img,
+    .supportWrapper .right img,
+    .howToWrapper .right img,
+    .ingredientWrapper .right img {
+        height: auto;
+        max-height: none;
+        object-fit: cover;
+    }
+
+    /* Text box paddings + width constraints */
+    .benefitWrapper .right.textBox,
+    .checkboxWrapper .right.textBox,
+    .iconWrapper .right.iconBox,
+    .supportWrapper .left.textBox,
+    .howToWrapper .left.textBox {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .ingredientWrapper .left {
+        padding: 2.5rem 2rem;
+    }
+
+    .ingredientWrapper .left img {
+        max-width: 100%;
+    }
+
+    .supportWrapper .left.textBox {
+        padding: 2.5rem 1.75rem;
+    }
+
+    .designWrapper {
+        padding: 0 2rem;
+    }
+
+    .designWrapper .desc {
+        max-width: 100%;
+    }
+
+    /* Reduce spacing in bullet/check rows */
+    .benefitWrapper .right.textBox .part {
+        gap: 1.25rem;
+    }
+
+    .checkboxWrapper .right.textBox .part {
+        gap: 1.25rem;
+        margin-left: 0;
+    }
+
+    /* How-to blocks */
+    .howToWrapper .left.textBox .part .number {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+    }
+
+    .howToWrapper .left.textBox .suggestText {
+        border-radius: 40px;
+    }
+
+    /* Suggest grid: 4 -> 2 columns */
+    .howToWrapper .left.textBox .suggestGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .howToWrapper .left.textBox .suggestGrid img {
+        width: 72px;
+    }
+
+    /* Icon grid spacing */
+    .iconWrapper .right.iconBox .part {
+        gap: 1.5rem;
+    }
+
+    .iconWrapper .right.iconBox .part img {
+        width: 7rem;
+    }
+
+    .iconWrapper .right.iconBox.medium {
+        padding: 2rem 1.5rem;
+    }
+
+    .iconWrapper .right.iconBox .part_top {
+        padding-bottom: 2rem;
+    }
+
+    .iconWrapper .right.iconBox .part_bottom {
+        padding-top: 2rem;
+    }
+
+    .iconWrapper .right.iconBox .iconGrid_top {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    .iconWrapper .right.iconBox .iconGrid_bottom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .iconWrapper .right.iconBox .iconCard {
+        max-width: 190px;
+    }
+
+    .iconWrapper .right.iconBox .iconRound img {
+        width: 68px;
+    }
+}
+
+/* Small Mobile (<= 430px) */
+@media (max-width: 430px) {
+    .wholeWrapper {
+        padding: 0 1.25rem;
+        font-size: 16px;
+        line-height: 1.55;
+        gap: 1.5rem;
+    }
+
+    .titleText {
+        font-size: 24px;
+    }
+
+    .subTitleText {
+        font-size: 16px;
+    }
+
+    .pill {
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Tighten paddings across text sections */
+    .ingredientWrapper .left {
+        padding: 2rem 1.25rem;
+    }
+
+    .benefitWrapper .right.textBox,
+    .checkboxWrapper .right.textBox,
+    .iconWrapper .right.iconBox,
+    .supportWrapper .left.textBox,
+    .howToWrapper .left.textBox {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .designWrapper {
+        padding: 0 1.25rem;
+        gap: 1.5rem;
+    }
+
+    .designWrapper .desc {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    /* Bullet/check rows */
+    .benefitWrapper .right.textBox .part {
+        gap: 1rem;
+        padding: 0.75rem 0;
+    }
+
+    .benefitWrapper .right.textBox .part .bullet {
+        width: 0.85rem;
+        height: 0.85rem;
+        margin-top: 0.35rem;
+    }
+
+    .checkboxWrapper .right.textBox .part {
+        gap: 1rem;
+        padding: 0.35rem 0;
+    }
+
+    .checkboxWrapper .right.textBox .part .desc {
+        margin-top: 0.2rem;
+    }
+
+    /* How-to */
+    .howToWrapper .left.textBox .part {
+        gap: 0.75rem;
+    }
+
+    .howToWrapper .left.textBox .part .number {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+        font-size: 14px;
+    }
+
+    .howToWrapper .left.textBox .part .desc {
+        font-size: 13px;
+        margin-top: 0.2rem;
+    }
+
+    .howToWrapper .left.textBox .suggestText {
+        border-radius: 20px;
+    }
+
+    /* Suggest grid */
+    .howToWrapper .left.textBox .suggestGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.25rem;
+    }
+
+    .howToWrapper .left.textBox .suggestGrid img {
+        width: 64px;
+    }
+
+    .howToWrapper .left.textBox .suggestGrid .label {
+        font-size: 12.5px;
+    }
+
+    /* Icon sizes */
+    .iconWrapper .right.iconBox .part {
+        gap: 1rem;
+    }
+
+    .iconWrapper .right.iconBox .part img {
+        width: 6.25rem;
+    }
+
+    .iconWrapper .right.iconBox.medium {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .iconWrapper .right.iconBox .iconGrid_top {
+        gap: 1rem;
+    }
+
+    .iconWrapper .right.iconBox .iconCard {
+        max-width: 220px;
+    }
+
+    .iconWrapper .right.iconBox .iconGrid_bottom {
+        gap: 1rem;
+    }
+
+    .iconWrapper .right.iconBox .iconRound img {
+        width: 62px;
+    }
+
+    .iconWrapper .right.iconBox .iconRound .label {
+        font-size: 12.5px;
+    }
+}

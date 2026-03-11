@@ -1,0 +1,927 @@
+/* Main image section */
+
+.ReIntegra_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ReIntegra_introText {
+    padding: 40px 60px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Interaction section */
+
+.ReIntegra_interactionSection {
+    margin: 80px 0;
+}
+
+.ReIntegra_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.ReIntegra_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.ReIntegra_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.ReIntegra_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.ReIntegra_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.ReIntegra_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ReIntegra_arrow.left {
+    left: 0;
+}
+
+.ReIntegra_arrow.right {
+    right: 0;
+}
+
+.ReIntegra_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gradientOverlay {
+    position: flex;
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 1;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.ReIntegra_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.ReIntegra_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.ReIntegra_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.ReIntegra_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.ReIntegra_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.ReIntegra_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.ReIntegra_colorButton.active {
+    border-color: #000;
+}
+
+/* Sections by background color */
+.ReIntegra_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+    margin-top: 16px;
+}
+
+.ReIntegra_Box--Black {
+    background-color: #161616;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.ReIntegra_Box--Color {
+    background-color: #f0f1f9;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReIntegra_Box--Gradient {
+    background: linear-gradient(to top, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReIntegra_Box--Gradient1 {
+    background: linear-gradient(to bottom, #edf0f8 0%, #ffffff 45%, #ffffff 50%, #edf0f8 100%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text (Title, Desc) */
+
+.ReIntegra_Text--Mont--Title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.ReIntegra_Text--Mont--Title .left {
+    text-align: left;
+}
+
+.ReIntegra_Text--Mont--Title .center {
+    text-align: center;
+}
+
+.ReIntegra_Text--Mont--Title .blue {
+    color: #5580ff;
+}
+
+.ReIntegra_Text--Mont--Title .white {
+    color: white;
+}
+
+.ReIntegra_Text--Mont--Title .red {
+    color: #ff0000;
+}
+
+.ReIntegra_Text--Mont--Title .gray {
+    color: #bcbcbc;
+}
+
+.ReIntegra_Text--Mont--Title .lightblue {
+    color: #50c1ff;
+}
+
+.ReIntegra_Text--Mont--Desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #424242;
+}
+
+.ReIntegra_Text--Mont--Desc strong {
+    color: #000;
+}
+
+.ReIntegra_Text--Mont--Desc .left {
+    text-align: left;
+}
+
+.ReIntegra_Text--Mont--Desc .center {
+    text-align: center;
+}
+
+.ReIntegra_Text--Mont--Desc .blue {
+    color: #5580ff;
+}
+
+.ReIntegra_Text--Mont--Desc .white {
+    color: white;
+}
+
+.ReIntegra_Text--Mont--Desc .red {
+    color: #ff0000;
+}
+
+.ReIntegra_Text--Mont--Desc .gray {
+    color: #bcbcbc;
+}
+
+.ReIntegra_Text--Mont--Desc .darkgray {
+    color: #333;
+}
+
+.ReIntegra_Text--Mont--Desc .lightblue {
+    color: #50c1ff;
+}
+
+.ReIntegra_Text--Robo--Title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.ReIntegra_Text--Robo--Title .left {
+    text-align: left;
+}
+
+.ReIntegra_Text--Robo--Title .center {
+    text-align: center;
+}
+
+.ReIntegra_Text--Robo--Title .blue {
+    color: #5580ff;
+}
+
+.ReIntegra_Text--Robo--Title .white {
+    color: white;
+}
+
+.ReIntegra_Text--Robo--Title .red {
+    color: #ff0000;
+}
+
+.ReIntegra_Text--Robo--Title .gray {
+    color: #bcbcbc;
+}
+
+.ReIntegra_Text--Robo--Title .lightblue {
+    color: #50c1ff;
+}
+
+.ReIntegra_Text--Robo--Desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #424242;
+}
+
+.ReIntegra_Text--Robo--Desc .left {
+    text-align: left;
+}
+
+.ReIntegra_Text--Robo--Desc .center {
+    text-align: center;
+}
+
+.ReIntegra_Text--Robo--Desc strong {
+    color: #000;
+}
+
+.ReIntegra_Text--Robo--Desc .blue {
+    color: #5580ff;
+}
+
+.ReIntegra_Text--Robo--Desc .white {
+    color: white;
+}
+
+.ReIntegra_Text--Robo--Desc .red {
+    color: #ff0000;
+}
+
+.ReIntegra_Text--Robo--Desc .gray {
+    color: #bcbcbc;
+}
+
+.ReIntegra_Text--Robo--Desc .darkgray {
+    color: #333;
+}
+
+.ReIntegra_Text--Robo--Desc .lightblue {
+    color: #50c1ff;
+}
+
+/* Div wrapper */
+
+.ReIntegra_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.ReIntegra_recBoxWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 740px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* feature cards */
+
+.ReIntegra_Card--Vertical,
+.ReIntegra_Card--Vertical--Gradient {
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ReIntegra_Card--Vertical--Gradient {
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.1) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.ReIntegra_Card--Vertical .textBox,
+.ReIntegra_Card--Vertical .icon,
+.ReIntegra_Card--Vertical--Gradient .icon {
+    padding: 60px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.ReIntegra_Card--Vertical .icon img,
+.ReIntegra_Card--Vertical--Gradient .icon img {
+    height: 70px;
+    width: auto;
+}
+
+.ReIntegra_Card--Horizontal--column .textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 0;
+    margin: 0 auto;
+    max-width: 74%;
+    width: 100%;
+}
+
+.ReIntegra_Card--Horizontal--row,
+.ReIntegra_Card--Horizontal--rowFit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 40px 60px;
+}
+
+.ReIntegra_Card--Horizontal--rowFit {
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.ReIntegra_Card--Horizontal--row .textBox,
+.ReIntegra_Card--Horizontal--rowFit .textBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.ReIntegra_Card--Horizontal--rowFit .PL {
+    padding-left: 4rem;
+}
+
+.ReIntegra_Card--Horizontal--row img,
+.ReIntegra_Card--Horizontal--rowFit img {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+}
+
+.ReIntegra_Card--Horizontal--rowFit img {
+    object-fit: contain;
+}
+
+.ReIntegra_Card--Horizontal--column,
+.ReIntegra_Card--Horizontal--column--Gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gradientOverlayBox {
+    position: flex;
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.ReIntegra_Card--Horizontal--column img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.ReIntegra_Card--Horizontal--column_img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+}
+
+.ReIntegra_Card--RecRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+}
+
+.ReIntegra_Card--Rectangle {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+}
+
+.ReIntegra_Card--Rectangle img {
+    width: 400px;
+    height: auto;
+}
+
+.ReIntegra_Card--Rectangle--TextBox {
+    max-width: 360px;
+    color: #424242;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.ReIntegra_Card--Rectangle--TextBox strong {
+    color: #000;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
+/* Icon grid */
+
+.ReIntegra_AutoSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReIntegra_autoGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px 50px;
+    max-width: 1000px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.ReIntegra_lastRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.ReIntegra_programIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #424242;
+    font-size: 14px;
+    gap: 16px;
+    width: 100px;
+    min-height: 160px;
+}
+
+.ReIntegra_programIcon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.ReIntegra_manualSection {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.ReIntegra_manualGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.ReIntegra_manualRow {
+    margin-top: 40px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ReIntegra_manualItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 600;
+    align-items: center;
+    font-size: 16px;
+    color: #424242;
+}
+
+.ReIntegra_manualItem img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+/* LineCard feature */
+
+.ReIntegra_LineCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.ReIntegra_LineCard {
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: #bcbcbc;
+}
+
+.ReIntegra_LineCard--title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.ReIntegra_LineCard--line {
+    width: 300px;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 40px;
+}
+
+.ReIntegra_LineCard img {
+    width: auto;
+    height: 500px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.ReIntegra_LineCard--text {
+    max-width: 300px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.ReIntegra_LineCard--text strong {
+    color: white;
+}
+
+/* Minimum Doorway & Dimensions */
+
+.ReIntegra_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 20px;
+}
+
+.ReIntegra_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+
+.ReIntegra_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 2rem;
+    color: #333;
+}
+
+.ReIntegra_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.ReIntegra_minDimBox2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.ReIntegra_minDimBox img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.ReIntegra_minDimBox2 img {
+    width: auto;
+    height: 380px;
+}
+
+.ReIntegra_minDimText {
+    font-size: 14px;
+    color: #777777;
+    text-align: left;
+    max-width: 460px;
+    line-height: 1.8;
+}
+
+/* ============================
+   Responsive Styles (850px ↓)
+   ============================ */
+
+@media (max-width: 850px) {
+
+    .ReIntegra_Card--Horizontal--row img,
+    .ReIntegra_Card--Horizontal--rowFit img {
+        padding-right: 60px;
+    }
+
+    .ReIntegra_Card--Horizontal--column_img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .ReIntegra_autoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 30px;
+    }
+
+    .ReIntegra_lastRow {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .ReIntegra_programIcon {
+        width: 90px;
+        min-height: 150px;
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .ReIntegra_programIcon img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ============================
+   Responsive Styles (768px ↓)
+   ============================ */
+
+@media (max-width: 768px) {
+    .ReIntegra_introText {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    .ReIntegra_Text--Mont--Title,
+    .ReIntegra_Text--Robo--Title {
+        font-size: 26px;
+    }
+
+    .ReIntegra_Text--Mont--Desc,
+    .ReIntegra_Text--Robo--Desc {
+        font-size: 16px;
+    }
+
+    .ReIntegra_divWrapper,
+    .ReIntegra_recBoxWrapper,
+    .ReIntegra_Card--RecRow {
+        gap: 24px;
+    }
+
+    .ReIntegra_Card--Horizontal--row,
+    .ReIntegra_Card--Horizontal--rowFit {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .ReIntegra_Card--Horizontal--row img,
+    .ReIntegra_Card--Horizontal--rowFit img {
+        max-width: 500px;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .ReIntegra_Card--Horizontal--row .textBox,
+    .ReIntegra_Card--Horizontal--rowFit .textBox {
+        padding: 2rem;
+    }
+
+    .ReIntegra_Card--Horizontal--rowFit .PL {
+        padding-left: 0;
+    }
+
+    .ReIntegra_Card--RecRow {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ReIntegra_Card--Horizontal--column .textBox {
+        padding: 20px 40px;
+    }
+}
+
+
+/* ============================
+   Responsive Styles (430px ↓)
+   ============================ */
+
+@media (max-width: 430px) {
+    .rowReverse {
+        flex-direction: column;
+    }
+
+    .ReIntegra_introText {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .ReIntegra_Text--Mont--Title,
+    .ReIntegra_Text--Robo--Title {
+        font-size: 22px;
+    }
+
+    .ReIntegra_Text--Mont--Desc,
+    .ReIntegra_Text--Robo--Desc {
+        font-size: 14px;
+    }
+
+    .ReIntegra_autoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .ReIntegra_lastRow {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .ReIntegra_programIcon {
+        width: 80px;
+        min-height: 140px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .ReIntegra_programIcon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ReIntegra_Card--Horizontal--row,
+    .ReIntegra_Card--Horizontal--rowFit {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ReIntegra_manualRow {
+        gap: 40px;
+    }
+
+    .ReIntegra_LineCard img {
+        height: 320px;
+    }
+
+    .ReIntegra_LineCard--line {
+        width: 240px;
+    }
+
+    .ReIntegra_Card--Horizontal--column .textBox {
+        padding: 10px 20px;
+    }
+}

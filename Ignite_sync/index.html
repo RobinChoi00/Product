@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.ignite_sync_product_main.png" alt="Osaki Helix LE 4D Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+
+            <div class="intro-desc">
+                Elevate your relaxation with a massage chair designed for a smarter, more personalized experience. 
+                The 3D+2D Dual Massage Mechanism delivers powerful, simultaneous upper and lower body massages for 
+                perfectly balanced relief. A dedicated ankle stretching mechanism gently rotates the footrest to loosen 
+                tight joints and refresh tired legs. With intelligent health detection that analyzes your body and hands-free 
+                voice control, every massage is effortlessly tailored to your needs for a truly modern wellness experience.
+
+            </div>
+
+            <div class="group-slider">
+                <div class="slider-main">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/6.ignite_sync_left_arrow.png" alt="Prev">
+                    </div>
+
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/5.ignite_sync_colors_all.png" alt="ignite sync Colors">
+                    </div>
+
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/7.ignite_sync_right_arrow.png" alt="Next">
+                    </div>
+                </div>
+
+                <div class="swatch-panel">
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.ignite_sync_swatches_bar.png" class="bar-bg" alt="Bar">
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.ignite_sync_swatch_all.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.ignite_sync_swatch_black.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.ignite_sync_swatch_brown.png" alt="Brown">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(3)">
+                            <img src="images/12.ignite_sync_swatch_taupe.png" alt="Taupe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-health-detection" class="feature-section health-detection-wrap">
+        <div class="container layout-two-column">
+            
+            <div class="column-left">
+                <div class="text-content-area">
+                    <div class="brand-logo-wrap">
+                        <img src="images/17.ignite_sync_icon_ai-series.png" alt="AI Series Logo" class="ai-logo">
+                    </div>
+                    
+                    <div class="section-title">INTELLIGENT HEALTH DETECTION</div>
+                    
+                    <div class="section-desc">
+                        The AI-powered health detection system scans key metrics—including 
+                        <strong>heart rate, blood oxygen, microcirculation, and fatigue levels</strong>—to 
+                        suggest two massage programs that may meet your body's real-time needs.
+                    </div>
+                </div>
+
+                <div class="tablet-image-wrap">
+                    <img src="images/19.ignite_sync_remote.png" 
+                         alt="Tablet interface showing real-time health metrics" 
+                         class="tablet-img">
+                </div>
+            </div>
+
+            <div class="column-right">
+                <div class="chair-image-wrap">
+                    <img src="images/18.ignite_sync_hand-sensor.png" 
+                         alt="User resting hand on the Ignite Sync health sensor" 
+                         class="chair-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-ankle-stretching" class="feature-section ankle-stretch-wrap">
+        <div class="container">
+            <div class="text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/20.ignite_sync_icon_ankle.png" alt="Ankle Stretching Icon" class="feature-icon">
+                </div>
+                
+                <div class="section-title">ANKLE STRETCHING<br>MECHANISM</div>
+                
+                <div class="section-desc">
+                    Unlike typical massage chairs that overlook ankles, the Ignite Sync provides 
+                    an ankle stretching mechanism that 
+                    <strong>gently rotates the footrest back and forth.</strong> 
+                    This creates targeted stretching motions that 
+                    improve flexibility and relieve tension in the ankles.
+                </div>
+            </div>
+
+            <div class="visual-content-area">
+                <div class="mechanism-gif-wrap">
+                    <video id="ankle-mechanism-gif" class="mechanism-media" autoplay loop muted playsinline>
+                        <source src="images/21.ignite_sync_ankle-stretching.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-dual-mechanism" class="feature-section dual-mechanism-wrap">
+        <div class="container layout-two-column reverse-layout">
+            
+            <div class="column-text text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/22.ignite_sync_icon_gear.png" alt="Settings Gear Icon" class="feature-icon">
+                </div>
+                <div class="section-title">3D + 2D<br>DUAL MASSAGE<br>MECHANISM</div>
+                <div class="section-desc">
+                    The 3D+2D Dual Massage Mechanism features two massage systems that work on the upper and lower body for a more comprehensive experience. 
+                    <br>
+                    <strong>The upper mechanism offers adjustable intensity levels, allowing you to customize the massage for the upper body</strong> 
+                    while the lower mechanism automatically adjusts and operates according to the selected massage mode.
+                </div>
+            </div>
+
+            <div class="column-visual visual-content-area">
+                <div class="gif-stack-wrap">
+                    <video class="mechanism-video" autoplay loop muted playsinline>
+                        <source src="images/23.ignite_sync_3D+3D_1.mp4" type="video/mp4">
+                    </video>
+                    <video class="mechanism-video" autoplay loop muted playsinline>
+                        <source src="images/23.ignite_sync_3D+3D_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+    <div id="sec-voice-control" class="feature-section voice-control-wrap">
+        <div class="container layout-two-column">
+
+            <div class="column-left text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/24.ignite_sync_icon_mic.png" alt="Microphone Icon" class="feature-icon">
+                </div>
+                
+                <div class="section-title">INTELLIGENT<br>VOICE CONTROL</div>
+                
+                <div class="section-desc">
+                    Intelligent voice control lets you operate the massage chair 
+                    <strong>hands-free, effortlessly adjusting settings and programs using simple vocal commands.</strong>
+                </div>
+            </div>
+
+            <div class="column-right visual-content-area">
+                <div class="voice-feature-image-wrap">
+                    <img src="images/25.ignite_sync_voice.png" 
+                         alt="Voice control panel on the Ignite Sync massage chair with sound waves and chat bubbles saying Hello Kiri" 
+                         class="voice-feature-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-body-scan" class="feature-section body-scan-wrap">
+        <div class="container layout-two-column">
+
+            <div class="column-left visual-content-area">
+                <div class="scan-image-wrap">
+                    <img src="images/27.ignite_sync_body-scan.png" 
+                         alt="Blue glowing holographic simulation of the body scan technology mapping a human figure" 
+                         class="scan-feature-img">
+                </div>
+            </div>
+
+            <div class="column-right text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/26.ignite_sync_icon_body-scan.png" alt="Body Scan Focus Icon" class="feature-icon">
+                </div>
+                
+                <div class="section-title">BODY SCAN<br>TECHNOLOGY</div>
+                
+                <div class="section-desc">
+                    The body scan technology precisely 
+                    <strong>maps your body's natural contours, positioning the rollers for optimal alignment</strong> 
+                    and delivering a smooth, deeply satisfying massage experience.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-additional-features" class="features-group-wrap">
+        <div class="container">
+
+            <div id="sub-zero-gravity" class="feature-item zero-gravity-wrap">
+                
+                <div class="text-content-area text-center">
+                    <div class="section-title">ZERO GRAVITY RECLINING</div>
+                    
+                    <div class="section-desc">
+                        Inspired by NASA innovations, the Ignite Sync incorporates Zero Gravity 
+                        Reclining technology, allowing you to recline in 
+                        <strong>a near-weightless position that eases spinal pressure</strong> 
+                        and maximizes relaxation.
+                    </div>
+                </div>
+
+                <div class="visual-content-area flex-center">
+                    <div class="zero-gravity-image-wrap">
+                        <img src="images/28.ignite_sync_ZG.png" 
+                             alt="Ignite Sync massage chair in a Zero Gravity reclining position with a dotted arc indicating the recline angle" 
+                             class="feature-img-large">
+                    </div>
+                </div>
+
+            </div>
+
+            
+            
+            
+            
+            <div id="sub-track-space" class="feature-item track-space-wrap">
+                <div class="container layout-two-column split-features">
+
+                    <div id="feature-sl-track" class="column-left feature-card">
+                        <div class="text-content-area">
+                            <div class="icon-wrap">
+                                <img src="images/29.ignite_sync_icon_SL.png" alt="SL-Track Line Icon" class="feature-icon">
+                            </div>
+                            
+                            <div class="section-title">SL-TRACK<br>SYSTEM</div>
+                            
+                            <div class="section-desc">
+                                Designed to follow the natural curve of your spine, the SL-track 
+                                <strong>extends from neck to glutes,</strong> 
+                                providing a seamless, deeply satisfying full-back massage.
+                            </div>
+                        </div>
+
+                        <div class="visual-content-area image-bottom-align">
+                            <div class="track-image-wrap">
+                                <img src="images/30.ignite_sync_SL.png" 
+                                     alt="X-ray view of the massage chair highlighting the SL-track system along the human spine" 
+                                     class="feature-img-block">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="feature-space-saving" class="column-right feature-card">
+                        <div class="text-content-area">
+                            <div class="icon-wrap">
+                                <img src="images/31.ignite_sync_icon_space-saving.png" alt="Space-Saving Chair Icon" class="feature-icon">
+                            </div>
+                            
+                            <div class="section-title">SPACE-SAVING<br>TECHNOLOGY</div>
+                            
+                            <div class="section-desc">
+                                The space-saving design allows the chair to recline fully, while requiring 
+                                <strong>minimal wall clearance of 3 inches,</strong> 
+                                making it perfect for compact living spaces.
+                            </div>
+                        </div>
+
+                        <div class="visual-content-area image-bottom-align">
+                            <div class="space-image-wrap">
+                                <img src="images/32.ignite_sync_space-saving.png" 
+                                     alt="Massage chair sliding forward to recline, showing only 3 inches of wall clearance needed" 
+                                     class="feature-img-block">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div id="sub-air-compression" class="feature-item air-compression-wrap">
+                
+                <div class="text-content-area text-center">
+                    <div class="section-title">38-CELL<br>AIR COMPRESSION MASSAGE</div>
+                    
+                    <div class="section-desc">
+                        Thirty-eight strategically placed air cells deliver a full-body 
+                        air compression massage, <strong>gently enveloping your muscles
+                        to relieve tension and enhance circulation.</strong> 
+                    </div>
+                </div>
+
+                <div class="visual-content-area flex-center">
+                    <div class="air-compression-image-wrap">
+                        <img src="images/33.ignite_sync_air-cells.png" 
+                             alt="Top-down view of the Ignite Sync massage chair highlighting 38 air compression cells across the shoulders, arms, calves, and feet" 
+                             class="feature-img-large">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="sub-lumbar-heating" class="feature-item lumbar-heating-wrap">
+                
+                <div class="text-content-area text-center">
+                    <div class="icon-wrap">
+                        <img src="images/34.ignite_sync_icon_heating.png" alt="Heating Waves Icon" class="feature-icon">
+                    </div>
+                    
+                    <div class="section-title">
+                        <span class="accent-color-red">LUMBAR</span><br>
+                        HEATING THERAPY
+                    </div>
+                    
+                    <div class="section-desc">
+                        <strong>Soothing lumbar heat gently warms tired muscles,</strong> 
+                        helping to relieve tension, improve circulation, and 
+                        deepen your overall sense of relaxation. *
+                    </div>
+
+                    <div class="disclaimer-text">
+                        * The heating therapy provides warmth in the range of approximately 75 - 83°F.
+                    </div>
+                </div>
+
+                <div class="visual-content-area flex-center">
+                    <div class="heating-image-wrap">
+                        <img src="images/35.ignite_sync_heating.png" 
+                             alt="Close up of the massage chair seat showing red glowing areas indicating lumbar heating therapy" 
+                             class="feature-img-large">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-programs-recovery" class="programs-group-wrap">
+        <div class="container">
+
+            <div id="sub-auto-programs" class="program-item auto-programs-wrap">
+                
+                <div class="text-content-area text-center">
+                    <div class="section-title">20 AUTO PROGRAMS</div>
+                </div>
+
+                <div class="programs-grid-area">
+                    <div class="icon-grid grid-5-cols">
+                        
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/36.ignite_sync_icon_quick_demo.png" alt="Quick Demo Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">QUICK<br>DEMO</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/37.ignite_sync_icon_unwind.png" alt="Unwind Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">UNWIND</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/38.ignite_sync_icon_stretch.png" alt="Stretch Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">STRETCH</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/39.ignite_sync_icon_muscle-relief.png" alt="Muscle Relief Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">MUSCLE<br>RELIEF</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/40.ignite_sync_icon_gentle.png" alt="Gentle Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">GENTLE</div>
+                        </div>
+
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/41.ignite_sync_icon_spine-care.png" alt="Spine Care Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">SPINE<br>CARE</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/42.ignite_sync_icon_hip&waist.png" alt="Hip & Waist Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">HIP &<br>WAIST</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/43.ignite_sync_icon_legs&feet.png" alt="Legs & Feet Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">LEGS<br>& FEET</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/44.ignite_sync_icon_upper_body.png" alt="Upper Body Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">UPPER<br>BODY</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/45.ignite_sync_icon_neck&shoulder.png" alt="Neck & Shoulder Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">NECK &<br>SHOULDER</div>
+                        </div>
+
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/46.ignite_sync_icon_upper_relief.png" alt="Upper Relief Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">UPPER<br>RELIEF</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/47.ignite_sync_icon_glutes.png" alt="Glutes Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">GLUTES</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/48.ignite_sync_icon_sports_recovery.png" alt="Sports Recovery Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">SPORTS<br>RECOVERY</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/49.ignite_sync_icon_lower-body.png" alt="Lower Body Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">LOWER<br>BODY</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/50.ignite_sync_icon_office_recovery.png" alt="Office Recovery Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">OFFICE<br>RECOVERY</div>
+                        </div>
+
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/51.ignite_sync_icon_morning.png" alt="Morning Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">MORNING</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/52.ignite_sync_icon_midday.png" alt="Midday Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">MIDDAY</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/53.ignite_sync_icon_night.png" alt="Night Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">NIGHT</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/54.ignite_sync_icon_vitality.png" alt="Vitality Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">VITALITY</div>
+                        </div>
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/55.ignite_sync_icon_relax.png" alt="Relax Program" class="program-icon">
+                            </div>
+                            <div class="icon-label">RELAX</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="sub-manual-modes" class="program-item manual-modes-wrap">
+                
+                <div class="text-content-area text-center">
+                    <div class="section-title">5 MANUAL MODES</div>
+                </div>
+
+                <div class="programs-grid-area">
+                    <div class="icon-grid grid-5-cols manual-modes-grid">
+                        
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/56.ignite_sync_icon_knead.png" alt="Knead Manual Mode" class="program-icon">
+                            </div>
+                            <div class="icon-label">KNEAD</div>
+                        </div>
+                        
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/57.ignite_sync_icon_knock.png" alt="Knock Manual Mode" class="program-icon">
+                            </div>
+                            <div class="icon-label">KNOCK</div>
+                        </div>
+                        
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/58.ignite_sync_icon_tap.png" alt="Tap Manual Mode" class="program-icon">
+                            </div>
+                            <div class="icon-label">TAP</div>
+                        </div>
+                        
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/59.ignite_sync_icon_shiatsu.png" alt="Shiatsu Manual Mode" class="program-icon">
+                            </div>
+                            <div class="icon-label">SHIATSU</div>
+                        </div>
+                        
+                        <div class="icon-item">
+                            <div class="icon-circle">
+                                <img src="images/60.ignite_sync_icon_knead&tap.png" alt="Knead & Tap Manual Mode" class="program-icon">
+                            </div>
+                            <div class="icon-label">KNEAD & TAP</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="sub-daily-recovery" class="program-item daily-recovery-wrap">
+                
+                <div class="text-content-area text-center">
+                    <div class="section-title">DAILY RECOVERY</div>
+                    
+                    <div class="section-desc">
+                        Designed to support your body throughout the day —<br>
+                        from morning activation to nighttime relaxation.
+                    </div>
+                </div>
+
+                <div class="recovery-cards-area flex-column-gap">
+                
+                <div id="card-morning" class="recovery-card">
+                    <div class="card-icon-wrap">
+                        <img src="images/61.ignite_sync_icon_morning-activation.png" alt="Morning Sun Icon" class="routine-icon">
+                    </div>
+                    
+                    <div class="card-content text-center">
+                        <div class="card-title">MORNING ACTIVATION</div>
+                        <div class="card-desc">
+                            Start your day with a gentle stretch and revitalizing massage that 
+                            stimulates circulation and prepares your muscles for the day ahead.
+                        </div>
+                        
+                        <div class="card-features-list">
+                            <div class="list-item"><strong>Stretch Program</strong></div>
+                            <div class="list-item"><strong>Air Compression</strong></div>
+                            <div class="list-item"><strong>Light Zero Gravity Recline</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card-after-work" class="recovery-card">
+                    <div class="card-icon-wrap">
+                        <img src="images/62.ignite_sync_icon_after-work.png" alt="House Icon for After Work" class="routine-icon">
+                    </div>
+                    
+                    <div class="card-content text-center">
+                        <div class="card-title">AFTER WORK - RELEASE TENSION</div>
+                        <div class="card-desc">
+                            Relieve built-up tension from long hours of sitting, standing, or 
+                            physical activity with deep tissue rollers.
+                        </div>
+                        
+                        <div class="card-features-list">
+                            <div class="list-item"><strong>Office Recovery</strong></div>
+                            <div class="list-item"><strong>Shoulder Relief</strong></div>
+                            <div class="list-item"><strong>Full Body Massage</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card-nighttime" class="recovery-card">
+                    <div class="card-icon-wrap">
+                        <img src="images/63.ignite_sync_icon_nighttime.png" alt="Nighttime Moon Icon" class="routine-icon">
+                    </div>
+                    
+                    <div class="card-content text-center">
+                        <div class="card-title">NIGHTTIME RELAXATION</div>
+                        <div class="card-desc">
+                            Unwind at the end of the day with a calming massage and soothing 
+                            heat therapy designed to help your body fully relax and prepare for 
+                            restful sleep.
+                        </div>
+                        
+                        <div class="card-features-list">
+                            <div class="list-item">&bull; <strong>Night Relaxation Mode</strong></div>
+                            <div class="list-item">&bull; <strong>Heating Therapy</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>   
+
+        </div>    
+    </div>
+
+
+
+
+
+    <div id="sec-foot-rollers" class="feature-section foot-rollers-wrap">
+        <div class="container layout-two-column">
+
+            <div class="column-left text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/64.ignite_sync_icon_foot.png" alt="Foot Icon" class="feature-icon">
+                </div>
+                
+                <div class="section-title">2 SPECIALIZED<br>FOOT ROLLERS</div>
+                
+                <div class="section-desc">
+                    The footrest's rotating rollers are designed with 
+                    <strong>specialized reflexology ridges</strong> that 
+                    stimulate <strong>key pressure points</strong>, providing a 
+                    deep, therapeutic massage that promotes overall foot health and relaxation. 
+                    The bottom roller moves back and forth, while the top rollers move in rotating motions.
+                </div>
+            </div>
+
+            <div class="column-right visual-content-area flex-center">
+                <div class="foot-roller-image-wrap">
+                    <img src="images/65.ignite_sync_foot-rollers.png" 
+                         alt="Top-down view of the massage chair footrest highlighting two specialized rotating foot rollers with blue motion arrows" 
+                         class="feature-img-large">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-extendable-footrest" class="feature-section extendable-footrest-wrap">
+        <div class="container layout-two-column">
+
+            <div class="column-left visual-content-area">
+                <video id="extendable-footrest-video" class="mechanism-media" autoplay loop muted playsinline>
+                        <source src="images/67.ignite_sync_foot_ext.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="column-right text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/66.ignite_sync_icon_extend.png" alt="Extend Arrow Icon" class="feature-icon">
+                </div>
+                
+                <div class="section-title">AUTOMATIC<br>EXTENDABLE<br>FOOTREST</div>
+                
+                <div class="section-desc">
+                    The Ignite Sync is equipped with an automatic extendable footrest that 
+                    <strong>extends up to 7.5 inches</strong>, adapting to deliver a comfortable fit for 
+                    <strong>users of varying heights and body types.</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sec-lcd-controller" class="feature-section lcd-controller-wrap">
+        <div class="container layout-two-column">
+
+            <div class="column-left text-content-area">
+                <div class="icon-wrap">
+                    <img src="images/68.ignite_sync_icon_hand.png" alt="Touch Gesture Icon" class="feature-icon">
+                </div>
+                
+                <div class="section-title">LCD TOUCHSCREEN<br>CONTROLLER</div>
+                
+                <div class="section-desc">
+                    The LCD touchscreen controller puts full control at your fingertips, 
+                    <strong>offering an intuitive, easy-to-navigate interface</strong> to 
+                    customize massage programs, and adjust intensity for upper and lower mechanisms.
+                </div>
+            </div>
+
+            <div class="column-right visual-content-area flex-center">
+                <div class="controller-image-wrap">
+                    <img src="images/69.ignite_sync_touchscreen.png" 
+                         alt="User's finger tapping the UI on the LCD touchscreen controller of the Ignite Sync massage chair" 
+                         class="feature-img-large">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+     <div id="sec-convenience-features" class="feature-section convenience-features-wrap bg-light">
+        <div class="container layout-two-column split-features">
+
+            <div id="feature-shortcut-dial" class="column-left feature-card">
+                <div class="visual-content-area">
+                    <div class="card-image-wrap border-radius-large">
+                        <img src="images/70.ignite_sync_side_panel.png" 
+                             alt="Close up of the dial-shaped shortcut key on the Ignite Sync massage chair armrest" 
+                             class="feature-img-block">
+                    </div>
+                </div>
+
+                <div class="text-content-area mt-large text-dark">
+                    <div class="section-title">SHORTCUT DIAL</div>
+                    <div class="section-desc">
+                        The dial-shaped shortcut key offers <strong>quick, intuitive control of the massage intensity</strong>, 
+                        allowing you to easily increase or decrease the depth of the massage mechanism with a simple turn.
+                    </div>
+                </div>
+            </div>
+
+            <div id="feature-bluetooth" class="column-right feature-card">
+                <div class="visual-content-area">
+                    <div class="card-image-wrap border-radius-large">
+                        <img src="images/71.ignite_sync_speakers.png" 
+                             alt="Close up of the integrated Bluetooth speaker on the massage chair with wireless sound waves" 
+                             class="feature-img-block">
+                    </div>
+                </div>
+
+                <div class="text-content-area mt-large text-dark">
+                    <div class="section-title">BLUETOOTH SPEAKERS</div>
+                    <div class="section-desc">
+                        Integrated Bluetooth speakers let you <strong>wirelessly connect your smartphone to stream your favorite audio</strong>, 
+                        enhancing your massage experience with immersive, personalized sound.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="doorway-section">
+        <div class="container">
+            <div class="m-title">MINIMUM DOORWAY & PACKAGING</div>
+            <div class="doorway-layout">
+                <div class="doorway-left">
+                    <img src="images/72.ignite_sync_min.doorway.png" alt="Minimum Doorway Size">
+                </div>
+                <div class="doorway-right">
+                    <div class="box-img-grid">
+                        <img src="images/73.ignite_sync_packaging.png" alt="Duke XL Packaging Box 1 Dimensions">
+                    </div>
+                    <div class="measuring-guide">
+                        <div class="g-title">Measuring Guide</div>
+                        <div class="g-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of
+                                the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width
+                                from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most
+                                protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 차원 섹션 -->
+    <div class="dimensions-section">
+        <div class="container">
+            <div class="m-title">DIMENSIONS</div>
+            <div class="dimensions-row">
+                <div class="dim-img">
+                    <img src="images/74.ignite_sync_dimensions1.png" alt="Virtus Front Dimensions">
+                </div>
+                <div class="dim-img">
+                    <img src="images/75.ignite_sync_dimensions2.png" alt="Virtus Side Dimensions">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="spec-section">
+            <div class="container">
+                <div class="spec-title">Specification</div>
+                
+                <div class="spec-table">
+                    <div class="spec-row">
+                        <div class="spec-label">Product Name</div>
+                        <div class="spec-value">Ignite_sync</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">User Manual</div>
+                        <div class="spec-value split-col">
+                            <a href="https://cdn.shopify.com/s/files/1/0086/1297/0558/files/Ignite_Sync-Instruction_manual-RK2003K.SMS-01_16_20251222.pdf?v=1773177766" class="red-link" target="_blank">Download</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Power Supply</div>
+                        <div class="spec-value">110 - 120V</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Rate Frequency</div>
+                        <div class="spec-value">50 / 60Hz</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Standing</strong>
+                                <span>30" x 62" x 43.5"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Reclined</strong>
+                                <span>30" x 73" x 36"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Weight</div>
+                        <div class="spec-value">209.7 lb</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Shoulder</strong>
+                                <span>22"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Seat</strong>
+                                <span>19"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Minimum Door Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Assembled</strong>
+                                <span>30"</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Maximum User Weight</div>
+                        <div class="spec-value">260 lb</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>31.1" x 51.77" x 46.7"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row no-border"> 
+                        <div class="spec-label">Package Weight</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>252.9 lb</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1125 @@
+.ReGXL_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ReGXL_introText {
+    padding: 40px 80px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.ReGXL_introText strong {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.ReGXL_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+    margin-top: 16px;
+}
+
+.ReGXL_interactionSection {
+    margin-bottom: 80px;
+}
+
+.ReGXL_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.ReGXL_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.ReGXL_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.ReGXL_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.ReGXL_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.ReGXL_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ReGXL_arrow.left {
+    left: 0;
+}
+
+.ReGXL_arrow.right {
+    right: 0;
+}
+
+.ReGXL_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ReGXL_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.ReGXL_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.ReGXL_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.ReGXL_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.ReGXL_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.ReGXL_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.ReGXL_colorButton.active {
+    border-color: #000;
+}
+
+.ReGXL_sizeSection {
+    background: linear-gradient(180deg, #edf0f8 0%, #ffffff 30%);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.ReGXL_sizeWrapper {
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 40px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.ReGXL_sizeTitleBox {
+    text-align: center;
+}
+
+.ReGXL_sizeTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.ReGXL_sizeTitle .black {
+    color: #424242;
+}
+
+.ReGXL_sizeTitle .blue {
+    color: #5580ff;
+}
+
+.ReGXL_sizeTopImages {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.ReGXL_sizeImageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ReGXL_sizeImage {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ReGXL_sizeDescBox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.ReGXL_sizeDesc {
+    max-width: 680px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.ReGXL_sizeDesc .bold {
+    font-weight: 700;
+}
+
+.ReGXL_sizeGrid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.ReGXL_sizeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 240px;
+}
+
+.ReGXL_sizeCardImage {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.ReGXL_sizeCardLabel {
+    font-size: 16px;
+    font-weight: 600;
+    color: #424242;
+}
+
+.ReGXL_weightBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReGXL_weightImage {
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+}
+
+.ReGXL_weightText {
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    color: #424242;
+}
+
+.ReGXL_weightText .line1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ReGXL_weightText .line2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #5580ff;
+}
+
+.ReGXL_blackWrapper {
+    background-color: #161616;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.ReGXL_blackTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ReGXL_blackTopTitle {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+}
+
+.ReGXL_blackTopTitle .blue {
+    color: #5580ff
+}
+
+.ReGXL_blackTopTitle .desc {
+    font-family: 'Roboto', sans-serif;
+    max-width: 680px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    color: #bcbcbc;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+.ReGXL_blackTopImage img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.ReGXL_blackBottom {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.ReGXL_blackFeature {
+    max-width: 600px;
+    text-align: center;
+    color: #bcbcbc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.ReGXL_feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.ReGXL_feature-line {
+    width: 200px;
+    height: 1px;
+    background-color: #999;
+}
+
+.ReGXL_feature-image img {
+    height: 380px;
+    object-fit: contain;
+}
+
+.ReGXL_feature-text {
+    max-width: 300px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ReGXL_feature-text strong {
+    color: #fff;
+}
+
+.ReGXL_gradientBackground {
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.6) 20%);
+    border-radius: 40px;
+    margin: 0 40px;
+    padding-top: 80px;
+}
+
+.ReGXL_thirdSection {
+    background-color: #f5f5f7;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+.ReGXL_3StageZG {
+    max-width: 740px;
+    text-align: center;
+}
+
+.ReGXL_3StageZG .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.ReGXL_3StageZG .bold {
+    font-weight: 700;
+}
+
+.ReGXL_3StageZG .blue {
+    color: #5580ff;
+}
+
+.ReGXL_3StageZG .text {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.ReGXL_ZGWrapper {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 40px 0;
+    border-radius: 40px;
+}
+
+.ReGXL_ZGWrapper img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.ReGXL_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.ReGXL_whiteOblong {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ReGXL_whiteOblong .inner {
+    padding: 36px 40px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.ReGXL_whiteOblong .icon {
+    width: auto;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.ReGXL_whiteOblong .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.ReGXL_whiteOblong .title .blue {
+    color: #5580ff;
+}
+
+.ReGXL_whiteOblong .text {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.ReGXL_whiteOblong .bottomImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.ReGXL_textImage {
+    display: flex;
+    gap: 80px;
+    max-width: 800px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.ReGXL_textImage .text {
+    max-width: 260px;
+    color: #424242;
+}
+
+.ReGXL_textImage .text .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.ReGXL_textImage .text .title .blue {
+    color: #5580ff;
+}
+
+.ReGXL_textImage .text .title .red {
+    color: #ff0000;
+}
+
+.ReGXL_textImage .desc {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ReGXL_textImage img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+}
+
+.ReGXL_programSection {
+    background: linear-gradient(to bottom, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+}
+
+.ReGXL_programTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #424242;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ReGXL_8AutoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 60px;
+    max-width: 900px;
+    width: 100%;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+
+.ReGXL_programIcon {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #424242;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.ReGXL_programIcon img {
+    width: 100px;
+    height: auto;
+}
+
+.ReGXL_5Manual {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.ReGXL_manualTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #424242;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ReGXL_manualGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.ReGXL_manualRow {
+    margin-top: 20px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ReGXL_manualItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #424242;
+}
+
+.ReGXL_manualItem img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.ReGXL_3features {
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.ReGXL_featureBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+.ReGXL_featureBox img {
+    max-width: 300px;
+    width: 100%;
+}
+
+.ReGXL_featureBoxText {
+    max-width: 300px;
+    width: 100%;
+    margin: 60px;
+}
+
+.ReGXL_featureBoxTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #424242;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.ReGXL_featureBoxTitle .blue {
+    color: #5580ff;
+}
+
+.ReGXL_featureBoxDesc {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.ReGXL_4features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 740px;
+    width: 100%;
+    justify-content: center;
+}
+
+.ReGXL_featureGrid {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+}
+
+.ReGXL_featureGrid img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+.ReGXL_featureGridText {
+    font-size: 18px;
+    color: #424242;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+.ReGXL_featureGridText strong {
+    color: #000;
+}
+
+.ReGXL_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 20px;
+}
+
+.ReGXL_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+
+.ReGXL_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+.ReGXL_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.ReGXL_minDimBox img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+}
+
+.ReGXL_minDimBox2 img {
+    width: auto;
+    height: 400px;
+}
+
+.ReGXL_minDimText {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    max-width: 300px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .ReGXL_introText {
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+
+    .ReGXL_introText strong {
+        font-size: 24px;
+    }
+
+    .ReGXL_sizeTitle {
+        font-size: 28px;
+    }
+
+    .ReGXL_sizeTopImages {
+        gap: 24px;
+    }
+
+    .ReGXL_sizeImage {
+        width: 200px;
+    }
+
+    .ReGXL_sizeDesc {
+        font-size: 16px;
+    }
+
+    .ReGXL_sizeGrid {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .ReGXL_sizeCard {
+        max-width: 100%;
+    }
+
+    .ReGXL_sizeCardImage {
+        width: 100%;
+    }
+
+    .ReGXL_weightText {
+        top: 8%;
+        left: 6%;
+    }
+
+    .ReGXL_weightText .line1 {
+        font-size: 24px;
+    }
+
+    .ReGXL_weightText .line2 {
+        font-size: 24px;
+    }
+
+    .ReGXL_blackTopTitle {
+        font-size: 32px;
+    }
+
+    .feature-image img {
+        height: 180px;
+    }
+
+    .ReGXL_thirdSection {
+        gap: 60px;
+        padding: 60px 16px;
+    }
+
+    .ReGXL_3StageZG {
+        max-width: 600px;
+    }
+
+    .ReGXL_3StageZG .title {
+        font-size: 28px;
+    }
+
+    .ReGXL_whiteOblong .title {
+        font-size: 28px;
+    }
+
+    .ReGXL_whiteOblong .inner {
+        padding: 28px 28px 0;
+    }
+
+    .ReGXL_textImage {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .ReGXL_textImage .text {
+        max-width: 540px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ReGXL_textImage .text .title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .ReGXL_divWrapper {
+        gap: 20px;
+    }
+
+    .ReGXL_ZGWrapper img {
+        width: 90%;
+    }
+
+    .ReGXL_programTitle,
+    .ReGXL_manualTitle {
+        font-size: 26px;
+    }
+
+    .ReGXL_8AutoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 40px;
+    }
+
+    .ReGXL_programIcon img,
+    .ReGXL_manualItem img {
+        width: 80px;
+    }
+
+    .ReGXL_programIcon {
+        font-size: 13px;
+        gap: 16px;
+    }
+
+    .ReGXL_manualRow {
+        gap: 60px;
+    }
+
+    .ReGXL_manualItem {
+        font-size: 14px;
+    }
+
+    .ReGXL_featureBox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ReGXL_featureBoxText {
+        margin: 0 20px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .ReGXL_featureBoxTitle {
+        margin-top: 80px;
+        font-size: 22px;
+    }
+
+    .ReGXL_featureBoxDesc {
+        font-size: 15px;
+    }
+
+    .ReGXL_4features {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ReGXL_featureGridText {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .ReGXL_minDimTitle {
+        font-size: 26px;
+    }
+
+    .ReGXL_minDimSub {
+        font-size: 16px;
+    }
+
+    .ReGXL_minDimBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .ReGXL_minDimBox img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ReGXL_minDimBox2 img {
+        height: 240px;
+    }
+
+    .ReGXL_minDimText {
+        max-width: 90%;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .ReGXL_introText {
+        padding: 20px 40px;
+        font-size: 14px;
+    }
+
+    .ReGXL_introText strong {
+        font-size: 16px;
+    }
+
+    .ReGXL_sizeTitle {
+        font-size: 22px;
+    }
+
+    .ReGXL_sizeImage {
+        width: 160px;
+    }
+
+    .ReGXL_sizeDesc {
+        font-size: 14px;
+    }
+
+    .ReGXL_sizeCardLabel {
+        font-size: 14px;
+    }
+
+    .ReGXL_weightText {
+        top: 6%;
+        left: 5%;
+    }
+
+    .ReGXL_weightText .line1 {
+        font-size: 18px;
+    }
+
+    .ReGXL_weightText .line2 {
+        font-size: 18px;
+    }
+
+    .ReGXL_blackTopTitle {
+        font-size: 26px;
+    }
+
+    .feature-image img {
+        height: 160px;
+    }
+
+    .ReGXL_thirdSection {
+        gap: 48px;
+        padding: 40px 12px;
+    }
+
+    .ReGXL_3StageZG {
+        max-width: 300px;
+    }
+
+    .ReGXL_3StageZG .title {
+        font-size: 22px;
+    }
+
+    .ReGXL_whiteOblong .title {
+        font-size: 22px;
+    }
+
+    .ReGXL_whiteOblong .inner {
+        padding: 24px 20px 0;
+    }
+
+    .ReGXL_textImage .text .title {
+        font-size: 22px;
+    }
+
+    .ReGXL_textImage .desc {
+        font-size: 14px;
+    }
+
+    .ReGXL_3StageZG .text {
+        font-size: 14px;
+    }
+
+    .ReGXL_whiteOblong .text {
+        font-size: 14px;
+    }
+
+    .ReGXL_textImage {
+        gap: 32px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .ReGXL_programTitle,
+    .ReGXL_manualTitle {
+        font-size: 22px;
+    }
+
+    .ReGXL_8AutoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 24px;
+    }
+
+    .ReGXL_programIcon img,
+    .ReGXL_manualItem img {
+        width: 60px;
+    }
+
+    .ReGXL_programIcon {
+        font-size: 12px;
+        gap: 12px;
+    }
+
+    .ReGXL_manualRow {
+        gap: 40px;
+    }
+
+    .ReGXL_manualItem {
+        font-size: 13px;
+    }
+
+    .ReGXL_featureBoxTitle {
+        font-size: 20px;
+    }
+
+    .ReGXL_featureBoxDesc {
+        font-size: 14px;
+    }
+
+    .ReGXL_featureGridText {
+        font-size: 14px;
+    }
+
+    .ReGXL_featureBox img,
+    .ReGXL_featureGrid img {
+        max-width: 100%;
+    }
+
+    .ReGXL_featureBoxText {
+        padding: 0 10px;
+    }
+
+    .ReGXL_minDimTitle {
+        font-size: 22px;
+    }
+
+    .ReGXL_minDimSub {
+        font-size: 15px;
+    }
+
+    .ReGXL_minDimBox {
+        gap: 24px;
+    }
+
+    .ReGXL_minDimBox2 img {
+        height: 200px;
+    }
+
+    .ReGXL_minDimText {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}

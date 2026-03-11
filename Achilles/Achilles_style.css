@@ -1,0 +1,1147 @@
+/* Main image section */
+
+.Achilles_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Achilles_introText {
+    padding: 40px 60px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Interaction section */
+
+.Achilles_interactionSection {
+    margin: 80px 0;
+}
+
+.Achilles_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.Achilles_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.Achilles_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.Achilles_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.Achilles_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.Achilles_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Achilles_arrow.left {
+    left: 0;
+}
+
+.Achilles_arrow.right {
+    right: 0;
+}
+
+.Achilles_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gradientOverlay {
+    position: flex;
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 1;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Achilles_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.Achilles_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.Achilles_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Achilles_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.Achilles_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.Achilles_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.Achilles_colorButton.active {
+    border-color: #000;
+}
+
+.Achilles_icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Sections by background color */
+
+.Achilles_Box--Black {
+    background-color: #04090e;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.Achilles_Box--Color {
+    background-color: #f0f1f9;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Achilles_Box--Gradient {
+    background: linear-gradient(to top, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Achilles_Box--Gradient1 {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #edf0f8 100%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text (Title, Desc) */
+
+.Achilles_Text--Mont--Title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Achilles_Text--Mont--Title .left {
+    text-align: left;
+}
+
+.Achilles_Text--Mont--Title .center {
+    text-align: center;
+}
+
+.Achilles_Text--Mont--Title .blue {
+    color: #5580ff;
+}
+
+.Achilles_Text--Mont--Title .white {
+    color: white;
+}
+
+.Achilles_Text--Mont--Title .red {
+    color: #ff0000;
+}
+
+.Achilles_Text--Mont--Title .gray {
+    color: #bcbcbc;
+}
+
+.Achilles_Text--Mont--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Achilles_Text--Mont--SubTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Achilles_Text--Mont--SubTitle .left {
+    text-align: left;
+}
+
+.Achilles_Text--Mont--SubTitle .center {
+    text-align: center;
+}
+
+.Achilles_Text--Mont--SubTitle .blue {
+    color: #5580ff;
+}
+
+.Achilles_Text--Mont--SubTitle .white {
+    color: white;
+}
+
+.Achilles_Text--Mont--SubTitle .red {
+    color: #ff0000;
+}
+
+.Achilles_Text--Mont--SubTitle .gray {
+    color: #bcbcbc;
+}
+
+.Achilles_Text--Mont--SubTitle .lightblue {
+    color: #6ca4ff;
+}
+
+.Achilles_Text--Mont--Desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #424242;
+}
+
+.Achilles_Text--Mont--Desc strong {
+    color: #000;
+}
+
+.Achilles_Text--Mont--Desc .left {
+    text-align: left;
+}
+
+.Achilles_Text--Mont--Desc .center {
+    text-align: center;
+}
+
+.Achilles_Text--Mont--Desc .blue {
+    color: #5580ff;
+}
+
+.Achilles_Text--Mont--Desc .white {
+    color: white;
+}
+
+.Achilles_Text--Mont--Desc .red {
+    color: #ff0000;
+}
+
+.Achilles_Text--Mont--Desc .gray {
+    color: #bcbcbc;
+}
+
+.Achilles_Text--Mont--Desc .darkgray {
+    color: #333;
+}
+
+.Achilles_Text--Mont--Desc .lightblue {
+    color: #6ca4ff;
+}
+
+.Achilles_Text--Robo--Title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Achilles_Text--Robo--Title .left {
+    text-align: left;
+}
+
+.Achilles_Text--Robo--Title .center {
+    text-align: center;
+}
+
+.Achilles_Text--Robo--Title .blue {
+    color: #5580ff;
+}
+
+.Achilles_Text--Robo--Title .white {
+    color: white;
+}
+
+.Achilles_Text--Robo--Title .red {
+    color: #ff0000;
+}
+
+.Achilles_Text--Robo--Title .gray {
+    color: #bcbcbc;
+}
+
+.Achilles_Text--Robo--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Achilles_Text--Robo--Desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #424242;
+}
+
+.Achilles_Text--Robo--Desc .left {
+    text-align: left;
+}
+
+.Achilles_Text--Robo--Desc .center {
+    text-align: center;
+}
+
+.Achilles_Text--Robo--Desc strong {
+    color: #000;
+}
+
+.Achilles_Text--Robo--Desc .blue {
+    color: #5580ff;
+}
+
+.Achilles_Text--Robo--Desc .white {
+    color: white;
+}
+
+.Achilles_Text--Robo--Desc .red {
+    color: #ff0000;
+}
+
+.Achilles_Text--Robo--Desc .gray {
+    color: #bcbcbc;
+}
+
+.Achilles_Text--Robo--Desc .darkgray {
+    color: #333;
+}
+
+.Achilles_Text--Robo--Desc .lightblue {
+    color: #6ca4ff;
+}
+
+.Achilles_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #bcbcbc;
+    margin-top: 16px;
+}
+
+/* Div wrapper */
+
+.Achilles_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.Achilles_divWrapper2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.Achilles_recBoxWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 740px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* feature cards */
+
+.Achilles_Card--Vertical,
+.Achilles_Card--Vertical--Gradient,
+.Achilles_Card--Vertical--Black {
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Achilles_Card--Vertical--Gradient {
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.1) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Achilles_Card--Vertical--Black {
+    background: none;
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Achilles_Card--Vertical .textBox,
+.Achilles_Card--Vertical .icon,
+.Achilles_Card--Vertical--Gradient .icon,
+.Achilles_Card--Vertical--Black .icon {
+    padding: 60px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Achilles_Card--Vertical .textBox2 {
+    padding: 10px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Achilles_Card--Vertical .icon img,
+.Achilles_Card--Vertical--Gradient .icon img {
+    height: 70px;
+    width: auto;
+}
+
+.Achilles_Card--Vertical--Black .icon img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.Achilles_Card--Horizontal--column .textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 0;
+    margin: 0 auto;
+    max-width: 74%;
+    width: 100%;
+}
+
+.Achilles_Card--Horizontal--row,
+.Achilles_Card--Horizontal--row1,
+.Achilles_Card--Horizontal--rowFit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 40px 60px;
+}
+
+.Achilles_Card--Horizontal--row1 {
+    background-color: #04090e;
+}
+
+.Achilles_Card--Horizontal--rowFit {
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.Achilles_Card--Horizontal--row .textBox,
+.Achilles_Card--Horizontal--row1 .textBox,
+.Achilles_Card--Horizontal--rowFit .textBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    gap: 10px;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.Achilles_Card--Horizontal--rowFit .PL {
+    padding-left: 4rem;
+}
+
+.Achilles_Card--Horizontal--row img,
+.Achilles_Card--Horizontal--row1 img,
+.Achilles_Card--Horizontal--rowFit img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.Achilles_video {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.Achilles_Card--Horizontal--rowFit img {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.Achilles_Card--Horizontal--rowFit {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Achilles_Card--Horizontal--rowFit img {
+    max-width: 500px;
+    width: 100%;
+    z-index: 1;
+}
+
+.Achilles_Card--Horizontal--rowFit .textBox {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    max-width: 480px;
+}
+
+
+.Achilles_Card--Horizontal--column,
+.Achilles_Card--Horizontal--column--Gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gradientOverlayBox {
+    position: flex;
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Achilles_Card--Horizontal--column img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.Achilles_Card--Horizontal--column_img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+}
+
+.Achilles_Card--RecRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.Achilles_Card--Rectangle {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 20px;
+}
+
+.Achilles_Card--Rectangle img {
+    width: 400px;
+    height: auto;
+}
+
+.Achilles_Card--Rectangle--TextBox {
+    max-width: 360px;
+    color: #424242;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.Achilles_Card--Rectangle--TextBox strong {
+    color: #000;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
+/* Icon grid */
+
+.Achilles_AutoSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Achilles_autoGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px 50px;
+    max-width: 1000px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.Achilles_lastRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.Achilles_programIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #424242;
+    font-size: 14px;
+    gap: 16px;
+    width: 100px;
+    min-height: 160px;
+}
+
+.Achilles_programIcon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.Achilles_manualSection {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.Achilles_manualGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.Achilles_manualRow {
+    margin-top: 40px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Achilles_manualItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 600;
+    align-items: center;
+    font-size: 16px;
+    color: #424242;
+}
+
+.Achilles_manualItem img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.Achilles_manualItem--line {
+    width: 640px;
+    height: 2px;
+    background-color: rgba(108, 164, 255, 0.5);
+    margin: 40px 0;
+}
+
+.Achilles_manualItem--line1 {
+    width: 2px;
+    height: 580px;
+    background-color: rgba(108, 164, 255, 0.5);
+}
+
+.Achilles_AutoMassageWrapper,
+.Achilles_modesIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Achilles_modeWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.Achilles_modesIcon {
+    width: 220px;
+    gap: 40px 20px;
+}
+
+/* LineCard feature */
+
+.Achilles_LineCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.Achilles_LineCard {
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: #bcbcbc;
+}
+
+.Achilles_LineCard--title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.Achilles_LineCard--line {
+    width: 300px;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 40px;
+}
+
+.Achilles_LineCard img {
+    width: auto;
+    height: 500px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.Achilles_LineCard--text {
+    max-width: 300px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.Achilles_LineCard--text strong {
+    color: white;
+}
+
+/* Minimum Doorway & Dimensions */
+
+.Achilles_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 20px;
+}
+
+.Achilles_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+
+.Achilles_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 2rem;
+    color: #333;
+}
+
+.Achilles_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Achilles_minDimBox2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Achilles_minDimBox img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.Achilles_minDimBox2 img {
+    width: auto;
+    height: 360px;
+}
+
+.Achilles_minDimText {
+    font-size: 14px;
+    color: #777777;
+    text-align: left;
+    max-width: 460px;
+    line-height: 1.8;
+}
+
+/* ============================
+   Responsive Styles (990px ↓)
+   ============================ */
+
+@media (max-width: 990px) {
+    .Achilles_Card--Horizontal--rowFit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        background-color: #fff;
+        border-radius: 40px;
+        width: 100%;
+        max-width: 900px;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .Achilles_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+        max-width: 480px;
+    }
+
+    .Achilles_Card--Horizontal--rowFit img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+/* ============================
+   Responsive Styles (960px ↓)
+   ============================ */
+
+@media (max-width: 960px) {
+    .Achilles_manualItem--line {
+        display: none;
+    }
+
+    .Achilles_Text--Mont--Title {
+        text-align: center;
+    }
+
+    .Achilles_introText {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    .Achilles_Text--Mont--Title,
+    .Achilles_Text--Robo--Title {
+        font-size: 26px;
+    }
+
+    .Achilles_Text--Mont--Desc,
+    .Achilles_Text--Robo--Desc {
+        font-size: 16px;
+    }
+
+    .Achilles_divWrapper,
+    .Achilles_recBoxWrapper,
+    .Achilles_Card--RecRow {
+        gap: 24px;
+    }
+
+    .Achilles_Card--Horizontal--row,
+    .Achilles_Card--Horizontal--row1,
+    .Achilles_Card--Horizontal--rowFit {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .Achilles_Card--Horizontal--row img,
+    .Achilles_Card--Horizontal--row1 img,
+    .Achilles_Card--Horizontal--rowFit img {
+        max-width: 500px;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .Achilles_Card--Horizontal--rowFit img,
+    .Achilles_Card--Horizontal--rowFit .textBox {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Achilles_Card--Horizontal--row1 .Achilles_Text--Robo--Desc,
+    .Achilles_Card--Horizontal--row .Achilles_Text--Robo--Desc,
+    .Achilles_Card--RecRow .Achilles_Card--Rectangle .Achilles_Card--Rectangle--TextBox {
+        text-align: center;
+    }
+
+    .Achilles_Card--Horizontal--row .textBox,
+    .Achilles_Card--Horizontal--row1 .textBox,
+    .Achilles_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+    }
+
+    .Achilles_Card--Horizontal--rowFit .PL {
+        padding-left: 0;
+    }
+
+    .Achilles_Card--RecRow {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .Achilles_Card--Rectangle {
+        align-items: center;
+    }
+
+    .Achilles_Card--Horizontal--column .textBox {
+        padding: 20px 40px;
+    }
+
+    .Achilles_modeWrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .Achilles_modesIcon {
+        width: 100%;
+        align-items: center;
+    }
+
+    .Achilles_manualItem--line1 {
+        display: none;
+    }
+
+    .Achilles_manualRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .Achilles_minDimBox2 img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    }
+}
+
+
+/* ============================
+   Responsive Styles (430px ↓)
+   ============================ */
+
+@media (max-width: 430px) {
+    .rowReverse {
+        flex-direction: column;
+    }
+
+    .Achilles_introText {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .Achilles_Text--Mont--Title,
+    .Achilles_Text--Robo--Title {
+        font-size: 22px;
+    }
+
+    .Achilles_Text--Mont--Desc,
+    .Achilles_Text--Robo--Desc {
+        font-size: 14px;
+    }
+
+    .Achilles_autoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .Achilles_lastRow {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .Achilles_programIcon {
+        width: 80px;
+        min-height: 140px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .Achilles_programIcon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Achilles_Card--Horizontal--row,
+    Achilles_Card--Horizontal--row1,
+    .Achilles_Card--Horizontal--rowFit {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Achilles_manualRow {
+        gap: 40px;
+    }
+
+    .Achilles_LineCard img {
+        height: 320px;
+    }
+
+    .Achilles_LineCard--line {
+        width: 240px;
+    }
+
+    .Achilles_Card--Horizontal--column .textBox {
+        padding: 10px 20px;
+    }
+}
+
+/* Fix: center multi-line subtitle inside each modes column */
+.Achilles_modesIcon .Achilles_Text--Mont--SubTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.Achilles_modesIcon .Achilles_Text--Mont--SubTitle > span {
+  display: block;
+}

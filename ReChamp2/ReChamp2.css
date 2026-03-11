@@ -1,0 +1,682 @@
+.ReChamp2_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ReChamp2_intro {
+    padding: 40px 60px;
+    text-align: left;
+    color: #58595b;
+}
+
+.ReChamp2_intro .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.ReChamp2_intro .desc {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.ReChamp2_colorSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.ReChamp2_colorButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ReChamp2_colorBtn {
+    background-color: #ddd;
+    color: #333;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 20px 30px;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 180px;
+    text-align: center;
+}
+
+.ReChamp2_colorBtn.selected {
+    background-color: #000;
+    color: #fff;
+    width: 240px;
+}
+
+.ReChamp2_colorBtn[data-color="brown"] {
+    background-color: #4f2a25;
+    color: #fff;
+}
+
+.ReChamp2_colorBtn[data-color="black"] {
+    background-color: #111;
+    color: #fff;
+}
+
+.ReChamp2_colorBtn[data-color="taupe"] {
+    background-color: #e5d6c3;
+    color: #333;
+}
+
+.ReChamp2_colorImage img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.ReChamp2_3features {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.ReChamp2_touchScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.ReChamp2_TSimgBox,
+.ReChamp2_TStextBox {
+    width: 350px;
+}
+
+.ReChamp2_TSimgBox img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ReChamp2_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+    margin-top: 16px;
+}
+
+.ReChamp2_title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #231f20;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.ReChamp2_title .blue {
+    color: #3563e0;
+}
+
+.ReChamp2_title .deepBlue {
+    color: #2e3192;
+}
+
+.ReChamp2_title .white {
+    color: #e6e7e8;
+}
+
+.ReChamp2_title .red {
+    color: #ed1c24;
+}
+
+.ReChamp2_desc {
+    font-size: 18px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.ReChamp2_desc_light {
+    font-weight: 400;
+    font-size: 18px;
+    color: #bcbec0;
+    line-height: 1.6;
+}
+
+.ReChamp2_12Auto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.ReChamp2_12Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+}
+
+.ReChamp2_12AutoBox {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: #e4edf2;
+    width: 220px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #424242;
+    font-weight: 600;
+    line-height: 1.4;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.ReChamp2_12AutoMedium {
+    gap: 28px
+}
+
+.ReChamp2_12AutoLong {
+    gap: 20px
+}
+
+.ReChamp2_12AutoBox div {
+    text-align: center;
+}
+
+.ReChamp2_12AutoBox img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.ReChamp2_6Manual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.ReChamp2_6ManualGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 60px;
+}
+
+.ReChamp2_6ManualBox {
+    position: relative;
+    width: 120px;
+    height: 160px;
+}
+
+.ReChamp2_6ManualBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.ReChamp2_6ManualLabel {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #424242;
+}
+
+.ReChamp2_blackWrapper {
+    background-color: #161620;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.ReChamp2_SLtrack,
+.ReChamp2_AutoBodyScan,
+.ReChamp2_3stageZG,
+.ReChamp2_5features,
+.ReChamp2_SmartFeatures,
+.ReChamp2_MinimumDW,
+.ReChamp2_Dimensions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.ReChamp2_SLtrackBox {
+    max-width: 640px;
+    width: 100%;
+}
+
+.ReChamp2_3stageZGBox {
+    max-width: 700px;
+    width: 100%;
+}
+
+.ReChamp2_SLtrack img,
+.ReChamp2_AutoBodyScan img,
+.ReChamp2_3stageZG img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ReChamp2_desc_light {
+    font-size: 18px;
+    color: #bcbec0;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.ReChamp2_3D_hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.ReChamp2_3D,
+.ReChamp2_hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.ReChamp2_3D img,
+.ReChamp2_hand img {
+    width: 340px;
+    height: auto;
+}
+
+.ReChamp2_3DText,
+.ReChamp2_HandText {
+    width: 340px;
+}
+
+.ReChamp2_title_left {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #231f20;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ReChamp2_title_right {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #231f20;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.ReChamp2_desc_left {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.ReChamp2_desc_right {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.ReChamp2_title_left .white {
+    color: #e6e7e8;
+}
+
+.ReChamp2_title_right .white {
+    color: #e6e7e8;
+}
+
+.ReChamp2_title_left .blue {
+    color: #3563e0;
+}
+
+.ReChamp2_title_right .blue {
+    color: #3563e0;
+}
+
+.ReChamp2_desc_left .gray {
+    color: #bcbec0;
+}
+
+.ReChamp2_desc_right .gray {
+    color: #bcbec0;
+}
+
+.ReChamp2_desc_light strong {
+    color: #e6e7e8;
+}
+
+.ReChamp2_32Cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    margin: 80px 0;
+}
+
+.ReChamp2_32CellBox {
+    max-width: 640px;
+    width: 100%;
+}
+
+.ReChamp2_32Cell img {
+    height: auto;
+    width: 50rem;
+}
+
+.descWidth {
+    width: 520px;
+}
+
+.ReChamp2_featureBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 20px;
+    gap: 24px;
+}
+
+.ReChamp2_featureBox img {
+    max-width: 360px;
+    height: auto;
+}
+
+.ReChamp2_iconFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReChamp2_iconFeature img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ReChamp2_leftTextBox {
+    padding-left: 20px;
+    text-align: left;
+    max-width: 340px;
+    width: 100%;
+}
+
+.ReChamp2_rightTextBox {
+    padding-right: 20px;
+    text-align: right;
+    max-width: 340px;
+    width: 100%;
+}
+
+.ReChamp2_iconBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 60px 0;
+}
+
+.ReChamp2_iconBox img {
+    width: 120px;
+    height: auto;
+}
+
+.ReChamp2_lastBox {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    flex-wrap: nowrap;
+}
+
+.ReChamp2_lastBox img {
+    height: 600px;
+    width: auto;
+}
+
+.ReChamp2_lastBoxText {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ReChamp2_lastBoxTitle {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.ReChamp2_bulletList {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #424242;
+}
+
+.ReChamp2_reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1000px) {
+    .ReChamp2_colorBtn {
+        border-radius: 999px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ReChamp2_colorSection {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .ReChamp2_colorButtons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .ReChamp2_colorBtn {
+        width: 140px;
+        font-size: 18px;
+        padding: 16px 20px;
+        border-radius: 999px;
+    }
+
+    .ReChamp2_colorBtn.selected {
+        width: 180px;
+    }
+
+    .ReChamp2_colorImage img {
+        max-width: 100%;
+    }
+
+    .ReChamp2_lastBox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ReChamp2_lastBoxText {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .ReChamp2_featureBox {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .ReChamp2_leftTextBox,
+    .ReChamp2_rightTextBox {
+        padding: 0;
+        text-align: center;
+    }
+
+    .ReChamp2_3D,
+    .ReChamp2_hand {
+        flex-direction: column;
+    }
+
+    .ReChamp2_3DText,
+    .ReChamp2_HandText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ReChamp2_iconBox {
+        gap: 20px;
+    }
+
+    .ReChamp2_12Grid,
+    .ReChamp2_6ManualGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .ReChamp2_colorBtn {
+        width: 120px;
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+
+    .ReChamp2_colorBtn.selected {
+        width: 160px;
+    }
+
+    .ReChamp2_intro {
+        padding: 20px;
+    }
+
+    .ReChamp2_title {
+        font-size: 26px;
+    }
+
+    .ReChamp2_intro .title {
+        font-size: 24px;
+    }
+
+    .ReChamp2_intro .desc {
+        font-size: 16px;
+    }
+
+    .ReChamp2_desc,
+    .ReChamp2_desc_light,
+    .ReChamp2_desc_left,
+    .ReChamp2_desc_right {
+        font-size: 15px;
+    }
+
+    .ReChamp2_12Grid,
+    .ReChamp2_6ManualGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .ReChamp2_lastBox img {
+        height: auto;
+        max-width: 90%;
+    }
+
+    .ReChamp2_lastBoxText {
+        padding: 0 10px;
+    }
+
+    .ReChamp2_title_left,
+    .ReChamp2_title_right {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .ReChamp2_desc_left,
+    .ReChamp2_desc_right {
+        text-align: center;
+    }
+
+    .ReChamp2_3D img,
+    .ReChamp2_hand img,
+    .ReChamp2_featureBox img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ReChamp2_iconFeature img {
+        max-width: 80px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .ReChamp2_12AutoBox {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ReChamp2_6ManualBox {
+        width: 100px;
+        height: 140px;
+    }
+
+    .ReChamp2_iconBox img {
+        width: 80px;
+    }
+
+    .ReChamp2_title .blue,
+    .ReChamp2_title .white,
+    .ReChamp2_title .deepBlue {
+        font-size: 20px;
+    }
+}

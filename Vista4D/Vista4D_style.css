@@ -1,0 +1,1563 @@
+/* Main image section */
+
+.Vista_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Vista_introText {
+    padding: 40px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Interaction section */
+
+.Vista_interactionSection {
+    margin: 80px 0;
+}
+
+.Vista_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.Vista_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.Vista_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.Vista_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.Vista_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.Vista_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Vista_arrow.left {
+    left: 0;
+}
+
+.Vista_arrow.right {
+    right: 0;
+}
+
+.Vista_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gradientOverlay {
+    position: flex;
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 1;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Vista_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.Vista_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.Vista_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Vista_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.Vista_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.Vista_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.Vista_colorButton.active {
+    border-color: #000;
+}
+
+.Vista_icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Sections by background color */
+
+.Vista_Box {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Vista_Box--Black {
+    background-color: #04090e;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.Vista_Box--Color {
+    background-color: #eef1f7;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Vista_Box--Gradient {
+    background: linear-gradient(to bottom, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Vista_Box--Gradient1 {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #edf0f8 100%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text (Title, Desc) */
+.Vista_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #878787;
+    margin-top: 16px;
+}
+
+
+.Vista_Text--Mont--Title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Vista_Text--Mont--Title .left {
+    text-align: left;
+}
+
+.Vista_Text--Mont--Title .right {
+    text-align: right;
+}
+
+.Vista_Text--Mont--Title .center {
+    text-align: center;
+}
+
+.Vista_Text--Mont--Title .blue {
+    color: #3563e0;
+}
+
+.Vista_Text--Mont--Title .white {
+    color: white;
+}
+
+.Vista_Text--Mont--Title .red {
+    color: #ff0000;
+}
+
+.Vista_Text--Mont--Title .gray {
+    color: #bcbcbc;
+}
+
+.Vista_Text--Mont--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Vista_Text--Mont--SubTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Vista_Text--Mont--SubTitle .left {
+    text-align: left;
+}
+
+.Vista_Text--Mont--SubTitle .center {
+    text-align: center;
+}
+
+.Vista_Text--Mont--SubTitle .blue {
+    color: #3563e0;
+}
+
+.Vista_Text--Mont--SubTitle .white {
+    color: white;
+}
+
+.Vista_Text--Mont--SubTitle .red {
+    color: #ff0000;
+}
+
+.Vista_Text--Mont--SubTitle .gray {
+    color: #bcbcbc;
+}
+
+.Vista_Text--Mont--SubTitle .lightblue {
+    color: #6ca4ff;
+}
+
+.Vista_Text--Mont--Desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #424242;
+}
+
+.Vista_Text--Mont--Desc strong {
+    color: #000;
+}
+
+.Vista_Text--Mont--Desc .left {
+    text-align: left;
+}
+
+.Vista_Text--Mont--Desc .right {
+    text-align: right;
+}
+
+.Vista_Text--Mont--Desc .center {
+    text-align: center;
+}
+
+.Vista_Text--Mont--Desc .blue {
+    color: #3563e0;
+}
+
+.Vista_Text--Mont--Desc .white {
+    color: white;
+}
+
+.Vista_Text--Mont--Desc .red {
+    color: #ff0000;
+}
+
+.Vista_Text--Mont--Desc .gray {
+    color: #bcbcbc;
+}
+
+.Vista_Text--Mont--Desc .darkgray {
+    color: #7c7c7c;
+}
+
+.Vista_Text--Mont--Desc .lightblue {
+    color: #6ca4ff;
+}
+
+.Vista_Text--Robo--Title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Vista_Text--Robo--Title .left {
+    text-align: left;
+}
+
+.Vista_Text--Robo--Title .right {
+    text-align: right;
+}
+
+.Vista_Text--Robo--Title .center {
+    text-align: center;
+}
+
+.Vista_Text--Robo--Title .blue {
+    color: #3563e0;
+}
+
+.Vista_Text--Robo--Title .white {
+    color: white;
+}
+
+.Vista_Text--Robo--Title .red {
+    color: #ff0000;
+}
+
+.Vista_Text--Robo--Title .gray {
+    color: #bcbcbc;
+}
+
+.Vista_Text--Robo--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Vista_Text--Robo--Desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #424242;
+}
+
+.Vista_Text--Robo--Desc .left {
+    text-align: left;
+}
+
+.Vista_Text--Robo--Desc .right {
+    text-align: right;
+}
+
+.Vista_Text--Robo--Desc .center {
+    text-align: center;
+}
+
+.Vista_Text--Robo--Desc strong {
+    color: #000;
+}
+
+.Vista_Text--Robo--Desc .blue {
+    color: #3563e0;
+}
+
+.Vista_Text--Robo--Desc .white {
+    color: white;
+}
+
+.Vista_Text--Robo--Desc .red {
+    color: #ff0000;
+}
+
+.Vista_Text--Robo--Desc .gray {
+    color: #bcbcbc;
+}
+
+.Vista_Text--Robo--Desc .darkgray {
+    color: #7c7c7c;
+}
+
+.Vista_Text--Robo--Desc .lightblue {
+    color: #6ca4ff;
+}
+
+/* Div wrapper */
+
+.Vista_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.Vista_divWrapper2 {
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.Vista_recBoxWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 740px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* feature cards */
+.Vista_zgIconWrapper {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.Vista_zgIconDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.Vista_zgIconWrapper .Vista_zgIcon {
+    max-width: 80px;
+    height: auto;
+}
+
+.Vista_zgTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    color: #a4a6a9;
+}
+
+.Vista_zgLine {
+    background-color: #a4a6a9;
+    width: 2px;
+    margin-top: 1rem;
+    max-height: 70px;
+    height: auto;
+}
+
+.Vista_Cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 60px 0;
+}
+
+.Vista_Cell img {
+    height: auto;
+    width: 60rem;
+}
+
+.Vista_Cell .textBox {
+    padding: 1rem 40px;
+    max-width: 860px;
+    width: 100%;
+}
+
+.Vista_TrackTextBox {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.Vista_SquareBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.Vista_SquareContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Vista_SquareContent img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.Vista_SquareContent .textBox {
+    max-width: 400px;
+    width: 100%;
+}
+
+.Vista_SquareContent .PL {
+    padding-left: 5rem;
+}
+
+.Vista_SquareContent .PR {
+    padding-right: 5rem;
+}
+
+.Vista_video {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.Vista_featureBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 20px;
+    gap: 24px;
+}
+
+.Vista_featureBox img {
+    max-width: 360px;
+    height: auto;
+}
+
+.Vista_iconFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Vista_iconFeature img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Vista_featureBox .textBox {
+    padding-left: 20px;
+    text-align: left;
+    max-width: 340px;
+    width: 100%;
+}
+
+.Vista_Card--Vertical,
+.Vista_Card--Vertical--Gradient,
+.Vista_Card--Vertical--Black {
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Vista_Card--Vertical--Gradient {
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.1) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Vista_Card--Vertical--Black {
+    background: none;
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Vista_Card--Vertical .textBox,
+.Vista_Card--Vertical .icon,
+.Vista_Card--Vertical--Gradient .icon,
+.Vista_Card--Vertical--Black .icon {
+    padding: 60px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Vista_Card--Vertical .textBox2 {
+    padding: 10px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Vista_Card--Vertical .icon img,
+.Vista_Card--Vertical--Gradient .icon img {
+    height: 70px;
+    width: auto;
+}
+
+.Vista_Card--Vertical--Black .icon img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.Vista_Card--Horizontal--column .textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 0;
+    margin: 0 auto;
+    max-width: 74%;
+    width: 100%;
+}
+
+.Vista_Card--Horizontal--row,
+.Vista_Card--Horizontal--row1,
+.Vista_Card--Horizontal--rowFit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 60px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+.Vista_Card--Horizontal--row1 {
+    background-color: #04090e;
+}
+
+.Vista_Card--Horizontal--rowFit {
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.Vista_Card--Horizontal--row .textBox,
+.Vista_Card--Horizontal--row1 .textBox,
+.Vista_Card--Horizontal--rowFit .textBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    gap: 10px;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.Vista_Card--Horizontal--rowFit .PL {
+    padding-left: 5rem;
+}
+
+.Vista_Card--Horizontal--rowFit .PL2 {
+    padding-left: 0;
+}
+
+.Vista_Card--Horizontal--row img,
+.Vista_Card--Horizontal--row1 img,
+.Vista_Card--Horizontal--rowFit img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.Vista_Card--Horizontal--rowFit img {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.Vista_Card--Horizontal--rowFit {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.Vista_Card--Horizontal--rowFit .textBox {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    max-width: 480px;
+}
+
+.Vista_Card--Horizontal--rowFit .textBox2 {
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    margin-right: 3rem;
+}
+
+
+.Vista_Card--Horizontal--column,
+.Vista_Card--Horizontal--column--Gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gradientOverlayBox {
+    position: flex;
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Vista_Card--Horizontal--column img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.Vista_Card--Horizontal--column_img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+}
+
+.Vista_Card--RecRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    max-width: 1100px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.Vista_Card--Rectangle,
+.Vista_Card--Rectangle1 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 20px;
+}
+
+.Vista_Card--Rectangle1 {
+    align-items: center;
+}
+
+.Vista_Card--Rectangle img {
+    width: 400px;
+    height: auto;
+}
+
+.Vista_Card--Rectangle1 img {
+    width: 420px;
+    height: auto;
+}
+
+.Vista_Card--Rectangle--TextBox,
+.Vista_Card--Rectangle1--TextBox {
+    max-width: 400px;
+    color: #424242;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.Vista_Card--Rectangle--TextBox strong,
+.Vista_Card--Rectangle1--TextBox strong {
+    color: #000;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
+.Vista_row2Card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.Vista_row2Card .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Vista_row2Card img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.Vista_row2Card .textBox {
+    margin-top: 1rem;
+    max-width: 380px;
+    width: 100%;
+    height: 140px;
+}
+
+/* Icon grid */
+
+.Vista_AutoSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Vista_autoGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px 50px;
+    max-width: 1000px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.Vista_lastRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.Vista_programIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #424242;
+    font-size: 14px;
+    gap: 16px;
+    width: 100px;
+    min-height: 160px;
+}
+
+.Vista_programIcon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.Vista_manualSection {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.Vista_manualGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.Vista_manualRow {
+    margin-top: 40px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Vista_manualItem {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 400;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.Vista_manualItem img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.Vista_manualItem--line {
+    max-width: 1000px;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(108, 164, 255, 0.5);
+    margin: 40px 0;
+}
+
+.Vista_manualItem--line1 {
+    width: 240px;
+    height: 3px;
+    background-color: rgba(108, 164, 255, 0.5);
+}
+
+.Vista_manualItem--line2 {
+    display: none;
+}
+
+.Vista_AutoMassageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Vista_modeWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+}
+
+.Vista_modeBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.Vista_ManualTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #6ca4ff;
+}
+
+.Vista_category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    gap: 10px;
+}
+
+.Vista_category img {
+    width: 80px;
+    height: 80px;
+}
+
+.Vista_programs {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 24px;
+    flex: 1;
+}
+
+.Vista_programItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.Vista_programItem img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+
+/* LineCard feature */
+
+.Vista_LineCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.Vista_LineCard {
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: #bcbcbc;
+}
+
+.Vista_LineCard--title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.Vista_LineCard--line {
+    width: 300px;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 40px;
+}
+
+.Vista_LineCard img {
+    width: auto;
+    height: 500px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.Vista_LineCard--text {
+    max-width: 300px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.Vista_LineCard--text strong {
+    color: white;
+}
+
+/* Minimum Doorway & Dimensions */
+
+.Vista_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.Vista_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+
+.Vista_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 2rem;
+    color: #3563e0;
+}
+
+.Vista_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Vista_minDimBox2 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Vista_minDimBox img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.Vista_minDimBox2 img {
+    width: auto;
+    height: 460px;
+}
+
+.Vista_minDimText {
+    font-size: 16px;
+    color: #777777;
+    text-align: left;
+    max-width: 760px;
+    line-height: 1.8;
+    gap: 0.4rem;
+    margin-bottom: 24px;
+}
+
+/* ============================
+   Responsive Styles (990px ↓)
+   ============================ */
+
+@media (max-width: 990px) {
+    .Vista_SquareContent {
+        flex-direction: column;
+    }
+
+    .Vista_SquareContent .textBox {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Vista_video {
+        max-width: 100%;
+    }
+
+    .Vista_SquareContent .PL {
+        padding-left: 0;
+    }
+
+    .Vista_SquareContent .PR {
+        padding-right: 0;
+    }
+
+    .Vista_row2Card {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 1rem;
+    }
+
+    .Vista_row2Card .card {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .Vista_row2Card img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .Vista_row2Card .textBox {
+        max-width: 90%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .Vista_modeWrapper {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .Vista_modeBlock {
+        width: 100%;
+        align-items: center;
+    }
+
+    .Vista_category {
+        width: 100%;
+        align-items: center;
+    }
+
+    .Vista_programs {
+        gap: 16px;
+    }
+
+    .Vista_programItem img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Vista_programItem {
+        font-size: 13px;
+    }
+
+    .Vista_manualItem--line2 {
+        display: block;
+        max-width: 1000px;
+        width: 100%;
+        height: 3px;
+        background-color: rgba(108, 164, 255, 0.5);
+        margin: 40px 0;
+    }
+
+    .Vista_Card--Horizontal--rowFit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        background-color: #fff;
+        border-radius: 40px;
+        width: 100%;
+        max-width: 900px;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .Vista_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+        max-width: 480px;
+    }
+
+    .Vista_Card--Horizontal--rowFit img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+/* ============================
+   Responsive Styles (850px ↓)
+   ============================ */
+
+@media (max-width: 850px) {
+
+    .Vista_Card--Horizontal--row img,
+    .Vista_Card--Horizontal--row1 img,
+    .Vista_Card--Horizontal--rowFit img {
+        padding-right: 60px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .Vista_Card--Horizontal--column_img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .Vista_autoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 30px;
+    }
+
+    .Vista_lastRow {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .Vista_programIcon {
+        width: 90px;
+        min-height: 150px;
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .Vista_programIcon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Vista_featureBox {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .Vista_Card--Horizontal--rowFit .textBox,
+    .Vista_Card--Horizontal--rowFit .textBox2 {
+        margin-left: 0;
+    }
+
+    .Vista_Card--Horizontal--rowFit {
+        gap: 0;
+    }
+
+    .Vista_Card--Horizontal--row .textBox {
+        padding-left: 0;
+    }
+
+    .Vista_Card--Horizontal--rowFit .PL2 {
+        padding-left: 1rem;
+    }
+
+    .Vista_icon img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+/* ============================
+   Responsive Styles (768px ↓)
+   ============================ */
+
+@media (max-width: 768px) {
+    .Vista_Card--Horizontal--rowFit .PL2 {
+        padding-left: 0;
+    }
+
+    .Vista_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Vista_introText {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    .Vista_Text--Mont--Title,
+    .Vista_Text--Robo--Title {
+        font-size: 26px;
+    }
+
+    .Vista_Text--Mont--Desc,
+    .Vista_Text--Robo--Desc {
+        font-size: 16px;
+    }
+
+    .Vista_Text--Mont--Title .left,
+    .Vista_Text--Mont--Title .right,
+    .Vista_Text--Robo--Desc .left,
+    .Vista_Text--Robo--Desc .right {
+        text-align: center;
+    }
+
+    .Vista_divWrapper,
+    .Vista_recBoxWrapper,
+    .Vista_Card--RecRow {
+        gap: 24px;
+    }
+
+    .Vista_Card--Horizontal--row,
+    .Vista_Card--Horizontal--row1,
+    .Vista_Card--Horizontal--rowFit {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .Vista_Card--Horizontal--row img,
+    .Vista_Card--Horizontal--row1 img,
+    .Vista_Card--Horizontal--rowFit img {
+        max-width: 500px;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .Vista_Card--Horizontal--row .textBox,
+    .Vista_Card--Horizontal--row1 .textBox,
+    .Vista_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+    }
+
+    .Vista_Card--Horizontal--rowFit .PL,
+    .Vista_Card--Horizontal--rowFit .PL2 {
+        padding: 0;
+    }
+
+    .Vista_Card--RecRow {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .Vista_Card--Horizontal--column .textBox {
+        padding: 20px 40px;
+    }
+
+
+    .Vista_manualRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .Vista_minDimBox2 img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+
+    .Vista_featureBox .textBox {
+        text-align: center;
+    }
+
+    .Vista_Card--Horizontal--rowFit .textBox2 {
+        margin-left: 5rem;
+    }
+}
+
+
+/* ============================
+   Responsive Styles (430px ↓)
+   ============================ */
+
+@media (max-width: 430px) {
+    .Vista_row2Card {
+        gap: 24px;
+        padding: 0;
+    }
+
+    .Vista_row2Card img {
+        max-width: 100%;
+    }
+
+    .Vista_row2Card .Vista_Text--Mont--SubTitle {
+        font-size: 20px;
+    }
+
+    .Vista_row2Card .Vista_Text--Robo--Desc {
+        font-size: 14px;
+    }
+
+    .rowReverse {
+        flex-direction: column;
+    }
+
+    .Vista_introText {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .Vista_Text--Mont--Title,
+    .Vista_Text--Robo--Title {
+        font-size: 22px;
+    }
+
+    .Vista_Text--Mont--Desc,
+    .Vista_Text--Robo--Desc {
+        font-size: 14px;
+    }
+
+    .Vista_autoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .Vista_lastRow {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .Vista_programIcon {
+        width: 80px;
+        min-height: 140px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .Vista_programIcon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Vista_Card--Horizontal--row,
+    .Vista_Card--Horizontal--row1,
+    .Vista_Card--Horizontal--rowFit {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Vista_manualRow {
+        gap: 40px;
+    }
+
+    .Vista_LineCard img {
+        height: 320px;
+    }
+
+    .Vista_LineCard--line {
+        width: 240px;
+    }
+
+    .Vista_Card--Horizontal--column .textBox {
+        padding: 10px 20px;
+    }
+}

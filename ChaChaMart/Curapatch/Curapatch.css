@@ -1,0 +1,357 @@
+.large-margin-5 {
+  margin: 5rem !important;
+}
+
+.large-margin-10 {
+  margin: 10rem !important;
+}
+
+.curapatch_mainImg {
+    width: 100%;
+}
+
+#externalURL img,
+.curapatch_featureBox img,
+.curapatch_iconItem img,
+.curapatch_ingredientImg {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+}
+
+/* 공통 구조 */
+.curapatch_featureBox {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.curapatch_reverse {
+    flex-direction: row-reverse;
+}
+
+/* 텍스트 영역 */
+.curapatch_textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+    flex: 1;
+}
+
+.curapatch_textBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    flex: 1;
+}
+
+.curapatch_titleBox {
+    padding: 20px 0;
+}
+
+.curapatch_descBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 텍스트 스타일 */
+.curapatch_title {
+    font-weight: 600;
+    font-size: 32px;
+    color: #010101;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.curapatch_subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: #010101;
+    text-align: left;
+    margin-bottom: 0.6rem;
+}
+
+.curapatch_desc {
+    font-weight: 400;
+    font-size: 16px;
+    color: #010101;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* 체크박스 아이템 */
+.curapatch_checkBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.curapatch_checkBox img {
+    width: 32px;
+    margin-bottom: 1rem;
+}
+
+.curapatch_checkBoxText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+    flex: 1;
+}
+
+/* 스킨타입 아이콘 */
+.curapatch_iconBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.curapatch_iconBox img {
+    width: 50px;
+}
+
+.curapatch_iconRow {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.curapatch_iconText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* 칩 리스트 */
+.curapatch_chipGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    /* 위아래 간격 + 좌우 간격 */
+    max-width: 320px;
+    margin: 20px auto;
+}
+
+.curapatch_chip {
+    background: linear-gradient(to right, #b2e0f7, #daeef9);
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #010101;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 130px;
+    flex: 1 1 calc(50% - 24px);
+    /* 한 줄에 2개 배치 */
+}
+
+/* Before/After 이미지 */
+.curapatch_imageRow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.curapatch_beforeAfterImgs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.curapatch_beforeAfterImgs img {
+    max-width: 240px;
+    width: 100%;
+}
+
+.curapatch_beforeAfterImgWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.curapatch_imgCaption {
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.curapatch_imgCaption.gray {
+    padding: 0.6rem 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.curapatch_imgCaption.blue {
+    padding: 0.6rem 0;
+    background-color: #d4f2fd;
+    color: #333;
+}
+
+
+/* 성분 박스 */
+.curapatch_ingredientBlock {
+    background-color: #aedef5;
+    padding: 6px 20px;
+    margin-top: 10px;
+}
+
+.curapatch_ingredientImg {
+    max-width: 540px;
+    width: 100%;
+}
+
+/* 아이콘 4개 가로 */
+.curapatch_fitsBox {
+    background-color: #fefaef;
+}
+
+.curapatch_iconGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 40px;
+  margin-top: 24px;
+}
+
+.curapatch_iconItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.curapatch_iconItem img {
+    max-width: 48px;
+    width: 100%;
+}
+
+/* 성분 전체 이미지 + 텍스트 */
+.curapatch_ingredientImageWrap {
+    position: relative;
+    text-align: center;
+}
+
+.curapatch_ingredientOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.6;
+    max-width: 80%;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .curapatch_featureBox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .curapatch_textBox,
+  .curapatch_textBox2 {
+    padding: 20px;
+  }
+
+  .curapatch_title {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .curapatch_subtitle {
+    font-size: 18px;
+  }
+
+  .curapatch_desc {
+    font-size: 15px;
+  }
+
+  .curapatch_chip {
+    font-size: 14px;
+    min-width: 120px;
+  }
+
+  .curapatch_iconItem {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .curapatch_iconGrid {
+    gap: 20px;
+  }
+
+  .curapatch_imgCaption {
+    font-size: 14px;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .curapatch_title {
+    font-size: 24px;
+  }
+
+  .curapatch_subtitle {
+    font-size: 16px;
+  }
+
+  .curapatch_desc {
+    font-size: 14px;
+  }
+
+  .curapatch_chip {
+    font-size: 13px;
+    padding: 8px 14px;
+    min-width: 100px;
+  }
+
+  .curapatch_iconItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .curapatch_iconItem img {
+    margin-bottom: 8px;
+  }
+
+  .curapatch_iconGrid {
+    gap: 16px;
+  }
+
+  .curapatch_imgCaption {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+}

@@ -1,0 +1,1597 @@
+/* Main image section */
+
+.Somnus_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Somnus_introText {
+    padding: 40px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #757575;
+}
+
+/* Interaction section */
+
+.Somnus_interactionSection {
+    margin: 80px 0;
+}
+
+.Somnus_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.Somnus_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.Somnus_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.Somnus_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.Somnus_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.Somnus_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Somnus_arrow.left {
+    left: 0;
+}
+
+.Somnus_arrow.right {
+    right: 0;
+}
+
+.Somnus_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gradientOverlay {
+    position: flex;
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 1;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Somnus_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.Somnus_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.Somnus_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Somnus_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.Somnus_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.Somnus_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.Somnus_colorButton.active {
+    border-color: #000;
+}
+
+.Somnus_icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Sections by background color */
+
+.Somnus_Box--Basic {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Somnus_Box--Black {
+    background-color: #000;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.Somnus_Box--Color {
+    background-color: #f0f1f9;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Somnus_Box--Gradient {
+    background: linear-gradient(to top, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Somnus_Box--Gradient1 {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #edf0f8 100%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text (Title, Desc) */
+.Somnus_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+    margin-top: 16px;
+}
+
+.Somnus_Text--Mont--Title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Somnus_Text--Mont--Title .AILogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .Somnus_Text--Mont--Title .AILogo {
+        flex-direction: column;
+        gap: 12px; /* 모바일에서 간격 줄이기 */
+        text-align: center;
+    }
+}
+
+.Somnus_Text--Mont--Title .left {
+    text-align: left;
+}
+
+.Somnus_Text--Mont--Title .right {
+    text-align: right;
+}
+
+.Somnus_Text--Mont--Title .center {
+    text-align: center;
+}
+
+.Somnus_Text--Mont--Title .blue {
+    color: #3563e0;
+}
+
+.Somnus_Text--Mont--Title .white {
+    color: white;
+}
+
+.Somnus_Text--Mont--Title .red {
+    color: #db3900;
+}
+
+.Somnus_Text--Mont--Title .gray {
+    color: #bcbcbc;
+}
+
+.Somnus_Text--Mont--Title .lightblue {
+    color: #71d0ff;
+}
+
+.Somnus_Text--Mont--SubTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #424242;
+}
+
+.Somnus_Text--Mont--SubTitle .left {
+    text-align: left;
+}
+
+.Somnus_Text--Mont--SubTitle .center {
+    text-align: center;
+}
+
+.Somnus_Text--Mont--SubTitle .blue {
+    color: #3563e0;
+}
+
+.Somnus_Text--Mont--SubTitle .white {
+    color: white;
+}
+
+.Somnus_Text--Mont--SubTitle .red {
+    color: #db3900;
+}
+
+.Somnus_Text--Mont--SubTitle .gray {
+    color: #bcbcbc;
+}
+
+.Somnus_Text--Mont--SubTitle .lightblue {
+    color: #71d0ff;
+}
+
+.Somnus_Text--Mont--Desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #424242;
+}
+
+.Somnus_Text--Mont--Desc strong {
+    color: #000;
+}
+
+.Somnus_Text--Mont--Desc .left {
+    text-align: left;
+}
+
+.Somnus_Text--Mont--Desc .right {
+    text-align: right;
+}
+
+.Somnus_Text--Mont--Desc .center {
+    text-align: center;
+}
+
+.Somnus_Text--Mont--Desc .blue {
+    color: #3563e0;
+}
+
+.Somnus_Text--Mont--Desc .white {
+    color: white;
+}
+
+.Somnus_Text--Mont--Desc .red {
+    color: #db3900;
+}
+
+.Somnus_Text--Mont--Desc .gray {
+    color: #bcbcbc;
+}
+
+.Somnus_Text--Mont--Desc .darkgray {
+    color: #333;
+}
+
+.Somnus_Text--Mont--Desc .lightblue {
+    color: #71d0ff;
+}
+
+.Somnus_Text--Robo--Title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.Somnus_Text--Robo--Title .left {
+    text-align: left;
+}
+
+.Somnus_Text--Robo--Title .right {
+    text-align: right;
+}
+
+.Somnus_Text--Robo--Title .center {
+    text-align: center;
+}
+
+.Somnus_Text--Robo--Title .blue {
+    color: #3563e0;
+}
+
+.Somnus_Text--Robo--Title .white {
+    color: white;
+}
+
+.Somnus_Text--Robo--Title .red {
+    color: #db3900;
+}
+
+.Somnus_Text--Robo--Title .gray {
+    color: #bcbcbc;
+}
+
+.Somnus_Text--Robo--Title .lightblue {
+    color: #71d0ff;
+}
+
+.Somnus_Text--Robo--Desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #424242;
+}
+
+.Somnus_Text--Robo--Desc .left {
+    text-align: left;
+}
+
+.Somnus_Text--Robo--Desc .right {
+    text-align: right;
+}
+
+.Somnus_Text--Robo--Desc .center {
+    text-align: center;
+}
+
+.Somnus_Text--Robo--Desc strong {
+    color: #000;
+}
+
+.Somnus_Text--Robo--Desc .blue {
+    color: #3563e0;
+}
+
+.Somnus_Text--Robo--Desc .white {
+    color: white;
+}
+
+.Somnus_Text--Robo--Desc .red {
+    color: #db3900;
+}
+
+.Somnus_Text--Robo--Desc .gray {
+    color: #bcbcbc;
+}
+
+.Somnus_Text--Robo--Desc .darkgray {
+    color: #747474;
+}
+
+.Somnus_Text--Robo--Desc .lightblue {
+    color: #71d0ff;
+}
+
+/* Div wrapper */
+
+.Somnus_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 10200px;
+    width: 100%;
+}
+
+.Somnus_divWrapper2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.Somnus_recBoxWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 740px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* feature cards */
+
+.Somnus_logoSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.Somnus_logoSectionWrapper .centerTextBox {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.Somnus_logoSectionLogo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.Somnus_logoSectionImage {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+}
+
+.Somnus_Box_Black .Somnus_Image1 {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.Somnus_rowImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    gap: 0 40px;
+    margin-top: 2rem;
+}
+
+.Somnus_rowImage img {
+    max-width: 350px;
+    width: 100%;
+}
+
+.Somnus_TrackTextBox {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.Somnus_SquareBox {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.Somnus_SquareContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+    padding: 0 70px;
+}
+
+.Somnus_SquareContent img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+.Somnus_contentWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.Somnus_SquareContent .textBox {
+    max-width: 500px;
+    width: 100%;
+}
+
+.Somnus_SquareContent .colorGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 20px;
+    max-width: 500px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.Somnus_SquareColor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.Somnus_SquareColor img {
+    max-width: 60px;
+    width: 100%;
+}
+
+.Somnus_SquareColor .desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #424242;
+    margin: 0.6rem 0;
+}
+
+.Somnus_video {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.Somnus_featureBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 20px;
+    gap: 24px;
+}
+
+.Somnus_featureBox img {
+    max-width: 360px;
+    height: auto;
+}
+
+.Somnus_iconFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Somnus_iconFeature img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Somnus_featureBox .textBox {
+    padding-left: 20px;
+    text-align: left;
+    max-width: 340px;
+    width: 100%;
+}
+
+.Somnus_Card--Vertical,
+.Somnus_Card--Vertical--Gradient,
+.Somnus_Card--Vertical--Black {
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Somnus_Card--Vertical--Gradient {
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.1) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Somnus_Card--Vertical--Black {
+    background: none;
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Somnus_Card--Vertical .textBox,
+.Somnus_Card--Vertical .icon,
+.Somnus_Card--Vertical--Gradient .icon,
+.Somnus_Card--Vertical--Black .icon {
+    padding: 60px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Somnus_Card--Vertical .textBox2 {
+    padding: 10px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Somnus_Card--Vertical .icon img,
+.Somnus_Card--Vertical--Gradient .icon img {
+    height: 70px;
+    width: auto;
+}
+
+.Somnus_Card--Vertical--Black .icon img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.Somnus_Card--Horizontal--column .textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 0;
+    margin: 0 auto;
+    max-width: 74%;
+    width: 100%;
+}
+
+.Somnus_Card--Horizontal--row,
+.Somnus_Card--Horizontal--row1,
+.Somnus_Card--Horizontal--rowFit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 40px 60px;
+}
+
+.Somnus_Card--Horizontal--row1 {
+    background-color: #000;
+}
+
+.Somnus_Card--Horizontal--rowFit {
+    max-width: 1000px;
+    background-color: #000;
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.Somnus_ZGCard {
+    background-color: #000;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+.Somnus_ZGCard .Somnus_logoSectionWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+.Somnus_ZGCard img {
+    max-width: 700px;
+    width: 100%;
+}
+
+.Somnus_ZGCard .Somnus_logoSectionWrapper .centerTextBox {
+    text-align: center;
+    max-width: 700px;
+}
+
+.Somnus_Card--Horizontal--row .textBox,
+.Somnus_Card--Horizontal--row1 .textBox,
+.Somnus_Card--Horizontal--rowFit .textBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    gap: 10px;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.Somnus_Card--Horizontal--rowFit .PL {
+    padding-left: 5rem;
+}
+
+.Somnus_Card--Horizontal--rowFit .PL2 {
+    padding-left: 0;
+}
+
+.Somnus_Card--Horizontal--row img,
+.Somnus_Card--Horizontal--row1 img,
+.Somnus_Card--Horizontal--rowFit img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.Somnus_Card--Horizontal--rowFit img {
+    margin: 60px 0;
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.Somnus_Card--Horizontal--rowFit {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.Somnus_Card--Horizontal--rowFit .textBox {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    max-width: 480px;
+}
+
+.Somnus_Card--Horizontal--rowFit .textBox2 {
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    margin-right: 3rem;
+}
+
+
+.Somnus_Card--Horizontal--column,
+.Somnus_Card--Horizontal--column--Gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gradientOverlayBox {
+    position: flex;
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Somnus_Card--Horizontal--column img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.Somnus_Card--Horizontal--column_img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+}
+
+.Somnus_Card--Rectangle--TextBox {
+    color: #424242;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.Somnus_Card--RecRow {
+    display: flex;
+    justify-content: center;
+    /* 전체 카드 묶음을 가운데 */
+    gap: 100px;
+    /* 카드 간격 */
+    flex-wrap: wrap;
+}
+
+.Somnus_Card--Rectangle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 이미지+텍스트 박스 전체는 가운데 */
+    text-align: left;
+    /* 텍스트 자체는 좌측 정렬 */
+    max-width: 440px;
+    gap: 20px;
+}
+
+.Somnus_Card--Rectangle img {
+    width: 100%;
+    height: auto;
+}
+
+.Somnus_Card--Rectangle .Somnus_Text--Mont--SubTitle,
+.Somnus_Card--Rectangle--TextBox {
+    width: 100%;
+    /* 텍스트 블록이 카드 폭만큼 차지 */
+    text-align: left;
+    /* 글자는 좌측 정렬 */
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
+.Somnus_SquareBContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.Somnus_SquareBContent img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+}
+
+.Somnus_SquareBContent .textBox {
+    max-width: 340px;
+    width: 100%;
+}
+
+
+/* Icon grid */
+
+.Somnus_programSection {
+    background: linear-gradient(to top, #d6f5ff 0%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+}
+
+.Somnus_programTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #424242;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.Somnus_autoGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 60px;
+    max-width: 1000px;
+    width: 100%;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+.Somnus_manualGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px 40px;
+    max-width: 800px;
+    width: 100%;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+
+.Somnus_programIcon {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #424242;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.Somnus_programIcon img {
+    width: 90px;
+    height: auto;
+}
+
+/* LineCard feature */
+
+.Somnus_LineCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.Somnus_LineCard {
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: #bcbcbc;
+}
+
+.Somnus_LineCard--title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.Somnus_LineCard--line {
+    width: 300px;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 40px;
+}
+
+.Somnus_LineCard img {
+    width: auto;
+    height: 500px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.Somnus_LineCard--text {
+    max-width: 300px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.Somnus_LineCard--text strong {
+    color: white;
+}
+
+/* Minimum Doorway & Dimensions */
+
+.Somnus_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 20px;
+}
+
+.Somnus_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+
+.Somnus_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 2rem;
+    color: #333;
+}
+
+.Somnus_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Somnus_minDimBox2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Somnus_minDimBox img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.Somnus_minDimBox2 img {
+    width: auto;
+    height: 420px;
+}
+
+.Somnus_minDimText {
+    font-size: 16px;
+    color: #777777;
+    text-align: left;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+/* ============================
+   Responsive (1000px ↓)
+   ============================ */
+@media (max-width: 1000px) {
+    .Somnus_SquareContent {
+        gap: 60px;
+        /* 간격 축소 */
+        padding: 0 40px;
+        /* 좌우 패딩 줄이기 */
+    }
+
+    .Somnus_SquareContent img {
+        max-width: 320px;
+        /* 이미지 축소 */
+    }
+
+    .Somnus_SquareContent .textBox {
+        max-width: 400px;
+        /* 텍스트 박스도 줄이기 */
+    }
+}
+
+
+/* ============================
+   Responsive Styles (990px ↓)
+   ============================ */
+
+@media (max-width: 990px) {
+    .Somnus_SquareColor img {
+        max-width: 50px;
+    }
+
+    .Somnus_manualGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px 30px;
+        max-width: 600px;
+    }
+
+    .Somnus_SquareBContent {
+        gap: 60px;
+    }
+
+    .Somnus_SquareBContent img {
+        max-width: 320px;
+    }
+
+    .Somnus_SquareBContent .textBox {
+        max-width: 300px;
+    }
+
+    .Somnus_rowImage {
+        max-width: 700px;
+        gap: 20px;
+    }
+
+    .Somnus_rowImage img {
+        max-width: 300px;
+    }
+
+    .Somnus_Card--Horizontal--rowFit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        border-radius: 40px;
+        width: 100%;
+        max-width: 900px;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .Somnus_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+        max-width: 480px;
+    }
+
+    .Somnus_Card--Horizontal--rowFit img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 40px 0;
+    }
+
+}
+
+/* ============================
+   Responsive Styles (850px ↓)
+   ============================ */
+
+@media (max-width: 850px) {
+
+    .Somnus_Card--Horizontal--row img,
+    .Somnus_Card--Horizontal--row1 img,
+    .Somnus_Card--Horizontal--rowFit img {
+        padding-right: 60px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .Somnus_Card--Horizontal--column_img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .Somnus_autoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 30px;
+    }
+
+    .Somnus_lastRow {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .Somnus_programIcon {
+        width: 90px;
+        min-height: 150px;
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .Somnus_programIcon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Somnus_featureBox {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .Somnus_Card--Horizontal--rowFit .textBox,
+    .Somnus_Card--Horizontal--rowFit .textBox2 {
+        margin-left: 0;
+    }
+
+    .Somnus_Card--Horizontal--rowFit {
+        gap: 0;
+    }
+
+    .Somnus_Card--Horizontal--row .textBox {
+        padding-left: 0;
+    }
+
+    .Somnus_Card--Horizontal--rowFit .PL2 {
+        padding-left: 1rem;
+    }
+
+    .Somnus_icon img {
+        width: 120px;
+        height: auto;
+    }
+
+    .Somnus_SquareContent {
+        flex-direction: column;
+    }
+
+    .Somnus_SquareContent .textBox {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ============================
+   Responsive Styles (768px ↓)
+   ============================ */
+
+@media (max-width: 768px) {
+    .Somnus_SquareColor img {
+        max-width: 44px;
+    }
+
+    .Somnus_SquareColor .desc {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .Somnus_SquareContent .colorGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 16px;
+        max-width: 400px;
+    }
+
+    .Somnus_manualGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 24px;
+        max-width: 500px;
+    }
+
+    .Somnus_SquareBContent {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .Somnus_SquareBContent img {
+        max-width: 70%;
+    }
+
+    .Somnus_SquareBContent .textBox {
+        max-width: 100%;
+    }
+
+    .Somnus_rowImage {
+        flex-direction: column;
+
+        gap: 30px;
+        max-width: 100%;
+    }
+
+    .Somnus_rowImage img {
+        max-width: 80%;
+
+    }
+
+    .Somnus_Card--RecRow {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .Somnus_ZGCard {
+        padding: 40px 20px;
+    }
+
+    .Somnus_ZGCard img {
+        max-width: 100%;
+    }
+
+    .Somnus_ZGCard .Somnus_logoSectionWrapper .centerTextBox {
+        padding: 0 10px;
+    }
+
+    .Somnus_Card--Horizontal--rowFit .PL2 {
+        padding-left: 0;
+    }
+
+    .Somnus_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Somnus_video {
+        max-width: 100%;
+    }
+
+    .Somnus_introText {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    .Somnus_Text--Mont--Title,
+    .Somnus_Text--Robo--Title {
+        font-size: 26px;
+    }
+
+    .Somnus_Text--Mont--Desc,
+    .Somnus_Text--Robo--Desc {
+        font-size: 16px;
+    }
+
+    .Somnus_Text--Mont--Title .left,
+    .Somnus_Text--Mont--Title .right,
+    .Somnus_Text--Robo--Desc .left,
+    .Somnus_Text--Robo--Desc .right {
+        text-align: center;
+    }
+
+    .Somnus_divWrapper,
+    .Somnus_recBoxWrapper,
+    .Somnus_Card--RecRow {
+        gap: 24px;
+    }
+
+    .Somnus_Card--Horizontal--row,
+    .Somnus_Card--Horizontal--row1,
+    .Somnus_Card--Horizontal--rowFit {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .Somnus_Card--Horizontal--row img,
+    .Somnus_Card--Horizontal--row1 img,
+    .Somnus_Card--Horizontal--rowFit img {
+        max-width: 500px;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .Somnus_Card--Horizontal--row .textBox,
+    .Somnus_Card--Horizontal--row1 .textBox,
+    .Somnus_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+    }
+
+    .Somnus_Card--Horizontal--rowFit .PL,
+    .Somnus_Card--Horizontal--rowFit .PL2 {
+        padding: 0;
+    }
+
+    .Somnus_Card--RecRow {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .Somnus_Card--Horizontal--column .textBox {
+        padding: 20px 40px;
+    }
+
+    .Somnus_manualItem--line1 {
+        display: none;
+    }
+
+    .Somnus_manualRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .Somnus_minDimBox2 img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+
+    .Somnus_featureBox .textBox {
+        text-align: center;
+    }
+
+    .Somnus_Card--Horizontal--rowFit .textBox2 {
+        margin-left: 5rem;
+    }
+
+    .Somnus_modeBlock {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .Somnus_category {
+        width: 100%;
+        align-items: center;
+    }
+
+    .Somnus_programs {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px 24px;
+    }
+
+    .Somnus_programItem img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Somnus_programItem {
+        font-size: 13px;
+    }
+
+    .Somnus_manualItem--line2 {
+        display: block;
+        max-width: 1000px;
+        width: 100%;
+        height: 3px;
+        background-color: rgba(108, 164, 255, 0.5);
+        margin: 40px 0;
+    }
+}
+
+
+/* ============================
+   Responsive Styles (430px ↓)
+   ============================ */
+
+@media (max-width: 430px) {
+    .Somnus_SquareColor img {
+        max-width: 38px;
+    }
+
+    .Somnus_SquareColor .desc {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .Somnus_manualGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .Somnus_SquareBContent {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .Somnus_SquareBContent img {
+        max-width: 100%;
+    }
+
+    .Somnus_SquareBContent .textBox {
+        text-align: center;
+    }
+
+    .Somnus_rowImage {
+        gap: 20px;
+        margin-top: 1.5rem;
+    }
+
+    .Somnus_rowImage img {
+        max-width: 100%;
+    }
+
+    .Somnus_SquareContent {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .rowReverse {
+        flex-direction: column;
+    }
+
+    .Somnus_introText {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .Somnus_Text--Mont--Title,
+    .Somnus_Text--Robo--Title {
+        font-size: 22px;
+    }
+
+    .Somnus_Text--Mont--Desc,
+    .Somnus_Text--Robo--Desc {
+        font-size: 14px;
+    }
+
+    .Somnus_autoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .Somnus_lastRow {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .Somnus_programIcon {
+        width: 80px;
+        min-height: 140px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .Somnus_programIcon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Somnus_Card--Horizontal--row,
+    .Somnus_Card--Horizontal--row1,
+    .Somnus_Card--Horizontal--rowFit {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Somnus_manualRow {
+        gap: 40px;
+    }
+
+    .Somnus_LineCard img {
+        height: 320px;
+    }
+
+    .Somnus_LineCard--line {
+        width: 240px;
+    }
+
+    .Somnus_Card--Horizontal--column .textBox {
+        padding: 10px 20px;
+    }
+}

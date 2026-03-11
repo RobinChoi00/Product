@@ -1,0 +1,1200 @@
+.ReLuxe_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ReLuxe_introText {
+    padding: 40px 60px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.ReLuxe_introText strong {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ReLuxe_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+    margin-top: 16px;
+}
+
+.ReLuxe_interactionSection {
+    margin: 80px 0;
+}
+
+.ReLuxe_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.ReLuxe_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.ReLuxe_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.ReLuxe_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.ReLuxe_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.ReLuxe_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ReLuxe_arrow.left {
+    left: 0;
+}
+
+.ReLuxe_arrow.right {
+    right: 0;
+}
+
+.ReLuxe_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gradientOverlay {
+    position: flex;
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 1;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.ReLuxe_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.ReLuxe_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.ReLuxe_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.ReLuxe_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.ReLuxe_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.ReLuxe_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.ReLuxe_colorButton.active {
+    border-color: #000;
+}
+
+.ReLuxe_sizeSection {
+    background: linear-gradient(180deg, #edf0f8 0%, #ffffff 30%);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.ReLuxe_sizeWrapper {
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 40px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.ReLuxe_sizeTitleBox {
+    text-align: center;
+}
+
+.ReLuxe_sizeTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.ReLuxe_sizeTitle .black {
+    color: #424242;
+}
+
+.ReLuxe_sizeTitle .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_sizeTopImages {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.ReLuxe_sizeImageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ReLuxe_sizeImage {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ReLuxe_sizeDescBox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.ReLuxe_sizeDesc {
+    max-width: 680px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.ReLuxe_sizeDesc .bold {
+    font-weight: 700;
+}
+
+.ReLuxe_sizeGrid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.ReLuxe_sizeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 240px;
+}
+
+.ReLuxe_sizeCardImage {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.ReLuxe_sizeCardLabel {
+    font-size: 16px;
+    font-weight: 600;
+    color: #424242;
+}
+
+.ReLuxe_weightBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReLuxe_weightImage {
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+}
+
+.ReLuxe_weightText {
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    color: #424242;
+}
+
+.ReLuxe_weightText .line1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ReLuxe_weightText .line2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #5580ff;
+}
+
+.ReLuxe_blackWrapper {
+    background-color: #161616;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.ReLuxe_blackTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ReLuxe_blackTopTitle {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+}
+
+.ReLuxe_blackTopTitle .blue {
+    color: #5580ff
+}
+
+.ReLuxe_blackTopTitle .desc {
+    font-family: 'Roboto', sans-serif;
+    max-width: 680px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    color: #bcbcbc;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+.ReLuxe_blackTopImage img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.ReLuxe_blackBottom {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.ReLuxe_blackFeature {
+    max-width: 400px;
+    text-align: center;
+    color: #bcbcbc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.ReLuxe_feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.ReLuxe_feature-line {
+    width: 200px;
+    height: 1px;
+    background-color: #999;
+}
+
+.ReLuxe_feature-image img {
+    height: 380px;
+    object-fit: contain;
+}
+
+.ReLuxe_feature-text {
+    max-width: 300px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ReLuxe_feature-text strong {
+    color: #fff;
+}
+
+.ReLuxe_gradientBackground {
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.6) 20%);
+    border-radius: 40px;
+    margin: 0 40px;
+    padding-top: 80px;
+}
+
+.ReLuxe_thirdSection {
+    background-color: #f5f5f7;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+.ReLuxe_3StageZG {
+    max-width: 740px;
+    text-align: center;
+}
+
+.ReLuxe_3StageZG .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.ReLuxe_3StageZG .bold {
+    font-weight: 700;
+}
+
+.ReLuxe_3StageZG .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_3StageZG .text {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.ReLuxe_ZGWrapper {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.ReLuxe_ZGWrapper img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.ReLuxe_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.ReLuxe_whiteOblong {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ReLuxe_whiteOblong .inner {
+    padding: 36px 40px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.ReLuxe_whiteOblong .icon {
+    width: auto;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.ReLuxe_whiteOblong .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.ReLuxe_whiteOblong .title .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_whiteOblong .text {
+    font-size: 16px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.ReLuxe_whiteOblong .bottomImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.ReLuxe_textImage {
+    display: flex;
+    gap: 80px;
+    max-width: 800px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.ReLuxe_textImage .text {
+    max-width: 260px;
+    color: #424242;
+}
+
+.ReLuxe_textImage .text .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.ReLuxe_textImage .text .title .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_textImage .text .title .red {
+    color: #ff0000;
+}
+
+.ReLuxe_textImage .desc {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.ReLuxe_textImage .text .desc .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_textImage .text .desc .red {
+    color: #ff0000;
+}
+
+.ReLuxe_textImage img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+}
+
+.ReLuxe_programSection {
+    background: linear-gradient(to top, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+}
+
+.ReLuxe_programTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #424242;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ReLuxe_programTitle .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_8AutoGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 60px;
+    max-width: 900px;
+    width: 100%;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+
+.ReLuxe_programIcon {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #424242;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.ReLuxe_programIcon img {
+    width: 100px;
+    height: auto;
+}
+
+.ReLuxe_5Manual {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.ReLuxe_manualTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #5580ff;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ReLuxe_manualGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.ReLuxe_manualRow {
+    margin-top: 20px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ReLuxe_manualItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #424242;
+}
+
+.ReLuxe_manualItem img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.ReLuxe_3features {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.ReLuxe_footRest {
+    padding: 20px 60px;
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ReLuxe_footRest img {
+    max-width: 460px;
+    width: 100%;
+}
+
+
+.ReLuxe_featureBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.ReLuxe_featureBox img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.ReLuxe_featureBoxText {
+    max-width: 280px;
+    width: 100%;
+}
+
+.ReLuxe_featureBoxTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #424242;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.ReLuxe_featureBoxTitle .blue {
+    color: #5580ff;
+}
+
+.ReLuxe_featureBoxDesc {
+    font-size: 18px;
+    color: #727272;
+    line-height: 1.8;
+}
+
+.ReLuxe_featureBoxDesc .blue {
+    font-weight: bold;
+    color: #5580ff;
+}
+
+.ReLuxe_4features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 740px;
+    width: 100%;
+    justify-content: center;
+}
+
+.ReLuxe_featureGrid {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+}
+
+.ReLuxe_featureGrid img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.ReLuxe_featureGridText {
+    font-size: 18px;
+    color: #424242;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+.ReLuxe_featureGridText strong {
+    color: #000;
+}
+
+.ReLuxe_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 20px;
+}
+
+.ReLuxe_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+
+.ReLuxe_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 2rem;
+    color: #333;
+}
+
+.ReLuxe_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.ReLuxe_minDimBox2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.ReLuxe_minDimBox img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.ReLuxe_minDimBox2 img {
+    width: auto;
+    height: 380px;
+}
+
+.ReLuxe_minDimText {
+    font-size: 14px;
+    color: #777777;
+    text-align: left;
+    max-width: 460px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .ReLuxe_introText {
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+
+    .ReLuxe_introText strong {
+        font-size: 24px;
+    }
+
+    .ReLuxe_sizeTitle {
+        font-size: 28px;
+    }
+
+    .ReLuxe_sizeTopImages {
+        gap: 24px;
+    }
+
+    .ReLuxe_sizeImage {
+        width: 200px;
+    }
+
+    .ReLuxe_sizeDesc {
+        font-size: 16px;
+    }
+
+    .ReLuxe_sizeGrid {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .ReLuxe_sizeCard {
+        max-width: 100%;
+    }
+
+    .ReLuxe_sizeCardImage {
+        width: 100%;
+    }
+
+    .ReLuxe_weightText {
+        top: 8%;
+        left: 6%;
+    }
+
+    .ReLuxe_weightText .line1 {
+        font-size: 24px;
+    }
+
+    .ReLuxe_weightText .line2 {
+        font-size: 24px;
+    }
+
+    .ReLuxe_blackTopTitle {
+        font-size: 32px;
+    }
+
+    .feature-image img {
+        height: 180px;
+    }
+
+    .ReLuxe_thirdSection {
+        gap: 60px;
+        padding: 60px 16px;
+    }
+
+    .ReLuxe_3StageZG {
+        max-width: 600px;
+    }
+
+    .ReLuxe_3StageZG .title {
+        font-size: 28px;
+    }
+
+    .ReLuxe_whiteOblong .title {
+        font-size: 28px;
+    }
+
+    .ReLuxe_whiteOblong .inner {
+        padding: 28px 28px 0;
+    }
+
+    .ReLuxe_textImage {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .ReLuxe_textImage .text {
+        max-width: 540px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ReLuxe_textImage .text .title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .ReLuxe_divWrapper {
+        gap: 20px;
+    }
+
+    .ReLuxe_ZGWrapper img {
+        width: 90%;
+    }
+
+    .ReLuxe_programTitle,
+    .ReLuxe_manualTitle {
+        font-size: 26px;
+    }
+
+    .ReLuxe_8AutoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 40px;
+    }
+
+    .ReLuxe_programIcon img,
+    .ReLuxe_manualItem img {
+        width: 80px;
+    }
+
+    .ReLuxe_programIcon {
+        font-size: 13px;
+        gap: 16px;
+    }
+
+    .ReLuxe_manualRow {
+        gap: 60px;
+    }
+
+    .ReLuxe_manualItem {
+        font-size: 14px;
+    }
+
+    .ReLuxe_featureBox {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ReLuxe_featureBoxText {
+        margin: 0 20px;
+        margin-bottom: 60px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .ReLuxe_featureBoxTitle {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    .ReLuxe_featureBoxDesc {
+        font-size: 15px;
+    }
+
+    .ReLuxe_4features {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ReLuxe_featureGridText {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .ReLuxe_minDimTitle {
+        font-size: 26px;
+    }
+
+    .ReLuxe_minDimSub {
+        font-size: 16px;
+    }
+
+    .ReLuxe_minDimBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .ReLuxe_minDimBox img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .ReLuxe_minDimBox2 img {
+        height: 240px;
+    }
+
+    .ReLuxe_minDimText {
+        max-width: 90%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .ReLuxe_footRest {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 24px;
+    }
+
+    .ReLuxe_footRest img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .ReLuxe_introText {
+        padding: 20px 40px;
+        font-size: 14px;
+    }
+
+    .ReLuxe_introText strong {
+        font-size: 16px;
+    }
+
+    .ReLuxe_sizeTitle {
+        font-size: 22px;
+    }
+
+    .ReLuxe_sizeImage {
+        width: 160px;
+    }
+
+    .ReLuxe_sizeDesc {
+        font-size: 14px;
+    }
+
+    .ReLuxe_sizeCardLabel {
+        font-size: 14px;
+    }
+
+    .ReLuxe_weightText {
+        top: 6%;
+        left: 5%;
+    }
+
+    .ReLuxe_weightText .line1 {
+        font-size: 18px;
+    }
+
+    .ReLuxe_weightText .line2 {
+        font-size: 18px;
+    }
+
+    .ReLuxe_blackTopTitle {
+        font-size: 26px;
+    }
+
+    .feature-image img {
+        height: 160px;
+    }
+
+    .ReLuxe_thirdSection {
+        gap: 48px;
+        padding: 40px 12px;
+    }
+
+    .ReLuxe_3StageZG {
+        max-width: 300px;
+    }
+
+    .ReLuxe_3StageZG .title {
+        font-size: 22px;
+    }
+
+    .ReLuxe_whiteOblong .title {
+        font-size: 22px;
+    }
+
+    .ReLuxe_whiteOblong .inner {
+        padding: 24px 20px 0;
+    }
+
+    .ReLuxe_textImage .text .title {
+        font-size: 22px;
+    }
+
+    .ReLuxe_textImage .desc {
+        font-size: 14px;
+    }
+
+    .ReLuxe_3StageZG .text {
+        font-size: 14px;
+    }
+
+    .ReLuxe_whiteOblong .text {
+        font-size: 14px;
+    }
+
+    .ReLuxe_textImage {
+        gap: 32px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .ReLuxe_programTitle,
+    .ReLuxe_manualTitle {
+        font-size: 22px;
+    }
+
+    .ReLuxe_8AutoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 24px;
+    }
+
+    .ReLuxe_programIcon img,
+    .ReLuxe_manualItem img {
+        width: 60px;
+    }
+
+    .ReLuxe_programIcon {
+        font-size: 12px;
+        gap: 12px;
+    }
+
+    .ReLuxe_manualRow {
+        gap: 40px;
+    }
+
+    .ReLuxe_manualItem {
+        font-size: 14px;
+    }
+
+    .ReLuxe_featureBoxTitle {
+        font-size: 20px;
+    }
+
+    .ReLuxe_featureBoxDesc {
+        font-size: 14px;
+    }
+
+    .ReLuxe_featureGridText {
+        font-size: 14px;
+    }
+
+    .ReLuxe_featureBox img,
+    .ReLuxe_featureGrid img {
+        max-width: 100%;
+    }
+
+    .ReLuxe_featureBoxText {
+        padding: 0 10px;
+    }
+
+    .ReLuxe_minDimTitle {
+        font-size: 24px;
+    }
+
+    .ReLuxe_minDimSub {
+        font-size: 18px;
+    }
+
+    .ReLuxe_minDimBox {
+        gap: 24px;
+    }
+
+    .ReLuxe_minDimBox2 img {
+        height: 200px;
+    }
+
+    .ReLuxe_minDimText {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .ReLuxe_footRest {
+        padding: 30px 16px;
+        gap: 20px;
+    }
+
+    .ReLuxe_footRest img {
+        max-width: 100%;
+    }
+}

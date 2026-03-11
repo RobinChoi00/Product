@@ -1,0 +1,1805 @@
+/* Main image section */
+
+.Kairos_mainVisual {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Kairos_introText {
+    padding: 80px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 2.0;
+    color: #333;
+}
+
+.Kairos_introText strong {
+    color: #000;
+}
+
+/* Interaction section */
+
+.Kairos_interactionSection {
+    margin: 80px 0;
+}
+
+.Kairos_sliderContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+}
+
+.Kairos_sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.Kairos_slide {
+    flex: 0 0 100%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.Kairos_slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.Kairos_slide img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.Kairos_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Kairos_arrow.left {
+    left: 0;
+}
+
+.Kairos_arrow.right {
+    right: 0;
+}
+
+.Kairos_gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gradientOverlay {
+    position: flex;
+    background: linear-gradient(180deg, rgba(56, 126, 246, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 1;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Kairos_gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.Kairos_gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.Kairos_productName {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Kairos_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 24px auto 0 auto;
+}
+
+.Kairos_colorSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.Kairos_colorButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.Kairos_colorButton.active {
+    border-color: #000;
+}
+
+.Kairos_icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Sections by background color */
+
+.Kairos_Box {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Kairos_Box--Black {
+    background-color: #161616;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.Kairos_Box--Color {
+    background-color: #eeeff9;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Kairos_Box--Gray {
+    background-color: #f0f0f1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Kairos_Box--Gradient {
+    background: linear-gradient(to bottom, #edf0f8 0%, #ffffff 20%, #ffffff 80%);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text (Title, Desc) */
+
+.Kairos_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+}
+
+.Kairos_Text--Mont--Title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    color: #424242;
+}
+
+.Kairos_Text--Mont--Title .left {
+    text-align: left;
+}
+
+.Kairos_Text--Mont--Title .right {
+    text-align: right;
+}
+
+.Kairos_Text--Mont--Title .center {
+    text-align: center;
+}
+
+.Kairos_Text--Mont--Title .blue {
+    color: #3b84ff;
+}
+
+.Kairos_Text--Mont--Title .white {
+    color: white;
+}
+
+.Kairos_Text--Mont--Title .red {
+    color: #ff0000;
+}
+
+.Kairos_Text--Mont--Title .gray {
+    color: #a4a6a9;
+}
+
+.Kairos_Text--Mont--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Kairos_Text--Pop--Title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    color: #424242;
+}
+
+.Kairos_Text--Pop--Title .left {
+    text-align: left;
+}
+
+.Kairos_Text--Pop--Title .right {
+    text-align: right;
+}
+
+.Kairos_Text--Pop--Title .center {
+    text-align: center;
+}
+
+.Kairos_Text--Pop--Title .blue {
+    color: #3b84ff;
+}
+
+.Kairos_Text--Pop--Title .white {
+    color: white;
+}
+
+.Kairos_Text--Pop--Title .red {
+    color: #ff0000;
+}
+
+.Kairos_Text--Pop--Title .gray {
+    color: #a4a6a9;
+}
+
+.Kairos_Text--Pop--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Kairos_Text--Pop--SubTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    color: #424242;
+}
+
+.Kairos_Text--Pop--SubTitle .left {
+    text-align: left;
+}
+
+.Kairos_Text--Pop--SubTitle .center {
+    text-align: center;
+}
+
+.Kairos_Text--Pop--SubTitle .blue {
+    color: #3b84ff;
+}
+
+.Kairos_Text--Pop--SubTitle .white {
+    color: white;
+}
+
+.Kairos_Text--Pop--SubTitle .red {
+    color: #ff0000;
+}
+
+.Kairos_Text--Pop--SubTitle .gray {
+    color: #a4a6a9;
+}
+
+.Kairos_Text--Pop--SubTitle .lightblue {
+    color: #6ca4ff;
+}
+
+.Kairos_Text--Pop--Desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #424242;
+}
+
+.Kairos_Text--Pop--Desc strong {
+    color: #000;
+}
+
+.Kairos_Text--Pop--Desc .left {
+    text-align: left;
+}
+
+.Kairos_Text--Pop--Desc .right {
+    text-align: right;
+}
+
+.Kairos_Text--Pop--Desc .center {
+    text-align: center;
+}
+
+.Kairos_Text--Pop--Desc .blue {
+    color: #3b84ff;
+}
+
+.Kairos_Text--Pop--Desc .white {
+    color: white;
+}
+
+.Kairos_Text--Pop--Desc .red {
+    color: #ff0000;
+}
+
+.Kairos_Text--Pop--Desc .gray {
+    color: #a4a6a9;
+}
+
+.Kairos_Text--Pop--Desc .darkgray {
+    color: #7c7c7c;
+}
+
+.Kairos_Text--Pop--Desc .lightblue {
+    color: #6ca4ff;
+}
+
+.Kairos_Text--Robo--Title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    color: #424242;
+}
+
+.Kairos_Text--Robo--Title .left {
+    text-align: left;
+}
+
+.Kairos_Text--Robo--Title .right {
+    text-align: right;
+}
+
+.Kairos_Text--Robo--Title .center {
+    text-align: center;
+}
+
+.Kairos_Text--Robo--Title .blue {
+    color: #3b84ff;
+}
+
+.Kairos_Text--Robo--Title .white {
+    color: white;
+}
+
+.Kairos_Text--Robo--Title .red {
+    color: #ff0000;
+}
+
+.Kairos_Text--Robo--Title .gray {
+    color: #a4a6a9;
+}
+
+.Kairos_Text--Robo--Title .lightblue {
+    color: #6ca4ff;
+}
+
+.Kairos_Text--Robo--Desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #424242;
+}
+
+.Kairos_Text--Robo--Desc .left {
+    text-align: left;
+}
+
+.Kairos_Text--Robo--Desc .right {
+    text-align: right;
+}
+
+.Kairos_Text--Robo--Desc .center {
+    text-align: center;
+}
+
+.Kairos_Text--Robo--Desc strong {
+    color: #000;
+}
+
+.Kairos_Text--Robo--Desc .blue {
+    color: #3b84ff;
+}
+
+.Kairos_Text--Robo--Desc .white {
+    color: white;
+}
+
+.Kairos_Text--Robo--Desc .red {
+    color: #ff0000;
+}
+
+.Kairos_Text--Robo--Desc .gray {
+    color: #a4a6a9;
+}
+
+.Kairos_Text--Robo--Desc .darkgray {
+    color: #7c7c7c;
+}
+
+.Kairos_Text--Robo--Desc .lightblue {
+    color: #6ca4ff;
+}
+
+/* Div wrapper */
+
+.Kairos_divWrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Kairos_recBoxWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 10px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* feature cards */
+
+.Kairos_ionizerFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.Kairos_ionizerFeature img,
+.Kairos_ionizerFeature .textBox {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.Kairos_ionizerFeature .textBox {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.Kairos_aircellTextBox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.Kairos_aircellSub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    color: #424242;
+    font-style: italic;
+    text-align: center;
+    align-items: center;
+}
+
+.Kairos_aircellSub .underline {
+    text-decoration: underline;
+    text-decoration-color: #a4a6a9;
+    text-decoration-thickness: 2px;
+}
+
+.Kairos_aircellImgBox {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.Kairos_aircellImgBox .leftImg {
+    max-width: 500px;
+    width: 100%;
+}
+
+.Kairos_aircellSideImgs {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    justify-content: left;
+    gap: 20px;
+}
+
+.Kairos_aircellSideImgs .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+    color: #3b84ff;
+    text-align: left;
+}
+
+.Kairos_aircellSideImgs img {
+    max-width: 260px;
+    width: 100%;
+}
+
+.Kairos_zgSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.Kairos_zgText {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.Kairos_zgImg {
+    max-width: 800px;
+    width: 100%;
+}
+
+.Kairos_zgIconWrapper {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.Kairos_zgIconDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.Kairos_zgIcon {
+    max-width: 90px !important;
+    width: 100%;
+    height: auto;
+}
+
+.Kairos_zgTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    color: #a4a6a9;
+}
+
+.Kairos_zgLine {
+    background-color: #333;
+    width: 2px;
+    margin-top: 1rem;
+    max-height: 80px;
+    height: auto;
+}
+
+.Kairos_titleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px 10px;
+    gap: 1rem;
+}
+
+.Kairos_titleBox .logo {
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+.Kairos_featureBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 20px;
+    gap: 24px;
+}
+
+.Kairos_Card--Vertical,
+.Kairos_Card--Vertical--Gradient,
+.Kairos_Card--Vertical--Black {
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Kairos_Card--Vertical--Gradient {
+    background: linear-gradient(180deg, rgba(174, 202, 255, 0.1) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.Kairos_Card--Vertical--Black {
+    background: none;
+    z-index: 0;
+    justify-content: space-between;
+}
+
+.Kairos_Card--Vertical .textBox,
+.Kairos_Card--Vertical .icon,
+.Kairos_Card--Vertical--Gradient .icon,
+.Kairos_Card--Vertical--Black .icon {
+    padding: 60px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Kairos_Card--Vertical .textBox2 {
+    padding: 10px 50px 0;
+    margin-bottom: 2rem;
+}
+
+.Kairos_Card--Vertical .icon img,
+.Kairos_Card--Vertical--Gradient .icon img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.Kairos_Card--Vertical--Black .icon img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.Kairos_Card--Horizontal--column .textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 0;
+    margin: 0 auto;
+    max-width: 74%;
+    width: 100%;
+}
+
+.Kairos_Card--Horizontal--row,
+.Kairos_Card--Horizontal--row1,
+.Kairos_Card--Horizontal--rowFit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 940px;
+    box-sizing: border-box;
+    padding: 40px 40px;
+}
+
+.Kairos_Card--Horizontal--row1 {
+    background-color: #04090e;
+}
+
+.Kairos_Card--Horizontal--rowFit {
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.Kairos_Card--Horizontal--row .textBox,
+.Kairos_Card--Horizontal--row1 .textBox,
+.Kairos_Card--Horizontal--rowFit .textBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    gap: 20px;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.Kairos_Card--Horizontal--row .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+    color: #3b84ff;
+}
+
+.Kairos_Card--Horizontal--rowFit .PL {
+    padding-left: 5rem;
+}
+
+.Kairos_Card--Horizontal--rowFit .PL2 {
+    padding-left: 0;
+}
+
+.Kairos_Card--Horizontal--row img,
+.Kairos_Card--Horizontal--row1 img,
+.Kairos_Card--Horizontal--rowFit img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.Kairos_Card--Horizontal--row .img2 {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.Kairos_Card--Horizontal--rowFit img {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.Kairos_Card--Horizontal--rowFit {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.Kairos_Card--Horizontal--rowFit .textBox {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    max-width: 400px;
+    gap: 1.2rem;
+}
+
+.Kairos_Card--Horizontal--rowFit .textBox2 {
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    margin-right: 3rem;
+}
+
+.Kairos_Card--Horizontal--row .icon,
+.Kairos_Card--Horizontal--rowFit .icon {
+    height: 70px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.Kairos_Card--Horizontal--row .iconWrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+
+.Kairos_Card--Horizontal--column,
+.Kairos_Card--Horizontal--column--Gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gradientOverlayBox {
+    position: flex;
+    background: linear-gradient(180deg, rgba(80, 193, 255, 0.2) 0%, rgba(22, 22, 22, 0.5) 20%, rgba(22, 22, 22, 0) 100%);
+    z-index: 0;
+    margin: 0 20px;
+    pointer-events: none;
+    border-radius: 40px;
+
+}
+
+.Kairos_Card--Horizontal--column img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.Kairos_Card--Horizontal--column_img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+}
+
+.Kairos_Card--RecRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    max-width: 1100px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.Kairos_Card--Rectangle,
+.Kairos_Card--Rectangle1 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 20px;
+}
+
+.Kairos_Card--Rectangle1 {
+    align-items: center;
+}
+
+.Kairos_Card--Rectangle img {
+    width: 400px;
+    height: auto;
+}
+
+.Kairos_Card--Rectangle1 img {
+    width: 420px;
+    height: auto;
+}
+
+.Kairos_Card--Rectangle--TextBox,
+.Kairos_Card--Rectangle1--TextBox {
+    max-width: 380px;
+    color: #424242;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 1.4rem;
+}
+
+.Kairos_Card--Rectangle--TextBox strong,
+.Kairos_Card--Rectangle1--TextBox strong {
+    color: #000;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
+.Kairos_row2Card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.Kairos_row2Card .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Kairos_row2Card img {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Kairos_row2Card .textBox {
+    text-align: center;
+    max-width: 380px;
+    width: 100%;
+    font-size: 18px;
+    padding: 1.5rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 20px 0;
+}
+
+.Kairos_row2Card strong {
+    color: #000;
+}
+
+/* Icon grid */
+
+.Kairos_programIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #424242;
+    font-size: 14px;
+    gap: 16px;
+    width: 100px;
+    min-height: 160px;
+}
+
+.Kairos_programIcon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.Kairos_manualSection {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.Kairos_manualRow {
+    margin-top: 40px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Kairos_manualItem {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 600;
+    align-items: center;
+    font-size: 14px;
+    color: #7c7c7c;
+    line-height: 1.2;
+}
+
+.Kairos_manualItem img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.Kairos_manualItem--line {
+    max-width: 1000px;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(108, 164, 255, 0.5);
+    margin: 40px 0;
+}
+
+.Kairos_manualItem--line1 {
+    width: 240px;
+    height: 3px;
+    background-color: rgba(108, 164, 255, 0.5);
+}
+
+.Kairos_AutoMassageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Kairos_modeWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+}
+
+.Kairos_modeBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.Kairos_category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    gap: 10px;
+}
+
+.Kairos_category .title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.Kairos_category img {
+    width: 80px;
+    height: 80px;
+}
+
+.Kairos_programs {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px 24px;
+    flex: 1;
+}
+
+.Kairos_programItem img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Mech + Track section */
+
+.Kairos_mechSection {
+    background: linear-gradient(180deg, rgba(238, 239, 249, 1) 0%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Kairos_mechWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.Kairos_mechMargin {
+    margin: 10rem;
+}
+
+.Kairos_mechBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.Kairos_mechWrapper .whiteBox {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.Kairos_mechRollerImg {
+    position: relative;
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+.Kairos_mechInfo {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+    z-index: 2;
+}
+
+.Kairos_mechLine {
+    width: 340px;
+    height: 3px;
+    margin: 20px 0;
+    background-color: rgba(108, 164, 255, 0.5)
+}
+
+.Kairos_mechTitle {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 50px 0 0;
+}
+
+.Kairos_mechSub {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3b84ff;
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    margin: 0 auto 4px;
+    letter-spacing: 1px;
+}
+
+.Kairos_mechMain {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1;
+    color: #3b84ff;
+    margin-bottom: 8px;
+}
+
+.Kairos_mechDesc {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3b84ff;
+    line-height: 1.2;
+}
+
+.Kairos_mechIconGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 340px;
+    width: 100%;
+}
+
+.Kairos_mechIconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    color: #3b84ff;
+}
+
+.Kairos_mechIconItem img {
+    width: 52px;
+    height: 52px;
+}
+
+
+.Kairos_mechChairImg {
+    width: 100%;
+    display: block;
+}
+
+/* Minimum Doorway & Dimensions */
+
+.Kairos_minDim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.Kairos_minDimTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.Kairos_minDimSub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 2rem;
+    color: #333;
+}
+
+.Kairos_minDimBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.Kairos_minDimBox2 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.Kairos_minDimBox img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.Kairos_minDimBox2 img {
+    width: auto;
+    height: 460px;
+}
+
+.Kairos_minDimText {
+    font-size: 16px;
+    color: #777777;
+    text-align: left;
+    max-width: 760px;
+    line-height: 1.6;
+    gap: 0.4rem;
+    margin-bottom: 24px;
+}
+
+.Kairos_minDimText li {
+    margin-bottom: 1rem;
+}
+
+/* ============================
+   Responsive Styles (990px ↓)
+   ============================ */
+
+@media (max-width: 990px) {
+    .Kairos_minDimBox,
+    .Kairos_minDimBox2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Kairos_Card--Horizontal--row .iconWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .Kairos_Card--Horizontal--row .icon {
+        align-self: center;
+    }
+
+    .Kairos_recBoxWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Kairos_mechWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Kairos_row2Card {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 1rem;
+    }
+
+    .Kairos_row2Card .card {
+        max-width: 100%;
+        text-align: center;
+        border-radius: 16px;
+    }
+
+    .Kairos_row2Card .textBox {
+        text-align: center;
+    }
+
+    .Kairos_modeWrapper {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .Kairos_modeBlock {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .Kairos_category {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Kairos_programs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 60%;
+    }
+
+    .Kairos_programItem img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Kairos_programItem {
+        font-size: 14px;
+    }
+
+    .Kairos_Card--Horizontal--row,
+    .Kairos_Card--Horizontal--row1,
+    .Kairos_Card--Horizontal--rowFit {
+        max-width: 460px;
+        flex-direction: column;
+        padding: 0;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .Kairos_Card--Horizontal--row img,
+    .Kairos_Card--Horizontal--row1 img,
+    .Kairos_Card--Horizontal--rowFit img {
+        max-width: 460px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .Kairos_Card--Horizontal--rowFit .icon {
+        height: 50px;
+        width: auto;
+        align-self: center;
+    }
+
+    .Kairos_Card--Horizontal--row .textBox,
+    .Kairos_Card--Horizontal--row1 .textBox,
+    .Kairos_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .Kairos_Card--Horizontal--rowFit .PL,
+    .Kairos_Card--Horizontal--rowFit .PL2 {
+        padding: 0;
+    }
+
+    .Kairos_Card--Horizontal--rowFit .textBox {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 2rem;
+        max-width: 480px;
+    }
+
+    .Kairos_Card--Horizontal--rowFit img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+/* ============================
+   Responsive Styles (850px ↓)
+   ============================ */
+
+@media (max-width: 850px) {
+    .Kairos_ionizerFeature .textBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Kairos_aircellImgBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Kairos_aircellSideImgs {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Kairos_aircellSideImgs img {
+        max-width: 400px;
+    }
+
+    .Kairos_mechRollerImg {
+        max-width: 340px;
+    }
+
+    .Kairos_mechInfo {
+        max-width: 400px;
+        gap: 10px;
+    }
+
+    .Kairos_mechLine {
+        width: 300px;
+    }
+
+    .Kairos_mechSub {
+        font-size: 12px;
+    }
+
+    .Kairos_mechMain {
+        font-size: 60px;
+    }
+
+    .Kairos_mechDesc {
+        font-size: 26px;
+    }
+
+    .Kairos_mechMargin {
+        margin: 15rem;
+    }
+
+    .Kairos_Card--Horizontal--row img,
+    .Kairos_Card--Horizontal--row1 img,
+    .Kairos_Card--Horizontal--rowFit img {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .Kairos_Card--Horizontal--column_img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .Kairos_autoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 30px;
+    }
+
+    .Kairos_lastRow {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .Kairos_programIcon {
+        width: 90px;
+        min-height: 150px;
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .Kairos_programIcon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Kairos_featureBox {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .Kairos_Card--Horizontal--rowFit .textBox,
+    .Kairos_Card--Horizontal--rowFit .textBox2 {
+        margin-left: 0;
+    }
+
+    .Kairos_Card--Horizontal--rowFit {
+        gap: 0;
+    }
+
+    .Kairos_icon img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+/* ============================
+   Responsive Styles (768px ↓)
+   ============================ */
+
+@media (max-width: 768px) {
+    .Kairos_Card--Vertical--Gradient .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .Kairos_Card--Vertical--Gradient .icon img {
+        margin: 0 auto;
+        height: 60px;
+        width: auto;
+    }
+
+    .Kairos_mechBox {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .Kairos_mechRollerImg {
+        max-width: 300px;
+    }
+
+    .Kairos_mechInfo {
+        max-width: 480px;
+    }
+
+    .Kairos_mechLine {
+        width: 280px;
+    }
+
+    .Kairos_mechSub {
+        font-size: 10px;
+    }
+
+    .Kairos_mechTitle {
+        padding: 0;
+    }
+
+    .Kairos_mechMain {
+        font-size: 54px;
+    }
+
+    .Kairos_mechDesc {
+        font-size: 22px;
+    }
+
+    .Kairos_mechIconGrid {
+        max-width: 340px;
+    }
+
+    .Kairos_mechIconItem {
+        font-size: 10px;
+    }
+
+    .Kairos_mechIconItem img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Kairos_mechMargin {
+        margin: 2rem;
+    }
+
+    .Kairos_Card--Horizontal--rowFit .PL2 {
+        padding-left: 0;
+    }
+
+    .Kairos_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Kairos_introText {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    .Kairos_Text--Pop--Title,
+    .Kairos_Text--Mont--Title,
+    .Kairos_Text--Robo--Title {
+        font-size: 26px;
+    }
+
+    .Kairos_Text--Pop--Desc,
+    .Kairos_Text--Robo--Desc {
+        font-size: 18px;
+    }
+
+    .Kairos_Text--Pop--SubTitle {
+        font-size: 22px;
+    }
+
+    .Kairos_Text--Pop--Title .left,
+    .Kairos_Text--Pop--Title .right,
+    .Kairos_Text--Mont--Title .left,
+    .Kairos_Text--Mont--Title .right,
+    .Kairos_Text--Robo--Desc .left,
+    .Kairos_Text--Robo--Desc .right {
+        text-align: center;
+    }
+
+    .Kairos_divWrapper,
+    .Kairos_recBoxWrapper,
+    .Kairos_Card--RecRow {
+        gap: 24px;
+    }
+
+    .Kairos_Card--RecRow {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .Kairos_Card--Horizontal--column .textBox {
+        padding: 20px 40px;
+    }
+
+
+    .Kairos_manualRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .Kairos_minDimBox2 img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+
+    .Kairos_featureBox .textBox {
+        text-align: center;
+    }
+
+    .Kairos_Card--Horizontal--rowFit .textBox2 {
+        margin-left: 5rem;
+    }
+}
+
+
+/* ============================
+   Responsive Styles (430px ↓)
+   ============================ */
+
+@media (max-width: 430px) {
+    .Kairos_row2Card {
+        gap: 24px;
+        padding: 0;
+    }
+
+    .Kairos_row2Card img {
+        max-width: 100%;
+    }
+
+    .Kairos_row2Card .textBox {
+        font-size: 16px;
+    }
+
+    .rowReverse {
+        flex-direction: column;
+    }
+
+    .Kairos_introText {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .Kairos_Text--Pop--Title,
+    .Kairos_Text--Mont--Title,
+    .Kairos_Text--Robo--Title {
+        font-size: 22px;
+    }
+
+    .Kairos_Text--Pop--SubTitle {
+        font-size: 18px;
+    }
+
+    .Kairos_Text--Pop--Desc,
+    .Kairos_Text--Mont--Desc,
+    .Kairos_Text--Robo--Desc {
+        font-size: 16px;
+    }
+
+    .Kairos_autoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .Kairos_lastRow {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .Kairos_programIcon {
+        width: 80px;
+        min-height: 140px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .Kairos_programIcon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Kairos_Card--Horizontal--row,
+    .Kairos_Card--Horizontal--row1,
+    .Kairos_Card--Horizontal--rowFit {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Kairos_manualRow {
+        gap: 40px;
+    }
+
+    .Kairos_LineCard img {
+        height: 320px;
+    }
+
+    .Kairos_LineCard--line {
+        width: 240px;
+    }
+
+    .Kairos_Card--Horizontal--column .textBox {
+        padding: 10px 20px;
+    }
+}
