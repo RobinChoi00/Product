@@ -1626,7 +1626,7 @@ html, body {
 
 #sec-programs-recovery .section-title {
     font-size: 36px;
-    margin-bottom: 60px; /* 타이틀과 하위 콘텐츠 사이 여백 */
+    margin-bottom: 40px; /* 타이틀과 하위 콘텐츠 사이 여백 */
     text-align: center;
 }
 
@@ -1882,7 +1882,7 @@ html, body {
 /* (이하 .routine-icon, .card-title 등의 기존 코드는 그대로 유지하시면 됩니다) */
 
 #sub-daily-recovery .routine-icon {
-    height: 40px;
+    height: 60px;
     width: auto;
     display: block;
 }
@@ -2136,7 +2136,7 @@ html, body {
     border-radius: 40px;
     overflow: hidden;
     padding: 0; 
-    background: linear-gradient(to right, #000000 0%, #000000 35%, #1d1833 90%);
+    background: linear-gradient(to right, #000000 0%, #000000 60%, #1d1833 90%);
     display: flex;
     align-items: stretch; /* 또는 center (기존 유지) */
     
@@ -3437,7 +3437,7 @@ html, body {
        --------------------------------------------------- */
     /* 💡 박스 안의 텍스트가 테두리에 바짝 붙지 않도록 상하좌우 안전 여백을 줍니다. */
     .text-content-area {
-        padding: 40px 20px 30px 20px !important; /* 상 40px, 좌우 20px, 하 30px */
+        padding: 40px 20px 0px 20px !important; /* 상 40px, 좌우 20px, 하 30px */
         box-sizing: border-box !important;
     }
 
@@ -3522,7 +3522,77 @@ html, body {
         margin-top: 30px !important; 
     }
 
+
+    /* ==========================================================================
+       💡 [절대 방어] 모바일 전역 그라데이션 수직(Top to Bottom) 강제 통일
+       ========================================================================== */
+    body #sec-health-detection .container,
+    body #sec-health-detection .chair-image-wrap,
+    body #sec-ankle-stretching .container,
+    body #sec-dual-mechanism .container.reverse-layout,
+    body #sec-voice-control .container,
+    body #sec-body-scan .container,
+    body #sec-additional-features .container,
+    body #sec-programs-recovery > .container,
+    body #sec-foot-rollers .container,
+    body #sec-extendable-footrest .container,
+    body #sec-lcd-controller .container,
+    body #sec-convenience-features .feature-img-block,
+    body #sec-convenience-features .card-image-wrap {
+        /* 💡 모든 대각선/수평 그라데이션을 수직(to bottom) 방향으로 강제 덮어쓰기 합니다. */
+        background: linear-gradient(to bottom, #1d1833 0%, #000000 100%) !important;
+    }
+
+    .recovery-cards-area.flex-column-gap {
+        padding-bottom: 20px !important; /* 카드와 그리드 사이의 간격 조정 */
+    }
+    /* ==========================================================================
+       📱 INTELLIGENT HEALTH DETECTION 모바일: 텍스트 위(100%) + 이미지 2개 좌우(50:50)
+       ========================================================================== */
     
+    /* 💡 1. 컨테이너를 Flex에서 Grid로 전환하여 2단 그리드 시스템을 구축합니다. */
+    #sec-health-detection .container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 정확히 반반(50:50) 분할 */
+        align-items: center !important;
+        gap: 0px !important; /* 그리드 간격 제거 */
+    }
+
+    /* 💡 2. [핵심 기술] 부모 래퍼들을 시각적으로 '증발'시킵니다. 
+             이제 내부의 자식 요소들이 .container의 직속 자식처럼 행동합니다! */
+    #sec-health-detection .column-left,
+    #sec-health-detection .column-right {
+        display: contents !important; 
+    }
+
+    /* 💡 3. 텍스트 영역은 1열부터 2열까지 전체(100%)를 차지하도록 늘리고 위로 올립니다. */
+    #sec-health-detection .text-content-area {
+        grid-column: 1 / -1 !important; /* 1번 라인부터 끝까지 꽉 채움 */
+        order: 1 !important; /* 맨 위로 배치 */
+        padding: 20px 20px !important; /* 텍스트 안전 여백 */
+    }
+
+    /* 💡 4. 의자 이미지(센서)를 왼쪽(1열)에 배치합니다. */
+    #sec-health-detection .chair-image-wrap {
+        order: 2 !important; /* 텍스트 아래 */
+        width: 100% !important;
+        padding-left: 20px !important; /* 왼쪽 여백 추가 */
+    }
+
+    /* 💡 5. 태블릿 이미지를 오른쪽(2열)에 배치합니다. */
+    #sec-health-detection .tablet-image-wrap {
+        order: 2 !important; /* 텍스트 아래 (같은 2순위이므로 나란히 배치됨) */
+        width: 100% !important;
+        margin-top: 0 !important; /* 과거에 부여했던 여백 초기화 */
+    }
+
+    /* 💡 6. 이미지들이 좁은 공간에서 찌그러지지 않도록 방어합니다. */
+    #sec-health-detection .chair-img,
+    #sec-health-detection .tablet-img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
 }
 
 /* ==========================================================================
