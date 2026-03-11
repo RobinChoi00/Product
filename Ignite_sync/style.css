@@ -3615,6 +3615,15 @@ html, body {
         -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%) !important;
         mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%) !important;
     }
+
+    /* ==========================================================================
+       💡 [예외 처리] SHORTCUT DIAL & BLUETOOTH 섹션 이미지 페이드 효과 제거
+       ========================================================================== */
+    #sec-convenience-features .feature-img-block {
+        /* 💡 부모나 전역 클래스에서 상속/적용된 마스크(투명도) 효과를 완전히 무력화(None) 시킵니다! */
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
 }
 
 /* ==========================================================================
