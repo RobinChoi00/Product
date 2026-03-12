@@ -222,7 +222,7 @@ body {
     --card-bg: #ffffff;
     
     /* Typography */
-    --font-primary: 'Roboto', sans-serif;
+    --font-primary: 'Martel Sans', sans-serif;
 }
 
 /* ==========================================================================
@@ -255,7 +255,7 @@ body {
 
 /* Inline Title (Zero Gravity 등 가로 정렬이 필요한 경우) */
 .title-inline {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
@@ -273,6 +273,9 @@ body {
     color: var(--text-highlight);
     line-height: 1.1;
     text-transform: uppercase;
+}
+.title-highlight.theme-red {
+    color: #ef2b51 !important; /* 요청하신 강렬한 붉은색 적용 */
 }
 
 .title-main {
@@ -317,34 +320,49 @@ body {
 .feature-grid-2col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 80px; /* 카드 사이의 간격을 시안에 맞게 조정 */
     margin-bottom: 80px;
 }
 
-.feature-card {
-    background-color: var(--card-bg);
-    border-radius: 40px; /* 부드러운 모서리 라운딩 */
-    padding: 40px;
+/* 새로 추가된 컬럼 래퍼 (타이틀과 카드를 세로로 묶어줌) */
+.feature-col {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px; /* 타이틀과 흰색 카드 사이 간격 */
+}
+
+.feature-col .card-title-wrapper {
+    margin-bottom: 0; /* 기본 마진 무효화 */
+}
+
+/* 흰색 박스 본체 */
+.feature-card {
+    background-color: var(--card-bg);
+    border-radius: 24px; /* 시안에 맞게 둥글기 살짝 조절 */
+    padding: 0 ; /* 💡 패딩 완벽 제거 (이미지가 꽉 차도록) */
+    overflow: hidden; /* 💡 삐져나온 이미지 모서리 잘라내기 */
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    transition: transform 0.3s ease; /* Hover 효과를 위한 트랜지션 */
+    height: 100%; /* 💡 두 카드의 높이를 완벽하게 일치시킴 */
+    
+    /* 💡 모든 이펙트(그림자, 마우스오버 애니메이션) 완전 제거 */
+    box-shadow: none ; 
+    transform: none ; 
+    transition: none ;
+    border: 1px solid #e2e5ec; /* 아주 옅은 테두리로 박스 형태만 구분 */
 }
 
+/* 💡 Hover(마우스 오버) 이펙트 방어 */
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: none ;
 }
 
-.card-title-wrapper {
-    align-items: center; /* 카드 내부는 기본적으로 중앙 정렬 */
-}
-
+/* 이미지 래퍼 */
 .card-image-wrapper {
     width: 100%;
-    margin: 30px 0;
-    overflow: hidden;
-    border-radius: 16px;
+    margin: 0 ; /* 💡 이미지 주변 여백(마진) 완전 제거 */
+    border-radius: 0 ; /* 부모가 잘라주므로 0으로 설정 */
 }
 
 .card-image-wrapper img {
@@ -352,6 +370,15 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
+}
+
+/* 설명글 래퍼 */
+.feature-card .card-desc-wrapper {
+    padding: 40px 30px ; /* 💡 오직 설명글에만 넉넉한 패딩 부여 */
+    display: block;
+    flex-direction: column;
+    flex-grow: 1; /* 💡 텍스트 길이가 달라도 빈 공간을 채워 하단 라인을 맞춤 */
+    justify-content: flex-start;
 }
 
 /* ==========================================================================
@@ -701,8 +728,10 @@ body {
 .intensity-icons-row {
     display: flex;
     justify-content: center;
-    gap: 80px; /* 아이콘 사이의 넉넉한 간격 */
+    gap: 120px; /* 아이콘 사이의 넉넉한 간격 */
     margin-bottom: 80px; /* 타이틀 하단 및 다음 섹션과의 여백 통제 */
+    width: 100%;
+    max-width: 800px; /* 아이콘들이 너무 양옆으로 퍼지지 않도록 최대 너비 제한 */
 }
 
 .intensity-icon-item {
@@ -713,8 +742,8 @@ body {
 }
 
 .intensity-icon-item img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: contain;
 }
@@ -725,7 +754,7 @@ body {
 .intensity-control-group {
     margin-bottom: 100px;
     width: 100%;
-    max-width: 600px; /* 버튼들이 너무 양옆으로 퍼지지 않도록 최대 너비 고정 */
+    max-width: 800px; /* 버튼들이 너무 양옆으로 퍼지지 않도록 최대 너비 고정 */
     margin-left: auto;
     margin-right: auto;
 }
@@ -750,12 +779,16 @@ body {
 .text-divider::before { margin-right: 20px; }
 .text-divider::after { margin-left: 20px; }
 
-.text-divider h3 {
+.text-divider .divider-heading {
     font-family: var(--font-primary);
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
     color: var(--text-title);
-    margin: 0;
+    
+    /* 💡 핵심: 어떤 웹사이트에 들어가든 외부 여백과 내부 여백을 강제로 0으로 만듭니다 */
+    margin: 0 !important; 
+    padding: 0 !important;
+    line-height: 1.2; /* 줄간격이 선 위치에 영향을 주지 않도록 고정 */
 }
 
 /* ==========================================================================
@@ -771,9 +804,9 @@ body {
 .control-badge {
     flex: 1; /* 부모 너비 안에서 버튼들이 1:1:1 비율로 꽉 차게 늘어남 */
     font-family: var(--font-primary);
-    font-size: 18px;
+    font-size: 28px;
     font-weight: 600;
-    padding: 12px 0;
+    padding: 10px 40px;
     border-radius: 10px; /* 부드러운 사각형 형태 */
     text-align: center;
     box-sizing: border-box;
@@ -875,9 +908,12 @@ body {
 
 
 #feature-group-app-control,
-#feature-group-dual-control,
 #feature-group-remote-control {
-    padding: 60px 0;
+    padding: 60px 20px;
+}
+
+#feature-group-dual-control {
+    padding: 100px 20px 0 20px;
 }
 
 #feature-group-programs {
@@ -976,7 +1012,7 @@ body {
 .doorway-section .g-title {
     font-size: 26px;
     font-weight: 700;
-    color: #515151;
+    color: #3563e0;
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
 }
@@ -1442,4 +1478,5 @@ body {
         font-size: 32px; 
         margin-bottom: 40px;
     }
+    
 }
