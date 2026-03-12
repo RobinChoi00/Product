@@ -83,3 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("✅ HelixLE Script Loaded. Total Slides:", slideData.length);
     updateDisplay();
 });
+
+// 스크립트가 로드되자마자, 절대 경로가 적용된 배열의 첫 번째(0번) 이미지를 강제로 화면에 렌더링합니다.
+changeColor(0);
