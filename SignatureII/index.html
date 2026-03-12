@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.Signature2_lifestyle.png" alt="Osaki Signature II Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            
+            <div class="intro-desc">
+                The Osaki 3D Signature II delivers a streamlined yet powerful massage experience designed for modern comfort. 
+                Featuring a 3D massage mechanism, auto massage programs, customizable intensity settings, Zero Gravity positioning, and lumbar heating, 
+                it provides personalized full-body relaxation with simple, intuitive control.
+            </div>
+            
+            <div class="group-slider">
+                <div class="slider-main">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/6.ignite_sync_left_arrow.png" alt="Prev">
+                    </div>
+                    
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/2.Signature2_AllColor.png" alt="Signature II Colors">
+                    </div>
+                    
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/7.ignite_sync_right_arrow.png" alt="Next">
+                    </div>
+                </div>
+
+                <div id="swatch-product-title" class="swatch-title-text">
+                    Osaki 3D Signature II
+                </div>
+                <div class="swatch-panel">
+                    
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.ignite_sync_swatches_bar.png" class="bar-bg" alt="Bar">
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.ignite_sync_swatch_all.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.ignite_sync_swatch_black.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.ignite_sync_swatch_brown.png" alt="Brown">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(3)">
+                            <img src="images/12.ignite_sync_swatch_taupe.png" alt="Taupe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="osaki-features-wrapper" class="features-bg-wrapper" role="region" aria-label="Product Core Features">
+    
+        <div id="osaki-features-container" class="features-container">
+
+            <div id="feature-group-core" class="feature-grid-2col">
+                
+                <div id="feature-card-3d" class="feature-card">
+                    <div id="title-wrapper-3d" class="card-title-wrapper">
+                        <div id="title-highlight-3d" class="title-highlight">3D MASSAGE</div>
+                        <div id="title-main-3d" class="title-main">MECHANISM</div>
+                    </div>
+                    <div id="img-wrapper-3d" class="card-image-wrapper">
+                        <img id="img-feature-3d" src="images/6.Signature2_3D_Mech.png" alt="3D Massage Mechanism rollers" loading="lazy">
+                    </div>
+                    <div id="desc-wrapper-3d" class="card-desc-wrapper">
+                        The Osaki 3D Signature II features a precise <strong>3D massage mechanism</strong> designed to deliver accurate and adjustable pressure. Advanced massage rollers move smoothly along the track to provide a more targeted and personalized massage experience.
+                    </div>
+                </div>
+
+                <div id="feature-card-sl" class="feature-card">
+                    <div id="title-wrapper-sl" class="card-title-wrapper">
+                        <div id="title-highlight-sl" class="title-highlight">SL-TRACK</div>
+                        <div id="title-main-sl" class="title-main">SYSTEM</div>
+                    </div>
+                    <div id="img-wrapper-sl" class="card-image-wrapper">
+                        <img id="img-feature-sl" src="images/7.Signature2_SL-track.png" alt="Ergonomic SL-Track System curve" loading="lazy">
+                    </div>
+                    <div id="desc-wrapper-sl" class="card-desc-wrapper">
+                        The <strong>SL-Track system</strong> follows the natural curve of your spine, guiding the massage rollers from the neck and shoulders down through the lower back and hips for smooth, full-body coverage. The ergonomic track design ensures consistent pressure and a more comfortable, natural massage experience.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="feature-group-air" class="feature-section-full">
+
+                <div id="title-wrapper-air" class="section-title-wrapper text-center">
+                    <div id="title-highlight-air" class="title-highlight">20-CELL FULL-BODY</div>
+                    <div id="title-main-air" class="title-main">AIR MASSAGE</div>
+                </div>
+
+                <div id="content-wrapper-air" class="single-image-wrapper">
+                    <img id="img-air-massage-full" src="images/8.Signature2_AirCell.png" alt="Osaki Signature II 20-Cell Full-Body Air Massage System with Auto Body Scan" loading="lazy">
+                </div>
+
+                <div id="desc-wrapper-air" class="section-desc-wrapper text-center max-width-text-sm">
+                    With <strong>20 strategically placed air cells</strong> throughout the chair, the Osaki 3D Signature II delivers soothing compression therapy that helps improve circulation and relieve muscle tension. 
+                    The intelligent Auto Body Scan system detects your body shape to provide a more accurate and personalized massage experience.
+                </div>
+
+            </div>
+            
+
+            <div id="feature-group-zigzag" class="feature-zigzag-wrapper">
+
+                <div id="block-space-saving" class="feature-block">
+                    <div class="block-image-wrapper">
+                        <img id="img-space-saving" src="images/10.Signature2_SpaceSaving.png" alt="Space Saving Technology requiring only 5 inches of clearance" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-left">
+                        <img class="feature-icon" src="images/9.Signature2_SpaceSaving_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-left">
+                            <div class="title-highlight">SPACE-SAVING</div>
+                            <div class="title-main">TECHNOLOGY</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-left">
+                            With Space-Saving Technology, the Osaki 3D Signature II requires <strong>only 5 inches</strong> of clearance from the wall while still achieving a full recline.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-footrest" class="feature-block feature-block--reverse">
+    
+                    <div class="block-image-wrapper">
+                        <img id="img-footrest" src="images/12.Signature2_FootExtension.png" alt="Spring-loaded extendable footrest extending up to 5.2 inches" loading="lazy">
+                    </div>
+
+                    <div class="block-text-wrapper text-align-right">
+                        <img class="feature-icon" src="images/11.Signature2_FootExtension_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-right">
+                            <div class="title-highlight">SPRING-LOADED</div>
+                            <div class="title-main">EXTENDABLE FOOTREST</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-right">
+                            The Osaki 3D Signature II 's footrest extends up to <strong>5.2 inches</strong> with a spring-loaded mechanism, easily accommodating users of different heights.
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="block-roller" class="feature-block">
+                    <div class="block-image-wrapper">
+                        <img id="img-roller" src="images/14.Signature2_FootMassage.png" alt="Roller and plate foot massage mechanism beneath the feet" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-left">
+                        <img class="feature-icon" src="images/13.Signature2_Roller_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-left">
+                            <div class="title-highlight">ROLLER & PLATE</div>
+                            <div class="title-main">FOOT MASSAGE</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-left">
+                            The Osaki 3D Signature II uses foot rollers and acupressure plates beneath the feet to stimulate reflex zones and acupressure points, delivering a deeper, targeted foot massage.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="feature-group-zero-gravity" class="feature-section-full">
+    
+                <div id="title-wrapper-zero" class="section-title-wrapper title-inline text-center">
+                    <div id="title-highlight-zero" class="title-highlight">ZERO GRAVITY</div>
+                    <div id="title-main-zero" class="title-main">RECLINING</div>
+                </div>
+
+                <div id="image-wrapper-zero" class="single-image-wrapper image-rounded text-center">
+                    <img id="img-zero-gravity" src="images/15.Signature2_ZeroG.png" alt="Signature II Zero Gravity Reclining Technology showing weightless angles" loading="lazy">
+                </div>
+
+                <div id="desc-wrapper-zero" class="section-desc-wrapper text-center max-width-text">
+                    The Osaki 3D Signature II 's <strong>zero gravity technology</strong> creates a weightless recline that evenly supports your body, easing back pressure and elevating comfort. The handheld remote offers convenient 1-stage Zero Gravity, while the mobile app allows you to select between 2-stage Zero Gravity positions for enhanced relaxation.
+                </div>
+
+            </div>
+
+
+            <div id="feature-group-additional" class="feature-zigzag-wrapper">
+
+                <div id="block-heating" class="feature-block">
+                    <div class="block-image-wrapper">
+                        <img id="img-heating" src="images/17.Signature2_Heating.png" alt="Lumbar heating therapy pads providing warmth" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-left">
+                        <img class="feature-icon" src="images/16.Signature2_Heating_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-left">
+                            <div class="title-highlight theme-red">HEATING</div>
+                            <div class="title-main">THERAPY</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-left">
+                            <p>The Osaki 3D Signature II delivers soothing heat therapy to the lumbar area, helping to relax tight muscles and enhance circulation.*</p>
+                            <small class="desc-disclaimer">*The heating therapy provides warmth in the range of approximately 75 - 83°F.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-controller" class="feature-block feature-block--reverse">
+                    <div class="block-image-wrapper">
+                        <img id="img-controller" src="images/19.Signature2_organizer.png" alt="Built-in controller organizer holding remote and smartphone" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-right">
+                        <img class="feature-icon" src="images/18.Signature2_organizer_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-right">
+                            <div class="title-highlight">CONTROLLER</div>
+                            <div class="title-main">ORGANIZER</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-right">
+                            The Osaki 3D Signature II includes a built-in controller organizer, allowing you to neatly store the handheld remote and keep your space tidy.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-emergency" class="feature-block">
+                    <div class="block-image-wrapper">
+                        <img id="img-emergency" src="images/21.Signature2_Emergency_stop.png" alt="Dedicated emergency stop button for enhanced safety" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-left">
+                        <img class="feature-icon" src="images/20.Signature2_Emergency_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-left">
+                            <div class="title-highlight">EMERGENCY</div>
+                            <div class="title-main">STOP BUTTON</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-left">
+                            The Osaki 3D Signature II includes a dedicated emergency stop button, allowing you to immediately stop the massage operation whenever needed for enhanced safety.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-anti-pinch" class="feature-block feature-block--reverse">
+                    <div class="block-image-wrapper">
+                        <img id="img-anti-pinch" src="images/23.Signature2_Anti-Pinch.png" alt="Anti-pinch protection sensor detecting a cat near the base" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-right">
+                        <img class="feature-icon" src="images/22.Signature2_Anti-Pinch_icon.png" alt="" aria-hidden="true" loading="lazy">
+                        <div class="card-title-wrapper align-right">
+                            <div class="title-highlight">ANTI-PINCH</div>
+                            <div class="title-main">PROTECTION</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-right">
+                            The power box cover automatically detects nearby obstacles to help prevent pinching and improve safety.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <div id="feature-group-dual-control" class="feature-section-full">
+    
+        <div id="title-wrapper-control" class="section-title-wrapper text-center">
+            <div id="title-highlight-control" class="title-highlight">DUAL CONTROL SYSTEM</div>
+            <div id="title-main-control" class="title-main">APP & REMOTE CONTROL</div>
+        </div>
+
+        <div id="image-wrapper-control" class="single-image-wrapper image-rounded text-center">
+            <img id="img-dual-control" src="images/24.Signature2_Dual_Control.png" alt="Signature II Dual Control System featuring mobile app interface and wireless remote" loading="lazy">
+        </div>
+
+        <div id="desc-wrapper-control" class="section-desc-wrapper text-center max-width-text">
+            <p>Operate the Signature II with ease using either the <strong>mobile app or the wireless remote</strong>. The app provides advanced customization and quick access to massage programs, while the remote allows simple and direct adjustments during your massage session.</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="feature-group-app-control" class="feature-section-full">
+    
+        <div id="title-wrapper-app" class="section-title-wrapper text-center">
+            <div id="title-main-app" class="title-main title-pill">APP CONTROL</div>
+        </div>
+
+        <div id="image-wrapper-app" class="single-image-wrapper image-rounded text-center">
+            <img id="img-app-control" src="images/29.Signature2_App_Control.png" alt="Signature II App Control Interface with comprehensive custom settings" loading="lazy">
+        </div>
+
+        <div id="desc-wrapper-app" class="section-desc-wrapper text-center max-width-text">
+            <p>Take full control of your massage experience through the mobile app. Customize programs, adjust detailed settings, and fine-tune every function including roller width, speed, airbag intensity, and more for a fully personalized massage.</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="feature-group-programs" class="feature-section-full text-center">
+
+        <div class="program-category-block">
+            <div class="section-title-wrapper title-inline justify-center">
+                <div class="title-highlight">9 AUTO</div>
+                <div class="title-main">PROGRAMS</div>
+            </div>
+
+            <div class="program-grid-3col">
+                <div class="program-item">
+                    <img src="images/30.Signature2_Daily_Relaxation.png" alt="Daily Relaxation Auto Program" loading="lazy">
+                    <span class="program-label">DAILY RELAXATION</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/31.Signature2_Body_Revival.png" alt="Body Revival Auto Program" loading="lazy">
+                    <span class="program-label">BODY REVIVAL</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/32.Signature2_Muscle_Relief.png" alt="Muscle Relief Auto Program" loading="lazy">
+                    <span class="program-label">MUSCLE RELIEF</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/33.Signature2_Tension_Release.png" alt="Tension Release Auto Program" loading="lazy">
+                    <span class="program-label">TENSION RELEASE</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/34.Signature2_Fatigue_Recovery.png" alt="Fatigue Recovery Auto Program" loading="lazy">
+                    <span class="program-label">FATIGUE RECOVERY</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/35.Signature2_Stress_Relief.png" alt="Stress Relief Auto Program" loading="lazy">
+                    <span class="program-label">STRESS RELIEF</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/36.Signature2_Gentle_Sleep.png" alt="Gentle Sleep Auto Program" loading="lazy">
+                    <span class="program-label">GENTLE SLEEP</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/37.Signature2_Soothing_Gentle.png" alt="Soothing Gentle Auto Program" loading="lazy">
+                    <span class="program-label">SOOTHING GENTLE</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/38.Signature2_Quick_Sleep_Mode.png" alt="Quick Sleep Mode Auto Program" loading="lazy">
+                    <span class="program-label">QUICK SLEEP<br>MODE</span> </div>
+            </div>
+        </div>
+
+        <div class="program-category-block" style="margin-top: 80px;">
+            <div class="section-title-wrapper title-inline justify-center">
+                <div class="title-highlight">6 MANUAL</div>
+                <div class="title-main">PROGRAMS</div>
+            </div>
+
+            <div class="program-grid-3col">
+                <div class="program-item">
+                    <img src="images/39.Signature2_Kneading.png" alt="Kneading Manual Program" loading="lazy">
+                    <span class="program-label">KNEADING</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/40.Signature2_Rubbing.png" alt="Rubbing Manual Program" loading="lazy">
+                    <span class="program-label">RUBBING</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/41.Signature2_Knocking.png" alt="Knocking Manual Program" loading="lazy">
+                    <span class="program-label">KNOCKING</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/42.Signature2_Sync.png" alt="Sync Manual Program" loading="lazy">
+                    <span class="program-label">SYNC</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/43.Signature2_Shiatsu.png" alt="Shiatsu Manual Program" loading="lazy">
+                    <span class="program-label">SHIATSU</span>
+                </div>
+                <div class="program-item">
+                    <img src="images/44.Signature2_Tapping.png" alt="Tapping Manual Program" loading="lazy">
+                    <span class="program-label">TAPPING</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="feature-group-remote-control" class="feature-section-full">
+    
+        <div id="title-wrapper-remote" class="section-title-wrapper text-center">
+            <div id="title-main-remote" class="title-main title-pill">REMOTE CONTROL</div>
+        </div>
+
+        <div id="image-wrapper-remote" class="single-image-wrapper image-rounded text-center">
+            <img id="img-remote-control" src="images/25.Signature2_Remote_Control.png" alt="Signature II Handheld Remote Control Interface" loading="lazy">
+        </div>
+
+        <div id="desc-wrapper-remote" class="section-desc-wrapper text-center max-width-text">
+            <p>Enjoy effortless control during your massage session with the handheld remote. Quickly adjust essential functions such as massage programs, intensity, airbag pressure, heating, and backrest position without interrupting your relaxation.</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <div id="feature-group-intensity" class="feature-section-full text-center">
+
+        <div class="section-title-wrapper title-inline justify-center" style="margin-bottom: 50px;">
+            <div class="title-highlight">3 INTENSITY</div>
+            <div class="title-main">LEVELS</div>
+        </div>
+
+        <div class="intensity-icons-row">
+            <div class="intensity-icon-item">
+                <img src="images/26.Signature2_Daily.png" alt="Daily Intensity Mode" loading="lazy">
+                <span class="icon-label">DAILY</span>
+            </div>
+            <div class="intensity-icon-item">
+                <img src="images/27.Signature2_Deep.png" alt="Deep Intensity Mode" loading="lazy">
+                <span class="icon-label">DEEP</span>
+            </div>
+            <div class="intensity-icon-item">
+                <img src="images/28.Signature2_Soft.png" alt="Soft Intensity Mode" loading="lazy">
+                <span class="icon-label">SOFT</span>
+            </div>
+        </div>
+
+        <div class="intensity-control-group">
+            <div class="text-divider">
+                <h3>Massage Intensity</h3>
+            </div>
+            <div class="intensity-badges-row">
+                <span class="control-badge badge-active">Gentle</span>
+                <span class="control-badge badge-active">Medium</span>
+                <span class="control-badge badge-active">Strong</span>
+            </div>
+        </div>
+
+        <div class="intensity-control-group">
+            <div class="text-divider">
+                <h3>Airbag Intensity</h3>
+            </div>
+            <div class="intensity-badges-row">
+                <span class="control-badge badge-inactive">Off</span>
+                <span class="control-badge badge-active">Low</span>
+                <span class="control-badge badge-active">Mid</span>
+                <span class="control-badge badge-active">High</span>
+            </div>
+        </div>
+
+        <div class="intensity-control-group">
+            <div class="text-divider">
+                <h3>Heating</h3>
+            </div>
+            <div class="intensity-badges-row">
+                <span class="control-badge badge-inactive">Off</span>
+                <span class="control-badge badge-active">On</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+  
+
+
+    <div id="feature-group-convenience" class="feature-section-boxed">
+        <div class="box-container-white">
+            
+            <div class="feature-zigzag-wrapper">
+
+                <div id="block-type-c" class="feature-block">
+                    <div class="block-image-wrapper">
+                        <img id="img-type-c" src="images/45.Signature2_Type-c.png" alt="Convenient USB Type-C charging port" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-left">
+                        <div class="card-title-wrapper align-left title-inline">
+                            <div class="title-highlight">TYPE-C</div>
+                            <div class="title-main">CHARGING</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-left">
+                            <p>The Osaki 3D Signature II is equipped with a USB-C charging port, allowing you to conveniently charge your smartphone or other devices while you relax.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-speakers" class="feature-block feature-block--reverse">
+                    <div class="block-image-wrapper">
+                        <img id="img-speakers" src="images/46.Signature2_Speakers.png" alt="High-quality built-in Bluetooth speakers for ambient sound" loading="lazy">
+                    </div>
+
+                    <div class="block-text-wrapper text-align-right">
+                        <div class="card-title-wrapper align-right title-inline">
+                            <div class="title-highlight">BUILT-IN</div>
+                            <div class="title-main">SPEAKERS</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-right">
+                            <p>Surround yourself with rich, refined audio from built-in Bluetooth speakers, designed to deepen relaxation with your favorite music or ambient sounds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-handheld-remote" class="feature-block">
+                    <div class="block-image-wrapper">
+                        <img id="img-handheld-remote" src="images/47.Signature2_remote.png" alt="Streamlined handheld remote controller interface" loading="lazy">
+                    </div>
+                    
+                    <div class="block-text-wrapper text-align-left">
+                        <div class="card-title-wrapper align-left">
+                            <div class="title-highlight">HANDHELD REMOTE</div>
+                            <div class="title-main">CONTROLLER</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-left">
+                            <p>The Osaki 3D Signature II handheld remote offers a streamlined interface, giving you quick access to controls for a fully personalized massage experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="block-headrest" class="feature-block feature-block--reverse">
+                    <div class="block-image-wrapper">
+                        <img id="img-headrest" src="images/48.Signature2_headrest.png" alt="Adjustable and removable headrest for neck comfort" loading="lazy">
+                    </div>
+
+                    <div class="block-text-wrapper text-align-right">
+                        <div class="card-title-wrapper align-right">
+                            <div class="title-highlight">REMOVABLE</div>
+                            <div class="title-main">HEADREST</div>
+                        </div>
+                        <div class="card-desc-wrapper no-bg align-right">
+                            <p>The removable headrest lets you easily adjust cushioning and support, ensuring optimal comfort and precise 3D massage alignment for your neck and shoulders.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- 문턱 섹션 -->
+        <div class="doorway-section">
+            <div class="container">            
+                <div class="m-title">MINIMUM DOORWAY & PACKAGING</div>
+                <div class="doorway-layout">
+                    <div class="doorway-left">
+                        <img src="images/49.Signature2_MinimumDW.png" alt="Minimum Doorway Size">
+                    </div>
+                    <div class="doorway-right">
+                        <div class="box-img">
+                            <img src="images/50.Signature2_Box.png" alt="Packaging Box Dimensions">
+                        </div>
+                        <div class="measuring-guide">
+                            <div class="g-title"><strong>Measuring Guide</strong></div>
+                            <div class="g-list">
+                                <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                                <div>• Please use a standard measuring tape to measure the doorway.</div>
+                                <div>• If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                                <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 차원 섹션 -->
+        <div class="dimensions-section">
+            <div class="container">
+                <div class="m-title">DIMENSIONS</div>
+                <div class="dimensions-row">
+                    <div class="dim-img">
+                        <img src="images/51.Signature2_Dimension_front.png" alt="Forge Front Dimensions">
+                    </div>
+                    <div class="dim-img">
+                        <img src="images/52.Signature2_Dimension_Side.png" alt="Forge Side Dimensions">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="spec-section">
+            <div class="container">
+                <div class="spec-title">Specification</div>
+                
+                <div class="spec-table">
+                    <div class="spec-row">
+                        <div class="spec-label">Product Name</div>
+                        <div class="spec-value">Signature II</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">User Manual</div>
+                        <div class="spec-value split-col">
+                            <a href="https://cdn.shopify.com/s/files/1/0086/1297/0558/files/Signature_Manual_web.pdf?v=1773335118" class="red-link" target="_blank">Download</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Power Supply</div>
+                        <div class="spec-value">110 - 120V</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Rate Frequency</div>
+                        <div class="spec-value">50 / 60Hz</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Standing</strong>
+                                <span>30" x 54.5" x 46.2"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Reclined</strong>
+                                <span>30" x 70" x 38.5"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Weight</div>
+                        <div class="spec-value">170.64 lb</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Shoulder</strong>
+                                <span>22.5"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Seat</strong>
+                                <span>19.5"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Minimum Door Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Assembled</strong>
+                                <span>30"</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Maximum User Weight</div>
+                        <div class="spec-value">250 lb</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>32.28" x 59.84" x 48.23"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row no-border"> 
+                        <div class="spec-label">Package Weight</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>205.69 lb</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
