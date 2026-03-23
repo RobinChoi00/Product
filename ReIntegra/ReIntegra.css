@@ -151,16 +151,6 @@
 }
 
 /* Sections by background color */
-.ReIntegra_Text_Heating {
-    display: inline-block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
-    font-style: italic;
-    line-height: 1.4;
-    color: #424242;
-    margin-top: 16px;
-}
 
 .ReIntegra_Box--Black {
     background-color: #161616;
@@ -203,6 +193,16 @@
 }
 
 /* Text (Title, Desc) */
+.ReIntegra_Text_Heating {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #424242;
+    margin-top: 16px;
+}
 
 .ReIntegra_Text--Mont--Title {
     font-family: 'Montserrat', sans-serif;
@@ -753,7 +753,33 @@
 }
 
 /* ============================
-   Responsive Styles (850px ↓)
+   Responsive Styles (960px â†“)
+   ============================ */
+
+@media (max-width: 960px) {
+
+    .ReIntegra_Box--Gradient1 .ReIntegra_Card--Horizontal--row img,
+    .ReIntegra_Card--Horizontal--rowFit.rowReverse img {
+        max-width: 380px;
+    }
+
+    .ReIntegra_autoGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 30px;
+    }
+
+    .ReIntegra_Card--Horizontal--rowFit .PL {
+        padding-left: 0;
+    }
+
+    .ReIntegra_Card--Horizontal--rowFit.rowReverse .textBox {
+        text-align: center;
+    }
+
+}
+
+/* ============================
+   Responsive Styles (850px â†“)
    ============================ */
 
 @media (max-width: 850px) {
@@ -766,11 +792,6 @@
     .ReIntegra_Card--Horizontal--column_img {
         max-width: 500px;
         width: 100%;
-    }
-
-    .ReIntegra_autoGrid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px 30px;
     }
 
     .ReIntegra_lastRow {
@@ -792,7 +813,7 @@
 }
 
 /* ============================
-   Responsive Styles (768px ↓)
+   Responsive Styles (768px â†“)
    ============================ */
 
 @media (max-width: 768px) {
@@ -839,10 +860,6 @@
         padding: 2rem;
     }
 
-    .ReIntegra_Card--Horizontal--rowFit .PL {
-        padding-left: 0;
-    }
-
     .ReIntegra_Card--RecRow {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -855,7 +872,7 @@
 
 
 /* ============================
-   Responsive Styles (430px ↓)
+   Responsive Styles (430px â†“)
    ============================ */
 
 @media (max-width: 430px) {
