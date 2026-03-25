@@ -1871,56 +1871,35 @@ body {margin: 0;}
 
 
 /* ==========================================================================
-   Components: Hero Media Banner (1400px 확장 & 유튜브 텍스트 숨기기 하이브리드)
+   Components: Hero Media Banner (최상단 16:9 반응형 배너)
    ========================================================================== */
 .hero-media-banner {
     width: 100%;
-    max-width: 1400px; /* 💡 요청하신 대로 1400px까지 확장 */
-    margin: 0 auto 80px auto;
+    max-width: 1400px; /* 전체 컨테이너 너비와 동일하게 맞춤 */
+    margin: 0 auto 80px auto; /* 중앙 정렬 및 하단 콘텐츠와의 넉넉한 여백 */
     
-    /* 💡 [핵심] 16:9 비율보다 높이를 아주 미세하게 줄여(16/9.1) 상단 텍스트 영역을 날려버립니다. */
-    aspect-ratio: 16 / 9.1; 
+    /* 💡 최신 CSS 트렌드: 16:9 비율을 강제로 고정하여 로딩 시 화면 깜빡임 방지 */
+    aspect-ratio: 16 / 9; 
     
-    background-color: #000000;
-    overflow: hidden; /* 💡 삐져나간 텍스트를 칼같이 잘라냅니다. */
-    position: relative; /* 💡 내부 iframe을 절대 위치로 제어하기 위한 기준점 설정 */
+    background-color: #000000; /* 영상 로딩 전 검은색 배경 매너 공간 */
+    overflow: hidden; /* 영상이 컨테이너 밖으로 튀어나오지 않게 방어 */
 }
 
-/* iframe, video, img 공통 적용 */
 .hero-media-banner iframe,
 .hero-media-banner video,
 .hero-media-banner img {
-    /* 💡 Plantaris 축소 버그 해결: 어떤 환경에서든 강제로 100% 렌더링되도록 !important 선언 */
-    width: 100% !important; 
-    
-    /* 💡 Hypnos 텍스트 숨기기 해결: 부모보다 살짝 더 크게 만들어서 위로 밀어 올립니다. */
-    height: 110% !important; 
-    
+    width: 100%;
+    height: 100%;
     display: block;
-    object-fit: cover;
-    
-    /* 💡 위로 밀어 올리는 위치 설정 */
-    position: absolute;
-    top: -5%; 
-    left: 0;
-    
-    /* 💡 [마우스 차단] 3초 뒤에 유튜브 UI가 사라지면, 다시 마우스를 올려도 나타나지 않게 막습니다. */
-    pointer-events: none; 
+    object-fit: cover; /* 이미지가 찌그러지지 않고 꽉 차게 비율 조절 */
 }
 
 /* =========================================
-   [추가/수정] Hero Media 모바일 최적화
+   [추가] Hero Media 모바일 최적화
    ========================================= */
 @media (max-width: 768px) {
     .hero-media-banner {
-        border-radius: 0;
+        border-radius: 0; /* 💡 모바일에서는 화면 양끝에 꽉 차도록 둥근 모서리 제거 */
         margin-bottom: 50px;
-        aspect-ratio: 16 / 9.5; /* 💡 모바일에서는 조금 더 납작하게 잘라내야 안전합니다. */
-    }
-    
-    .hero-media-banner iframe,
-    .hero-media-banner video {
-        height: 115% !important; /* 모바일에 맞춰 높이 비율 재조정 */
-        top: -7%; /* 모바일에 맞춰 더 위로 밀어 올림 */
     }
 }
