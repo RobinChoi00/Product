@@ -1579,6 +1579,7 @@ body {margin: 0;}
     background-color: #000000;
     overflow: hidden; /* 💡 삐져나간 텍스트를 칼같이 잘라냅니다. */
     position: relative; /* 💡 내부 iframe을 절대 위치로 제어하기 위한 기준점 설정 */
+    margin-bottom: 60px;
 }
 
 /* iframe, video, img 공통 적용 */
