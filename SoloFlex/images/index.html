@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Martel+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="hero-full-banner">
+        <img src="images/1.Signature2_lifestyle.png" alt="Osaki Signature II Main Banner">
+    </div>
+
+    <div class="intro-text-section">
+        <div class="container text-center">
+            
+            <div class="intro-desc">
+                The Osaki 3D Signature II delivers a streamlined yet powerful massage experience designed for modern comfort. 
+                Featuring a 3D massage mechanism, auto massage programs, customizable intensity settings, Zero Gravity positioning, and lumbar heating, 
+                it provides personalized full-body relaxation with simple, intuitive control.
+            </div>
+            
+
+            <div class="group-slider">
+                <div class="slider-main">
+                    <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
+                        <img src="images/6.ignite_sync_left_arrow.png" alt="Prev">
+                    </div>
+                    
+                    <div class="chair-display">
+                        <img id="current-chair" src="images/2.Signature2_AllColor.png" alt="Signature II Colors">
+                    </div>
+                    
+                    <div class="nav-btn next-btn" onclick="moveSlide(1)">
+                        <img src="images/7.ignite_sync_right_arrow.png" alt="Next">
+                    </div>
+                </div>
+
+                <div id="swatch-product-title" class="swatch-title-text">
+                    Osaki 3D Signature II
+                </div>
+                <div class="swatch-panel">
+                    
+                    <div class="bar-bg-wrap">
+                        <img src="images/8.ignite_sync_swatches_bar.png" class="bar-bg" alt="Bar">
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="color-btn active" onclick="changeColor(0)">
+                            <img src="images/9.ignite_sync_swatch_all.png" alt="All">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(1)">
+                            <img src="images/10.ignite_sync_swatch_black.png" alt="Black">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(2)">
+                            <img src="images/11.ignite_sync_swatch_brown.png" alt="Brown">
+                        </div>
+                        <div class="color-btn" onclick="changeColor(3)">
+                            <img src="images/12.ignite_sync_swatch_taupe.png" alt="Taupe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 문턱 섹션 -->
+        <div class="doorway-section">
+            <div class="container">            
+                <div class="m-title">MINIMUM DOORWAY & PACKAGING</div>
+                <div class="doorway-layout">
+                    <div class="doorway-left">
+                        <img src="images/49.Signature2_MinimumDW.png" alt="Minimum Doorway Size">
+                    </div>
+                    <div class="doorway-right">
+                        <div class="box-img">
+                            <img src="images/50.Signature2_Box.png" alt="Packaging Box Dimensions">
+                        </div>
+                        <div class="measuring-guide">
+                            <div class="g-title"><strong>Measuring Guide</strong></div>
+                            <div class="g-list">
+                                <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                                <div>• Please use a standard measuring tape to measure the doorway.</div>
+                                <div>• If the door cannot be fully opened, open it as much as possible and measure the width  from the edge of the door hinge.</div>
+                                <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 차원 섹션 -->
+        <div class="dimensions-section">
+            <div class="container">
+                <div class="m-title">DIMENSIONS</div>
+                <div class="dimensions-row">
+                    <div class="dim-img">
+                        <img src="images/51.Signature2_Dimension_front.png" alt="Forge Front Dimensions">
+                    </div>
+                    <div class="dim-img">
+                        <img src="images/52.Signature2_Dimension_Side.png" alt="Forge Side Dimensions">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="spec-section">
+            <div class="container">
+                <div class="spec-title">Specification</div>
+                
+                <div class="spec-table">
+                    <div class="spec-row">
+                        <div class="spec-label">Product Name</div>
+                        <div class="spec-value">Signature II</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">User Manual</div>
+                        <div class="spec-value split-col">
+                            <a href="https://cdn.shopify.com/s/files/1/0086/1297/0558/files/Signature_Manual_web.pdf?v=1773335118" class="red-link" target="_blank">Download</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Power Supply</div>
+                        <div class="spec-value">110 - 120V</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Rate Frequency</div>
+                        <div class="spec-value">50 / 60Hz</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Standing</strong>
+                                <span>30" x 54.5" x 46.2"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Reclined</strong>
+                                <span>30" x 70" x 38.5"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Chair Weight</div>
+                        <div class="spec-value">170.64 lb</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Shoulder</strong>
+                                <span>22.5"</span>
+                            </div>
+                            <div class="col-item">
+                                <strong>Seat</strong>
+                                <span>19.5"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Minimum Door Width</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Assembled</strong>
+                                <span>30"</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Maximum User Weight</div>
+                        <div class="spec-value">250 lb</div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>32.28" x 59.84" x 48.23"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-row no-border"> 
+                        <div class="spec-label">Package Weight</div>
+                        <div class="spec-value split-col">
+                            <div class="col-item">
+                                <strong>Box 1</strong>
+                                <span>205.69 lb</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
