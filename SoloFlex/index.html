@@ -8,58 +8,56 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Martel+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=ArticulatCF:wght@300;400;500;600;700;800&family=Martel+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="hero-full-banner">
-        <img src="images/1.Signature2_lifestyle.png" alt="Osaki Signature II Main Banner">
+        <img src="images/1.solo_flex_product_main.png" alt="Osaki Signature II Main Banner">
     </div>
 
     <div class="intro-text-section">
         <div class="container text-center">
             
             <div class="intro-desc">
-                The Osaki 3D Signature II delivers a streamlined yet powerful massage experience designed for modern comfort. 
-                Featuring a 3D massage mechanism, auto massage programs, customizable intensity settings, Zero Gravity positioning, and lumbar heating, 
-                it provides personalized full-body relaxation with simple, intuitive control.
+                The Solo Flex 4D Massage Chair combines intelligent wellness technology with advanced comfort for a fully personalized massage experience. 
+                Its AI Health Detection scans your body to recommend the most suitable program, while the adjustable 4D massage mechanism delivers deep, human-like precision. 
+                With innovative Walking Technology, the chair gently guides your lower body through a natural walking motion to stretch and relax the back, hips, and legs for enhanced recovery and comfort.
+
             </div>
             
 
             <div class="group-slider">
                 <div class="slider-main">
                     <div class="nav-btn prev-btn" onclick="moveSlide(-1)">
-                        <img src="images/6.ignite_sync_left_arrow.png" alt="Prev">
+                        <img src="images/6.solo_flex_left_arrow.png" alt="Prev">
                     </div>
                     
                     <div class="chair-display">
-                        <img id="current-chair" src="images/2.Signature2_AllColor.png" alt="Signature II Colors">
+                        <img id="current-chair" src="images/5.solo_flex_colors_all.png" alt="Signature II Colors">
                     </div>
                     
                     <div class="nav-btn next-btn" onclick="moveSlide(1)">
-                        <img src="images/7.ignite_sync_right_arrow.png" alt="Next">
+                        <img src="images/7.solo_flex_right_arrow.png" alt="Next">
                     </div>
                 </div>
-
-                <div id="swatch-product-title" class="swatch-title-text">
-                    Osaki 3D Signature II
-                </div>
+                
                 <div class="swatch-panel">
                     
                     <div class="bar-bg-wrap">
-                        <img src="images/8.ignite_sync_swatches_bar.png" class="bar-bg" alt="Bar">
+                        <img src="images/8.solo_flex_swatches_bar.png" class="bar-bg" alt="Bar">
                     </div>
                     <div class="btn-wrap">
                         <div class="color-btn active" onclick="changeColor(0)">
-                            <img src="images/9.ignite_sync_swatch_all.png" alt="All">
+                            <img src="images/9.solo_flex_sync_swatch_all.png" alt="All">
                         </div>
                         <div class="color-btn" onclick="changeColor(1)">
-                            <img src="images/10.ignite_sync_swatch_black.png" alt="Black">
+                            <img src="images/10.solo_flex_swatch_black.png" alt="Black">
                         </div>
                         <div class="color-btn" onclick="changeColor(2)">
-                            <img src="images/11.ignite_sync_swatch_brown.png" alt="Brown">
+                            <img src="images/11.solo_flex_swatch_brown.png" alt="Brown">
                         </div>
                         <div class="color-btn" onclick="changeColor(3)">
-                            <img src="images/12.ignite_sync_swatch_taupe.png" alt="Taupe">
+                            <img src="images/12.solo_flex_swatch_taupe.png" alt="Taupe">
                         </div>
                     </div>
                 </div>
@@ -68,6 +66,756 @@
     </div>
 
 
+
+
+
+
+
+
+    <div id="ai-health-detection-section" class="feature-section-boxed">
+    
+        <div id="ai-health-header-wrapper" class="section-title-wrapper text-center">
+            <div id="ai-health-logo-container">
+                <img id="ai-health-logo-img" src="images/17.solo_flex_icon_ai-series.png" alt="AI Series Logo" loading="lazy">
+            </div>
+            <div id="ai-health-title-container" class="title-main">
+                INTELLIGENT HEALTH DETECTION
+            </div>
+            <div id="ai-health-desc-container" class="section-desc-wrapper max-width-text text-center">
+                The AI-powered health detection system analyzes key indicators—including heart rate, HRV, microcirculation, and fatigue levels—to <strong>recommend a massage tailored to your body's real-time condition.</strong>
+            </div>
+        </div>
+
+        <div id="ai-health-content-layout" class="health-detection-grid">
+            
+            <div id="ai-health-indicators-col" class="health-indicators-wrapper">
+                <div id="indicator-btn-blood-oxygen" class="indicator-pill-btn">BLOOD OXYGEN</div>
+                <div id="indicator-btn-heartrate" class="indicator-pill-btn">HEARTRATE</div>
+                <div id="indicator-btn-hrv" class="indicator-pill-btn">HRV</div>
+                <div id="indicator-btn-microcirculation" class="indicator-pill-btn">MICROCIRCULATION</div>
+            </div>
+
+            <div id="ai-health-tablet-col" class="health-tablet-wrapper">
+                <img id="ai-health-tablet-img" src="images/18.solo_flex_health-scan.png" alt="A.I. Care Report Tablet Interface" loading="lazy">
+            </div>
+
+            <div id="ai-health-scanner-col" class="health-scanner-wrapper">
+                <img id="ai-health-scanner-gif" src="images/19.solo_flex_walking_tech_GIF.png" alt="Hand Scanning Process" loading="lazy">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div id="robo-walking-section" class="feature-section-boxed">
+    
+        <div id="robo-walking-header-wrapper" class="section-title-wrapper text-center">
+            <div id="robo-walking-title-container" class="title-main">
+                ROBO WALKING TECHNOLOGY
+            </div>
+            <div id="robo-walking-desc-container" class="section-desc-wrapper max-width-text text-center">
+                Unlike standard massage chairs that often overlook the lower body, the Osaki Solo Flex 4D delivers balanced care with its unique <strong>scissor-action mechanism that mimics natural walking.</strong> This smooth, rhythmic motion gently <strong>stretches the glutes, hamstrings, and knees, promoting improved flexibility</strong> and a more complete full-body wellness experience.
+            </div>
+        </div>
+
+        <div id="robo-walking-media-wrapper" class="single-image-wrapper image-rounded text-center">
+            <img id="robo-walking-gif-img" src="images/19.solo_flex_walking_tech_GIF.png" alt="Robo Walking Technology Scissor-Action Mechanism" loading="lazy">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="mechanism-4d-section" class="feature-section-boxed">
+    
+        <div id="mechanism-4d-layout-grid" class="feature-layout-2col">
+
+            <div id="mechanism-4d-text-col" class="text-content-wrapper align-left">
+                <div id="mechanism-4d-icon-wrapper" class="icon-wrapper">
+                    <img id="mechanism-4d-icon-img" src="images/20.solo_flex_icon_gear.png" alt="Gear Icon" loading="lazy">
+                </div>
+                
+                <div id="mechanism-4d-title-wrapper" class="card-title-wrapper">
+                    <div id="mechanism-4d-title-main" class="title-main">
+                        4D MASSAGE<br>MECHANISM
+                    </div>
+                </div>
+                
+                <div id="mechanism-4d-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    4D massage mechanism is an advanced roller system that <strong>moves in multiple directions—up and down, side to side, in and out, and with adjustable speed</strong>—allowing the massage to feel more natural and human-like. It can vary the intensity and rhythm, providing deeper pressure, smoother transitions, and <strong>a more customized massage experience compared to standard 2D or 3D mechanisms.</strong>
+                </div>
+            </div>
+
+            <div id="mechanism-4d-image-col" class="image-content-wrapper">
+                <div id="mechanism-4d-image-inner" class="single-image-wrapper image-rounded-large">
+                    <img id="mechanism-4d-img" src="images/21.solo_flex_4D.png" alt="Advanced 4D Massage Roller Mechanism" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="body-scan-section" class="feature-section-boxed">
+    
+        <div id="body-scan-layout-grid" class="feature-layout-2col">
+
+            <div id="body-scan-image-col" class="image-content-wrapper">
+                <div id="body-scan-image-inner" class="single-image-wrapper image-rounded-large">
+                    <img id="body-scan-img" src="images/23.solo_flex_body_scan.png" alt="Body Scan Technology Hologram" loading="lazy">
+                </div>
+            </div>
+
+            <div id="body-scan-text-col" class="text-content-wrapper align-left">
+                <div id="body-scan-icon-wrapper" class="icon-wrapper">
+                    <img id="body-scan-icon-img" src="images/22.solo_flex_icon_body-scan.png" alt="Body Scan Icon" loading="lazy">
+                </div>
+                
+                <div id="body-scan-title-wrapper" class="card-title-wrapper">
+                    <div id="body-scan-title-main" class="title-main">
+                        BODY SCAN<br>TECHNOLOGY
+                    </div>
+                </div>
+                
+                <div id="body-scan-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    Body Scan <strong>automatically detects the user's shoulder height</strong> before the massage begins, allowing the chair to adjust the rollers for <strong>a more precise, customized, and comfortable massage</strong> experience.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="zg-combo-section" class="feature-section-full">
+    
+        <div id="zg-header-wrapper" class="section-title-wrapper text-center">
+            <div id="zg-title-highlight" class="title-highlight">3-STAGE</div>
+            <div id="zg-title-main" class="title-main">ZERO GRAVITY RECLINING</div>
+            <div id="zg-desc-wrapper" class="section-desc-wrapper max-width-text text-center">
+                Inspired by NASA innovations, the Osaki Solo Flex 4D features advanced Zero Gravity Reclining technology that allows you to recline in 3 near-weightless positions, <strong>distributing your body weight evenly to reduce spinal pressure.</strong>
+            </div>
+        </div>
+        
+        <div id="zg-media-wrapper" class="single-image-wrapper text-center">
+            <img id="zg-main-img" src="images/24.solo_flex_ZG.png" alt="3-Stage Zero Gravity Reclining Angles" loading="lazy">
+        </div>
+
+        <div id="dual-features-container" class="feature-section-boxed">
+            
+            <div id="dual-features-grid" class="feature-grid-2col divider-layout">
+                
+                <div id="sl-track-col" class="feature-col">
+                    <div id="sl-track-icon-wrapper" class="icon-wrapper align-left">
+                        <img id="sl-track-icon-img" src="images/25.solo_flex_icon_SL.png" alt="SL-Track Icon" loading="lazy">
+                    </div>
+                    <div id="sl-track-title-wrapper" class="card-title-wrapper align-left">
+                        <div id="sl-track-title-main" class="title-main">SL-TRACK<br>SYSTEM</div>
+                    </div>
+                    <div id="sl-track-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                        Following the natural curve of your spine, the SL-Track <strong>extends from the neck to the glutes</strong>, allowing the massage rollers to maintain continuous contact with your body for <strong>a smoother and more consistent massage.</strong>
+                    </div>
+                    <div id="sl-track-image-wrapper" class="card-image-wrapper image-align-bottom">
+                        <img id="sl-track-feature-img" src="images/26.solo_flex_SL.png" alt="SL-Track System Roller Path" loading="lazy">
+                    </div>
+                </div>
+
+                <div id="space-saving-col" class="feature-col">
+                    <div id="space-saving-icon-wrapper" class="icon-wrapper align-left">
+                        <img id="space-saving-icon-img" src="images/27.solo_flex_icon_space-saving.png" alt="Space-Saving Icon" loading="lazy">
+                    </div>
+                    <div id="space-saving-title-wrapper" class="card-title-wrapper align-left">
+                        <div id="space-saving-title-main" class="title-main">SPACE-SAVING<br>TECHNOLOGY</div>
+                    </div>
+                    <div id="space-saving-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                        Its space-saving design lets the chair fully recline with <strong>just 4.5 inches of wall clearance</strong>, making it ideal for small or compact living spaces without compromising comfort.
+                    </div>
+                    <div id="space-saving-image-wrapper" class="card-image-wrapper image-align-bottom">
+                        <img id="space-saving-feature-img" src="images/28.solo_flex_space-saving.png" alt="Space Saving Technology requires 4.5 inches" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="air-compression-section" class="feature-section-boxed">
+    
+        <div id="air-compression-header-wrapper" class="section-title-wrapper text-center">
+            <div id="air-compression-title-highlight" class="title-highlight">
+                36-CELL
+            </div>
+            <div id="air-compression-title-main" class="title-main">
+                AIR COMPRESSION MASSAGE
+            </div>
+            <div id="air-compression-desc-wrapper" class="section-desc-wrapper max-width-text text-center">
+                Thirty-six strategically placed air cells provide a full-body air compression massage, <strong>gently hugging your muscles to relieve tension, boost circulation, and promote overall relaxation.</strong>
+            </div>
+        </div>
+
+        <div id="air-compression-media-wrapper" class="single-image-wrapper text-center">
+            <img id="air-compression-feature-img" src="images/29.solo_flex_air-cells.png" alt="36-Cell Air Compression Massage Coverage: Shoulders, Waist, Arms, Calves, Feet" loading="lazy">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="heating-therapy-section" class="feature-section-boxed">
+    
+        <div id="heating-header-wrapper" class="section-title-wrapper text-center">
+            <div id="heating-icon-container">
+                <img id="heating-icon-img" src="images/30.solo_flex_icon_heating.png" alt="Heating Wave Icon" loading="lazy">
+            </div>
+            
+            <div id="heating-title-container" class="title-main">
+                <div id="heating-title-lumbar-calf" class="title-highlight theme-red">
+                    LUMBAR & CALF
+                </div>
+                <div id="heating-title-therapy">
+                    HEATING THERAPY
+                </div>
+            </div>
+            
+            <div id="heating-desc-container" class="section-desc-wrapper max-width-text text-center">
+                <strong>Soothing heat in the calves and lumbar region gently warms tired muscles</strong>, stimulating circulation, and enhancing the overall depth and comfort of your massage experience.
+            </div>
+
+            <div id="heating-disclaimer-container" class="desc-disclaimer text-center">
+                * The heating therapy provides warmth in the range of approximately 75 - 83°F.
+            </div>
+        </div>
+
+        <div id="heating-media-wrapper" class="single-image-wrapper text-center">
+            <img id="heating-feature-img" src="images/31.solo_flex_heating.png" alt="Lumbar and Calf Heating Zones" loading="lazy">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="auto-programs-section" class="feature-section-boxed text-center">
+        
+        <div id="auto-programs-header-wrapper" class="section-title-wrapper justify-center">
+            <div id="auto-programs-title-main" class="title-main">
+                16 AUTO PROGRAMS
+            </div>
+        </div>
+
+        <div id="auto-programs-grid-container" class="program-grid-4col">
+            
+            <div id="program-item-rejuvenate" class="program-icon-item">
+                <div id="program-icon-wrap-rejuvenate" class="program-icon-circle">
+                    <img id="program-img-rejuvenate" src="images/32.solo_flex_icon_rejuvenate.png" alt="Rejuvenate Program" loading="lazy">
+                </div>
+                <div id="program-label-rejuvenate" class="program-icon-label">REJUVENATE</div>
+            </div>
+            
+            <div id="program-item-meridian" class="program-icon-item">
+                <div id="program-icon-wrap-meridian" class="program-icon-circle">
+                    <img id="program-img-meridian" src="images/33.solo_flex_icon_meridian_harmony.png" alt="Meridian Harmony Program" loading="lazy">
+                </div>
+                <div id="program-label-meridian" class="program-icon-label">MERIDIAN<br>HARMONY</div>
+            </div>
+
+            <div id="program-item-sleep" class="program-icon-item">
+                <div id="program-icon-wrap-sleep" class="program-icon-circle">
+                    <img id="program-img-sleep" src="images/34.solo_flex_icon_sleep-ready.png" alt="Sleep Ready Program" loading="lazy">
+                </div>
+                <div id="program-label-sleep" class="program-icon-label">SLEEP<br>READY</div>
+            </div>
+
+            <div id="program-item-meditation" class="program-icon-item">
+                <div id="program-icon-wrap-meditation" class="program-icon-circle">
+                    <img id="program-img-meditation" src="images/35.solo_flex_icon_meditation.png" alt="Meditation Program" loading="lazy">
+                </div>
+                <div id="program-label-meditation" class="program-icon-label">MEDITATION</div>
+            </div>
+
+            <div id="program-item-novice" class="program-icon-item">
+                <div id="program-icon-wrap-novice" class="program-icon-circle">
+                    <img id="program-img-novice" src="images/36.solo_flex_icon_for-novice.png" alt="For Novice Program" loading="lazy">
+                </div>
+                <div id="program-label-novice" class="program-icon-label">FOR<br>NOVICE</div>
+            </div>
+
+            <div id="program-item-beauty" class="program-icon-item">
+                <div id="program-icon-wrap-beauty" class="program-icon-circle">
+                    <img id="program-img-beauty" src="images/37.solo_flex_icon_beauty-treat.png" alt="Beauty Treat Program" loading="lazy">
+                </div>
+                <div id="program-label-beauty" class="program-icon-label">BEAUTY<br>TREAT</div>
+            </div>
+
+            <div id="program-item-mens" class="program-icon-item">
+                <div id="program-icon-wrap-mens" class="program-icon-circle">
+                    <img id="program-img-mens" src="images/38.solo_flex_icon_mens-health.png" alt="Men's Health Program" loading="lazy">
+                </div>
+                <div id="program-label-mens" class="program-icon-label">MEN'S<br>HEALTH</div>
+            </div>
+
+            <div id="program-item-senior" class="program-icon-item">
+                <div id="program-icon-wrap-senior" class="program-icon-circle">
+                    <img id="program-img-senior" src="images/39.solo_flex_icon_senior-wellness.png" alt="Senior Wellness Program" loading="lazy">
+                </div>
+                <div id="program-label-senior" class="program-icon-label">SENIOR<br>WELLNESS</div>
+            </div>
+
+            <div id="program-item-weekend" class="program-icon-item">
+                <div id="program-icon-wrap-weekend" class="program-icon-circle">
+                    <img id="program-img-weekend" src="images/40.solo_flex_icon_great-weekend.png" alt="Great Weekend Program" loading="lazy">
+                </div>
+                <div id="program-label-weekend" class="program-icon-label">GREAT<br>WEEKEND</div>
+            </div>
+
+            <div id="program-item-athlete" class="program-icon-item">
+                <div id="program-icon-wrap-athlete" class="program-icon-circle">
+                    <img id="program-img-athlete" src="images/41.solo_flex_icon_the-athlete.png" alt="The Athlete Program" loading="lazy">
+                </div>
+                <div id="program-label-athlete" class="program-icon-label">THE<br>ATHLETE</div>
+            </div>
+
+            <div id="program-item-relieve" class="program-icon-item">
+                <div id="program-icon-wrap-relieve" class="program-icon-circle">
+                    <img id="program-img-relieve" src="images/42.solo_flex_icon_relieve-pressure.png" alt="Relieve Pressure Program" loading="lazy">
+                </div>
+                <div id="program-label-relieve" class="program-icon-label">RELIEVE<br>PRESSURE</div>
+            </div>
+
+            <div id="program-item-cosy" class="program-icon-item">
+                <div id="program-icon-wrap-cosy" class="program-icon-circle">
+                    <img id="program-img-cosy" src="images/43.solo_flex_icon_cosy-comfort.png" alt="Cosy Comfort Program" loading="lazy">
+                </div>
+                <div id="program-label-cosy" class="program-icon-label">COSY<br>COMFORT</div>
+            </div>
+
+            <div id="program-item-office" class="program-icon-item">
+                <div id="program-icon-wrap-office" class="program-icon-circle">
+                    <img id="program-img-office" src="images/44.solo_flex_icon_office-pro.png" alt="Office Pro Program" loading="lazy">
+                </div>
+                <div id="program-label-office" class="program-icon-label">OFFICE<br>PRO</div>
+            </div>
+
+            <div id="program-item-textneck" class="program-icon-item">
+                <div id="program-icon-wrap-textneck" class="program-icon-circle">
+                    <img id="program-img-textneck" src="images/45.solo_flex_icon_text-neck.png" alt="Text Neck Program" loading="lazy">
+                </div>
+                <div id="program-label-textneck" class="program-icon-label">TEXT<br>NECK</div>
+            </div>
+
+            <div id="program-item-waist" class="program-icon-item">
+                <div id="program-icon-wrap-waist" class="program-icon-circle">
+                    <img id="program-img-waist" src="images/46.solo_flex_icon_waist-n-hip-care.png" alt="Waist N Hip Care Program" loading="lazy">
+                </div>
+                <div id="program-label-waist" class="program-icon-label">WAIST N<br>HIP CARE</div>
+            </div>
+
+            <div id="program-item-thai" class="program-icon-item">
+                <div id="program-icon-wrap-thai" class="program-icon-circle">
+                    <img id="program-img-thai" src="images/47.solo_flex_icon_thai.png" alt="Thai Program" loading="lazy">
+                </div>
+                <div id="program-label-thai" class="program-icon-label">THAI</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="manual-modes-section" class="feature-section-boxed text-center">
+        
+        <div id="manual-modes-header-wrapper" class="section-title-wrapper justify-center">
+            <div id="manual-modes-title-main" class="title-main">
+                6 MANUAL MODES
+            </div>
+        </div>
+
+        <div id="manual-modes-layout-container" class="program-grid-6col">
+            
+            <div id="manual-item-kneading" class="program-icon-item">
+                <div id="manual-icon-wrap-kneading" class="program-icon-circle">
+                    <img id="manual-img-kneading" src="images/48.solo_flex_icon_kneading.png" alt="Kneading Manual Mode" loading="lazy">
+                </div>
+                <div id="manual-label-kneading" class="program-icon-label">KNEADING</div>
+            </div>
+
+            <div id="manual-item-tapping" class="program-icon-item">
+                <div id="manual-icon-wrap-tapping" class="program-icon-circle">
+                    <img id="manual-img-tapping" src="images/49.solo_flex_icon_tapping.png" alt="Tapping Manual Mode" loading="lazy">
+                </div>
+                <div id="manual-label-tapping" class="program-icon-label">TAPPING</div>
+            </div>
+
+            <div id="manual-item-rolling" class="program-icon-item">
+                <div id="manual-icon-wrap-rolling" class="program-icon-circle">
+                    <img id="manual-img-rolling" src="images/50.solo_flex_icon_rolling.png" alt="Rolling Manual Mode" loading="lazy">
+                </div>
+                <div id="manual-label-rolling" class="program-icon-label">ROLLING</div>
+            </div>
+
+            <div id="manual-item-shiatsu" class="program-icon-item">
+                <div id="manual-icon-wrap-shiatsu" class="program-icon-circle">
+                    <img id="manual-img-shiatsu" src="images/51.solo_flex_icon_shiatsu.png" alt="Shiatsu Manual Mode" loading="lazy">
+                </div>
+                <div id="manual-label-shiatsu" class="program-icon-label">SHIATSU</div>
+            </div>
+
+            <div id="manual-item-clapping" class="program-icon-item">
+                <div id="manual-icon-wrap-clapping" class="program-icon-circle">
+                    <img id="manual-img-clapping" src="images/52.solo_flex_icon_clapping.png" alt="Clapping Manual Mode" loading="lazy">
+                </div>
+                <div id="manual-label-clapping" class="program-icon-label">CLAPPING</div>
+            </div>
+
+            <div id="manual-item-dialing" class="program-icon-item">
+                <div id="manual-icon-wrap-dialing" class="program-icon-circle">
+                    <img id="manual-img-dialing" src="images/53.solo_flex_icon_dialing.png" alt="Dialing Manual Mode" loading="lazy">
+                </div>
+                <div id="manual-label-dialing" class="program-icon-label">DIALING</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="foot-rollers-section" class="feature-section-boxed">
+        
+        <div id="foot-rollers-layout-grid" class="feature-layout-2col">
+
+            <div id="foot-rollers-text-col" class="text-content-wrapper align-left">
+                <div id="foot-rollers-icon-wrapper" class="icon-wrapper">
+                    <img id="foot-rollers-icon-img" src="images/54.solo_flex_icon_foot.png" alt="Foot Reflexology Icon" loading="lazy">
+                </div>
+                
+                <div id="foot-rollers-title-wrapper" class="card-title-wrapper">
+                    <div id="foot-rollers-title-main" class="title-main">
+                        SPECIALIZED<br>FOOT ROLLERS
+                    </div>
+                </div>
+                
+                <div id="foot-rollers-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    The footrest features rotating rollers with <strong>specialized reflexology ridges that target key pressure points</strong>, 
+                    delivering a deep, therapeutic massage to promote foot health and relaxation.
+                </div>
+            </div>
+
+            <div id="foot-rollers-image-col" class="image-content-wrapper">
+                <div id="foot-rollers-image-inner" class="single-image-wrapper">
+                    <img id="foot-rollers-img" src="images/55.solo_flex_foot-rollers.png" alt="Specialized Foot Rollers and Reflexology Mechanism" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="calfrest-extension-section" class="feature-section-boxed">
+        
+        <div id="calfrest-layout-grid" class="feature-layout-2col">
+
+            <div id="calfrest-image-col" class="image-content-wrapper">
+                <div id="calfrest-image-inner" class="single-image-wrapper image-rounded-large">
+                    <img id="calfrest-gif-img" src="images/57.solo_flex_footrest_GIF.png" alt="Automatic Extendable Calfrest extending 4 inches" loading="lazy">
+                </div>
+            </div>
+
+            <div id="calfrest-text-col" class="text-content-wrapper align-left">
+                <div id="calfrest-icon-wrapper" class="icon-wrapper">
+                    <img id="calfrest-icon-img" src="images/56.solo_flex_icon_extend.png" alt="Extend Arrow Icon" loading="lazy">
+                </div>
+                
+                <div id="calfrest-title-wrapper" class="card-title-wrapper">
+                    <div id="calfrest-title-main" class="title-main">
+                        AUTOMATIC<br>EXTENDABLE<br>CALFREST
+                    </div>
+                </div>
+                
+                <div id="calfrest-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    The Osaki Solo Flex 4D features an automatic extendable calfrest that <strong>adjusts up to 4 inches</strong>, 
+                    providing a personalized, comfortable fit <strong>for users of all heights and body types.</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="safety-sensors-section" class="feature-section-boxed">
+        
+        <div id="safety-sensors-layout-grid" class="feature-layout-2col">
+
+            <div id="safety-sensors-text-col" class="text-content-wrapper align-left">
+                <div id="safety-icon-wrapper" class="icon-wrapper">
+                    <img id="safety-icon-img" src="images/58.solo_flex_icon_safety.png" alt="Safety Exclamation Icon" loading="lazy">
+                </div>
+                
+                <div id="safety-title-wrapper" class="card-title-wrapper">
+                    <div id="safety-title-main" class="title-main">
+                        14 SAFETY<br>SENSORS
+                    </div>
+                </div>
+                
+                <div id="safety-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    Built with 14 safety sensors placed around the legrest and rear, 
+                    the Solo Flex <strong>detects nearby objects to help prevent potential hazards</strong> during movement. 
+                    This protective system <strong>ensures safer operation and added peace of mind</strong> while using the chair.
+                </div>
+            </div>
+
+            <div id="safety-sensors-image-col" class="image-content-wrapper">
+                <div id="safety-image-inner" class="single-image-wrapper">
+                    <img id="safety-sensors-img" src="images/59.solo_flex_safety-sensors.png" alt="14 Safety Sensors Locations on Chair" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="touchscreen-controller-section" class="feature-section-boxed">
+        
+        <div id="touchscreen-layout-grid" class="feature-layout-2col">
+
+            <div id="touchscreen-image-col" class="image-content-wrapper">
+                <div id="touchscreen-image-inner" class="single-image-wrapper">
+                    <img id="touchscreen-remote-img" src="images/61.solo_flex_remote.png" alt="Touchscreen Controller Interface" loading="lazy">
+                </div>
+            </div>
+
+            <div id="touchscreen-text-col" class="text-content-wrapper align-left">
+                <div id="touchscreen-icon-wrapper" class="icon-wrapper">
+                    <img id="touchscreen-icon-img" src="images/60.solo_flex_icon_touch.png" alt="Touch Interaction Icon" loading="lazy">
+                </div>
+                
+                <div id="touchscreen-title-wrapper" class="card-title-wrapper">
+                    <div id="touchscreen-title-main" class="title-main">
+                        TOUCHSCREEN<br>CONTROLLER
+                    </div>
+                </div>
+                
+                <div id="touchscreen-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    The touchscreen controller provides <strong>an intuitive, easy-to-use interface</strong>, 
+                    giving you full control over massage settings, programs, and customization at your fingertips.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="bluetooth-speakers-section" class="feature-section-boxed">
+        
+        <div id="bluetooth-layout-grid" class="feature-layout-2col">
+
+            <div id="bluetooth-text-col" class="text-content-wrapper align-left">
+                <div id="bluetooth-icon-wrapper" class="icon-wrapper">
+                    <img id="bluetooth-icon-img" src="images/62.solo_flex_icon_bluetooth.png" alt="Bluetooth Connectivity Icon" loading="lazy">
+                </div>
+                
+                <div id="bluetooth-title-wrapper" class="card-title-wrapper">
+                    <div id="bluetooth-title-main" class="title-main">
+                        QUALITY<br>BLUETOOTH<br>SPEAKERS
+                    </div>
+                </div>
+                
+                <div id="bluetooth-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    High-quality Bluetooth speakers built into the chair <strong>deliver crisp, immersive sound</strong>, 
+                    letting you enjoy music, podcasts, or guided meditations seamlessly while you relax.
+                </div>
+            </div>
+
+            <div id="bluetooth-image-col" class="image-content-wrapper">
+                <div id="bluetooth-image-inner" class="single-image-wrapper image-rounded-large">
+                    <img id="bluetooth-speakers-img" src="images/63.solo_flex_speakers.png" alt="Built-in Quality Bluetooth Speakers with Sound Waves" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="memory-function-section" class="feature-section-boxed">
+        
+        <div id="memory-layout-grid" class="feature-layout-2col">
+
+            <div id="memory-visual-col" class="image-content-wrapper">
+                <div id="memory-composite-wrapper" class="memory-composite-layout">
+                    
+                    <div id="memory-remote-wrapper" class="composite-main-image">
+                        <img id="memory-remote-img" src="images/65.solo_flex_remote_memory.png" alt="Intelligent Memory Function Remote Interface" loading="lazy">
+                    </div>
+
+                    <div id="memory-users-column" class="composite-side-list">
+                        
+                        <div id="memory-user-item-1" class="memory-user-block">
+                            <div id="memory-user-icon-wrap-1" class="user-icon-circle">
+                                <img id="memory-user-icon-1" src="images/66.solo_flex_icon_user.png" alt="User 1 Profile" loading="lazy">
+                            </div>
+                            <div id="memory-user-label-1" class="user-label">USER 1</div>
+                        </div>
+                        
+                        <div id="memory-user-item-2" class="memory-user-block">
+                            <div id="memory-user-icon-wrap-2" class="user-icon-circle">
+                                <img id="memory-user-icon-2" src="images/66.solo_flex_icon_user.png" alt="User 2 Profile" loading="lazy">
+                            </div>
+                            <div id="memory-user-label-2" class="user-label">USER 2</div>
+                        </div>
+
+                        <div id="memory-user-item-3" class="memory-user-block">
+                            <div id="memory-user-icon-wrap-3" class="user-icon-circle">
+                                <img id="memory-user-icon-3" src="images/66.solo_flex_icon_user.png" alt="User 3 Profile" loading="lazy">
+                            </div>
+                            <div id="memory-user-label-3" class="user-label">USER 3</div>
+                        </div>
+
+                        <div id="memory-user-item-4" class="memory-user-block">
+                            <div id="memory-user-icon-wrap-4" class="user-icon-circle">
+                                <img id="memory-user-icon-4" src="images/66.solo_flex_icon_user.png" alt="User 4 Profile" loading="lazy">
+                            </div>
+                            <div id="memory-user-label-4" class="user-label">USER 4</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="memory-text-col" class="text-content-wrapper align-left">
+                <div id="memory-header-icon-wrapper" class="icon-wrapper">
+                    <img id="memory-header-icon-img" src="images/64.solo_flex_icon_memory.png" alt="Intelligent Memory Head Icon" loading="lazy">
+                </div>
+                
+                <div id="memory-title-wrapper" class="card-title-wrapper">
+                    <div id="memory-title-main" class="title-main">
+                        INTELLIGENT<br>MEMORY FUNCTION
+                    </div>
+                </div>
+                
+                <div id="memory-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    Enjoy personalized relaxation with the Intelligent Memory Function, which remembers your exact massage preferences. 
+                    <strong>Simply select the “Save” option to save your favorite settings to a profile</strong>, so you can relax without readjusting the chair each time.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="remote-holder-section" class="feature-section-boxed">
+        
+        <div id="remote-holder-layout-grid" class="feature-layout-2col">
+
+            <div id="remote-holder-text-col" class="text-content-wrapper align-left">
+                <div id="remote-holder-icon-wrapper" class="icon-wrapper">
+                    <img id="remote-holder-icon-img" src="images/67.solo_flex_icon_remote.png" alt="Remote Controller Icon" loading="lazy">
+                </div>
+                
+                <div id="remote-holder-title-wrapper" class="card-title-wrapper">
+                    <div id="remote-holder-title-main" class="title-main">
+                        REMOTE<br>HOLDER
+                    </div>
+                </div>
+                
+                <div id="remote-holder-desc-wrapper" class="card-desc-wrapper no-bg align-left">
+                    The chair includes a built-in remote holder that <strong>keeps the controller securely within reach</strong> while you relax. Designed for convenience, it <strong>helps prevent misplacing the remote</strong> and allows you to easily store it when not in use.
+                </div>
+            </div>
+
+            <div id="remote-holder-image-col" class="image-content-wrapper">
+                <div id="remote-holder-image-inner" class="single-image-wrapper image-rounded-large">
+                    <img id="remote-holder-img" src="images/68.solo_flex_remote_holder.png" alt="Built-in Remote Holder on the Armrest" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
 
@@ -85,11 +833,11 @@
                 <div class="m-title">MINIMUM DOORWAY & PACKAGING</div>
                 <div class="doorway-layout">
                     <div class="doorway-left">
-                        <img src="images/49.Signature2_MinimumDW.png" alt="Minimum Doorway Size">
+                        <img src="images/70.solo_flex_min.doorway.png" alt="Minimum Doorway Size">
                     </div>
                     <div class="doorway-right">
                         <div class="box-img">
-                            <img src="images/50.Signature2_Box.png" alt="Packaging Box Dimensions">
+                            <img src="images/69.solo_flex_box_packaging.png" alt="Packaging Box Dimensions">
                         </div>
                         <div class="measuring-guide">
                             <div class="g-title"><strong>Measuring Guide</strong></div>
@@ -142,10 +890,10 @@
                 <div class="m-title">DIMENSIONS</div>
                 <div class="dimensions-row">
                     <div class="dim-img">
-                        <img src="images/51.Signature2_Dimension_front.png" alt="Forge Front Dimensions">
+                        <img src="images/71.solo_flex_dimensions1.png" alt="Forge Front Dimensions">
                     </div>
                     <div class="dim-img">
-                        <img src="images/52.Signature2_Dimension_Side.png" alt="Forge Side Dimensions">
+                        <img src="images/72.solo_flex_dimensions2.png" alt="Forge Side Dimensions">
                     </div>
                 </div>
             </div>
@@ -171,7 +919,7 @@
                 <div class="spec-table">
                     <div class="spec-row">
                         <div class="spec-label">Product Name</div>
-                        <div class="spec-value">Signature II</div>
+                        <div class="spec-value">Solo Flex</div>
                     </div>
 
                     <div class="spec-row">
@@ -197,18 +945,18 @@
                         <div class="spec-value split-col">
                             <div class="col-item">
                                 <strong>Standing</strong>
-                                <span>30" x 54.5" x 46.2"</span>
+                                <span>29.5" x 62.5" x 42.5"</span>
                             </div>
                             <div class="col-item">
                                 <strong>Reclined</strong>
-                                <span>30" x 70" x 38.5"</span>
+                                <span>29.5" x 76" x 31"</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="spec-row">
                         <div class="spec-label">Chair Weight</div>
-                        <div class="spec-value">170.64 lb</div>
+                        <div class="spec-value">226.6 lb</div>
                     </div>
 
                     <div class="spec-row">
@@ -216,11 +964,11 @@
                         <div class="spec-value split-col">
                             <div class="col-item">
                                 <strong>Shoulder</strong>
-                                <span>22.5"</span>
+                                <span>21"</span>
                             </div>
                             <div class="col-item">
                                 <strong>Seat</strong>
-                                <span>19.5"</span>
+                                <span>20"</span>
                             </div>
                         </div>
                     </div>
@@ -230,7 +978,7 @@
                         <div class="spec-value split-col">
                             <div class="col-item">
                                 <strong>Assembled</strong>
-                                <span>30"</span>
+                                <span>29.5"</span>
                             </div>
                         </div>
                         
@@ -246,7 +994,7 @@
                         <div class="spec-value split-col">
                             <div class="col-item">
                                 <strong>Box 1</strong>
-                                <span>32.28" x 59.84" x 48.23"</span>
+                                <span>30.7" x 61" x 33.5"</span>
                             </div>
                         </div>
                     </div>
@@ -256,7 +1004,7 @@
                         <div class="spec-value split-col">
                             <div class="col-item">
                                 <strong>Box 1</strong>
-                                <span>205.69 lb</span>
+                                <span>194.1 lb</span>
                             </div>
                         </div>
                     </div>
