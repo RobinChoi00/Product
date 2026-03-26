@@ -2660,3 +2660,20 @@ body {
     }
     .memory-user-block { width: 40%; } /* 모바일에서는 유저 프로필을 2개씩 2줄로 묶음 */
 }
+
+
+@media (min-width: 769px) {
+    /* 공통 2단 레이아웃 아이콘(.icon-wrapper) 및 특정 1단 아이콘(#heating-icon-container) 타겟팅 */
+    /* 💡 16 Auto와 6 Manual은 .program-icon-circle 클래스를 쓰므로 자동으로 제외됩니다. */
+    .icon-wrapper {
+        display: flex !important;
+        justify-content: flex-start !important; /* 무조건 왼쪽 끝으로 밀어냅니다 */
+        width: 100% !important;
+    }
+
+    .icon-wrapper img{
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        display: block !important;
+    }
+}
