@@ -1949,7 +1949,7 @@ body {
 #memory-remote-img {
     width: 100%;
     /* 시안의 밸런스에 맞춰 리모컨 폭을 300px로 유지합니다 */
-    max-width: 300px; 
+    max-width: 350px; 
     height: auto;
     
     /* 💡 하단 미세 여백(Sub-pixel gap)을 없애는 블록 처리 및 1px 매립 */
@@ -2718,6 +2718,14 @@ body {
     }
     #memory-composite-wrapper.memory-composite-layout {
         padding: 40px 20px 30px !important;
+    }
+
+    #safety-sensors-section {
+        padding: 80px 20px 0px 20px !important;
+    }
+
+    #safety-sensors-img {
+        max-width: 400px !important;
     }
 }
 
