@@ -2604,7 +2604,7 @@ body {
     .feature-layout-2col {
         display: flex !important;
         flex-direction: column !important;
-        gap: 40px !important;
+        gap: 80px !important;
     }
     /* HTML 마크업 순서에 상관없이 텍스트를 무조건 1번, 이미지를 2번으로 강제 배치 */
     .text-content-wrapper { order: 1 !important; padding: 0 !important; margin: 0 !important; }
