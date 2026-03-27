@@ -1553,20 +1553,27 @@ body {
    자동으로 완벽하게 렌더링되므로 레이아웃 관련 추가 코드가 불필요합니다. 
 */
 
-/* --- 2. Media Wrapper (GIF Optimization) --- */
+/* --- 2. Media Wrapper (Video Optimization) --- */
 #calfrest-image-col .image-content-wrapper {
     display: flex;
-    justify-content: flex-start; /* 좌측 컬럼이므로 왼쪽으로 기준을 잡음 */
+    justify-content: flex-start; 
 }
 
-#calfrest-gif-img {
+/* 💡 [수정] ID를 #calfrest-video로 변경하고, 글로벌 이미지 속성을 비디오에도 동일하게 적용 */
+#calfrest-video {
     width: 100%;
     max-width: 500px; /* 우측 텍스트와의 시각적 밸런스를 위한 최적 폭 */
     height: auto;
     display: block;
     
-    /* 💡 [핵심] GIF 애니메이션의 모바일 프레임 드랍(Frame Drop)을 방어하기 위한 
-       하드웨어 가속(Hardware Acceleration) 트리거 */
+    /* 💡 부모 컨테이너(.image-rounded-large)의 둥근 모서리(40px)와 그림자가 
+       비디오에도 완벽하게 상속되도록 명시적 속성 부여 */
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+    
+    /* 💡 [핵심] 모바일 환경에서 애니메이션 프레임 드랍(Frame Drop)을 방어하고 
+       GPU 디코딩을 강제하기 위한 하드웨어 가속 트리거 */
     transform: translateZ(0); 
     will-change: transform;
 }
