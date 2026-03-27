@@ -2725,8 +2725,13 @@ body {
     }
 
     #safety-sensors-img {
-        max-width: 400px !important;
+        width: 100%; /* 또는 고정값 */
+        height: auto;
+        transform: scale(1.2) !important; /* 원본보다 20% 확대 */
+        object-fit: contain !important; /* 이미지가 잘리지 않게 비율 유지 */
     }
+
+    
 }
 
 
