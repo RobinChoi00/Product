@@ -11,15 +11,15 @@ var slideData = [
         name: "All"
     },
     {
-        chair: baseURL + "images/3.solo_flex_color_black.png",
+        chair: baseURL + "images/4.solo_flex_color_brown.png",
         name: "Black"
     },
     {
-        chair: baseURL + "images/4.solo_flex_color_brown.png",
+        chair: baseURL + "images/2.solo_flex_color_taupe.png",
         name: "Brown"
     },
     {
-        chair: baseURL + "images/2.solo_flex_color_taupe.png",
+        chair: baseURL + "images/3.solo_flex_color_black.png",
         name: "Taupe"
     }
 ];
