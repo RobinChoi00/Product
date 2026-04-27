@@ -10,12 +10,16 @@ var baseURL = "https://RobinChoi00.github.io/Product/NovaII/";
 // Index 2: Brown
 var slideData = [
     {
-        chair: baseURL + "images/4.nova_II_colors_all.png",
+        chair: baseURL + "images/nova_II_colors_all.png",
         name: "All"
     },
     {
         chair: baseURL + "images/3.nova_II_color_black.png",
         name: "Black"
+    },
+    {
+        chair: baseURL + "images/nova_II_color_brown.png",
+        name: "Brown"
     },
     {
         chair: baseURL + "images/2.nova_II_color_taupe.png",
