@@ -816,8 +816,21 @@ body {margin: 0;}
 
 #section-space-saving .img-framed img {
     width: 100%;
+    max-width: 550px;
     height: auto;
     display: block;
+}
+
+#section-space-saving .img-framed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%; /* [Modification] Width of the fade from the left edge */
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* Fade from black to transparent */
+    pointer-events: none; /* Ensure overlay is not interactive */
+    z-index: 1; /* Layer overlay above the image */
 }
 
 
