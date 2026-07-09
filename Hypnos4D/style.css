@@ -1572,17 +1572,40 @@ body {margin: 0;}
     display: block;
 }
 
-/* 8. 다운로드 링크 스타일 (빨간색) */
+/* 8. 다운로드 / 유튜브 링크 스타일 */
+.spec-value.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    align-items: center;
+}
+
 .red-link {
-    color: #ff4d4d;         /* 이미지와 동일한 빨간색 */
-    text-decoration: none;  
+    color: #ff4d4d;
+    text-decoration: none;
     font-weight: 500;
     font-size: 20px;
+    display: inline-flex;
+    align-items: center;
     transition: opacity 0.3s;
 }
 
 .red-link:hover {
-    opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
+    opacity: 0.7;
+}
+
+.play-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    width: 20px;
+    height: 16px;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-right: 8px;
+    padding-left: 2px;
 }
 
 
@@ -1797,6 +1820,7 @@ body {margin: 0;}
     }
     .spec-label { width: 100% !important; font-size: 16px !important; color: #888 !important; }
     .spec-value { width: 100% !important; font-size: 18px !important; }
+    .spec-value.links { gap: 15px 20px !important; }
     .spec-value.split-col { flex-direction: column !important; gap: 15px !important; }
 
     .feature-row, 
