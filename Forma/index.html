@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Forma Massage Chair</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="forma-hero">
+        <img src="Proof/1.forma_product_main.png" alt="Titan Forma Main Banner">
+    </div>
+
+    <div class="forma-intro">
+        <div class="forma-container">
+            <div class="forma-intro-desc">
+                Elevate your relaxation experience with the Forma Massage Chair. Designed with intelligent wellness technology, 
+                it combines Intelligent Health Detection, a precision 3D + 2D massage mechanism, Zero Gravity recline, 
+                and Intelligent Voice Control to deliver a truly personalized massage. 
+                From targeted tension relief to full-body relaxation, the Forma creates a smarter, more immersive wellness experience tailored to you.
+            </div>
+
+            <div class="forma-slider">
+                <div class="forma-slider-main">
+                    <div class="forma-nav prev" onclick="moveSlide(-1)">
+                        <img src="Proof/6.forma_left_arrow.png" alt="Prev">
+                    </div>
+                    <div class="forma-chair">
+                        <img id="current-chair" src="Proof/5.forma_colors_all.png" alt="Forma Colors">
+                    </div>
+                    <div class="forma-nav next" onclick="moveSlide(1)">
+                        <img src="Proof/7.forma_right_arrow.png" alt="Next">
+                    </div>
+                </div>
+
+                <div class="forma-swatches">
+                    <div class="forma-swatch active" onclick="changeColor(0)">
+                        <img src="Proof/9.forma_swatch_all.png" alt="All">
+                    </div>
+                    <div class="forma-swatch" onclick="changeColor(1)">
+                        <img src="Proof/10.forma_swatch_black.png" alt="Black">
+                    </div>
+                    <div class="forma-swatch" onclick="changeColor(2)">
+                        <img alt="Brown" src="Proof/11.forma_swatch_brown.png">
+                    </div>
+                    <div class="forma-swatch" onclick="changeColor(3)">
+                        <img src="Proof/12.forma_swatch_taupe.png" alt="Taupe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section forma-banners">
+        <div class="forma-container">
+            <div class="forma-banner-card img-left">
+                <div class="forma-banner-visual">
+                    <img src="Proof/18.forma_health-detection.png" alt="Health Detection Interface">
+                </div>
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/17.forma_icon_health-detection.png" alt="Health Detection">
+                    </div>
+                    <div class="forma-title uppercase">
+                        INTELLIGENT<br>
+                        HEALTH DETECTION
+                    </div>
+                    <div class="forma-desc">
+                        The Intelligent Health Detection system analyzes your
+                        <strong>blood oxygen, heart rate, and fatigue levels</strong> in real time to recommend
+                        a personalized massage program for targeted relief and enhanced relaxation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="forma-banner-card img-right">
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/19.forma_icon_gear.png" alt="Gear">
+                    </div>
+                    <div class="forma-title uppercase">
+                        3D+2D MASSAGE<br>
+                        MECHANISM
+                    </div>
+                    <div class="forma-desc">
+                        The advanced 3D+2D massage mechanism combines
+                        <strong>the depth and flexibility of 3D upper rollers with the precision of 2D lower rollers for a balanced full-body massage experience.</strong>
+                        The 3D rollers adjust outward to deliver deeper, more human-like relief along the neck, shoulders, and back,
+                        while the 2D rollers provide consistent, targeted coverage through the lower back and lumbar area.
+                    </div>
+                </div>
+                <div class="forma-banner-visual flush-right">
+                    <img src="Proof/20.forma_massage-mechanism.png" alt="3D+2D Massage Mechanism">
+                </div>
+            </div>
+
+            <div class="forma-banner-card img-left">
+                <div class="forma-banner-visual">
+                    <img src="Proof/22.forma_icon_voice_control.png" alt="Intelligent Voice Control">
+                </div>
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/21.forma_icon_mic.png" alt="Microphone">
+                    </div>
+                    <div class="forma-title uppercase">
+                        INTELLIGENT<br>
+                        VOICE CONTROL
+                    </div>
+                    <div class="forma-desc">
+                        Enjoy effortless relaxation with Intelligent Voice Control, designed to
+                        <strong>make your massage experience completely hands-free.</strong>
+                        Simply speak your commands to change massage modes and entire zero gravity — delivering seamless comfort and
+                        personalized control with just the sound of your voice.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section">
+        <div class="forma-container">
+            <div class="forma-duo">
+                <div class="forma-duo-card">
+                    <div class="forma-duo-img dark">
+                        <img src="Proof/23.forma_body-scan.png" alt="Body Scan Technology">
+                    </div>
+                    <div class="forma-duo-txt">
+                        <div class="forma-title uppercase">
+                            BODY SCAN<br>
+                            TECHNOLOGY
+                        </div>
+                        <div class="forma-desc">
+                            Body Scan Technology intelligently <strong>maps your body’s shape, height, 
+                            and pressure points to deliver a fully personalized massage experience.</strong> 
+                            By detecting key areas like your neck and shoulders, 
+                            the chair automatically adjusts massage rollers and settings for targeted comfort, 
+                            deeper relief, and a massage that feels custom-made for you.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="forma-duo-card">
+                    <div class="forma-duo-img dark">
+                        <img src="Proof/24.forma_SL-track.png" alt="SL-Track System">
+                    </div>
+                    <div class="forma-duo-txt">
+                        <div class="forma-title uppercase">
+                            SL-TRACK<br>
+                            SYSTEM
+                        </div>
+                        <div class="forma-desc">
+                            The advanced SL-Track System is designed to follow the natural curve of your spine, 
+                            <strong>extending massage coverage from your neck to your glutes.</strong> By delivering <strong>continuous, 
+                            precision-targeted relief along the body,</strong> it creates a deeper, 
+                            more immersive massage experience that feels both natural and restorative.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section forma-feature-stack">
+        <div class="forma-container">
+            <div class="forma-feature-stack-box">
+                <div class="forma-feature-panel zg">
+                    <div class="forma-icon center">
+                        <img src="Proof/25.forma_icon_ZG.png" alt="Zero Gravity">
+                    </div>
+                    <div class="forma-title center uppercase">
+                        ZERO GRAVITY<br>
+                        RECLINING
+                    </div>
+                    <div class="forma-desc center">
+                        <strong>Inspired by NASA technology,</strong> the Forma offers Zero Gravity that gently positions the body into a near-weightless state,
+                        <strong>helping reduce pressure on the spine while promoting deeper relaxation.</strong> This position provides better circulation
+                        and a weightless, stress-free massage experience.
+                    </div>
+                    <div class="forma-panel-img">
+                        <img src="Proof/26.forma_ZG.png" alt="Zero Gravity Reclining">
+                    </div>
+                </div>
+
+                <div class="forma-feature-panel space">
+                    <div class="forma-icon center">
+                        <img src="Proof/27.forma_icon_space-saving.png" alt="Space Saving">
+                    </div>
+                    <div class="forma-title center uppercase">
+                        SPACE-SAVING<br>
+                        TECHNOLOGY
+                    </div>
+                    <div class="forma-desc center">
+                        Crafted for modern living, the Forma features advanced Space-Saving Technology that slides the chair forward as it reclines,
+                        needing just <strong>6 inches of wall clearance.</strong> Enjoy a luxurious zero-gravity recline and immersive full-body relaxation
+                        — all without sacrificing valuable space in your home.
+                    </div>
+                    <div class="forma-panel-img">
+                        <img src="Proof/28.forma_space-saving.png" alt="Space Saving Technology">
+                    </div>
+                </div>
+
+                <div class="forma-feature-panel air">
+                    <div class="forma-icon center">
+                        <img src="Proof/29.forma_icon_air.png" alt="Air Compression">
+                    </div>
+                    <div class="forma-title center uppercase">
+                        26-CELL AIR<br>
+                        COMPRESSION MASSAGE
+                    </div>
+                    <div class="forma-desc center">
+                        The Forma features an advanced 26-cell air compression massage system that
+                        <strong>uses strategically positioned air chambers to gently compress and release key areas of the body,</strong>
+                        replicating the feel of a professional hands-on massage. This rhythmic pressure helps ease muscle tension,
+                        promote healthy circulation, and provide a soothing full-body relaxation experience.
+                    </div>
+                    <div class="forma-panel-img">
+                        <img src="Proof/30.forma_air-cells.png" alt="26-Cell Air Compression Massage">
+                    </div>
+                </div>
+
+                <div class="forma-feature-panel heat">
+                    <div class="forma-icon center">
+                        <img src="Proof/31.forma_icon_heating.png" alt="Heating Therapy">
+                    </div>
+                    <div class="forma-title center uppercase heat-title">
+                        CALF & BACK<br>
+                        <span class="red">HEATING THERAPY</span>
+                    </div>
+                    <div class="forma-desc center">
+                        The Forma's heating therapy provides soothing, targeted warmth designed to
+                        <strong>relax tired calves and lower back while helping release built-up muscle tension.</strong>
+                        By encouraging improved circulation and deeper relaxation, heat transforms every session into an elevated level of comfort
+                        to your massage experience.
+                    </div>
+                    <div class="forma-note center">* The heating therapy feature warms in the range of approx. 75°F – 83°F</div>
+                    <div class="forma-panel-img">
+                        <img src="Proof/32.forma_heating.png" alt="Calf and Back Heating Therapy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section forma-programs">
+        <div class="forma-container">
+            <div class="forma-card forma-card-blue">
+                <div class="forma-title center">
+                    12 AUTO PROGRAMS
+                </div>
+                <div class="forma-icon-grid cols-4">
+                    <div class="forma-icon-item"><img src="Proof/33.forma_icon_quick-demo.png" alt="Quick Demo"><span>QUICK DEMO</span></div>
+                    <div class="forma-icon-item"><img src="Proof/34.forma_icon_chinese-massage.png" alt="Chinese Massage"><span>CHINESE<br>MASSAGE</span></div>
+                    <div class="forma-icon-item"><img src="Proof/35.forma_icon_relax.png" alt="Relax"><span>RELAX</span></div>
+                    <div class="forma-icon-item"><img src="Proof/36.forma_icon_vitality.png" alt="Vitality"><span>VITALITY</span></div>
+                    <div class="forma-icon-item"><img src="Proof/37.forma_icon_neck-shoulder.png" alt="Neck & Shoulder"><span>NECK &<br>SHOULDER</span></div>
+                    <div class="forma-icon-item"><img src="Proof/38.forma_icon_glutes.png" alt="Glutes"><span>GLUTES</span></div>
+                    <div class="forma-icon-item"><img src="Proof/39.forma_icon_sports-recovery.png" alt="Sports Recovery"><span>SPORTS<br>RECOVERY</span></div>
+                    <div class="forma-icon-item"><img src="Proof/40.forma_icon_stretch.png" alt="Stretch"><span>STRETCH</span></div>
+                    <div class="forma-icon-item"><img src="Proof/41.forma_icon_pain-relief.png" alt="Pain Relief"><span>PAIN<br>RELIEF</span></div>
+                    <div class="forma-icon-item"><img src="Proof/42.forma_icon_morning.png" alt="Morning"><span>MORNING</span></div>
+                    <div class="forma-icon-item"><img src="Proof/43.forma_icon_midday.png" alt="Midday"><span>MIDDAY</span></div>
+                    <div class="forma-icon-item"><img src="Proof/44.forma_icon_night.png" alt="Night"><span>NIGHT</span></div>
+                </div>
+            </div>
+
+            <div class="forma-card forma-card-blue">
+                <div class="forma-title center">
+                    5 MANUAL MODES
+                </div>
+                <div class="forma-icon-grid cols-5 manual">
+                    <div class="forma-icon-item"><img src="Proof/45.forma_icon_kneading+knock.png" alt="Kneading + Knock"><span>KNEADING +<br>KNOCK</span></div>
+                    <div class="forma-icon-item"><img src="Proof/46.forma_icon_knock.png" alt="Knock"><span>KNOCK</span></div>
+                    <div class="forma-icon-item"><img src="Proof/47.forma_icon_kneading.png" alt="Kneading"><span>KNEADING</span></div>
+                    <div class="forma-icon-item"><img src="Proof/48.forma_icon_rolling.png" alt="Rolling"><span>ROLLING</span></div>
+                    <div class="forma-icon-item"><img src="Proof/49.forma_icon_tap.png" alt="Tap"><span>TAP</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section forma-banners">
+        <div class="forma-container">
+            <div class="forma-banner-card img-left">
+                <div class="forma-banner-visual">
+                    <img src="Proof/51.forma_footrollers.png" alt="Specialized Foot Rollers">
+                </div>
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/50.forma_icon_footrollers.png" alt="Foot Rollers">
+                    </div>
+                    <div class="forma-title uppercase">
+                        SPECIALIZED<br>
+                        FOOT ROLLERS
+                    </div>
+                    <div class="forma-desc">
+                        Built into the footrest, <strong>specialized foot rollers deliver targeted kneading and reflexology-inspired massage</strong>
+                        to relieve tension, reduce fatigue, and promote healthy circulation for soothing, revitalizing relief.
+                    </div>
+                </div>
+            </div>
+
+            <div class="forma-banner-card img-right">
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/52.forma_icon_extend.png" alt="Extendable Footrest">
+                    </div>
+                    <div class="forma-title uppercase">
+                        SPRING-LOADED<br>
+                        EXTENDABLE FOOTREST
+                    </div>
+                    <div class="forma-desc">
+                        The spring-loaded extendable footrest <strong>adjusts up to 7 inches</strong> to accommodate
+                        <strong>different leg lengths,</strong> providing enhanced comfort and personalized support for a more relaxing massage experience.
+                    </div>
+                </div>
+                <div class="forma-banner-visual flush-right">
+                    <img src="Proof/53.forma_foot-extension.png" alt="Spring-Loaded Extendable Footrest">
+                </div>
+            </div>
+
+            <div class="forma-banner-card img-left">
+                <div class="forma-banner-visual">
+                    <img src="Proof/55.forma_side-panel.png" alt="LCD Screen and Side Panel">
+                </div>
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/54.forma_icon_switch.png" alt="Side Panel">
+                    </div>
+                    <div class="forma-title uppercase">
+                        LCD SCREEN<br>
+                        & SIDE PANEL
+                    </div>
+                    <div class="forma-desc">
+                        The LCD screen and side panel keeps essential controls at your fingertips,
+                        <strong>letting you instantly adjust massage settings, recline, and comfort features.</strong>
+                        Designed for effortless use, it makes personalization faster and more intuitive without interrupting relaxation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="forma-banner-card img-right">
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/56.forma_icon_bluetooth.png" alt="Bluetooth">
+                    </div>
+                    <div class="forma-title uppercase">
+                        QUALITY<br>
+                        BLUETOOTH<br>SPEAKERS
+                    </div>
+                    <div class="forma-desc">
+                        Enjoy rich, high-quality sound with the Forma's Bluetooth speakers.
+                        <strong>Stream music, meditation, or podcasts from your device to create a fully immersive, deeply relaxing atmosphere.</strong>
+                    </div>
+                </div>
+                <div class="forma-banner-visual flush-right">
+                    <img src="Proof/57.forma_speakers.png" alt="Quality Bluetooth Speakers">
+                </div>
+            </div>
+
+            <div class="forma-banner-card img-left">
+                <div class="forma-banner-visual">
+                    <img src="Proof/59.forma_headrest.png" alt="Removable Headrest">
+                </div>
+                <div class="forma-banner-content">
+                    <div class="forma-icon">
+                        <img src="Proof/58.forma_icon_headrest.png" alt="Headrest">
+                    </div>
+                    <div class="forma-title uppercase">
+                        CONVENIENT<br>
+                        REMOVABLE<br>
+                        HEADREST
+                    </div>
+                    <div class="forma-desc">
+                        <strong>Use it for added neck support or remove it to enjoy a deeper, more targeted neck and shoulder massage</strong>
+                        — giving you flexible comfort and precise relief exactly where you need it.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section">
+        <div class="forma-container">
+            <div class="forma-charge-duo">
+                <div class="forma-charge-card">
+                    <div class="forma-charge-img grad-left">
+                        <img src="Proof/60.forma_wireless.png" alt="Wireless Charging">
+                    </div>
+                    <div class="forma-charge-txt">
+                        <div class="forma-title uppercase">WIRELESS CHARGING</div>
+                        <div class="forma-desc">
+                            Keep your compatible devices powered with the built-in wireless charging surface,
+                            <strong>offering convenient, cable-free charging while you relax.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="forma-charge-card">
+                    <div class="forma-charge-img grad-right">
+                        <img src="Proof/61.forma_USB.png" alt="USB Charging Port">
+                    </div>
+                    <div class="forma-charge-txt">
+                        <div class="forma-title uppercase">USB CHARGING PORT</div>
+                        <div class="forma-desc">
+                            The integrated USB charging port lets you conveniently
+                            <strong>charge your devices without interrupting your massage,</strong>
+                            combining relaxation with everyday convenience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section forma-doorway">
+        <div class="forma-container">
+            <div class="forma-title section-head center">MINIMUM DOORWAY & PACKAGING</div>
+            <div class="forma-doorway-layout">
+                <div class="forma-doorway-left">
+                    <div class="forma-doorway-frame">
+                        <img src="Proof/62.forma_min.doorway.png" alt="Minimum Doorway">
+                    </div>
+                </div>
+                <div class="forma-doorway-right">
+                    <div class="forma-box-img">
+                        <img src="Proof/63.forma_packaging.png" alt="Packaging">
+                    </div>
+                    <div class="forma-guide">
+                        <div class="forma-guide-title"><strong>Measuring Guide</strong></div>
+                        <div class="forma-guide-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forma-section forma-dimensions">
+        <div class="forma-container">
+            <div class="forma-title section-head center">DIMENSIONS</div>
+            <div class="forma-dim-row">
+                <div class="forma-dim-img"><img src="Proof/64.forma_dimensions1.png" alt="Front Dimensions"></div>
+                <div class="forma-dim-img"><img src="Proof/65.forma_dimensions2.png" alt="Side Dimensions"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Osaki Forma</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="" class="red-link" target="_blank">Download</a>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Upright</strong>
+                            <span>29" x 54" x 44"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>29" x 67" x 36"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">183.6 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>20"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>19"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">29"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Maximum User Weight</div>
+                    <div class="spec-value">270 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>30.3" x 46.5" x 45.1"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border">
+                    <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>222 lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1298 @@
+/* ==========================================================================
+   Titan Forma — Product Page Styles
+   Based on Forma_product.ai / reference JPG
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --forma-blue: #75b2cc;
+    --forma-red: #ee3e30;
+    --forma-bg: #ffffff;
+    --forma-bg-soft: #f4f4f4;
+    --forma-bg-blue: #d3e7ed;
+    --forma-bg-blue-light: #ebf4ff;
+    --forma-bg-card: #eef6f9;
+    --forma-dark: #2a2a2a;
+    --forma-title: #606060;
+    --forma-desc: #9e9e9e;
+    --forma-strong: #606060;
+    --forma-radius: 30px;
+    --forma-radius-sm: 20px;
+    --forma-max: 1200px;
+    --forma-section-pad: 80px;
+    --font-title: 'Gopher◆', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--forma-bg);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------- */
+.forma-container {
+    width: 100%;
+    max-width: var(--forma-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.forma-section {
+    padding: var(--forma-section-pad) 0;
+}
+
+.forma-section:first-of-type {
+    padding-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.forma-title {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--forma-title);
+    margin: 0 0 32px;
+}
+
+.forma-title.center,
+.forma-title.section-head.center {
+    text-align: center;
+}
+
+.forma-title.section-head {
+    margin-bottom: 48px;
+}
+
+.forma-title .blue { color: var(--forma-blue); }
+.forma-title .red  { color: var(--forma-red); }
+
+.forma-desc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--forma-desc);
+    margin: 0;
+}
+
+.forma-desc strong {
+    font-weight: 600;
+    color: var(--forma-strong);
+}
+
+.forma-note {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 16px;
+    line-height: 1.4;
+}
+
+.center { text-align: center; }
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.forma-hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.forma-hero img {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Intro + Slider
+   -------------------------------------------------------------------------- */
+.forma-intro {
+    padding: 0 0 80px;
+    text-align: center;
+}
+
+.forma-intro-desc {
+    font-family: var(--font-body);
+    font-size: 22px;
+    line-height: 1.6;
+    color: #8e8e8e;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding-bottom: 20px;
+}
+
+.forma-intro-desc strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.forma-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.forma-slider-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+}
+
+.forma-chair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.forma-chair img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.forma-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    z-index: 2;
+    transition: transform 0.2s;
+}
+
+.forma-nav:hover { transform: translateY(-50%) scale(1.15); }
+.forma-nav.prev { left: 2%; }
+.forma-nav.next { right: 2%; }
+.forma-nav img { width: 24px; }
+
+.forma-swatches {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: #e6e6e6;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.forma-swatch {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+    background: #fff;
+}
+
+.forma-swatch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.forma-swatch:hover,
+.forma-swatch.active {
+    transform: scale(1.1);
+    border-color: #333;
+}
+
+/* --------------------------------------------------------------------------
+   Cards
+   -------------------------------------------------------------------------- */
+.forma-card {
+    border-radius: var(--forma-radius);
+    overflow: hidden;
+}
+
+.forma-card-light {
+    background: var(--forma-bg-soft);
+    padding: 48px 40px;
+}
+
+.forma-card-blue {
+    background: linear-gradient(180deg, var(--forma-bg-blue) 0%, var(--forma-bg-soft) 100%);
+    padding: 36px 32px;
+    border-radius: var(--forma-radius);
+    margin-bottom: 40px;
+}
+
+.forma-programs .forma-card-blue {
+    background: linear-gradient(180deg, #cae7ff 0%, #dde8f0 42%, #eceef1 100%);
+}
+
+.forma-card-blue:last-child {
+    margin-bottom: 0;
+}
+
+.forma-card-head.center {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+/* --------------------------------------------------------------------------
+   Icons
+   -------------------------------------------------------------------------- */
+.forma-icon {
+    margin-bottom: 16px;
+}
+
+.forma-icon img {
+    width: 56px;
+    height: auto;
+}
+
+.forma-icon.lg img {
+    width: 72px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Banner Cards (Health / Mechanism / Voice)
+   -------------------------------------------------------------------------- */
+.forma-banners {
+    padding-top: 0;
+}
+
+.forma-banner-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* image left → blue starts on the left, fades toward text on the right */
+.forma-banner-card.img-left {
+    background: linear-gradient(to right, #dceeff 0%, #e8f2fa 38%, #f0f3f6 62%, #eceef1 100%);
+}
+
+/* image right → blue starts on the right, fades toward text on the left */
+.forma-banner-card.img-right {
+    background: linear-gradient(to left, #dceeff 0%, #e8f2fa 38%, #f0f3f6 62%, #eceef1 100%);
+}
+
+.forma-banner-card:last-child {
+    margin-bottom: 0;
+}
+
+.forma-banner-content {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.forma-banner-card.img-left .forma-banner-content {
+    padding: 28px 24px 28px 36px;
+}
+
+.forma-banner-card.img-right .forma-banner-content {
+    padding: 28px 24px 28px 36px;
+}
+
+.forma-banner-content .forma-icon {
+    margin-bottom: 20px;
+}
+
+.forma-banner-content .forma-icon img {
+    width: 60px;
+}
+
+.forma-banner-content .forma-title {
+    font-size: 34px;
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+
+.forma-banner-content .forma-desc {
+    font-size: 22px;
+    line-height: 1.55;
+    max-width: 90%;
+}
+
+.forma-banner-visual {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forma-banner-visual img {
+    width: 100%;
+    max-width: none;
+    object-fit: contain;
+}
+
+.forma-banner-visual.flush-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.forma-banner-visual.flush-right img {
+    max-width: none;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Alternating Rows
+   -------------------------------------------------------------------------- */
+.forma-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 80px;
+    padding: 40px;
+    background: var(--forma-bg-card);
+    border-radius: var(--forma-radius);
+}
+
+.forma-row:last-child { margin-bottom: 0; }
+.forma-row.no-gap { background: transparent; padding: 40px 0 0; }
+
+.forma-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.forma-row-img,
+.forma-row-txt {
+    flex: 1;
+    min-width: 0;
+}
+
+.forma-row-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forma-row-img img {
+    max-width: 480px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.forma-row-txt {
+    text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Duo Cards (Body Scan / SL-Track)
+   -------------------------------------------------------------------------- */
+.forma-duo {
+    display: flex;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.forma-duo-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.forma-duo-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    padding: 36px 24px;
+    min-height: 280px;
+}
+
+.forma-duo-img img {
+    max-height: 260px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.forma-duo-txt {
+    flex: 1;
+    padding: 24px 20px 28px;
+    text-align: center;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #d0e8ff 100%);
+}
+
+.forma-duo-txt .forma-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.forma-duo-txt .forma-desc {
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   Feature Stack (ZG / Space / Air / Heat)
+   -------------------------------------------------------------------------- */
+.forma-feature-stack {
+    padding: 0 0 var(--forma-section-pad);
+}
+
+.forma-feature-stack-box {
+    border-radius: 40px;
+    overflow: hidden;
+    border: 1px solid #e2e8ec;
+}
+
+.forma-feature-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 36px 44px;
+}
+
+.forma-feature-panel.zg {
+    background: linear-gradient(180deg, #dbe9f6 0%, #e8f0f6 18%, #f2f2f2 30%, #f2f2f2 100%);
+    padding-bottom: 56px;
+}
+
+.forma-feature-panel.zg .forma-panel-img {
+    background: #f2f2f2;
+    margin-top: 8px;
+    padding-bottom: 8px;
+}
+
+.forma-feature-panel.space,
+.forma-feature-panel.air,
+.forma-feature-panel.heat {
+    background: #f2f2f2;
+}
+
+.forma-feature-panel .forma-icon.center {
+    margin-bottom: 24px;
+}
+
+.forma-feature-panel .forma-icon.center img {
+    width: 64px;
+    margin: 0 auto;
+}
+
+.forma-title.center {
+    text-align: center;
+}
+
+.forma-title.uppercase {
+    font-size: 34px;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    margin-bottom: 28px;
+}
+
+.forma-title.heat-title .red {
+    color: var(--forma-red);
+}
+
+.forma-desc.center {
+    max-width: 720px;
+    margin: 0 auto 36px;
+    font-size: 22px;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.forma-note.center {
+    max-width: 720px;
+    margin: -20px auto 32px;
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+}
+
+.forma-feature-stack .forma-panel-img img {
+    max-width: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Space-Saving ~ Heating: ZG보다 작게 */
+.forma-feature-panel.space .forma-panel-img img,
+.forma-feature-panel.air .forma-panel-img img,
+.forma-feature-panel.heat .forma-panel-img img {
+    max-width: 360px;
+}
+
+.forma-panel-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.forma-panel-img img {
+    max-width: 400px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Center feature block (Foot Rollers, etc.) */
+.forma-block.center {
+    text-align: center;
+}
+
+.forma-block.center .forma-desc {
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.forma-block-img img {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Program Icon Grids
+   -------------------------------------------------------------------------- */
+.forma-programs {
+    padding-top: 0;
+}
+
+.forma-icon-grid {
+    display: grid;
+    gap: 28px 16px;
+    justify-items: center;
+}
+
+.forma-icon-grid.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.forma-icon-grid.cols-5.manual {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.forma-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.forma-icon-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.forma-icon-item span {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.3;
+    color: var(--forma-title);
+    letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   Center Feature Block (Foot Rollers)
+   -------------------------------------------------------------------------- */
+.forma-block.center .forma-icon.lg {
+    margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   Charge Duo (Wireless / USB)
+   -------------------------------------------------------------------------- */
+.forma-charge-duo {
+    display: flex;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.forma-charge-card {
+    flex: 1;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma-charge-img {
+    width: 100%;
+    padding: 0;
+    line-height: 0;
+}
+
+.forma-charge-img.grad-left {
+    background: linear-gradient(135deg, #dceeff 0%, #eef5fb 45%, #ffffff 100%);
+}
+
+.forma-charge-img.grad-right {
+    background: linear-gradient(225deg, #dceeff 0%, #eef5fb 45%, #ffffff 100%);
+}
+
+.forma-charge-img img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    object-fit: cover;
+}
+
+.forma-charge-txt {
+    padding: 20px 24px 24px;
+    text-align: left;
+}
+
+.forma-charge-txt .forma-title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.forma-charge-txt .forma-desc {
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: none;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Doorway & Packaging
+   -------------------------------------------------------------------------- */
+.forma-doorway .forma-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.forma-doorway-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.forma-doorway-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+}
+
+.forma-doorway-frame {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+}
+
+.forma-doorway-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.forma-doorway-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.forma-box-img {
+    width: 90%;
+    flex-shrink: 0;
+}
+
+.forma-box-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.forma-guide {
+    flex: 1;
+}
+
+.forma-guide-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--forma-title);
+}
+
+.forma-guide-list div {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Dimensions
+   -------------------------------------------------------------------------- */
+.forma-dim-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 60px;
+}
+
+.forma-dim-img img {
+    max-height: 520px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Specification Table
+   -------------------------------------------------------------------------- */
+.spec-section {
+    background: #ffffff;
+    padding: 80px 0 100px;
+}
+
+.spec-section .container {
+    width: 100%;
+    max-width: var(--forma-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.spec-section .container > div:first-child {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 48px;
+    color: var(--forma-title);
+    letter-spacing: 0.02em;
+}
+
+.spec-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #e5e5e5;
+}
+
+.spec-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 22px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.spec-row.no-border {
+    border-bottom: none;
+}
+
+.spec-label {
+    width: 32%;
+    min-width: 200px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.spec-value {
+    flex: 1;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 20px;
+    color: #444444;
+    line-height: 1.6;
+}
+
+.spec-value.split-col {
+    display: flex;
+    gap: 64px;
+}
+
+.col-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-item strong {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.col-item span {
+    color: #444444;
+}
+
+.red-link {
+    color: var(--forma-red);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.red-link:hover {
+    opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .forma-icon-grid.cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --forma-section-pad: 48px;
+    }
+
+    .forma-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .forma-desc {
+        font-size: 18px;
+        text-align: center;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .forma-desc.center {
+        font-size: 18px;
+        margin: 0 auto 28px;
+        text-align: center;
+        max-width: 520px;
+    }
+
+    .forma-banner-content .forma-desc {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .forma-charge-txt .forma-desc,
+    .forma-duo-txt .forma-desc {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .forma-intro-desc {
+        font-size: 16px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .forma-card-blue .forma-title {
+        text-align: center;
+    }
+
+    .forma-charge-txt .forma-title,
+    .forma-charge-txt .forma-desc {
+        text-align: center;
+    }
+
+    .forma-duo-txt .forma-title,
+    .forma-duo-txt .forma-desc {
+        text-align: center;
+    }
+
+    .forma-feature-panel .forma-title,
+    .forma-feature-panel .forma-desc,
+    .forma-feature-panel .forma-note {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .forma-feature-panel .forma-desc,
+    .forma-feature-panel .forma-note {
+        max-width: 520px;
+    }
+
+    .forma-slider-main {
+        height: 320px;
+    }
+
+    .forma-nav img { width: 18px; }
+    .forma-nav.prev { left: 0; }
+    .forma-nav.next { right: 0; }
+
+    .forma-swatches {
+        margin-top: 12px;
+        padding: 8px 14px;
+    }
+
+    .forma-swatch {
+        width: 26px;
+        height: 26px;
+    }
+
+    .forma-icon img {
+        width: 44px;
+    }
+
+    .forma-icon.lg img {
+        width: 52px;
+    }
+
+    .forma-banner-content .forma-icon {
+        margin-bottom: 14px;
+    }
+
+    .forma-banner-content .forma-icon img {
+        width: 44px;
+    }
+
+    .forma-feature-panel .forma-icon.center {
+        margin-bottom: 16px;
+    }
+
+    .forma-feature-panel .forma-icon.center img {
+        width: 48px;
+    }
+
+    .forma-icon-item img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .forma-card-light,
+    .forma-card-blue {
+        padding: 28px 20px;
+    }
+
+    .forma-feature-panel {
+        padding: 0 20px 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forma-feature-panel.space .forma-panel-img,
+    .forma-feature-panel.air .forma-panel-img,
+    .forma-feature-panel.heat .forma-panel-img {
+        order: -1;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .forma-feature-panel.zg {
+        background: linear-gradient(180deg, #dbe9f6 0%, #e8f0f6 22%, #f2f2f2 45%, #f2f2f2 100%);
+        padding: 36px 20px 72px;
+    }
+
+    .forma-feature-panel.zg .forma-panel-img {
+        order: unset;
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 0;
+        padding-bottom: 12px;
+    }
+
+    .forma-feature-panel.space,
+    .forma-feature-panel.air,
+    .forma-feature-panel.heat {
+        padding-top: 0;
+    }
+
+    .forma-container,
+    .spec-section .container {
+        padding: 0 16px;
+    }
+
+    .forma-title.uppercase {
+        font-size: 26px;
+    }
+
+    .forma-feature-stack .forma-panel-img img {
+        max-width: 100%;
+    }
+
+    .forma-banner-card.img-left,
+    .forma-banner-card.img-right {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+
+    .forma-banner-card.img-left {
+        background: linear-gradient(to bottom, #dceeff 0%, #e8f2fa 35%, #eceef1 70%);
+    }
+
+    .forma-banner-card.img-right {
+        background: linear-gradient(to bottom, #dceeff 0%, #e8f2fa 35%, #eceef1 70%);
+    }
+
+    .forma-banner-card.img-right .forma-banner-visual {
+        order: -1;
+    }
+
+    .forma-banner-card.img-left .forma-banner-content,
+    .forma-banner-card.img-right .forma-banner-content {
+        padding: 24px 20px 32px;
+    }
+
+    .forma-banner-content,
+    .forma-banner-content .forma-title,
+    .forma-banner-content .forma-desc {
+        text-align: center;
+    }
+
+    .forma-charge-txt {
+        padding: 20px 20px 28px;
+        text-align: center;
+    }
+
+    .forma-duo-txt {
+        padding: 20px 18px 28px;
+        text-align: center;
+    }
+
+    .forma-banner-content .forma-icon img {
+        margin: 0 auto;
+    }
+
+    .forma-banner-content .forma-title {
+        font-size: 28px;
+    }
+
+    .forma-banner-content .forma-desc {
+        font-size: 18px;
+    }
+
+    .forma-banner-visual {
+        flex: none;
+        width: 100%;
+    }
+
+    .forma-banner-visual.flush-right {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .forma-banner-visual.flush-right img {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .forma-banner-visual img {
+        max-width: 100%;
+    }
+
+    .forma-row,
+    .forma-row.reverse {
+        flex-direction: column;
+        gap: 28px;
+        padding: 28px 20px;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    .forma-row-txt {
+        text-align: center;
+    }
+
+    .forma-row.no-gap {
+        padding: 24px 0 0;
+    }
+
+    .forma-duo {
+        flex-direction: column;
+    }
+
+    .forma-icon-grid.cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 12px;
+    }
+
+    .forma-icon-grid.cols-5.manual {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forma-charge-duo {
+        flex-direction: column;
+    }
+
+    .forma-doorway .forma-container {
+        padding: 0 16px;
+    }
+
+    .forma-doorway-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .forma-doorway-left {
+        width: 100%;
+        max-width: 260px;
+        min-height: 0;
+    }
+
+    .forma-doorway-frame {
+        position: static;
+        flex: none;
+        height: auto;
+        width: 100%;
+    }
+
+    .forma-doorway-frame img {
+        position: static;
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: initial;
+    }
+
+    .forma-doorway-right {
+        align-items: center;
+        width: 100%;
+    }
+
+    .forma-box-img {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .forma-box-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .forma-guide {
+        text-align: center;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .forma-guide-list div {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .forma-dim-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .forma-dim-img img {
+        max-height: 360px;
+        margin: 0 auto;
+    }
+
+    .spec-section {
+        padding: 48px 0 64px;
+    }
+
+    .spec-section .container > div:first-child {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .spec-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        padding: 18px 0;
+    }
+
+    .spec-label {
+        width: 100%;
+        min-width: 0;
+        font-size: 15px;
+    }
+
+    .spec-value {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .spec-value.split-col {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .col-item {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .forma-icon-grid.cols-4,
+    .forma-icon-grid.cols-5.manual {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forma-icon img,
+    .forma-banner-content .forma-icon img,
+    .forma-icon-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .forma-feature-panel .forma-icon.center img {
+        width: 44px;
+    }
+
+    .forma-swatch {
+        width: 24px;
+        height: 24px;
+    }
+
+    .forma-banner-content .forma-title {
+        font-size: 24px;
+    }
+
+    .forma-banner-content .forma-desc {
+        font-size: 16px;
+    }
+
+    .spec-label,
+    .spec-value {
+        font-size: 14px;
+    }
+
+    .spec-value.split-col {
+        gap: 12px;
+    }
+}
