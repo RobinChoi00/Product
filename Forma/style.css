@@ -306,11 +306,11 @@ img {
 }
 
 .forma-banner-card.img-left .forma-banner-content {
-    padding: 28px 24px 28px 36px;
+    padding: 28px 24px 28px 56px;
 }
 
 .forma-banner-card.img-right .forma-banner-content {
-    padding: 28px 24px 28px 36px;
+    padding: 28px 24px 28px 56px;
 }
 
 .forma-banner-content .forma-icon {
@@ -354,6 +354,15 @@ img {
 .forma-banner-visual.flush-right img {
     max-width: none;
     margin: 0;
+}
+
+.forma-banner-card.mechanism .forma-banner-visual {
+    flex: 0 0 42%;
+}
+
+.forma-banner-card.mechanism .forma-banner-visual img {
+    max-width: 460px;
+    width: 92%;
 }
 
 /* --------------------------------------------------------------------------
@@ -421,12 +430,12 @@ img {
     align-items: center;
     justify-content: center;
     background: #000;
-    padding: 36px 24px;
-    min-height: 280px;
+    padding: 48px 28px;
+    min-height: 340px;
 }
 
 .forma-duo-img img {
-    max-height: 260px;
+    max-height: 300px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
@@ -434,9 +443,10 @@ img {
 
 .forma-duo-txt {
     flex: 1;
-    padding: 24px 20px 28px;
+    padding: 32px 36px 40px;
     text-align: center;
     background: linear-gradient(to bottom, #f0f0f0 0%, #d0e8ff 100%);
+    min-height: 280px;
 }
 
 .forma-duo-txt .forma-title {
@@ -661,7 +671,7 @@ img {
 }
 
 .forma-charge-txt {
-    padding: 20px 24px 24px;
+    padding: 20px 0 24px;
     text-align: left;
 }
 
@@ -669,6 +679,7 @@ img {
     font-size: 28px;
     line-height: 1.25;
     margin-bottom: 16px;
+    padding: 0;
 }
 
 .forma-charge-txt .forma-desc {
@@ -676,6 +687,7 @@ img {
     line-height: 1.55;
     max-width: none;
     margin: 0;
+    padding: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -909,6 +921,13 @@ img {
         text-align: center;
     }
 
+    .forma-charge-txt .forma-desc {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
     .forma-intro-desc {
         font-size: 16px;
         margin-bottom: 40px;
@@ -1072,12 +1091,27 @@ img {
     }
 
     .forma-charge-txt {
-        padding: 20px 20px 28px;
+        padding: 20px 0 28px;
         text-align: center;
     }
 
+    .forma-charge-txt .forma-title,
+    .forma-charge-txt .forma-desc {
+        padding: 0;
+    }
+
+    .forma-duo-img {
+        min-height: 280px;
+        padding: 36px 20px;
+    }
+
+    .forma-duo-img img {
+        max-height: 240px;
+    }
+
     .forma-duo-txt {
-        padding: 20px 18px 28px;
+        padding: 24px 20px 32px;
+        min-height: 0;
         text-align: center;
     }
 
@@ -1110,6 +1144,11 @@ img {
 
     .forma-banner-visual img {
         max-width: 100%;
+    }
+
+    .forma-banner-card.mechanism .forma-banner-visual img {
+        max-width: 88%;
+        width: 88%;
     }
 
     .forma-row,
