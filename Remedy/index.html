@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Remedy Pro 4D Massage Chair</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="remedy-hero">
+        <img src="images/1.remedy_product_main.png" alt="Titan Remedy Pro 4D Main Banner">
+    </div>
+
+    <div class="remedy-intro">
+        <div class="remedy-container">
+            <div class="remedy-intro-desc">
+                Elevate your daily wellness routine with the Titan Remedy Pro 4D Massage Chair.
+                Delivering an exceptionally lifelike massage, it transforms your home or office into a private retreat
+                for relaxation and recovery. Whether you’re starting your day refreshed or unwinding in the evening,
+                its advanced 4D massage technology and premium features provide a personalized experience
+                inspired by the world’s finest spas.
+            </div>
+
+            <div class="remedy-slider">
+                <div class="remedy-slider-main">
+                    <div class="remedy-nav prev" onclick="moveSlide(-1)">
+                        <img src="images/6.remedy_left_arrow.png" alt="Prev">
+                    </div>
+                    <div class="remedy-chair">
+                        <img id="current-chair" src="images/5.remedy_colors_all.png" alt="Remedy Color Options">
+                    </div>
+                    <div class="remedy-nav next" onclick="moveSlide(1)">
+                        <img src="images/7.remedy_right_arrow.png" alt="Next">
+                    </div>
+                </div>
+
+                <div class="remedy-swatches">
+                    <div class="remedy-swatch active" onclick="changeColor(0)">
+                        <img src="images/9.remedy_swatch_all.png" alt="All">
+                    </div>
+                    <div class="remedy-swatch" onclick="changeColor(1)">
+                        <img src="images/10.remedy_swatch_black.png" alt="Black">
+                    </div>
+                    <div class="remedy-swatch" onclick="changeColor(2)">
+                        <img src="images/11.remedy_swatch_brown.png" alt="Brown">
+                    </div>
+                    <div class="remedy-swatch" onclick="changeColor(3)">
+                        <img src="images/12.remedy_swatch_taupe.png" alt="Taupe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-banners remedy-cards">
+        <div class="remedy-container">
+            <div class="remedy-banner-card img-right mechanism" style="--remedy-card-bg: url('images/18.remedy_4D_massage_BG.png')">
+                <div class="remedy-banner-content">
+                    <div class="remedy-icon">
+                        <img src="images/17.remedy_icon_gear.png" alt="4D Massage Mechanism">
+                    </div>
+                    <div class="remedy-title uppercase">
+                        4D MASSAGE<br>MECHANISM
+                    </div>
+                    <div class="remedy-desc">
+                        Unlike traditional massage rollers, 4D Massage Mechanism intelligently adjusts its
+                        speed, depth, and rhythm to mimic the hands of a professional massage therapist.
+                        The result is a more personalized, lifelike massage that targets muscle tension with greater
+                        precision for deeper, more natural relief.
+                    </div>
+                </div>
+                <div class="remedy-banner-visual mechanism-frame">
+                    <img src="images/19.remedy_4D.png" alt="4D Massage Mechanism">
+                </div>
+            </div>
+
+            <div class="remedy-banner-card stack bluetooth">
+                <div class="remedy-banner-content center">
+                    <div class="remedy-icon center">
+                        <img src="images/20.remedy_icon_hand.png" alt="Bluetooth Controller">
+                    </div>
+                    <div class="remedy-title uppercase center">
+                        BLUETOOTH CONTROLLER
+                    </div>
+                    <div class="remedy-desc center">
+                        The Bluetooth controller puts effortless control at your fingertips, allowing you to operate your smartphone directly from the remote. 
+                        Change your music, manage your settings, 
+                        and stay connected—all without reaching for your phone, so you can remain fully immersed in relaxation.
+
+                    </div>
+                </div>
+                <div class="remedy-banner-visual bluetooth-visual">
+                    <img src="images/22b.remedy_bluetooth_composite.png" alt="Bluetooth Controller and Phone Holder">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-cards">
+        <div class="remedy-container">
+            <div class="remedy-duo">
+                <div class="remedy-duo-card">
+                    <div class="remedy-duo-img body-scan">
+                        <img src="images/23.remedy_body-scan.png" alt="Body Scan Technology">
+                    </div>
+                    <div class="remedy-duo-txt">
+                        <div class="remedy-icon center">
+                            <img src="images/24.remedy_icon_body-scan.png" alt="Body Scan">
+                        </div>
+                        <div class="remedy-title uppercase center">
+                            BODY SCAN<br>TECHNOLOGY
+                        </div>
+                        <div class="remedy-desc center">
+                            Body Scan Technology uses advanced sensors to analyze your body’s shape, height,
+                            and pressure points, creating a massage experience tailored specifically to you.
+                            By identifying key areas such as your neck, shoulders, and spine,
+                            the chair automatically adjusts its rollers and massage settings to deliver
+                            precise comfort, enhanced relief, and a truly personalized massage.
+                        </div>
+                    </div>
+                </div>
+                <div class="remedy-duo-card">
+                    <div class="remedy-duo-img">
+                        <img src="images/25.remedy_SL.png" alt="SL-Track System">
+                    </div>
+                    <div class="remedy-duo-txt">
+                        <div class="remedy-icon center">
+                            <img src="images/26.remedy_icon_SL.png" alt="SL-Track">
+                        </div>
+                        <div class="remedy-title uppercase center">
+                            SL-TRACK<br>SYSTEM
+                        </div>
+                        <div class="remedy-desc center">
+                            The advanced SL-Track System is designed to follow the natural curve of your spine,
+                            extending massage coverage from your neck to your glutes.
+                            By delivering continuous, precision-targeted relief along the entire body,
+                            it creates a deeper, more immersive massage experience that feels both natural and restorative.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-feature-stack remedy-cards">
+        <div class="remedy-container">
+            <div class="remedy-feature-stack-box">
+                <div class="remedy-feature-panel zg">
+                    <div class="remedy-icon center">
+                        <img src="images/27.remedy_icon_ZG.png" alt="Zero Gravity">
+                    </div>
+                    <div class="remedy-title uppercase center">
+                        3-STAGE<br>ZERO GRAVITY RECLINING
+                    </div>
+                    <div class="remedy-desc center">
+                        Originally pioneered by NASA technology, the Remedy Pro 4D features Zero Gravity positioning that
+                        reclines your body into a near weightless state for an elevated massage experience.
+                        By helping reduce spinal pressure, it promotes deeper relaxation and greater comfort from start to finish.
+                    </div>
+                    <div class="remedy-panel-img">
+                        <img src="images/28.remedy_ZG.png" alt="Zero Gravity Reclining">
+                    </div>
+                </div>
+
+                <div class="remedy-feature-panel space">
+                    <div class="remedy-icon center">
+                        <img src="images/29.remedy_icon_space-saving.png" alt="Space Saving">
+                    </div>
+                    <div class="remedy-title uppercase center">
+                        SPACE-SAVING<br>TECHNOLOGY
+                    </div>
+                    <div class="remedy-desc center">
+                        Space-Saving Technology allows Remedy Pro 4D to recline smoothly while requiring
+                        minimal clearance of 9 inches from the wall, making it ideal for smaller spaces
+                        without sacrificing comfort or performance.
+                    </div>
+                    <div class="remedy-panel-img">
+                        <img src="images/30.remedy_space-saving_fade.png" alt="Space-Saving Technology">
+                    </div>
+                </div>
+
+                <div class="remedy-feature-panel air">
+                    <div class="remedy-icon center">
+                        <img src="images/31.remedy_icon_air-cells.png" alt="Air Compression">
+                    </div>
+                    <div class="remedy-title uppercase center">
+                        30-CELL AIR<br>COMPRESSION MASSAGE
+                    </div>
+                    <div class="remedy-desc center">
+                        Experience full-body comfort with a 30-cell air compression system that wraps around key areas
+                        including the shoulders, arms, calves, and feet. Rhythmic inflation and deflation
+                        help improve circulation, ease tension, and deliver a soothing, spa-like massage.
+                    </div>
+                    <div class="remedy-panel-img">
+                        <img src="images/32.remedy_air-cells.png" alt="30-Cell Air Compression Massage">
+                    </div>
+                </div>
+
+                <div class="remedy-feature-panel heat">
+                    <div class="remedy-icon center">
+                        <img src="images/33.remedy_icon_heating.png" alt="Heating Therapy">
+                    </div>
+                    <div class="remedy-title uppercase center">
+                        LUMBAR &amp; CALF<br>HEATING THERAPY
+                    </div>
+                    <div class="remedy-desc center">
+                        The built-in heating therapy gently warms the <strong>lumbar and calf areas</strong> to help
+                        loosen tight muscles, improve blood circulation, and enhance overall relaxation.
+                        This soothing heat feature adds an extra layer of comfort, making every massage deeper,
+                        more effective, and more restorative.
+                    </div>
+                    <div class="remedy-note center">
+                        * The heating therapy provides warmth in the range of<br>
+                        approximately 75 – 83°F.
+                    </div>
+                    <div class="remedy-panel-img">
+                        <img src="images/34.remedy_heating_fade.png" alt="Lumbar &amp; Calf Heating Therapy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-programs remedy-cards">
+        <div class="remedy-container">
+            <div class="remedy-programs-card auto">
+                <div class="remedy-title uppercase center">
+                    <span class="blue">15 AUTO</span> PROGRAMS
+                </div>
+                <div class="remedy-desc center programs-lead">
+                    Enjoy thoughtfully designed massage programs that complement your lifestyle and maximize comfort.
+                </div>
+                <div class="remedy-icon-grid cols-5">
+                    <div class="remedy-icon-item">
+                        <img src="images/35.remedy_icon_relax.png" alt="Relax">
+                        <span>RELAX</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/36.remedy_icon_comfort.png" alt="Comfort">
+                        <span>COMFORT</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/37.remedy_icon_shoulder&amp;back.png" alt="Shoulder &amp; Neck">
+                        <span>SHOULDER &amp;<br>NECK</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/38.remedy_icon_back&amp;waist.png" alt="Back &amp; Waist">
+                        <span>BACK &amp;<br>WAIST</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/39.remedy_icon_rocking.png" alt="Rocking">
+                        <span>ROCKING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/40.remedy_icon_full-body.png" alt="Full Body Massage">
+                        <span>FULL BODY<br>MASSAGE</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/41.remedy_icon_spine-protection.png" alt="Spine Protection Massage">
+                        <span>SPINE PROTECTION<br>MASSAGE</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/42.remedy_icon_fatigue.png" alt="Fatigue Recovery">
+                        <span>FATIGUE<br>RECOVERY</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/43.remedy_icon_meridian.png" alt="Meridian Activation">
+                        <span>MERIDIAN<br>ACTIVATION</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/44.remedy_icon_prolonged.png" alt="Prolonged Sitting Stretch">
+                        <span>PROLONGED<br>SITTING STRETCH</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/45.remedy_icon_sleep-aid.png" alt="Sleep Aid">
+                        <span>SLEEP<br>AID</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/46.remedy_icon_leisure-wellness.png" alt="Leisure Wellness">
+                        <span>LEISURE<br>WELLNESS</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/47.remedy_icon_sport-recovery.png" alt="Sport Recovery">
+                        <span>SPORT<br>RECOVERY</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/48.remedy_icon_superior.png" alt="Superior Enjoyable">
+                        <span>SUPERIOR<br>ENJOYABLE</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/49.remedy_icon_body-balance.png" alt="Body Balance">
+                        <span>BODY<br>BALANCE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="remedy-programs-card">
+                <div class="remedy-title uppercase center">
+                    <span class="blue">10 MANUAL</span> MODES
+                </div>
+                <div class="remedy-desc center programs-lead">
+                    Targeted massage programs tailored to your preferences.
+                </div>
+                <div class="remedy-icon-grid cols-5 manual">
+                    <div class="remedy-icon-item">
+                        <img src="images/50.remedy_icon_shiatsu.png" alt="Shiatsu">
+                        <span>SHIATSU</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/51.remedy_icon_knocking.png" alt="Knocking">
+                        <span>KNOCKING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/52.remedy_icon_kneading.png" alt="Kneading">
+                        <span>KNEADING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/53.remedy_icon_tapping.png" alt="Tapping">
+                        <span>TAPPING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/54.remedy_icon_kneading&amp;tapping.png" alt="Kneading &amp; Tapping">
+                        <span>KNEADING &amp; TAPPING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/55.remedy_icon_4D-shiatsu.png" alt="4D Shiatsu">
+                        <span>4D SHIATSU</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/56.remedy_icon_4D-knocking.png" alt="4D Knocking">
+                        <span>4D KNOCKING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/57.remedy_icon_4D-kneading.png" alt="4D Kneading">
+                        <span>4D KNEADING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/58.remedy_icon_4D-tapping.png" alt="4D Tapping">
+                        <span>4D TAPPING</span>
+                    </div>
+                    <div class="remedy-icon-item">
+                        <img src="images/59.remedy_icon_kneading&amp;tapping.png" alt="4D Kneading &amp; Tapping">
+                        <span>4D KNEADING &amp; TAPPING</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-banners remedy-cards">
+        <div class="remedy-container">
+            <div class="remedy-banner-card img-left foot-msg" style="--remedy-card-bg: url('images/63.remedy_foot_msg_BG.png')">
+                <div class="remedy-banner-content">
+                    <div class="remedy-icon">
+                        <img src="images/60.remedy_icon_feet.png" alt="Foot Massage">
+                    </div>
+                    <div class="remedy-title uppercase">
+                        SPECIALIZED<br>FOOT MASSAGE
+                    </div>
+                    <div class="remedy-desc">
+                        Treat your feet to soothing relief with the integrated Foot Rollers, designed with
+                        strategically placed protruding nodes that gently stimulate the soles while rolling motions
+                        mimic the feel of a revitalizing foot massage. Working together, they help ease tension
+                        and leave your feet feeling refreshed.
+                    </div>
+                </div>
+                <div class="remedy-banner-visual foot-stack">
+                    <img src="images/61.remedy_foot_msg1.png" alt="Foot Massage Rollers">
+                    <img src="images/62.remedy_foot_msg2.png" alt="Foot Massage Detail">
+                </div>
+            </div>
+
+            <div class="remedy-banner-card img-right foot-extend" style="--remedy-card-bg: url('images/66.remedy_foot-extension_BG.png')">
+                <div class="remedy-banner-visual">
+                    <img src="images/65.remedy_foot-extension.png" alt="Automatic Extendable Footrest">
+                </div>
+                <div class="remedy-banner-content">
+                    <div class="remedy-icon">
+                        <img src="images/64.remedy_icon_extend.png" alt="Extend">
+                    </div>
+                    <div class="remedy-title uppercase">
+                        AUTOMATIC<br>EXTENDABLE<br>FOOTREST
+                    </div>
+                    <div class="remedy-desc">
+                        Designed for customized comfort, the Remedy Pro 4D Automatic Extendable Footrest
+                        adjusts smoothly to fit users of varying heights and body types.
+                        By extending up to <strong>6.5 inches</strong>, it provides enhanced leg support,
+                        greater comfort, and a more personalized full-body massage experience.
+                    </div>
+                </div>
+            </div>
+
+            <div class="remedy-banner-card img-left speakers" style="--remedy-card-bg: url('images/69.remedy_speakers_BG.png')">
+                <div class="remedy-banner-content">
+                    <div class="remedy-icon">
+                        <img src="images/67.remedy_icon_bluetooth.png" alt="Bluetooth Speakers">
+                    </div>
+                    <div class="remedy-title uppercase">
+                        QUALITY<br>BLUETOOTH<br>SPEAKERS
+                    </div>
+                    <div class="remedy-desc">
+                        Enjoy an immersive relaxation experience with high-quality Bluetooth speakers that deliver
+                        clear, rich sound. Easily connect your device to listen to music, podcasts,
+                        or guided meditation while you unwind in comfort.
+                    </div>
+                </div>
+                <div class="remedy-banner-visual">
+                    <img src="images/68.remedy_speakers.png" alt="Bluetooth Speakers">
+                </div>
+            </div>
+
+            <div class="remedy-banner-card img-right led" style="--remedy-card-bg: url('images/72.remedy_LED_BG.png')">
+                <div class="remedy-banner-visual">
+                    <img src="images/71.remedy_LED.png" alt="LED Lighting Detail">
+                </div>
+                <div class="remedy-banner-content">
+                    <div class="remedy-icon">
+                        <img src="images/70.remedy_icon_light.png" alt="LED Lighting">
+                    </div>
+                    <div class="remedy-title uppercase">
+                        LED LIGHTING<br>DETAIL
+                    </div>
+                    <div class="remedy-desc">
+                        Elegant LED accent lighting enhances the chair’s modern design,
+                        creating a sophisticated ambiance that elevates your relaxation experience.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-cards">
+        <div class="remedy-container">
+            <div class="remedy-convenience">
+                <div class="remedy-convenience-card">
+                    <div class="remedy-convenience-img">
+                        <img src="images/73.remedy_remote.png" alt="Touchscreen Remote">
+                    </div>
+                    <div class="remedy-convenience-txt">
+                        <div class="remedy-title uppercase">TOUCHSCREEN REMOTE</div>
+                        <div class="remedy-desc">
+                            The intuitive touchscreen remote makes it easy to customize your massage,
+                            adjust settings, and access features with just a simple tap.
+                        </div>
+                    </div>
+                </div>
+                <div class="remedy-convenience-card">
+                    <div class="remedy-convenience-img">
+                        <img src="images/74.remedy_side-panels.png" alt="Shortcut Panel">
+                    </div>
+                    <div class="remedy-convenience-txt">
+                        <div class="remedy-title uppercase">SHORTCUT PANEL</div>
+                        <div class="remedy-desc">
+                            The Quick Shortcut Panel puts key controls within easy reach, allowing you to quickly adjust
+                            massage settings, recline positions, and comfort features.
+                        </div>
+                    </div>
+                </div>
+                <div class="remedy-convenience-card">
+                    <div class="remedy-convenience-img">
+                        <img src="images/75.remedy_USB.png" alt="USB Charging Port">
+                    </div>
+                    <div class="remedy-convenience-txt">
+                        <div class="remedy-title uppercase">USB CHARGING PORT</div>
+                        <div class="remedy-desc">
+                            Conveniently charge your phone or tablet while you relax with the built-in USB charging port,
+                            designed to keep your devices powered during every massage session.
+                        </div>
+                    </div>
+                </div>
+                <div class="remedy-convenience-card">
+                    <div class="remedy-convenience-img">
+                        <img src="images/76.remedy_wireless.png" alt="Wireless Charging">
+                    </div>
+                    <div class="remedy-convenience-txt">
+                        <div class="remedy-title uppercase">WIRELESS CHARGING</div>
+                        <div class="remedy-desc">
+                            The built-in wireless charging surface lets you conveniently power compatible devices without cords.
+                            Simply place your phone on the charging area and relax while it charges.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-doorway">
+        <div class="remedy-container">
+            <div class="remedy-title section-head center">MINIMUM DOORWAY &amp; PACKAGING</div>
+            <div class="remedy-doorway-layout">
+                <div class="remedy-doorway-left">
+                    <div class="remedy-doorway-frame">
+                        <img src="images/77.remedy_min.doorway.png" alt="Minimum Doorway">
+                    </div>
+                </div>
+                <div class="remedy-doorway-right">
+                    <div class="remedy-box-img">
+                        <img src="images/78.remedy_packaging.png" alt="Packaging">
+                    </div>
+                    <div class="remedy-guide">
+                        <div class="remedy-guide-title"><strong>Measuring Guide</strong></div>
+                        <div class="remedy-guide-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remedy-section remedy-dimensions">
+        <div class="remedy-container">
+            <div class="remedy-title section-head center">DIMENSIONS</div>
+            <div class="remedy-dim-row">
+                <div class="remedy-dim-img"><img src="images/79.remedy_dimensions1.png" alt="Front Dimensions"></div>
+                <div class="remedy-dim-img"><img src="images/80.remedy_dimensions2.png" alt="Side Dimensions"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Titan Remedy</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="" class="red-link" target="_blank">Download</a>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Upright</strong>
+                            <span>30" x 63" x 45"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>30" x 68" x 36.5"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">187.39 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>21.5"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>19"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">30"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Maximum User Weight</div>
+                    <div class="spec-value">270 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>30.31" x 51.97" x 47.24"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border">
+                    <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>220.46 lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

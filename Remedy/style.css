@@ -1,0 +1,1974 @@
+/* ==========================================================================
+   Titan Remedy Pro 4D — Product Page Styles
+   Based on Remedy_product.ai / remedy_product_v3.jpg
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --remedy-blue: #4da8ff;
+    --remedy-red: #ee3e30;
+    --remedy-bg: #ffffff;
+    --remedy-dark: #0a0a0a;
+    --remedy-card: #141414;
+    --remedy-card-mid: #1c1c1c;
+    --remedy-title: #606060;
+    --remedy-title-dark: #ffffff;
+    --remedy-desc: #9e9e9e;
+    --remedy-desc-dark: #d0d0d0;
+    --remedy-strong: #606060;
+    --remedy-strong-dark: #ffffff;
+    --remedy-radius: 40px;
+    --remedy-radius-sm: 24px;
+    --remedy-max: 1200px;
+    --remedy-section-pad: 40px;
+    --remedy-section-gap: 220px;
+    --remedy-card-gap: 40px;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Roboto', 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--remedy-bg);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------- */
+.remedy-container {
+    width: 100%;
+    max-width: var(--remedy-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.remedy-section {
+    padding: var(--remedy-section-pad) 0;
+}
+
+/* Black cards — same gap everywhere (inside + between card sections) */
+.remedy-section.remedy-cards {
+    padding: 0;
+}
+
+.remedy-section.remedy-cards + .remedy-section.remedy-cards {
+    padding-top: var(--remedy-card-gap);
+}
+
+/* Larger pause only when leaving white/intro or entering doorway/specs */
+.remedy-intro + .remedy-section.remedy-cards,
+.remedy-section.remedy-cards + .remedy-doorway,
+.remedy-doorway + .remedy-dimensions,
+.remedy-section + .spec-section {
+    padding-top: var(--remedy-section-gap);
+}
+
+.center { text-align: center; }
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.remedy-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--remedy-title);
+    margin: 0 0 24px;
+}
+
+.remedy-title.uppercase { text-transform: uppercase; }
+.remedy-title.center { text-align: center; }
+.remedy-title.section-head { margin-bottom: 48px; color: #2a2a2a; }
+.remedy-title .blue { color: var(--remedy-blue); }
+
+.remedy-desc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--remedy-desc);
+    margin: 0;
+}
+
+.remedy-desc strong {
+    font-weight: 600;
+    color: var(--remedy-strong);
+}
+
+.remedy-note {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: #888;
+    margin-top: 14px;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   Icons
+   -------------------------------------------------------------------------- */
+.remedy-icon {
+    margin-bottom: 16px;
+}
+
+.remedy-icon.center {
+    display: flex;
+    justify-content: center;
+}
+
+.remedy-icon img {
+    width: 56px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.remedy-hero {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.remedy-hero img {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Intro + Slider
+   -------------------------------------------------------------------------- */
+.remedy-intro {
+    padding: 72px 0 40px;
+    text-align: center;
+    background: #fff;
+}
+
+.remedy-intro-desc {
+    font-family: var(--font-body);
+    font-size: 24px;
+    line-height: 1.7;
+    color: #8a8a8a;
+    max-width: 980px;
+    margin: 0 auto 56px;
+}
+
+.remedy-intro-desc strong {
+    font-weight: 600;
+    color: #606060;
+}
+
+.remedy-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.remedy-slider-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.remedy-chair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+
+.remedy-chair img,
+#current-chair {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center center;
+    transition: opacity 0.25s ease;
+}
+
+.remedy-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 36px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.remedy-nav.prev { left: 8px; }
+.remedy-nav.next { right: 8px; }
+.remedy-nav:hover { opacity: 1; }
+.remedy-nav img { width: 100%; }
+
+.remedy-swatches {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 28px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #f0f0f0;
+}
+
+.remedy-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.remedy-swatch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remedy-swatch.active {
+    border-color: #222;
+    transform: scale(1.12);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Banner Cards
+   -------------------------------------------------------------------------- */
+.remedy-banner-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: var(--remedy-card-gap);
+    border-radius: var(--remedy-radius);
+    overflow: hidden;
+    background:
+        var(--remedy-card-bg, none) center / cover no-repeat,
+        linear-gradient(180deg, #1c1c1c 0%, #0a0a0a 100%);
+    color: #fff;
+}
+
+/* When a BG image is set, keep a light veil so text stays readable */
+.remedy-banner-card[style*="--remedy-card-bg"] {
+    background:
+        linear-gradient(180deg, rgba(10, 10, 10, 0.35) 0%, rgba(10, 10, 10, 0.55) 100%),
+        var(--remedy-card-bg) center / cover no-repeat,
+        linear-gradient(180deg, #1c1c1c 0%, #0a0a0a 100%);
+}
+
+.remedy-banner-card:last-child { margin-bottom: 0; }
+
+.remedy-banner-card.stack {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    background: #000;
+}
+
+.remedy-banner-card.stack.bluetooth {
+    background: #000;
+    overflow: hidden;
+}
+
+.remedy-banner-card.stack .remedy-banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 56px 48px 0;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.remedy-banner-card.stack.bluetooth .remedy-banner-content {
+    padding: 64px 56px 0;
+    max-width: 900px;
+}
+
+.remedy-banner-card.stack .remedy-banner-visual {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin-top: 0;
+}
+
+/* Designed composite from mockup — show full frame, no crop */
+.remedy-banner-card.stack .bluetooth-visual {
+    position: relative;
+    width: 100%;
+    background: #000;
+    line-height: 0;
+    overflow: visible;
+}
+
+.remedy-banner-card.stack .bluetooth-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.remedy-banner-card.stack.bluetooth .bluetooth-visual {
+    margin-top: 0;
+    overflow: visible;
+}
+
+.remedy-banner-card.stack.bluetooth .bluetooth-visual img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: center top;
+}
+
+/* Soft fade only on the RIGHT (chair) — don't cover the phone tip */
+.remedy-banner-card.stack.bluetooth .bluetooth-visual::before {
+    content: "";
+    position: absolute;
+    left: 38%;
+    right: 0;
+    top: 0;
+    height: 28%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 40%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.remedy-banner-content {
+    flex: 1;
+    min-width: 0;
+    padding: 48px 40px 48px 56px;
+}
+
+.remedy-banner-card.img-right .remedy-banner-content {
+    padding: 48px 32px 48px 56px;
+}
+
+.remedy-banner-card.img-left .remedy-banner-content {
+    padding: 48px 56px 48px 32px;
+}
+
+.remedy-banner-card .remedy-title {
+    color: var(--remedy-title-dark);
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.remedy-banner-card .remedy-desc {
+    color: var(--remedy-desc-dark);
+    font-size: 20px;
+}
+
+.remedy-banner-card .remedy-desc strong {
+    color: var(--remedy-strong-dark);
+}
+
+.remedy-banner-visual {
+    flex: 1.05;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.remedy-banner-visual.flush-right {
+    justify-content: flex-end;
+    padding-right: 0;
+}
+
+.remedy-banner-visual img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Bluetooth section images must not inherit the generic 520px cap */
+.remedy-banner-card.stack .bluetooth-visual img {
+    max-width: none;
+}
+
+.remedy-banner-visual.foot-stack {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.remedy-banner-visual.foot-stack img {
+    max-width: 420px;
+    border-radius: 16px;
+}
+
+/* Specialized Foot Massage — match finished mockup */
+.remedy-banner-card.foot-msg {
+    background:
+        linear-gradient(180deg, #161616 0%, #0a0a0a 55%, #141414 100%),
+        #000;
+    min-height: 520px;
+    padding: 40px 36px 40px 48px;
+    gap: 36px;
+    align-items: center;
+}
+
+.remedy-banner-card.foot-msg[style*="--remedy-card-bg"] {
+    background:
+        linear-gradient(180deg, rgba(8, 8, 8, 0.55) 0%, rgba(8, 8, 8, 0.72) 100%),
+        var(--remedy-card-bg) center / cover no-repeat,
+        #000;
+}
+
+.remedy-banner-card.foot-msg .remedy-banner-content {
+    flex: 1.05;
+    padding: 12px 12px 12px 16px;
+    text-align: left;
+}
+
+.remedy-banner-card.foot-msg .remedy-icon {
+    margin-bottom: 18px;
+}
+
+.remedy-banner-card.foot-msg .remedy-icon img {
+    width: 56px;
+    height: auto;
+}
+
+.remedy-banner-card.foot-msg .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.remedy-banner-card.foot-msg .remedy-desc {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+.remedy-banner-card.foot-msg .remedy-banner-visual.foot-stack {
+    flex: 0.95;
+    gap: 14px;
+    padding: 8px 8px 8px 0;
+    align-items: stretch;
+}
+
+.remedy-banner-card.foot-msg .remedy-banner-visual.foot-stack img {
+    max-width: none;
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Automatic Extendable Footrest — match finished mockup */
+.remedy-banner-card.foot-extend {
+    background:
+        linear-gradient(180deg, #161616 0%, #0a0a0a 55%, #141414 100%),
+        #000;
+    min-height: 480px;
+    padding: 36px 48px 36px 0;
+    gap: 40px;
+    align-items: center;
+}
+
+.remedy-banner-card.foot-extend[style*="--remedy-card-bg"] {
+    background:
+        linear-gradient(180deg, rgba(8, 8, 8, 0.45) 0%, rgba(8, 8, 8, 0.65) 100%),
+        var(--remedy-card-bg) center / cover no-repeat,
+        #000;
+}
+
+.remedy-banner-card.foot-extend .remedy-banner-visual {
+    flex: 1.05;
+    padding: 0;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+
+.remedy-banner-card.foot-extend .remedy-banner-visual img {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+}
+
+.remedy-banner-card.foot-extend .remedy-banner-content {
+    flex: 0.95;
+    padding: 12px 8px 12px 8px;
+    text-align: left;
+}
+
+.remedy-banner-card.foot-extend .remedy-icon {
+    margin-bottom: 18px;
+}
+
+.remedy-banner-card.foot-extend .remedy-icon img {
+    width: 56px;
+    height: auto;
+}
+
+.remedy-banner-card.foot-extend .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.remedy-banner-card.foot-extend .remedy-desc {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 460px;
+}
+
+.remedy-banner-card.foot-extend .remedy-desc strong {
+    color: #ffffff;
+}
+
+/* Quality Bluetooth Speakers — match finished mockup */
+.remedy-banner-card.speakers {
+    background:
+        linear-gradient(180deg, #161616 0%, #0a0a0a 55%, #141414 100%),
+        #000;
+    min-height: 480px;
+    padding: 36px 0 0 48px;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.remedy-banner-card.speakers[style*="--remedy-card-bg"] {
+    background:
+        linear-gradient(180deg, rgba(8, 8, 8, 0.45) 0%, rgba(8, 8, 8, 0.65) 100%),
+        var(--remedy-card-bg) center / cover no-repeat,
+        #000;
+}
+
+.remedy-banner-card.speakers .remedy-banner-content {
+    flex: 0.95;
+    padding: 12px 8px 36px 8px;
+    text-align: left;
+    align-self: center;
+}
+
+.remedy-banner-card.speakers .remedy-icon {
+    margin-bottom: 18px;
+}
+
+.remedy-banner-card.speakers .remedy-icon img {
+    width: 56px;
+    height: auto;
+}
+
+.remedy-banner-card.speakers .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.remedy-banner-card.speakers .remedy-desc {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 460px;
+}
+
+.remedy-banner-card.speakers .remedy-banner-visual {
+    flex: 1.05;
+    padding: 0;
+    justify-content: flex-end;
+    align-self: stretch;
+}
+
+.remedy-banner-card.speakers .remedy-banner-visual img {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+}
+
+/* LED Lighting Detail — match finished mockup */
+.remedy-banner-card.led {
+    background:
+        linear-gradient(180deg, #161616 0%, #0a0a0a 55%, #141414 100%),
+        #000;
+    min-height: 480px;
+    padding: 28px 48px 0 0;
+    gap: 32px;
+    align-items: center;
+}
+
+.remedy-banner-card.led[style*="--remedy-card-bg"] {
+    background:
+        linear-gradient(90deg, rgba(8, 8, 8, 0.1) 0%, rgba(8, 8, 8, 0.45) 50%, rgba(8, 8, 8, 0.65) 100%),
+        var(--remedy-card-bg) center / cover no-repeat,
+        #000;
+}
+
+.remedy-banner-card.led .remedy-banner-visual {
+    flex: 1.2;
+    padding: 0;
+    justify-content: flex-start;
+    align-self: flex-end;
+}
+
+.remedy-banner-card.led .remedy-banner-visual img {
+    max-width: none;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left bottom;
+    display: block;
+}
+
+.remedy-banner-card.led .remedy-banner-content {
+    flex: 0.8;
+    padding: 24px 8px 40px 8px;
+    text-align: left;
+    align-self: center;
+}
+
+.remedy-banner-card.led .remedy-icon {
+    margin-bottom: 18px;
+}
+
+.remedy-banner-card.led .remedy-icon img {
+    width: 56px;
+    height: auto;
+}
+
+.remedy-banner-card.led .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.remedy-banner-card.led .remedy-desc {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 420px;
+}
+
+.remedy-banner-card.mechanism {
+    min-height: 0;
+    padding: 40px;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.remedy-banner-card.mechanism .remedy-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 50%;
+    width: 50%;
+    max-width: none;
+    padding: 16px 8px 16px 24px;
+}
+
+.remedy-banner-card.mechanism .remedy-banner-visual.mechanism-frame {
+    flex: 1 1 50%;
+    width: 50%;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 2px solid #4da8ff;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 18px rgba(77, 168, 255, 0.25);
+}
+
+.remedy-banner-card.mechanism .remedy-banner-visual.mechanism-frame img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* --------------------------------------------------------------------------
+   Duo Cards (Body Scan / SL-Track) — match finished mockup
+   -------------------------------------------------------------------------- */
+.remedy-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--remedy-card-gap);
+    align-items: stretch;
+}
+
+.remedy-duo-card {
+    border-radius: var(--remedy-radius);
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 880px;
+}
+
+/* Image ~48% / text ~52% — matches finished mockup split */
+.remedy-duo-img {
+    position: relative;
+    flex: 0 0 48%;
+    height: 48%;
+    background: #1c1c1c;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.remedy-duo-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.remedy-duo-img.body-scan img {
+    object-position: 50% 20%;
+}
+
+/* Soft melt into text (mockup) */
+.remedy-duo-img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 22%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 55%, #000 100%);
+}
+
+/* Locked rows — icon / title / desc start at the same Y on both cards */
+.remedy-duo-txt {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 52%;
+    height: 52%;
+    display: grid;
+    grid-template-rows: 56px 92px 1fr;
+    justify-items: center;
+    align-content: start;
+    gap: 10px 0;
+    padding: 28px 30px 36px;
+    text-align: center;
+    margin-top: 0;
+    background: #000;
+    box-sizing: border-box;
+}
+
+.remedy-duo-txt .remedy-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+}
+
+.remedy-duo-txt .remedy-icon img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.remedy-duo-txt .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: 0.02em;
+    width: 100%;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remedy-duo-txt .remedy-desc {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.65;
+    max-width: 440px;
+    width: 100%;
+    margin: 4px 0 0;
+    text-align: center;
+    align-self: start;
+}
+
+.remedy-duo-txt .remedy-desc strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Feature Stack (ZG / Space / Air / Heat)
+   -------------------------------------------------------------------------- */
+.remedy-feature-stack-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--remedy-card-gap);
+}
+
+.remedy-feature-panel {
+    border-radius: var(--remedy-radius);
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    padding: 48px 40px 36px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.remedy-feature-panel .remedy-title {
+    color: var(--remedy-title-dark);
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.remedy-feature-panel .remedy-desc {
+    color: var(--remedy-desc-dark);
+    max-width: 820px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.remedy-feature-panel .remedy-desc strong {
+    color: var(--remedy-strong-dark);
+}
+
+.remedy-feature-panel .remedy-note {
+    color: #777;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.remedy-feature-panel .remedy-icon {
+    margin-bottom: 18px;
+}
+
+.remedy-feature-panel .remedy-icon img {
+    width: 64px;
+    height: auto;
+}
+
+.remedy-panel-img {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.remedy-panel-img img {
+    width: 100%;
+    max-width: 860px;
+}
+
+/* Zero Gravity — match finished mockup (space card) */
+.remedy-feature-panel.zg {
+    background: #000;
+    padding: 56px 48px 0;
+}
+
+.remedy-feature-panel.zg .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.remedy-feature-panel.zg .remedy-desc {
+    color: #ffffff;
+    max-width: 780px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.remedy-feature-panel.zg .remedy-desc strong {
+    color: #ffffff;
+}
+
+.remedy-feature-panel.zg .remedy-panel-img {
+    margin-top: 48px;
+    margin-left: -48px;
+    margin-right: -48px;
+    width: calc(100% + 96px);
+}
+
+.remedy-feature-panel.zg .remedy-panel-img img {
+    max-width: none;
+    width: 100%;
+    display: block;
+}
+
+/* Space-Saving — match finished mockup */
+.remedy-feature-panel.space {
+    background: #000;
+    padding: 56px 48px 48px;
+}
+
+.remedy-feature-panel.space .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.remedy-feature-panel.space .remedy-desc {
+    color: #ffffff;
+    max-width: 780px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.remedy-feature-panel.space .remedy-desc strong {
+    color: #ffffff;
+}
+
+.remedy-feature-panel.space .remedy-panel-img {
+    position: relative;
+    margin: 48px auto 0;
+    width: 100%;
+    max-width: 980px;
+    overflow: hidden;
+}
+
+.remedy-feature-panel.space .remedy-panel-img img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+/* Visible left-edge fade over the chair (not just empty black) */
+.remedy-feature-panel.space .remedy-panel-img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 42%;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        #000 0%,
+        #000 18%,
+        rgba(0, 0, 0, 0.75) 40%,
+        rgba(0, 0, 0, 0.35) 65%,
+        transparent 100%
+    );
+}
+
+/* Air Compression — match finished mockup */
+.remedy-feature-panel.air {
+    background: #000;
+    padding: 56px 48px 0;
+}
+
+.remedy-feature-panel.air .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.remedy-feature-panel.air .remedy-desc {
+    color: #ffffff;
+    max-width: 820px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.remedy-feature-panel.air .remedy-desc strong {
+    color: #ffffff;
+}
+
+.remedy-feature-panel.air .remedy-panel-img {
+    margin-top: 48px;
+    margin-left: -48px;
+    margin-right: -48px;
+    width: calc(100% + 96px);
+}
+
+.remedy-feature-panel.air .remedy-panel-img img {
+    max-width: none;
+    width: 100%;
+    display: block;
+}
+
+/* Heating Therapy — match finished mockup */
+.remedy-feature-panel.heat {
+    background: #000;
+    padding: 56px 48px 40px;
+}
+
+.remedy-feature-panel.heat .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.remedy-feature-panel.heat .remedy-desc {
+    color: #ffffff;
+    max-width: 820px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.remedy-feature-panel.heat .remedy-desc strong {
+    color: #ffffff;
+}
+
+.remedy-feature-panel.heat .remedy-note {
+    color: #a0a0a0;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.remedy-feature-panel.heat .remedy-panel-img {
+    position: relative;
+    margin: 40px auto 0;
+    width: 100%;
+    max-width: 480px;
+}
+
+.remedy-feature-panel.heat .remedy-panel-img img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Programs / Manual Modes
+   -------------------------------------------------------------------------- */
+.remedy-programs-card {
+    border-radius: var(--remedy-radius);
+    background: #000;
+    padding: 56px 40px 52px;
+    margin-bottom: var(--remedy-card-gap);
+}
+
+.remedy-programs-card:last-child { margin-bottom: 0; }
+
+.remedy-programs-card .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.remedy-programs-card .remedy-title .blue {
+    color: var(--remedy-blue);
+}
+
+.remedy-programs-card .programs-lead {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: none;
+    width: 100%;
+    margin: 0 auto 48px;
+    white-space: nowrap;
+}
+
+.remedy-icon-grid {
+    display: grid;
+    gap: 36px 20px;
+    justify-items: center;
+}
+
+.remedy-icon-grid.cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.remedy-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 160px;
+}
+
+.remedy-icon-item img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+
+.remedy-icon-item span {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.25;
+    color: var(--remedy-blue);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    min-height: 2.5em;
+}
+
+.remedy-programs-card .remedy-icon-item span {
+    color: var(--remedy-blue);
+}
+
+/* 15 Auto Programs — match finished mockup */
+.remedy-programs-card.auto {
+    background: #000;
+    padding: 64px 48px 56px;
+}
+
+.remedy-programs-card.auto .remedy-icon-grid {
+    gap: 40px 16px;
+}
+
+.remedy-programs-card.auto .remedy-icon-item img {
+    width: 96px;
+    height: 96px;
+}
+
+.remedy-programs-card.auto .remedy-icon-item span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--remedy-blue);
+}
+
+/* --------------------------------------------------------------------------
+   Convenience 2x2
+   -------------------------------------------------------------------------- */
+/* Convenience 2x2 — match finished mockup */
+.remedy-convenience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--remedy-card-gap);
+    align-items: stretch;
+}
+
+.remedy-convenience-card {
+    border-radius: var(--remedy-radius);
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.remedy-convenience-img {
+    background: #000;
+    line-height: 0;
+    flex: 0 0 auto;
+}
+
+.remedy-convenience-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.remedy-convenience-txt {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 32px 36px 36px;
+    text-align: center;
+    background: #000;
+    box-sizing: border-box;
+}
+
+.remedy-convenience-txt .remedy-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+
+.remedy-convenience-txt .remedy-desc {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 460px;
+}
+
+/* --------------------------------------------------------------------------
+   Doorway & Packaging
+   -------------------------------------------------------------------------- */
+.remedy-doorway-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.remedy-doorway-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+}
+
+.remedy-doorway-frame {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remedy-doorway-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 440px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.remedy-doorway-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.remedy-box-img {
+    width: 78%;
+    max-width: 310px;
+    flex-shrink: 0;
+}
+
+.remedy-box-img img {
+    width: 100%;
+}
+
+.remedy-guide-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--remedy-title);
+}
+
+.remedy-guide-list div {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Dimensions
+   -------------------------------------------------------------------------- */
+.remedy-dim-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 60px;
+}
+
+.remedy-dim-img img {
+    max-height: 520px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Specification Table
+   -------------------------------------------------------------------------- */
+.spec-section {
+    background: #ffffff;
+    padding: 80px 0 100px;
+}
+
+.spec-section .container {
+    width: 100%;
+    max-width: var(--remedy-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.spec-section .container > div:first-child {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 36px;
+    color: #2a2a2a;
+    margin-bottom: 36px;
+}
+
+.spec-table {
+    border-top: 2px solid #2a2a2a;
+}
+
+.spec-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 18px 0;
+    gap: 24px;
+}
+
+.spec-row.no-border { border-bottom: none; }
+
+.spec-label {
+    flex: 0 0 280px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.spec-value {
+    flex: 1;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.spec-value.split-col {
+    display: flex;
+    gap: 40px;
+}
+
+.col-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.col-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.red-link {
+    color: var(--remedy-red);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.red-link:hover { text-decoration: underline; }
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .remedy-duo,
+    .remedy-convenience {
+        grid-template-columns: 1fr;
+        gap: var(--remedy-card-gap);
+    }
+
+    .remedy-convenience-txt {
+        padding: 24px 20px 28px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .remedy-convenience-txt .remedy-title {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .remedy-convenience-txt .remedy-desc {
+        font-size: 16px;
+    }
+
+    /* All side-by-side banners → stack: image on top, text below, centered */
+    .remedy-banner-card.img-left,
+    .remedy-banner-card.img-right,
+    .remedy-banner-card.mechanism,
+    .remedy-banner-card.foot-msg,
+    .remedy-banner-card.foot-extend,
+    .remedy-banner-card.speakers,
+    .remedy-banner-card.led {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .remedy-banner-card.img-left .remedy-banner-visual,
+    .remedy-banner-card.img-right .remedy-banner-visual,
+    .remedy-banner-card.mechanism .remedy-banner-visual,
+    .remedy-banner-card.foot-msg .remedy-banner-visual,
+    .remedy-banner-card.foot-extend .remedy-banner-visual,
+    .remedy-banner-card.speakers .remedy-banner-visual,
+    .remedy-banner-card.led .remedy-banner-visual {
+        order: -1;
+        width: 100%;
+        flex: none;
+        align-self: stretch;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .remedy-banner-card.img-left .remedy-banner-content,
+    .remedy-banner-card.img-right .remedy-banner-content,
+    .remedy-banner-card.mechanism .remedy-banner-content,
+    .remedy-banner-card.foot-msg .remedy-banner-content,
+    .remedy-banner-card.foot-extend .remedy-banner-content,
+    .remedy-banner-card.speakers .remedy-banner-content,
+    .remedy-banner-card.led .remedy-banner-content {
+        order: 1;
+        width: 100%;
+        flex: none;
+        max-width: none;
+        padding: 28px 20px 36px;
+        text-align: center;
+        align-self: stretch;
+    }
+
+    .remedy-banner-card .remedy-banner-content .remedy-icon,
+    .remedy-banner-card .remedy-banner-content .remedy-title,
+    .remedy-banner-card .remedy-banner-content .remedy-desc {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .remedy-banner-card .remedy-banner-content .remedy-icon {
+        display: flex;
+        justify-content: center;
+    }
+
+    .remedy-banner-card .remedy-banner-content .remedy-desc {
+        max-width: none;
+    }
+
+    .remedy-banner-card.mechanism .remedy-banner-visual.mechanism-frame {
+        max-width: none;
+        margin: 20px 20px 0;
+        width: calc(100% - 40px);
+        border-radius: 20px;
+        box-shadow: 0 0 14px rgba(77, 168, 255, 0.2);
+        aspect-ratio: 1 / 1;
+    }
+
+    .remedy-banner-card.mechanism .remedy-banner-visual.mechanism-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .remedy-banner-card.foot-msg .remedy-banner-visual.foot-stack {
+        gap: 12px;
+        padding: 20px 20px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .remedy-banner-card.foot-msg .remedy-banner-visual.foot-stack img,
+    .remedy-banner-card.foot-extend .remedy-banner-visual img,
+    .remedy-banner-card.speakers .remedy-banner-visual img,
+    .remedy-banner-card.led .remedy-banner-visual img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    .remedy-banner-card.speakers .remedy-banner-visual img,
+    .remedy-banner-card.led .remedy-banner-visual img,
+    .remedy-banner-card.foot-extend .remedy-banner-visual img {
+        object-fit: cover;
+        max-height: 360px;
+    }
+
+    /* Feature panels: image on top, text below, centered */
+    .remedy-feature-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 0 36px;
+    }
+
+    .remedy-feature-panel .remedy-panel-img {
+        order: -1;
+        width: 100%;
+        margin: 0 0 8px;
+    }
+
+    .remedy-feature-panel .remedy-icon,
+    .remedy-feature-panel .remedy-title,
+    .remedy-feature-panel .remedy-desc,
+    .remedy-feature-panel .remedy-note {
+        order: 1;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .remedy-feature-panel .remedy-icon {
+        margin-top: 28px;
+        margin-bottom: 14px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .remedy-feature-panel .remedy-title {
+        padding: 0 20px;
+    }
+
+    .remedy-feature-panel .remedy-desc,
+    .remedy-feature-panel .remedy-note {
+        padding: 0 20px;
+        max-width: none;
+    }
+
+    .remedy-feature-panel.zg .remedy-panel-img,
+    .remedy-feature-panel.space .remedy-panel-img,
+    .remedy-feature-panel.air .remedy-panel-img,
+    .remedy-feature-panel.heat .remedy-panel-img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .remedy-feature-panel.zg .remedy-panel-img img,
+    .remedy-feature-panel.space .remedy-panel-img img,
+    .remedy-feature-panel.air .remedy-panel-img img,
+    .remedy-feature-panel.heat .remedy-panel-img img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .remedy-feature-panel.heat .remedy-panel-img {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .remedy-doorway-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 28px;
+    }
+
+    .remedy-doorway-left,
+    .remedy-doorway-right {
+        width: 100%;
+        flex: none;
+        align-items: center;
+    }
+
+    .remedy-doorway-frame {
+        width: 100%;
+        min-height: 0;
+    }
+
+    .remedy-doorway-frame img {
+        position: static;
+        width: 100%;
+        max-width: 340px;
+        max-height: 360px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .remedy-box-img {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .remedy-guide {
+        text-align: center;
+        width: 100%;
+    }
+
+    .remedy-dim-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .remedy-icon-grid.cols-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .remedy-intro {
+        padding: 48px 0 64px;
+    }
+
+    .remedy-intro-desc {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .remedy-section {
+        padding: 28px 0;
+    }
+
+    .remedy-section.remedy-cards {
+        padding: 0;
+    }
+
+    .remedy-section.remedy-cards + .remedy-section.remedy-cards {
+        padding-top: var(--remedy-card-gap);
+    }
+
+    .remedy-intro + .remedy-section.remedy-cards,
+    .remedy-section.remedy-cards + .remedy-doorway,
+    .remedy-doorway + .remedy-dimensions,
+    .remedy-section + .spec-section {
+        padding-top: 140px;
+    }
+
+    .remedy-container {
+        padding: 0 16px;
+    }
+
+    .remedy-title {
+        font-size: 26px;
+    }
+
+    .remedy-banner-card {
+        margin-bottom: var(--remedy-card-gap);
+        border-radius: 28px;
+    }
+
+    .remedy-banner-card.stack {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .remedy-banner-card.stack .remedy-banner-visual {
+        order: -1;
+        width: 100%;
+    }
+
+    .remedy-banner-card.stack .remedy-banner-content {
+        order: 1;
+        padding: 28px 20px 36px;
+        text-align: center;
+    }
+
+    .remedy-banner-card.stack.bluetooth .remedy-banner-content {
+        padding: 28px 20px 36px;
+    }
+
+    .remedy-banner-card.stack.bluetooth .bluetooth-visual::before {
+        height: 24%;
+        left: 36%;
+    }
+
+    .remedy-banner-card .remedy-title {
+        font-size: 28px;
+    }
+
+    .remedy-banner-card .remedy-desc {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    /* Keep image-on-top / centered from 900px rules; tighten type */
+    .remedy-banner-card.img-left .remedy-banner-content,
+    .remedy-banner-card.img-right .remedy-banner-content,
+    .remedy-banner-card.mechanism .remedy-banner-content,
+    .remedy-banner-card.foot-msg .remedy-banner-content,
+    .remedy-banner-card.foot-extend .remedy-banner-content,
+    .remedy-banner-card.speakers .remedy-banner-content,
+    .remedy-banner-card.led .remedy-banner-content {
+        padding: 28px 20px 36px;
+        text-align: center;
+    }
+
+    .remedy-duo {
+        gap: var(--remedy-card-gap);
+    }
+
+    .remedy-duo-card {
+        min-height: 0;
+    }
+
+    .remedy-duo-img {
+        flex: 0 0 auto;
+        height: auto;
+        aspect-ratio: 1 / 0.85;
+        min-height: 220px;
+        padding: 0;
+    }
+
+    .remedy-duo-img img {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .remedy-duo-img.body-scan img {
+        object-position: 50% 20%;
+    }
+
+    .remedy-duo-txt {
+        flex: 1 1 auto;
+        height: auto;
+        grid-template-rows: 48px auto auto;
+        gap: 8px 0;
+        padding: 28px 20px 32px;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .remedy-duo-txt .remedy-icon,
+    .remedy-duo-txt .remedy-icon img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .remedy-duo-txt .remedy-title {
+        font-size: 26px;
+        height: auto;
+        min-height: 0;
+    }
+
+    .remedy-duo-txt .remedy-desc {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .remedy-feature-panel {
+        border-radius: 28px;
+        padding: 0 0 36px;
+        text-align: center;
+    }
+
+    .remedy-feature-panel .remedy-title {
+        font-size: 26px;
+    }
+
+    .remedy-feature-panel .remedy-desc {
+        font-size: 16px;
+    }
+
+    .remedy-feature-panel.zg,
+    .remedy-feature-panel.space,
+    .remedy-feature-panel.air,
+    .remedy-feature-panel.heat {
+        padding: 0 0 36px;
+    }
+
+    .remedy-feature-panel .remedy-panel-img {
+        order: -1;
+        margin: 0 0 8px;
+        width: 100%;
+    }
+
+    .remedy-feature-panel.heat .remedy-panel-img {
+        max-width: 280px;
+        margin: 0 auto 8px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .remedy-programs-card,
+    .remedy-programs-card.auto {
+        padding: 40px 18px 36px;
+        border-radius: 28px;
+        text-align: center;
+    }
+
+    .remedy-programs-card .remedy-title {
+        font-size: 26px;
+    }
+
+    .remedy-programs-card .programs-lead {
+        font-size: 15px;
+        margin-bottom: 32px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .remedy-icon-grid.cols-5 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 12px;
+    }
+
+    .remedy-programs-card.auto .remedy-icon-item img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .remedy-title.section-head {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .remedy-icon img,
+    .remedy-banner-content .remedy-icon img,
+    .remedy-feature-panel .remedy-icon img,
+    .remedy-icon-item img {
+        width: 48px;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .remedy-icon-item img {
+        width: 56px;
+    }
+
+    .remedy-slider-main {
+        height: 300px;
+    }
+
+    .remedy-chair {
+        padding: 0 40px;
+    }
+
+    .remedy-nav { width: 22px; }
+    .remedy-nav.prev { left: 4px; }
+    .remedy-nav.next { right: 4px; }
+
+    .remedy-swatches {
+        margin-top: 16px;
+        padding: 10px 18px;
+        gap: 14px;
+    }
+
+    .remedy-swatch {
+        width: 26px;
+        height: 26px;
+    }
+
+    .remedy-doorway-frame img {
+        max-width: 300px;
+        max-height: 320px;
+    }
+
+    .remedy-box-img {
+        max-width: 230px;
+    }
+
+    .remedy-dim-img img {
+        max-height: 360px;
+        max-width: 100%;
+    }
+
+    .spec-row {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .spec-label {
+        flex: none;
+        width: 100%;
+    }
+
+    .spec-value.split-col {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .col-item { align-items: center; }
+
+    .spec-section .container > div:first-child {
+        text-align: center;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .remedy-slider-main {
+        height: 220px;
+    }
+
+    .remedy-chair {
+        padding: 0 32px;
+    }
+
+    .remedy-icon img,
+    .remedy-banner-content .remedy-icon img,
+    .remedy-feature-panel .remedy-icon img {
+        width: 40px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .remedy-icon-item img {
+        width: 48px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .remedy-swatch {
+        width: 24px;
+        height: 24px;
+    }
+
+    .remedy-title {
+        font-size: 22px;
+    }
+
+    .remedy-desc {
+        font-size: 16px;
+    }
+
+    .remedy-banner-card .remedy-title,
+    .remedy-feature-panel .remedy-title,
+    .remedy-duo-txt .remedy-title,
+    .remedy-programs-card .remedy-title,
+    .remedy-convenience-txt .remedy-title {
+        font-size: 24px;
+    }
+}
