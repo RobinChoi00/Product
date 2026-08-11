@@ -1839,9 +1839,11 @@ img {
         gap: 24px 12px;
     }
 
+    .remedy-programs-card .remedy-icon-item img,
     .remedy-programs-card.auto .remedy-icon-item img {
         width: 72px;
         height: 72px;
+        object-fit: contain;
     }
 
     .remedy-title.section-head {
@@ -1852,16 +1854,11 @@ img {
 
     .remedy-icon img,
     .remedy-banner-content .remedy-icon img,
-    .remedy-feature-panel .remedy-icon img,
-    .remedy-icon-item img {
+    .remedy-feature-panel .remedy-icon img {
         width: 48px;
         height: auto;
         max-height: none;
         object-fit: contain;
-    }
-
-    .remedy-icon-item img {
-        width: 56px;
     }
 
     .remedy-slider-main {
@@ -1945,10 +1942,10 @@ img {
         object-fit: contain;
     }
 
-    .remedy-icon-item img {
-        width: 48px;
-        height: auto;
-        object-fit: contain;
+    .remedy-programs-card .remedy-icon-item img,
+    .remedy-programs-card.auto .remedy-icon-item img {
+        width: 64px;
+        height: 64px;
     }
 
     .remedy-swatch {
