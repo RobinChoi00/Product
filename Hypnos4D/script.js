@@ -10,11 +10,11 @@ var baseURL = "https://RobinChoi00.github.io/Product/Hypnos4D/";
 // Index 2: Brown
 var slideData = [
     {
-        chair: baseURL + "images/2.Hypnos_AllColor1.png",
+        chair: baseURL + "images/2.Hypnos_Hypnos_AllColor.jpg",
         name: "All"
     },
     {
-        chair: baseURL + "images/3.Hypnos_Black.png",
+        chair: baseURL + "images/3.Hypnos_Hypnos_Black.jpg",
         name: "Black"
     },
     {
