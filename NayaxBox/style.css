@@ -218,9 +218,8 @@
 .zena-cabinet img {
     display: block;
     width: auto;
-    max-width: 360px;
+    max-width: 100%;
     height: auto;
-    max-height: 640px;
     object-fit: contain;
 }
 
@@ -300,8 +299,7 @@
     }
 
     .zena-cabinet img {
-        max-width: 280px;
-        max-height: 500px;
+        max-width: 100%;
     }
 
     .zena-spec {
@@ -343,8 +341,7 @@
     }
 
     .zena-cabinet img {
-        max-width: 220px;
-        max-height: 400px;
+        max-width: 100%;
     }
 
     .zena-spec .zena-spec-title,
