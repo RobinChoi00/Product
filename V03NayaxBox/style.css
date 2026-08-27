@@ -111,6 +111,128 @@
     color: rgba(255, 255, 255, 0.85);
 }
 
+.v03-cabinet,
+.v03-cabinet * {
+    box-sizing: border-box;
+}
+
+.v03-cabinet {
+    width: 100%;
+    background: #fff;
+    padding: 80px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.v03-cabinet-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.v03-cabinet .v03-cabinet-title,
+.v03-cabinet h2.v03-cabinet-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #231f20 !important;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.v03-cabinet .v03-cabinet-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #3563e0 !important;
+    margin: 0 0 36px;
+}
+
+.v03-cabinet img {
+    display: block;
+    width: auto;
+    max-width: 420px;
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+}
+
+.v03-spec,
+.v03-spec * {
+    box-sizing: border-box;
+}
+
+.v03-spec {
+    width: 100%;
+    background: #fff;
+    padding: 40px 20px 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.v03-spec-inner {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.v03-spec .v03-spec-title,
+.v03-spec h2.v03-spec-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: #000 !important;
+    margin: 0 0 48px;
+}
+
+.v03-spec-table {
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.v03-spec-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.v03-spec .v03-spec-label {
+    width: 30%;
+    min-width: 180px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000 !important;
+    line-height: 1.5;
+}
+
+.v03-spec .v03-spec-value {
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #444 !important;
+    line-height: 1.5;
+}
+
+.v03-spec .v03-spec-link {
+    color: #ff4d4d !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.v03-spec .v03-spec-link:hover {
+    opacity: 0.7;
+}
+
 @media (max-width: 990px) {
     .v03-howto {
         padding: 48px 16px 64px;
@@ -150,6 +272,52 @@
         padding-top: 22px;
         margin-top: 34px;
     }
+
+    .v03-cabinet {
+        padding: 56px 16px 64px;
+    }
+
+    .v03-cabinet .v03-cabinet-title,
+    .v03-cabinet h2.v03-cabinet-title {
+        font-size: 28px;
+    }
+
+    .v03-cabinet .v03-cabinet-sub {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    .v03-cabinet img {
+        max-width: 320px;
+        max-height: 440px;
+    }
+
+    .v03-spec {
+        padding: 24px 16px 72px;
+    }
+
+    .v03-spec .v03-spec-title,
+    .v03-spec h2.v03-spec-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .v03-spec-row {
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 0;
+    }
+
+    .v03-spec .v03-spec-label {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+        color: #888 !important;
+    }
+
+    .v03-spec .v03-spec-value {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -180,5 +348,24 @@
 
     .v03-howto-footer p {
         font-size: 14px;
+    }
+
+    .v03-cabinet .v03-cabinet-title,
+    .v03-cabinet h2.v03-cabinet-title {
+        font-size: 22px;
+    }
+
+    .v03-cabinet .v03-cabinet-sub {
+        font-size: 16px;
+    }
+
+    .v03-cabinet img {
+        max-width: 260px;
+        max-height: 360px;
+    }
+
+    .v03-spec .v03-spec-title,
+    .v03-spec h2.v03-spec-title {
+        font-size: 26px;
     }
 }
