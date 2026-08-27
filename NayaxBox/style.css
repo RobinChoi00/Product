@@ -16,80 +16,93 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 32px;
 }
 
-.zena-howto-title {
+.zena-howto .zena-howto-title,
+.zena-howto h2.zena-howto-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     font-weight: 800;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
-    margin: 0 0 20px;
+    color: #fff !important;
+    margin: 0 0 12px;
     text-transform: uppercase;
 }
 
-.zena-howto-title span {
-    color: #3b82f6;
+.zena-howto .zena-howto-title-text {
+    color: #fff !important;
 }
 
-.zena-card {
+.zena-howto .zena-howto-title-accent {
+    color: #3b82f6 !important;
+}
+
+.zena-howto .zena-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
-    border-radius: 24px;
-    min-height: 420px;
+    border-radius: 28px;
+    min-height: 0;
 }
 
-.zena-card-visual {
-    position: relative;
-    background: #e0e0e0;
-    min-height: 420px;
+.zena-howto .zena-card-visual {
+    background: #d1d3d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 24px;
 }
 
-.zena-card-visual img {
-    position: absolute;
-    inset: 0;
+.zena-howto .zena-card-visual img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
     object-position: center;
     display: block;
 }
 
-.zena-card-copy {
-    background: #222;
+.zena-howto .zena-card-copy {
+    background: linear-gradient(90deg, #4a4a4a 0%, #2c2c2c 48%, #141414 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 48px 44px;
+    padding: 56px 52px;
 }
 
-.zena-card-copy h3 {
+.zena-howto .zena-card-copy h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
     font-weight: 800;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #fff !important;
     text-transform: uppercase;
-    margin: 0 0 16px;
+    margin: 0 0 18px;
 }
 
-.zena-card-copy p {
+.zena-howto .zena-card-copy p {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.6;
-    color: #fff;
+    line-height: 1.65;
+    color: #fff !important;
     max-width: 460px;
     margin: 0;
 }
 
-.zena-price {
-    margin-top: 18px;
+.zena-howto .zena-price {
+    margin-top: 20px;
     font-weight: 500;
     letter-spacing: 0.02em;
+}
+
+.zena-howto .zena-note {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88) !important;
 }
 
 @media (max-width: 990px) {
@@ -97,52 +110,59 @@
         padding: 48px 16px 64px;
     }
 
-    .zena-howto-title {
+    .zena-howto .zena-howto-title,
+    .zena-howto h2.zena-howto-title {
         font-size: 28px;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
 
     .zena-howto-inner {
         gap: 20px;
     }
 
-    .zena-card {
+    .zena-howto .zena-card {
         grid-template-columns: 1fr;
-        min-height: 0;
-        border-radius: 20px;
+        border-radius: 22px;
     }
 
-    .zena-card-visual {
-        min-height: 280px;
+    .zena-howto .zena-card-visual {
+        padding: 20px 16px;
     }
 
-    .zena-card-copy {
-        padding: 32px 28px;
+    .zena-howto .zena-card-copy {
+        padding: 32px 28px 36px;
+        background: linear-gradient(180deg, #4a4a4a 0%, #1a1a1a 100%);
     }
 
-    .zena-card-copy h3 {
+    .zena-howto .zena-card-copy h3 {
         font-size: 20px;
     }
 
-    .zena-card-copy p {
+    .zena-howto .zena-card-copy p {
         font-size: 16px;
+        max-width: none;
+    }
+
+    .zena-howto .zena-note {
+        font-size: 15px;
     }
 }
 
 @media (max-width: 600px) {
-    .zena-howto-title {
+    .zena-howto .zena-howto-title,
+    .zena-howto h2.zena-howto-title {
         font-size: 22px;
     }
 
-    .zena-card-visual {
-        min-height: 200px;
+    .zena-howto .zena-card-visual {
+        padding: 16px 12px;
     }
 
-    .zena-card-copy {
-        padding: 24px 20px;
+    .zena-howto .zena-card-copy {
+        padding: 24px 20px 28px;
     }
 
-    .zena-card-copy h3 {
+    .zena-howto .zena-card-copy h3 {
         font-size: 18px;
         margin-bottom: 12px;
     }
