@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.zena-howto {
+    width: 100%;
+    background: #000;
+    padding: 72px 24px 96px;
+}
+
+.zena-howto-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.zena-howto-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.zena-howto-title span {
+    color: #3b82f6;
+}
+
+.zena-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 24px;
+    min-height: 420px;
+}
+
+.zena-card-visual {
+    position: relative;
+    background: #e0e0e0;
+    min-height: 420px;
+}
+
+.zena-card-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.zena-card-copy {
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 44px;
+}
+
+.zena-card-copy h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.zena-card-copy p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #fff;
+    max-width: 460px;
+}
+
+.zena-price {
+    margin-top: 18px;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 990px) {
+    .zena-howto {
+        padding: 48px 16px 64px;
+    }
+
+    .zena-howto-title {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .zena-howto-inner {
+        gap: 20px;
+    }
+
+    .zena-card {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        border-radius: 20px;
+    }
+
+    .zena-card-visual {
+        min-height: 280px;
+    }
+
+    .zena-card-copy {
+        padding: 32px 28px;
+    }
+
+    .zena-card-copy h3 {
+        font-size: 20px;
+    }
+
+    .zena-card-copy p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .zena-howto-title {
+        font-size: 22px;
+    }
+
+    .zena-card-visual {
+        min-height: 200px;
+    }
+
+    .zena-card-copy {
+        padding: 24px 20px;
+    }
+
+    .zena-card-copy h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+}
