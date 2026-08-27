@@ -1,19 +1,13 @@
-* {
+.zena-howto,
+.zena-howto * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    background: #000;
-    font-family: 'Roboto', sans-serif;
 }
 
 .zena-howto {
     width: 100%;
     background: #000;
     padding: 72px 24px 96px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .zena-howto-inner {
@@ -79,7 +73,7 @@ body {
     letter-spacing: 0.04em;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin: 0 0 16px;
 }
 
 .zena-card-copy p {
@@ -89,11 +83,12 @@ body {
     line-height: 1.6;
     color: #fff;
     max-width: 460px;
+    margin: 0;
 }
 
 .zena-price {
     margin-top: 18px;
-    font-weight: 500 !important;
+    font-weight: 500;
     letter-spacing: 0.02em;
 }
 

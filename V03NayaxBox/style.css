@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+}
+
+.v03-howto {
+    width: 100%;
+    background: #000;
+    padding: 72px 24px 96px;
+}
+
+.v03-howto-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.v03-howto-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 36px;
+    text-transform: uppercase;
+}
+
+.v03-howto-title span {
+    color: #6ca4ff;
+}
+
+.v03-howto-card {
+    background: #3563e0;
+    border-radius: 50px;
+    padding: 56px 56px 42px;
+}
+
+.v03-howto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.v03-howto-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    align-items: center;
+}
+
+.v03-howto-visual img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+}
+
+.v03-howto-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.v03-howto-copy h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.v03-howto-copy p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 520px;
+}
+
+.v03-howto-footer {
+    margin-top: 34px;
+    padding-top: 22px;
+}
+
+.v03-howto-footer h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.v03-howto-footer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 990px) {
+    .v03-howto {
+        padding: 48px 16px 64px;
+    }
+
+    .v03-howto-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .v03-howto-card {
+        padding: 44px 34px 34px;
+        border-radius: 44px;
+    }
+
+    .v03-howto-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .v03-howto-visual img {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .v03-howto-copy p {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .v03-howto-copy h3 {
+        font-size: 18px;
+    }
+
+    .v03-howto-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        padding-top: 22px;
+        margin-top: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+    .v03-howto-title {
+        font-size: 22px;
+    }
+
+    .v03-howto-card {
+        padding: 30px 18px 24px;
+        border-radius: 34px;
+    }
+
+    .v03-howto-visual img {
+        border-radius: 14px;
+    }
+
+    .v03-howto-copy h3 {
+        font-size: 16px;
+    }
+
+    .v03-howto-copy p {
+        font-size: 16px;
+    }
+
+    .v03-howto-footer h4 {
+        font-size: 16px;
+    }
+
+    .v03-howto-footer p {
+        font-size: 14px;
+    }
+}

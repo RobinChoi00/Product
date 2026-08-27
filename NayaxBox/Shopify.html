@@ -1,0 +1,45 @@
+<div style="min-height: 200px;" id="nayaxbox-content-anchor">
+<p style="text-align: center; color: #999; padding: 50px;">Loading NayaxBox Product Detail...</p>
+</div>
+<p><script crossorigin="anonymous" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" src="https://code.jquery.com/jquery-3.7.0.min.js"></script> <script>
+    (function () {
+        var baseURL = "https://RobinChoi00.github.io/Product/NayaxBox/";
+        var v = new Date().getTime();
+
+        if (!$('link[href*="NayaxBox/style.css"]').length) {
+            $('head').append(`<link rel="stylesheet" href="${baseURL}style.css?v=${v}" type="text/css" />`);
+        }
+
+        $('head').append(`<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">`);
+
+        $.ajax({
+            url: baseURL + "index.html",
+            data: { v: v },
+            dataType: "html",
+            success: function (data) {
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(data, "text/html");
+                var $content = $(doc.body).contents();
+
+                $content.find('img').each(function () {
+                    var src = $(this).attr('src');
+                    if (src && !src.startsWith('http')) {
+                        $(this).attr('src', baseURL + src);
+                    }
+                });
+
+                $content.find('script').remove();
+
+                $('#nayaxbox-content-anchor').empty().append($content);
+
+                var script = document.createElement("script");
+                script.src = baseURL + "script.js?v=" + v;
+                script.defer = true;
+                document.body.appendChild(script);
+            },
+            error: function () {
+                $('#nayaxbox-content-anchor').html('<p style="color:red; text-align:center; padding: 50px;">Failed to load NayaxBox content. Please check the repository path.</p>');
+            }
+        });
+    })();
+</script></p>
