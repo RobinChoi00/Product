@@ -488,10 +488,14 @@ img {
     text-align: center;
 }
 
-.q2-gif-item img {
+.q2-gif-item img,
+.q2-gif-item video {
     width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
     border-radius: 16px;
     background: #111;
+    display: block;
 }
 
 .q2-gif-item span {
@@ -615,22 +619,6 @@ img {
     width: 100%;
     display: block;
     margin-top: -72px;
-}
-
-.q2-details-floor {
-    position: relative;
-    z-index: 1;
-    line-height: 0;
-    margin-top: -28px;
-    overflow: hidden;
-    width: 100%;
-}
-
-.q2-details-floor img {
-    width: calc(100% + 4px);
-    max-width: none;
-    margin-left: -2px;
-    display: block;
 }
 
 .q2-extras {
@@ -1026,7 +1014,6 @@ img {
     .q2-details-section { padding: 32px 0; }
     .q2-details-card .section-head { padding: 20px 16px 0; }
     .q2-details-bleed img { margin-top: -40px; }
-    .q2-details-floor { margin-top: -16px; }
     .q2-extras { margin-top: 8px; padding: 8px 20px; }
 
     .q2-compare-col img { height: 380px; padding: 16px 8px 24px; }
