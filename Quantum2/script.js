@@ -79,7 +79,7 @@ window.changeColor = function (index) {
 
 document.addEventListener("DOMContentLoaded", function () {
     updateDisplay();
-    document.querySelectorAll(".q2-gif-item video").forEach(function (el) {
+    document.querySelectorAll(".q2-gif-item video, .q2-visual video").forEach(function (el) {
         el.muted = true;
         el.play().catch(function () {});
     });

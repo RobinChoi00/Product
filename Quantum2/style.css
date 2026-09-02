@@ -317,12 +317,14 @@ img {
 .q2-card .q2-copy { flex: 1; min-width: 0; }
 .q2-card .q2-visual { flex: 0.95; min-width: 0; }
 
-.q2-visual img {
+.q2-visual img,
+.q2-visual video {
     width: 88%;
     max-width: 460px;
     height: auto;
     margin: 0 auto;
     object-fit: contain;
+    display: block;
 }
 
 .q2-visual.wide img {
@@ -332,7 +334,8 @@ img {
 
 .q2-visual.full { width: 100%; }
 .q2-visual.full img { width: 100%; max-width: none; margin: 0; }
-.q2-visual.round img { border-radius: 24px; }
+.q2-visual.round img,
+.q2-visual.round video { border-radius: 24px; }
 .q2-visual.rollers {
     width: 100%;
     max-width: none;
@@ -361,7 +364,8 @@ img {
     max-width: 420px;
 }
 
-.q2-rollers-card .q2-visual.rollers img {
+.q2-rollers-card .q2-visual.rollers img,
+.q2-rollers-card .q2-visual.rollers video {
     width: 100%;
     display: block;
     border-radius: 44px;
@@ -420,7 +424,8 @@ img {
     flex: none;
 }
 
-.q2-footext-card .q2-visual img {
+.q2-footext-card .q2-visual img,
+.q2-footext-card .q2-visual video {
     width: 100%;
     max-width: none;
     margin: 0;
@@ -544,6 +549,19 @@ img {
 .q2-duo-img { line-height: 0; }
 .q2-duo-img img { width: 100%; }
 .q2-duo-card .q2-copy { padding: 32px 32px 40px; }
+
+.q2-duo-card .q2-icon {
+    display: flex;
+    align-items: flex-end;
+    height: 56px;
+    margin-bottom: 16px;
+}
+
+.q2-duo-card .q2-icon img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
 
 /* --------------------------------------------------------------------------
    Programs
@@ -922,7 +940,8 @@ img {
     }
 
     .q2-rollers-card { padding: 24px 20px 48px; border-radius: 28px; }
-    .q2-rollers-card .q2-visual.rollers img { border-radius: 28px; }
+    .q2-rollers-card .q2-visual.rollers img,
+    .q2-rollers-card .q2-visual.rollers video { border-radius: 28px; }
     .q2-rollers-card .q2-copy { padding: 32px 12px 0; }
 
     .q2-programs-card { padding: 36px 20px 32px; }
@@ -1020,7 +1039,8 @@ img {
 
     .q2-footext-card { padding: 36px 20px 32px; }
     .q2-footext-card .q2-copy { padding: 0 0 28px; }
-    .q2-footext-card .q2-visual img { border-radius: 24px; }
+    .q2-footext-card .q2-visual img,
+    .q2-footext-card .q2-visual video { border-radius: 24px; }
 
     .q2-details-section { padding: 32px 0; }
     .q2-details-card .section-head { padding: 20px 16px 0; }
