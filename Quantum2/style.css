@@ -729,21 +729,24 @@ img {
 .q2-doorway-layout {
     display: flex;
     gap: 40px;
-    align-items: stretch;
+    align-items: flex-end;
 }
 
 .q2-doorway-left {
     flex: 1;
     min-width: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
 .q2-doorway-left img {
-    width: 100%;
-    max-height: 380px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 440px;
     object-fit: contain;
+    object-position: bottom center;
 }
 
 .q2-doorway-right {
@@ -940,6 +943,18 @@ img {
     .q2-doorway-layout {
         flex-direction: column;
         align-items: center;
+    }
+
+    .q2-doorway-left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .q2-doorway-left img {
+        width: 100%;
+        height: auto;
+        max-height: 380px;
+        object-position: center;
     }
 
     .q2-doorway-right { align-items: center; }
