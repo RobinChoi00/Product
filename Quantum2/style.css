@@ -388,30 +388,46 @@ img {
     margin-right: auto;
 }
 
-.q2-footext-scene {
-    position: relative;
+.q2-footext-card {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    overflow: hidden;
-    background: rgb(234, 224, 209);
-    min-height: 0;
+    align-items: center;
+    padding: 56px 48px 56px;
 }
 
-.q2-footext-scene .q2-scene-img {
-    display: block;
+.q2-footext-card .q2-copy {
+    padding: 0 16px 40px;
+    max-width: 720px;
+}
+
+.q2-footext-card .q2-icon {
+    margin-bottom: 18px;
+}
+
+.q2-footext-card .q2-title {
+    margin-bottom: 18px;
+}
+
+.q2-footext-card .q2-desc {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.q2-footext-card .q2-visual {
     width: 100%;
-    height: auto;
+    max-width: 760px;
+    flex: none;
 }
 
-.q2-footext-scene .q2-copy {
-    position: absolute;
-    top: 48px;
-    left: 48px;
-    max-width: 460px;
-    z-index: 2;
-    padding: 0;
-    background: none;
+.q2-footext-card .q2-visual img {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: block;
+    border-radius: 40px;
+    background: #000;
+    object-fit: cover;
 }
 
 .q2-sl .q2-visual img {
@@ -910,13 +926,6 @@ img {
         margin-top: -16px;
     }
 
-    .q2-footext-scene .q2-copy {
-        top: 24px;
-        left: 20px;
-        right: 20px;
-        max-width: none;
-    }
-
     .q2-rollers-card { padding: 24px 20px 48px; border-radius: 28px; }
     .q2-rollers-card .q2-visual.rollers img { border-radius: 28px; }
     .q2-rollers-card .q2-copy { padding: 32px 12px 0; }
@@ -1002,14 +1011,9 @@ img {
 
     .q2-prog-grid div { font-size: 14px; padding: 12px 6px; }
 
-    .q2-footext-scene .q2-copy {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        order: -1;
-        padding: 28px 20px 12px;
-    }
+    .q2-footext-card { padding: 36px 20px 32px; }
+    .q2-footext-card .q2-copy { padding: 0 0 28px; }
+    .q2-footext-card .q2-visual img { border-radius: 24px; }
 
     .q2-details-section { padding: 32px 0; }
     .q2-details-card .section-head { padding: 20px 16px 0; }
