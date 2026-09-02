@@ -785,22 +785,14 @@ img {
     margin: 0 auto;
 }
 
-/* Native assets share 1794px height (972 vs 2418 wide). Keep the same
-   scale so both chairs sit on one floor line, then nudge the wider
-   side-view down to match the front view's extra bottom padding. */
-.q2-dim-img:first-child { flex: 972 1 0; min-width: 0; }
-.q2-dim-img:last-child { flex: 2418 1 0; min-width: 0; }
+/* Front 556×1024, side 2418×1794 — same displayed height, shared floor line. */
+.q2-dim-img:first-child { flex: 556 1 0; min-width: 0; }
+.q2-dim-img:last-child { flex: 1380 1 0; min-width: 0; }
 
 .q2-dim-img img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.q2-dim-img:last-child {
-    /* 50px extra bottom pad on the front PNG, as a fraction of row width
-       once both images share the same scale (972:2418). */
-    padding-bottom: calc(50 / 3390 * 100%);
 }
 
 /* --------------------------------------------------------------------------
