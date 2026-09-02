@@ -57,7 +57,7 @@ img {
 .q2-title {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 42px;
+    font-size: 48px;
     line-height: 1.2;
     color: var(--q2-title);
     margin: 0 0 20px;
@@ -67,7 +67,7 @@ img {
 
 .q2-title.center { text-align: center; }
 .q2-title.section-head { margin-bottom: 40px; }
-.q2-title.sm { font-size: 26px; margin-bottom: 14px; }
+.q2-title.sm { font-size: 30px; margin-bottom: 14px; }
 
 .q2-desc {
     font-family: var(--font-body);
@@ -665,7 +665,7 @@ img {
 .q2-compare-title {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 36px;
+    font-size: 42px;
     letter-spacing: 0.14em;
     text-align: center;
     color: var(--q2-brown);
@@ -981,8 +981,8 @@ img {
     .q2-intro-desc { font-size: 20px; margin-bottom: 36px; }
     .q2-section { padding: 32px 0; }
     .q2-container { padding: 0 16px; }
-    .q2-title { font-size: 30px; }
-    .q2-title.sm { font-size: 22px; }
+    .q2-title { font-size: 34px; }
+    .q2-title.sm { font-size: 26px; }
     .q2-desc { font-size: 18px; }
     .q2-lead { font-size: 17px; }
     .q2-icon img { width: 44px; }
@@ -1045,7 +1045,7 @@ img {
 @media (max-width: 480px) {
     .q2-slider-main { height: 210px; }
     .q2-chair { padding: 0 32px; }
-    .q2-title { font-size: 24px; }
+    .q2-title { font-size: 28px; }
     .q2-gif-grid { gap: 10px; }
     .q2-gif-item span { font-size: 13px; }
     .q2-prog-grid.auto,
@@ -1071,7 +1071,7 @@ img {
 .spec-section .container > div:first-child {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;       /* 아주 굵게 (Image like) */
-    font-size: 40px !important;        /* 큰 제목 크기 */
+    font-size: 46px !important;        /* 큰 제목 크기 */
     text-align: center;     /* 중앙 정렬 */
     margin-bottom: 60px;    /* 표와의 간격 */
     color: #000000;
@@ -1170,7 +1170,7 @@ img {
 
     /* 2. 메인 제목 크기 조정 */
     .spec-section .container > div:first-child {
-        font-size: 28px !important; /* 모바일 타이틀 크기 축소 */
+        font-size: 32px !important; /* 모바일 타이틀 크기 축소 */
         margin-bottom: 30px;
     }
 
