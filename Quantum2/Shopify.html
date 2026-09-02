@@ -1,0 +1,62 @@
+<!-- more -->
+<div id="Quantum2-content-anchor" style="min-height: 200px;">
+    <p style="text-align: center; color: #999; padding: 50px;">Loading Quantum 2.0 Product Detail...</p>
+</div>
+
+<script crossorigin="anonymous" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script>
+    (function () {
+        var baseURL = "https://RobinChoi00.github.io/Product/Quantum2/";
+        var v = new Date().getTime();
+
+        if (!$('link[href*="Quantum2/style.css"]').length) {
+            $('head').append(`<link rel="stylesheet" href="${baseURL}style.css?v=${v}" type="text/css" />`);
+        }
+
+        $('head').append(`<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">`);
+
+        $.ajax({
+            url: baseURL + "index.html",
+            data: { v: v },
+            dataType: "html",
+            success: function (data) {
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(data, "text/html");
+                var $content = $(doc.body).contents();
+
+                $content.find('img, video source').each(function () {
+                    var src = $(this).attr('src');
+                    if (src && !src.startsWith('http')) {
+                        $(this).attr('src', baseURL + src);
+                    }
+                });
+
+                $content.find('[style]').each(function () {
+                    var style = $(this).attr('style');
+                    if (style && style.indexOf('url(') !== -1) {
+                        $(this).attr('style', style.replace(/url\(['"]?(?!https?:)([^'")]+)['"]?\)/g, function (_, path) {
+                            return "url('" + baseURL + path + "')";
+                        }));
+                    }
+                });
+
+                $content.find('video').each(function () {
+                    this.load();
+                });
+
+                $content.find('script').remove();
+
+                $('#Quantum2-content-anchor').empty().append($content);
+
+                var script = document.createElement("script");
+                script.src = baseURL + "script.js?v=" + v;
+                script.defer = true;
+                document.body.appendChild(script);
+            },
+            error: function () {
+                $('#Quantum2-content-anchor').html('<p style="color:red; text-align:center;">Failed to load Quantum 2.0 content. Please check the network or repository URL.</p>');
+            }
+        });
+    })();
+</script>

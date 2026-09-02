@@ -57,7 +57,7 @@ img {
 .q2-title {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 36px;
+    font-size: 42px;
     line-height: 1.2;
     color: var(--q2-title);
     margin: 0 0 20px;
@@ -67,12 +67,12 @@ img {
 
 .q2-title.center { text-align: center; }
 .q2-title.section-head { margin-bottom: 40px; }
-.q2-title.sm { font-size: 22px; margin-bottom: 14px; }
+.q2-title.sm { font-size: 26px; margin-bottom: 14px; }
 
 .q2-desc {
     font-family: var(--font-body);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.7;
     color: var(--q2-body);
     margin: 0;
@@ -83,7 +83,7 @@ img {
 
 .q2-note {
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 15px;
     color: var(--q2-muted);
     margin-top: 16px;
     line-height: 1.5;
@@ -91,7 +91,7 @@ img {
 
 .q2-lead {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 20px;
     color: var(--q2-body);
     text-align: center;
     margin: 0 0 36px;
@@ -134,7 +134,7 @@ img {
 
 .q2-intro-desc {
     font-family: var(--font-body);
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.7;
     color: #8a8a8a;
     max-width: 980px;
@@ -237,7 +237,7 @@ img {
     align-items: baseline;
     font-family: var(--font-title);
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.18em;
     color: #9a938b;
     padding-bottom: 10px;
@@ -499,7 +499,7 @@ img {
     margin-top: 12px;
     font-family: var(--font-title);
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.12em;
     color: var(--q2-title);
 }
@@ -560,7 +560,7 @@ img {
     color: #fff;
     font-family: var(--font-title);
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 0.04em;
     text-align: center;
     padding: 16px 8px;
@@ -661,7 +661,7 @@ img {
 .q2-compare-title {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
     letter-spacing: 0.14em;
     text-align: center;
     color: var(--q2-brown);
@@ -684,7 +684,7 @@ img {
 .q2-compare-labels div {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: 0.1em;
     text-align: center;
     color: var(--q2-brown);
@@ -759,14 +759,14 @@ img {
 
 .q2-guide-title {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 12px;
     color: var(--q2-title);
 }
 
 .q2-guide-list div {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
     color: #888;
     margin-bottom: 8px;
@@ -837,7 +837,7 @@ img {
     flex: 0 0 280px;
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     color: #444;
     line-height: 1.4;
 }
@@ -845,7 +845,7 @@ img {
 .spec-value {
     flex: 1;
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     line-height: 1.5;
 }
@@ -989,13 +989,13 @@ img {
 @media (max-width: 768px) {
     .q2-intro { padding: 48px 0 32px; }
     .q2-intro + .q2-section { padding-top: 96px; }
-    .q2-intro-desc { font-size: 16px; margin-bottom: 36px; }
+    .q2-intro-desc { font-size: 20px; margin-bottom: 36px; }
     .q2-section { padding: 32px 0; }
     .q2-container { padding: 0 16px; }
-    .q2-title { font-size: 26px; }
-    .q2-title.sm { font-size: 20px; }
-    .q2-desc { font-size: 16px; }
-    .q2-lead { font-size: 15px; }
+    .q2-title { font-size: 30px; }
+    .q2-title.sm { font-size: 22px; }
+    .q2-desc { font-size: 18px; }
+    .q2-lead { font-size: 17px; }
     .q2-icon img { width: 44px; }
 
     .q2-slider-main { height: 280px; }
@@ -1012,7 +1012,7 @@ img {
     .q2-swatch { width: 26px; height: 26px; }
     .q2-swatch-btns { gap: 12px; }
 
-    .q2-prog-grid div { font-size: 13px; padding: 12px 6px; }
+    .q2-prog-grid div { font-size: 14px; padding: 12px 6px; }
 
     .q2-footext-scene .q2-copy {
         position: relative;
@@ -1062,9 +1062,9 @@ img {
 @media (max-width: 480px) {
     .q2-slider-main { height: 210px; }
     .q2-chair { padding: 0 32px; }
-    .q2-title { font-size: 22px; }
+    .q2-title { font-size: 24px; }
     .q2-gif-grid { gap: 10px; }
-    .q2-gif-item span { font-size: 11px; }
+    .q2-gif-item span { font-size: 13px; }
     .q2-prog-grid.auto,
     .q2-prog-grid.manual { grid-template-columns: 1fr; }
 }
@@ -1203,14 +1203,14 @@ img {
         width: 100%;            /* 너비 100% 차지 */
         min-width: auto;        /* 최소 너비 제한 해제 */
         margin-bottom: 8px;     /* 값과의 간격 추가 */
-        font-size: 16px;        /* 폰트 사이즈 조정 */
+        font-size: 18px;        /* 폰트 사이즈 조정 */
         color: #888;            /* 구분을 위해 살짝 연하게 (선택사항) */
     }
 
     /* 5. 값 스타일 (아래쪽으로 이동) */
     .spec-value {
         width: 100%;
-        font-size: 18px;        /* 중요 정보이므로 라벨보다 크게 */
+        font-size: 20px;        /* 중요 정보이므로 라벨보다 크게 */
     }
 
     /* 6. 내부 분할 컬럼 (Upright/Reclined) 세로 배치 */
