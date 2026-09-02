@@ -1,0 +1,1190 @@
+/* ==========================================================================
+   Osaki Quantum 2.0 3D — Product Page Styles
+   Based on Quantum_2.0_product.ai / quantum2_p1_v5.jpg / quantum2_p2_v5.jpg
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --q2-cream: #f5f1eb;
+    --q2-beige: #e9e0d1;
+    --q2-beige-deep: #e0d6c8;
+    --q2-title: #3c3633;
+    --q2-body: #5c564f;
+    --q2-muted: #8a837b;
+    --q2-brown: #4a372b;
+    --q2-line: #d4ccc2;
+    --q2-white: #ffffff;
+    --q2-red: #ee3e30;
+    --q2-radius: 0px;
+    --q2-max: 1200px;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Roboto', 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--q2-white);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.q2-container {
+    width: 100%;
+    max-width: var(--q2-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.q2-section {
+    padding: 48px 0;
+    background: var(--q2-white);
+}
+
+.center { text-align: center; }
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.q2-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--q2-title);
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.q2-title.center { text-align: center; }
+.q2-title.section-head { margin-bottom: 40px; }
+.q2-title.sm { font-size: 22px; margin-bottom: 14px; }
+
+.q2-desc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--q2-body);
+    margin: 0;
+    max-width: 700px;
+}
+
+.q2-desc strong { font-weight: 600; color: var(--q2-title); }
+
+.q2-note {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--q2-muted);
+    margin-top: 16px;
+    line-height: 1.5;
+}
+
+.q2-lead {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--q2-body);
+    text-align: center;
+    margin: 0 0 36px;
+}
+
+.q2-icon { margin-bottom: 16px; }
+.q2-icon.center { display: flex; justify-content: center; }
+.q2-icon img {
+    width: 56px;
+    height: auto;
+    object-fit: contain;
+}
+
+.q2-copy.center { text-align: center; }
+.q2-copy.center .q2-desc { margin: 0 auto; max-width: 820px; }
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.q2-hero {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.q2-hero img { width: 100%; }
+
+/* --------------------------------------------------------------------------
+   Intro + Slider
+   -------------------------------------------------------------------------- */
+.q2-intro {
+    padding: 72px 0 40px;
+    text-align: center;
+    background: var(--q2-white);
+}
+
+.q2-intro + .q2-section {
+    padding-top: 300px;
+}
+
+.q2-intro-desc {
+    font-family: var(--font-body);
+    font-size: 22px;
+    line-height: 1.7;
+    color: #8a8a8a;
+    max-width: 980px;
+    margin: 0 auto 56px;
+}
+
+.q2-slider { max-width: 1200px; margin: 0 auto; }
+
+.q2-slider-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.q2-chair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+
+.q2-chair img,
+#current-chair {
+    width: 100%;
+    max-width: 920px;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.25s ease;
+}
+
+.q2-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 28px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.q2-nav:hover { opacity: 1; transform: translateY(-50%) scale(1.12); }
+.q2-nav.prev { left: 8px; }
+.q2-nav.next { right: 8px; }
+.q2-nav img { width: 100%; }
+
+.q2-swatch-panel {
+    position: relative;
+    width: 240px;
+    height: 86px;
+    margin: 8px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.q2-swatch-bar {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.q2-swatch-btns {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.q2-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.q2-swatch:hover { transform: scale(1.12); }
+.q2-swatch.active { transform: scale(1.18); }
+
+/* --------------------------------------------------------------------------
+   Key feature header
+   -------------------------------------------------------------------------- */
+.q2-keyhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: #9a938b;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--q2-line);
+}
+
+/* --------------------------------------------------------------------------
+   Cards
+   -------------------------------------------------------------------------- */
+.q2-card {
+    position: relative;
+    border-radius: var(--q2-radius);
+    overflow: hidden;
+    background: var(--q2-beige);
+}
+
+.q2-keyhead + .q2-card {
+    border-radius: 0 0 var(--q2-radius) var(--q2-radius);
+}
+
+.q2-card.beige { background: var(--q2-beige); }
+
+.q2-card.q2-split,
+.q2-split.inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 40px 40px;
+}
+
+.q2-card.q2-mech { padding: 0 0 40px; }
+.q2-card.q2-mech .q2-split.inner { padding-bottom: 24px; }
+.q2-card.q2-mech .q2-gif-grid { padding: 0 32px; }
+
+.q2-card.q2-split.reverse { flex-direction: row-reverse; }
+
+.q2-card.q2-stack {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 40px 0;
+}
+
+.q2-card.q2-stack .q2-copy { padding-bottom: 24px; }
+.q2-card.q2-stack.heat { padding: 0 0 48px; }
+.q2-card.q2-stack.heat .q2-copy { padding: 36px 40px 0; }
+
+/* Full-bleed photo cards: no left/right padding so the image hits the card edges.
+   Text stays on solid beige; a short fade sits below the copy, not over it. */
+.q2-card.q2-bleed {
+    padding: 0;
+}
+
+.q2-card.q2-bleed .q2-copy {
+    position: relative;
+    z-index: 1;
+    padding: 48px 48px 28px;
+    background: linear-gradient(
+        180deg,
+        var(--q2-beige) 0%,
+        var(--q2-beige) calc(100% - 24px),
+        rgba(234, 225, 214, 0) 100%
+    );
+}
+
+.q2-card.q2-bleed .q2-visual.full {
+    position: relative;
+    z-index: 0;
+    margin-top: -24px;
+}
+
+.q2-card.q2-bleed .q2-visual.full img {
+    width: 100%;
+    display: block;
+}
+
+.q2-card .q2-copy { flex: 1; min-width: 0; }
+.q2-card .q2-visual { flex: 1.1; min-width: 0; }
+
+.q2-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.q2-visual.wide img { max-width: none; }
+.q2-visual.full { width: 100%; }
+.q2-visual.full img { width: 100%; }
+.q2-visual.round img { border-radius: 24px; }
+.q2-visual.rollers {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    line-height: 0;
+}
+
+.q2-rollers-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px 72px;
+    border-radius: 36px;
+}
+
+.q2-card.beige.q2-rollers-card {
+    background-color: var(--q2-beige);
+    background-image: url("images/39.quantum2_bg_foot.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.q2-rollers-card .q2-visual.rollers {
+    width: 100%;
+    max-width: 480px;
+}
+
+.q2-rollers-card .q2-visual.rollers img {
+    width: 100%;
+    display: block;
+    border-radius: 44px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.q2-rollers-card .q2-copy {
+    padding: 48px 48px 0;
+    max-width: 760px;
+}
+
+.q2-rollers-card .q2-icon {
+    margin-bottom: 18px;
+}
+
+.q2-rollers-card .q2-title {
+    margin-bottom: 18px;
+}
+
+.q2-rollers-card .q2-desc {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.q2-footext-scene {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(234, 224, 209);
+    min-height: 0;
+}
+
+.q2-footext-scene .q2-scene-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.q2-footext-scene .q2-copy {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    max-width: 460px;
+    z-index: 2;
+    padding: 0;
+    background: none;
+}
+
+.q2-sl .q2-visual img {
+    background: transparent;
+    border-radius: 0;
+}
+
+.q2-sl,
+.q2-bodyscan,
+.q2-footext,
+.q2-remote {
+    background:
+        var(--q2-bg, none) center / cover no-repeat,
+        var(--q2-beige);
+}
+
+/* Studio photo fills the SL card; chair + copy sit on top of it. */
+.q2-card.beige.q2-sl {
+    background-color: var(--q2-beige);
+    background-image: url("images/25.quantum2_SL.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.q2-sl .q2-copy,
+.q2-sl .q2-visual {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.q2-card.beige.q2-bodyscan {
+    background-color: var(--q2-beige);
+    background-image: url("images/28.quantum2_bg_body-scan.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.q2-bodyscan .q2-copy,
+.q2-bodyscan .q2-visual {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.q2-card.beige.q2-remote {
+    background-color: var(--q2-beige);
+    background-image: url("images/49.quantum2_bg_touchscreen.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.q2-remote .q2-copy,
+.q2-remote .q2-visual {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   3D GIF grid
+   -------------------------------------------------------------------------- */
+.q2-gif-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.q2-gif-item {
+    text-align: center;
+}
+
+.q2-gif-item img {
+    width: 100%;
+    border-radius: 16px;
+    background: #111;
+}
+
+.q2-gif-item span {
+    display: block;
+    margin-top: 12px;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: var(--q2-title);
+}
+
+/* --------------------------------------------------------------------------
+   Duo: space-saving + zero gravity
+   -------------------------------------------------------------------------- */
+.q2-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.q2-duo-card {
+    border-radius: var(--q2-radius);
+    overflow: hidden;
+    background: var(--q2-beige);
+    display: flex;
+    flex-direction: column;
+}
+
+.q2-duo-img { line-height: 0; }
+.q2-duo-img img { width: 100%; }
+.q2-duo-card .q2-copy { padding: 32px 32px 40px; }
+
+/* --------------------------------------------------------------------------
+   Programs
+   -------------------------------------------------------------------------- */
+.q2-programs {
+    background: var(--q2-white);
+    padding: 48px 0;
+}
+
+.q2-programs-card {
+    padding: 56px 48px 48px;
+    border-radius: var(--q2-radius);
+    overflow: hidden;
+}
+
+.q2-programs-card:has(.q2-program-chair) {
+    padding-bottom: 0;
+}
+
+.q2-programs-card .q2-title { color: var(--q2-brown); }
+
+.q2-prog-grid {
+    display: grid;
+    gap: 12px 14px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.q2-prog-grid.auto { grid-template-columns: repeat(4, 1fr); }
+.q2-prog-grid.manual { grid-template-columns: repeat(3, 1fr); max-width: 720px; }
+
+.q2-prog-grid div {
+    background: var(--q2-brown);
+    color: #fff;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding: 16px 8px;
+    border-radius: 10px;
+    line-height: 1.3;
+}
+
+.q2-program-chair {
+    margin: 40px -48px 0;
+    max-width: none;
+    line-height: 0;
+}
+
+.q2-program-chair img {
+    width: 100%;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Extra details + 3 columns
+   -------------------------------------------------------------------------- */
+.q2-details-section {
+    padding: 48px 0;
+    background: var(--q2-white);
+}
+
+.q2-card.beige.q2-details-card {
+    padding: 0 0 40px;
+    border-radius: var(--q2-radius);
+    overflow: hidden;
+    background-color: rgb(234, 224, 209);
+    background-image: url("images/60.quantum2_bg_details.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.q2-details-card .section-head {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 28px 24px 0;
+}
+
+.q2-details-bleed {
+    width: 100%;
+    line-height: 0;
+    margin: 0;
+}
+
+.q2-details-bleed img {
+    width: 100%;
+    display: block;
+    margin-top: -72px;
+}
+
+.q2-details-floor {
+    position: relative;
+    z-index: 1;
+    line-height: 0;
+    margin-top: -28px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.q2-details-floor img {
+    width: calc(100% + 4px);
+    max-width: none;
+    margin-left: -2px;
+    display: block;
+}
+
+.q2-extras {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 8px;
+    padding: 8px 40px 8px;
+    background: transparent;
+}
+
+.q2-extra { text-align: center; }
+.q2-extra .q2-desc { max-width: 320px; margin: 0 auto; }
+
+/* --------------------------------------------------------------------------
+   Comparison — line chart matching the design JPG
+   -------------------------------------------------------------------------- */
+.q2-compare { padding-top: 24px; }
+
+.q2-compare-card {
+    background: #f1e6d6;
+    overflow: hidden;
+    border-radius: var(--q2-radius);
+}
+
+.q2-compare-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.14em;
+    text-align: center;
+    color: var(--q2-brown);
+    background: transparent;
+    padding: 26px 20px 20px;
+    border-bottom: 1px solid var(--q2-brown);
+}
+
+.q2-compare-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--q2-brown);
+    background-color: #d9ccbc;
+    background-image: url("images/62.quantum2_compare_bar.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.q2-compare-labels div {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: var(--q2-brown);
+    padding: 18px 12px;
+}
+
+.q2-compare-labels div + div {
+    border-left: 1px solid var(--q2-brown);
+}
+
+.q2-compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.q2-compare-col {
+    background: #f1e6d6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.q2-compare-col + .q2-compare-col { border-left: 1px solid var(--q2-brown); }
+
+.q2-compare-col img {
+    width: auto;
+    max-width: 100%;
+    height: 520px;
+    padding: 28px 16px 40px;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+/* --------------------------------------------------------------------------
+   Doorway & Dimensions
+   -------------------------------------------------------------------------- */
+.q2-doorway-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.q2-doorway-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.q2-doorway-left img {
+    width: 100%;
+    max-height: 440px;
+    object-fit: contain;
+}
+
+.q2-doorway-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.q2-box-img {
+    width: 78%;
+    max-width: 340px;
+}
+
+.q2-box-img img { width: 100%; }
+
+.q2-guide-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--q2-title);
+}
+
+.q2-guide-list div {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.q2-dim-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+/* Native assets share 1794px height (972 vs 2418 wide). Keep the same
+   scale so both chairs sit on one floor line, then nudge the wider
+   side-view down to match the front view's extra bottom padding. */
+.q2-dim-img:first-child { flex: 972 1 0; min-width: 0; }
+.q2-dim-img:last-child { flex: 2418 1 0; min-width: 0; }
+
+.q2-dim-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.q2-dim-img:last-child {
+    /* 50px extra bottom pad on the front PNG, as a fraction of row width
+       once both images share the same scale (972:2418). */
+    padding-bottom: calc(50 / 3390 * 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Specification
+   -------------------------------------------------------------------------- */
+.spec-section {
+    background: var(--q2-white);
+    padding: 80px 0 100px;
+}
+
+.spec-section .container {
+    width: 100%;
+    max-width: var(--q2-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.spec-section .container > div:first-child {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 36px;
+    color: #2a2a2a;
+    margin-bottom: 36px;
+}
+
+.spec-table { border-top: 2px solid #2a2a2a; }
+
+.spec-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 18px 0;
+    gap: 24px;
+}
+
+.spec-row.no-border { border-bottom: none; }
+
+.spec-label {
+    flex: 0 0 280px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.spec-value {
+    flex: 1;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.spec-value.split-col { display: flex; gap: 40px; }
+
+.col-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.col-item strong { color: #333; font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .q2-card.q2-split,
+    .q2-card.q2-split.reverse,
+    .q2-split.inner {
+        flex-direction: column;
+        padding: 36px 20px 28px;
+        text-align: center;
+    }
+
+    .q2-card.q2-split .q2-copy,
+    .q2-card.q2-split.reverse .q2-copy,
+    .q2-split.inner .q2-copy {
+        text-align: center;
+    }
+
+    .q2-card.q2-split .q2-icon,
+    .q2-card.q2-split.reverse .q2-icon,
+    .q2-split.inner .q2-icon {
+        display: flex;
+        justify-content: center;
+    }
+
+    .q2-card.q2-split .q2-visual,
+    .q2-card.q2-split.reverse .q2-visual,
+    .q2-split.inner .q2-visual {
+        order: -1;
+        width: 100%;
+    }
+
+    .q2-card.q2-mech .q2-gif-grid { padding: 0 16px 8px; }
+
+    .q2-card.q2-stack { padding: 36px 20px 0; }
+    .q2-card.q2-stack.heat { padding: 0 0 36px; }
+    .q2-card.q2-stack.heat .q2-copy { padding: 28px 20px 0; }
+
+    .q2-card.q2-bleed,
+    .q2-card.q2-bleed.q2-stack {
+        padding: 0;
+    }
+
+    .q2-card.q2-bleed .q2-copy {
+        padding: 36px 24px 24px;
+    }
+
+    .q2-card.q2-bleed .q2-visual.full {
+        margin-top: -16px;
+    }
+
+    .q2-footext-scene .q2-copy {
+        top: 24px;
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+
+    .q2-rollers-card { padding: 24px 20px 48px; border-radius: 28px; }
+    .q2-rollers-card .q2-visual.rollers img { border-radius: 28px; }
+    .q2-rollers-card .q2-copy { padding: 32px 12px 0; }
+
+    .q2-programs-card { padding: 36px 20px 32px; }
+    .q2-programs-card:has(.q2-program-chair) { padding-bottom: 0; }
+    .q2-program-chair { margin: 28px -20px 0; }
+
+    .q2-duo { grid-template-columns: 1fr; }
+    .q2-extras { grid-template-columns: 1fr; gap: 40px; }
+
+    .q2-compare-labels,
+    .q2-compare-row { grid-template-columns: 1fr 1fr; }
+    .q2-compare-col + .q2-compare-col { border-left: 1px solid var(--q2-brown); }
+
+    .q2-gif-grid { grid-template-columns: repeat(2, 1fr); }
+    .q2-prog-grid.auto { grid-template-columns: repeat(2, 1fr); }
+    .q2-prog-grid.manual { grid-template-columns: 1fr 1fr; }
+
+    .q2-doorway-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .q2-doorway-right { align-items: center; }
+    .q2-guide { text-align: center; width: 100%; }
+    .q2-box-img { margin: 0 auto; }
+
+    .q2-dim-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .q2-dim-img:first-child,
+    .q2-dim-img:last-child {
+        flex: none;
+        width: 100%;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .q2-intro { padding: 48px 0 32px; }
+    .q2-intro + .q2-section { padding-top: 96px; }
+    .q2-intro-desc { font-size: 16px; margin-bottom: 36px; }
+    .q2-section { padding: 32px 0; }
+    .q2-container { padding: 0 16px; }
+    .q2-title { font-size: 26px; }
+    .q2-title.sm { font-size: 20px; }
+    .q2-desc { font-size: 16px; }
+    .q2-lead { font-size: 15px; }
+    .q2-icon img { width: 44px; }
+
+    .q2-slider-main { height: 280px; }
+    .q2-chair { padding: 0 40px; }
+    .q2-nav { width: 18px; }
+    .q2-nav.prev { left: 4px; }
+    .q2-nav.next { right: 4px; }
+
+    .q2-swatch-panel {
+        width: 200px;
+        height: 72px;
+        margin-top: -8px;
+    }
+    .q2-swatch { width: 26px; height: 26px; }
+    .q2-swatch-btns { gap: 12px; }
+
+    .q2-prog-grid div { font-size: 11px; padding: 12px 6px; }
+
+    .q2-footext-scene .q2-copy {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        order: -1;
+        padding: 28px 20px 12px;
+    }
+
+    .q2-details-section { padding: 32px 0; }
+    .q2-details-card .section-head { padding: 20px 16px 0; }
+    .q2-details-bleed img { margin-top: -40px; }
+    .q2-details-floor { margin-top: -16px; }
+    .q2-extras { margin-top: 8px; padding: 8px 20px; }
+
+    .q2-compare-col img { height: 380px; padding: 16px 8px 24px; }
+
+    .q2-dim-img img { width: 100%; height: auto; }
+
+    .spec-row {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .spec-label { flex: none; width: 100%; }
+
+    .spec-value.split-col {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .col-item { align-items: center; }
+
+    .spec-section .container > div:first-child {
+        text-align: center;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .q2-slider-main { height: 210px; }
+    .q2-chair { padding: 0 32px; }
+    .q2-title { font-size: 22px; }
+    .q2-gif-grid { gap: 10px; }
+    .q2-gif-item span { font-size: 11px; }
+    .q2-prog-grid.auto,
+    .q2-prog-grid.manual { grid-template-columns: 1fr; }
+}
+
+
+
+
+/* =========================================
+   SECTION 14 Specification Section
+   ========================================= */
+
+/* 1. 섹션 전체 여백 및 배경 */
+.spec-section {
+    background-color: #ffffff;
+    padding: 100px 0;      /* 위아래 넉넉한 여백 */
+    margin-bottom: 100px;  /* 하단 여백 */
+}
+
+/* 2. 메인 제목 (Specification) 스타일 */
+/* HTML 구조상 .container 바로 아래 첫 번째 div가 제목입니다 */
+.spec-section .container > div:first-child {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;       /* 아주 굵게 (Image like) */
+    font-size: 40px !important;        /* 큰 제목 크기 */
+    text-align: center;     /* 중앙 정렬 */
+    margin-bottom: 60px;    /* 표와의 간격 */
+    color: #000000;
+    letter-spacing: 0.02em;
+}
+
+/* 3. 테이블 컨테이너 (중앙 정렬 & 상단 테두리) */
+.spec-table {
+    max-width: 1000px;      /* 표 너비 제한 */
+    margin: 0 auto;         /* 중앙 정렬 */
+    border-top: 1px solid #e5e5e5; /* 표 맨 위 가로선 */
+}
+
+/* 4. 행(Row) 스타일 */
+.spec-row {
+    display: flex;          /* 가로 배치 (좌:라벨, 우:값) */
+    align-items: flex-start;/* 위쪽 라인 맞춤 */
+    padding: 25px 0;        /* 행 높이 (위아래 여백) */
+    border-bottom: 1px solid #e5e5e5; /* 각 줄마다 회색 밑줄 */
+}
+
+/* 마지막 줄 테두리 제거 */
+.spec-row.no-border {
+    border-bottom: none;
+}
+
+/* 5. 왼쪽 라벨 (Product Name, Power Supply 등) */
+.spec-label {
+    width: 30%;             /* 왼쪽 칸 너비 (약 30%) */
+    min-width: 200px;       /* 최소 너비 확보 */
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;       /* Bold */
+    font-size: 20px;
+    color: #000000;         /* 검은색 */
+    line-height: 1.6;
+}
+
+/* 6. 오른쪽 값 (Titan Plantaris, 110-120V 등) */
+.spec-value {
+    flex: 1;                /* 남은 공간 다 차지 */
+    
+    font-family: 'Roboto', sans-serif; /* Avenir가 없으면 Poppins */
+    font-weight: 500;       /* Regular */
+    font-size: 20px;
+    color: #444444;         /* 약간 부드러운 검은색 */
+    line-height: 1.6;
+}
+
+/* 7. 내부 컬럼 나누기 (Upright / Reclined 등) */
+/* .spec-value 안에 .split-col이 있을 때 가로로 한 번 더 나눔 */
+.spec-value.split-col {
+    display: flex;          
+    gap: 80px;              /* 두 항목 사이 간격 (넓게) */
+}
+
+/* 내부 아이템 (Strong 제목 + Span 내용) */
+.col-item {
+    display: flex;
+    flex-direction: column; 
+}
+
+.col-item strong {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;     /* 제목과 수치 사이 간격 */
+    display: block;
+}
+
+/* 8. 다운로드 링크 스타일 (빨간색) */
+.red-link {
+    color: #ff4d4d !important;         /* 이미지와 동일한 빨간색 */
+    text-decoration: none;  
+    font-weight: 500;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.red-link:hover {
+    opacity: 0.7;           /* 마우스 올리면 살짝 흐려짐 */
+}
+
+
+
+
+/* =========================================
+   [RESPONSIVE] Mobile Adjustment (Spec Section)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. 섹션 여백 축소 */
+    .spec-section {
+        padding: 60px 0;       /* 위아래 패딩 줄임 */
+        margin-bottom: 60px;
+    }
+
+    /* 2. 메인 제목 크기 조정 */
+    .spec-section .container > div:first-child {
+        font-size: 28px !important; /* 모바일 타이틀 크기 축소 */
+        margin-bottom: 30px;
+    }
+
+    /* 3. 행(Row) 레이아웃 변경: 좌우 배치 -> 상하 배치 */
+    .spec-row {
+        flex-direction: column; /* 위: 라벨, 아래: 값 */
+        align-items: flex-start;
+        padding: 20px 0;        /* 행 간격 살짝 좁힘 */
+    }
+
+    /* 4. 라벨 스타일 (위쪽으로 이동) */
+    .spec-label {
+        width: 100%;            /* 너비 100% 차지 */
+        min-width: auto;        /* 최소 너비 제한 해제 */
+        margin-bottom: 8px;     /* 값과의 간격 추가 */
+        font-size: 16px;        /* 폰트 사이즈 조정 */
+        color: #888;            /* 구분을 위해 살짝 연하게 (선택사항) */
+    }
+
+    /* 5. 값 스타일 (아래쪽으로 이동) */
+    .spec-value {
+        width: 100%;
+        font-size: 18px;        /* 중요 정보이므로 라벨보다 크게 */
+    }
+
+    /* 6. 내부 분할 컬럼 (Upright/Reclined) 세로 배치 */
+    .spec-value.split-col {
+        flex-direction: column; /* 가로 나열 -> 세로 나열 */
+        gap: 15px;              /* 내부 아이템 간격 축소 */
+    }
+
+    /* 7. 다운로드 링크 폰트 조정 */
+    .red-link {
+        font-size: 18px;
+    }
+}

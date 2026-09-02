@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osaki Quantum 2.0 3D Massage Chair</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="q2-hero">
+        <img src="images/1.quantum2_product_main.png" alt="Osaki Quantum 2.0 3D — The Future of Full-Body Relaxation">
+    </div>
+
+    <div class="q2-intro">
+        <div class="q2-container">
+            <div class="q2-intro-desc">
+                Meet the Quantum 2.0, where intelligent technology meets next-level relaxation.
+                Its 3D massage mechanism delivers a dynamic, deeply immersive massage, while intuitive
+                voice control puts your favorite settings at your command. Complete the experience with
+                targeted calf-kneading massage designed to soothe tired legs and leave your entire body
+                feeling refreshed.
+            </div>
+
+            <div class="q2-slider">
+                <div class="q2-slider-main">
+                    <div class="q2-nav prev" onclick="moveSlide(-1)">
+                        <img src="images/6.quantum2_left_arrow.png" alt="Previous color">
+                    </div>
+                    <div class="q2-chair">
+                        <img id="current-chair" src="images/5.quantum2_color_brown.png" alt="Quantum 2.0 color options">
+                    </div>
+                    <div class="q2-nav next" onclick="moveSlide(1)">
+                        <img src="images/7.quantum2_right_arrow.png" alt="Next color">
+                    </div>
+                </div>
+
+                <div class="q2-swatch-panel">
+                    <img src="images/8.quantum2_swatches_bar.png" class="q2-swatch-bar" alt="">
+                    <div class="q2-swatch-btns">
+                        <img src="images/13.quantum2_swatch_all_selected.png" class="q2-swatch active" onclick="changeColor(0)" alt="All colors">
+                        <img src="images/10.quantum2_swatch_black.png" class="q2-swatch" onclick="changeColor(1)" alt="Black">
+                        <img src="images/11.quantum2_swatch_brown.png" class="q2-swatch" onclick="changeColor(2)" alt="Brown">
+                        <img src="images/12.quantum2_swatch_taupe.png" class="q2-swatch" onclick="changeColor(3)" alt="Taupe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-keyhead">
+                <span>KEY FEATURE</span>
+                <span>01</span>
+            </div>
+            <div class="q2-card beige q2-mech">
+                <div class="q2-split inner">
+                    <div class="q2-copy">
+                        <div class="q2-icon"><img src="images/17.quantum2_icon_gear.png" alt=""></div>
+                        <h2 class="q2-title">ADVANCED<br>3D MASSAGE<br>MECHANISM</h2>
+                        <p class="q2-desc">
+                            Experience a more immersive massage with rollers that move in multiple directions
+                            while adjusting their intensity to better follow the contours of your body.
+                            The Quantum 2.0 delivers customizable pressure, allowing you to enjoy everything
+                            from a gentle, soothing massage to a deeper, more invigorating experience.
+                        </p>
+                    </div>
+                    <div class="q2-visual">
+                        <img src="images/18.quantum2_3D.png" alt="Advanced 3D massage mechanism">
+                    </div>
+                </div>
+                <div class="q2-gif-grid">
+                    <div class="q2-gif-item">
+                        <img src="images/19.quantum2_gif_neck.png" alt="Neck massage">
+                        <span>NECK</span>
+                    </div>
+                    <div class="q2-gif-item">
+                        <img src="images/20.quantum2_gif_shoulders.png" alt="Shoulder massage">
+                        <span>SHOULDERS</span>
+                    </div>
+                    <div class="q2-gif-item">
+                        <img src="images/21.quantum2_gif_lower_back.png" alt="Lower back massage">
+                        <span>LOWER BACK</span>
+                    </div>
+                    <div class="q2-gif-item">
+                        <img src="images/22.quantum2_gif_buttocks.png" alt="Buttocks massage">
+                        <span>BUTTOCKS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-keyhead">
+                <span>KEY FEATURE</span>
+                <span>02</span>
+            </div>
+            <div class="q2-card q2-split beige q2-sl" style="--q2-bg: url('images/25.quantum2_SL.png')">
+                <div class="q2-copy">
+                    <div class="q2-icon"><img src="images/23.quantum2_icon_SL.png" alt=""></div>
+                    <h2 class="q2-title">SL-TRACK<br>SYSTEM</h2>
+                    <p class="q2-desc">
+                        Enjoy comprehensive massage coverage as the rollers glide smoothly 
+                        from your neck and back down toward your glutes and thighs. 
+                        The extended track follows the natural curve of your body for a more continuous, full-body massage experience.
+
+                    </p>
+                </div>
+                <div class="q2-visual wide">
+                    <img src="images/24.quantum2_bg_SL.png" alt="SL-Track system from neck to glutes">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-keyhead">
+                <span>KEY FEATURE</span>
+                <span>03</span>
+            </div>
+            <div class="q2-card q2-split beige q2-bodyscan" style="--q2-bg: url('images/28.quantum2_bg_body-scan.png')">
+                <div class="q2-copy">
+                    <div class="q2-icon"><img src="images/26.quantum2_icon_body-scan.png" alt=""></div>
+                    <h2 class="q2-title">BODY SCAN<br>TECHNOLOGY</h2>
+                    <p class="q2-desc">
+                        Advanced sensors scan your body’s shape, height, and pressure points to precisely 
+                        map key areas like your neck, shoulders, and spine. The chair then automatically adjusts 
+                        its rollers and massage settings for targeted comfort, deeper relief, 
+                        and a truly personalized massage experience.
+                    </p>
+                </div>
+                <div class="q2-visual">
+                    <img src="images/27.quantum2_body-scan.png" alt="Body scan technology">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card q2-stack beige q2-bleed">
+                <div class="q2-copy center">
+                    <div class="q2-icon center"><img src="images/29.quantum2_icon_mic.png" alt=""></div>
+                    <h2 class="q2-title">INTELLIGENT VOICE CONTROL</h2>
+                    <p class="q2-desc">
+                        Take control of your massage experience with convenient voice commands. 
+                        Easily adjust massage settings, select programs, and control key functions hands-free, 
+                        so you can relax without reaching for the remote. Just say “Hi, Osaki” and a command to get started.
+                    </p>
+                </div>
+                <div class="q2-visual full">
+                    <img src="images/30.quantum2_voice_control.png" alt="Intelligent voice control — Hi, Osaki">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card q2-stack beige q2-bleed">
+                <div class="q2-copy">
+                    <div class="q2-icon"><img src="images/31.quantum2_icon_air-cell.png" alt=""></div>
+                    <h2 class="q2-title">32-CELL AIR<br>COMPRESSION MASSAGE</h2>
+                    <p class="q2-desc">
+                        Enjoy a soothing combination of targeted air compression for a more relaxing 
+                        full-body experience. With 32 strategically placed air cells working to gently squeeze and release, 
+                        the Quantum 2.0 will help relieve any tension and leave you feeling refreshed.
+                    </p>
+                </div>
+                <div class="q2-visual full">
+                    <img src="images/32.quantum2_air-cell.png" alt="32-cell air compression on shoulders, arms, waist, calves, and feet">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card q2-stack beige heat">
+                <div class="q2-visual full">
+                    <img src="images/34.quantum2_heating.png" alt="Lumbar and feet heating therapy">
+                </div>
+                <div class="q2-copy center">
+                    <div class="q2-icon center"><img src="images/33.quantum2_icon_heating.png" alt=""></div>
+                    <h2 class="q2-title">LUMBAR &amp; FEET<br>HEATING THERAPY</h2>
+                    <p class="q2-desc">
+                        Targeted heating therapy gently warms the lumbar area and feet, 
+                        helping melt away tension and enhance relaxation. 
+                        Enjoy soothing warmth where you need it most for a deeper, more comforting massage experience.
+                    </p>
+                    <p class="q2-note">* The heating therapy provides warmth in the range of approximately 75 – 83°F.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card q2-split beige calf">
+                <div class="q2-visual round">
+                    <img src="images/36.quantum2_calf.png" alt="Calf-kneading massage">
+                </div>
+                <div class="q2-copy">
+                    <div class="q2-icon"><img src="images/35.quantum2_icon_calf.png" alt=""></div>
+                    <h2 class="q2-title">CALF-KNEADING<br>MASSAGE</h2>
+                    <p class="q2-desc">
+                        Give tired legs the relief they deserve with targeted kneading designed to gently work the calf muscles, 
+                        which is often a missed detail with typical massage chairs. 
+                        Rhythmic kneading motions help ease tension and create a soothing, 
+                        relaxing massage experience from the knees down.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card q2-footext-scene">
+                <img class="q2-scene-img" src="images/38.quantum2_foot-ext.png" alt="Automatic extendable footrest up to 7 inches">
+                <div class="q2-copy">
+                    <div class="q2-icon"><img src="images/37.quantum2_icon_arrow.png" alt=""></div>
+                    <h2 class="q2-title">AUTOMATIC<br>EXTENDABLE FOOTREST</h2>
+                    <p class="q2-desc">
+                        Automatically extending up to <strong>7"</strong>, the footrest adjusts to accommodate
+                        different heights for a more personalized and comfortable massage. Its smooth
+                        extension provides added leg and foot support, helping you settle into the perfect
+                        position.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card beige q2-rollers-card">
+                <div class="q2-visual rollers">
+                    <img src="images/41.quantum2_foot-rollers.png" alt="Specialized foot rollers">
+                </div>
+                <div class="q2-copy center">
+                    <div class="q2-icon center"><img src="images/40.quantum2_icon_foot.png" alt=""></div>
+                    <h2 class="q2-title">SPECIALIZED<br>FOOT ROLLERS</h2>
+                    <p class="q2-desc">
+                        Treat your feet to a spa-like experience with specialized rollers designed to deeply
+                        soothe and invigorate the soles. Targeted rolling motions help melt away built-up
+                        tension, leaving your feet feeling refreshed, relaxed, and rejuvenated.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-duo">
+                <div class="q2-duo-card beige">
+                    <div class="q2-duo-img">
+                        <img src="images/42.quantum2_space-saving.png" alt="Space-saving technology — 7 inches from the wall">
+                    </div>
+                    <div class="q2-copy">
+                        <div class="q2-icon"><img src="images/43.quantum2_icon_space-saving.png" alt=""></div>
+                        <h2 class="q2-title">SPACE-SAVING<br>TECHNOLOGY</h2>
+                        <p class="q2-desc">
+                            Maximize your relaxation without sacrificing valuable room space. The Quantum 2.0
+                            is designed to move forward as it reclines, allowing you to place it closer to the
+                            wall while enjoying a fully reclined massage experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="q2-duo-card beige">
+                    <div class="q2-duo-img">
+                        <img src="images/44.quantum2_ZG.png" alt="Zero gravity reclining">
+                    </div>
+                    <div class="q2-copy">
+                        <div class="q2-icon"><img src="images/45.quantum2_icon_ZG.png" alt=""></div>
+                        <h2 class="q2-title">ZERO GRAVITY<br>RECLINING</h2>
+                        <p class="q2-desc">
+                            Recline into a weightless feeling with Zero Gravity positioning designed to elevate
+                            your relaxation. By evenly distributing your body weight, the Quantum 2.0 helps
+                            reduce pressure points and allows the massage rollers to work more effectively
+                            across your body.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section q2-programs">
+        <div class="q2-container">
+            <div class="q2-card beige q2-programs-card">
+                <h2 class="q2-title center">24 AUTO PROGRAMS</h2>
+                <p class="q2-lead">Personalized massage programs tailored to your needs.</p>
+                <div class="q2-prog-grid auto">
+                    <div>DEMO</div>
+                    <div>THAI STRETCH</div>
+                    <div>BODY CIRCULATION</div>
+                    <div>RELAX</div>
+                    <div>MORNING CARE</div>
+                    <div>MIDDAY CARE</div>
+                    <div>NIGHT CARE</div>
+                    <div>DEEP TISSUE</div>
+                    <div>EXTENSION</div>
+                    <div>WOMEN'S HEALTH</div>
+                    <div>SHIATSU</div>
+                    <div>MEN'S HEALTH</div>
+                    <div>NECK MASSAGE</div>
+                    <div>NECK &amp; SHOULDER</div>
+                    <div>BACK MASSAGE</div>
+                    <div>LUMBAR MASSAGE</div>
+                    <div>WAIST &amp; HIP MASSAGE</div>
+                    <div>LEGS MASSAGE</div>
+                    <div>UPPER BODY</div>
+                    <div>LOWER BODY</div>
+                    <div>FULL BODY</div>
+                    <div>SPINE CARE</div>
+                    <div>FATIGUE RELIEF</div>
+                    <div>SLEEP</div>
+                </div>
+                <div class="q2-program-chair">
+                    <img src="images/46.quantum2_auto+manual.png" alt="Osaki Quantum 2.0 massage chair">
+                </div>
+            </div>
+
+            <div class="q2-card beige q2-programs-card">
+                <h2 class="q2-title center">6 MANUAL MODES</h2>
+                <p class="q2-lead">Custom manual techniques that target where you need relief most.</p>
+                <div class="q2-prog-grid manual">
+                    <div>KNEADING</div>
+                    <div>TAPPING</div>
+                    <div>SHIATSU</div>
+                    <div>KNEADING &amp; TAPPING</div>
+                    <div>TUINA</div>
+                    <div>COMBINATION</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section">
+        <div class="q2-container">
+            <div class="q2-card q2-stack beige q2-remote" style="--q2-bg: url('images/49.quantum2_bg_touchscreen.png')">
+                <div class="q2-copy center">
+                    <div class="q2-icon center"><img src="images/47.quantum2_icon_hand.png" alt=""></div>
+                    <h2 class="q2-title">TOUCHSCREEN REMOTE CONTROLLER</h2>
+                    <p class="q2-desc">
+                        The intuitive touchscreen remote puts complete control at your fingertips, making it
+                        easy to explore massage programs, adjust settings, and personalize your experience.
+                        Its sleek, responsive interface brings a modern, user-friendly feel to every massage.
+                    </p>
+                </div>
+                <div class="q2-visual full">
+                    <img src="images/48.quantum2_touchscreen.png" alt="Touchscreen remote controller with phone holder">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section q2-details-section">
+        <div class="q2-container">
+            <div class="q2-card beige q2-details-card">
+                <h2 class="q2-title center section-head">EXTRA DETAIL FEATURES</h2>
+                <div class="q2-details-bleed">
+                    <img src="images/50.quantum2_details.png" alt="Bluetooth speakers, shortcut panel, and wireless charging">
+                </div>
+                <div class="q2-details-floor">
+                    <img src="images/61.quantum2_details_floor.png" alt="">
+                </div>
+                <div class="q2-extras">
+                    <div class="q2-extra">
+                        <div class="q2-icon center"><img src="images/51.quantum2_icon_wireless.png" alt=""></div>
+                        <h3 class="q2-title sm">WIRELESS CHARGING</h3>
+                        <p class="q2-desc">
+                            A built-in wireless charging surface keeps your compatible devices powered up and
+                            within easy reach while you relax.
+                        </p>
+                    </div>
+                    <div class="q2-extra">
+                        <div class="q2-icon center"><img src="images/52.quantum2_icon_shortcut.png" alt=""></div>
+                        <h3 class="q2-title sm">SHORTCUT PANEL</h3>
+                        <p class="q2-desc">
+                            Puts essential massage controls right at your fingertips, making it easy to adjust
+                            settings and personalize your experience with a quick tap.
+                        </p>
+                    </div>
+                    <div class="q2-extra">
+                        <div class="q2-icon center"><img src="images/53.quantum2_icon_bluetooth.png" alt=""></div>
+                        <h3 class="q2-title sm">BLUETOOTH SPEAKERS</h3>
+                        <p class="q2-desc">
+                            Delivers rich, immersive sound, letting you enjoy your favorite music, podcasts, or
+                            audio in high-quality comfort while you relax.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section q2-compare">
+        <div class="q2-container">
+            <div class="q2-compare-card">
+                <div class="q2-compare-title">COMPARISON CHART</div>
+                <div class="q2-compare-labels">
+                    <div>QUANTUM 2.0</div>
+                    <div>QUANTUM</div>
+                </div>
+                <div class="q2-compare-row">
+                    <div class="q2-compare-col">
+                        <img src="images/54.quantum2_chart1_Q2.png" alt="Quantum 2.0 — shoulder 21.5 inches, seat 20.5 inches">
+                    </div>
+                    <div class="q2-compare-col">
+                        <img src="images/55.quantum2_chart2_Q.png" alt="Quantum — shoulder 19.5 inches, seat 19 inches">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section q2-doorway">
+        <div class="q2-container">
+            <h2 class="q2-title center section-head">MINIMUM DOORWAY &amp; PACKAGING</h2>
+            <div class="q2-doorway-layout">
+                <div class="q2-doorway-left">
+                    <img src="images/56.quantum2_min.doorway.png" alt="Assembled minimum doorway 30 inches">
+                </div>
+                <div class="q2-doorway-right">
+                    <div class="q2-box-img">
+                        <img src="images/57.quantum2_packaging.png" alt="Packaging 32.3 by 58.7 by 48.4 inches">
+                    </div>
+                    <div class="q2-guide">
+                        <div class="q2-guide-title"><strong>Measuring Guide</strong></div>
+                        <div class="q2-guide-list">
+                            <div>• Calculate the doorway width by subtracting 1 inch from the smallest inner width of the door frame. (1/2 inch from each side)</div>
+                            <div>• Please use a standard measuring tape to measure the doorway.</div>
+                            <div>• If the door cannot be fully opened, open it as much as possible and measure the width from the edge of the door hinge.</div>
+                            <div>• If there is a rounded curve on the wall, calculate the inner width based on the most protruding point of the wall.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q2-section q2-dimensions">
+        <div class="q2-container">
+            <h2 class="q2-title center section-head">DIMENSIONS</h2>
+            <div class="q2-dim-row">
+                <div class="q2-dim-img"><img src="images/58.quantum2_dimensions1.png" alt="Front dimensions"></div>
+                <div class="q2-dim-img"><img src="images/59.quantum2_dimensions2.png" alt="Side dimensions"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spec-section">
+        <div class="container">
+            <div>Specification</div>
+            
+            <div class="spec-table">
+                <div class="spec-row">
+                    <div class="spec-label">Product Name</div>
+                    <div class="spec-value">Osaki Quantum 2.0</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">User Manual</div>
+                    <div class="spec-value links">
+                        <a href="" class="red-link" target="_blank">Download</a>
+                        
+                    
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Power Supply</div>
+                    <div class="spec-value">110 - 120V</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Rate Frequency</div>
+                    <div class="spec-value">50 / 60Hz</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Standing</strong>
+                            <span>30" x 64.5" x 45.5"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Reclined</strong>
+                            <span>30" x 71" x 39.5"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Chair Weight</div>
+                    <div class="spec-value">249.1</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Width</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Shoulder</strong>
+                            <span>21.5"</span>
+                        </div>
+                        <div class="col-item">
+                            <strong>Seat</strong>
+                            <span>20.5"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Minimum Door Width</div>
+                    <div class="spec-value">30"</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Maximum User Weight</div>
+                    <div class="spec-value">275 lb</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-label">Package Dimensions<br>(W x L x H)</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span>32.3" x 58.7" x 48.4"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-row no-border"> <div class="spec-label">Package Weight</div>
+                    <div class="spec-value split-col">
+                        <div class="col-item">
+                            <strong>Box 1</strong>
+                            <span> 286.6lb</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
