@@ -57,7 +57,7 @@ img {
 .q2-title {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1.2;
     color: var(--q2-title);
     margin: 0 0 20px;
@@ -67,7 +67,7 @@ img {
 
 .q2-title.center { text-align: center; }
 .q2-title.section-head { margin-bottom: 40px; }
-.q2-title.sm { font-size: 30px; margin-bottom: 14px; }
+.q2-title.sm { font-size: 36px; margin-bottom: 14px; }
 
 .q2-desc {
     font-family: var(--font-body);
@@ -1015,8 +1015,8 @@ img {
     .q2-intro-desc { font-size: 20px; margin-bottom: 36px; }
     .q2-section { padding: 32px 0; }
     .q2-container { padding: 0 16px; }
-    .q2-title { font-size: 34px; }
-    .q2-title.sm { font-size: 26px; }
+    .q2-title { font-size: 32px; }
+    .q2-title.sm { font-size: 32px; }
     .q2-desc { font-size: 18px; }
     .q2-lead { font-size: 17px; }
     .q2-icon img { width: 44px; }
