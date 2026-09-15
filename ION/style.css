@@ -148,7 +148,7 @@ a {
     position: relative;     /* 버튼 배치의 기준점 */
     
     /* 6번 이미지 크기 */
-    width: 176px;
+    width: 220px;
     height: 62px;
     
     margin: -50px auto 0;    /* 위 40px, 좌우 자동(중앙) */
@@ -162,7 +162,7 @@ a {
     position: absolute;     /* 뒤에 깔리기 */
     top: 0;
     left: 0;
-    width: 176px;
+    width: 220px;
     height: 62px;
     z-index: 1;             /* 바닥 층 */
 }
@@ -173,7 +173,7 @@ a {
     z-index: 2;             /* Bar보다 위층 */
     display: flex;          /* 가로 배치 */
     align-items: center;    /* 수직 중앙 */
-    gap: 17px;              /* 7, 9번 사이의 간격 조절 (이 숫자로 좌우 간격 조정) */
+    gap: 14px;              /* 7, 9번 사이의 간격 조절 (이 숫자로 좌우 간격 조정) */
 }
 
 /* 7, 8, 9번 버튼 공통 크기 */
@@ -2546,7 +2546,7 @@ a {
         left: 50% !important;
         top: 50% !important;
         transform: translate(-50%, -50%) !important;
-        width: 176px !important;
+        width: 220px !important;
         z-index: 0;
         margin: 0 !important;
     }

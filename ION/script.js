@@ -1,7 +1,13 @@
 /* [최종 수정] HTML onclick이 찾을 수 있도록 window 객체에 함수 등록 */
 
 // 1. 깃허브 주소 (슬래시 확인)
-var baseURL = "https://RobinChoi00.github.io/Product/ION/";
+var baseURL = (function () {
+    var host = window.location.hostname;
+    if (!host || host === "localhost" || host === "127.0.0.1" || window.location.protocol === "file:") {
+        return "";
+    }
+    return "https://RobinChoi00.github.io/Product/ION/";
+})();
 
 var slideData = [
     {
@@ -21,6 +27,12 @@ var slideData = [
         chair: baseURL + "images/2.ion_color_brown.png", 
         btnNormal: baseURL + "images/9.ion_swatch_brown.png",
         btnSelected: baseURL + "images/12.ion_swatch_brown_selected.png"
+    },
+    {
+        // 3번: Taupe
+        chair: baseURL + "images/3.ion_color_taupe.png",
+        btnNormal: baseURL + "images/13.ion_swatch_taupe.png",
+        btnSelected: baseURL + "images/13.ion_swatch_taupe_selected.png"
     }
 ];
 
