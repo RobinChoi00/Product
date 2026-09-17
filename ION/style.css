@@ -121,6 +121,10 @@ a {
     object-fit: contain;    /* 비율 유지 */
 }
 
+#current-chair.is-all-colors {
+    max-width: 720px;       /* 3대 전체 색상은 넓게 */
+}
+
 /* [1-1] 화살표 버튼 고정 (Absolute) */
 .nav-btn {
     position: absolute;     /* 이미지 흐름에서 빠져나와 공중에 뜸 */
@@ -2301,6 +2305,9 @@ a {
         max-width: 85% !important;
         height: auto !important;
         max-height: 300px !important;
+    }
+    #current-chair.is-all-colors {
+        max-width: 92% !important;
     }
     /* 6번 이미지(스와치 바) 중앙 정렬 */
     .swatch-control-panel {

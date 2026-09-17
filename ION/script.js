@@ -44,6 +44,7 @@ function updateDisplay() {
     var btnImages = document.querySelectorAll(".color-btn");
 
     if(imgEl) {
+        imgEl.classList.toggle("is-all-colors", currentIndex === 0);
         imgEl.style.opacity = 0.5;
         setTimeout(function() {
             imgEl.src = slideData[currentIndex].chair; 
